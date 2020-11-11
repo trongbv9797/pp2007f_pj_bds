@@ -21,3 +21,4 @@ Route::get('/index', function () {
     return view('layouts.master');
 });
 
+Route::get('/nha-dat-ban', 'HomeController@nhadatban');

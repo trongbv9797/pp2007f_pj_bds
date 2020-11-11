@@ -21,3 +21,6 @@ Route::get('/index', function () {
     return view('layouts.master');
 });
 
+
+
+Route::get('/nha-moi-gioi', 'DanhbaController@index');

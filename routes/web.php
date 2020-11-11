@@ -18,6 +18,3 @@ Route::get('/', function () {
 });
 // HomeController index
 Route::get('/index', 'HomeController@index');
-
-
-Route::get('/nha-dat-ban', 'HomeController@nhadatban');

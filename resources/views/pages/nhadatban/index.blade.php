@@ -1,3 +1,8 @@
+@extends('layouts.master')
+@section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
+
+
+
 <!DOCTYPE html>
 <html><head><script type="text/javascript" async="" src="./Assets/nhadatban/1-js/analytics.js"></script><script type="text/javascript" async="" src="./Assets/nhadatban/1-js/js.js"></script><script type="text/javascript" async="" src="./Assets/nhadatban/hotjar-1708983.js"></script><script type="text/javascript" async="" src="./Assets/nhadatban/analytics.js"></script>
     <script async="" charset="utf-8" src="./Assets/nhadatban/a.js" type="text/javascript"></script><script async="" src="./Assets/nhadatban/1-js/gtm.js"></script><script>

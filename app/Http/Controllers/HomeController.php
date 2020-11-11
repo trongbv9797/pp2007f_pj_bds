@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
-    public function nhadatban() {
-        return view('pages.nhadatban.index');
+    public function index() {
+        return view('pages.index');
     }
 }

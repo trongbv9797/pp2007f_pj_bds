@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 // HomeController index
 Route::get('/index', 'HomeController@index');
+
+//ProjectController
+route::get('/du-an', 'ProjectController@index')->name('indexProjects');

@@ -21,3 +21,7 @@ Route::get('/index', 'HomeController@index');
 
 //ProjectController
 route::get('/du-an', 'ProjectController@index')->name('indexProjects');
+
+// DanhbaController index
+Route::get('/nha-moi-gioi', 'DanhbaController@index');
+

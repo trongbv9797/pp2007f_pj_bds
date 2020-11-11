@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/index', function () {
-    return view('pages.index');
+    return view('layouts.master');
 });
 

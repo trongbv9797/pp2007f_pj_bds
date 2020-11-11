@@ -282,163 +282,168 @@
         <div class="clear"></div>
         </div>
         </div>
-        </footer>
+</footer>
 
-        <div class="modal fade" id="dialogPopup" role="dialog">
-            <div class="nomodal"></div>
-            <div class="modal-dialog" style="top: 352px !important; left: 716px !important;top: 352px !important;left: 716px !important;">
-                <div class="modal-content ">
-                </div>
-            </div>
+
+<div class="modal fade" id="dialogPopup" role="dialog">
+    <div class="nomodal"></div>
+    <div class="modal-dialog" style="top: 352px !important; left: 716px !important;top: 352px !important;left: 716px !important;">
+        <div class="modal-content ">
         </div>
+    </div>
+</div>
 
-        <div class="adPosition" positioncode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
-        <script type="text/javascript"> var bannerContext={"CateId":0,"PageId":189,"CityCode":null,"DistrictId":null,"CurrentPage":189};</script>
+<div class="adPosition" positioncode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
+<script type="text/javascript"> var bannerContext={"CateId":0,"PageId":189,"CityCode":null,"DistrictId":null,"CurrentPage":189};</script>
 
-        <div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
-        <div class="hide" id="domainWeb" data-value="https://batdongsan.com.vn"></div>
-        <div class="hide" id="getBannerUrl" data-value="/microservice-architecture-router/Systems/Banner/GetBanners"></div>
-        <div class="hide" id="domainStatistic" data-value="https://statistic.batdongsan.com.vn"></div>
-        <div class="popup-content ">
-        </div>
-        <div class="lg-backdrop in" id="dialog-backdrop" style="transition-duration: 150ms;display: none;" onclick="account.CloseAccountPopup()"></div>
-        <div id="gototop" title="Go to top" style="display: none;"></div>
-        </div>
-        <div style="display: none" class="searching-histories-configs" max-searching-histories-length="20" sync-time-searching-histories="5" sync-searching-histories-url="/Product/ProductSearch/SyncSearchingHistories" remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
-        </div>
+<div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
+<div class="hide" id="domainWeb" data-value="https://batdongsan.com.vn"></div>
+<div class="hide" id="getBannerUrl" data-value="/microservice-architecture-router/Systems/Banner/GetBanners"></div>
+<div class="hide" id="domainStatistic" data-value="https://statistic.batdongsan.com.vn"></div>
+<div class="popup-content ">
+</div>
+<div class="lg-backdrop in" id="dialog-backdrop" style="transition-duration: 150ms;display: none;" onclick="account.CloseAccountPopup()"></div>
+<div id="gototop" title="Go to top" style="display: none;"></div>
+</div>
+<div style="display: none" class="searching-histories-configs" max-searching-histories-length="20" sync-time-searching-histories="5" sync-searching-histories-url="/Product/ProductSearch/SyncSearchingHistories" remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
+</div>
 
+<script src="./assets/js/filestatic_003.js"></script><script src="./assets/a_002.html"></script>
 
-            <script src="./assets/js/filestatic_003.js"></script><script src="./assets/a_002.html"></script>
+<!--start BannerContext-->
+<script type="text/javascript"> var __bannerContext={"PageId":189,"CateId":null,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
+<!--end BannerContext-->
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+        d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) 
+        {
+            z.set.
+            _.push(o)
+        }; 
+        z._ = []; z.set._ = [];
+        $.async = !0; $.setAttribute("charset", "utf-8");
+    $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte"; 
+    z.t = +new Date;
+    $.type = "text/javascript"; 
+    e.parentNode.insertBefore($, e)
+})(document, "script");
+</script>
+<!--End of Zendesk Chat Script-->
+<script type="text/javascript">
+    var newsLetterRegister = new newsLetterRegister.NewsLetterRegister();
+    newsLetterRegister.InitializeLoad();
 
-        <!--start BannerContext-->
-        <script type="text/javascript"> var __bannerContext={"PageId":189,"CateId":null,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
-        <!--end BannerContext-->
-        <!--Start of Zendesk Chat Script-->
-        <script type="text/javascript">
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
-                d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
-                    z.set.
-                        _.push(o)
-                }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
-            $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte"; z.t = +new Date; $.
-                type = "text/javascript"; e.parentNode.insertBefore($, e)
-        })(document, "script");
-        </script>
-        <!--End of Zendesk Chat Script-->
-        <script type="text/javascript">
-            var newsLetterRegister = new newsLetterRegister.NewsLetterRegister();
-            newsLetterRegister.InitializeLoad();
+    var commentUser = new commentUser.CommentUser();
+    commentUser.InitializeLoad();
 
-            var commentUser = new commentUser.CommentUser();
-            commentUser.InitializeLoad();
+    var paramAccount = {
+        urlListLogin: '/Systems/Account/Login',
+        urlListRegister: '/Systems/Account/Register',
+        urlListForgetPass: '/Systems/Account/ForgetPassword',
+        urlListCity: '/Contacts/CommonData/GetCityList',
+        urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
+        urlListWard: '/Contacts/CommonData/GetWardList',
+    };
 
-            var paramAccount = {
-                urlListLogin: '/Systems/Account/Login',
-                urlListRegister: '/Systems/Account/Register',
-                urlListForgetPass: '/Systems/Account/ForgetPassword',
-                urlListCity: '/Contacts/CommonData/GetCityList',
-                urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
-                urlListWard: '/Contacts/CommonData/GetWardList',
-            };
+    var account = new account.Content();
+    account.Initialize(paramAccount);
 
-            var account = new account.Content();
-            account.Initialize(paramAccount);
+    var footer = new footer.Footer();
+    footer.Initialize();
 
-            var footer = new footer.Footer();
-            footer.Initialize();
+    var menu = new menu.Menu();
+    menu.Initialize();
+</script>
 
-            var menu = new menu.Menu();
-            menu.Initialize();
-        </script>
+<div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts" unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
 
-        <div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts" unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
+<script src="./assets/js/filestatic_002.js"></script>
+<script marking-product-service-params="{&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}" src="./assets/js/filestatic.js"></script>
 
+<script type="text/javascript">
+    (function callJQuery() {
+        if (window.FrontEnd && window.FrontEnd.BannerViewerBinnova) {
+            new window.FrontEnd.BannerViewerBinnova({});
+        } else {
+            setTimeout(callJQuery, 100)
+        }
+    })();
+</script>
 
-
-        <script src="./assets/js/filestatic_002.js"></script>
-        <script marking-product-service-params="{&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}" src="./assets/js/filestatic.js"></script>
-
-        <script type="text/javascript">
-        (function callJQuery() {
-            if (window.FrontEnd && window.FrontEnd.BannerViewerBinnova) {
-                new window.FrontEnd.BannerViewerBinnova({});
-            } else {
-                setTimeout(callJQuery, 100)
-            }
-        })();
-        </script>
-
-        <script type="text/javascript">
-        try {
-            var script_imported = document.createElement('script');
-            script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&dv=' + (new Date().toJSON().slice(0, 10));
-            if (document.body != null && document.body != undefined) {
-                document.body.appendChild(script_imported);
-            } else {
-                document.head.appendChild(script_imported);
-            }
-        } catch (e) { }
-        </script><script src="./assets/js/bds-msv-log.js"></script>
-        <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var lazyimage = [].slice.call(document.querySelectorAll('[src-lazy]'));
-            window.countOfLazyimage = lazyimage.length;
-            if ('IntersectionObserver' in window) {
-                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            if (lazyImage.attributes['src-lazy']) {
-                                lazyImage.src = lazyImage.attributes['src-lazy'].value;
-                                lazyImage.removeAttribute('src-lazy');
-                                lazyImageObserver.unobserve(lazyImage);
-                            }
-                        };
-                    });
-                });
-                lazyimage.forEach(function (lazyImage, i) {
-                    lazyImage.setAttribute('lazy-id', i);
-                    lazyImageObserver.observe(lazyImage);
-                });
-                (function checkDuplicate() {
-                    var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
-                    if (countOfLazyElements.length > window.countOfLazyimage) {
-                        var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
-                        elements.forEach(element => {
-                            var lazyId = element.attributes['lazy-id'].value;
-                            var lazyElements = [].slice.call(document.querySelectorAll(`[lazy-id="${lazyId}"]`));
-                            if (lazyElements.length > 1) {
-                                for (var i = 1; i < lazyElements.length; i++) {
-                                    var lazyElement = lazyElements[i];
-                                    lazyImageObserver.observe(lazyElement);
-                                    lazyElement.setAttribute('lazy-id', window.countOfLazyimage);
-                                    window.countOfLazyimage++;
-                                }
-                            }
-                        });
+<script type="text/javascript">
+try {
+    var script_imported = document.createElement('script');
+    script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&dv=' + (new Date().toJSON().slice(0, 10));
+    if (document.body != null && document.body != undefined) {
+        document.body.appendChild(script_imported);
+    } else {
+        document.head.appendChild(script_imported);
+    }
+} catch (e) { }
+</script>
+<script src="./assets/js/bds-msv-log.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    var lazyimage = [].slice.call(document.querySelectorAll('[src-lazy]'));
+    window.countOfLazyimage = lazyimage.length;
+    if ('IntersectionObserver' in window) {
+        let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    if (lazyImage.attributes['src-lazy']) {
+                        lazyImage.src = lazyImage.attributes['src-lazy'].value;
+                        lazyImage.removeAttribute('src-lazy');
+                        lazyImageObserver.unobserve(lazyImage);
                     }
-                    setTimeout(checkDuplicate, 1000)
-                })();
-            } else {
-                $('[src-lazy]').each(function () {
-                    this.src = this.attributes['src-lazy'].value;
-                    this.removeAttribute('src-lazy');
+                };
+            });
+        });
+        lazyimage.forEach(function (lazyImage, i) {
+            lazyImage.setAttribute('lazy-id', i);
+            lazyImageObserver.observe(lazyImage);
+        });
+        (function checkDuplicate() {
+            var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
+            if (countOfLazyElements.length > window.countOfLazyimage) {
+                var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
+                elements.forEach(element => {
+                    var lazyId = element.attributes['lazy-id'].value;
+                    var lazyElements = [].slice.call(document.querySelectorAll(`[lazy-id="${lazyId}"]`));
+                    if (lazyElements.length > 1) {
+                        for (var i = 1; i < lazyElements.length; i++) {
+                            var lazyElement = lazyElements[i];
+                            lazyImageObserver.observe(lazyElement);
+                            lazyElement.setAttribute('lazy-id', window.countOfLazyimage);
+                            window.countOfLazyimage++;
+                        }
+                    }
                 });
             }
+            setTimeout(checkDuplicate, 1000)
+        })();
+    } else {
+        $('[src-lazy]').each(function () {
+            this.src = this.attributes['src-lazy'].value;
+            this.removeAttribute('src-lazy');
         });
-        </script>
-
-        <script src="./assets/js/ed.js"></script>
-        <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 10; top: 0px; left: 0px; display: none;"></ul>
-        <iframe style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./assets/box-469cf41adb11dc78be68c1ae7f9457a4.html"></iframe>
-        <script type="text/javascript" id="">(function(){try{window.setTimeout(function(){dataLayer.push({event:"afterLoad"})},1500)}catch(a){}})();</script>
-        <script type="text/javascript" id="" src="./assets/js/ins.js"></script>
-        <iframe style="display: none;" id="insider-worker" src="./assets/worker-new.html"></iframe>
-        <style id="ins-free-style" innerhtml="/* Change zindex of topbar */
-        .search-bar.fix{z-index: 9999999999;}">
-        /* Change zindex of topbar */
-        .search-bar.fix{z-index: 9999999999;}
-        </style>
-    </body>
-</html>
+    }
+});
+</script>
+<script src="./assets/js/ed.js"></script>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 10; top: 0px; left: 0px; display: none;"></ul>
+<iframe style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./assets/box-469cf41adb11dc78be68c1ae7f9457a4.html"></iframe>
+<script type="text/javascript" id="">
+    (function(){
+        try{window.setTimeout(function(){
+            dataLayer.push({event:"afterLoad"})},1500)}catch(a){}})();
+</script>
+<script type="text/javascript" id="" src="./assets/js/ins.js"></script>
+<iframe style="display: none;" id="insider-worker" src="./assets/worker-new.html"></iframe>
+<style id="ins-free-style" innerhtml="/* Change zindex of topbar */
+.search-bar.fix{z-index: 9999999999;}">
+/* Change zindex of topbar */
+.search-bar.fix{z-index: 9999999999;}
+</style>

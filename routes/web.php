@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// HomeController index
+Route::get('/index', 'HomeController@index');
 
-Route::get('/index', function () {
-    return view('layouts.master');
-});
 
 Route::get('/nha-dat-ban', 'HomeController@nhadatban');

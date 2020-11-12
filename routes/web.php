@@ -30,11 +30,11 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index');
 
 Route::get('/tin-tuc', 'TintucController@index');
 
-//NhadatbanController
+//NhadatbanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhadatbanController@index');
-
-//Ban_can_ho_chung_cuController
 Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu');
+Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng');
+
 
 //singlepost (chưa sửa được redirect)
 Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController@singlepost1');

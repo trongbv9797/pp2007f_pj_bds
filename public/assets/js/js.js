@@ -31,11 +31,11 @@ var data = {
     },{
       "vtp_experimentKey":"OPT-NS3Q9HQ_OPT-MTSRM",
       "function":"__c",
-      "vtp_value":1902077038
+      "vtp_value":0
     },{
       "vtp_experimentKey":"OPT-NS3Q9HQ_OPT-MTSRM",
       "function":"__c",
-      "vtp_value":1634561391
+      "vtp_value":0
     },{
       "function":"__cie",
       "vtp_experimentState":["macro",5],
@@ -55,7 +55,7 @@ var data = {
       "vtp_selector":":root"
     },{
       "function":"__c",
-      "vtp_value":["map","",18575]
+      "vtp_value":["map","",18577]
     },{
       "function":"__gthc",
       "vtp_trackingId":"UA-3729099-1"

@@ -22,8 +22,10 @@ Route::get('/index', 'HomeController@index');
 //ProjectController
 route::get('/du-an', 'ProjectController@index')->name('indexProjects');
 
-// DanhbaController index
+// DanhbaController index. 
+
 Route::get('/nha-moi-gioi', 'DanhbaController@index');
+
 
 
 Route::get('/tin-tuc', 'TintucController@index');
@@ -33,3 +35,10 @@ Route::get('/nha-dat-ban', 'NhadatbanController@index');
 
 //Ban_can_ho_chung_cuController
 Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu');
+
+//singlepost (chưa sửa được redirect)
+Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController@singlepost1');
+
+//Doanh nghiep
+Route::get('/doanh-nghiep', 'DanhbaController@index1');
+

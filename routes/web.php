@@ -21,3 +21,5 @@ Route::get('/index', 'HomeController@index');
 
 //ProjectController
 route::get('/du-an', 'ProjectController@index')->name('indexProjects');
+// singlepost
+route::get('single-post', 'ProjectController@singlePost')->name('singlePostProject');

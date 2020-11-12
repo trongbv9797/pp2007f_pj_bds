@@ -11,4 +11,8 @@ class ProjectController extends Controller
     {
         return view('pages.du-an.index');
     }
+
+    public function singlePost(){
+        return view('pages.du-an.singlepost');
+    }
 }

@@ -28,3 +28,6 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index');
 
 Route::get('/tin-tuc', 'TintucController@index');
 
+//NhadatbanController
+Route::get('/nha-dat-ban', 'NhadatbanController@index');
+

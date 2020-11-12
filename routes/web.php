@@ -42,3 +42,6 @@ Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController
 //Doanh nghiep
 Route::get('/doanh-nghiep', 'DanhbaController@index1');
 
+//Noi-ngoaithat
+Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
+

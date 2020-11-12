@@ -1,9 +1,5 @@
 @extends('layouts.master')
 
-@section('metas')
-<meta property="fb:app_id" content="302507473246792">
-@endsection
-
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')

@@ -34,6 +34,8 @@ Route::get('/tin-tuc', 'TintucController@index');
 Route::get('/nha-dat-ban', 'NhadatbanController@index');
 Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng');
+Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu');
+
 
 
 //singlepost (chưa sửa được redirect)

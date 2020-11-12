@@ -7,12 +7,12 @@
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')
-<link rel="stylesheet" href="./assets/nhadatban/1-css/filestatic_002.css">
-<link rel="stylesheet" href="./assets/nhadatban/1-css/filestatic.css">
+<link rel="stylesheet" href="./assets/css/nha_dat_ban2.css">
+<link rel="stylesheet" href="./assets/css/nha_dat_ban1.css">
 <link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban" media="only screen and (max-width: 640px)">
 <link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban" media="handheld">
 <link rel="next" href="https://batdongsan.com.vn/nha-dat-ban/p2">
-<link href="./assets/nhadatban/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
+<link href="./assets/image/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
 @endsection
 
 @section('content')
@@ -20,16 +20,8 @@
 <body class="bg-site">
     
 <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
-    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="./assets/nhadatban/ic_triangle.svg"></div>
-	        <div class="search-guide-bg">
-		        <div class="search-guide-title">Mới<img src="./assets/nhadatban/ic_new_feature.svg"></div>
-		        <div class="search-guide-content">
-			        Click <strong>Lọc thêm</strong> để tìm theo Phường xã, Đường phố, Số phòng, Hướng nhà,..
-		        </div>
-		        <div class="search-guid-button">
-			        <span>Đóng</span>
-		        </div>
-	        </div></div>
+    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
+	    </div>
         <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
             <li class="actived" ptype="38">Bán</li>
             <li ptype="49">Cho thuê</li>
@@ -41,7 +33,7 @@
             <input id="Keyword" name="Keyword" type="hidden" value="">
             <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
             <span class="icon-close hiding">
-                <img src="./assets/nhadatban/ic_close.png">
+                <img src="./assets/image/ic_close.png">
             </span>
         </div>
         <div id="divCategoryRe" class="select-control select-cate">
@@ -97,7 +89,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="price-slider-range slider-range">
                         <input id="txtPriceMinValue" name="MinPrice" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/nhadatban/ic_arrow_left.png"></span>
+                        <span><img src="./assets/image/ic_arrow_left.png"></span>
                         <input id="txtPriceMaxValue" name="MaxPrice" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="price-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -120,7 +112,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="area-slider-range slider-range">
                         <input id="txtAreaMinValue" name="MinArea" placeholder="Từ" class="min-value" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/nhadatban/ic_arrow_left.png"></span>
+                        <span><img src="./assets/image/ic_arrow_left.png"></span>
                         <input id="txtAreaMaxValue" name="MaxArea" placeholder="Đến" class="max-value" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="area-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -160,7 +152,7 @@
         </div>
         <div class="select-control filter-control">
             <div class="select-control-label" aria-label="Tìm kiếm nâng cao" data-microtip-position="top" role="tooltip">
-                Lọc thêm<span class="filter-info"><img src="./assets/nhadatban/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
+                Lọc thêm<span class="filter-info"><img src="./assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
             </div>
             <input type="hidden" id="hdbFilter" value="0">
             <div class="select-filter-dropbox custom-dropbox advance-select-options hiding" style="display: none; height: 516px;">
@@ -249,7 +241,7 @@
 
 
         <input type="button" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/nhadatban/ic_reset.svg"></div>
+        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
     </div>
 </form>
 <script type="text/javascript">
@@ -305,11 +297,11 @@
 </script>
 
         <div class="popupMarking  save" style="display: none">
-            <img src="./assets/nhadatban/ic_unsave.svg">
+            <img src="./assets/image/ic_unsave.svg">
             <span> Lưu tin thành công</span>
         </div>
         <div class="popupMarking  unsave" style="display: none">
-            <img src="./assets/nhadatban/ic_save.svg">
+            <img src="./assets/image/ic_save.svg">
             <span> Đã bỏ lưu tin</span>
         </div>
 
@@ -374,7 +366,7 @@
             <div class="vip0 product-item clearfix" uid="649852">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" onclick="">
-                        <img class="product-avatar-img" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
+                        <img class="product-avatar-img" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -426,7 +418,7 @@
             <div class="vip0 product-item clearfix" uid="1038653">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-37-xa-bich-son-prj-khu-do-thi-tnr-stars-bich-dong/trung-tam-cong-nghiep-viet-yen-dep-khong-vuong-gi-0973035888-pr27747706" title="TRUNG TÂM ĐẤT KHU CÔNG NGHIỆP-TNR BÍCH ĐỘNG VIỆT YÊN-LÔ ĐẸP KHÔNG VƯỚNG GÌ 0973035888" onclick="">
-                        <img class="product-avatar-img" alt="TRUNG TÂM ĐẤT KHU CÔNG NGHIỆP-TNR BÍCH ĐỘNG VIỆT YÊN-LÔ ĐẸP KHÔNG VƯỚNG GÌ 0973035888" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/20201111094109-3a1a_wm.jpg" is-lazy-image="true" lazy-id="1">
+                        <img class="product-avatar-img" alt="TRUNG TÂM ĐẤT KHU CÔNG NGHIỆP-TNR BÍCH ĐỘNG VIỆT YÊN-LÔ ĐẸP KHÔNG VƯỚNG GÌ 0973035888" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111094109-3a1a_wm.jpg" is-lazy-image="true" lazy-id="1">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -469,7 +461,7 @@ của khu đô thị
             <div class="vip0 vipaddon product-item clearfix" uid="1492337">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-duong-mai-ba-huong-xa-le-minh-xuan/n-9-000m2-mat-tien-huong-pr27471886" title="Bán 9,000m2 mặt tiền đường Mai Bá Hương" onclick="">
-                        <img class="product-avatar-img" alt="Bán 9,000m2 mặt tiền đường Mai Bá Hương" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/20201019223842-e224_wm.jpg" is-lazy-image="true" lazy-id="2"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/19/20201019224948-a8c4_wm.jpg" is-lazy-image="true" lazy-id="3"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/19/20201019224957-240d_wm.jpg" is-lazy-image="true" lazy-id="4">
+                        <img class="product-avatar-img" alt="Bán 9,000m2 mặt tiền đường Mai Bá Hương" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201019223842-e224_wm.jpg" is-lazy-image="true" lazy-id="2"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/19/20201019224948-a8c4_wm.jpg" is-lazy-image="true" lazy-id="3"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/19/20201019224957-240d_wm.jpg" is-lazy-image="true" lazy-id="4">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -515,7 +507,7 @@ nên mới bán, anh chị có nhu cầu xin mời nghé thăm. Đi
             <div class="vip0 product-item clearfix" uid="1473794">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-duong-quoc-lo-22-thi-tran-cu-chi/chu-khanh-can-ban-manh-so-hong-rieng-o-673m-gia-1-ty-bao-xay-0918877715-pr27745890" title="Chú Khanh cần bán mảnh đất sổ hồng riêng ở Củ Chi, 673m2, giá 1 tỷ bao xây (0918877715)" onclick="">
-                        <img class="product-avatar-img" alt="Chú Khanh cần bán mảnh đất sổ hồng riêng ở Củ Chi, 673m2, giá 1 tỷ bao xây (0918877715)" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111084532-b183_wm.jpg" is-lazy-image="true" lazy-id="5">
+                        <img class="product-avatar-img" alt="Chú Khanh cần bán mảnh đất sổ hồng riêng ở Củ Chi, 673m2, giá 1 tỷ bao xây (0918877715)" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111084532-b183_wm.jpg" is-lazy-image="true" lazy-id="5">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -558,7 +550,7 @@ diễn Ngu
             <div class="vip0 product-item clearfix" uid="282289">
                 <div class="product-image noimage">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-mat-pho-pho-le-trong-tan-phuong-la-khe/chinh-chu-can-ban-ha-dong-pr27648615" title="Chính chủ Cần bán nhà đất mặt phố Lê Trọng Tấn, Hà Đông" onclick="">
-                        <img class="product-avatar-img" alt="Chính chủ Cần bán nhà đất mặt phố Lê Trọng Tấn, Hà Đông" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/03/20201103171451-deec.jpg" is-lazy-image="true" lazy-id="6">
+                        <img class="product-avatar-img" alt="Chính chủ Cần bán nhà đất mặt phố Lê Trọng Tấn, Hà Đông" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/03/20201103171451-deec.jpg" is-lazy-image="true" lazy-id="6">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -600,7 +592,7 @@ thoáng, đằng s
             <div class="vip0 vipaddon product-item clearfix" uid="994019">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-chau-van-liem-phuong-phu-do-prj-my-dinh-pearl/mo-ban-100-cuoi-truc-tiep-chu-dau-tu-nhan-nha-ngay-hotline-0938332255-pr27435170" title="Mở bán 100 căn cuối Mỹ Đình Pearl trực tiếp chủ đầu tư nhận nhà ngay, hotline: 0938332255" onclick="">
-                        <img class="product-avatar-img" alt="Mở bán 100 căn cuối Mỹ Đình Pearl trực tiếp chủ đầu tư nhận nhà ngay, hotline: 0938332255" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095349-bdb0_wm.jpg" is-lazy-image="true" lazy-id="7"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095359-b9f0_wm.jpg" is-lazy-image="true" lazy-id="8"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095403-986f_wm.jpg" is-lazy-image="true" lazy-id="9">
+                        <img class="product-avatar-img" alt="Mở bán 100 căn cuối Mỹ Đình Pearl trực tiếp chủ đầu tư nhận nhà ngay, hotline: 0938332255" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095349-bdb0_wm.jpg" is-lazy-image="true" lazy-id="7"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095359-b9f0_wm.jpg" is-lazy-image="true" lazy-id="8"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/16/20201016095403-986f_wm.jpg" is-lazy-image="true" lazy-id="9">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -650,7 +642,7 @@ Plaza, Pearl Plaza). Vị trí: Số 1 Châu Văn Liêm, Phường Phú Đô, Q 
             <div class="vip0 product-item clearfix" uid="1459407">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-mai-chi-tho-prj-sadora-apartment/chinh-chu-ban-cao-cap-chuan-5-sao-sala-3pn-view-bitexco-pr27613337" title="Chính chủ bán căn hộ cao cấp chuẩn 5 sao Sala Sadora 3PN, nội thất cao cấp, view Bitexco." onclick="">
-                        <img class="product-avatar-img" alt="Chính chủ bán căn hộ cao cấp chuẩn 5 sao Sala Sadora 3PN, nội thất cao cấp, view Bitexco." error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/09/16/SUOxTi2O/20200916143847-7b73_wm.jpg" is-lazy-image="true" lazy-id="10">
+                        <img class="product-avatar-img" alt="Chính chủ bán căn hộ cao cấp chuẩn 5 sao Sala Sadora 3PN, nội thất cao cấp, view Bitexco." error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/09/16/SUOxTi2O/20200916143847-7b73_wm.jpg" is-lazy-image="true" lazy-id="10">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -691,7 +683,7 @@ Căn hộ Sadora A20X7 thuộc khu đô thị chuẩn 5 sao Sala view triệu đ
             <div class="vip0 product-item clearfix" uid="1423800">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-nen-du-an-bac-binh-bth/dau-tu-hong-thai-garden-ngay-tu-hom-nay-chi-vui-50-trieu-1000m2-pr27032944" title="Đầu tư đất Hồng Thái Garden ngay từ hôm nay chỉ với 50 triệu/1000m2" onclick="">
-                        <img class="product-avatar-img" alt="Đầu tư đất Hồng Thái Garden ngay từ hôm nay chỉ với 50 triệu/1000m2" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/09/14/20200914173752-5415_wm.jpg" is-lazy-image="true" lazy-id="11">
+                        <img class="product-avatar-img" alt="Đầu tư đất Hồng Thái Garden ngay từ hôm nay chỉ với 50 triệu/1000m2" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/09/14/20200914173752-5415_wm.jpg" is-lazy-image="true" lazy-id="11">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -734,7 +726,7 @@ trị của vùng
             <div class="vip0 product-item clearfix" uid="1101976">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-mat-pho-duong-le-van-tho-phuong-8-12/ban-127-trung-tam-quan-go-vap-gan-cho-hanh-ng-tay-pr27742648" title="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây" onclick="">
-                        <img class="product-avatar-img" alt="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110185937-3217_wm.jpg" is-lazy-image="true" lazy-id="12">
+                        <img class="product-avatar-img" alt="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110185937-3217_wm.jpg" is-lazy-image="true" lazy-id="12">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -777,7 +769,7 @@ trí đẹp, n
             <div class="vip0 vipaddon product-item clearfix" uid="181886">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-trai-phuong-thuong-dinh-prj-royal-city/-chu-nha-ban-cat-lo-sau-3-r4-dt-135m-r2-dt-90m-r1-dt-136m-0919084005-0987016576-pr26634600" title="CHỦ NHÀ BÁN CẮT LỖ CĂN 04 TẦNG 23 R4-4,3TỶ; R31512A-10 TỶ; R42110-6,3TỶ, R50906-4,5TỶ; R21715-5,1TỶ" onclick="">
-                        <img class="product-avatar-img" alt="CHỦ NHÀ BÁN CẮT LỖ CĂN 04 TẦNG 23 R4-4,3TỶ; R31512A-10 TỶ; R42110-6,3TỶ, R50906-4,5TỶ; R21715-5,1TỶ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/05/06/XGCHVV4L/20200506091828-51ac_wm.jpg" is-lazy-image="true" lazy-id="13"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/20/XGCHVV4L/20201020104725-50c2_wm.jpg" is-lazy-image="true" lazy-id="14"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/09/XGCHVV4L/20201109171324-0fce_wm.jpg" is-lazy-image="true" lazy-id="15">
+                        <img class="product-avatar-img" alt="CHỦ NHÀ BÁN CẮT LỖ CĂN 04 TẦNG 23 R4-4,3TỶ; R31512A-10 TỶ; R42110-6,3TỶ, R50906-4,5TỶ; R21715-5,1TỶ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/05/06/XGCHVV4L/20200506091828-51ac_wm.jpg" is-lazy-image="true" lazy-id="13"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/20/XGCHVV4L/20201020104725-50c2_wm.jpg" is-lazy-image="true" lazy-id="14"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/09/XGCHVV4L/20201109171324-0fce_wm.jpg" is-lazy-image="true" lazy-id="15">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -827,7 +819,7 @@ view bể bơi. Căn số 05 - DT 109m2 ban công ĐN giá 4,2 tỷ
             <div class="vip0 product-item clearfix" uid="1416234">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-hao-phuong-8-10/chinh-chu-can-ban-hem-402-quan-10-hem-xe-tai-1-tret-2-lau-gia-rat-tot-pr27741900" title="Chính chủ cần bán nhà hẻm 402 Đường Hòa Hảo, Quận 10, hẻm xe tải nhỏ , 1 trệt, 2 lầu, giá rất tốt" onclick="">
-                        <img class="product-avatar-img" alt="Chính chủ cần bán nhà hẻm 402 Đường Hòa Hảo, Quận 10, hẻm xe tải nhỏ , 1 trệt, 2 lầu, giá rất tốt" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/17/GSfXwqS5/20201017103113-129d_wm.jpg" is-lazy-image="true" lazy-id="16">
+                        <img class="product-avatar-img" alt="Chính chủ cần bán nhà hẻm 402 Đường Hòa Hảo, Quận 10, hẻm xe tải nhỏ , 1 trệt, 2 lầu, giá rất tốt" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/10/17/GSfXwqS5/20201017103113-129d_wm.jpg" is-lazy-image="true" lazy-id="16">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -870,7 +862,7 @@ nhỏ,2 hẻm trước
             <div class="vip0 vipaddon product-item clearfix" uid="181886">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-phuong-phuc-loi-prj-vinhomes-riverside/ban-cat-lo-royal-city-32tr-m2-so-do-vay-70-ls-0-thue-9tr-th-mp-dich-vu-0946528058-0976325668-pr25280371" title="Bán biệt thự Vinhomes Riverside giá rẻ nhất thị trường, SĐ, vay 70%, LS 0%. 0917269796, 0915469759" onclick="">
-                        <img class="product-avatar-img" alt="Bán biệt thự Vinhomes Riverside giá rẻ nhất thị trường, SĐ, vay 70%, LS 0%. 0917269796, 0915469759" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090924-7d6d_wm.jpg" is-lazy-image="true" lazy-id="17"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090346-3b9e_wm.jpg" is-lazy-image="true" lazy-id="18"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090349-b571_wm.jpg" is-lazy-image="true" lazy-id="19">
+                        <img class="product-avatar-img" alt="Bán biệt thự Vinhomes Riverside giá rẻ nhất thị trường, SĐ, vay 70%, LS 0%. 0917269796, 0915469759" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090924-7d6d_wm.jpg" is-lazy-image="true" lazy-id="17"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090346-3b9e_wm.jpg" is-lazy-image="true" lazy-id="18"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/04/30/XGCHVV4L/20200430090349-b571_wm.jpg" is-lazy-image="true" lazy-id="19">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -918,7 +910,7 @@ https://nagroup.vn/ I: Biệt thự
             <div class="vip0 product-item clearfix" uid="356511">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-pho-quang-phuong-9-12-prj-golden-mansion/ban-quan-ly-ban-2pn-gia-3-ty-3pn-gia-4-ty-full-noi-that-cao-cap-pr27741574" title="Ban quản lý Golden Mansion cần bán căn hộ 2PN giá 3 tỷ - 3PN giá 4 tỷ full nội thất cao cấp" onclick="">
-                        <img class="product-avatar-img" alt="Ban quản lý Golden Mansion cần bán căn hộ 2PN giá 3 tỷ - 3PN giá 4 tỷ full nội thất cao cấp" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110170252-9a6d_wm.jpg" is-lazy-image="true" lazy-id="20">
+                        <img class="product-avatar-img" alt="Ban quản lý Golden Mansion cần bán căn hộ 2PN giá 3 tỷ - 3PN giá 4 tỷ full nội thất cao cấp" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110170252-9a6d_wm.jpg" is-lazy-image="true" lazy-id="20">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -958,10 +950,10 @@ https://nagroup.vn/ I: Biệt thự
             <div class="vip0 vipaddon product-item clearfix" uid="1453083">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-thanh-xuan-13-phuong-thanh-xuan-prj-picity-high-park/sieu-t-mua-chi-dong-600-trieu-den-khi-nhan-nha-ck-den-17-tang-voucher-150-trieu-pr27736964" title="Siêu hot! Mua căn hộ PiCity chỉ đóng 600 triệu đến khi nhận nhà, CK đến 17%, tặng voucher 150 triệu" onclick="">
-                        <img class="product-avatar-img" alt="Siêu hot! Mua căn hộ PiCity chỉ đóng 600 triệu đến khi nhận nhà, CK đến 17%, tặng voucher 150 triệu" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133409-0b8e_wm.jpg" is-lazy-image="true" lazy-id="21"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133520-ae0f_wm.jpg" is-lazy-image="true" lazy-id="22"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133914-c07f_wm.jpg" is-lazy-image="true" lazy-id="23">
+                        <img class="product-avatar-img" alt="Siêu hot! Mua căn hộ PiCity chỉ đóng 600 triệu đến khi nhận nhà, CK đến 17%, tặng voucher 150 triệu" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133409-0b8e_wm.jpg" is-lazy-image="true" lazy-id="21"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133520-ae0f_wm.jpg" is-lazy-image="true" lazy-id="22"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110133914-c07f_wm.jpg" is-lazy-image="true" lazy-id="23">
                     </a>
                     <span class="product-feature">
-                                                                            <img src="./assets/nhadatban/ic_video.svg">
+                                                                            <img src="./assets/image/ic_video.svg">
                     </span>
                         <span class="product-media">12</span>
                 </div>
@@ -1009,7 +1001,7 @@ diện tích xanh chiếm 77%. * Thanh toán: 600 triệu đến
             <div class="vip0 product-item clearfix" uid="498044">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-phuong-quang-cu/chinh-chu-ban-dich-vu-hong-thang-sam-son-mat-tien-10m-dien-tich-200m-tien-kinh-doanh-pr24598288" title="Chính chủ bán đất dịch vụ Hồng Thắng Sầm Sơn mặt tiền 10m, diện tích 200m2 tiện kinh doanh" onclick="">
-                        <img class="product-avatar-img" alt="Chính chủ bán đất dịch vụ Hồng Thắng Sầm Sơn mặt tiền 10m, diện tích 200m2 tiện kinh doanh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/03/10/20200310074538-8cd3.jpg" is-lazy-image="true" lazy-id="24">
+                        <img class="product-avatar-img" alt="Chính chủ bán đất dịch vụ Hồng Thắng Sầm Sơn mặt tiền 10m, diện tích 200m2 tiện kinh doanh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/03/10/20200310074538-8cd3.jpg" is-lazy-image="true" lazy-id="24">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -1052,7 +1044,7 @@ tiện kinh doanh cách biển 100m.Lô đất 200m2, mặt tiền 10m, đườn
             <div class="vip0 vipaddon product-item clearfix" uid="343762">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-tran-thu-do-phuong-hoang-liet-prj-green-park-tran-thu-do/so-huu-dong-chi-voi-450-trieu-dong-chiet-khau-4-5-qua-tang-3-5-chi-vang-pr27739964" title="Sở hữu căn hộ Phương Đông Green Park chỉ với 450 triệu đồng chiết khấu 4.5%, Quà tặng 3-5 chỉ vàng." onclick="">
-                        <img class="product-avatar-img" alt="Sở hữu căn hộ Phương Đông Green Park chỉ với 450 triệu đồng chiết khấu 4.5%, Quà tặng 3-5 chỉ vàng." error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154432-b305_wm.jpg" is-lazy-image="true" lazy-id="25"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154431-08b7_wm.jpg" is-lazy-image="true" lazy-id="26"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154431-dac7_wm.jpg" is-lazy-image="true" lazy-id="27">
+                        <img class="product-avatar-img" alt="Sở hữu căn hộ Phương Đông Green Park chỉ với 450 triệu đồng chiết khấu 4.5%, Quà tặng 3-5 chỉ vàng." error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154432-b305_wm.jpg" is-lazy-image="true" lazy-id="25"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154431-08b7_wm.jpg" is-lazy-image="true" lazy-id="26"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110154431-dac7_wm.jpg" is-lazy-image="true" lazy-id="27">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -1099,7 +1091,7 @@ diện tích 57m2 giá
             <div class="vip0 product-item clearfix" uid="326550">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-duong-to-huu-phuong-van-phuc-1-prj-tsq-galaxy/hot-9-can-ngoai-giao-gia-uu-dai-69-da-co-so-do-lh-chon-can-0982251985-pr27732789" title="Hot! 9 căn ngoại giao giá ưu đãi. Galaxy 69 tố hữu đã có sổ đỏ lh chọn căn 0824623333" onclick="">
-                        <img class="product-avatar-img" alt="Hot! 9 căn ngoại giao giá ưu đãi. Galaxy 69 tố hữu đã có sổ đỏ lh chọn căn 0824623333" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110095536-58ea_wm.jpg" is-lazy-image="true" lazy-id="28">
+                        <img class="product-avatar-img" alt="Hot! 9 căn ngoại giao giá ưu đãi. Galaxy 69 tố hữu đã có sổ đỏ lh chọn căn 0824623333" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110095536-58ea_wm.jpg" is-lazy-image="true" lazy-id="28">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -1142,11 +1134,11 @@ chỉ từ 25 tỷ - 32 tỷ/lô xây h
             <div class="vip0 product-item clearfix" uid="942927">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-duong-dinh-duc-thien-xa-binh-chanh-3-prj-nha-xinh-residential/mo-ban-30-can-pho-thuong-mai-kdt-1-tret-2-lau-shr-1-4-ty-can-pr23425276" title="Chỉ với 1.5 tỷ sở hữu ngay nhà phố TM - Nhà Xinh Residential, 1 trệt 2 lầu, NH hỗ trợ 70%, LS 0%" onclick="">
-                        <img class="product-avatar-img" alt="Chỉ với 1.5 tỷ sở hữu ngay nhà phố TM - Nhà Xinh Residential, 1 trệt 2 lầu, NH hỗ trợ 70%, LS 0%" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/11/13/20191113100025-ff9b_wm.jpg" is-lazy-image="true" lazy-id="29">
+                        <img class="product-avatar-img" alt="Chỉ với 1.5 tỷ sở hữu ngay nhà phố TM - Nhà Xinh Residential, 1 trệt 2 lầu, NH hỗ trợ 70%, LS 0%" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/11/13/20191113100025-ff9b_wm.jpg" is-lazy-image="true" lazy-id="29">
                     </a>
                     <span class="product-feature">
-                            <img src="./assets/nhadatban/ic_3d.svg">
-                                                                            <img src="./assets/nhadatban/ic_video.svg">
+                            <img src="./assets/image/ic_3d.svg">
+                                                                            <img src="./assets/image/ic_video.svg">
                     </span>
                         <span class="product-media">21</span>
                 </div>
@@ -1187,7 +1179,7 @@ trệt 2 lầu với thiết kế đẹp và lạ mắt theo phong cách Châu �
             <div class="vip0 vipaddon product-item clearfix" uid="343762">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-tran-thu-do-phuong-hoang-liet-prj-green-park-tran-thu-do/-ban-gap-dong-quan-mai-gia-chi-1-4x-ty-tang-den-5-chi-vang-pr27737632" title="Cần bán gấp chung cư phương đông Green Park quận Hoàng Mai giá chỉ 1.4x tỷ tặng đến 5 chỉ vàng" onclick="">
-                        <img class="product-avatar-img" alt="Cần bán gấp chung cư phương đông Green Park quận Hoàng Mai giá chỉ 1.4x tỷ tặng đến 5 chỉ vàng" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141212-37cd_wm.jpg" is-lazy-image="true" lazy-id="30"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141211-2504_wm.jpg" is-lazy-image="true" lazy-id="31"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141212-caca_wm.jpg" is-lazy-image="true" lazy-id="32">
+                        <img class="product-avatar-img" alt="Cần bán gấp chung cư phương đông Green Park quận Hoàng Mai giá chỉ 1.4x tỷ tặng đến 5 chỉ vàng" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141212-37cd_wm.jpg" is-lazy-image="true" lazy-id="30"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141211-2504_wm.jpg" is-lazy-image="true" lazy-id="31"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/10/20201110141212-caca_wm.jpg" is-lazy-image="true" lazy-id="32">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -1233,7 +1225,7 @@ nhà tặng vàng_lên đến đến 5 chỉ vàng.Sở hữu ngay: Nhà xanh tr
             <div class="vip0 vipaddon product-item clearfix" uid="1097247">
                 <div class="product-image ">
                     <a class="product-avatar" href="https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-xa-lo-ha-noi-phuong-thao-dien-prj-masteri-thao-dien/chuyen-chuyen-nhuong-ch-gia-re-nhat-thi-truong-tro-vay-80-lh-0906574444-dung-pr22156060" title="Đại lý bán CH Masteri Thảo Điền giá rẻ hơn thị trường đến 500tr, hỗ trợ vay 80%. LH 0906574444 Dung" onclick="">
-                        <img class="product-avatar-img" alt="Đại lý bán CH Masteri Thảo Điền giá rẻ hơn thị trường đến 500tr, hỗ trợ vay 80%. LH 0906574444 Dung" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101222-8ef2_wm.jpg" is-lazy-image="true" lazy-id="33"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101223-ab72_wm.jpg" is-lazy-image="true" lazy-id="34"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/nhadatban/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101223-b168_wm.jpg" is-lazy-image="true" lazy-id="35">
+                        <img class="product-avatar-img" alt="Đại lý bán CH Masteri Thảo Điền giá rẻ hơn thị trường đến 500tr, hỗ trợ vay 80%. LH 0906574444 Dung" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101222-8ef2_wm.jpg" is-lazy-image="true" lazy-id="33"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101223-ab72_wm.jpg" is-lazy-image="true" lazy-id="34"><img error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2019/08/19/20190819101223-b168_wm.jpg" is-lazy-image="true" lazy-id="35">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -1285,7 +1277,7 @@ hộ. Vị trí nhà nào đa dạng,
 <a pid="3" class="" href="https://batdongsan.com.vn/nha-dat-ban/p3">3</a>
 <a pid="4" class="" href="https://batdongsan.com.vn/nha-dat-ban/p4">4</a>
 <a pid="5" class="" href="https://batdongsan.com.vn/nha-dat-ban/p5">5</a>
-<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/nhadatban/ic_double_caret_right.png"></a>
+<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/image/ic_double_caret_right.png"></a>
 </div>
 
         </div>
@@ -1362,7 +1354,7 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/nhadatban/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>
@@ -1388,7 +1380,7 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/nhadatban/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>
@@ -1600,37 +1592,25 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             </div>
 
         <div id="SiteRight" class="banner-right clearfix">
-            <div class="container-default">
-                <div>
-                    <div id="ban_wide_right" class="ban_wide_scroll" style="display: block; top: 176.883px; position: absolute; right: 66.5px;">
-                        <div class="adPosition" positioncode="BANNER_POSITION_WIDE_RIGHT" style="margin-bottom: 0px"><div class="adshared" rt=""><div class="adshareditem aditem" time="15" style="display: block;" src="https://file4.batdongsan.com.vn/Banners/PhuongNTM/PhuongNTM/160x600/20201106-1339/index.html" altsrc="https://file4.batdongsan.com.vn/2020/11/09/UVSXfqBy/20201109134403-c5bc.jpg" link="https://batdongsan.com.vn/brc/trieu-lua-chon-nha" bid="11092" tip="" tp="8" w="160" h="600" isbg="false" clr="false" k=""><iframe src="./assets/nhadatban/index.html" id="fr11092" scrolling="no" style="overflow:hidden" width="100%" height="600px" frameborder="0"></iframe></div></div></div>
-<script type="text/javascript"> var bannerContext={"CateId":38,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":86};</script>
-                    </div>
-
-                    <div id="ban_right" class="ban_scroll" style="display: block; top: 176.883px; position: absolute; right: 106.5px;">
-                        <div class="adPosition" positioncode="BANNER_POSITION_RIGHT" style="margin-bottom: 0px"></div>
-<script type="text/javascript"> var bannerContext={"CateId":38,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":86};</script>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 @endsection
 
 @section('scripts')
-<script type="text/javascript" async="" src="./assets/nhadatban/1-js/analytics.js"></script>
-<script type="text/javascript" async="" src="./assets/nhadatban/1-js/js.js"></script>
-<script type="text/javascript" async="" src="./assets/nhadatban/hotjar-1708983.js">
-</script><script type="text/javascript" async="" src="./assets/nhadatban/analytics.js"></script>
-<script async="" charset="utf-8" src="./assets/nhadatban/a.js" type="text/javascript"></script>
-<script async="" src="./assets/nhadatban/1-js/gtm.js"></script>
+<script type="text/javascript" async="" src="./assets/js/analytics.js"></script>
+<script type="text/javascript" async="" src="./assets/js/js.js"></script>
+<script type="text/javascript" async="" src="./assets/js/hotjar-1708983.js">
+</script><script type="text/javascript" async="" src="./assets/js/analytics.js"></script>
+<script async="" charset="utf-8" src="./assets/js/a.js" type="text/javascript"></script>
+<script async="" src="./assets/js/gtm.js"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({'event': 'pageInfo','cat': 'null','dtk': 'null','ite': '','pag': '86','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
 </script>
 
-<script async="" src="./assets/nhadatban/1-js/modules.js" charset="utf-8"></script>
+<script async="" src="./assets/js/modules.js" charset="utf-8"></script>
 <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
-<script type="text/javascript" src="./assets/nhadatban/1-js/w.js"></script>
+<script type="text/javascript" src="./assets/js/w.js"></script>
 <style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.
 { display: none !important }</style>
     

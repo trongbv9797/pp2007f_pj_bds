@@ -2389,7 +2389,7 @@ DEFAULT: h + "/avatar_simple_visitor.png"
 ACCOUNT_KEY: u.accountKey,
 BRAND_DOMAIN: u.brandDomain,
 COUNTRY_CODE: function() {
-var t = 'HK'.toUpperCase();
+var t = 'VN'.toUpperCase();
 "<" == t.charAt(0) && (t = "geo");
 return t;
 }(),

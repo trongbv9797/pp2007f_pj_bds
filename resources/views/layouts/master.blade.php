@@ -44,7 +44,9 @@
 <body>
     @include('partial.header')
 
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
 
     @include('partial.footer')
 

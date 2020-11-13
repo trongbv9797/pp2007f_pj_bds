@@ -455,16 +455,16 @@
                                             sắm</a></li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="https://batdongsan.com.vn/phong-thuy" class="haslink "><span
+                            <li class="lv0"><a href="{!! route('phongthuy') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_feng_shui.svg"></span><span
                                         class="text">Phong thủy</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/phong-thuy-toan-canh"
+                                    <li class="lv1"><a href="{!! route('phongthuytoancanh') !!}"
                                             class="haslink ">Phong thủy toàn cảnh</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/tu-van-phong-thuy"
+                                    <li class="lv1"><a href="{!! route('tuvanphongthuy') !!}"
                                             class="haslink ">Tư vấn phong thủy</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/phong-thuy-nha-o"
+                                    <li class="lv1"><a href="{!! route('phongthuynhao') !!}"
                                             class="haslink indent">Phong thủy nhà ở</a>
                                         <div class="arrrow"></div>
                                         <ul>
@@ -481,9 +481,9 @@
                                                     class="haslink ">Phong thủy cửa chính, sân vườn</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/phong-thuy-van-phong"
+                                    <li class="lv1"><a href="{!! route('phongthuyvanphong') !!}"
                                             class="haslink ">Phong thủy văn phòng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/tin-tuc-phong-thuy-theo-tuoi"
+                                    <li class="lv1"><a href="{!! route('phongthuytheotuoi') !!}"
                                             class="haslink ">Phong thủy theo tuổi</a></li>
                                 </ul>
                             </li>
@@ -492,9 +492,9 @@
                                         bạ</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/nha-moi-gioi"
+                                    <li class="lv1"><a href="{!! route('nhamoigioi') !!}"
                                             class="haslink ">Nhà môi giới</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/doanh-nghiep"
+                                    <li class="lv1"><a href="{!! route('doanhnghiep') !!}"
                                             class="haslink ">Doanh nghiệp</a>
                                         <div class="arrrow"></div>
                                     </li>

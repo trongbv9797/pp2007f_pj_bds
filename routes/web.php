@@ -24,7 +24,7 @@ route::get('/du-an', 'ProjectController@index')->name('indexProjects');
 
 // DanhbaController index. 
 
-Route::get('/nha-moi-gioi', 'DanhbaController@index');
+Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 
 
 
@@ -47,7 +47,7 @@ Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong');
 Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController@singlepost1');
 
 //Doanh nghiep
-Route::get('/doanh-nghiep', 'DanhbaController@index1');
+Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');
 
 //Noi-ngoaithat
 Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
@@ -56,3 +56,10 @@ Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 
+//Phong Thuy
+Route::get('/phong-thuy', 'PhongThuyController@index')->name('phongthuy');
+Route::get('/phong-thuy-toan-canh', 'PhongThuyController@index1')->name('phongthuytoancanh');
+Route::get('/tu-van-phong-thuy', 'PhongThuyController@index2')->name('tuvanphongthuy');
+Route::get('/phong-thuy-nha-o', 'PhongThuyController@index3')->name('phongthuynhao');
+Route::get('/phong-thuy-van-phong', 'PhongThuyController@index4')->name('phongthuyvanphong');
+Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongthuytheotuoi');

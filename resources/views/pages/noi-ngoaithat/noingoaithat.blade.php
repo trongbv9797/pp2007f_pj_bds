@@ -12,84 +12,7 @@
 
 <body class="bg-site">
 
-
-    <div class="form-content">
-        <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND" style=""></div>
-<script type='text/javascript'> var bannerContext={"CateId":112,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":340};</script>
-
-        <div id="staticDomain" statsDomain="https://statistic.batdongsan.com.vn" data-fileimg="https://file4.batdongsan.com.vn" data-web="https://batdongsan.com.vn" data-msvrouter="/microservice-architecture-router" data-msvrouter-personal="/microservice-architecture-router-personal" data-cssServer="https://staticfile.batdongsan.com.vn" data-oldsystem="https://batdongsan.com.vn" data-content="https://batdongsan.com.vn" data-domainorigin="batdongsan.com.vn" data-sug-sell="https://suggestion1.batdongsan.com.vn/" data-sug-rent="https://suggestion2.batdongsan.com.vn/" class="hide"></div>
-        <div id="addonImage" addon-image="https://staticfile.batdongsan.com.vn/images/no-image.png"></div>
-        <div id="SiteLeft" class="banner-left">
-            <div class="container-default">
-                <div>
-                    <div id="ban_wide_left" class="ban_wide_scroll">
-                        <div class="adPosition" positionCode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px"></div>
-<script type='text/javascript'> var bannerContext={"CateId":112,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":340};</script>
-                    </div>
-
-                    <div id="ban_left" class="ban_scroll" style="display: block; top: 0px; position: fixed; left: 321.5px;">
-                        <div class="adPosition" positionCode="BANNER_POSITION_LEFT" style="margin-bottom: 0px"></div>
-<script type='text/javascript'> var bannerContext={"CateId":112,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":340};</script>
-                    </div>
-                </div>
-            </div>
-        </div>
     
-            <div class="menu-bar pushmenu pushmenu-right">
-                
-<div class="control-menu">
-    <div class="clearfix">
-        <div class="login-group" style="" aria-label="Danh sách tin đã lưu" data-microtip-position="bottom" role="tooltip">
-            <span class="notification" id="notiSave">
-                <img class="iconNotiSave" src="https://staticfile.batdongsan.com.vn/images/icons/24x24/filled/ic_shortlist.svg">
-                <i class="mnu-notify-icon-unread nqv" style="display: none"></i>
-                <div class="listSave" style="display: none;">
-                    <div class="header">Tin đăng đã lưu</div>
-                    <div class="content">
-                        <p class="center" style="padding: 80px 0 80px;"><img src="https://staticfile.batdongsan.com.vn/images/EmptyState.svg" alt="no data"></p>
-                    </div>
-                    <div class="footer" style="display: none !important;">
-                        <a class="marked-products-view-more" href="/tin-da-luu" title="Xem tất cả">Xem tất cả</a>
-                    </div>
-                </div>
-            </span>
-        </div>
-    </div>
-    <div id="divUserStt" class="clearfix">
-        <div class="join-group">
-            <span>
-                <a href="#" rel="nofollow" id="kct_login">Đăng nhập</a>
-            </span>
-            <span class="line">|</span>
-            <span>
-                <a href="#" rel="nofollow" id="kct_username">Đăng ký</a>
-            </span>
-        </div>
-    </div>
-    <div id="Header_UserControl_divPostProduct">
-        <a href="/dang-tin-rao-vat-ban-nha-dat" id="linkPostProduct" class="btn-border-grey">Đăng tin</a>
-    </div>
-</div>
-
-                <div class="drop-menu">
-                    <div class="left-menu">
-                            <h2>
-                                <a href="/" rel="nofollow"><img src="https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg" ignore-lazy-loading noloaderror="true" onerror="this.src='https://staticfile.batdongsan.com.vn/images/icons/ic_logo_2.png'" alt="Kênh thông tin mua bán, cho thuê nhà đất số 1" title="Batdongsan.com.vn"></a>
-                                <span class="visual-hidden">Batdongsan.com.vn</span>
-                            </h2>
-                    </div>
-                    <div class="right-menu">
-                        <!--Header menu-->
-                        <div class="home-header-menu">
-                            
-<ul class='dropdown-navigative-menu'><li class="lv0 tablet"><a href="/tin-da-luu"><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_shortlist.svg"></span><span class="text">Tin đăng đã lưu</span></a></li><li class="lv0 tablet"><a href="/"><span class="icon"><img src="https://file4.batdongsan.com.vn/images/Icons/ic_house.png"></span><span class="text">Trang chủ</span></a></li><li class='lv0'><a href='/nha-dat-ban' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_for_sale.svg"></span><span class="text">Nhà đất bán</span></a><ul><li class='lv1'><a href='/ban-can-ho-chung-cu' class='haslink '>Bán căn hộ chung cư</a></li><li class='lv1'><a href='/ban-nha-rieng' class='haslink '>Bán nhà riêng</a></li><li class='lv1'><a href='/ban-nha-biet-thu-lien-ke' class='haslink '>Bán nhà biệt thự, liền kề</a></li><li class='lv1'><a href='/ban-nha-mat-pho' class='haslink '>Bán nhà mặt phố</a></li><li class='lv1'><a href='/ban-dat-nen-du-an' class='haslink '>Bán đất nền dự án</a></li><li class='lv1'><a href='/ban-dat' class='haslink '>Bán đất</a></li><li class='lv1'><a href='/ban-trang-trai-khu-nghi-duong' class='haslink '>Bán trang trại, khu nghỉ dưỡng</a></li><li class='lv1'><a href='/ban-kho-nha-xuong' class='haslink '>Bán kho, nhà xưởng</a></li><li class='lv1'><a href='/ban-loai-bat-dong-san-khac' class='haslink '>Bán loại bất động sản khác</a></li></ul></li><li class='lv0'><a href='/nha-dat-cho-thue' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_for_rent.svg"></span><span class="text">Nhà đất cho thuê</span></a><ul><li class='lv1'><a href='/cho-thue-can-ho-chung-cu' class='haslink '>Cho thuê căn hộ chung cư</a></li><li class='lv1'><a href='/cho-thue-nha-rieng' class='haslink '>Cho thuê nhà riêng</a></li><li class='lv1'><a href='/cho-thue-nha-mat-pho' class='haslink '>Cho thuê nhà mặt phố</a></li><li class='lv1'><a href='/cho-thue-nha-tro-phong-tro' class='haslink '>Cho thuê nhà trọ, phòng trọ</a></li><li class='lv1'><a href='/cho-thue-van-phong' class='haslink '>Cho thuê văn phòng</a></li><li class='lv1'><a href='/cho-thue-cua-hang-ki-ot' class='haslink '>Cho thuê cửa hàng - ki ốt</a></li><li class='lv1'><a href='/cho-thue-kho-nha-xuong-dat' class='haslink '>Cho thuê kho, nhà xưởng, đất</a></li><li class='lv1'><a href='/cho-thue-loai-bat-dong-san-khac' class='haslink '>Cho thuê loại bất động sản khác</a></li></ul></li><li class='lv0'><a href='/du-an-bat-dong-san' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_project.svg"></span><span class="text">Dự án</span></a><ul><li class='lv1'><a href='/can-ho-chung-cu' class='haslink '>Căn hộ, Chung cư</a></li><li class='lv1'><a href='/cao-oc-van-phong' class='haslink '>Cao ốc văn phòng</a></li><li class='lv1'><a href='/trung-tam-thuong-mai' class='haslink '>Trung tâm thương mại</a></li><li class='lv1'><a href='/khu-do-thi-moi' class='haslink '>Khu đô thị mới</a></li><li class='lv1'><a href='/khu-phuc-hop' class='haslink '>Khu phức hợp</a></li><li class='lv1'><a href='/nha-o-xa-hoi' class='haslink '>Nhà ở xã hội</a></li><li class='lv1'><a href='/khu-nghi-duong-sinh-thai' class='haslink '>Khu nghỉ dưỡng, Sinh thái</a></li><li class='lv1'><a href='/khu-cong-nghiep' class='haslink '>Khu công nghiệp</a></li><li class='lv1'><a href='/du-an-khac' class='haslink '>Dự án khác</a></li><li class='lv1'><a href='/biet-thu-lien-ke' class='haslink '>Biệt thự, liền kề</a></li></ul></li><li class='lv0'><a href='/can-mua-can-thue' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_buy_rent.svg"></span><span class="text">Cần mua - Cần thuê</span></a><ul><li class='lv1'><a href='/nha-dat-can-mua' class='haslink indent'>Nhà đất cần mua</a><ul><li class='lv2'><a href='/mua-can-ho-chung-cu' class='haslink '>Mua căn hộ chung cư</a></li><li class='lv2'><a href='/mua-nha-rieng' class='haslink '>Mua nhà riêng</a></li><li class='lv2'><a href='/mua-nha-biet-thu-lien-ke' class='haslink '>Mua nhà biệt thự, liền kề</a></li><li class='lv2'><a href='/mua-nha-mat-pho' class='haslink '>Mua nhà mặt phố</a></li><li class='lv2'><a href='/mua-dat-nen-du-an' class='haslink '>Mua đất nền dự án</a></li><li class='lv2'><a href='/mua-dat' class='haslink '>Mua đất</a></li><li class='lv2'><a href='/mua-trang-trai-khu-nghi-duong' class='haslink '>Mua trang trại, khu nghỉ dưỡng</a></li><li class='lv2'><a href='/mua-kho-nha-xuong' class='haslink '>Mua kho, nhà xưởng</a></li><li class='lv2'><a href='/mua-cac-loai-bat-dong-san-khac' class='haslink '>Mua loại bất động sản khác</a></li></ul></li><li class='lv1'><a href='/nha-dat-can-thue' class='haslink indent'>Nhà đất cần thuê</a><ul><li class='lv2'><a href='/can-thue-can-ho-chung-cu' class='haslink '>Cần thuê căn hộ chung cư</a></li><li class='lv2'><a href='/can-thue-nha-rieng' class='haslink '>Cần thuê nhà riêng</a></li><li class='lv2'><a href='/can-thue-nha-mat-pho' class='haslink '>Cần thuê nhà mặt phố</a></li><li class='lv2'><a href='/can-thue-nha-tro-phong-tro' class='haslink '>Cần thuê nhà trọ, phòng trọ</a></li><li class='lv2'><a href='/can-thue-van-phong' class='haslink '>Cần thuê văn phòng</a></li><li class='lv2'><a href='/can-thue-cua-hang-ki-ot' class='haslink '>Cần thuê cửa hàng - ki ốt</a></li><li class='lv2'><a href='/can-thue-kho-nha-xuong-dat' class='haslink '>Cần thuê kho, nhà xưởng, đất</a></li><li class='lv2'><a href='/can-thue-loai-bat-dong-san-khac' class='haslink '>Cần thuê loại bất động sản khác</a></li></ul></li></ul></li><li class='lv0'><a href='/tin-tuc' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_news.svg"></span><span class="text">Tin tức</span></a><ul><li class='lv1'><a href='/Covid-19' class='haslink '>BĐS & Covid-19</a></li><li class='lv1'><a href='/tin-thi-truong' class='haslink '>Tin thị trường</a></li><li class='lv1'><a href='/interaktivestory' class='haslink '>Interaktive Story</a></li><li class='lv1'><a href='/phan-tich-nhan-dinh' class='haslink '>Phân tích - nhận định</a></li><li class='lv1'><a href='/chinh-sach-quan-ly' class='haslink '>Chính sách - Quản lý</a></li><li class='lv1'><a href='/thong-tin-quy-hoach' class='haslink '>Thông tin quy hoạch</a></li><li class='lv1'><a href='/bat-dong-san-the-gioi' class='haslink '>Bất động sản thế giới</a></li><li class='lv1'><a href='/tai-chinh-chung-khoan-bat-dong-san' class='haslink '>Tài chính - Chứng khoán - BĐS</a></li><li class='lv1'><a href='/tu-van-luat-bat-dong-san' class='haslink indent'>Tư vấn luật</a><ul><li class='lv2'><a href='/trinh-tu-thu-tuc' class='haslink '> Trình tự, thủ tục</a></li><li class='lv2'><a href='/quyen-so-huu' class='haslink '>Quyền sở hữu</a></li><li class='lv2'><a href='/tranh-chap' class='haslink '>Tranh chấp</a></li><li class='lv2'><a href='/xay-dung-hoan-cong' class='haslink '>Xây dựng - Hoàn công</a></li><li class='lv2'><a href='/nghia-vu-tai-chinh' class='haslink '>Nghĩa vụ tài chính</a></li><li class='lv2'><a href='/cac-van-de-co-yeu-to-nuoc-ngoai' class='haslink '>Các vấn đề có yếu tố nước ngoài</a></li></ul></li><li class='lv1'><a href='/loi-khuyen' class='haslink indent'>Lời khuyên</a><ul><li class='lv2'><a href='/loi-khuyen-cho-nguoi-mua' class='haslink '>Lời khuyên cho người mua</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-ban' class='haslink '>Lời khuyên cho người bán</a></li><li class='lv2'><a href='/loi-khuyen-cho-nha-dau-tu' class='haslink '>Lời khuyên cho nhà đầu tư</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-thue' class='haslink '>Lời khuyên cho người thuê</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-cho-thue' class='haslink '>Lời khuyên cho người cho thuê</a></li></ul></li></ul></li><li class='lv0'><a href='/noi-ngoai-that' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_interior.svg"></span><span class="text">Nội - Ngoại thất</span></a><ul><li class='lv1'><a href='/noi-that' class='haslink indent'>Nội thất</a><ul><li class='lv2'><a href='/toan-canh-ngoi-nha' class='haslink '>Toàn cảnh ngôi nhà</a></li><li class='lv2'><a href='/phong-khach' class='haslink '>Phòng khách</a></li><li class='lv2'><a href='/phong-ngu' class='haslink '>Phòng ngủ</a></li><li class='lv2'><a href='/phong-bep' class='haslink '>Phòng bếp</a></li><li class='lv2'><a href='/phong-tam' class='haslink '>Phòng tắm</a></li><li class='lv2'><a href='/phong-tre-em' class='haslink '>Phòng trẻ em</a></li><li class='lv2'><a href='/noi-that-van-phong' class='haslink '>Nội thất văn phòng</a></li><li class='lv2'><a href='/khach-san-nha-hang-showroom' class='haslink '>Khách sạn, Nhà hàng, Showroom</a></li></ul></li><li class='lv1'><a href='/ngoai-that' class='haslink '>Ngoại thất</a></li><li class='lv1'><a href='/xay-dung' class='haslink indent'>Xây dựng</a><ul><li class='lv2'><a href='/vat-lieu-xay-dung' class='haslink '>Vật liệu xây dựng</a></li><li class='lv2'><a href='/kien-thuc-xay-dung' class='haslink '>Kiến thức xây dựng</a></li><li class='lv2'><a href='/giai-phap-xay-dung' class='haslink '>Giải pháp xây dựng</a></li></ul></li><li class='lv1'><a href='/kien-truc' class='haslink indent'>Kiến trúc</a><ul><li class='lv2'><a href='/tu-van-thiet-ke' class='haslink '>Tư vấn thiết kế</a></li><li class='lv2'><a href='/kien-truc-xua-va-nay' class='haslink '>Kiến trúc xưa và nay</a></li><li class='lv2'><a href='/the-gioi-kien-truc' class='haslink '>Thế giới kiến trúc</a></li><li class='lv2'><a href='/nha-dep' class='haslink '>Nhà đẹp</a></li><li class='lv2'><a href='/thu-vien-mau-nha' class='haslink indent'>Thư viện mẫu nhà</a><ul><li class='lv3'><a href='/nha-pho' class='haslink '>Nhà phố</a></li><li class='lv3'><a href='/biet-thu' class='haslink '>Biệt thự</a></li><li class='lv3'><a href='/chung-cu' class='haslink '>Chung cư</a></li><li class='lv3'><a href='/van-phong' class='haslink '>Văn phòng</a></li></ul></li></ul></li><li class='lv1'><a href='/tu-van-noi-ngoai-that' class='haslink '>Tư vấn nội ngoại thất</a></li><li class='lv1'><a href='/mach-ban' class='haslink '>Mách bạn</a></li><li class='lv1'><a href='/mua-sam' class='haslink '>Mua sắm</a></li></ul></li><li class='lv0'><a href='/phong-thuy' class='haslink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_feng_shui.svg"></span><span class="text">Phong thủy</span></a><ul><li class='lv1'><a href='/phong-thuy-toan-canh' class='haslink '>Phong thủy toàn cảnh</a></li><li class='lv1'><a href='/tu-van-phong-thuy' class='haslink '>Tư vấn phong thủy</a></li><li class='lv1'><a href='/phong-thuy-nha-o' class='haslink indent'>Phong thủy nhà ở</a><ul><li class='lv2'><a href='/phong-thuy-phong-ngu' class='haslink '>Phong thủy phòng ngủ</a></li><li class='lv2'><a href='/phong-thuy-phong-khach' class='haslink '>Phong thủy phòng khách</a></li><li class='lv2'><a href='/phong-thuy-phong-bep' class='haslink '>Phong thủy phòng bếp</a></li><li class='lv2'><a href='/phong-thuy-phong-tam' class='haslink '>Phong thủy phòng tắm</a></li><li class='lv2'><a href='/phong-thuy-cua-chinh-san-vuon' class='haslink '>Phong thủy cửa chính, sân vườn</a></li></ul></li><li class='lv1'><a href='/phong-thuy-van-phong' class='haslink '>Phong thủy văn phòng</a></li><li class='lv1'><a href='/tin-tuc-phong-thuy-theo-tuoi' class='haslink '>Phong thủy theo tuổi</a></li></ul></li><li class='lv0'><a href='javascript:;' class='nolink '><span class="icon"><img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_contact_list.svg"></span><span class="text">Danh bạ</span></a><ul><li class='lv1'><a href='/nha-moi-gioi' class='haslink '>Nhà môi giới</a></li><li class='lv1'><a href='/doanh-nghiep' class='haslink '>Doanh nghiệp</a><ul></ul></li></ul></li><li class="lv0 bg_menu zompchat"><a href="javascript:void(0);" rel="nofollow" title="Trò chuyện với chúng tôi">Trò chuyện với chúng tôi</a></li></ul>
-                        </div>
-                    </div>
-                    <div class="clear">&nbsp;</div>
-                </div>
-            </div>
-            <div class="bg-pushmenu"></div>
-        </header>
         
         <div class="popupMarking  save" style="display: none">
             <img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_unsave.svg">
@@ -749,7 +672,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/mach-ban/10-thoi-quen-nha-bep-vua-gay-hai-cho-do-dung-vua-ruoc-benh-vao-nguoi-ar105117" title="10 th&#xF3;i quen nh&#xE0; b&#x1EBF;p v&#x1EEB;a g&#xE2;y h&#x1EA1;i cho &#x111;&#x1ED3; d&#xF9;ng, v&#x1EEB;a r&#x1B0;&#x1EDB;c b&#x1EC7;nh v&#xE0;o ng&#x1B0;&#x1EDD;i">
                             10 th&#xF3;i quen nh&#xE0; b&#x1EBF;p v&#x1EEB;a g&#xE2;y h&#x1EA1;i cho &#x111;&#x1ED3; d&#xF9;ng, v&#x1EEB;a r&#x1B0;&#x1EDB;c b&#x1EC7;nh v&#xE0;o ng&#x1B0;&#x1EDD;i
                                                     </a>
@@ -764,7 +687,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/mua-sam/nhieu-lua-chon-trang-tri-noel-doc-la-cho-nhung-ai-da-qua-chan-cay-thong-ar105358" title="Nhi&#x1EC1;u l&#x1EF1;a ch&#x1ECD;n trang tr&#xED; Noel &#x111;&#x1ED9;c, l&#x1EA1; cho nh&#x1EEF;ng ai &#x111;&#xE3; qu&#xE1; ch&#xE1;n c&#xE2;y th&#xF4;ng">
                             Nhi&#x1EC1;u l&#x1EF1;a ch&#x1ECD;n trang tr&#xED; Noel &#x111;&#x1ED9;c, l&#x1EA1; cho nh&#x1EEF;ng ai &#x111;&#xE3; qu&#xE1; ch&#xE1;n c&#xE2;y th&#xF4;ng
                                                     </a>
@@ -779,7 +702,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-noi-ngoai-that/cay-trong-gieng-troi-dep-ar105257" title="Tr&#x1ED3;ng c&#xE2;y g&#xEC; &#x1EDF; gi&#x1EBF;ng tr&#x1EDD;i &#x111;&#x1EC3; nh&#xE0; xanh m&#xE1;t, gi&#xE0;u sinh kh&#xED;?">
                             Tr&#x1ED3;ng c&#xE2;y g&#xEC; &#x1EDF; gi&#x1EBF;ng tr&#x1EDD;i &#x111;&#x1EC3; nh&#xE0; xanh m&#xE1;t, gi&#xE0;u sinh kh&#xED;?
                                                     </a>
@@ -794,7 +717,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/tu-van-noi-ngoai-that/5-xu-huong-thiet-ke-noi-that-da-loi-thoi-va-phuong-an-thay-the-cho-nam-2020-ar105032" title="5 xu h&#x1B0;&#x1EDB;ng thi&#x1EBF;t k&#x1EBF; n&#x1ED9;i th&#x1EA5;t &#x111;&#xE3; l&#x1ED7;i th&#x1EDD;i v&#xE0; ph&#x1B0;&#x1A1;ng &#xE1;n thay th&#x1EBF; cho n&#x103;m 2020">
                             5 xu h&#x1B0;&#x1EDB;ng thi&#x1EBF;t k&#x1EBF; n&#x1ED9;i th&#x1EA5;t &#x111;&#xE3; l&#x1ED7;i th&#x1EDD;i v&#xE0; ph&#x1B0;&#x1A1;ng &#xE1;n thay th&#x1EBF; cho n&#x103;m 2020
                                                     </a>
@@ -809,7 +732,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/mua-sam/meo-hay-son-tuong-tranh-hien-tuong-reu-moc-bong-troc-ar105030" title="M&#x1EB9;o hay s&#x1A1;n t&#x1B0;&#x1EDD;ng tr&#xE1;nh hi&#x1EC7;n t&#x1B0;&#x1EE3;ng r&#xEA;u m&#x1ED1;c, bong tr&#xF3;c">
                             M&#x1EB9;o hay s&#x1A1;n t&#x1B0;&#x1EDD;ng tr&#xE1;nh hi&#x1EC7;n t&#x1B0;&#x1EE3;ng r&#xEA;u m&#x1ED1;c, bong tr&#xF3;c
                                                     </a>
@@ -824,7 +747,7 @@
                     </div>
                 </div>
                 <div class="data-default-CSSClass">
-                    <p style="padding: 0px; margin: 5px 5px 0 5px;">
+                    <p style="padding: 0px; margin: 5px 5px 0 70px;">
                         <a class="controls-view-date-contents-link"  href="/mach-ban/cac-loai-hoa-de-trong-ar105398" title="Top c&#xE1;c lo&#x1EA1;i hoa d&#x1EC5; tr&#x1ED3;ng v&#xE0; c&#xE1;ch ch&#x103;m s&#xF3;c c&#x1A1; b&#x1EA3;n">
                             Top c&#xE1;c lo&#x1EA1;i hoa d&#x1EC5; tr&#x1ED3;ng v&#xE0; c&#xE1;ch ch&#x103;m s&#xF3;c c&#x1A1; b&#x1EA3;n
                                                     </a>

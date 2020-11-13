@@ -38,4 +38,8 @@ class NhadatchothueController extends Controller
     public function cho_thue_nha_kho() {
         return view('pages.nha_dat_cho_thue.cho_thue_nha_kho');
     }
+
+    public function cho_thue_bds_khac() {
+        return view('pages.nha_dat_cho_thue.cho_thue_bds_khac');
+    }
 }

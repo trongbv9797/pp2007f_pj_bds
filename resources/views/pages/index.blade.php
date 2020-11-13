@@ -3,8 +3,7 @@
 @section('title', 'Kênh thông tin bất động sản - Mua bán nhà đất số 1 Việt Nam')
 
 @section('style-libraries')
-<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011110506.msvbds.FrontEnd.min.css" />
-<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/binnova/filestatic.ver202011110506.msvbds.home.min.css" />
+
 @endsection
 
 
@@ -3117,7 +3116,5 @@
 @endsection
 
 @section('scripts')
-    <script src="./assets/js/filestatic.js"></script>
-    <script src="./assets/js/filestatic_002.js"></script>
-    <script src="./assets/js/filestatic_003.js"></script>
+
 @endsection

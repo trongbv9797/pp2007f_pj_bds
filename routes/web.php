@@ -42,6 +42,9 @@ Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong');
 Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac');
 
+//NhadatchothueController ----TAI ANH
+Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index');
+
 
 
 //singlepost (chưa sửa được redirect)

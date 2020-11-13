@@ -179,51 +179,51 @@
                                         class="icon"><img src="./assets/image/ic_house.png"></span><span
                                         class="text">Trang chủ</span></a></li>
                             <li class="lv0">
-                                <a href="https://batdongsan.com.vn/nha-dat-ban" class="haslink "><span class="icon"><img
+                                <a href="{!! Route('nha_dat_ban') !!}" class="haslink "><span class="icon"><img
                                             src="./assets/image/ic_for_sale.svg"></span><span class="text">Nhà đất
                                         bán</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu"
+                                    <li class="lv1"><a href="{!! Route('ban_can_ho_chung_cu') !!}"
                                             class="haslink ">Bán căn hộ chung cư</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-nha-rieng"
+                                    <li class="lv1"><a href="{!! Route('ban_nha_rieng') !!}"
                                             class="haslink ">Bán nhà riêng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke"
+                                    <li class="lv1"><a href="{!! Route('ban_biet_thu') !!}"
                                             class="haslink ">Bán nhà biệt thự, liền kề</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-nha-mat-pho"
+                                    <li class="lv1"><a href="{!! Route('ban_nha_mat_pho') !!}"
                                             class="haslink ">Bán nhà mặt phố</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an"
+                                    <li class="lv1"><a href="{!! Route('ban_dat_nen') !!}"
                                             class="haslink ">Bán đất nền dự án</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-dat" class="haslink ">Bán
+                                    <li class="lv1"><a href="{!! Route('ban_dat') !!}" class="haslink ">Bán
                                             đất</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-trang-trai-khu-nghi-duong"
+                                    <li class="lv1"><a href="{!! Route('ban_trang_trai') !!}"
                                             class="haslink ">Bán trang trại, khu nghỉ dưỡng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-kho-nha-xuong"
+                                    <li class="lv1"><a href="{!! Route('ban_kho_nha_xuong') !!}"
                                             class="haslink ">Bán kho, nhà xưởng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/ban-loai-bat-dong-san-khac"
+                                    <li class="lv1"><a href="{!! Route('bat_dong_san_khac') !!}"
                                             class="haslink ">Bán loại bất động sản khác</a></li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="https://batdongsan.com.vn/nha-dat-cho-thue" class="haslink "><span
+                            <li class="lv0"><a href="{!! Route('nha_dat_cho_thue') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_for_rent.svg"></span><span
                                         class="text">Nhà đất cho thuê</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_can_ho') !!}"
                                             class="haslink ">Cho thuê căn hộ chung cư</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-nha-rieng"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_rieng') !!}"
                                             class="haslink ">Cho thuê nhà riêng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-nha-mat-pho"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_mat_pho') !!}"
                                             class="haslink ">Cho thuê nhà mặt phố</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_tro') !!}"
                                             class="haslink ">Cho thuê nhà trọ, phòng trọ</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-van-phong"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_van_phong') !!}"
                                             class="haslink ">Cho thuê văn phòng</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-cua-hang-ki-ot"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_cua_hang') !!}"
                                             class="haslink ">Cho thuê cửa hàng - ki ốt</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-kho-nha-xuong-dat"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_kho') !!}"
                                             class="haslink ">Cho thuê kho, nhà xưởng, đất</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/cho-thue-loai-bat-dong-san-khac"
+                                    <li class="lv1"><a href="{!! Route('cho_thue_bds_khac') !!}"
                                             class="haslink ">Cho thuê loại bất động sản khác</a></li>
                                 </ul>
                             </li>

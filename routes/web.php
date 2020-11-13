@@ -47,6 +47,7 @@ Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac
 //NhadatchothueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index');
 Route::get('/cho-thue-can-ho-chung-cu', 'NhadatchothueController@cho_thue_can_ho');
+Route::get('/cho-thue-nha-rieng', 'NhadatchothueController@cho_thue_nha_rieng');
 
 
 

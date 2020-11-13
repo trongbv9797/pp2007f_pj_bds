@@ -23,6 +23,8 @@ Route::get('/index', 'HomeController@index');
 route::get('/du-an', 'ProjectController@index')->name('indexProjects');
 // single post Project
 route::get('/single-post','ProjectController@singlePost')->name('singlePostProject');
+// vi tri ha tang - Project
+route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTang');
 
 // DanhbaController index. 
 

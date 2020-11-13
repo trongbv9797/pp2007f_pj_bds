@@ -24,6 +24,10 @@ class NhadatbanController extends Controller
     }
 
     public function ban_nha_mat_pho() {
-        return view('pages.nhadatban.ban_biet_thu');
+        return view('pages.nhadatban.ban_nha_mat_pho');
+    }
+
+    public function ban_dat_nen() {
+        return view('pages.nhadatban.ban_dat_nen');
     }
 }

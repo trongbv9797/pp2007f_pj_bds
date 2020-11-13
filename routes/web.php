@@ -36,6 +36,7 @@ Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng');
 Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu');
 Route::get('/ban-nha-mat-pho', 'NhadatbanController@ban_nha_mat_pho');
+Route::get('/ban-dat-nen-du-an', 'NhadatbanController@ban_dat_nen');
 
 
 

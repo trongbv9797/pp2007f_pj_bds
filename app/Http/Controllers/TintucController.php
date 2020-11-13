@@ -8,6 +8,6 @@ class TintucController extends Controller
 {
     //
     public function index(){
-        return view('tintucbds.tintuc');
+        return view('pages.tintucbds.tintuc');
     }
 }

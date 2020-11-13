@@ -40,6 +40,7 @@ Route::get('/ban-dat-nen-du-an', 'NhadatbanController@ban_dat_nen');
 Route::get('/ban-dat', 'NhadatbanController@ban_dat');
 Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai');
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong');
+Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac');
 
 
 

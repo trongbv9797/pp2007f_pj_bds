@@ -1,10 +1,5 @@
 @extends('layouts.master')
 
-@section('metas')
-<meta http-equiv="audience" content="general">
-<meta name="resource-type" content="document">
-@endsection
-
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')

@@ -18,4 +18,8 @@ class NhadatbanController extends Controller
     public function ban_nha_rieng() {
         return view('pages.nhadatban.ban_nha_rieng');
     }
+
+    public function ban_biet_thu() {
+        return view('pages.nhadatban.ban_biet_thu');
+    }
 }

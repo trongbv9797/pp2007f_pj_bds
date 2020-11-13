@@ -235,7 +235,7 @@
                             Khu d&#xE2;n c&#x1B0; Cityland Park Hills l&#xE0; d&#x1EF1; &#xE1;n cao c&#x1EA5;p th&#x1EE9; 3 c&#x1EE7;a C&#xF4;ng ty TNHH &#x110;&#x1EA7;u t&#x1B0; &#x110;&#x1ECB;a &#x1ED1;c Th&#xE0;nh Ph&#x1ED1; (Cityland). T&#x1ECD;a l&#x1EA1;c t&#x1EA1;i s&#x1ED1; 18 Phan V&#x103;n Tr&#x1ECB;, ph&#x1B0;&#x1EDD;ng 10, qu&#x1EAD;n G&#xF2; V&#x1EA5;p, Tp.HCM, d&#x1EF1; &#xE1;n c&#xF3; t&#x1ED5;ng m&#x1EE9;c &#x111;&#x1EA7;u t&#x1B0; h&#x1A1;n 6.281 t&#x1EF7; &#x111;&#x1ED3;ng, quy m&#xF4; 27 ha.
                         </div>
                         <div class="dotdotdot"></div>
-                        <div class="more"><a href="/khu-do-thi-moi-go-vap/cityland-park-hills-pj2409">Chi tiết&nbsp;<span>&#8594;</span></a></div>
+                        <div class="more" style="width: 41%;"><a href="/khu-do-thi-moi-go-vap/cityland-park-hills-pj2409">Chi tiết&nbsp;<span>&#8594;</span></a></div>
                     </div>
                 </div>
                 <div class="item">
@@ -254,7 +254,7 @@
                             Khu &#x111;&#xF4; th&#x1ECB; ph&#x1EE9;c h&#x1EE3;p &#x2013; c&#x1EA3;nh quan C&#xE1;t T&#x1B0;&#x1EDD;ng Ph&#xFA; H&#x1B0;ng l&#xE0; m&#x1ED9;t s&#x1EA3;n ph&#x1EA9;m c&#x1EE7;a C&#xF4;ng Ty C&#x1ED5; Ph&#x1EA7;n T&#x1EAD;p &#x110;o&#xE0;n &#x110;&#x1ECB;a &#x1ED1;c C&#xE1;t T&#x1B0;&#x1EDD;ng, d&#x1EF1; &#xE1;n &#x111;&#x1B0;&#x1EE3;c quy ho&#x1EA1;ch &#x111;&#x1ED3;ng b&#x1ED9;, khoa h&#x1ECD;c m&#xE0; v&#x1EAB;n &#x111;&#x1EA3;m b&#x1EA3;o y&#x1EBF;u t&#x1ED1; h&#xE0;i h&#xF2;a v&#x1EDB;i c&#x1EA3;nh quan khu v&#x1EF1;c t&#x1EEB; t&#x1ED5;ng th&#x1EC3; &#x111;&#x1EBF;n t&#x1EEB;ng chi ti&#x1EBF;t.
                         </div>
                         <div class="dotdotdot"></div>
-                        <div class="more"><a href="/khu-do-thi-moi-dong-xoai-bp/khu-do-thi-phuc-hop-canh-quan-cat-tuong-phu-hung-pj4018">Chi tiết&nbsp;<span>&#8594;</span></a></div>
+                        <div class="more" style="width: 41%;"><a href="/khu-do-thi-moi-dong-xoai-bp/khu-do-thi-phuc-hop-canh-quan-cat-tuong-phu-hung-pj4018">Chi tiết&nbsp;<span>&#8594;</span></a></div>
                     </div>
                 </div>
                 <div class="item">
@@ -273,7 +273,7 @@
                             Lavilla Green City T&#xE2;n An l&#xE0; d&#x1EF1; &#xE1;n khu &#x111;&#xF4; th&#x1ECB; do Tr&#x1EA7;n Anh Group v&#xE0; &#x110;&#x1ED3;ng T&#xE2;m Group l&#xE0;m ch&#x1EE7; &#x111;&#x1EA7;u t&#x1B0;.
                         </div>
                         <div class="dotdotdot"></div>
-                        <div class="more"><a href="/khu-do-thi-moi-tan-an-la/lavilla-green-city-pj4381">Chi tiết&nbsp;<span>&#8594;</span></a></div>
+                        <div class="more" style="width: 41%;"><a href="/khu-do-thi-moi-tan-an-la/lavilla-green-city-pj4381">Chi tiết&nbsp;<span>&#8594;</span></a></div>
                     </div>
                 </div>
         </div>
@@ -1558,4 +1558,13 @@
 @endsection
 @section('styles')
 <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202010290634.msvbds.FrontEnd.min.css" />
+<style>
+    .arclink {
+        line-height: normal;
+    }
+
+    #rptProjects {
+        width: 102%;
+    }
+</style>
 @endsection

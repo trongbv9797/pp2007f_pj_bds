@@ -350,8 +350,8 @@
     remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
 </div>
 
-<script src="./assets/js/filestatic_003.js"></script>
-<script src="./assets/a_002.html"></script>
+<script src="./assets/js/filestatic.msvbds.FrontEnd.Common.Home.min.js"></script>
+
 
 <!--start BannerContext-->
 <script type="text/javascript">
@@ -416,15 +416,6 @@
     menu.Initialize();
 
 </script>
-
-<div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
-    unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
-
-<script src="./assets/js/filestatic_002.js"></script>
-<script
-    marking-product-service-params="{&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}"
-    src="./assets/js/filestatic.js"></script>
-
 <script type="text/javascript">
     (function callJQuery() {
         if (window.FrontEnd && window.FrontEnd.BannerViewerBinnova) {

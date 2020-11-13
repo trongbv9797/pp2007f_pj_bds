@@ -50,3 +50,7 @@ Route::get('/doanh-nghiep', 'DanhbaController@index1');
 //Noi-ngoaithat
 Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 
+//Canmuacanthue route
+Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
+Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
+

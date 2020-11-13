@@ -30,4 +30,8 @@ class NhadatbanController extends Controller
     public function ban_dat_nen() {
         return view('pages.nhadatban.ban_dat_nen');
     }
+
+    public function ban_dat() {
+        return view('pages.nhadatban.ban_dat');
+    }
 }

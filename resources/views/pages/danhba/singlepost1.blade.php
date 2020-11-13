@@ -7,7 +7,44 @@
 <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/Broker/broker.min.css" media="all">
 
 @section('content')
-  <div class="form-content">
+  
+<!DOCTYPE html>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event': 'pageInfo','cat': '0','dtk': 'eb','ite': '2825','pag': '232','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
+    </script>
+
+    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="audience" content="general" />
+    <meta name="resource-type" content="document" />
+    <meta name="abstract" content="Thông tin nhà đất Việt Nam" />
+    <meta name="classification" content="Bất động sản Việt Nam" />
+    <meta name="area" content="Nhà đất và bất động sản" />
+    <meta name="placename" content="Việt Nam" />
+    <meta name="author" content="Batdongsan.com.vn" />
+    <meta name="copyright" content="©2007 Batdongsan.com.vn" />
+    <meta name="owner" content="Batdongsan.com.vn" />
+    <meta name="generator" content="Công ty Cổ phần PropertyGuru Việt Nam" />
+    <meta name="distribution" content="Global" />
+    <meta name='revisit-after' content='1 days' />
+            <meta name="robots" content="index,follow" />
+
+    <meta name="custom-apple-itunes-app" content="app-id=866492094" />
+    <meta name ='keywords' content = 'Công, ty, chúng, tôi, hoạt, động, trong, lĩnh, vực' />
+<meta name ='description' content = 'Công ty chúng tôi hoạt động trong lĩnh vực dịch vụ môi giới Bất động sản cho thuê được điều hành bởi đội ngũ dày dặn kinh nghiệm trong nhiề' />
+<title>CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL | Công ty môi giới</title>
+<meta name ='googlebot-news' content = 'noindex' />
+
+        
+    
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011121057.msvbds.FrontEnd.min.css" />
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/lib/microtip/microtip.min.css" />
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/Product/filestatic.ver202011121057.msvbds.BrokerDetailsPage.min.css">
+    
+
+    <div class="form-content">
         <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND" style=""></div>
 <script type='text/javascript'> var bannerContext={"CateId":null,"PageId":209,"CityCode":null,"DistrictId":null,"CurrentPage":232};</script>
 
@@ -28,7 +65,51 @@
                 </div>
             </div>
         </div>
-       
+        <header class="full-menu">
+            <div class="homemain">
+                <div class="naga" id="naga">
+                    <a href="javascript:void(0)" id="nav_back" rel="nofollow" title="Danh mục" class="div-panel st-panel fleft">
+                        <span class="img-naga-l">
+                            <img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_caret_left_1.svg" alt="back">
+                        </span>
+                    </a>
+                    <div class="text-center header-logo">
+                        <a href="/" title="Nhà đất" rel="nofollow">
+                            <img src="https://staticfile.batdongsan.com.vn/images/newhome/logo_wap1.svg" onerror="this.src='https://staticfile.batdongsan.com.vn/images/newhome/logo-wap.png'" class="logo-wap" alt="logo batdongsan.com.vn" title="Batdongsan.com.vn">
+                        </a>
+                    </div>
+                    <a href="/tin-da-luu" id="saveList" rel="nofollow" title="Danh mục" class="div-panel st-panel fright">
+                        <span class="img-naga-r">
+                            <img class=" lazyloaded" ignore-lazy-loading data-src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_savelist.svg" src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_savelist.svg">
+                            <span class="img-naga-notification hide">
+                                0
+                            </span>
+                        </span>
+                    </a>
+                    <a href="javascript:void(0)" id="nav_list" rel="nofollow" title="Danh mục" class="div-panel st-panel fright in">
+                        <span class="img-naga-r">
+                            <img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_hamburger_menu_1.svg" alt="menu">                            
+                        </span>
+                    </a>
+                </div>
+            </div>            
+            <div class="top-search">
+                <div class="homemain home-search">
+                    <div class="search-input-wrap">
+                    </div>
+                </div>
+            </div>
+            <div class="menu-bar pushmenu pushmenu-right">
+                
+<div class="control-menu">
+    
+
+                
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </div>
+            <div class="bg-pushmenu"></div>
+        </header>
         
         <div class="popupMarking  save" style="display: none">
             <img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_unsave.svg">
@@ -1043,7 +1124,7 @@
 
 </div>
 
-<div class="body-right">
+<div class="body-right" style="width:230px; margin-right:-20px;">
         <div class="container-common">
         <div>
             <div>
@@ -1236,19 +1317,6 @@
                 </div>
                 <div class="dntb-row">
                     <div class="avatar">
-                        <a href="/ban-nha-rieng/chienhien-83-yahoo-com-vn-ib40115" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
-                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2016/03/09/eCGLjNi5/20160309162137-a122.jpg" />
-                        </a>
-                    </div>
-                    <div class="info-row">
-                        <a class="link colorboldblue" href="/ban-nha-rieng/chienhien-83-yahoo-com-vn-ib40115" rel="nofollow">chienhien_83@yahoo.com.vn</a>
-                        <div class="fone">0909677159</div>
-                        <div class="intro">Chuyên môi giới và nhận ký gửi Bất Động Sản tại TP.Hồ Chí Minh</div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="dntb-row">
-                    <div class="avatar">
                         <a href="/ban-dat-nen-du-an/thanh-wado-mr-ib556158" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
                             <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2017/03/25/eCGLjNi5/20170325092203-ecb0.jpg" />
                         </a>
@@ -1257,6 +1325,19 @@
                         <a class="link colorboldblue" href="/ban-dat-nen-du-an/thanh-wado-mr-ib556158" rel="nofollow">Thanh Wado (Mr.)</a>
                         <div class="fone">0909743354</div>
                         <div class="intro"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="dntb-row">
+                    <div class="avatar">
+                        <a href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
+                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2017/09/03/20170903075347-85b7.jpg" />
+                        </a>
+                    </div>
+                    <div class="info-row">
+                        <a class="link colorboldblue" href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow">Nguy&#x1EC5;n Th&#x1ECB; H&#x1ED3;ng Trang</a>
+                        <div class="fone">0919910070</div>
+                        <div class="intro">Chuyên môi giới và nhận ký gửi BĐS tại TP.HCM.</div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -1301,14 +1382,14 @@
                 </div>
                 <div class="dntb-row">
                     <div class="avatar">
-                        <a href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
-                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2017/09/03/20170903075347-85b7.jpg" />
+                        <a href="/ban-nha-rieng/chienhien-83-yahoo-com-vn-ib40115" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
+                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2016/03/09/eCGLjNi5/20160309162137-a122.jpg" />
                         </a>
                     </div>
                     <div class="info-row">
-                        <a class="link colorboldblue" href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow">Nguy&#x1EC5;n Th&#x1ECB; H&#x1ED3;ng Trang</a>
-                        <div class="fone">0919910070</div>
-                        <div class="intro">Chuyên môi giới và nhận ký gửi BĐS tại TP.HCM.</div>
+                        <a class="link colorboldblue" href="/ban-nha-rieng/chienhien-83-yahoo-com-vn-ib40115" rel="nofollow">chienhien_83@yahoo.com.vn</a>
+                        <div class="fone">0909677159</div>
+                        <div class="intro">Chuyên môi giới và nhận ký gửi Bất Động Sản tại TP.Hồ Chí Minh</div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -1410,7 +1491,12 @@
 
 <ul>
             <li>
-                <a class="controls-view-date-contents-link" title="Nh&#xE0; &#x111;&#x1EA7;u t&#x1B0; c&#x1EA7;n l&#xE0;m g&#xEC; &#x111;&#x1EC3; kh&#xF4;ng m&#x1EA5;t tr&#x1EAF;ng t&#xE0;i s&#x1EA3;n khi mua farmstay?" href="/loi-khuyen-cho-nha-dau-tu/nha-dau-tu-can-lam-gi-de-khong-mat-trang-tai-san-khi-mua-farmstay-ar105495">
+                <a class="controls-view-date-contents-link" title="B&#xE1;n nh&#xE0; &#x111;ang &#x1EDF; tr&#x1B0;&#x1EDB;c khi t&#xEC;m &#x111;&#x1B0;&#x1EE3;c nh&#xE0; m&#x1EDB;i: N&#xEA;n hay kh&#xF4;ng?" href="/loi-khuyen-cho-nguoi-ban/co-nen-ban-nha-dang-o-truoc-khi-tim-duoc-nha-moi-ar102322">
+                    B&#xE1;n nh&#xE0; &#x111;ang &#x1EDF; tr&#x1B0;&#x1EDB;c khi t&#xEC;m &#x111;&#x1B0;&#x1EE3;c nh&#xE0; m&#x1EDB;i: N&#xEA;n hay kh&#xF4;ng?
+                </a>
+            </li>
+            <li>
+                <a class="controls-view-date-contents-link" title="Nh&#xE0; &#x111;&#x1EA7;u t&#x1B0; c&#x1EA7;n l&#xE0;m g&#xEC; &#x111;&#x1EC3; kh&#xF4;ng m&#x1EA#x1EA5;t tr&#x1EAF;ng t&#xE0;i s&#x1EA3;n khi mua farmstay?" href="/loi-khuyen-cho-nha-dau-tu/nha-dau-tu-can-lam-gi-de-khong-mat-trang-tai-san-khi-mua-farmstay-ar105495">
                     Nh&#xE0; &#x111;&#x1EA7;u t&#x1B0; c&#x1EA7;n l&#xE0;m g&#xEC; &#x111;&#x1EC3; kh&#xF4;ng m&#x1EA5;t tr&#x1EAF;ng t&#xE0;i s&#x1EA3;n khi mua farmstay?
                 </a>
             </li>
@@ -1434,11 +1520,6 @@
                     [Infographic] Nh&#x1EEF;ng quy &#x111;&#x1ECB;nh ph&#xE1;p l&#xFD; kh&#xF4;ng th&#x1EC3; b&#x1ECF; qua khi mua b&#xE1;n b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n
                 </a>
             </li>
-            <li>
-                <a class="controls-view-date-contents-link" title="5 kh&#xE1;c bi&#x1EC7;t gi&#x1EEF;a &#x111;&#x1EA5;t n&#x1EC1;n d&#x1EF1; &#xE1;n v&#xE0; &#x111;&#x1EA5;t th&#x1ED5; c&#x1B0;" href="/loi-khuyen-cho-nguoi-mua/5-khac-biet-giua-dat-nen-du-an-va-dat-tho-cu-ar103568">
-                    5 kh&#xE1;c bi&#x1EC7;t gi&#x1EEF;a &#x111;&#x1EA5;t n&#x1EC1;n d&#x1EF1; &#xE1;n v&#xE0; &#x111;&#x1EA5;t th&#x1ED5; c&#x1B0;
-                </a>
-            </li>
 </ul>
             </div>
         </div>
@@ -1450,15 +1531,14 @@
 
         <div class="fb-fanpage">
     <div id="fb-root"></div>    
-<script>
-    (function (d, s, id) {
+    <script>
+(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=302507473246792";
     fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+}(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="fb-page" data-href="https://www.facebook.com/Batdongsandv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
         <blockquote cite="https://www.facebook.com/Batdongsandv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Batdongsandv/">Batdongsan.com.vn</a></blockquote>
@@ -1475,18 +1555,59 @@
                     <div style="float: left; width: 430px; margin-left: 5px">
                     </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="boxLinkFooter">
-                        <div id="boxLink" class="footer-link-new">
-        <ul><li><a href="/ban-can-ho-chung-cu-rivera-park-ha-noi">Chung cư Rivera Park Hà Nội</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-c1-c2-xuan-dinh">Chung cư C1 C2 Xuân Đỉnh</a></li><li><a href="/ban-can-ho-chung-cu-anland-nam-cuong">Chung cư Anland Nam Cường</a></li><li><a href="/ban-can-ho-chung-cu-hanhud-hoang-quoc-viet">Chung cư Hanhud Hoàng Quốc Việt</a></li><li><a href="/ban-can-ho-chung-cu-sunshine-center">Sunshine Center</a></li><li><a href="/ban-nha-biet-thu-lien-ke-khu-do-thi-lakeview-city">Bán biệt thự Lakeview City</a></li><li><a href="/ban-nha-biet-thu-lien-ke-ha-do-756-sai-gon">Bán biệt thự Hà Đô 756 Sài Gòn</a></li><li><a href="/ban-can-ho-chung-cu-park-12-park-hill-times-city">Bán chung cư Park 12 Park Hill Times City</a></li><li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-da-nang">Bán căn hộ Vinpearl Condotel Đà Nẵng</a></li><li><a href="/ban-can-ho-chung-cu-soho-premier">Bán căn hộ Soho Premier</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-duc-long-golden-land">Bán căn hộ Đức Long Golden Land</a></li><li><a href="/ban-can-ho-chung-cu-hung-phat-golden-star">Bán căn hộ Hưng Phát Golden Star</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-129d-truong-dinh">Bán chung cư 129D Trương Định</a></li><li><a href="/ban-can-ho-chung-cu-e4-tower">Bán chung cư E4 Tower</a></li><li><a href="/ban-nha-rieng-duong-nguyen-trung-truc-66">Bán nhà Nguyễn Trung Trực Bình Thạnh</a></li><li><a href="/nha-dat-ban-bac-ninh">Nhà đất Bắc Ninh</a></li><li><a href="/ban-can-ho-chung-cu-n03-t3-t4-ngoai-giao-doan">Bán chung cư N03 T3 T4 Ngoại Giao Đoàn</a></li><li><a href="/ban-can-ho-chung-cu-valeo-dam-sen">Bán căn hộ Valeo Đầm Sen</a></li><li><a href="/ban-dat-nen-du-an-khu-do-thi-an-thinh">Bán đất nền Khu đô thị An Thịnh</a></li><li><a href="/ban-can-ho-chung-cu-golden-land">Chung cư Golden Land</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-happy-star-tower">Bán chung cư Happy Star Tower</a></li><li><a href="/ban-can-ho-chung-cu-sunrise-city">Căn hộ Sunrise City</a></li><li><a href="/nha-dat-ban-thai-nguyen">Nhà đất Thái Nguyên</a></li><li><a href="/khu-thuong-mai-dich-vu-long-bien/vincom-center-long-bien-pj994">Vincom Long Bien</a></li><li><a href="/ban-can-ho-chung-cu-sunview-1-2">Sunview Town</a></li><li><a href="/ban-can-ho-chung-cu-times-city">Chung cư Times City</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-golden-west-le-van-thiem">Chung cư Golden West</a></li><li><a href="/ban-can-ho-chung-cu-alphanam-luxury-apartment">Bán căn hộ Alphanam Luxury Apartment</a></li><li><a href="/ban-can-ho-chung-cu-ecolife-tay-ho">Bán chung cư Ecolife Tây Hồ</a></li><li><a href="/nha-dat-ban-nam-dinh">Nhà đất Nam Định</a></li></ul><ul><li><a href="/nha-dat-ban-hai-phong">Nhà đất Hải Phòng</a></li><li><a href="/nha-dat-ban-hai-duong">Nhà đất Hải Dương</a></li><li><a href="/nha-dat-ban-can-tho">Nhà đất Cần Thơ</a></li><li><a href="/ban-can-ho-chung-cu-centara-thu-thiem">Căn hộ Centara Thủ Thiêm</a></li><li><a href="/ban-can-ho-chung-cu-athena-complex">Chung cư Athena Complex</a></li><li><a href="/ban-can-ho-chung-cu-tu-hiep-plaza">Chung cư Tứ Hiệp Plaza</a></li><li><a href="/tags/cho-thue/Sang-quan-cafe">Sang quán café</a></li><li><a href="/ban-can-ho-chung-cu-gemek-premium">Chung cư Gemek Premium</a></li><li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-nha-trang">Căn hộ Vinpearl Condotel Nha Trang</a></li></ul>
+ <div class="clearfix"></div>
+    <div class="boxLinkFooter">
+    <div id="boxLink" class="footer-link-new">
+        <ul>
+            <li><a href="/ban-can-ho-chung-cu-rivera-park-ha-noi">Chung cư Rivera Park Hà Nội</a></li>
+            <li><a href="/ban-can-ho-chung-cu-chung-cu-c1-c2-xuan-dinh">Chung cư C1 C2 Xuân Đỉnh</a></li>
+            <li><a href="/ban-can-ho-chung-cu-anland-nam-cuong">Chung cư Anland Nam Cường</a></li>
+            <li><a href="/ban-can-ho-chung-cu-hanhud-hoang-quoc-viet">Chung cư Hanhud Hoàng Quốc Việt</a></li>
+            <li><a href="/ban-can-ho-chung-cu-sunshine-center">Sunshine Center</a></li>
+            <li><a href="/ban-nha-biet-thu-lien-ke-khu-do-thi-lakeview-city">Bán biệt thự Lakeview City</a></li>
+            <li><a href="/ban-nha-biet-thu-lien-ke-ha-do-756-sai-gon">Bán biệt thự Hà Đô 756 Sài Gòn</a></li>
+            <li><a href="/ban-can-ho-chung-cu-park-12-park-hill-times-city">Bán chung cư Park 12 Park Hill Times City</a></li>
+            <li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-da-nang">Bán căn hộ Vinpearl Condotel Đà Nẵng</a></li>
+            <li><a href="/ban-can-ho-chung-cu-soho-premier">Bán căn hộ Soho Premier</a></li>
+        </ul>
+        
+        <ul>
+            <li><a href="/ban-can-ho-chung-cu-duc-long-golden-land">Bán căn hộ Đức Long Golden Land</a></li>
+            <li><a href="/ban-can-ho-chung-cu-hung-phat-golden-star">Bán căn hộ Hưng Phát Golden Star</a></li>
+            <li><a href="/ban-can-ho-chung-cu-chung-cu-129d-truong-dinh">Bán chung cư 129D Trương Định</a></li>
+            <li><a href="/ban-can-ho-chung-cu-e4-tower">Bán chung cư E4 Tower</a></li>
+            <li><a href="/ban-nha-rieng-duong-nguyen-trung-truc-66">Bán nhà Nguyễn Trung Trực Bình Thạnh</a></li>
+            <li><a href="/nha-dat-ban-bac-ninh">Nhà đất Bắc Ninh</a></li>
+            <li><a href="/ban-can-ho-chung-cu-n03-t3-t4-ngoai-giao-doan">Bán chung cư N03 T3 T4 Ngoại Giao Đoàn</a></li>
+            <li><a href="/ban-can-ho-chung-cu-valeo-dam-sen">Bán căn hộ Valeo Đầm Sen</a></li>
+            <li><a href="/ban-dat-nen-du-an-khu-do-thi-an-thinh">Bán đất nền Khu đô thị An Thịnh</a></li>
+            <li><a href="/ban-can-ho-chung-cu-golden-land">Chung cư Golden Land</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-happy-star-tower">Bán chung cư Happy Star Tower</a></li>
+            <li><a href="/ban-can-ho-chung-cu-sunrise-city">Căn hộ Sunrise City</a></li><li><a href="/nha-dat-ban-thai-nguyen">Nhà đất Thái Nguyên</a></li>
+            <li><a href="/khu-thuong-mai-dich-vu-long-bien/vincom-center-long-bien-pj994">Vincom Long Bien</a></li>
+            <li><a href="/ban-can-ho-chung-cu-sunview-1-2">Sunview Town</a></li><li><a href="/ban-can-ho-chung-cu-times-city">Chung cư Times City</a></li>
+            <li><a href="/ban-can-ho-chung-cu-chung-cu-golden-west-le-van-thiem">Chung cư Golden West</a></li>
+            <li><a href="/ban-can-ho-chung-cu-alphanam-luxury-apartment">Bán căn hộ Alphanam Luxury Apartment</a></li>
+            <li><a href="/ban-can-ho-chung-cu-ecolife-tay-ho">Bán chung cư Ecolife Tây Hồ</a></li><li><a href="/nha-dat-ban-nam-dinh">Nhà đất Nam Định</a></li>
+        </ul>
+
+        <ul>
+        <li><a href="/nha-dat-ban-hai-phong">Nhà đất Hải Phòng</a></li>
+        <li><a href="/nha-dat-ban-hai-duong">Nhà đất Hải Dương</a></li>
+        <li><a href="/nha-dat-ban-can-tho">Nhà đất Cần Thơ</a></li>
+        <li><a href="/ban-can-ho-chung-cu-centara-thu-thiem">Căn hộ Centara Thủ Thiêm</a></li>
+        <li><a href="/ban-can-ho-chung-cu-athena-complex">Chung cư Athena Complex</a></li>
+        <li><a href="/ban-can-ho-chung-cu-tu-hiep-plaza">Chung cư Tứ Hiệp Plaza</a></li>
+        <li><a href="/tags/cho-thue/Sang-quan-cafe">Sang quán café</a></li>
+        <li><a href="/ban-can-ho-chung-cu-gemek-premium">Chung cư Gemek Premium</a></li>
+        <li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-nha-trang">Căn hộ Vinpearl Condotel Nha Trang</a></li>
+        </ul>
     </div>
 
 
 
-                </div>
-            </div>
 
-        <div id="SiteRight" class="banner-right clearfix">
+
+    <div id="SiteRight" class="banner-right clearfix">
             <div class="container-default">
                 <div>
                     <div id="ban_wide_right" class="ban_wide_scroll">
@@ -1532,7 +1653,7 @@
     </div>
     
     
-            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011110519.msvbds.FrontEnd.Common.min.js"></script>
+            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121057.msvbds.FrontEnd.Common.min.js"></script>
     
     <!--start BannerContext-->
     <script type='text/javascript'> var __bannerContext={"PageId":232,"CateId":null,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
@@ -1582,12 +1703,12 @@
     
     
     
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011110519.msvbds.FrontEnd.Broker.FormSearchBroker.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011110519.msvbds.FrontEnd.BrokerDistrict.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011110519.msvbds.FrontEnd.Broker.TypicalBroker.min.js"></script>
-        <script marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50} src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011110519.msvbds.FrontEnd.Broker.Detail.BrokerProducts.min.js" asp-append-version="true"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011110519.msvbds.FrontEnd.Broker.SendMail.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011110519.msvbds.ProductHiddenMobile.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.FormSearchBroker.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.BrokerDistrict.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.TypicalBroker.min.js"></script>
+        <script marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50} src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.Detail.BrokerProducts.min.js" asp-append-version="true"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.SendMail.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.ProductHiddenMobile.min.js"></script>
     
     <script type="text/javascript">
         var brokerDistrict = new brokerDistrict.BrokerDistrict();
@@ -1679,5 +1800,7 @@
             }
         });
     </script>
+
+
     
 @endsection

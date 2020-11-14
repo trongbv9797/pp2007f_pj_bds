@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-
+<body class="bg-site">
 <form id="boxSearchForm" action="https://batdongsan.com.vn/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
     <div class="search-bar shadow-lv-1 clearfix">
         <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">

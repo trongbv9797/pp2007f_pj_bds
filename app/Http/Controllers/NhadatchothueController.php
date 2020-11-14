@@ -22,4 +22,8 @@ class NhadatchothueController extends Controller
     public function cho_thue_nha_mat_pho() {
         return view('pages.nha_dat_cho_thue.cho_thue_nha_mat_pho');
     }
+
+    public function cho_thue_nha_tro() {
+        return view('pages.nha_dat_cho_thue.cho_thue_nha_tro');
+    }
 }

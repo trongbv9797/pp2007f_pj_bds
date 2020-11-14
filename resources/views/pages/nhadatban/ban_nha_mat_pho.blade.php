@@ -1642,19 +1642,7 @@
                 </div>
     
             <div id="SiteRight" class="banner-right clearfix">
-                <div class="container-default">
-                    <div>
-                        <div id="ban_wide_right" class="ban_wide_scroll" style="display: block; top: 177.889px; position: absolute; right: 95.5px;">
-                            <div class="adPosition" positioncode="BANNER_POSITION_WIDE_RIGHT" style="margin-bottom: 0px"><div class="adshared" rt=""><div class="adshareditem aditem" time="15" style="display: none;" src="https://file4.batdongsan.com.vn/2020/11/05/UVSXfqBy/20201105113919-7634.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="http://nhadatgiabao.vn/" bid="11066" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11066" target="_blank" title="" rel="nofollow"><img src="./assets/image/20201105113919-7634.jpg" style="max-width: 100%; height:600px;"></a></div><div class="adshareditem aditem" time="15" style="display: block;" src="https://file4.batdongsan.com.vn/Banners/PhuongNTM/PhuongNTM/160x600/20201106-1339/index.html" altsrc="https://file4.batdongsan.com.vn/2020/11/09/UVSXfqBy/20201109134403-c5bc.jpg" link="https://batdongsan.com.vn/brc/trieu-lua-chon-nha" bid="11092" tip="" tp="8" w="160" h="600" isbg="false" clr="false" k=""><iframe src="./assets/image/index.html" id="fr11092" width="100%" height="600px" frameborder="0" scrolling="no" style="overflow:hidden"></iframe></div></div></div>
-    <script type="text/javascript"> var bannerContext={"CateId":163,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":278};</script>
-                        </div>
-    
-                        <div id="ban_right" class="ban_scroll" style="display: block; top: 177.889px; position: absolute; right: 135.5px;">
-                            <div class="adPosition" positioncode="BANNER_POSITION_RIGHT" style="margin-bottom: 0px"></div>
-    <script type="text/javascript"> var bannerContext={"CateId":163,"PageId":null,"CityCode":null,"DistrictId":null,"CurrentPage":278};</script>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             @endsection
             

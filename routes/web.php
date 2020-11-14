@@ -35,27 +35,27 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index');
 Route::get('/tin-tuc', 'TintucController@index');
 
 //NhadatbanController -----TAI ANH
-Route::get('/nha-dat-ban', 'NhadatbanController@index');
-Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu');
-Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng');
-Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu');
-Route::get('/ban-nha-mat-pho', 'NhadatbanController@ban_nha_mat_pho');
-Route::get('/ban-dat-nen-du-an', 'NhadatbanController@ban_dat_nen');
-Route::get('/ban-dat', 'NhadatbanController@ban_dat');
-Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai');
-Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong');
-Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac');
+Route::get('/nha-dat-ban', 'NhadatbanController@index')->name('nha_dat_ban');
+Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu')->name('ban_can_ho_chung_cu');
+Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng')->name('ban_nha_rieng');
+Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu')->name('ban_biet_thu');
+Route::get('/ban-nha-mat-pho', 'NhadatbanController@ban_nha_mat_pho')->name('ban_nha_mat_pho');
+Route::get('/ban-dat-nen-du-an', 'NhadatbanController@ban_dat_nen')->name('ban_dat_nen');
+Route::get('/ban-dat', 'NhadatbanController@ban_dat')->name('ban_dat');
+Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai')->name('ban_trang_trai');
+Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong')->name('ban_kho_nha_xuong');
+Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac')->name('bat_dong_san_khac');
 
 //NhadatchothueController ----TAI ANH
-Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index');
-Route::get('/cho-thue-can-ho-chung-cu', 'NhadatchothueController@cho_thue_can_ho');
-Route::get('/cho-thue-nha-rieng', 'NhadatchothueController@cho_thue_nha_rieng');
-Route::get('/cho-thue-nha-mat-pho', 'NhadatchothueController@cho_thue_nha_mat_pho');
-Route::get('/cho-thue-nha-tro-phong-tro', 'NhadatchothueController@cho_thue_nha_tro');
-Route::get('/cho-thue-van-phong', 'NhadatchothueController@cho_thue_van_phong');
-Route::get('/cho-thue-cua-hang-ki-ot', 'NhadatchothueController@cho_thue_cua_hang');
-Route::get('/cho-thue-kho-nha-xuong-dat', 'NhadatchothueController@cho_thue_nha_kho');
-Route::get('/cho-thue-loai-bat-dong-san-khac', 'NhadatchothueController@cho_thue_bds_khac');
+Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index')->name('nha_dat_cho_thue');
+Route::get('/cho-thue-can-ho-chung-cu', 'NhadatchothueController@cho_thue_can_ho')->name('cho_thue_can_ho');
+Route::get('/cho-thue-nha-rieng', 'NhadatchothueController@cho_thue_nha_rieng')->name('cho_thue_nha_rieng');
+Route::get('/cho-thue-nha-mat-pho', 'NhadatchothueController@cho_thue_nha_mat_pho')->name('cho_thue_nha_mat_pho');
+Route::get('/cho-thue-nha-tro-phong-tro', 'NhadatchothueController@cho_thue_nha_tro')->name('cho_thue_nha_tro');
+Route::get('/cho-thue-van-phong', 'NhadatchothueController@cho_thue_van_phong')->name('cho_thue_van_phong');
+Route::get('/cho-thue-cua-hang-ki-ot', 'NhadatchothueController@cho_thue_cua_hang')->name('cho_thue_cua_hang');
+Route::get('/cho-thue-kho-nha-xuong-dat', 'NhadatchothueController@cho_thue_nha_kho')->name('cho_thue_nha_kho');
+Route::get('/cho-thue-loai-bat-dong-san-khac', 'NhadatchothueController@cho_thue_bds_khac')->name('cho_thue_bds_khac');
 
 
 

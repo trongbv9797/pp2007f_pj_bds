@@ -52,6 +52,7 @@ Route::get('/cho-thue-nha-mat-pho', 'NhadatchothueController@cho_thue_nha_mat_ph
 Route::get('/cho-thue-nha-tro-phong-tro', 'NhadatchothueController@cho_thue_nha_tro');
 Route::get('/cho-thue-van-phong', 'NhadatchothueController@cho_thue_van_phong');
 Route::get('/cho-thue-cua-hang-ki-ot', 'NhadatchothueController@cho_thue_cua_hang');
+Route::get('/cho-thue-kho-nha-xuong-dat', 'NhadatchothueController@cho_thue_nha_kho');
 
 
 

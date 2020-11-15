@@ -12,4 +12,7 @@ class BuyerSellerController extends Controller
     public function seller() {
         return view ('pages.canmuacanthue.seller');
     }
+    public function buyer() {
+        return view ('pages.canmuacanthue.buyer');
+    }
 }

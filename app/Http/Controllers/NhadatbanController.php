@@ -46,4 +46,8 @@ class NhadatbanController extends Controller
     public function bat_dong_san_khac() {
         return view('pages.nhadatban.bat_dong_san_khac');
     }
+
+    public function bien_hoa_city() {
+    return view('pages.nhadatban.single_post.bien_hoa_city');
+    }
 }

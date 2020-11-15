@@ -365,7 +365,7 @@
     <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
             <div class="vip0 product-item clearfix" uid="649852">
                 <div class="product-image ">
-                    <a class="product-avatar" href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" onclick="">
+                    <a class="product-avatar" href="{!! Route('bien_hoa_city') !!}" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" onclick="">
                         <img class="product-avatar-img" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
                     </a>
                     <span class="product-feature">
@@ -374,7 +374,7 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" class="vipZero product-link">
+                        <a href="{!! Route('bien_hoa_city') !!}" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" class="vipZero product-link">
                             KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ
                         </a>
                     </h3>

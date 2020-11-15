@@ -45,6 +45,8 @@ Route::get('/ban-dat', 'NhadatbanController@ban_dat')->name('ban_dat');
 Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai')->name('ban_trang_trai');
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong')->name('ban_kho_nha_xuong');
 Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac')->name('bat_dong_san_khac');
+Route::get('/nha-dat-ban-bien-hoa-city', 'NhadatbanController@bien_hoa_city')->name('bien_hoa_city');
+
 
 //NhadatchothueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index')->name('nha_dat_cho_thue');

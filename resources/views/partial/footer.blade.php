@@ -3,9 +3,9 @@
         <div class="footer-row">
             <div class="footer-col1">
                 <div class="footer-logo">
-                    <a href="https://batdongsan.com.vn/">
-                        <img src="./assets/image/logo-footer-no1.svg" noloaderror="true"
-                            onerror="this.src='https://staticfile.batdongsan.com.vn/image/logo-footer-no1.png'">
+                    <a href="index.html">
+                        <img src="https://staticfile.batdongsan.com.vn/images/logo-footer-no1.svg" noloaderror="true"
+                            onerror="this.src='https://staticfile.batdongsan.com.vn/images/logo-footer-no1.png'">
                     </a>
                 </div>
                 <div class="footer-company-name center">
@@ -15,26 +15,25 @@
                 </div>
                 <div class="footer-add">
                     <span>
-                        <img src="./assets/image/placeholder-line.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/placeholder-line.png">
                     </span>Tầng 31, Keangnam Hanoi Landmark, Phạm Hùng, Nam Từ Liêm, Hà Nội
                 </div>
                 <div class="footer-add">
                     <span>
-                        <img src="./assets/image/phone-call.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/phone-call.png">
                     </span>(024) 3562 5939 - (024) 3562 5940
                 </div>
                 <div class="footer-add footer-social">
                     <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=5488" rel="nofollow"
-                        target="_blank">
-                        <img src="./assets/image/da-dang-ki-bct.png" class="bct">
-                    </a>
+                        target="_blank"><img src="https://file4.batdongsan.com.vn/images/newhome/da-dang-ki-bct.png"
+                            class="bct" /></a>
                     <a href="https://www.facebook.com/Batdongsandv" rel="nofollow" target="_blank">
-                        <img src="./assets/image/fb.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/fb.png" />
                     </a> <a href="https://www.youtube.com/channel/UCLAgPnJX3b3vff4uBsyufPQ" rel="nofollow"
                         target="_blank">
-                        <img src="./assets/image/youtube.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/youtube.png" />
                     </a> <a href="http://zalo.me/2606322533378009715" rel="nofollow" target="_blank">
-                        <img src="./assets/image/zalo2.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/zalo2.png" />
                     </a>
                 </div>
             </div>
@@ -43,14 +42,12 @@
                     <div class="col-header">HƯỚNG DẪN</div>
                     <div class="col-content">
                         <ul>
-                            <li><a href="https://batdongsan.com.vn/bao-gia-quang-cao#a4" rel="nofollow">Báo giá &amp; hỗ
-                                    trợ</a></li>
-                            <li><a href="https://batdongsan.com.vn/nhung-cau-hoi-thuong-gap" rel="nofollow">Câu hỏi
-                                    thường gặp</a></li>
-                            <li><a href="https://batdongsan.com.vn/gioi-thieu" rel="nofollow">Về chúng tôi</a></li>
-                            <li><a href="https://batdongsan.com.vn/ve-batdongsancomvn" rel="nofollow">Thông báo</a></li>
-                            <li><a href="https://batdongsan.com.vn/lien-he" rel="nofollow">Liên hệ</a></li>
-                            <li><a href="https://batdongsan.com.vn/trang-sitemap" rel="nofollow">Sitemap</a></li>
+                            <li><a href="bao-gia-quang-cao.html#a4" rel="nofollow">Báo giá &amp; hỗ trợ</a></li>
+                            <li><a href="nhung-cau-hoi-thuong-gap.html" rel="nofollow">Câu hỏi thường gặp</a></li>
+                            <li><a href="gioi-thieu.html" rel="nofollow">Về chúng tôi</a></li>
+                            <li><a href="ve-batdongsancomvn.html" rel="nofollow">Thông báo</a></li>
+                            <li><a href="lien-he.html" rel="nofollow">Liên hệ</a></li>
+                            <li><a href="trang-sitemap.html" rel="nofollow">Sitemap</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,16 +55,11 @@
                     <div class="col-header">QUY ĐỊNH</div>
                     <div class="col-content">
                         <ul>
-                            <li><a href="https://batdongsan.com.vn/quy-dinh-dang-tin" rel="nofollow">Quy định đăng
-                                    tin</a></li>
-                            <li><a href="https://batdongsan.com.vn/quy-dinh-su-dung" rel="nofollow">Quy chế hoạt
-                                    động</a></li>
-                            <li><a href="https://batdongsan.com.vn/dieu-khoan-thoa-thuan" rel="nofollow">Điều khoản thỏa
-                                    thuận</a></li>
-                            <li><a href="https://batdongsan.com.vn/chinh-sach-bao-mat-thong-tin" rel="nofollow">Chính
-                                    sách bảo mật</a></li>
-                            <li><a href="https://batdongsan.com.vn/giai-quyet-khieu-nai" rel="nofollow">Giải quyết khiếu
-                                    nại</a></li>
+                            <li><a href="quy-dinh-dang-tin.html" rel="nofollow">Quy định đăng tin</a></li>
+                            <li><a href="quy-dinh-su-dung.html" rel="nofollow">Quy chế hoạt động</a></li>
+                            <li><a href="dieu-khoan-thoa-thuan.html" rel="nofollow">Điều khoản thỏa thuận</a></li>
+                            <li><a href="chinh-sach-bao-mat-thong-tin.html" rel="nofollow">Chính sách bảo mật</a></li>
+                            <li><a href="giai-quyet-khieu-nai.html" rel="nofollow">Giải quyết khiếu nại</a></li>
                             <li><a href="https://airtable.com/shrbaUORGfT7arZVJ" target="_blank" rel="nofollow">Góp ý
                                     báo lỗi</a></li>
                         </ul>
@@ -79,20 +71,19 @@
                         <ul>
                             <li>
                                 <span>
-                                    <img src="./assets/image/hotline.png">
+                                    <img src="https://file4.batdongsan.com.vn/images/newhome/hotline.png">
                                 </span>Tổng đài CSKH: 1900 1881
                             </li>
                             <li>
                                 <span>
-                                    <img src="./assets/image/email.png">
-                                </span>
-                                <a href="mailto:hotro@batdongsan.com.vn">hotro@batdongsan.com.vn</a>
+                                    <img src="https://file4.batdongsan.com.vn/images/newhome/email.png">
+                                </span><a href="mailto:hotro@batdongsan.com.vn">hotro@batdongsan.com.vn</a>
                             </li>
                             <li>
                                 <span>
-                                    <img src="./assets/image/ic_mailbox1.png" width="16">
-                                </span>
-                                <a rel="nofollow" href="mailto:cskh@batdongsan.com.vn">cskh@batdongsan.com.vn</a>
+                                    <img src="https://file4.batdongsan.com.vn/images/newhome/icon3x/ic_mailbox1.png"
+                                        width="16">
+                                </span><a rel="nofollow" href="mailto:cskh@batdongsan.com.vn">cskh@batdongsan.com.vn</a>
                             </li>
                         </ul>
                     </div>
@@ -104,82 +95,89 @@
                             <div>Chọn quốc gia</div>
                             <div class="national">
                                 <div class="vietnam">
-                                    <img src="./assets/image/vietnam.png">
+                                    <img src="https://file4.batdongsan.com.vn/images/newhome/international/vietnam.png">
                                     Việt Nam
                                 </div>
                                 <ul id="country">
                                     <li>
                                         <a target="_blank" href="http://www.rumah.com/" title="Indonesia Real Estate">
-                                            <img src="./assets/image/indonesia.png"
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/indonesia.png"
                                                 alt="Indonesia Real Estate">Indonesia
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.ddproperty.com/"
                                             title="Thailand Real Estate">
-                                            <img src="./assets/image/thailand.png" alt="Thailand Real Estate">Thailand
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/thailand.png"
+                                                alt="Thailand Real Estate">Thailand
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.homeguru.com.my/"
                                             title="Malaysia Real Estate">
-                                            <img src="./assets/image/malaysia.png" alt="Malaysia Real Estate">Malaysia
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/malaysia.png"
+                                                alt="Malaysia Real Estate">Malaysia
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.propertyguru.com.sg/"
                                             title="Singapore Real Estate">
-                                            <img src="./assets/image/singapore.png"
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/singapore.png"
                                                 alt="Singapore Real Estate">Singapore
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.28hse.com/en/"
                                             title="Hong Kong Real Estate">
-                                            <img src="./assets/image/hongkong.png" alt="Hong Kong">Hong Kong
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/hongkong.png"
+                                                alt="Hong Kong">Hong Kong
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.immobiliare.it/" rel="nofollow"
                                             title="Italy Real Estate">
-                                            <img src="./assets/image/Italy.png" alt="Italy">Italy
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/Italy.png"
+                                                alt="Italy">Italy
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.luxuryestate.com/" title="Luxury homes">
-                                            <img src="./assets/image/italy2.png" alt="Italy">Italy
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/italy2.png"
+                                                alt="Italy">Italy
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.propertyfinder.co.tz/"
                                             title="Tanzania Real Estate">
-                                            <img src="./assets/image/tanzania.png" alt="Tanzania Real Estate">Tanzania
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/tanzania.png"
+                                                alt="Tanzania Real Estate">Tanzania
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://aqarmap.com/" title="Egypt Real Estate">
-                                            <img src="./assets/image/egypt.png" alt="Egypt Real Estate">Egypt
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/egypt.png"
+                                                alt="Egypt Real Estate">Egypt
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://american-european.net/"
                                             title="Costa Rica Real Estate">
-                                            <img src="./assets/image/costa-rica.png" alt="Costa Rica Real Estate">Costa
-                                            Rica
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/costa-rica.png"
+                                                alt="Costa Rica Real Estate">Costa Rica
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="http://www.malimalihome.net/" title="Macau Estate">
-                                            <img src="./assets/image/macau.png" alt="Macau Real Estate">Macau
+                                            <img src="https://file4.batdongsan.com.vn/images/newhome/international/macau.png"
+                                                alt="Macau Real Estate">Macau
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="language">
-                            Chọn ngôn ngữ&nbsp;&nbsp;
-                            <a href="https://batdongsan.com.vn/english">
-                                <img src="./assets/image/eu.png">
+                            Chọn ngôn ngữ&nbsp;&nbsp;<a href="english.html">
+                                <img src="https://file4.batdongsan.com.vn/images/newhome/eu.png">
                                 En
                             </a>
                         </div>
@@ -190,11 +188,11 @@
                     <div class="footer-title">Tải ứng dụng Batdongsan.com.vn</div>
                     <a href="https://play.google.com/store/apps/details?id=vn.com.batdongsan" class="m-r-15"
                         rel="nofollow" target="_blank">
-                        <img src="./assets/image/google-play.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/google-play.png">
                     </a>
                     <a href="https://apps.apple.com/vn/app/batdongsan.com.vn/id866492094" rel="nofollow"
                         target="_blank">
-                        <img src="./assets/image/apple-app-store.png">
+                        <img src="https://file4.batdongsan.com.vn/images/newhome/apple-app-store.png">
                     </a>
                 </div>
                 <div class="footer-sub-col6">
@@ -210,10 +208,9 @@
             <div class="clear"></div>
         </div>
         <div class="footer-row list-branch">
-            <div class="branch-show">Xem tất cả chi nhánh của Batdongsan.com.vn&nbsp;&nbsp;
-                <img src="./assets/image/down-arrow-grey.png" class="downarr">
-                <img src="./assets/image/up-arrow.png" class="uparr hidden">
-            </div>
+            <div class="branch-show">Xem tất cả chi nhánh của Batdongsan.com.vn&nbsp;&nbsp;<img
+                    src="https://file4.batdongsan.com.vn/images/newhome/down-arrow-grey.png" class="downarr"><img
+                    src="https://file4.batdongsan.com.vn/images/newhome/up-arrow.png" class="uparr hidden"></div>
             <div class="branch-detail">
                 <div class="branch-col">
                     <div class="branch">
@@ -234,8 +231,8 @@
                     <div class="branch">
                         <div class="branch-name">Chi nhánh Đà Nẵng</div>
                         <div class="branch-add">
-                            Tầng 9, tòa nhà Vĩnh Trung Plaza, số 255 – 257
-                            Hùng Vương, phường Vĩnh Trung, quận Thanh Khê, TP. Đà Nẵng<br>
+                            Tầng 9, tòa nhà Vĩnh Trung Plaza, số 255 – 257 Hùng Vương, phường Vĩnh Trung, quận Thanh
+                            Khê, TP. Đà Nẵng<br>
                             Điện thoại: (0236) 3 666 968 - Mobile: 0904 907 279
                         </div>
                     </div>
@@ -301,7 +298,7 @@
             </div>
             <div class="footer-info-col2">
                 Chịu trách nhiệm nội dung GP ICP: Bà Đặng Thị Hường<br>
-                Chịu trách nhiệm sàn GDTMĐT: Ông Vũ Triệu Vương<br>(Robert Vuong Trieu Vu)<br>
+                Chịu trách nhiệm sàn GDTMĐT: Ông Vũ Triệu Vương<br />(Robert Vuong Trieu Vu)<br />
                 Quy chế, quy định giao dịch có hiệu lực từ 23/02/2020
             </div>
             <div class="footer-info-col3">
@@ -313,18 +310,16 @@
     </div>
 </footer>
 
-
 <div class="modal fade" id="dialogPopup" role="dialog">
     <div class="nomodal"></div>
-    <div class="modal-dialog"
-        style="top: 352px !important; left: 716px !important;top: 352px !important;left: 716px !important;">
+    <div class="modal-dialog">
         <div class="modal-content ">
         </div>
     </div>
 </div>
 
-<div class="adPosition" positioncode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
-<script type="text/javascript">
+<div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
+<script type='text/javascript'>
     var bannerContext = {
         "CateId": 0,
         "PageId": 189,
@@ -343,18 +338,20 @@
 </div>
 <div class="lg-backdrop in" id="dialog-backdrop" style="transition-duration: 150ms;display: none;"
     onclick="account.CloseAccountPopup()"></div>
-<div id="gototop" title="Go to top" style="display: none;"></div>
+<div id="gototop" title="Go to top"></div>
 </div>
 <div style="display: none" class="searching-histories-configs" max-searching-histories-length="20"
     sync-time-searching-histories="5" sync-searching-histories-url="/Product/ProductSearch/SyncSearchingHistories"
     remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
 </div>
 
-<script src="./assets/js/filestatic.msvbds.FrontEnd.Common.Home.min.js"></script>
 
+<script
+    src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121104.msvbds.FrontEnd.Common.Home.min.js">
+</script>
 
 <!--start BannerContext-->
-<script type="text/javascript">
+<script type='text/javascript'>
     var __bannerContext = {
         "PageId": 189,
         "CateId": null,
@@ -384,7 +381,8 @@
         $.setAttribute("charset", "utf-8");
         $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte";
         z.t = +new Date;
-        $.type = "text/javascript";
+        $.
+        type = "text/javascript";
         e.parentNode.insertBefore($, e)
     })(document, "script");
 
@@ -416,6 +414,20 @@
     menu.Initialize();
 
 </script>
+
+<div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
+    unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
+
+
+
+<script
+    src="https://staticfile.batdongsan.com.vn/js/binnova/filestatic.ver202011121104.msvbds.jquery.tabslet.jscompress.js">
+</script>
+<script
+    marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}
+    src="https://staticfile.batdongsan.com.vn/js/binnova/filestatic.ver202011121104.msvbds.FrontEnd.Home.min.js">
+</script>
+
 <script type="text/javascript">
     (function callJQuery() {
         if (window.FrontEnd && window.FrontEnd.BannerViewerBinnova) {
@@ -430,8 +442,8 @@
 <script type="text/javascript">
     try {
         var script_imported = document.createElement('script');
-        script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&dv=' + (new Date().toJSON()
-            .slice(0, 10));
+        script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&amp;dv=' + (new Date()
+            .toJSON().slice(0, 10));
         if (document.body != null && document.body != undefined) {
             document.body.appendChild(script_imported);
         } else {
@@ -440,11 +452,10 @@
     } catch (e) {}
 
 </script>
-<script src="./assets/js/bds-msv-log.js"></script>
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-        var lazyimage = [].slice.call(document.querySelectorAll('[src-lazy]'));
-        window.countOfLazyimage = lazyimage.length;
+        var lazyImages = [].slice.call(document.querySelectorAll('[src-lazy]'));
+        window.countOfLazyImages = lazyImages.length;
         if ('IntersectionObserver' in window) {
             let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(function(entry) {
@@ -458,13 +469,13 @@
                     };
                 });
             });
-            lazyimage.forEach(function(lazyImage, i) {
+            lazyImages.forEach(function(lazyImage, i) {
                 lazyImage.setAttribute('lazy-id', i);
                 lazyImageObserver.observe(lazyImage);
             });
             (function checkDuplicate() {
                 var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
-                if (countOfLazyElements.length > window.countOfLazyimage) {
+                if (countOfLazyElements.length > window.countOfLazyImages) {
                     var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
                     elements.forEach(element => {
                         var lazyId = element.attributes['lazy-id'].value;
@@ -474,8 +485,8 @@
                             for (var i = 1; i < lazyElements.length; i++) {
                                 var lazyElement = lazyElements[i];
                                 lazyImageObserver.observe(lazyElement);
-                                lazyElement.setAttribute('lazy-id', window.countOfLazyimage);
-                                window.countOfLazyimage++;
+                                lazyElement.setAttribute('lazy-id', window.countOfLazyImages);
+                                window.countOfLazyImages++;
                             }
                         }
                     });
@@ -491,32 +502,3 @@
     });
 
 </script>
-<script src="./assets/js/ed.js"></script>
-<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox"
-    aria-activedescendant="ui-active-menuitem" style="z-index: 10; top: 0px; left: 0px; display: none;"></ul>
-<iframe
-    style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
-    name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame"
-    src="./assets/box-469cf41adb11dc78be68c1ae7f9457a4.html"></iframe>
-<script type="text/javascript" id="">
-    (function() {
-        try {
-            window.setTimeout(function() {
-                dataLayer.push({
-                    event: "afterLoad"
-                })
-            }, 1500)
-        } catch (a) {}
-    })();
-
-</script>
-<script type="text/javascript" id="" src="./assets/js/ins.js"></script>
-<iframe style="display: none;" id="insider-worker" src="./assets/worker-new.html"></iframe>
-<style id="ins-free-style" innerhtml="/* Change zindex of topbar */
-.search-bar.fix{z-index: 9999999999;}">
-    /* Change zindex of topbar */
-    .search-bar.fix {
-        z-index: 9999999999;
-    }
-
-</style>

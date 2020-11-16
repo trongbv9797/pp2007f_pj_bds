@@ -71,6 +71,8 @@ Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 //Canmuacanthue route
 Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
+Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
+
 
 //Phong Thuy
 Route::get('/phong-thuy', 'PhongThuyController@index')->name('phongthuy');
@@ -79,3 +81,4 @@ Route::get('/tu-van-phong-thuy', 'PhongThuyController@index2')->name('tuvanphong
 Route::get('/phong-thuy-nha-o', 'PhongThuyController@index3')->name('phongthuynhao');
 Route::get('/phong-thuy-van-phong', 'PhongThuyController@index4')->name('phongthuyvanphong');
 Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongthuytheotuoi');
+

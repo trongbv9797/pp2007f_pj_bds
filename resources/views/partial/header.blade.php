@@ -1,24 +1,3 @@
-<div class="zopim" __jx__id="___$_75 ___$_75"
-    style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; right: 10px; bottom: 0px;"
-    data-test-id="ChatWidgetButton"><iframe
-        style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;"
-        src="about:blank" data-test-id="ChatWidgetButton-iframe" title="Zendesk Chat widget button"
-        frameborder="0"></iframe>
-</div>
-<div class="zopim" __jx__id="___$_4 ___$_4"
-    style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; width: 290px; height: 400px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;"
-    data-test-id="ChatWidgetWindow"><iframe
-    style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;"
-    src="about:blank" data-test-id="ChatWidgetWindow-iframe" title="Zendesk Chat widget window"
-    frameborder="0"></iframe>
-</div>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMVJT5G" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <div class="form-content">
     <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND" style=""></div>
     <script type="text/javascript">

@@ -29,8 +29,17 @@ route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTan
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 
 
-
+//TintucController
 Route::get('/tin-tuc', 'TintucController@index');
+Route::get('/tin-thi-truong', 'TintucController@tinthitruong');
+Route::get('/phan-tich','TintucController@phantich');
+Route::get('/chinh-sach','TintucController@chinhsach');
+Route::get('/quy-hoach','TintucController@quyhoach');
+Route::get('/bds-the-gioi','TintucController@bdsthegioi');
+Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds');
+
+
+
 
 //NhadatbanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhadatbanController@index')->name('nha_dat_ban');
@@ -69,6 +78,7 @@ Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');
 Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 
 //Canmuacanthue route
+
 Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');

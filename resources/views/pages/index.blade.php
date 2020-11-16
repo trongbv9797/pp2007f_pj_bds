@@ -3,7 +3,8 @@
 @section('title', 'Kênh thông tin bất động sản - Mua bán nhà đất số 1 Việt Nam')
 
 @section('style-libraries')
-
+    <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.home.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
 @endsection
 
 

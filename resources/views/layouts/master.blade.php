@@ -33,8 +33,7 @@
 
     {{--Styles css common--}}
     <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.FrontEnd.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.home.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
+
 
     @yield('style-libraries')
     {{--Styles custom--}}

@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 // HomeController index
-Route::get('/index', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 //ProjectController
 route::get('/du-an', 'ProjectController@index')->name('indexProjects');

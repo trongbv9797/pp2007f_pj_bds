@@ -347,7 +347,7 @@
 
 
 <script
-    src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121104.msvbds.FrontEnd.Common.Home.min.js">
+    src="./assets/js/filestatic.msvbds.FrontEnd.Common.Home.min.js">
 </script>
 
 <!--start BannerContext-->
@@ -421,11 +421,11 @@
 
 
 <script
-    src="https://staticfile.batdongsan.com.vn/js/binnova/filestatic.ver202011121104.msvbds.jquery.tabslet.jscompress.js">
+    src="./assets/js/filestatic.msvbds.jquery.tabslet.jscompress.js">
 </script>
 <script
     marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}
-    src="https://staticfile.batdongsan.com.vn/js/binnova/filestatic.ver202011121104.msvbds.FrontEnd.Home.min.js">
+    src="./assets/js/filestatic.msvbds.FrontEnd.Home.min.js">
 </script>
 
 <script type="text/javascript">

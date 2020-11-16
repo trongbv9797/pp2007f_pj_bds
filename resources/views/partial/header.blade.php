@@ -234,12 +234,12 @@
                                             class="haslink ">Biệt thự, liền kề</a></li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="https://batdongsan.com.vn/can-mua-can-thue" class="haslink "><span
+                            <li class="lv0"><a href="{{ route('buyerseller') }}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_buy_rent.svg"></span><span
                                         class="text">Cần mua - Cần thuê</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/nha-dat-can-mua"
+                                    <li class="lv1"><a href="{{ route('buyer') }}"
                                             class="haslink indent">Nhà đất cần mua</a>
                                         <div class="arrrow"></div>
                                         <ul>
@@ -265,7 +265,7 @@
                                                     class="haslink ">Mua loại bất động sản khác</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/nha-dat-can-thue"
+                                    <li class="lv1"><a href="{{ route('seller') }}"
                                             class="haslink indent">Nhà đất cần thuê</a>
                                         <div class="arrrow"></div>
                                         <ul>

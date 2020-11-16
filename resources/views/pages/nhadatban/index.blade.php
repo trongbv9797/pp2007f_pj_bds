@@ -3,16 +3,7 @@
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')
-<link rel="stylesheet" href="./assets/css/nha_dat_ban2.css">
-<link rel="stylesheet" href="./assets/css/nha_dat_ban1.css">
-<link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban" media="only screen and (max-width: 640px)">
-<link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban" media="handheld">
-<link rel="next" href="https://batdongsan.com.vn/nha-dat-ban/p2">
-<link href="./assets/image/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
-<style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.
-    { display: none !important }</style>
-<style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
-
+<link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
 @endsection
 
 @section('content')

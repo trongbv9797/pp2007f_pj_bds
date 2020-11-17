@@ -1586,4 +1586,8 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             
         </div>
 @endsection
+@section('script')
 
+
+    
+@endsection

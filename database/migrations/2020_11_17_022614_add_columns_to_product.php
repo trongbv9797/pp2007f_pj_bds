@@ -13,7 +13,7 @@ class AddColumnsToProduct extends Migration
      */
     public function up()
     {
-        Schema::table('product', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             //
             $table->integer('city_id')->nullable(false)->after('content');
             $table->integer('district_id')->nullable(false)->after('city_id');
@@ -31,7 +31,7 @@ class AddColumnsToProduct extends Migration
      */
     public function down()
     {
-        Schema::table('product', function (Blueprint $table) {
+        Schema::table('products', function (Blueprint $table) {
             //
         });
     }

@@ -94,4 +94,3 @@ Route::get('/tu-van-phong-thuy', 'PhongThuyController@index2')->name('tuvanphong
 Route::get('/phong-thuy-nha-o', 'PhongThuyController@index3')->name('phongthuynhao');
 Route::get('/phong-thuy-van-phong', 'PhongThuyController@index4')->name('phongthuyvanphong');
 Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongthuytheotuoi');
-

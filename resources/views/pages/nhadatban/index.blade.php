@@ -358,6 +358,8 @@
         @foreach ($posts as $posts)
             <div class="vip0 product-item clearfix" uid="649852">
                 <div class="product-image ">
+                    <a class="product-avatar" href="{!! Route('bien_hoa_city') !!}" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" onclick="">
+                        <img class="product-avatar-img" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
                     <a class="product-avatar" href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" onclick="">
                         <img class="product-avatar-img" alt="{!! $posts->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="{!! $posts->image !!}" is-lazy-image="true" lazy-id="0">
                     </a>
@@ -367,6 +369,8 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
+                        <a href="{!! Route('bien_hoa_city') !!}" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" class="vipZero product-link">
+                            KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ
                         <a href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" class="vipZero product-link">
                             {!! $posts->title !!}
                         </a>

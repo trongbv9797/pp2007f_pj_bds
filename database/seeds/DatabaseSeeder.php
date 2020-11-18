@@ -12,20 +12,19 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UserSeeder::class);
+
         // $this->call(DistrictSeeder::class);
-        $this->call(WardSeeder::class);
-        
+        // trong
+        $this->call(WardSeeder::class);   
         $this->call(DistrictSeeder::class);
-
         $this->call(ProvinceSeeder::class);
-
+        //tai anh
         $this->call(ProductSeeder::class);
-
-
-
+        //viet
         $this->call(CategorySeeder::class);
         $this->call(PostSeeder::class);
-
+        //hieu
         $this->call(ImageSeeder::class);
+
     }
 }

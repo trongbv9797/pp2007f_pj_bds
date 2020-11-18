@@ -11,16 +11,26 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //SeederCategory
-        DB::table('menu_category')->insert([
-            ['name' => 'Ban can ho Chung cu'],
-            ['name' => 'Ban nha rieng'],
-            ['name' => 'Ban nha mat pho'],
-            ['name' => 'Cho thue can ho chung cu'],
-            ['name' => 'Cho thue nha rieng'],
-            ['name' => 'Cho thue nha mat pho'],
-
+        DB::table('categories')->insert([
+            'category_name' => 'tin thường',
+            'category_price' => 2000,
+            'category_unit' => 'đồng/ngày',
         ]);
-
+        DB::table('categories')->insert([
+            'category_name' => 'tin ưu đãi',
+            'category_price' => 4000,
+            'category_unit' => 'đồng/ngày',
+        ]);
+        DB::table('categories')->insert([
+            'category_name' => 'tin vip',
+            'category_price' => 6000,
+            'category_unit' => 'đồng/ngày',
+        ]);
+        DB::table('categories')->insert([
+            'category_name' => 'tin vip DB',
+            'category_price' => 10000,
+            'category_unit' => 'đồng/ngày',
+        ]);
+        $timestamps = true;
     }
 }

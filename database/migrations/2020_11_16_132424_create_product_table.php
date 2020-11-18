@@ -22,6 +22,7 @@ class CreateProductTable extends Migration
             $table->string('address',250)->nullable(false);
             $table->text('content')->nullable(false);
             $table->string('image')->nullable(true);
+            $table->text('slug')->nullable(false);
             $table->timestamps();
         });
     }

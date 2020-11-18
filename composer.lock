@@ -10,7 +10,7 @@
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
             "source": {
-                "type": "git",
+                "type": "git",  
                 "url": "https://github.com/asm89/stack-cors.git",
                 "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa"
             },

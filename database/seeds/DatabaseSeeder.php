@@ -14,5 +14,17 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserSeeder::class);
         // $this->call(DistrictSeeder::class);
         $this->call(WardSeeder::class);
+        
+        $this->call(DistrictSeeder::class);
+
+        $this->call(ProvinceSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(ProductSeeder::class);
+
+
+
+        $this->call(CategorySeeder::class);
+        $this->call(PostSeeder::class);
+
     }
 }

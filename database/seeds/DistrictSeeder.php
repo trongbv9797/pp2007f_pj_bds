@@ -18,7 +18,7 @@ class DistrictSeeder extends Seeder
         $string = file_get_contents(__DIR__.'/dist/quan_huyen.json');
         $json_a = json_decode($string, true);
         foreach($json_a as $item){
-            District::create(array(
+            DB::table('districts')->insert([
                 'name' => $item['name'],
                 'type' => $item['type'],
                 'slug' => $item['slug'],
@@ -27,7 +27,9 @@ class DistrictSeeder extends Seeder
                 'path_with_type' => $item['path_with_type'],
                 'code' => $item['code'],
                 'parent_code' => $item['parent_code'],
-            ));
+                'created_at'=> date('y-m-d h:i:s'),
+                'updated_at'=> date('y-m-d h:i:s'),
+            ]);
         }
         
     }

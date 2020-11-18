@@ -15,8 +15,8 @@ class AddColumnsToProduct extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->integer('city_id')->nullable(false)->after('content');
-            $table->integer('district_id')->nullable(false)->after('city_id');
+            $table->integer('provinces_id')->nullable(false)->after('content');
+            $table->integer('district_id')->nullable(false)->after('provinces_id');
             $table->integer('street_id')->nullable(false)->after('district_id');
             $table->smallInteger('number_of_bedroom')->nullable(false)->after('area');
             $table->smallInteger('number_of_restroom')->nullable(false)->after('number_of_bedroom');

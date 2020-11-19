@@ -13,6 +13,14 @@ class NhadatbanController extends Controller
         return view("pages.nhadatban.index", compact('products'));
     }
 
+    public function index1() {
+        $posts = products::limit(10)->get();
+        $post = products::all()->where('area','<=','20')->toArray();
+        dd($post);
+        
+    }
+
+
     public function single_post() {
         $products = Products::all();
         return view("pages.nhadatban.single_post", compact('products'));

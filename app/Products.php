@@ -9,26 +9,26 @@ class Products extends Model
     //
     public function image()
     {
-        return $this->hasMany('App\Models\Image');
+        return $this->hasMany('App\Image');
     }
 
     public function menu_category()
     {
-        return $this->hasMany('App\Models\Menu_category');
+        return $this->hasMany('App\Menu_category');
     }
 
     public function province()
     {
-        return $this->belongsToMany('App\model\Province', 'products_id');
+        return $this->belongsToMany('App\Province', 'products_id');
     }
 
     public function district()
     {
-        return $this->belongsToMany('App\model\District', 'products_id');
+        return $this->belongsToMany('App\District', 'products_id');
     }
 
     public function ward()
     {
-        return $this->belongsToMany('App\model\Ward', 'products_id');
+        return $this->belongsToMany('App\Ward', 'products_id');
     }
 }

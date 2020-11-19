@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Models;
 
-class Ward extends Model
+class Ward extends Models
 {
     //
     protected $fillable =[
@@ -17,9 +17,4 @@ class Ward extends Model
         'code',
         'parent_code'
     ];
-
-    public function product()
-    {
-        return $this->belongsToMany('App\Products', 'wards_id');
-    }
 }

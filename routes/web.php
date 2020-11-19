@@ -59,6 +59,9 @@ Route::get('/nha-dat-ban-bien-hoa-city', 'NhadatbanController@bien_hoa_city')->n
 Route::get('/{id}', 'NhadatbanController@single_post')->name('single_post');
 
 
+//Filter diện tích
+Route::get('/<=20', 'NhadatbanController@index1')->name('<=20');
+
 //NhadatchothueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index')->name('nha_dat_cho_thue');
 Route::get('/cho-thue-can-ho-chung-cu', 'NhadatchothueController@cho_thue_can_ho')->name('cho_thue_can_ho');

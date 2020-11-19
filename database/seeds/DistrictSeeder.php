@@ -27,7 +27,6 @@ class DistrictSeeder extends Seeder
                 'path_with_type' => $item['path_with_type'],
                 'code' => $item['code'],
                 'parent_code' => $item['parent_code'],
-                'products_id' => rand(1,50),
                 'created_at'=> date('y-m-d h:i:s'),
                 'updated_at'=> date('y-m-d h:i:s'),
             ]);

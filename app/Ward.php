@@ -20,7 +20,7 @@ class Ward extends Model
 
     public function product()
     {
-        return $this->belongsToMany('App\Products', 'wards_id');
+        return $this->hasMany('App\Products', 'id');
     }
 
     public function district()

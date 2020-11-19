@@ -20,7 +20,6 @@ class CreateProvincesTable extends Migration
             $table->string('type');
             $table->string('name_with_type');
             $table->integer('code');
-            $table->integer('products_id');
             $table->timestamps();
         });
     }

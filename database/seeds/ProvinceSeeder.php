@@ -25,7 +25,6 @@ class ProvinceSeeder extends Seeder
                 'type' => $item['type'],
                 'name_with_type' => $item['name_with_type'],
                 'code' => $item['code'],
-                'products_id' => rand(1,50),
             ));
 
         }

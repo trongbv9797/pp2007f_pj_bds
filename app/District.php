@@ -9,7 +9,7 @@ class District extends Model
     //
     public function product()
     {
-        return $this->belongsToMany('App\Products', 'districts_id');
+        return $this->belongsTo('App\Products', 'districts_id');
     }
 
     public function province()

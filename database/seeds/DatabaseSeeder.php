@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
 
         // $this->call(DistrictSeeder::class);
         // trong
-        $this->call(WardSeeder::class);   
         $this->call(DistrictSeeder::class);
         $this->call(ProvinceSeeder::class);
         //tai anh

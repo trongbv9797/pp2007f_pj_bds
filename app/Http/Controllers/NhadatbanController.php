@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NhadatbanController extends Controller
 {
     //
-    public function index() {
-        $products = Products::limit(10)->get();
-        return view("pages.nhadatban.index", compact('products'));
+    public function index(Request $request) 
+    {
+        $products = Products::paginate(5);
+        if ($request->ajax()) {
+            return view('pages.nhadatban.presult', compact('products'));
+        }
+  
+        return view('pages.nhadatban.index',compact('products'));
     }
 
     public function single_post() {

@@ -17,6 +17,6 @@ class Province extends Model
 
     public function product()
     {
-        return $this->belongsToMany('App\Models\product', 'provinces_id');
+        return $this->belongsToMany('App\Products', 'provinces_id');
     }
 }

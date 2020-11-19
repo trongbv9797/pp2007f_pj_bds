@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,4 +14,9 @@ class Province extends Model
         'name_with_code',
         'code',
     ];
+
+    public function product()
+    {
+        return $this->belongsToMany('App\Models\product', 'provinces_id');
+    }
 }

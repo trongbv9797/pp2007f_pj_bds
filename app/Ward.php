@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,4 +17,9 @@ class Ward extends Model
         'code',
         'parent_code'
     ];
+
+    public function product()
+    {
+        return $this->belongsToMany('App\Models\product', 'wards_id');
+    }
 }

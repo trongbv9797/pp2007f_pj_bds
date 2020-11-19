@@ -355,13 +355,11 @@
     </div>
     <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
 
-        @foreach ($posts as $posts)
+        @foreach ($products as $products)
             <div class="vip0 product-item clearfix" uid="649852">
                 <div class="product-image ">
-                    <a class="product-avatar" href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" onclick="">
-                        <img class="product-avatar-img" alt="{!! $posts->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
-                    <a class="product-avatar" href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" onclick="">
-                        <img class="product-avatar-img" alt="{!! $posts->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="{!! $posts->image !!}" is-lazy-image="true" lazy-id="0">
+                     <a class="product-avatar" href="{!! Route('single_post', $products->id) !!}" title="{!! $products->title !!}" onclick="">
+                        <img class="product-avatar-img" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="./assets/image/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="0">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -369,27 +367,25 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" class="vipZero product-link">
-                            {!! $posts->title !!}
-                        <a href="{!! Route('bien_hoa_city') !!}" title="{!! $posts->title !!}" class="vipZero product-link">
-                            {!! $posts->title !!}
+                        <a href="{!! Route('single_post', $products->id) !!}" title="{!! $products->title !!}" class="vipZero product-link">
+                            {!! $products->title !!}
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">{!! $posts->price !!}</span>
+                        <span class="price">{!! $products->price !!}</span>
                             <span class="dot">·</span>
-                            <span class="area">{!! $posts->area !!}</span>
+                            <span class="area">{!! $products->area !!}</span>
                                                     <span class="dot">·</span>
-                        <span class="location">{!! $posts->address !!}</span>
+                        <span class="location">{!! $products->address !!}</span>
                     </div>
                     <div class="product-content">
-                        {!! $posts->content !!}
+                        {!! $products->content !!}
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                {!! $posts->created_at->format('M d Y') !!}
-                                <span class="tooltip-time">{!! $posts->created_at->format('M d Y') !!}</span>
+                                {!! $products->created_at->format('M d Y') !!}
+                                <span class="tooltip-time">{!! $products->created_at->format('M d Y') !!}</span>
                             </span>
                         </div>
                         <div class="product-contact">

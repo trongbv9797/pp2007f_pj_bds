@@ -56,6 +56,7 @@ Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong')->name('ban_kho_nha_xuong');
 Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac')->name('bat_dong_san_khac');
 Route::get('/nha-dat-ban-bien-hoa-city', 'NhadatbanController@bien_hoa_city')->name('bien_hoa_city');
+Route::get('/{id}', 'NhadatbanController@single_post')->name('single_post');
 
 
 //NhadatchothueController ----TAI ANH

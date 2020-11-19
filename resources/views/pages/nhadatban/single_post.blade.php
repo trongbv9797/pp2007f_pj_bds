@@ -1,6 +1,9 @@
+@foreach ($products as $products)
 @extends('layouts.master')
 
-@section('title', 'Khách kẹt tiền cần bán nhanh lô đất Biên Hòa New City, DT 5 x 20m, 6 x 20m, 12 x 20m, đã nhận sổ')
+@section('title')
+{!! $products->title !!}
+@endsection
 
 @section('styles')
 <link rel="stylesheet" href="./assets/css/bien_hoa1.css">
@@ -306,14 +309,14 @@
 <!-- Product-detail-->
 <div class="main-container clearfix">
     <div class="main-left">
+
+
+
         <section class="product-detail">
             <!--start slide-product-->
             <!--end slide-product-->
             <!--start description-->
             
-
-
-
 
     <div class="slide-product" tabindex="0">
         <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
@@ -349,13 +352,13 @@
         <div class="swiper-container gallery-thumbs swiper-container-initialized swiper-container-horizontal swiper-container-free-mode swiper-container-thumbs">
             <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                                         <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095750-3277_wm(1).jpg" is-lazy-image="true" lazy-id="3">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095750-3277_wm(1).jpg" is-lazy-image="true" lazy-id="3">
                         </div>
                         <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="4">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="4">
                         </div>
                         <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="5">
+                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="5">
                         </div>
             </div>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -440,13 +443,13 @@
                 <div class="swiper-container gallery-top-full swiper-container-initialized swiper-container-horizontal">
                     <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                         <li class="swiper-slide swiper-slide-active" style="width: 1576px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="6">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="6">
                                 </li>
                                 <li class="swiper-slide swiper-slide-next" style="width: 1576px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="7">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="7">
                                 </li>
                                 <li class="swiper-slide" style="width: 1576px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="8">
+                                    <img alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="8">
                                 </li>
                     </ul>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -456,13 +459,13 @@
                 <div class="swiper-container gallery-thumbs-full swiper-container-initialized swiper-container-horizontal swiper-container-thumbs" style="max-width: 360px;">
                     <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                                                         <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="9">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="9">
                                 </div>
                                 <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="10">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="10">
                                 </div>
                                 <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                                    <img alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="11">
+                                    <img alt="{!! $products->title !!}" title="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="11">
                                 </div>
                     </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -495,15 +498,15 @@
 </script>
 
 <div class="description" id="product-detail-web" uid="649852">
-    <h1 class="tile-product"> KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ</h1>
+    <h1 class="tile-product"> {!! $products->title !!}</h1>
     <div class="short-detail">
         Dự án Biên Hòa New City, Phố Nam Cao, Phường Phước Tân, Biên Hòa, Đồng Nai
     </div>
     <div class="divide">&nbsp;</div>
     <div class="short-detail-wrap">
         <ul class="short-detail-2 clearfix pad-16">
-            <li><span class="sp1">Mức giá:</span><span class="sp2">1.45 tỷ</span></li>
-                <li><span class="sp1">Diện tích:</span><span class="sp2">100 m²</span></li>
+            <li><span class="sp1">Mức giá:</span><span class="sp2">{!! $products->price !!} tỷ</span></li>
+                <li><span class="sp1">Diện tích:</span><span class="sp2">{!! $products->area !!} m²</span></li>
                     </ul>
         <div class="repost">
             <span class="product-share">Chia sẻ <span class="ic_share">&nbsp;</span></span>
@@ -520,7 +523,7 @@
                     </li>
                 </ul>
             </div>
-            <span class="product-save iconSave" data-productid="27748072" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Kh&amp;#225;ch kẹt tiền cần b&amp;#225;n nhanh l&amp;#244; đất Bi&amp;#234;n H&amp;#242;a New City, DT 5 x 20m, 6 x 20m, 12 x 20m, đ&amp;#227; nhận sổ&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111095750-3277_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành. DT: 5 x 20m. 6 x 18m. 9 x 20 m. 12 x 20 m. Giá: 1.450 tỷ bao sang tên và ra sổ hồng. Tất cả đã có sổ hồng từng nền, mặ" data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-totalmedia="3" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-createbyuser="649852">Lưu tin <span class="ic_save">&nbsp;</span></span>
+            <span class="product-save iconSave" data-productid="27748072" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Kh&amp;#225;ch kẹt tiền cần b&amp;#225;n nhanh l&amp;#244; đất Bi&amp;#234;n H&amp;#242;a New City, DT 5 x 20m, 6 x 20m, 12 x 20m, đ&amp;#227; nhận sổ&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111095750-3277_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="{!! $products->title !!}" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành. DT: 5 x 20m. 6 x 18m. 9 x 20 m. 12 x 20 m. Giá: 1.450 tỷ bao sang tên và ra sổ hồng. Tất cả đã có sổ hồng từng nền, mặ" data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-totalmedia="3" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-createbyuser="649852">Lưu tin <span class="ic_save">&nbsp;</span></span>
         </div>
     </div>
 
@@ -529,7 +532,7 @@
         <div class="detail-1 pad-bot-16">
             <span class="title-detail">Thông tin mô tả</span>
             <div class="des-product" style="overflow: visible;">
-                Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành.<br>DT:<br>5 x 20m.<br>6 x 18m.<br>9 x 20 m.<br>12 x 20 m.<br>Giá: 1.450 tỷ bao sang tên và ra sổ hồng.<br>Tất cả đã có sổ hồng từng nền, mặt tiền đường 24m, 18m, 15m, 13m.<br>Làm việc trực tiếp chính chủ thương lượng giá tốt nhất cho anh chị mua đầu tư hoặc để dành ở sau này.<br>LH: <span class="hidden-phone hidden-mobile des" raw="0903224939">0903224***</span> (Bá Lợi).<br><br>Một số thông tin cơ bản Biên Hòa New City.<br>- Hỗ trợ vay ngân hàng.<br>- Cơ sở hạ tầng hoàn chỉnh 100% (điện, đường, cây xanh, nước... ).<br>- Cắm mốc phân lô từng nền.<br>- Dự án đất nền Biên Hoà New City năm trong khu kinh tế trọng điểm, khu sân golf Long Thành kết nối Quốc Lộ 51, cao tốc Long Thành - Vũng Tàu, Hương Lộ 2 - Cầu Đồng Nai 2, bên cạnh khu đô thị Aqua City, Cách dự án Vincity - Quận 9 chỉ một cây cầu.<br>- Cầu Vàm Cái Sứt đã khởi công đi ngang dự án đến cao tốc Long Thành, rút ngắn đoạn đường về Quận 2, TP. HCM chỉ còn 20 phút.<br>- Tiện ích đẳng cấp tiêu chuẩn Quốc tế:<br>+ Quần thể sân golf, nhà hàng.<br>+ Khuôn viên lớn, công viên xanh tươi mát.<br>+ Khu thương mại, hồ bơi, phòng gym, spa, trường học, khu y tế.<br>+ An ninh 24/24.
+                {!! $products->content !!}
             </div>
             <div class="box-view-more hidden">
                 <div class="gradient">&nbsp;</div>
@@ -543,7 +546,7 @@
             <span class="title-detail">Đặc điểm bất động sản</span>
             <div class="box-round-grey3">
                 <div class="row-1"><span class="r1">Loại tin đăng:</span><span class="r2">Bán đất nền dự án (đất trong dự án quy hoạch)</span></div>
-                <div class="row-1"><span class="r1">Địa chỉ:</span><span class="r2">Dự án Biên Hòa New City, Phố Nam Cao, Phường Phước Tân, Biên Hòa, Đồng Nai</span></div>
+                <div class="row-1"><span class="r1">Địa chỉ:</span><span class="r2">{!! $products->address !!}</span></div>
                                     <div class="row-1"><span class="r1">Đường vào:</span><span class="r2">13 (m)</span></div>
                                                                                                                                     <div class="row-1"><span class="r1">Pháp lý:</span><span class="r2">Có sổ</span></div>
             </div>
@@ -1062,7 +1065,7 @@
         <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
             <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"><li class="vip0 swiper-slide swiper-slide-visible swiper-slide-active">
                                         <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072"><img src="./assets/image/20201111095750-3277_wm(2).jpg" alt="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
+                                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072"><img src="./assets/image/20201111095750-3277_wm(2).jpg" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
                                             <span class="product-feature">
                                                 
                                                 
@@ -1070,13 +1073,13 @@
                                             </span>
                                         </div>
                                         <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ">KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ</a></h3>
+                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="{!! $products->title !!}">{!! $products->title !!}</a></h3>
                                             <div class="pro-price">1.45 tỷ</div>
                                             <span class="ic_dot">·</span><div class="pro-m2">100 m²</div>
                                             <div class="pro-adress">Biên Hòa, Đồng Nai</div>
                                             <div class="date">2 ngày trước<span class="tooltip-time">11/11/2020</span></div>
                                             <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27748072" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Kh%26%23225%3Bch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%26%23225%3Bn%20nhanh%20l%26%23244%3B%20%C4%91%E1%BA%A5t%20Bi%26%23234%3Bn%20H%26%23242%3Ba%20New%20City%2C%20DT%205%20x%2020m%2C%206%20x%2020m%2C%2012%20x%2020m%2C%20%C4%91%26%23227%3B%20nh%E1%BA%ADn%20s%E1%BB%95%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, ĐÃ NHẬN SỔ" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành.&lt;br/&gt;DT:&lt;br/&gt;5 x 20m.&lt;br/&gt;6 x 18m.&lt;br/&gt;9 x 20 m.&lt;br/&gt;12 x 20 m.&lt;br/&gt;Giá: 1.450 tỷ bao sang tên và ra sổ hồng.&lt;br/&gt;Tất cả đã có sổ hồng từng nền, mặt tiền đường 24m, 18m, 15m, 13m.&lt;br/&gt;Làm việc trực tiếp chính chủ thương lượng giá tốt nhất cho anh chị mua đầu tư hoặc để dành ở sau này.&lt;br/&gt;LH: 0903224939 (Bá Lợi).&lt;br/&gt;&lt;br/&gt;Một số thông tin cơ bản Biên Hòa New City.&lt;br/&gt;- Hỗ trợ vay ngân hàng.&lt;br/&gt;- Cơ sở hạ tầng hoàn chỉnh 100% (điện, đường, cây xanh, nước... ).&lt;br/&gt;- Cắm mốc phân lô từng nền.&lt;br/&gt;- Dự án đất nền Biên Hoà New City năm trong khu kinh tế trọng điểm, khu sân golf Long Thành kết nối Quốc Lộ 51, cao tốc Long Thành - Vũng Tàu, Hương Lộ 2 - Cầu Đồng Nai 2, bên cạnh khu đô thị Aqua City, Cách dự án Vincity - Quận 9 chỉ một cây cầu.&lt;br/&gt;- Cầu Vàm Cái Sứt đã khởi công đi ngang dự án đến cao tốc Long Thành, rút ngắn đoạn đường về Quận 2, TP. HCM chỉ còn 20 phút.&lt;br/&gt;- Tiện ích đẳng cấp tiêu chuẩn Quốc tế:&lt;br/&gt;+ Quần thể sân golf, nhà hàng.&lt;br/&gt;+ Khuôn viên lớn, công viên xanh tươi mát.&lt;br/&gt;+ Khu thương mại, hồ bơi, phòng gym, spa, trường học, khu y tế.&lt;br/&gt;+ An ninh 24/24." data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-totalmedia="3" data-createbyuser="649852"></i>
+                                                <i class="iconSave" data-productid="27748072" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Kh%26%23225%3Bch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%26%23225%3Bn%20nhanh%20l%26%23244%3B%20%C4%91%E1%BA%A5t%20Bi%26%23234%3Bn%20H%26%23242%3Ba%20New%20City%2C%20DT%205%20x%2020m%2C%206%20x%2020m%2C%2012%20x%2020m%2C%20%C4%91%26%23227%3B%20nh%E1%BA%ADn%20s%E1%BB%95%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="{!! $products->title !!}" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành.&lt;br/&gt;DT:&lt;br/&gt;5 x 20m.&lt;br/&gt;6 x 18m.&lt;br/&gt;9 x 20 m.&lt;br/&gt;12 x 20 m.&lt;br/&gt;Giá: 1.450 tỷ bao sang tên và ra sổ hồng.&lt;br/&gt;Tất cả đã có sổ hồng từng nền, mặt tiền đường 24m, 18m, 15m, 13m.&lt;br/&gt;Làm việc trực tiếp chính chủ thương lượng giá tốt nhất cho anh chị mua đầu tư hoặc để dành ở sau này.&lt;br/&gt;LH: 0903224939 (Bá Lợi).&lt;br/&gt;&lt;br/&gt;Một số thông tin cơ bản Biên Hòa New City.&lt;br/&gt;- Hỗ trợ vay ngân hàng.&lt;br/&gt;- Cơ sở hạ tầng hoàn chỉnh 100% (điện, đường, cây xanh, nước... ).&lt;br/&gt;- Cắm mốc phân lô từng nền.&lt;br/&gt;- Dự án đất nền Biên Hoà New City năm trong khu kinh tế trọng điểm, khu sân golf Long Thành kết nối Quốc Lộ 51, cao tốc Long Thành - Vũng Tàu, Hương Lộ 2 - Cầu Đồng Nai 2, bên cạnh khu đô thị Aqua City, Cách dự án Vincity - Quận 9 chỉ một cây cầu.&lt;br/&gt;- Cầu Vàm Cái Sứt đã khởi công đi ngang dự án đến cao tốc Long Thành, rút ngắn đoạn đường về Quận 2, TP. HCM chỉ còn 20 phút.&lt;br/&gt;- Tiện ích đẳng cấp tiêu chuẩn Quốc tế:&lt;br/&gt;+ Quần thể sân golf, nhà hàng.&lt;br/&gt;+ Khuôn viên lớn, công viên xanh tươi mát.&lt;br/&gt;+ Khu thương mại, hồ bơi, phòng gym, spa, trường học, khu y tế.&lt;br/&gt;+ An ninh 24/24." data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-totalmedia="3" data-createbyuser="649852"></i>
                                                 </span>
                                         </div>
                                     </li><li class="vip0 swiper-slide swiper-slide-visible swiper-slide-next">
@@ -1373,12 +1376,14 @@
             <!--end product history-->
             <div class="divide divide-full">&nbsp;</div>
             <div class="note pad-16">
-                Quý vị đang xem nội dung tin rao "Khách kẹt tiền cần bán nhanh lô đất Biên Hòa New City, DT 5 x 20m, 6 x 20m, 12 x 20m, đã nhận sổ" - <strong style="font-weight: bold">Mã tin 27748072</strong>.
+                Quý vị đang xem nội dung tin rao "{!! $products->title !!}" - <strong style="font-weight: bold">Mã tin 27748072</strong>.
                 Mọi thông tin, nội dung liên quan tới tin rao này là do người đăng tin đăng tải và chịu trách nhiệm.
                 Batdongsan.com.vn luôn cố gắng để các thông tin được hữu ích nhất cho quý vị tuy nhiên Batdongsan.com.vn không đảm bảo và không chịu trách nhiệm về bất kỳ thông tin, nội dung nào liên quan tới tin rao này.
                 Trường hợp phát hiện nội dung tin đăng không chính xác, Quý vị hãy thông báo và cung cấp thông tin cho Ban quản trị Batdongsan.com.vn theo <strong style="font-weight: bold">Hotline 19001881</strong> để được hỗ trợ nhanh và kịp thời nhất.
             </div>
         </section>
+
+
     </div>
     <div class="main-right">
                 <div class="box-contact">
@@ -1912,3 +1917,4 @@
 
         </div>
 @endsection
+@endforeach

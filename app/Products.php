@@ -14,7 +14,7 @@ class Products extends Model
 
     public function menu_category()
     {
-        return $this->hasMany('App\Menu_category');
+        return $this->belongsTo('App\Menu_category', 'id');
     }
 
     public function province()

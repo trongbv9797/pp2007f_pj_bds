@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert ([
         'title' => $faker->sentence,
         'type' => rand(0,2),
-        'price' => rand(1000000, 1000000000),
+        'price' => rand(1, 10),
         'area' => rand(20, 200),
         'image_id' => rand(1, 1000),
         'slug' => rand(1, 100000),
@@ -30,6 +30,7 @@ class ProductSeeder extends Seeder
         'provinces_id' => rand(1, 64),
         'districts_id' => rand(1, 100),
         'wards_id' => rand(1, 200),
+        'menu_category_id' => rand(1,6),
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
         ]);

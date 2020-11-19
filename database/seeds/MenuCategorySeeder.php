@@ -16,10 +16,11 @@ class MenuCategorySeeder extends Seeder
             ['name' => 'Bán căn hộ chung cư'],
             ['name' => 'Bán nhà riêng'],
             ['name' => 'Bán nhà mặt phố'],
-            ['name' => 'Cho thuê hộ chung cư'],
+            ['name' => 'Cho thuê căn hộ chung cư'],
             ['name' => 'Cho thuê nhà riêng'],
             ['name' => 'Cho thuê nhà mặt phố'],
-            'products_id' =>rand(1,50),
         ]);
     }
+
+       
 }

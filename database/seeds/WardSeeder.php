@@ -27,6 +27,7 @@ class WardSeeder extends Seeder
                 'path_with_type'=> $item['path_with_type'],
                 'code'=> $item['code'],
                 'parent_code'=> $item['parent_code'],
+                'products_id' => rand(1,50),
             ));
         }
     }

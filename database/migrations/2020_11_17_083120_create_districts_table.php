@@ -23,6 +23,7 @@ class CreateDistrictsTable extends Migration
             $table->string('path_with_type');
             $table->integer('code');
             $table->integer('parent_code');
+            $table->integer('products_id');
             $table->timestamps();
         });
     }

@@ -46,6 +46,8 @@ Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds');
 
 //NhadatbanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhadatbanController@index')->name('nha_dat_ban');
+
+
 Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu')->name('ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng')->name('ban_nha_rieng');
 Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu')->name('ban_biet_thu');

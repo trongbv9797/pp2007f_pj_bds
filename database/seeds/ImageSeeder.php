@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ImageSeeder extends Seeder
 {
@@ -18,7 +19,6 @@ class ImageSeeder extends Seeder
             [
             'link'=>$faker->imageUrl($width = 640, $height = 480),
             'name'=>Str::random(10),
-            'product_id'=>rand(1, 1000),
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s'),
             ]

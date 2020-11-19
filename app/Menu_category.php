@@ -9,6 +9,6 @@ class Menu_category extends Model
     //
     public function product()
     {
-        return $this->belongsTo('App\Models\product', 'menu_category_id');
+        return $this->belongsTo('App\Products', 'menu_category_id');
     }
 }

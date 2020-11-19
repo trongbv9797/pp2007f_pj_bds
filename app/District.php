@@ -9,6 +9,6 @@ class District extends Model
     //
     public function product()
     {
-        return $this->belongsToMany('App\Models\product', 'districts_id');
+        return $this->belongsToMany('App\Products', 'districts_id');
     }
 }

@@ -20,6 +20,6 @@ class Ward extends Model
 
     public function product()
     {
-        return $this->belongsToMany('App\Models\product', 'wards_id');
+        return $this->belongsToMany('App\Products', 'wards_id');
     }
 }

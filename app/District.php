@@ -16,4 +16,9 @@ class District extends Model
     { 
         return $this->belongsTo('App\Province', 'code');
     }
+
+    public function wards()
+    {
+        return $this->hasMany('App\Ward', 'parent_code');
+    }
 }

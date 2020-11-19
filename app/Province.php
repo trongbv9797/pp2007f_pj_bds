@@ -19,4 +19,9 @@ class Province extends Model
     {
         return $this->belongsToMany('App\Products', 'provinces_id');
     }
+
+    public function districts()
+    {
+        return $this->hasMany('App\District', 'parent_code');
+    }
 }

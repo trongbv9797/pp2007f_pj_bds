@@ -1,6 +1,6 @@
 <?php
 
-use App\model\Province;
+use App\Province;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

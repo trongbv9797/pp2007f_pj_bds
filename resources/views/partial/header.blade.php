@@ -270,29 +270,29 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="https://batdongsan.com.vn/tin-tuc" class="haslink "><span
+                            <li class="lv0"><a href="{!! Route('tintucbds') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_news.svg"></span><span class="text">Tin
                                         tức</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/Covid-19" class="haslink ">BĐS
+                                    <li class="lv1"><a href="{!! Route('tintucbds') !!}" class="haslink ">BĐS
                                             &amp; Covid-19</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/tin-thi-truong"
+                                    <li class="lv1"><a href="{!! Route('tinthitruong') !!}"
                                             class="haslink ">Tin thị trường</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/interaktivestory"
+                                    <li class="lv1"><a href="{!! Route('tintucbds') !!}"
                                             class="haslink ">Interaktive Story</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/phan-tich-nhan-dinh"
+                                    <li class="lv1"><a href="{!! Route('phan_tich') !!}"
                                             class="haslink ">Phân tích - nhận định</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/chinh-sach-quan-ly"
+                                    <li class="lv1"><a href="{!! Route('chinh_sach') !!}"
                                             class="haslink ">Chính sách - Quản lý</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/thong-tin-quy-hoach"
+                                    <li class="lv1"><a href="{!! Route('chinh_sach') !!}"
                                             class="haslink ">Thông tin quy hoạch</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/bat-dong-san-the-gioi"
+                                    <li class="lv1"><a href="{!! Route('tintucbds_tg') !!}"
                                             class="haslink ">Bất động sản thế giới</a></li>
                                     <li class="lv1"><a
-                                            href="https://batdongsan.com.vn/tai-chinh-chung-khoan-bat-dong-san"
+                                            href="{!! Route('phan_tich') !!}"
                                             class="haslink ">Tài chính - Chứng khoán - BĐS</a></li>
-                                    <li class="lv1"><a href="https://batdongsan.com.vn/tu-van-luat-bat-dong-san"
+                                    <li class="lv1"><a href="{!! Route('phan_tich') !!}"
                                             class="haslink indent">Tư vấn luật</a>
                                         <div class="arrrow"></div>
                                         <ul>

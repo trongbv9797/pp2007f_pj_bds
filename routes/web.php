@@ -41,6 +41,9 @@ Route::get('/chinh-sach','TintucController@chinhsach');
 Route::get('/quy-hoach','TintucController@quyhoach');
 Route::get('/bds-the-gioi','TintucController@bdsthegioi');
 Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds');
+//Tintucsinglepost
+Route::get('/articles{id}', 'TintucController@articles')->name('tintuc_single_post');
+
 
 
 

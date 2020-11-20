@@ -1,15 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TintucController extends Controller
 {
     //
-    public function index(){
-        return view('pages.tintucbds.tintuc');
-    }
+    // public function index(){
+    //     return view('pages.tintucbds.tintuc');
+    // }
 
 
     public function tinthitruong()
@@ -38,4 +39,18 @@ class TintucController extends Controller
     {
         return view('pages.tintucbds.taichinhbds');
     }
+
+    //Singlepost
+    public function articles($id) {
+        $articles = Article::where('id', '=', $id)->get();
+        return view("pages.tintucbds.singlepost", compact('articles'));
+    }
+
+    public function index() {
+        $articles = DB::table('articles')->limit(6)->get();
+        return view("pages.tintucbds.tintuc", compact('articles'));
+    }
+
+    
+    
 }

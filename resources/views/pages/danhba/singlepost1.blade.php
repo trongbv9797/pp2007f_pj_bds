@@ -8,25 +8,52 @@
 <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011110519.msvbds.FrontEnd.min.css" />
 <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/Broker/broker.min.css" media="all">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
-<style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
-<style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style>
-<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011121057.msvbds.FrontEnd.min.css" />
-<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/lib/microtip/microtip.min.css" />
-<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/Product/filestatic.ver202011121057.msvbds.BrokerDetailsPage.min.css">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 @endsection
 @section('content')
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({'event': 'pageInfo','cat': '0','dtk': 'eb','ite': '2825','pag': '232','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
-    </script>
+  
 
-    
-    
+    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="audience" content="general" />
+    <meta name="resource-type" content="document" />
+    <meta name="abstract" content="Thông tin nhà đất Việt Nam" />
+    <meta name="classification" content="Bất động sản Việt Nam" />
+    <meta name="area" content="Nhà đất và bất động sản" />
+    <meta name="placename" content="Việt Nam" />
+    <meta name="author" content="Batdongsan.com.vn" />
+    <meta name="copyright" content="©2007 Batdongsan.com.vn" />
+    <meta name="owner" content="Batdongsan.com.vn" />
+    <meta name="generator" content="Công ty Cổ phần PropertyGuru Việt Nam" />
+    <meta name="distribution" content="Global" />
+    <meta name='revisit-after' content='1 days' />
+            <meta name="robots" content="index,follow" />
+
+    <meta name="custom-apple-itunes-app" content="app-id=866492094" />
+    <meta name ='keywords' content = 'Công, ty, chúng, tôi, hoạt, động, trong, lĩnh, vực' />
+<meta name ='description' content = 'Công ty chúng tôi hoạt động trong lĩnh vực dịch vụ môi giới Bất động sản cho thuê được điều hành bởi đội ngũ dày dặn kinh nghiệm trong nhiề' />
+<title>CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL | Công ty môi giới</title>
+<meta name ='googlebot-news' content = 'noindex' />
+
         
     
-        
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011131001.msvbds.FrontEnd.min.css" />
     
+    
+    <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/lib/microtip/microtip.min.css" />
+    
+    
+        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/Product/filestatic.ver202011131001.msvbds.BrokerDetailsPage.min.css">
+    
+
+</head>
+<body class="bg-site">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMVJT5G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="form-content">
         <div class="adPosition" positionCode="BANNER_POSITION_BACKGROUND" style=""></div>
@@ -49,6 +76,7 @@
                 </div>
             </div>
         </div>
+        
         
         <div class="popupMarking  save" style="display: none">
             <img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_unsave.svg">
@@ -312,8 +340,8 @@
     <div class="product-lists" id="broker-page">
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-le-van-sy-phuong-14-1/cho-tien-388-14-quan-3-pr27765036" title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 388 L&#xEA; V&#x103;n S&#x1EF9;, ph&#x1B0;&#x1EDD;ng 14, Qu&#x1EAD;n 3" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/12/20201112105952-5457_wm.jpg" alt="Cho thu&#234; nh&#224; mặt tiền 388 L&#234; Văn Sỹ, phường 14, Quận 3" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-pho-nguyen-thien-thuat-62/cho-tien-125-gan-nga-tu-dinh-chieu-quan-10-pr27857049" title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 125 Nguy&#x1EC5;n Thi&#x1EC7;n Thu&#x1EAD;t g&#x1EA7;n ng&#xE3; t&#x1B0; Nguy&#x1EC5;n &#x110;&#xEC;nh Chi&#x1EC3;u, qu&#x1EAD;n 10" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/19/20201119153450-560d_wm.jpg" alt="Cho thu&#234; nh&#224; mặt tiền 125 Nguyễn Thiện Thuật gần ng&#227; tư Nguyễn Đ&#236;nh Chiểu, quận 10" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -321,53 +349,51 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-mat-pho-duong-le-van-sy-phuong-14-1/cho-tien-388-14-quan-3-pr27765036"
-                           title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 388 L&#xEA; V&#x103;n S&#x1EF9;, ph&#x1B0;&#x1EDD;ng 14, Qu&#x1EAD;n 3" class="vip5 product-link">
-                            Cho thuê nhà mặt tiền 388 Lê Văn Sỹ, phường 14, Quận 3
+                        <a href="/cho-thue-nha-mat-pho-pho-nguyen-thien-thuat-62/cho-tien-125-gan-nga-tu-dinh-chieu-quan-10-pr27857049"
+                           title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 125 Nguy&#x1EC5;n Thi&#x1EC7;n Thu&#x1EAD;t g&#x1EA7;n ng&#xE3; t&#x1B0; Nguy&#x1EC5;n &#x110;&#xEC;nh Chi&#x1EC3;u, qu&#x1EAD;n 10" class="vip5 product-link">
+                            Cho thuê nhà mặt tiền 125 Nguyễn Thiện Thuật gần ngã tư Nguyễn Đình Chiểu, quận 10
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">60 tri&#x1EC7;u/th&#xE1;ng</span>
-                            <span class="dot">·</span>
-                            <span class="area">90 m&#xB2;</span>
+                        <span class="price">40 tri&#x1EC7;u/th&#xE1;ng</span>
                                                     <span class="dot">·</span>
-                        <span class="location">Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        - Cho thuê toàn bộ căn nhà diện tích ngang 5 mét, dài 18 mét. Xây dựng 1 trệt 3 lầu. Vị trí cầu thang gần cuối nhà, có lề để xe rộng. Nhà mới sạch sẽ, thiết kế thoáng mát. - Vị trí ngay khu vực kinh doanh sầm uất, phù hợp làm cửa hàng thời trang, siêu thị, showroom trưng bày, văn
+                        Cho thuê nhà mặt tiền 125 Nguyễn Thiện Thuật gần ngã tư Nguyễn Đình Chiểu, quận 10. - Toàn bộ căn nhà mặt tiền 1 trệt 5 lầu có thang máy. DTSD gần 200m2, nhà mới sạch đẹp, các lầu trống suốt, trang bị đầy đủ máy lạnh. Khu vực mặt tiền thông thoáng, kinh doanh sầm uất, có lề để xe
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                H&#xF4;m nay
-                                <span class="tooltip-time">12/11/2020</span>
+                                H&#xF4;m qua
+                                <span class="tooltip-time">19/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="27765036"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/12/20201112105952-5457_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; m&#x1EB7;t ti&#x1EC1;n 388 L&amp;#234; V&#x103;n S&#x1EF9;, ph&#x1B0;&#x1EDD;ng 14, Qu&#x1EAD;n 3&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/12/20201112105952-5457_wm.jpg"
+                               data-productid="27857049"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/19/20201119153450-560d_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; m&#x1EB7;t ti&#x1EC1;n 125 Nguy&#x1EC5;n Thi&#x1EC7;n Thu&#x1EAD;t g&#x1EA7;n ng&amp;#227; t&#x1B0; Nguy&#x1EC5;n &#x110;&amp;#236;nh Chi&#x1EC3;u, qu&#x1EAD;n 10&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/19/20201119153450-560d_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 388 L&#xEA; V&#x103;n S&#x1EF9;, ph&#x1B0;&#x1EDD;ng 14, Qu&#x1EAD;n 3"
-                               data-price="60 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="90 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 125 Nguy&#x1EC5;n Thi&#x1EC7;n Thu&#x1EAD;t g&#x1EA7;n ng&#xE3; t&#x1B0; Nguy&#x1EC5;n &#x110;&#xEC;nh Chi&#x1EC3;u, qu&#x1EAD;n 10"
+                               data-price="40 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="Kh&#xF4;ng x&#xE1;c &#x111;&#x1ECB;nh"
                                data-pricesort="0"
                                data-areasort="0"
                                data-room="0"
                                data-toilets="0"
-                               data-address="Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="- Cho thu&#xEA; to&#xE0;n b&#x1ED9; c&#x103;n nh&#xE0; di&#x1EC7;n t&#xED;ch ngang 5 m&#xE9;t, d&#xE0;i 18 m&#xE9;t. X&#xE2;y d&#x1EF1;ng 1 tr&#x1EC7;t 3 l&#x1EA7;u. V&#x1ECB; tr&#xED; c&#x1EA7;u thang g&#x1EA7;n cu&#x1ED1;i nh&#xE0;, c&#xF3; l&#x1EC1; &#x111;&#x1EC3; xe r&#x1ED9;ng. Nh&#xE0; m&#x1EDB;i s&#x1EA1;ch s&#x1EBD;, thi&#x1EBF;t k&#x1EBF; tho&#xE1;ng m&#xE1;t. - V&#x1ECB; tr&#xED; ngay khu v&#x1EF1;c kinh doanh s&#x1EA7;m u&#x1EA5;t, ph&#xF9; h&#x1EE3;p l&#xE0;m c&#x1EED;a h&#xE0;ng th&#x1EDD;i trang, si&#xEA;u th&#x1ECB;, showroom tr&#x1B0;ng b&#xE0;y, v&#x103;n"
-                               data-duration="H&#xF4;m nay"
-                               data-updatedtime="12/11/2020"
-                               data-datesort="11/12/2020 11:00:26"
+                               data-address="Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 125 Nguy&#x1EC5;n Thi&#x1EC7;n Thu&#x1EAD;t g&#x1EA7;n ng&#xE3; t&#x1B0; Nguy&#x1EC5;n &#x110;&#xEC;nh Chi&#x1EC3;u, qu&#x1EAD;n 10. - To&#xE0;n b&#x1ED9; c&#x103;n nh&#xE0; m&#x1EB7;t ti&#x1EC1;n 1 tr&#x1EC7;t 5 l&#x1EA7;u c&#xF3; thang m&#xE1;y. DTSD g&#x1EA7;n 200m2, nh&#xE0; m&#x1EDB;i s&#x1EA1;ch &#x111;&#x1EB9;p, c&#xE1;c l&#x1EA7;u tr&#x1ED1;ng su&#x1ED1;t, trang b&#x1ECB; &#x111;&#x1EA7;y &#x111;&#x1EE7; m&#xE1;y l&#x1EA1;nh. Khu v&#x1EF1;c m&#x1EB7;t ti&#x1EC1;n th&#xF4;ng tho&#xE1;ng, kinh doanh s&#x1EA7;m u&#x1EA5;t, c&#xF3; l&#x1EC1; &#x111;&#x1EC3; xe"
+                               data-duration="H&#xF4;m qua"
+                               data-updatedtime="19/11/2020"
+                               data-datesort="11/19/2020 15:35:42"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-mat-pho-duong-le-van-sy-phuong-14-1/cho-tien-388-14-quan-3-pr27765036"
+                               data-url="/cho-thue-nha-mat-pho-pho-nguyen-thien-thuat-62/cho-tien-125-gan-nga-tu-dinh-chieu-quan-10-pr27857049"
                                data-totalmedia="5"
                                data-createbyuser="384460"></i>
                         </span>
@@ -376,63 +402,63 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-hem-9-met-193-3-gan-trong-tuyen-moi-xe-hoi-dau-trong-pr27748588" title="Cho thu&#xEA; nh&#xE0; h&#x1EBB;m 9 m&#xE9;t 193/3 Nguy&#x1EC5;n V&#x103;n tr&#x1ED7;i g&#x1EA7;n Nguy&#x1EC5;n Tr&#x1ECD;ng tuy&#x1EC3;n, nh&#xE0; m&#x1EDB;i, xe h&#x1A1;i &#x111;&#x1EAD;u trong nh&#xE0;" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/11/20201111101646-2030_wm.jpg" alt="Cho thu&#234; nh&#224; hẻm 9 m&#233;t 193/3 Nguyễn Văn trỗi gần Nguyễn Trọng tuyển, nh&#224; mới, xe hơi đậu trong nh&#224;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-cao-thang-phuong-4-12/cho-tien-moi-xay-4-quan-3-5-lau-co-may-gia-70-trieu-pr27850018" title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n m&#x1EDB;i x&#xE2;y &#x111;&#x1B0;&#x1EDD;ng Cao Th&#x1EAF;ng, ph&#x1B0;&#x1EDD;ng 4, qu&#x1EAD;n 3, 5 l&#x1EA7;u, c&#xF3; thang m&#xE1;y. Gi&#xE1; 70 tri&#x1EC7;u" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/19/20201119094857-6f47_wm.jpg" alt="Cho thu&#234; nh&#224; mặt tiền mới x&#226;y đường Cao Thắng, phường 4, quận 3, 5 lầu, c&#243; thang m&#225;y. Gi&#225; 70 triệu" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
-                        <span class="product-media">8</span>
+                        <span class="product-media">6</span>
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-hem-9-met-193-3-gan-trong-tuyen-moi-xe-hoi-dau-trong-pr27748588"
-                           title="Cho thu&#xEA; nh&#xE0; h&#x1EBB;m 9 m&#xE9;t 193/3 Nguy&#x1EC5;n V&#x103;n tr&#x1ED7;i g&#x1EA7;n Nguy&#x1EC5;n Tr&#x1ECD;ng tuy&#x1EC3;n, nh&#xE0; m&#x1EDB;i, xe h&#x1A1;i &#x111;&#x1EAD;u trong nh&#xE0;" class="vip5 product-link">
-                            Cho thuê nhà hẻm 9 mét 193/3 Nguyễn Văn trỗi gần Nguyễn Trọng tuyển, nhà mới, xe hơi đậu trong nhà
+                        <a href="/cho-thue-nha-mat-pho-duong-cao-thang-phuong-4-12/cho-tien-moi-xay-4-quan-3-5-lau-co-may-gia-70-trieu-pr27850018"
+                           title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n m&#x1EDB;i x&#xE2;y &#x111;&#x1B0;&#x1EDD;ng Cao Th&#x1EAF;ng, ph&#x1B0;&#x1EDD;ng 4, qu&#x1EAD;n 3, 5 l&#x1EA7;u, c&#xF3; thang m&#xE1;y. Gi&#xE1; 70 tri&#x1EC7;u" class="vip5 product-link">
+                            Cho thuê nhà mặt tiền mới xây đường Cao Thắng, phường 4, quận 3, 5 lầu, có thang máy. Giá 70 triệu
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">22 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">70 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">76.5 m&#xB2;</span>
+                            <span class="area">100 m&#xB2;</span>
                                                     <span class="dot">·</span>
-                        <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Nhà mới, xe hơi đậu và vào bên trong nhà. Nhà mới, thiết kế hiện đại, đầy đủ nội thất.Thiết kế sang trọng, kết hợp ở và làm văn phòng rất tiện, không gian rõ ràng.Diện tích: 4,5m x 17m. Nhà gồm 1 trệt, 3 lầu, 4 phòng, 5wc cầu thang gần cuối nhà. Nhà tông nền ấm, thiết kế hiện đại
+                        Cho thuê nhà mặt tiền mới xây đường Cao Thắng, phường 4, quận 3. - Cho thuê toàn bộ diện tích ngang 5 mét, dài 20 mét. Xây dựng 1 trệt 5 lầu có thang máy, nhà mới xây 100%. Chưa sữ dụng. Có hình ảnh đính kèm thực tế. - Phù hợp thuê làm văn phòng, thẫm mỹ, spa, trường học... Giá c
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
                                 H&#xF4;m qua
-                                <span class="tooltip-time">11/11/2020</span>
+                                <span class="tooltip-time">19/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="27748588"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/11/20201111101646-2030_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; h&#x1EBB;m 9 m&amp;#233;t 193/3 Nguy&#x1EC5;n V&#x103;n tr&#x1ED7;i g&#x1EA7;n Nguy&#x1EC5;n Tr&#x1ECD;ng tuy&#x1EC3;n, nh&amp;#224; m&#x1EDB;i, xe h&#x1A1;i &#x111;&#x1EAD;u trong nh&amp;#224;&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111101646-2030_wm.jpg"
+                               data-productid="27850018"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/19/20201119094857-6f47_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; m&#x1EB7;t ti&#x1EC1;n m&#x1EDB;i x&amp;#226;y &#x111;&#x1B0;&#x1EDD;ng Cao Th&#x1EAF;ng, ph&#x1B0;&#x1EDD;ng 4, qu&#x1EAD;n 3, 5 l&#x1EA7;u, c&amp;#243; thang m&amp;#225;y. Gi&amp;#225; 70 tri&#x1EC7;u&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/19/20201119094857-6f47_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; h&#x1EBB;m 9 m&#xE9;t 193/3 Nguy&#x1EC5;n V&#x103;n tr&#x1ED7;i g&#x1EA7;n Nguy&#x1EC5;n Tr&#x1ECD;ng tuy&#x1EC3;n, nh&#xE0; m&#x1EDB;i, xe h&#x1A1;i &#x111;&#x1EAD;u trong nh&#xE0;"
-                               data-price="22 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="76.5 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n m&#x1EDB;i x&#xE2;y &#x111;&#x1B0;&#x1EDD;ng Cao Th&#x1EAF;ng, ph&#x1B0;&#x1EDD;ng 4, qu&#x1EAD;n 3, 5 l&#x1EA7;u, c&#xF3; thang m&#xE1;y. Gi&#xE1; 70 tri&#x1EC7;u"
+                               data-price="70 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="100 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
-                               data-room="4"
-                               data-toilets="5"
-                               data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Nh&#xE0; m&#x1EDB;i, xe h&#x1A1;i &#x111;&#x1EAD;u v&#xE0; v&#xE0;o b&#xEA;n trong nh&#xE0;. Nh&#xE0; m&#x1EDB;i, thi&#x1EBF;t k&#x1EBF; hi&#x1EC7;n &#x111;&#x1EA1;i, &#x111;&#x1EA7;y &#x111;&#x1EE7; n&#x1ED9;i th&#x1EA5;t.Thi&#x1EBF;t k&#x1EBF; sang tr&#x1ECD;ng, k&#x1EBF;t h&#x1EE3;p &#x1EDF; v&#xE0; l&#xE0;m v&#x103;n ph&#xF2;ng r&#x1EA5;t ti&#x1EC7;n, kh&#xF4;ng gian r&#xF5; r&#xE0;ng.Di&#x1EC7;n t&#xED;ch: 4,5m x 17m. Nh&#xE0; g&#x1ED3;m 1 tr&#x1EC7;t, 3 l&#x1EA7;u, 4 ph&#xF2;ng, 5wc c&#x1EA7;u thang g&#x1EA7;n cu&#x1ED1;i nh&#xE0;. Nh&#xE0; t&#xF4;ng n&#x1EC1;n &#x1EA5;m, thi&#x1EBF;t k&#x1EBF; hi&#x1EC7;n &#x111;&#x1EA1;i"
+                               data-room="5"
+                               data-toilets="6"
+                               data-address="Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ti&#x1EC1;n m&#x1EDB;i x&#xE2;y &#x111;&#x1B0;&#x1EDD;ng Cao Th&#x1EAF;ng, ph&#x1B0;&#x1EDD;ng 4, qu&#x1EAD;n 3. - Cho thu&#xEA; to&#xE0;n b&#x1ED9; di&#x1EC7;n t&#xED;ch ngang 5 m&#xE9;t, d&#xE0;i 20 m&#xE9;t. X&#xE2;y d&#x1EF1;ng 1 tr&#x1EC7;t 5 l&#x1EA7;u c&#xF3; thang m&#xE1;y, nh&#xE0; m&#x1EDB;i x&#xE2;y 100%. Ch&#x1B0;a s&#x1EEF; d&#x1EE5;ng. C&#xF3; h&#xEC;nh &#x1EA3;nh &#x111;&#xED;nh k&#xE8;m th&#x1EF1;c t&#x1EBF;. - Ph&#xF9; h&#x1EE3;p thu&#xEA; l&#xE0;m v&#x103;n ph&#xF2;ng, th&#x1EAB;m m&#x1EF9;, spa, tr&#x1B0;&#x1EDD;ng h&#x1ECD;c... Gi&#xE1; c"
                                data-duration="H&#xF4;m qua"
-                               data-updatedtime="11/11/2020"
-                               data-datesort="11/11/2020 10:17:18"
+                               data-updatedtime="19/11/2020"
+                               data-datesort="11/19/2020 09:50:06"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-hem-9-met-193-3-gan-trong-tuyen-moi-xe-hoi-dau-trong-pr27748588"
-                               data-totalmedia="8"
+                               data-url="/cho-thue-nha-mat-pho-duong-cao-thang-phuong-4-12/cho-tien-moi-xay-4-quan-3-5-lau-co-may-gia-70-trieu-pr27850018"
+                               data-totalmedia="6"
                                data-createbyuser="384460"></i>
                         </span>
                     </div>
@@ -440,8 +466,72 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040" title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710093940-df1d_wm.jpg" alt="Cho thu&#234; nh&#224; 686A CMT8 đối diện c&#244;ng vi&#234;n L&#234; Thị Ri&#234;ng" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-3-22/cho-nguyen-can-moi-xay-124-7-3-quan-tan-binh-pr27833369" title="Cho thu&#xEA; nh&#xE0; nguy&#xEA;n c&#x103;n m&#x1EDB;i x&#xE2;y 124/7 Ph&#x1EA1;m V&#x103;n Hai, Ph&#x1B0;&#x1EDD;ng 3, Qu&#x1EAD;n T&#xE2;n B&#xEC;nh" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/18/20201118090152-c89e_wm.jpg" alt="Cho thu&#234; nh&#224; nguy&#234;n căn mới x&#226;y 124/7 Phạm Văn Hai, Phường 3, Quận T&#226;n B&#236;nh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    </a>
+                    <span class="product-feature">
+                                                                    </span>
+                        <span class="product-media">5</span>
+                </div>
+                <div class="product-main">
+                    <h3 class="product-title">
+                        <a href="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-3-22/cho-nguyen-can-moi-xay-124-7-3-quan-tan-binh-pr27833369"
+                           title="Cho thu&#xEA; nh&#xE0; nguy&#xEA;n c&#x103;n m&#x1EDB;i x&#xE2;y 124/7 Ph&#x1EA1;m V&#x103;n Hai, Ph&#x1B0;&#x1EDD;ng 3, Qu&#x1EAD;n T&#xE2;n B&#xEC;nh" class="vip5 product-link">
+                            Cho thuê nhà nguyên căn mới xây 124/7 Phạm Văn Hai, Phường 3, Quận Tân Bình
+                        </a>
+                    </h3>
+                    <div class="product-info">
+                        <span class="price">17 tri&#x1EC7;u/th&#xE1;ng</span>
+                            <span class="dot">·</span>
+                            <span class="area">120 m&#xB2;</span>
+                                                    <span class="dot">·</span>
+                        <span class="location">T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh</span>
+                    </div>
+                    <div class="product-content">
+                        Cho thuê nhà nguyên căn mới xây 124/7 Phạm Văn Hai, Phường 3, Quận Tân Bình.- Cho thuê toàn bộ căn nhà mới xây 3 lầu, diện tích sử dụng hơn 120m2.Gồm 4 phòng ngủ, 4WC. Nhà mới sạch đẹp hẻm thông thoáng an ninh, dân trí cao.Phù hợp ở gia đình, văn phòng công ty, kinh doanh ngành n
+                    </div>
+                    <div class="product-wrap clearfix">
+                        <div class="product-uptime">
+                            <span class="product-labeltime">
+                                2 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">18/11/2020</span>
+                            </span>
+                        </div>
+                        <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
+                            <i class="iconSave"
+                               data-productid="27833369"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/18/20201118090152-c89e_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; nguy&amp;#234;n c&#x103;n m&#x1EDB;i x&amp;#226;y 124/7 Ph&#x1EA1;m V&#x103;n Hai, Ph&#x1B0;&#x1EDD;ng 3, Qu&#x1EAD;n T&amp;#226;n B&amp;#236;nh&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/18/20201118090152-c89e_wm.jpg"
+                               data-vipclass="vip5"
+                               data-isaddon="false"
+                               data-has3d="false"
+                               data-has360="false"
+                               data-hasvideo="false"
+                               data-title="Cho thu&#xEA; nh&#xE0; nguy&#xEA;n c&#x103;n m&#x1EDB;i x&#xE2;y 124/7 Ph&#x1EA1;m V&#x103;n Hai, Ph&#x1B0;&#x1EDD;ng 3, Qu&#x1EAD;n T&#xE2;n B&#xEC;nh"
+                               data-price="17 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="120 m&#xB2;"
+                               data-pricesort="0"
+                               data-areasort="0"
+                               data-room="4"
+                               data-toilets="4"
+                               data-address="T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Cho thu&#xEA; nh&#xE0; nguy&#xEA;n c&#x103;n m&#x1EDB;i x&#xE2;y 124/7 Ph&#x1EA1;m V&#x103;n Hai, Ph&#x1B0;&#x1EDD;ng 3, Qu&#x1EAD;n T&#xE2;n B&#xEC;nh.- Cho thu&#xEA; to&#xE0;n b&#x1ED9; c&#x103;n nh&#xE0; m&#x1EDB;i x&#xE2;y 3 l&#x1EA7;u, di&#x1EC7;n t&#xED;ch s&#x1EED; d&#x1EE5;ng h&#x1A1;n 120m2.G&#x1ED3;m 4 ph&#xF2;ng ng&#x1EE7;, 4WC. Nh&#xE0; m&#x1EDB;i s&#x1EA1;ch &#x111;&#x1EB9;p h&#x1EBB;m th&#xF4;ng tho&#xE1;ng an ninh, d&#xE2;n tr&#xED; cao.Ph&#xF9; h&#x1EE3;p &#x1EDF; gia &#x111;&#xEC;nh, v&#x103;n ph&#xF2;ng c&#xF4;ng ty, kinh doanh ng&#xE0;nh n"
+                               data-duration="2 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="18/11/2020"
+                               data-datesort="11/18/2020 09:02:10"
+                               data-contactname=""
+                               data-contactmobile=""
+                               data-url="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-3-22/cho-nguyen-can-moi-xay-124-7-3-quan-tan-binh-pr27833369"
+                               data-totalmedia="5"
+                               data-createbyuser="384460"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="vip5 product-item clearfix" uid="384460">
+                <div class="product-image ">
+                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-nguyen-trong-tuyen-68/cho-hxh-6m-343-33-gan-nga-tu-le-van-sy-5-x-18m-1-tret-2-lau-4p-pr24718972" title="Cho thu&#xEA; nh&#xE0; bi&#x1EC7;t th&#x1EF1; 343 Nguy&#x1EC5;n Tr&#x1ECD;ng Tuy&#x1EC3;n, th&#xF4;ng &#x110;&#x1EB7;ng V&#x103;n Ng&#x1EEF;. DT 5x18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4P" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/10/06/20201006111125-79b5_wm.jpg" alt="Cho thu&#234; nh&#224; biệt thự 343 Nguyễn Trọng Tuyển, th&#244;ng Đặng Văn Ngữ. DT 5x18m, 1 trệt, 2 lầu, 4P" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -449,53 +539,53 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040"
-                           title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng" class="vip5 product-link">
-                            Cho thuê nhà 686A CMT8 đối diện công viên Lê Thị Riêng
+                        <a href="/cho-thue-nha-rieng-duong-nguyen-trong-tuyen-68/cho-hxh-6m-343-33-gan-nga-tu-le-van-sy-5-x-18m-1-tret-2-lau-4p-pr24718972"
+                           title="Cho thu&#xEA; nh&#xE0; bi&#x1EC7;t th&#x1EF1; 343 Nguy&#x1EC5;n Tr&#x1ECD;ng Tuy&#x1EC3;n, th&#xF4;ng &#x110;&#x1EB7;ng V&#x103;n Ng&#x1EEF;. DT 5x18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4P" class="vip5 product-link">
+                            Cho thuê nhà biệt thự 343 Nguyễn Trọng Tuyển, thông Đặng Văn Ngữ. DT 5x18m, 1 trệt, 2 lầu, 4P
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">26 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">19 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">110 m&#xB2;</span>
+                            <span class="area">90 m&#xB2;</span>
                                                     <span class="dot">·</span>
-                        <span class="location">T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Diện tích ngang 5 x 22 mét, nhà gồm 1 trệt, 2 lầu sân thượng. Cầu thang cuối nhà.Mặt bằng đẹp, tiện mở shop và làm showroom trưng bày.Nhà nằm ngay vị trí đắc địa, có lề để xe 6 mét, khu vực đông đúc sầm uất.Giá cho thuê: 26 triệu/tháng.Liên hệ chính chủ 0964027215 Anh Văn
+                        Cho thuê nhà biệt thự 343 Nguyễn Trọng Tuyển, Thông Đặng Văn Ngữ. Ra khu Nguyễn Văn Trỗi thông Nam Kỳ Khởi Nghĩa.DT 5 x 18m, 1 trệt, 2 lầu, 4 phòng, nhà sạch sẽ giao ngay.Nằm trong khu KD cao cấp thích hợp đa ngành nghề. Giá 19 tr/th chốt nhanh.Ưu tiên dài hạn, không cần qua MG.L
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                2 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">10/11/2020</span>
+                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">17/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="26198040"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710093940-df1d_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&amp;#244;ng vi&amp;#234;n L&amp;#234; Th&#x1ECB; Ri&amp;#234;ng&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/07/10/20200710093940-df1d_wm.jpg"
+                               data-productid="24718972"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/10/06/20201006111125-79b5_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; bi&#x1EC7;t th&#x1EF1; 343 Nguy&#x1EC5;n Tr&#x1ECD;ng Tuy&#x1EC3;n, th&amp;#244;ng &#x110;&#x1EB7;ng V&#x103;n Ng&#x1EEF;. DT 5x18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4P&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/06/20201006111125-79b5_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng"
-                               data-price="26 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="110 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; bi&#x1EC7;t th&#x1EF1; 343 Nguy&#x1EC5;n Tr&#x1ECD;ng Tuy&#x1EC3;n, th&#xF4;ng &#x110;&#x1EB7;ng V&#x103;n Ng&#x1EEF;. DT 5x18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4P"
+                               data-price="19 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="90 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
-                               data-room="0"
+                               data-room="4"
                                data-toilets="0"
-                               data-address="T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Di&#x1EC7;n t&#xED;ch ngang 5 x 22 m&#xE9;t, nh&#xE0; g&#x1ED3;m 1 tr&#x1EC7;t, 2 l&#x1EA7;u s&#xE2;n th&#x1B0;&#x1EE3;ng. C&#x1EA7;u thang cu&#x1ED1;i nh&#xE0;.M&#x1EB7;t b&#x1EB1;ng &#x111;&#x1EB9;p, ti&#x1EC7;n m&#x1EDF; shop v&#xE0; l&#xE0;m showroom tr&#x1B0;ng b&#xE0;y.Nh&#xE0; n&#x1EB1;m ngay v&#x1ECB; tr&#xED; &#x111;&#x1EAF;c &#x111;&#x1ECB;a, c&#xF3; l&#x1EC1; &#x111;&#x1EC3; xe 6 m&#xE9;t, khu v&#x1EF1;c &#x111;&#xF4;ng &#x111;&#xFA;c s&#x1EA7;m u&#x1EA5;t.Gi&#xE1; cho thu&#xEA;: 26 tri&#x1EC7;u/th&#xE1;ng.Li&#xEA;n h&#x1EC7; ch&#xED;nh ch&#x1EE7; 0964027215 Anh V&#x103;n"
-                               data-duration="2 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="10/11/2020"
-                               data-datesort="11/10/2020 11:08:44"
+                               data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Cho thu&#xEA; nh&#xE0; bi&#x1EC7;t th&#x1EF1; 343 Nguy&#x1EC5;n Tr&#x1ECD;ng Tuy&#x1EC3;n, Th&#xF4;ng &#x110;&#x1EB7;ng V&#x103;n Ng&#x1EEF;. Ra khu Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i th&#xF4;ng Nam K&#x1EF3; Kh&#x1EDF;i Ngh&#x129#x129;a.DT 5 x 18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4 ph&#xF2;ng, nh&#xE0; s&#x1EA1;ch s&#x1EBD; giao ngay.N&#x1EB1;m trong khu KD cao c&#x1EA5;p th&#xED;ch h&#x1EE3;p &#x111;a ng&#xE0;nh ngh&#x1EC1;. Gi&#xE1; 19 tr/th ch&#x1ED1;t nhanh.&#x1AF;u ti&#xEA;n d&#xE0;i h&#x1EA1;n, kh&#xF4;ng c&#x1EA7;n qua MG.L"
+                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="17/11/2020"
+                               data-datesort="11/17/2020 11:15:59"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040"
+                               data-url="/cho-thue-nha-rieng-duong-nguyen-trong-tuyen-68/cho-hxh-6m-343-33-gan-nga-tu-le-van-sy-5-x-18m-1-tret-2-lau-4p-pr24718972"
                                data-totalmedia="4"
                                data-createbyuser="384460"></i>
                         </span>
@@ -531,8 +621,8 @@
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                2 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">10/11/2020</span>
+                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">17/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
@@ -554,9 +644,9 @@
                                data-toilets="0"
                                data-address="Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh"
                                data-description="Di&#x1EC7;n t&#xED;ch ngang 5x20m, 1 tr&#x1EC7;t, 3 l&#x1EA7;u, 4 ph&#xF2;ng ng&#x1EE7;, c&#x1EA7;u thang cu&#x1ED1;i nh&#xE0;. Nh&#xE0; m&#x1EDB;i thi&#x1EBF;t k&#x1EBF; th&#xED;ch h&#x1EE3;p nhi&#x1EC1;u ng&#xE0;nh ngh&#x1EC1; kinh doanh, v&#x1ECB; tr&#xED; nh&#xE0; &#x111;&#x1EB9;p khu kinh doanh, v&#x103;n ph&#xF2;ng cao c&#x1EA5;p &#x111;&#xF4;ng d&#xE2;n c&#x1B0;. V&#x1ECB; tr&#xED; thu&#x1EAD;n ti&#x1EC7;n di chuy&#x1EC3;n &#x111;&#x1EC3; &#x111;i c&#xE1;c Qu&#x1EAD;n c&#x1EE7;a trung t&#xE2;m th&#xE0;nh ph&#x1ED1;. Gi&#xE1; cho thu&#xEA; 25 tri&#x1EC7;u/t"
-                               data-duration="2 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="10/11/2020"
-                               data-datesort="11/10/2020 11:08:22"
+                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="17/11/2020"
+                               data-datesort="11/17/2020 11:14:27"
                                data-contactname=""
                                data-contactmobile=""
                                data-url="/cho-thue-nha-rieng-duong-le-van-sy-55/cho-hxh-339-1b-quan-3-gan-nga-tu-tran-quang-dieu-4-5x20m-1-tret-2-lau-st-pr24718824"
@@ -568,127 +658,63 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-huynh-van-banh-phuong-13-9/cho-489-3a-p13-quan-phu-nhuan-pr25166724" title="Cho thu&#xEA; nh&#xE0; 489/3A Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, P13, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/04/15/20200415141703-7d08_wm.jpg" alt="Cho thu&#234; nh&#224; 489/3A Huỳnh Văn B&#225;nh, P13, Quận Ph&#250; Nhuận" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040" title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710093940-df1d_wm.jpg" alt="Cho thu&#234; nh&#224; 686A CMT8 đối diện c&#244;ng vi&#234;n L&#234; Thị Ri&#234;ng" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
-                        <span class="product-media">3</span>
+                        <span class="product-media">4</span>
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-duong-huynh-van-banh-phuong-13-9/cho-489-3a-p13-quan-phu-nhuan-pr25166724"
-                           title="Cho thu&#xEA; nh&#xE0; 489/3A Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, P13, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" class="vip5 product-link">
-                            Cho thuê nhà 489/3A Huỳnh Văn Bánh, P13, Quận Phú Nhuận
+                        <a href="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040"
+                           title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng" class="vip5 product-link">
+                            Cho thuê nhà 686A CMT8 đối diện công viên Lê Thị Riêng
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">19 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">26 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">126 m&#xB2;</span>
-                                                    <span class="dot">·</span>
-                        <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
-                    </div>
-                    <div class="product-content">
-                        Hẻm trước nhà 5m. DT: Ngang 7 mét dài 18m, 1 trệt, 2 lầu, 4PN, 2WC.Mặt Bằng tầng trệt trống suốt cầu thang cuối nhà, giao nhà ngay.Nhà mới xây, kiến trúc thông tần, ưu tiên kinh doanh mọi ngành nghề.Vị trí đông đúc tấp nập, tập trung nhiều Văn phòng và Kinh doanh Online.Thích hợp
-                    </div>
-                    <div class="product-wrap clearfix">
-                        <div class="product-uptime">
-                            <span class="product-labeltime">
-                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">09/11/2020</span>
-                            </span>
-                        </div>
-                        <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
-                            <i class="iconSave"
-                               data-productid="25166724"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/04/15/20200415141703-7d08_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 489/3A Hu&#x1EF3;nh V&#x103;n B&amp;#225;nh, P13, Qu&#x1EAD;n Ph&amp;#250; Nhu&#x1EAD;n&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/04/15/20200415141703-7d08_wm.jpg"
-                               data-vipclass="vip5"
-                               data-isaddon="false"
-                               data-has3d="false"
-                               data-has360="false"
-                               data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 489/3A Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, P13, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n"
-                               data-price="19 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="126 m&#xB2;"
-                               data-pricesort="0"
-                               data-areasort="0"
-                               data-room="4"
-                               data-toilets="2"
-                               data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="H&#x1EBB;m tr&#x1B0;&#x1EDB;c nh&#xE0; 5m. DT: Ngang 7 m&#xE9;t d&#xE0;i 18m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4PN, 2WC.M&#x1EB7;t B&#x1EB1;ng t&#x1EA7;ng tr&#x1EC7;t tr&#x1ED1;ng su&#x1ED1;t c&#x1EA7;u thang cu&#x1ED1;i nh&#xE0;, giao nh&#xE0; ngay.Nh&#xE0; m&#x1EDB;i x&#xE2;y, ki&#x1EBF;n tr&#xFA;c th&#xF4;ng t&#x1EA7;n, &#x1B0;u ti&#xEA;n kinh doanh m&#x1ECD;i ng&#xE0;nh ngh&#x1EC1;.V&#x1ECB; tr&#xED; &#x111;&#xF4;ng &#x111;&#xFA;c t&#x1EA5;p n&#x1EAD;p, t&#x1EAD;p trung nhi&#x1EC1;u V&#x103;n ph&#xF2;ng v&#xE0; Kinh doanh Online.Th&#xED;ch h&#x1EE3;p"
-                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="09/11/2020"
-                               data-datesort="11/09/2020 16:03:14"
-                               data-contactname=""
-                               data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-duong-huynh-van-banh-phuong-13-9/cho-489-3a-p13-quan-phu-nhuan-pr25166724"
-                               data-totalmedia="3"
-                               data-createbyuser="384460"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="vip5 product-item clearfix" uid="384460">
-                <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-2-22/cho-15-2c-thong-hem-xe-tai-337-le-sy-4-5-x-18m-1t-2l-4pn-pr24718753" title="Cho thu&#xEA; nh&#xE0; 15/2C Ph&#x1EA1;m V&#x103;n Hai, th&#xF4;ng h&#x1EBB;m xe t&#x1EA3;i 337 L&#xEA; V&#x103;n S&#x1EF9;" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/03/09/20200309153557-7b49_wm.jpg" alt="Cho thu&#234; nh&#224; 15/2C Phạm Văn Hai, th&#244;ng hẻm xe tải 337 L&#234; Văn Sỹ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
-                    </a>
-                    <span class="product-feature">
-                                                                    </span>
-                        <span class="product-media">3</span>
-                </div>
-                <div class="product-main">
-                    <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-2-22/cho-15-2c-thong-hem-xe-tai-337-le-sy-4-5-x-18m-1t-2l-4pn-pr24718753"
-                           title="Cho thu&#xEA; nh&#xE0; 15/2C Ph&#x1EA1;m V&#x103;n Hai, th&#xF4;ng h&#x1EBB;m xe t&#x1EA3;i 337 L&#xEA; V&#x103;n S&#x1EF9;" class="vip5 product-link">
-                            Cho thuê nhà 15/2C Phạm Văn Hai, thông hẻm xe tải 337 Lê Văn Sỹ
-                        </a>
-                    </h3>
-                    <div class="product-info">
-                        <span class="price">22 tri&#x1EC7;u/th&#xE1;ng</span>
-                            <span class="dot">·</span>
-                            <span class="area">200 m&#xB2;</span>
+                            <span class="area">110 m&#xB2;</span>
                                                     <span class="dot">·</span>
                         <span class="location">T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Cho thuê nhà 15/2C Phạm Văn Hai, Quận Tân Bình thông hẻm xe tải 337 Lê Văn Sỹ. Diện tích ngang 4,5m x 18m, 1 trệt, 4 lầu, hiện có 8 phòng nhà, nhà mới đẹp. Tiện kinh doanh, VPCT, ở gia đình. Giá 22 tr/tháng. Liên hệ chính chủ Cần 0902880972 (MTG).
+                        Diện tích ngang 5 x 22 mét, nhà gồm 1 trệt, 2 lầu sân thượng. Cầu thang cuối nhà.Mặt bằng đẹp, tiện mở shop và làm showroom trưng bày.Nhà nằm ngay vị trí đắc địa, có lề để xe 6 mét, khu vực đông đúc sầm uất.Giá cho thuê: 26 triệu/tháng.Liên hệ chính chủ 0964027215 Anh Văn.
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">09/11/2020</span>
+                                4 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">16/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="24718753"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/03/09/20200309153557-7b49_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 15/2C Ph&#x1EA1;m V&#x103;n Hai, th&amp;#244;ng h&#x1EBB;m xe t&#x1EA3;i 337 L&amp;#234; V&#x103;n S&#x1EF9;&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/03/09/20200309153557-7b49_wm.jpg"
+                               data-productid="26198040"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710093940-df1d_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&amp;#244;ng vi&amp;#234;n L&amp;#234; Th&#x1ECB; Ri&amp;#234;ng&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/07/10/20200710093940-df1d_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 15/2C Ph&#x1EA1;m V&#x103;n Hai, th&#xF4;ng h&#x1EBB;m xe t&#x1EA3;i 337 L&#xEA; V&#x103;n S&#x1EF9;"
-                               data-price="22 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="200 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; 686A CMT8 &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n L&#xEA; Th&#x1ECB; Ri&#xEA;ng"
+                               data-price="26 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="110 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
                                data-room="0"
                                data-toilets="0"
                                data-address="T&#xE2;n B&#xEC;nh, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Cho thu&#xEA; nh&#xE0; 15/2C Ph&#x1EA1;m V&#x103;n Hai, Qu&#x1EAD;n T&#xE2;n B&#xEC;nh th&#xF4;ng h&#x1EBB;m xe t&#x1EA3;i 337 L&#xEA; V&#x103;n S&#x1EF9;. Di&#x1EC7;n t&#xED;ch ngang 4,5m x 18m, 1 tr&#x1EC7;t, 4 l&#x1EA7;u, hi&#x1EC7;n c&#xF3; 8 ph&#xF2;ng nh&#xE0;, nh&#xE0; m&#x1EDB;i &#x111;&#x1EB9;p. Ti&#x1EC7;n kinh doanh, VPCT, &#x1EDF; gia &#x111;&#xEC;nh. Gi&#xE1; 22 tr/th&#xE1;ng. Li&#xEA;n h&#x1EC7; ch&#xED;nh ch&#x1EE7; C&#x1EA7;n 0902880972 (MTG)."
-                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="09/11/2020"
-                               data-datesort="11/09/2020 16:02:34"
+                               data-description="Di&#x1EC7;n t&#xED;ch ngang 5 x 22 m&#xE9;t, nh&#xE0; g&#x1ED3;m 1 tr&#x1EC7;t, 2 l&#x1EA7;u s&#xE2;n th&#x1B0;&#x1EE3;ng. C&#x1EA7;u thang cu&#x1ED1;i nh&#xE0;.M&#x1EB7;t b&#x1EB1;ng &#x111;&#x1EB9;p, ti&#x1EC7;n m&#x1EDF; shop v&#xE0; l&#xE0;m showroom tr&#x1B0;ng b&#xE0;y.Nh&#xE0; n&#x1EB1;m ngay v&#x1ECB; tr&#xED; &#x111;&#x1EAF;c &#x111;&#x1ECB;a, c&#xF3; l&#x1EC1; &#x111;&#x1EC3; xe 6 m&#xE9;t, khu v&#x1EF1;c &#x111;&#xF4;ng &#x111;&#xFA;c s&#x1EA7;m u&#x1EA5;t.Gi&#xE1; cho thu&#xEA;: 26 tri&#x1EC7;u/th&#xE1;ng.Li&#xEA;n h&#x1EC7; ch&#xED;nh ch&#x1EE7; 0964027215 Anh V&#x103;n."
+                               data-duration="4 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="16/11/2020"
+                               data-datesort="11/16/2020 10:54:44"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-duong-pham-van-hai-phuong-2-22/cho-15-2c-thong-hem-xe-tai-337-le-sy-4-5-x-18m-1t-2l-4pn-pr24718753"
-                               data-totalmedia="3"
+                               data-url="/cho-thue-nha-mat-pho-duong-cach-mang-thang-tam-phuong-5-17/cho-goc-2-mt-686-cmt8-doi-dien-cong-vien-le-thi-rieng-pr26198040"
+                               data-totalmedia="4"
                                data-createbyuser="384460"></i>
                         </span>
                     </div>
@@ -696,8 +722,8 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-le-quang-dinh-66/cho-6b-quan-binh-thanh-gan-cho-ba-chieu-ra-nga-tu-hang-xanh-pr23184576" title="Cho thu&#xEA; nh&#xE0; 6B L&#xEA; Quang &#x110;&#x1ECB;nh, qu&#x1EAD;n B&#xEC;nh Th&#x1EA1;nh g&#x1EA7;n ch&#x1EE3; B&#xE0; Chi&#x1EC3;u ra ng&#xE3; t&#x1B0; H&#xE0;ng Xanh" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2019/10/28/20191028151746-8224_wm.jpg" alt="Cho thu&#234; nh&#224; 6B L&#234; Quang Định, quận B&#236;nh Thạnh gần chợ B&#224; Chiểu ra ng&#227; tư H&#224;ng Xanh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-truong-quoc-dung-phuong-10-9/nguyen-can-cho-so-74-5h-gan-nguyen-van-troi-quan-phu-nhuan-pr26208919" title="Nguy&#xEA;n c&#x103;n cho thu&#xEA; s&#x1ED1; 74/5H Tr&#x1B0;&#x1A1;ng Qu&#x1ED1;c Dung, g&#x1EA7;n Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710174142-7517_wm.jpg" alt="Nguy&#234;n căn cho thu&#234; số 74/5H Trương Quốc Dung, gần Nguyễn Văn Trỗi, Quận Ph&#250; Nhuận" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -705,53 +731,53 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-duong-le-quang-dinh-66/cho-6b-quan-binh-thanh-gan-cho-ba-chieu-ra-nga-tu-hang-xanh-pr23184576"
-                           title="Cho thu&#xEA; nh&#xE0; 6B L&#xEA; Quang &#x110;&#x1ECB;nh, qu&#x1EAD;n B&#xEC;nh Th&#x1EA1;nh g&#x1EA7;n ch&#x1EE3; B&#xE0; Chi&#x1EC3;u ra ng&#xE3; t&#x1B0; H&#xE0;ng Xanh" class="vip5 product-link">
-                            Cho thuê nhà 6B Lê Quang Định, quận Bình Thạnh gần chợ Bà Chiểu ra ngã tư Hàng Xanh
+                        <a href="/cho-thue-nha-rieng-duong-truong-quoc-dung-phuong-10-9/nguyen-can-cho-so-74-5h-gan-nguyen-van-troi-quan-phu-nhuan-pr26208919"
+                           title="Nguy&#xEA;n c&#x103;n cho thu&#xEA; s&#x1ED1; 74/5H Tr&#x1B0;&#x1A1;ng Qu&#x1ED1;c Dung, g&#x1EA7;n Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" class="vip5 product-link">
+                            Nguyên căn cho thuê số 74/5H Trương Quốc Dung, gần Nguyễn Văn Trỗi, Quận Phú Nhuận
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">22 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">20 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">80 m&#xB2;</span>
+                            <span class="area">90 m&#xB2;</span>
                                                     <span class="dot">·</span>
-                        <span class="location">B&#xEC;nh Th&#x1EA1;nh, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Cho thuê nhà 6B Lê Quang Định, quận Bình Thạnh gần chợ Bà Chiểu, tiện văn phòng, kinh doanh mọi ngành nghề. DT 4x20m, 1 hầm 1 trệt 1 lửng 3 lầu ST có 5PN, nhà lệch tầng, có giếng trời, nội thất cơ bản, có giếng trời thoáng mát. Giá 22tr/tháng. LH chính chủ chị Hạnh 0901454294.
+                        Khu vực: Cho thuê nhà riêng tại Đường Trương Quốc Dung - Quận Phú Nhuận - Hồ Chí Minh giá: 20 triệu/tháng, diện tích: 190m2 Thông tin mô tả Diện tích ngang 4.5m x 20m, kết cấu trệt, 3 lầu hiện có 6 phòng ngủ, sân thượng thoáng, 4 nhà vệ sinh. Hẻm rộng, sát mặt tiền, nhà đẹp. Khu 
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">09/11/2020</span>
+                                4 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">16/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="23184576"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2019/10/28/20191028151746-8224_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 6B L&amp;#234; Quang &#x110;&#x1ECB;nh, qu&#x1EAD;n B&amp;#236;nh Th&#x1EA1;nh g&#x1EA7;n ch&#x1EE3; B&amp;#224; Chi&#x1EC3;u ra ng&amp;#227; t&#x1B0; H&amp;#224;ng Xanh&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2019/10/28/20191028151746-8224_wm.jpg"
+                               data-productid="26208919"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/07/10/20200710174142-7517_wm.jpg&quot; alt=&quot;Nguy&amp;#234;n c&#x103;n cho thu&amp;#234; s&#x1ED1; 74/5H Tr&#x1B0;&#x1A1;ng Qu&#x1ED1;c Dung, g&#x1EA7;n Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, Qu&#x1EAD;n Ph&amp;#250; Nhu&#x1EAD;n&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/07/10/20200710174142-7517_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 6B L&#xEA; Quang &#x110;&#x1ECB;nh, qu&#x1EAD;n B&#xEC;nh Th&#x1EA1;nh g&#x1EA7;n ch&#x1EE3; B&#xE0; Chi&#x1EC3;u ra ng&#xE3; t&#x1B0; H&#xE0;ng Xanh"
-                               data-price="22 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="80 m&#xB2;"
+                               data-title="Nguy&#xEA;n c&#x103;n cho thu&#xEA; s&#x1ED1; 74/5H Tr&#x1B0;&#x1A1;ng Qu&#x1ED1;c Dung, g&#x1EA7;n Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n"
+                               data-price="20 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="90 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
-                               data-room="5"
-                               data-toilets="0"
-                               data-address="B&#xEC;nh Th&#x1EA1;nh, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Cho thu&#xEA; nh&#xE0; 6B L&#xEA; Quang &#x110;&#x1ECB;nh, qu&#x1EAD;n B&#xEC;nh Th&#x1EA1;nh g&#x1EA7;n ch&#x1EE3; B&#xE0; Chi&#x1EC3;u, ti&#x1EC7;n v&#x103;n ph&#xF2;ng, kinh doanh m&#x1ECD;i ng&#xE0;nh ngh&#x1EC1;. DT 4x20m, 1 h&#x1EA7;m 1 tr&#x1EC7;t 1 l&#x1EED;ng 3 l&#x1EA7;u ST c&#xF3; 5PN, nh&#xE0; l&#x1EC7;ch t&#x1EA7;ng, c&#xF3; gi&#x1EBF;ng tr&#x1EDD;i, n&#x1ED9;i th&#x1EA5;t c&#x1A1; b&#x1EA3;n, c&#xF3; gi&#x1EBF;ng tr&#x1EDD;i tho&#xE1;ng m&#xE1;t. Gi&#xE1; 22tr/th&#xE1;ng. LH ch&#xED;nh ch&#x1EE7; ch&#x1ECB; H&#x1EA1;nh 0901454294."
-                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="09/11/2020"
-                               data-datesort="11/09/2020 16:01:58"
+                               data-room="6"
+                               data-toilets="4"
+                               data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Khu v&#x1EF1;c: Cho thu&#xEA; nh&#xE0; ri&#xEA;ng t&#x1EA1;i &#x110;&#x1B0;&#x1EDD;ng Tr&#x1B0;&#x1A1;ng Qu&#x1ED1;c Dung - Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n - H&#x1ED3; Ch&#xED; Minh gi&#xE1;: 20 tri&#x1EC7;u/th&#xE1;ng, di&#x1EC7;n t&#xED;ch: 190m2 Th&#xF4;ng tin m&#xF4; t&#x1EA3; Di&#x1EC7;n t&#xED;ch ngang 4.5m x 20m, k&#x1EBF;t c&#x1EA5;u tr&#x1EC7;t, 3 l&#x1EA7;u hi&#x1EC7;n c&#xF3; 6 ph&#xF2;ng ng&#x1EE7;, s&#xE2;n th&#x1B0;&#x1EE3;ng tho&#xE1;ng, 4 nh&#xE0; v&#x1EC7; sinh. H&#x1EBB;m r&#x1ED9;ng, s&#xE1;t m&#x1EB7;t ti&#x1EC1;n, nh&#xE0; &#x111;&#x1EB9;p. Khu "
+                               data-duration="4 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="16/11/2020"
+                               data-datesort="11/16/2020 10:53:41"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-duong-le-quang-dinh-66/cho-6b-quan-binh-thanh-gan-cho-ba-chieu-ra-nga-tu-hang-xanh-pr23184576"
+                               data-url="/cho-thue-nha-rieng-duong-truong-quoc-dung-phuong-10-9/nguyen-can-cho-so-74-5h-gan-nguyen-van-troi-quan-phu-nhuan-pr26208919"
                                data-totalmedia="3"
                                data-createbyuser="384460"></i>
                         </span>
@@ -760,63 +786,63 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-pho-phan-dang-luu-68/cho-20a-doi-dien-cong-vien-phu-nhuan-pr25165670" title="Cho thu&#xEA; nh&#xE0; 20A Phan &#x110;&#x103;ng L&#x1B0;u &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n Ph&#xFA; Nhu&#x1EAD;n" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/04/15/20200415111946-3b29_wm.jpg" alt="Cho thu&#234; nh&#224; 20A Phan Đăng Lưu đối diện c&#244;ng vi&#234;n Ph&#250; Nhuận" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-villa-mini-moi-63-9-gan-nga-tu-huynh-banh-quan-phu-nhuan-pr27793630" title="Cho thu&#xEA; villa mini m&#x1EDB;i 63/9 Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, g&#x1EA7;n ng&#xE3; t&#x1B0; Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/14/20201114155159-7a51_wm.jpg" alt="Cho thu&#234; villa mini mới 63/9 Nguyễn Văn Trỗi, gần ng&#227; tư Huỳnh Văn B&#225;nh, Quận Ph&#250; Nhuận" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
-                        <span class="product-media">6</span>
+                        <span class="product-media">2</span>
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-pho-phan-dang-luu-68/cho-20a-doi-dien-cong-vien-phu-nhuan-pr25165670"
-                           title="Cho thu&#xEA; nh&#xE0; 20A Phan &#x110;&#x103;ng L&#x1B0;u &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n Ph&#xFA; Nhu&#x1EAD;n" class="vip5 product-link">
-                            Cho thuê nhà 20A Phan Đăng Lưu đối diện công viên Phú Nhuận
+                        <a href="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-villa-mini-moi-63-9-gan-nga-tu-huynh-banh-quan-phu-nhuan-pr27793630"
+                           title="Cho thu&#xEA; villa mini m&#x1EDB;i 63/9 Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, g&#x1EA7;n ng&#xE3; t&#x1B0; Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" class="vip5 product-link">
+                            Cho thuê villa mini mới 63/9 Nguyễn Văn Trỗi, gần ngã tư Huỳnh Văn Bánh, Quận Phú Nhuận
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">18 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">17 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">54.6 m&#xB2;</span>
+                            <span class="area">70 m&#xB2;</span>
                                                     <span class="dot">·</span>
                         <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Hẻm 6m, 1 trệt 2 lầu, 4P, Hợp đồng 2 năm trở lên, DT: 4,2 X 13m, 1 trệt, 2 lầu, 4 Phòng, tầng trệt trống suốt, có sảnh làm spa, Nail, Hẻm rộng, nhà mới thích hợp KD đa ngành nghề. Giá cho thuê 18 triệu/tháng. Liên hệ Chính Chủ Chú Nam: 0973040072. Báo trước 10 phút thôi, nhà gần 
+                        - Cho thuê toàn bộ villa mini thiết kế hiện đại đẹp, diện tích 7 mét, dài 10 mét. Xây dựng 1 trệt, 3 lầu. Gồm 3 phòng ngủ, 3WC riêng biệt. Không gian phòng khách, phòng bếp rộng. Nội thất cao cấp, có hệ thống năng lượng mặt trời. Tầng sân thượng rộng thoáng, có tiểu sân vườn, cây
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                3 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">09/11/2020</span>
+                                6 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">14/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="25165670"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/04/15/20200415111946-3b29_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 20A Phan &#x110;&#x103;ng L&#x1B0;u &#x111;&#x1ED1;i di&#x1EC7;n c&amp;#244;ng vi&amp;#234;n Ph&amp;#250; Nhu&#x1EAD;n&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/04/15/20200415111946-3b29_wm.jpg"
+                               data-productid="27793630"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/14/20201114155159-7a51_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; villa mini m&#x1EDB;i 63/9 Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, g&#x1EA7;n ng&amp;#227; t&#x1B0; Hu&#x1EF3;nh V&#x103;n B&amp;#225;nh, Qu&#x1EAD;n Ph&amp;#250; Nhu&#x1EAD;n&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/14/20201114155159-7a51_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 20A Phan &#x110;&#x103;ng L&#x1B0;u &#x111;&#x1ED1;i di&#x1EC7;n c&#xF4;ng vi&#xEA;n Ph&#xFA; Nhu&#x1EAD;n"
-                               data-price="18 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="54.6 m&#xB2;"
+                               data-title="Cho thu&#xEA; villa mini m&#x1EDB;i 63/9 Nguy&#x1EC5;n V&#x103;n Tr&#x1ED7;i, g&#x1EA7;n ng&#xE3; t&#x1B0; Hu&#x1EF3;nh V&#x103;n B&#xE1;nh, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n"
+                               data-price="17 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="70 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
-                               data-room="0"
+                               data-room="3"
                                data-toilets="0"
                                data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="H&#x1EBB;m 6m, 1 tr&#x1EC7;t 2 l&#x1EA7;u, 4P, H&#x1EE3;p &#x111;&#x1ED3;ng 2 n&#x103;m tr&#x1EDF; l&#xEA;n, DT: 4,2 X 13m, 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4 Ph&#xF2;ng, t&#x1EA7;ng tr&#x1EC7;t tr&#x1ED1;ng su&#x1ED1;t, c&#xF3; s&#x1EA3;nh l&#xE0;m spa, Nail, H&#x1EBB;m r&#x1ED9;ng, nh&#xE0; m&#x1EDB;i th&#xED;ch h&#x1EE3;p KD &#x111;a ng&#xE0;nh ngh&#x1EC1;. Gi&#xE1; cho thu&#xEA; 18 tri&#x1EC7;u/th&#xE1;ng. Li&#xEA;n h&#x1EC7; Ch&#xED;nh Ch&#x1EE7; Ch&#xFA; Nam: 0973040072. B&#xE1;o tr&#x1B0;&#x1EDB;c 10 ph&#xFA;t th&#xF4;i, nh&#xE0; g&#x1EA7;n "
-                               data-duration="3 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="09/11/2020"
-                               data-datesort="11/09/2020 16:01:32"
+                               data-description="- Cho thu&#xEA; to&#xE0;n b&#x1ED9; villa mini thi&#x1EBF;t k&#x1EBF; hi&#x1EC7;n &#x111;&#x1EA1;i &#x111;&#x1EB9;p, di&#x1EC7;n t&#xED;ch 7 m&#xE9;t, d&#xE0;i 10 m&#xE9;t. X&#xE2;y d&#x1EF1;ng 1 tr&#x1EC7;t, 3 l&#x1EA7;u. G&#x1ED3;m 3 ph&#xF2;ng ng&#x1EE7;, 3WC ri&#xEA;ng bi&#x1EC7;t. Kh&#xF4;ng gian ph&#xF2;ng kh&#xE1;ch, ph&#xF2;ng b&#x1EBF;p r&#x1ED9;ng. N&#x1ED9;i th&#x1EA5;t cao c&#x1EA5;p, c&#xF3; h&#x1EC7; th&#x1ED1;ng n&#x103;ng l&#x1B0;&#x1EE3;ng m&#x1EB7;t tr&#x1EDD;i. T&#x1EA7;ng s&#xE2;n th&#x1B0;&#x1EE3;ng r&#x1ED9;ng tho&#xE1;ng, c&#xF3; ti&#x1EC3;u s&#xE2;n v&#x1B0;&#x1EDD;n, c&#xE2;y"
+                               data-duration="6 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="14/11/2020"
+                               data-datesort="11/14/2020 15:52:15"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-pho-phan-dang-luu-68/cho-20a-doi-dien-cong-vien-phu-nhuan-pr25165670"
-                               data-totalmedia="6"
+                               data-url="/cho-thue-nha-rieng-duong-nguyen-van-troi-68/cho-villa-mini-moi-63-9-gan-nga-tu-huynh-banh-quan-phu-nhuan-pr27793630"
+                               data-totalmedia="2"
                                data-createbyuser="384460"></i>
                         </span>
                     </div>
@@ -824,8 +850,8 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-nguyen-cong-hoan-68/cho-mt-6c-gan-vien-hai-nam-quan-phu-nhuan-pr27702868" title="Cho thu&#xEA; nh&#xE0; MT 6C Nguy&#x1EC5;n C&#xF4;ng Hoan g&#x1EA7;n c&#xF4;ng vi&#xEA;n H&#x1EA3;i Nam, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/07/20201107111526-2e57_wm.jpg" alt="Cho thu&#234; nh&#224; MT 6C Nguyễn C&#244;ng Hoan gần c&#244;ng vi&#234;n Hải Nam, Quận Ph&#250; Nhuận" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-mat-pho-duong-dong-nai-phuong-15-3/cho-moi-xay-tien-110a-khu-cu-xa-bac-hai-p-15-quan-10-pr27793011" title="Cho thu&#xEA; nh&#xE0; m&#x1EDB;i x&#xE2;y m&#x1EB7;t ti&#x1EC1;n 110A &#x110;&#x1ED3;ng Nai - khu C&#x1B0; X&#xE1; B&#x1EAF;c H&#x1EA3;i, P. 15, Qu&#x1EAD;n 10" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/14/20201114150334-a6c9_wm.jpg" alt="Cho thu&#234; nh&#224; mới x&#226;y mặt tiền 110A Đồng Nai - khu Cư X&#225; Bắc Hải, P. 15, Quận 10" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -833,53 +859,53 @@
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-mat-pho-duong-nguyen-cong-hoan-68/cho-mt-6c-gan-vien-hai-nam-quan-phu-nhuan-pr27702868"
-                           title="Cho thu&#xEA; nh&#xE0; MT 6C Nguy&#x1EC5;n C&#xF4;ng Hoan g&#x1EA7;n c&#xF4;ng vi&#xEA;n H&#x1EA3;i Nam, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n" class="vip5 product-link">
-                            Cho thuê nhà MT 6C Nguyễn Công Hoan gần công viên Hải Nam, Quận Phú Nhuận
+                        <a href="/cho-thue-nha-mat-pho-duong-dong-nai-phuong-15-3/cho-moi-xay-tien-110a-khu-cu-xa-bac-hai-p-15-quan-10-pr27793011"
+                           title="Cho thu&#xEA; nh&#xE0; m&#x1EDB;i x&#xE2;y m&#x1EB7;t ti&#x1EC1;n 110A &#x110;&#x1ED3;ng Nai - khu C&#x1B0; X&#xE1; B&#x1EAF;c H&#x1EA3;i, P. 15, Qu&#x1EAD;n 10" class="vip5 product-link">
+                            Cho thuê nhà mới xây mặt tiền 110A Đồng Nai - khu Cư Xá Bắc Hải, P. 15, Quận 10
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">18 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">30 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">70 m&#xB2;</span>
+                            <span class="area">100 m&#xB2;</span>
                                                     <span class="dot">·</span>
-                        <span class="location">Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Diện tích nhà nguyên căn riêng biệt: Ngang 5 dài 14 mét, nhà gồm 1 trệt, 2 lầu, 4 phòng, nhà có tầng trệt có thể kinh doanh và làm văn phòng được. Trước nhà có vị trí thuận tiện cho việc mua bán kinh doanh đông người qua lại. Khu tập trung nhiều văn phòng công ty cao cấp và các l
+                        - Diện tích ngang 5 mét, dài 20 mét. 1 trệt 2 lầu. Gồm 3 phòng lớn trang bị đầy đủ máy lạnh. Nhà mới xây thiết kế hiện đại Vị trí cầu thang gần cuối nhà phù hợp cho nhiều mục đích thuê. Có hình thực tế bên dưới. - Vị trí ngay mặt tiền khu đắc địa trung tâm thành phố, khu tập trun
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                5 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">07/11/2020</span>
+                                6 ng&#xE0;y tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">14/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="27702868"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/07/20201107111526-2e57_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; MT 6C Nguy&#x1EC5;n C&amp;#244;ng Hoan g&#x1EA7;n c&amp;#244;ng vi&amp;#234;n H&#x1EA3;i Nam, Qu&#x1EAD;n Ph&amp;#250; Nhu&#x1EAD;n&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/07/20201107111526-2e57_wm.jpg"
+                               data-productid="27793011"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/14/20201114150334-a6c9_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; m&#x1EDB;i x&amp;#226;y m&#x1EB7;t ti&#x1EC1;n 110A &#x110;&#x1ED3;ng Nai - khu C&#x1B0; X&amp;#225; B&#x1EAF;c H&#x1EA3;i, P. 15, Qu&#x1EAD;n 10&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/14/20201114150334-a6c9_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; MT 6C Nguy&#x1EC5;n C&#xF4;ng Hoan g&#x1EA7;n c&#xF4;ng vi&#xEA;n H&#x1EA3;i Nam, Qu&#x1EAD;n Ph&#xFA; Nhu&#x1EAD;n"
-                               data-price="18 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="70 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; m&#x1EDB;i x&#xE2;y m&#x1EB7;t ti&#x1EC1;n 110A &#x110;&#x1ED3;ng Nai - khu C&#x1B0; X&#xE1; B&#x1EAF;c H&#x1EA3;i, P. 15, Qu&#x1EAD;n 10"
+                               data-price="30 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="100 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
                                data-room="0"
                                data-toilets="0"
-                               data-address="Ph&#xFA; Nhu&#x1EAD;n, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Di&#x1EC7;n t&#xED;ch nh&#xE0; nguy&#xEA;n c&#x103;n ri&#xEA;ng bi&#x1EC7;t: Ngang 5 d&#xE0;i 14 m&#xE9;t, nh&#xE0; g&#x1ED3;m 1 tr&#x1EC7;t, 2 l&#x1EA7;u, 4 ph&#xF2;ng, nh&#xE0; c&#xF3; t&#x1EA7;ng tr&#x1EC7;t c&#xF3; th&#x1EC3; kinh doanh v&#xE0; l&#xE0;m v&#x103;n ph&#xF2;ng &#x111;&#x1B0;&#x1EE3;c. Tr&#x1B0;&#x1EDB;c nh&#xE0; c&#xF3; v&#x1ECB; tr&#xED; thu&#x1EAD;n ti&#x1EC7;n cho vi&#x1EC7;c mua b&#xE1;n kinh doanh &#x111;&#xF4;ng ng&#x1B0;&#x1EDD;i qua l&#x1EA1;i. Khu t&#x1EAD;p trung nhi&#x1EC1;u v&#x103;n ph&#xF2;ng c&#xF4;ng ty cao c&#x1EA5;p v&#xE0; c&#xE1;c l"
-                               data-duration="5 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="07/11/2020"
-                               data-datesort="11/07/2020 11:15:49"
+                               data-address="Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="- Di&#x1EC7;n t&#xED;ch ngang 5 m&#xE9;t, d&#xE0;i 20 m&#xE9;t. 1 tr&#x1EC7;t 2 l&#x1EA7;u. G&#x1ED3;m 3 ph&#xF2;ng l&#x1EDB;n trang b&#x1ECB; &#x111;&#x1EA7;y &#x111;&#x1EE7; m&#xE1;y l&#x1EA1;nh. Nh&#xE0; m&#x1EDB;i x&#xE2;y thi&#x1EBF;t k&#x1EBF; hi&#x1EC7;n &#x111;&#x1EA1;i V&#x1ECB; tr&#xED; c&#x1EA7;u thang g&#x1EA7;n cu&#x1ED1;i nh&#xE0; ph&#xF9; h&#x1EE3;p cho nhi&#x1EC1;u m&#x1EE5;c &#x111;&#xED;ch thu&#xEA;. C&#xF3; h&#xEC;nh th&#x1EF1;c t&#x1EBF; b&#xEA;n d&#x1B0;&#x1EDB;i. - V&#x1ECB; tr&#xED; ngay m&#x1EB7;t ti&#x1EC1;n khu &#x111;&#x1EAF;c &#x111;&#x1ECB;a trung t&#xE2;m th&#xE0;nh ph&#x1ED1;, khu t&#x1EAD;p trun"
+                               data-duration="6 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="14/11/2020"
+                               data-datesort="11/14/2020 15:03:54"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-mat-pho-duong-nguyen-cong-hoan-68/cho-mt-6c-gan-vien-hai-nam-quan-phu-nhuan-pr27702868"
+                               data-url="/cho-thue-nha-mat-pho-duong-dong-nai-phuong-15-3/cho-moi-xay-tien-110a-khu-cu-xa-bac-hai-p-15-quan-10-pr27793011"
                                data-totalmedia="5"
                                data-createbyuser="384460"></i>
                         </span>
@@ -888,69 +914,63 @@
             </div>
             <div class="vip5 product-item clearfix" uid="384460">
                 <div class="product-image ">
-                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-su-van-hanh-phuong-12-5/cho-662a-12-quan-10-giao-voi-truc-3-thang-2-va-to-hien-t-pr27501576" title="Cho thu&#xEA; nh&#xE0; 662A S&#x1B0; V&#x1EA1;n H&#x1EA1;nh, ph&#x1B0;&#x1EDD;ng 12, Qu&#x1EAD;n 10 giao v&#x1EDB;i tr&#x1EE5;c &#x111;&#x1B0;&#x1EDD;ng 3 Th&#xE1;ng 2 v&#xE0; T&#xF4; Hi&#x1EBF;n Th&#xE0;nh" onclick="">
-                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/07/20201107094039-1a4f_wm.jpg" alt="Cho thu&#234; nh&#224; 662A Sư Vạn Hạnh, phường 12, Quận 10 giao với trục đường 3 Th&#225;ng 2 v&#224; T&#244; Hiến Th&#224;nh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
+                    <a class="product-avatar" href="/cho-thue-nha-rieng-duong-nguyen-dinh-chieu-phuong-2-14/cho-491-5-2-quan-3-tp-ho-chi-minh-pr27779426" title="Cho thu&#xEA; nh&#xE0; 491/5 Nguy&#x1EC5;n &#x111;&#xEC;nh Chi&#x1EC3;u, Ph&#x1B0;&#x1EDD;ng 2, Qu&#x1EAD;n 3, Tp H&#x1ED3; Ch&#xED; Minh" onclick="">
+                        <img class="product-avatar-img" src="https://file4.batdongsan.com.vn/crop/745x510/2020/11/13/20201113112736-8f3b_wm.jpg" alt="Cho thu&#234; nh&#224; 491/5 Nguyễn đ&#236;nh Chiểu, Phường 2, Quận 3, Tp Hồ Ch&#237; Minh" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"/>
                     </a>
                     <span class="product-feature">
                                                                     </span>
-                        <span class="product-media">6</span>
+                        <span class="product-media">4</span>
                 </div>
                 <div class="product-main">
                     <h3 class="product-title">
-                        <a href="/cho-thue-nha-rieng-duong-su-van-hanh-phuong-12-5/cho-662a-12-quan-10-giao-voi-truc-3-thang-2-va-to-hien-t-pr27501576"
-                           title="Cho thu&#xEA; nh&#xE0; 662A S&#x1B0; V&#x1EA1;n H&#x1EA1;nh, ph&#x1B0;&#x1EDD;ng 12, Qu&#x1EAD;n 10 giao v&#x1EDB;i tr&#x1EE5;c &#x111;&#x1B0;&#x1EDD;ng 3 Th&#xE1;ng 2 v&#xE0; T&#xF4; Hi&#x1EBF;n Th&#xE0;nh" class="vip5 product-link">
-                            Cho thuê nhà 662A Sư Vạn Hạnh, phường 12, Quận 10 giao với trục đường 3 Tháng 2 và Tô Hiến Thành
+                        <a href="/cho-thue-nha-rieng-duong-nguyen-dinh-chieu-phuong-2-14/cho-491-5-2-quan-3-tp-ho-chi-minh-pr27779426"
+                           title="Cho thu&#xEA; nh&#xE0; 491/5 Nguy&#x1EC5;n &#x111;&#xEC;nh Chi&#x1EC3;u, Ph&#x1B0;&#x1EDD;ng 2, Qu&#x1EAD;n 3, Tp H&#x1ED3; Ch&#xED; Minh" class="vip5 product-link">
+                            Cho thuê nhà 491/5 Nguyễn đình Chiểu, Phường 2, Quận 3, Tp Hồ Chí Minh
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">25 tri&#x1EC7;u/th&#xE1;ng</span>
+                        <span class="price">16 tri&#x1EC7;u/th&#xE1;ng</span>
                             <span class="dot">·</span>
-                            <span class="area">100 m&#xB2;</span>
+                            <span class="area">54 m&#xB2;</span>
                                                     <span class="dot">·</span>
-                        <span class="location">Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh</span>
+                        <span class="location">Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh</span>
                     </div>
                     <div class="product-content">
-                        Diện tích: Ngang 4.5m dài 20m nở hậu, Nhà 1 trệt, 3 lầu, 6 phòng làm việc rộng. Nhà trống suốt. Cầu thang cuối nhà.
- 
- Xe hơi trước nhà thông thoáng né nhau. Có sân để xe 10 chiếc.
- 
- Gần trường học, văn phòng, chợ,... Đông người qua lại.
- 
- Nhà thiết kế hiện đại, nội thất cao cấ
+                        Dt nhà 4,5 x 12m gồm 1 trệt 2 lầu và 1 sân thượng. Nhà có 5 phòng rộng, 3WC, 1PK, 1 bếp (có 3 máy nước nóng), nhà nội thất căn bản. Hẻm xe hơi ra vào thoải mái. Giá thuê 16,000,000 Đ/tháng.Liên hệ chủ nhà 0964027215 Văn Nguyễn.
                     </div>
                     <div class="product-wrap clearfix">
                         <div class="product-uptime">
                             <span class="product-labeltime">
-                                5 ng&#xE0;y tr&#x1B0;&#x1EDB;c
-                                <span class="tooltip-time">07/11/2020</span>
+                                1 tu&#x1EA7;n tr&#x1B0;&#x1EDB;c
+                                <span class="tooltip-time">13/11/2020</span>
                             </span>
                         </div>
                         <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
                             <i class="iconSave"
-                               data-productid="27501576"
-                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/07/20201107094039-1a4f_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 662A S&#x1B0; V&#x1EA1;n H&#x1EA1;nh, ph&#x1B0;&#x1EDD;ng 12, Qu&#x1EAD;n 10 giao v&#x1EDB;i tr&#x1EE5;c &#x111;&#x1B0;&#x1EDD;ng 3 Th&amp;#225;ng 2 v&amp;#224; T&amp;#244; Hi&#x1EBF;n Th&amp;#224;nh&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
-                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/07/20201107094039-1a4f_wm.jpg"
+                               data-productid="27779426"
+                               data-avatar="&lt;img class=&quot;product-avatar-img&quot; src=&quot;https://file4.batdongsan.com.vn/crop/745x510/2020/11/13/20201113112736-8f3b_wm.jpg&quot; alt=&quot;Cho thu&amp;#234; nh&amp;#224; 491/5 Nguy&#x1EC5;n &#x111;&amp;#236;nh Chi&#x1EC3;u, Ph&#x1B0;&#x1EDD;ng 2, Qu&#x1EAD;n 3, Tp H&#x1ED3; Ch&amp;#237; Minh&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot;/&gt;"
+                               data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/13/20201113112736-8f3b_wm.jpg"
                                data-vipclass="vip5"
                                data-isaddon="false"
                                data-has3d="false"
                                data-has360="false"
                                data-hasvideo="false"
-                               data-title="Cho thu&#xEA; nh&#xE0; 662A S&#x1B0; V&#x1EA1;n H&#x1EA1;nh, ph&#x1B0;&#x1EDD;ng 12, Qu&#x1EAD;n 10 giao v&#x1EDB;i tr&#x1EE5;c &#x111;&#x1B0;&#x1EDD;ng 3 Th&#xE1;ng 2 v&#xE0; T&#xF4; Hi&#x1EBF;n Th&#xE0;nh"
-                               data-price="25 tri&#x1EC7;u/th&#xE1;ng"
-                               data-area="100 m&#xB2;"
+                               data-title="Cho thu&#xEA; nh&#xE0; 491/5 Nguy&#x1EC5;n &#x111;&#xEC;nh Chi&#x1EC3;u, Ph&#x1B0;&#x1EDD;ng 2, Qu&#x1EAD;n 3, Tp H&#x1ED3; Ch&#xED; Minh"
+                               data-price="16 tri&#x1EC7;u/th&#xE1;ng"
+                               data-area="54 m&#xB2;"
                                data-pricesort="0"
                                data-areasort="0"
                                data-room="0"
                                data-toilets="0"
-                               data-address="Qu&#x1EAD;n 10, H&#x1ED3; Ch&#xED; Minh"
-                               data-description="Di&#x1EC7;n t&#xED;ch: Ngang 4.5m d&#xE0;i 20m n&#x1EDF; h&#x1EAD;u, Nh&#xE0; 1 tr&#x1EC7;t, 3 l&#x1EA7;u, 6 ph&#xF2;ng l&#xE0;m vi&#x1EC7;c r&#x1ED9;ng. Nh&#xE0; tr&#x1ED1;ng su&#x1ED1;t. C&#x1EA7;u thang cu&#x1ED1;i nh&#xE0;.&#xD; &#xD; Xe h&#x1A1;i tr&#x1B0;&#x1EDB;c nh&#xE0; th&#xF4;ng tho&#xE1;ng n&#xE9; nhau. C&#xF3; s&#xE2;n &#x111;&#x1EC3; xe 10 chi&#x1EBF;c.&#xD; &#xD; G&#x1EA7;n tr&#x1B0;&#x1EDD;ng h&#x1ECD;c, v&#x103;n ph&#xF2;ng, ch&#x1EE3;,... &#x110;&#xF4;ng ng&#x1B0;&#x1EDD;i qua l&#x1EA1;i.&#xD; &#xD; Nh&#xE0; thi&#x1EBF;t k&#x1EBF; hi&#x1EC7;n &#x111;&#x1EA1;i, n&#x1ED9;i th&#x1EA5;t cao c&#x1EA5;"
-                               data-duration="5 ng&#xE0;y tr&#x1B0;&#x1EDB;c"
-                               data-updatedtime="07/11/2020"
-                               data-datesort="11/07/2020 09:39:13"
+                               data-address="Qu&#x1EAD;n 3, H&#x1ED3; Ch&#xED; Minh"
+                               data-description="Dt nh&#xE0; 4,5 x 12m g&#x1ED3;m 1 tr&#x1EC7;t 2 l&#x1EA7;u v&#xE0; 1 s&#xE2;n th&#x1B0;&#x1EE3;ng. Nh&#xE0; c&#xF3; 5 ph&#xF2;ng r&#x1ED9;ng, 3WC, 1PK, 1 b&#x1EBF;p (c&#xF3; 3 m&#xE1;y n&#x1B0;&#x1EDB;c n&#xF3;ng), nh&#xE0; n&#x1ED9;i th&#x1EA5;t c&#x103;n b&#x1EA3;n. H&#x1EBB;m xe h&#x1A1;i ra v&#xE0;o tho&#x1EA3;i m&#xE1;i. Gi&#xE1; thu&#xEA; 16,000,000 &#x110;/th&#xE1;ng.Li&#xEA;n h&#x1EC7; ch&#x1EE7; nh&#xE0; 0964027215 V&#x103;n Nguy&#x1EC5;n."
+                               data-duration="1 tu&#x1EA7;n tr&#x1B0;&#x1EDB;c"
+                               data-updatedtime="13/11/2020"
+                               data-datesort="11/13/2020 11:28:10"
                                data-contactname=""
                                data-contactmobile=""
-                               data-url="/cho-thue-nha-rieng-duong-su-van-hanh-phuong-12-5/cho-662a-12-quan-10-giao-voi-truc-3-thang-2-va-to-hien-t-pr27501576"
-                               data-totalmedia="6"
+                               data-url="/cho-thue-nha-rieng-duong-nguyen-dinh-chieu-phuong-2-14/cho-491-5-2-quan-3-tp-ho-chi-minh-pr27779426"
+                               data-totalmedia="4"
                                data-createbyuser="384460"></i>
                         </span>
                     </div>
@@ -1063,7 +1083,7 @@
 
 </div>
 
-<div class="body-right" style="width:230px; margin-right:-20px;">
+<div class="body-right">
         <div class="container-common">
         <div>
             <div>
@@ -1105,7 +1125,7 @@
         <div class="ulbox">
             <ul>
                     <li>
-                        <a href="/nha-moi-gioi-quan-1" title="Qu&#x1EAD;n 1">Qu&#x1EAD;n 1 (301)</a>
+                        <a href="/nha-moi-gioi-quan-1" title="Qu&#x1EAD;n 1">Qu&#x1EAD;n 1 (300)</a>
                     </li>
                     <li>
                         <a href="/nha-moi-gioi-quan-2" title="Qu&#x1EAD;n 2">Qu&#x1EAD;n 2 (431)</a>
@@ -1123,13 +1143,13 @@
                         <a href="/nha-moi-gioi-quan-6" title="Qu&#x1EAD;n 6">Qu&#x1EAD;n 6 (51)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-quan-7" title="Qu&#x1EAD;n 7">Qu&#x1EAD;n 7 (659)</a>
+                        <a href="/nha-moi-gioi-quan-7" title="Qu&#x1EAD;n 7">Qu&#x1EAD;n 7 (660)</a>
                     </li>
                     <li>
                         <a href="/nha-moi-gioi-quan-8" title="Qu&#x1EAD;n 8">Qu&#x1EAD;n 8 (144)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-quan-9" title="Qu&#x1EAD;n 9">Qu&#x1EAD;n 9 (474)</a>
+                        <a href="/nha-moi-gioi-quan-9" title="Qu&#x1EAD;n 9">Qu&#x1EAD;n 9 (475)</a>
                     </li>
                     <li>
                         <a href="/nha-moi-gioi-quan-10" title="Qu&#x1EAD;n 10">Qu&#x1EAD;n 10 (149)</a>
@@ -1141,19 +1161,19 @@
                         <a href="/nha-moi-gioi-quan-12" title="Qu&#x1EAD;n 12">Qu&#x1EAD;n 12 (153)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-binh-tan" title="B&#xEC;nh T&#xE2;n">B&#xEC;nh T&#xE2;n (178)</a>
+                        <a href="/nha-moi-gioi-binh-tan" title="B&#xEC;nh T&#xE2;n">B&#xEC;nh T&#xE2;n (179)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-binh-thanh" title="B&#xEC;nh Th&#x1EA1;nh">B&#xEC;nh Th&#x1EA1;nh (340)</a>
+                        <a href="/nha-moi-gioi-binh-thanh" title="B&#xEC;nh Th&#x1EA1;nh">B&#xEC;nh Th&#x1EA1;nh (339)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-go-vap" title="G&#xF2; V&#x1EA5;p">G&#xF2; V&#x1EA5;p (165)</a>
+                        <a href="/nha-moi-gioi-go-vap" title="G&#xF2; V&#x1EA5;p">G&#xF2; V&#x1EA5;p (166)</a>
                     </li>
                     <li>
                         <a href="/nha-moi-gioi-phu-nhuan" title="Ph&#xFA; Nhu&#x1EAD;n">Ph&#xFA; Nhu&#x1EAD;n (135)</a>
                     </li>
                     <li>
-                        <a href="/nha-moi-gioi-tan-binh" title="T&#xE2;n B&#xEC;nh">T&#xE2;n B&#xEC;nh (238)</a>
+                        <a href="/nha-moi-gioi-tan-binh" title="T&#xE2;n B&#xEC;nh">T&#xE2;n B&#xEC;nh (239)</a>
                     </li>
                     <li>
                         <a href="/nha-moi-gioi-tan-phu" title="T&#xE2;n Ph&#xFA;">T&#xE2;n Ph&#xFA; (198)</a>
@@ -1243,6 +1263,19 @@
                 </div>
                 <div class="dntb-row">
                     <div class="avatar">
+                        <a href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
+                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2017/09/03/20170903075347-85b7.jpg" />
+                        </a>
+                    </div>
+                    <div class="info-row">
+                        <a class="link colorboldblue" href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow">Nguy&#x1EC5;n Th&#x1ECB; H&#x1ED3;ng Trang</a>
+                        <div class="fone">0919910070</div>
+                        <div class="intro">Chuyên môi giới và nhận ký gửi BĐS tại TP.HCM.</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="dntb-row">
+                    <div class="avatar">
                         <a href="/ban-nha-rieng/nguyen-ngoc-ha-ib597" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
                             <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2020/10/12/20201012103609-8363.jpg" />
                         </a>
@@ -1264,19 +1297,6 @@
                         <a class="link colorboldblue" href="/ban-dat-nen-du-an/thanh-wado-mr-ib556158" rel="nofollow">Thanh Wado (Mr.)</a>
                         <div class="fone">0909743354</div>
                         <div class="intro"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="dntb-row">
-                    <div class="avatar">
-                        <a href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow" class="verticalbox" style="width: 80px; height: 80px;">
-                            <img class="img childbox" src="https://file4.batdongsan.com.vn/resize/200x200/2017/09/03/20170903075347-85b7.jpg" />
-                        </a>
-                    </div>
-                    <div class="info-row">
-                        <a class="link colorboldblue" href="/ban-nha-rieng/nguyen-thi-hong-trang-ib198588" rel="nofollow">Nguy&#x1EC5;n Th&#x1ECB; H&#x1ED3;ng Trang</a>
-                        <div class="fone">0919910070</div>
-                        <div class="intro">Chuyên môi giới và nhận ký gửi BĐS tại TP.HCM.</div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -1430,33 +1450,33 @@
 
 <ul>
             <li>
-                <a class="controls-view-date-contents-link" title="B&#xE1;n nh&#xE0; &#x111;ang &#x1EDF; tr&#x1B0;&#x1EDB;c khi t&#xEC;m &#x111;&#x1B0;&#x1EE3;c nh&#xE0; m&#x1EDB;i: N&#xEA;n hay kh&#xF4;ng?" href="/loi-khuyen-cho-nguoi-ban/co-nen-ban-nha-dang-o-truoc-khi-tim-duoc-nha-moi-ar102322">
-                    B&#xE1;n nh&#xE0; &#x111;ang &#x1EDF; tr&#x1B0;&#x1EDB;c khi t&#xEC;m &#x111;&#x1B0;&#x1EE3;c nh&#xE0; m&#x1EDB;i: N&#xEA;n hay kh&#xF4;ng?
+                <a class="controls-view-date-contents-link" title="H&#x1EC7; s&#x1ED1; s&#x1EED; d&#x1EE5;ng &#x111;&#x1EA5;t l&#xE0; g&#xEC;? H&#x1B0;&#x1EDB;ng d&#x1EAB;n chi ti&#x1EBF;t c&#xE1;ch t&#xED;nh n&#x103;m 2020" href="/loi-khuyen-cho-nguoi-mua/he-so-su-dung-dat-la-gi-ar105527">
+                    H&#x1EC7; s&#x1ED1; s&#x1EED; d&#x1EE5;ng &#x111;&#x1EA5;t l&#xE0; g&#xEC;? H&#x1B0;&#x1EDB;ng d&#x1EAB;n chi ti&#x1EBF;t c&#xE1;ch t&#xED;nh n&#x103;m 2020
                 </a>
             </li>
             <li>
-                <a class="controls-view-date-contents-link" title="Nh&#xE0; &#x111;&#x1EA7;u t&#x1B0; c&#x1EA7;n l&#xE0;m g&#xEC; &#x111;&#x1EC3; kh&#xF4;ng m&#x1EA#x1EA5;t tr&#x1EAF;ng t&#xE0;i s&#x1EA3;n khi mua farmstay?" href="/loi-khuyen-cho-nha-dau-tu/nha-dau-tu-can-lam-gi-de-khong-mat-trang-tai-san-khi-mua-farmstay-ar105495">
-                    Nh&#xE0; &#x111;&#x1EA7;u t&#x1B0; c&#x1EA7;n l&#xE0;m g&#xEC; &#x111;&#x1EC3; kh&#xF4;ng m&#x1EA5;t tr&#x1EAF;ng t&#xE0;i s&#x1EA3;n khi mua farmstay?
+                <a class="controls-view-date-contents-link" title="T&#xF4;i b&#x1ECB; ch&#xF4;n v&#x1ED1;n nhi&#x1EC1;u n&#x103;m v&#xEC; ham mua &#x111;&#x1EA5;t n&#x1EC1;n gi&#xE1; r&#x1EBB;" href="/loi-khuyen-cho-nha-dau-tu/toi-bi-chon-von-nhieu-nam-vi-ham-mua-dat-nen-gia-re-ar105551">
+                    T&#xF4;i b&#x1ECB; ch&#xF4;n v&#x1ED1;n nhi&#x1EC1;u n&#x103;m v&#xEC; ham mua &#x111;&#x1EA5;t n&#x1EC1;n gi&#xE1; r&#x1EBB;
                 </a>
             </li>
             <li>
-                <a class="controls-view-date-contents-link" title="Ch&#x103;m ch&#x1EC9; v&#xE0; li&#x1EC1;u l&#x129;nh vay n&#x1EE3;, t&#xF4;i t&#x1EF1; mua &#x111;&#x1B0;&#x1EE3;c nh&#xE0; tr&#x1B0;&#x1EDB;c tu&#x1ED5;i 30" href="/loi-khuyen-cho-nguoi-mua/mua-nha-ha-noi-truoc-tuoi-30-ar102617">
-                    Ch&#x103;m ch&#x1EC9; v&#xE0; li&#x1EC1;u l&#x129;nh vay n&#x1EE3;, t&#xF4;i t&#x1EF1; mua &#x111;&#x1B0;&#x1EE3;c nh&#xE0; tr&#x1B0;&#x1EDB;c tu&#x1ED5;i 30
+                <a class="controls-view-date-contents-link" title="C&#x1EA7;m 10 tri&#x1EC7;u &#x111;i xem nh&#xE0;, t&#xF4;i ch&#x1ED1;t mua trong ph&#xFA;t m&#x1ED1;t" href="/loi-khuyen-cho-nguoi-mua/cam-10-trieu-di-xem-nha-toi-chot-mua-trong-phut-mot-ar105548">
+                    C&#x1EA7;m 10 tri&#x1EC7;u &#x111;i xem nh&#xE0;, t&#xF4;i ch&#x1ED1;t mua trong ph&#xFA;t m&#x1ED1;t
                 </a>
             </li>
             <li>
-                <a class="controls-view-date-contents-link" title="&#xD4;m m&#x1ED9;ng l&#xE0;m gi&#xE0;u t&#x1EEB; &#x111;&#x1EA5;t, c&#x1EB7;p v&#x1EE3; ch&#x1ED3;ng &quot;ng&#xE3; &#x111;au&quot; v&#xEC; m&#xF9; m&#x1EDD; ph&#xE1;p l&#xFD;" href="/loi-khuyen-cho-nguoi-mua/om-mong-lam-giau-tu-dat-cap-vo-chong-nga-dau-vi-mu-mo-phap-ly-ar103408">
-                    &#xD4;m m&#x1ED9;ng l&#xE0;m gi&#xE0;u t&#x1EEB; &#x111;&#x1EA5;t, c&#x1EB7;p v&#x1EE3; ch&#x1ED3;ng &quot;ng&#xE3; &#x111;au&quot; v&#xEC; m&#xF9; m&#x1EDD; ph&#xE1;p l&#xFD;
+                <a class="controls-view-date-contents-link" title="Nh&#xE0; v&#x1B0;&#x1EDD;n l&#xE0; g&#xEC;? &#x1AF;u nh&#x1B0;&#x1EE3;c &#x111;i&#x1EC3;m khi x&#xE2;y? 7 m&#x1EAB;u nh&#xE0; v&#x1B0;&#x1EDD;n &#x111;&#x1EB9;p gi&#xE1; r&#x1EBB;" href="/loi-khuyen-cho-nguoi-mua/nha-vuon-la-gi-7-thiet-ke-nha-vuon-dep-gia-re-ar105523">
+                    Nh&#xE0; v&#x1B0;&#x1EDD;n l&#xE0; g&#xEC;? &#x1AF;u nh&#x1B0;&#x1EE3;c &#x111;i&#x1EC3;m khi x&#xE2;y? 7 m&#x1EAB;u nh&#xE0; v&#x1B0;&#x1EDD;n &#x111;&#x1EB9;p gi&#xE1; r&#x1EBB;
                 </a>
             </li>
             <li>
-                <a class="controls-view-date-contents-link" title="&#x201C;Li&#x1EC1;u&#x201D; mua nh&#xE0; ch&#x1EC9; sau 15 ng&#xE0;y t&#xEC;m ki&#x1EBF;m, v&#x1EE3; ch&#x1ED3;ng tr&#x1EBB; h&#x1B0;&#x1EDF;ng &#x201C;tr&#xE1;i ng&#x1ECD;t&#x201D; kh&#xF4;ng ng&#x1EDD;" href="/loi-khuyen-cho-nguoi-mua/lieu-mua-nha-chi-sau-15-ngay-tim-kiem-vo-chong-tre-huong-trai-ngot-khong-ngo-ar105484">
-                    &#x201C;Li&#x1EC1;u&#x201D; mua nh&#xE0; ch&#x1EC9; sau 15 ng&#xE0;y t&#xEC;m ki&#x1EBF;m, v&#x1EE3; ch&#x1ED3;ng tr&#x1EBB; h&#x1B0;&#x1EDF;ng &#x201C;tr&#xE1;i ng&#x1ECD;t&#x201D; kh&#xF4;ng ng&#x1EDD;
+                <a class="controls-view-date-contents-link" title="Mua nh&#xE0;, &#x111;&#x1EEB;ng v&#x1ED9;i l&#xE0;m li&#x1EC1;u r&#x1ED3;i ngh&#x129; &quot;thuy&#x1EC1;n &#x111;&#x1EBF;n &#x111;&#x1EA7;u c&#x1EA7;u &#x1EAF;t s&#x1EBD; th&#x1EB3;ng&quot; nh&#x1B0; t&#xF4;i, c&#x1EF1;c l&#x1EAF;m!" href="/loi-khuyen-cho-nguoi-mua/mua-nha-dung-voi-lam-lieu-roi-nghi-thuyen-den-dau-cau-at-se-thang-nhu-toi-ar101515">
+                    Mua nh&#xE0;, &#x111;&#x1EEB;ng v&#x1ED9;i l&#xE0;m li&#x1EC1;u r&#x1ED3;i ngh&#x129; &quot;thuy&#x1EC1;n &#x111;&#x1EBF;n &#x111;&#x1EA7;u c&#x1EA7;u &#x1EAF;t s&#x1EBD; th&#x1EB3;ng&quot; nh&#x1B0; t&#xF4;i, c&#x1EF1;c l&#x1EAF;m!
                 </a>
             </li>
             <li>
-                <a class="controls-view-date-contents-link" title="[Infographic] Nh&#x1EEF;ng quy &#x111;&#x1ECB;nh ph&#xE1;p l&#xFD; kh&#xF4;ng th&#x1EC3; b&#x1ECF; qua khi mua b&#xE1;n b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n" href="/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
-                    [Infographic] Nh&#x1EEF;ng quy &#x111;&#x1ECB;nh ph&#xE1;p l&#xFD; kh&#xF4;ng th&#x1EC3; b&#x1ECF; qua khi mua b&#xE1;n b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n
+                <a class="controls-view-date-contents-link" title="Tay tr&#x1EAF;ng v&#xE0;o S&#xE0;i G&#xF2;n l&#x1EAD;p nghi&#x1EC7;p, t&#xF4;i mua &#x111;&#x1B0;&#x1EE3;c nh&#xE0; nh&#x1EDD; &#x111;&#x1EA7;u t&#x1B0; &#x111;&#x1EA5;t n&#x1EC1;n" href="/loi-khuyen-cho-nguoi-mua/tay-trang-vao-sai-gon-lap-nghiep-toi-mua-duoc-nha-nho-dau-tu-dat-nen-ar105538">
+                    Tay tr&#x1EAF;ng v&#xE0;o S&#xE0;i G&#xF2;n l&#x1EAD;p nghi&#x1EC7;p, t&#xF4;i mua &#x111;&#x1B0;&#x1EE3;c nh&#xE0; nh&#x1EDD; &#x111;&#x1EA7;u t&#x1B0; &#x111;&#x1EA5;t n&#x1EC1;n
                 </a>
             </li>
 </ul>
@@ -1494,59 +1514,18 @@
                     <div style="float: left; width: 430px; margin-left: 5px">
                     </div>
                 </div>
- <div class="clearfix"></div>
-    <div class="boxLinkFooter">
-    <div id="boxLink" class="footer-link-new">
-        <ul>
-            <li><a href="/ban-can-ho-chung-cu-rivera-park-ha-noi">Chung cư Rivera Park Hà Nội</a></li>
-            <li><a href="/ban-can-ho-chung-cu-chung-cu-c1-c2-xuan-dinh">Chung cư C1 C2 Xuân Đỉnh</a></li>
-            <li><a href="/ban-can-ho-chung-cu-anland-nam-cuong">Chung cư Anland Nam Cường</a></li>
-            <li><a href="/ban-can-ho-chung-cu-hanhud-hoang-quoc-viet">Chung cư Hanhud Hoàng Quốc Việt</a></li>
-            <li><a href="/ban-can-ho-chung-cu-sunshine-center">Sunshine Center</a></li>
-            <li><a href="/ban-nha-biet-thu-lien-ke-khu-do-thi-lakeview-city">Bán biệt thự Lakeview City</a></li>
-            <li><a href="/ban-nha-biet-thu-lien-ke-ha-do-756-sai-gon">Bán biệt thự Hà Đô 756 Sài Gòn</a></li>
-            <li><a href="/ban-can-ho-chung-cu-park-12-park-hill-times-city">Bán chung cư Park 12 Park Hill Times City</a></li>
-            <li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-da-nang">Bán căn hộ Vinpearl Condotel Đà Nẵng</a></li>
-            <li><a href="/ban-can-ho-chung-cu-soho-premier">Bán căn hộ Soho Premier</a></li>
-        </ul>
-        
-        <ul>
-            <li><a href="/ban-can-ho-chung-cu-duc-long-golden-land">Bán căn hộ Đức Long Golden Land</a></li>
-            <li><a href="/ban-can-ho-chung-cu-hung-phat-golden-star">Bán căn hộ Hưng Phát Golden Star</a></li>
-            <li><a href="/ban-can-ho-chung-cu-chung-cu-129d-truong-dinh">Bán chung cư 129D Trương Định</a></li>
-            <li><a href="/ban-can-ho-chung-cu-e4-tower">Bán chung cư E4 Tower</a></li>
-            <li><a href="/ban-nha-rieng-duong-nguyen-trung-truc-66">Bán nhà Nguyễn Trung Trực Bình Thạnh</a></li>
-            <li><a href="/nha-dat-ban-bac-ninh">Nhà đất Bắc Ninh</a></li>
-            <li><a href="/ban-can-ho-chung-cu-n03-t3-t4-ngoai-giao-doan">Bán chung cư N03 T3 T4 Ngoại Giao Đoàn</a></li>
-            <li><a href="/ban-can-ho-chung-cu-valeo-dam-sen">Bán căn hộ Valeo Đầm Sen</a></li>
-            <li><a href="/ban-dat-nen-du-an-khu-do-thi-an-thinh">Bán đất nền Khu đô thị An Thịnh</a></li>
-            <li><a href="/ban-can-ho-chung-cu-golden-land">Chung cư Golden Land</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-happy-star-tower">Bán chung cư Happy Star Tower</a></li>
-            <li><a href="/ban-can-ho-chung-cu-sunrise-city">Căn hộ Sunrise City</a></li><li><a href="/nha-dat-ban-thai-nguyen">Nhà đất Thái Nguyên</a></li>
-            <li><a href="/khu-thuong-mai-dich-vu-long-bien/vincom-center-long-bien-pj994">Vincom Long Bien</a></li>
-            <li><a href="/ban-can-ho-chung-cu-sunview-1-2">Sunview Town</a></li><li><a href="/ban-can-ho-chung-cu-times-city">Chung cư Times City</a></li>
-            <li><a href="/ban-can-ho-chung-cu-chung-cu-golden-west-le-van-thiem">Chung cư Golden West</a></li>
-            <li><a href="/ban-can-ho-chung-cu-alphanam-luxury-apartment">Bán căn hộ Alphanam Luxury Apartment</a></li>
-            <li><a href="/ban-can-ho-chung-cu-ecolife-tay-ho">Bán chung cư Ecolife Tây Hồ</a></li><li><a href="/nha-dat-ban-nam-dinh">Nhà đất Nam Định</a></li>
-        </ul>
-
-        <ul>
-        <li><a href="/nha-dat-ban-hai-phong">Nhà đất Hải Phòng</a></li>
-        <li><a href="/nha-dat-ban-hai-duong">Nhà đất Hải Dương</a></li>
-        <li><a href="/nha-dat-ban-can-tho">Nhà đất Cần Thơ</a></li>
-        <li><a href="/ban-can-ho-chung-cu-centara-thu-thiem">Căn hộ Centara Thủ Thiêm</a></li>
-        <li><a href="/ban-can-ho-chung-cu-athena-complex">Chung cư Athena Complex</a></li>
-        <li><a href="/ban-can-ho-chung-cu-tu-hiep-plaza">Chung cư Tứ Hiệp Plaza</a></li>
-        <li><a href="/tags/cho-thue/Sang-quan-cafe">Sang quán café</a></li>
-        <li><a href="/ban-can-ho-chung-cu-gemek-premium">Chung cư Gemek Premium</a></li>
-        <li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-nha-trang">Căn hộ Vinpearl Condotel Nha Trang</a></li>
-        </ul>
+                <div class="clearfix"></div>
+                <div class="boxLinkFooter">
+                        <div id="boxLink" class="footer-link-new">
+        <ul><li><a href="/ban-can-ho-chung-cu-rivera-park-ha-noi">Chung cư Rivera Park Hà Nội</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-c1-c2-xuan-dinh">Chung cư C1 C2 Xuân Đỉnh</a></li><li><a href="/ban-can-ho-chung-cu-anland-nam-cuong">Chung cư Anland Nam Cường</a></li><li><a href="/ban-can-ho-chung-cu-hanhud-hoang-quoc-viet">Chung cư Hanhud Hoàng Quốc Việt</a></li><li><a href="/ban-can-ho-chung-cu-sunshine-center">Sunshine Center</a></li><li><a href="/ban-nha-biet-thu-lien-ke-khu-do-thi-lakeview-city">Bán biệt thự Lakeview City</a></li><li><a href="/ban-nha-biet-thu-lien-ke-ha-do-756-sai-gon">Bán biệt thự Hà Đô 756 Sài Gòn</a></li><li><a href="/ban-can-ho-chung-cu-park-12-park-hill-times-city">Bán chung cư Park 12 Park Hill Times City</a></li><li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-da-nang">Bán căn hộ Vinpearl Condotel Đà Nẵng</a></li><li><a href="/ban-can-ho-chung-cu-soho-premier">Bán căn hộ Soho Premier</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-duc-long-golden-land">Bán căn hộ Đức Long Golden Land</a></li><li><a href="/ban-can-ho-chung-cu-hung-phat-golden-star">Bán căn hộ Hưng Phát Golden Star</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-129d-truong-dinh">Bán chung cư 129D Trương Định</a></li><li><a href="/ban-can-ho-chung-cu-e4-tower">Bán chung cư E4 Tower</a></li><li><a href="/ban-nha-rieng-duong-nguyen-trung-truc-66">Bán nhà Nguyễn Trung Trực Bình Thạnh</a></li><li><a href="/nha-dat-ban-bac-ninh">Nhà đất Bắc Ninh</a></li><li><a href="/ban-can-ho-chung-cu-n03-t3-t4-ngoai-giao-doan">Bán chung cư N03 T3 T4 Ngoại Giao Đoàn</a></li><li><a href="/ban-can-ho-chung-cu-valeo-dam-sen">Bán căn hộ Valeo Đầm Sen</a></li><li><a href="/ban-dat-nen-du-an-khu-do-thi-an-thinh">Bán đất nền Khu đô thị An Thịnh</a></li><li><a href="/ban-can-ho-chung-cu-golden-land">Chung cư Golden Land</a></li></ul><ul><li><a href="/ban-can-ho-chung-cu-happy-star-tower">Bán chung cư Happy Star Tower</a></li><li><a href="/ban-can-ho-chung-cu-sunrise-city">Căn hộ Sunrise City</a></li><li><a href="/nha-dat-ban-thai-nguyen">Nhà đất Thái Nguyên</a></li><li><a href="/khu-thuong-mai-dich-vu-long-bien/vincom-center-long-bien-pj994">Vincom Long Bien</a></li><li><a href="/ban-can-ho-chung-cu-sunview-1-2">Sunview Town</a></li><li><a href="/ban-can-ho-chung-cu-times-city">Chung cư Times City</a></li><li><a href="/ban-can-ho-chung-cu-chung-cu-golden-west-le-van-thiem">Chung cư Golden West</a></li><li><a href="/ban-can-ho-chung-cu-alphanam-luxury-apartment">Bán căn hộ Alphanam Luxury Apartment</a></li><li><a href="/ban-can-ho-chung-cu-ecolife-tay-ho">Bán chung cư Ecolife Tây Hồ</a></li><li><a href="/nha-dat-ban-nam-dinh">Nhà đất Nam Định</a></li></ul><ul><li><a href="/nha-dat-ban-hai-phong">Nhà đất Hải Phòng</a></li><li><a href="/nha-dat-ban-hai-duong">Nhà đất Hải Dương</a></li><li><a href="/nha-dat-ban-can-tho">Nhà đất Cần Thơ</a></li><li><a href="/ban-can-ho-chung-cu-centara-thu-thiem">Căn hộ Centara Thủ Thiêm</a></li><li><a href="/ban-can-ho-chung-cu-athena-complex">Chung cư Athena Complex</a></li><li><a href="/ban-can-ho-chung-cu-tu-hiep-plaza">Chung cư Tứ Hiệp Plaza</a></li><li><a href="/tags/cho-thue/Sang-quan-cafe">Sang quán café</a></li><li><a href="/ban-can-ho-chung-cu-gemek-premium">Chung cư Gemek Premium</a></li><li><a href="/ban-can-ho-chung-cu-vinpearl-condotel-nha-trang">Căn hộ Vinpearl Condotel Nha Trang</a></li></ul>
     </div>
 
 
 
+                </div>
+            </div>
 
-
-    <div id="SiteRight" class="banner-right clearfix">
+        <div id="SiteRight" class="banner-right clearfix">
             <div class="container-default">
                 <div>
                     <div id="ban_wide_right" class="ban_wide_scroll">
@@ -1562,6 +1541,7 @@
             </div>
         </div>
 
+        
 
         <div class="modal fade" id="dialogPopup" role="dialog">
             <div class="nomodal"></div>
@@ -1592,7 +1572,7 @@
     </div>
     
     
-            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121057.msvbds.FrontEnd.Common.min.js"></script>
+            <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011131001.msvbds.FrontEnd.Common.min.js"></script>
     
     <!--start BannerContext-->
     <script type='text/javascript'> var __bannerContext={"PageId":232,"CateId":null,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
@@ -1642,12 +1622,12 @@
     
     
     
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.FormSearchBroker.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.BrokerDistrict.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.TypicalBroker.min.js"></script>
-        <script marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50} src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.Detail.BrokerProducts.min.js" asp-append-version="true"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011121057.msvbds.FrontEnd.Broker.SendMail.min.js"></script>
-        <script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.ProductHiddenMobile.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011131001.msvbds.FrontEnd.Broker.FormSearchBroker.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011131001.msvbds.FrontEnd.BrokerDistrict.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011131001.msvbds.FrontEnd.Broker.TypicalBroker.min.js"></script>
+        <script marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50} src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011131001.msvbds.FrontEnd.Broker.Detail.BrokerProducts.min.js" asp-append-version="true"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/BDS.Contacts/filestatic.ver202011131001.msvbds.FrontEnd.Broker.SendMail.min.js"></script>
+        <script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011131001.msvbds.ProductHiddenMobile.min.js"></script>
     
     <script type="text/javascript">
         var brokerDistrict = new brokerDistrict.BrokerDistrict();
@@ -1739,8 +1719,9 @@
             }
         });
     </script>
-
-
     
+</body>
+</html>
+
 @endsection
 @endforeach

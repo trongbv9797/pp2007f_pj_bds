@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDistrictsTable extends Migration
+class CreateBuyerSellerAreasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class CreateDistrictsTable extends Migration
      */
     public function up()
     {
-        Schema::create('districts', function (Blueprint $table) {
+        Schema::create('buyer_seller_areas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type');
-            $table->string('slug');
-            $table->string('name_with_type');
-            $table->string('path');
-            $table->string('path_with_type');
-            $table->integer('code');
-            $table->integer('parent_code');
+            $table->integer('min_area');
+            $table->integer('max_area');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ class CreateDistrictsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('districts');
+        Schema::dropIfExists('buyer_seller_areas');
     }
 }

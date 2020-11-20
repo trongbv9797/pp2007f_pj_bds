@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UserSeeder::class);
 
-        // $this->call(DistrictSeeder::class);
+        $this->call(DistrictSeeder::class);
         // trong
         $this->call(DistrictSeeder::class);
         $this->call(ProvinceSeeder::class);
@@ -29,6 +29,5 @@ class DatabaseSeeder extends Seeder
 
         //Huy
         $this->call(MenuCategorySeeder::class);
-
     }
 }

@@ -17,6 +17,7 @@ class CreateImageTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('name');
+            $table->integer('products_id');
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@ class Products extends Model
     //
     public function image()
     {
-        return $this->hasMany('App\Image');
+        return $this->hasMany('App\Image', 'products_id');
     }
 
     public function menu_category()

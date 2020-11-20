@@ -1,7 +1,7 @@
 @foreach ($products as $product)
     <div class="vip0 product-item clearfix" uid="649852">
         <div class="product-image ">
-            <a class="product-avatar" href="{!!  Route('single_post', $product->id) !!}"
+            <a class="product-avatar" href="{!!  Route('nhadatban_single_post', $product->id) !!}"
                 title="{!!  $product->title !!}" onclick="">
                 <img class="product-avatar-img" alt="{!!  $product->title !!}"
                     error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"
@@ -13,7 +13,7 @@
         </div>
         <div class="product-main">
             <h3 class="product-title">
-                <a href="{!!  Route('single_post', $product->id) !!}" title="{!!  $product->title !!}"
+                <a href="{!!  Route('nhadatban_single_post', $product->id) !!}" title="{!!  $product->title !!}"
                     class="vipZero product-link">
                     {!! $product->title !!}
                 </a>
@@ -31,8 +31,8 @@
             <div class="product-wrap clearfix">
                 <div class="product-uptime">
                     <span class="product-labeltime">
-                        {!! $product->created_at->format('M d Y') !!}
-                        <span class="tooltip-time">{!! $product->created_at->format('M d Y') !!}</span>
+                        {!! $product->created_at !!}
+                        <span class="tooltip-time">{!! $product->created_at!!}</span>
                     </span>
                 </div>
                 <div class="product-contact">

@@ -3,68 +3,65 @@
 namespace App\Http\Controllers;
 
 use App\Products;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+
 
 class NhadatbanController extends Controller
 {
     //
-    public function index(Request $request) 
-    {
-        $products = Products::paginate(5);
-        if ($request->ajax()) {
-            return view('pages.nhadatban.presult', compact('products'));
-        }
-  
-        return view('pages.nhadatban.index',compact('products'));
+
+    public function index() {
+        $products = DB::table('products')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->select('products.*', 'menu_category.*', 'image.*')
+        ->where('menu_category.name', '=', "Bán căn hộ chung cư")
+        ->orWhere('menu_category.name', '=', "Bán nhà riêng")
+        ->orWhere('menu_category.name', '=', "Bán nhà mặt phố")
+        ->orderBy('products.id')->get();  //->paginate(5);
+        return view("pages.nhadatban.index", compact('products',));
+
     }
 
-    public function single_post($id) {
-        $products = Products::where('id', '=', $id)->get();
+    public function nhadatban_single_post($id) {
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->where('products.id', '=', $id)->get();
         return view("pages.nhadatban.single_post", compact('products'));
+
     }
 
     public function ban_can_ho_chung_cu() {
-        return view('pages.nhadatban.ban_can_ho_chung_cu');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->where('menu_category.name', '=', "Bán căn hộ chung cư")
+        ->get();
+        return view("pages.nhadatban.index", compact('products'));
     }
 
     public function ban_nha_rieng() {
-        return view('pages.nhadatban.ban_nha_rieng');
-    }
-
-    public function ban_biet_thu() {
-        return view('pages.nhadatban.ban_biet_thu');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->Where('menu_category.name', '=', "Bán nhà riêng")
+        ->get();
+        return view("pages.nhadatban.index", compact('products'));
     }
 
     public function ban_nha_mat_pho() {
-        return view('pages.nhadatban.ban_nha_mat_pho');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->Where('menu_category.name', '=', "Bán nhà mặt phố")
+        ->get();
+        return view("pages.nhadatban.index", compact('products'));
     }
 
-    public function ban_dat_nen() {
-        return view('pages.nhadatban.ban_dat_nen');
-    }
-
-    public function ban_dat() {
-        return view('pages.nhadatban.ban_dat');
-    }
-
-    public function ban_trang_trai() {
-        return view('pages.nhadatban.ban_trang_trai');
-    }
-
-    public function ban_kho_nha_xuong() {
-        return view('pages.nhadatban.ban_kho_nha_xuong');
-    }
-
-    public function bat_dong_san_khac() {
-        return view('pages.nhadatban.bat_dong_san_khac');
-    }
-
-    public function bien_hoa_city() {
-    return view('pages.nhadatban.single_post.bien_hoa_city');
-    }
-
-    public function posts_index() {
-        
-    }
 }

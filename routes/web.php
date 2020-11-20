@@ -35,13 +35,13 @@ Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost
 
 
 //TintucController
-Route::get('/tin-tuc', 'TintucController@index');
-Route::get('/tin-thi-truong', 'TintucController@tinthitruong');
-Route::get('/phan-tich','TintucController@phantich');
-Route::get('/chinh-sach','TintucController@chinhsach');
-Route::get('/quy-hoach','TintucController@quyhoach');
-Route::get('/bds-the-gioi','TintucController@bdsthegioi');
-Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds');
+Route::get('/tin-tuc', 'TintucController@index')->name('tintucbds');
+Route::get('/tin-thi-truong', 'TintucController@tinthitruong')->name('tinthitruong');
+Route::get('/phan-tich','TintucController@phantich')->name('phan_tich');
+Route::get('/chinh-sach','TintucController@chinhsach')->name('chinh_sach');
+Route::get('/quy-hoach','TintucController@quyhoach')->name('quy_hoach');
+Route::get('/bds-the-gioi','TintucController@bdsthegioi')->name('tintucbds_tg');
+Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds')->name('tai_chinh');
 //Tintucsinglepost
 Route::get('/articles{id}', 'TintucController@articles')->name('tintuc_single_post');
 

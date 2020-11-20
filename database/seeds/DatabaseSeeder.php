@@ -20,11 +20,15 @@ class DatabaseSeeder extends Seeder
         $this->call(WardSeeder::class);
         //tai anh
         $this->call(ProductSeeder::class);
-        //viet
+        // //viet
         $this->call(CategorySeeder::class);
         $this->call(PostSeeder::class);
-        //hieu
+        // //hieu
         $this->call(ImageSeeder::class);
         $this->call(BrokerSeeder::class);
+
+        //Huy
+        $this->call(MenuCategorySeeder::class);
+
     }
 }

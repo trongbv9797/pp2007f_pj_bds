@@ -47,6 +47,8 @@ Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds');
 
 //NhadatbanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhadatbanController@index')->name('nha_dat_ban');
+
+
 Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu')->name('ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng')->name('ban_nha_rieng');
 Route::get('/ban-biet-thu-lien-ke', 'NhadatbanController@ban_biet_thu')->name('ban_biet_thu');
@@ -57,9 +59,7 @@ Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong')->name('ban_kho_nha_xuong');
 Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac')->name('bat_dong_san_khac');
 Route::get('/nha-dat-ban-bien-hoa-city', 'NhadatbanController@bien_hoa_city')->name('bien_hoa_city');
-Route::get('/nhadattban{id}', 'NhadatbanController@single_post')->name('single_post');
-
-
+Route::get('/nhadatban{id}', 'NhadatbanController@single_post')->name('single_post');
 
 
 //NhadatchothueController ----TAI ANH

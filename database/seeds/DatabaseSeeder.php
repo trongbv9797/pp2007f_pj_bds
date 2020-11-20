@@ -37,5 +37,9 @@ class DatabaseSeeder extends Seeder
 
         //Huy
         $this->call(MenuCategorySeeder::class);
+        //huy
+        $this->call(ArticleSeeder::class);
+
+
     }
 }

@@ -92,7 +92,7 @@
                                                 <div class="floatleft">
                                                     Giá: <span class="product-price">{{ $buyerSeller->price }} tỷ</span>&nbsp;
                                                     Diện tích: <span class="product-area">{{ $buyerSeller->buyersellerarea->name }}</span><br>
-                                                    Quận/Huyện: <span class="product-city-dist">{{ $buyerSeller->districts->name }}</span>
+                                                    Quận/Huyện: <span class="product-city-dist"></span>
                                                     <span class="inline-blk">
                                                         Tỉnh/TP: <span class="product-city-dist">{{ $buyerSeller->districts->path }}</span>
                                                     </span>

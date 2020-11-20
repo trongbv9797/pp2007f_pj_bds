@@ -23,6 +23,14 @@ class DatabaseSeeder extends Seeder
         // //viet
         $this->call(CategorySeeder::class);
         $this->call(PostSeeder::class);
+        $this->call(BuyerSellerAreaSeeder::class);
+        $this->call(BuyerSellerCatergorySeeder::class);
+        $this->call(BuyerSellerContactSeeder::class);
+        $this->call(ImageDemoSeeder::class);
+        $this->call(BuyerSellerSeeder::class);
+        
+        
+
         // //hieu
         $this->call(ImageSeeder::class);
         $this->call(BrokerSeeder::class);

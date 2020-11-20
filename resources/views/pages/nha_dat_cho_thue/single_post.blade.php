@@ -505,7 +505,7 @@
     <div class="divide">&nbsp;</div>
     <div class="short-detail-wrap">
         <ul class="short-detail-2 clearfix pad-16">
-            <li><span class="sp1">Mức giá:</span><span class="sp2">{!! $products->price !!} tỷ</span></li>
+            <li><span class="sp1">Mức giá:</span><span class="sp2">{!! $products->price !!} triệu/tháng</span></li>
                 <li><span class="sp1">Diện tích:</span><span class="sp2">{!! $products->area !!} m²</span></li>
                     </ul>
         <div class="repost">

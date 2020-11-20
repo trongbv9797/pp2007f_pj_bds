@@ -167,20 +167,8 @@
                                             class="haslink ">Bán căn hộ chung cư</a></li>
                                     <li class="lv1"><a href="{!! Route('ban_nha_rieng') !!}"
                                             class="haslink ">Bán nhà riêng</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_biet_thu') !!}"
-                                            class="haslink ">Bán nhà biệt thự, liền kề</a></li>
                                     <li class="lv1"><a href="{!! Route('ban_nha_mat_pho') !!}"
                                             class="haslink ">Bán nhà mặt phố</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_dat_nen') !!}"
-                                            class="haslink ">Bán đất nền dự án</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_dat') !!}" class="haslink ">Bán
-                                            đất</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_trang_trai') !!}"
-                                            class="haslink ">Bán trang trại, khu nghỉ dưỡng</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_kho_nha_xuong') !!}"
-                                            class="haslink ">Bán kho, nhà xưởng</a></li>
-                                    <li class="lv1"><a href="{!! Route('bat_dong_san_khac') !!}"
-                                            class="haslink ">Bán loại bất động sản khác</a></li>
                                 </ul>
                             </li>
                             <li class="lv0"><a href="{!! Route('nha_dat_cho_thue') !!}" class="haslink "><span
@@ -194,16 +182,6 @@
                                             class="haslink ">Cho thuê nhà riêng</a></li>
                                     <li class="lv1"><a href="{!! Route('cho_thue_nha_mat_pho') !!}"
                                             class="haslink ">Cho thuê nhà mặt phố</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_tro') !!}"
-                                            class="haslink ">Cho thuê nhà trọ, phòng trọ</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_van_phong') !!}"
-                                            class="haslink ">Cho thuê văn phòng</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_cua_hang') !!}"
-                                            class="haslink ">Cho thuê cửa hàng - ki ốt</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_kho') !!}"
-                                            class="haslink ">Cho thuê kho, nhà xưởng, đất</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_bds_khac') !!}"
-                                            class="haslink ">Cho thuê loại bất động sản khác</a></li>
                                 </ul>
                             </li>
                             <li class="lv0"><a href="https://batdongsan.com.vn/du-an-bat-dong-san"

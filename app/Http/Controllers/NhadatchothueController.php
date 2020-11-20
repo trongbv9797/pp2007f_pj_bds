@@ -3,43 +3,59 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NhadatchothueController extends Controller
 {
     //
     public function index() {
-        return view('pages.nha_dat_cho_thue.index');
+        $products = DB::table('products')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->select('products.*', 'menu_category.*', 'image.*')
+        ->where('menu_category.name', '=', "Cho thuê căn hộ chung cư")
+        ->orWhere('menu_category.name', '=', "Cho thuê nhà riêng")
+        ->orWhere('menu_category.name', '=', "Cho thuê nhà mặt phố")
+        ->orderBy('products.id')->get();
+        return view("pages.nha_dat_cho_thue.index", compact('products',));
+    }
+
+    public function nhadatchothue_single_post($id) {
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->where('products.id', '=', $id)->get();
+        return view("pages.nha_dat_cho_thue.single_post", compact('products'));
     }
 
     public function cho_thue_can_ho() {
-        return view('pages.nha_dat_cho_thue.cho_thue_can_ho');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->where('menu_category.name', '=', "Cho thuê căn hộ chung cư")
+        ->get();
+        return view("pages.nha_dat_cho_thue.index", compact('products'));
     }
 
     public function cho_thue_nha_rieng() {
-        return view('pages.nha_dat_cho_thue.cho_thue_nha_rieng');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->Where('menu_category.name', '=', "Cho thuê nhà riêng")
+        ->get();
+        return view("pages.nha_dat_cho_thue.index", compact('products'));
     }
 
     public function cho_thue_nha_mat_pho() {
-        return view('pages.nha_dat_cho_thue.cho_thue_nha_mat_pho');
-    }
-
-    public function cho_thue_nha_tro() {
-        return view('pages.nha_dat_cho_thue.cho_thue_nha_tro');
-    }
-
-    public function cho_thue_van_phong() {
-        return view('pages.nha_dat_cho_thue.cho_thue_van_phong');
-    }
-
-    public function cho_thue_cua_hang() {
-        return view('pages.nha_dat_cho_thue.cho_thue_cua_hang');
-    }
-
-    public function cho_thue_nha_kho() {
-        return view('pages.nha_dat_cho_thue.cho_thue_nha_kho');
-    }
-
-    public function cho_thue_bds_khac() {
-        return view('pages.nha_dat_cho_thue.cho_thue_bds_khac');
+        $products = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('menu_category', 'menu_category.id', '=', 'products.menu_category_id')
+        ->select('products.*', 'image.*', 'menu_category.*')
+        ->Where('menu_category.name', '=', "Cho thuê nhà mặt phố")
+        ->get();
+        return view("pages.nha_dat_cho_thue.index", compact('products'));
     }
 }

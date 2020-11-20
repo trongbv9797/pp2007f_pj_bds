@@ -30,6 +30,7 @@ route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTan
 // DanhbaController index. 
 
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
+Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
 
 
 //TintucController
@@ -56,11 +57,10 @@ Route::get('/ban-trang-trai-khu-nghi-duong', 'NhadatbanController@ban_trang_trai
 Route::get('/ban-kho-nha-xuong', 'NhadatbanController@ban_kho_nha_xuong')->name('ban_kho_nha_xuong');
 Route::get('/ban-loai-bat-dong-san-khac', 'NhadatbanController@bat_dong_san_khac')->name('bat_dong_san_khac');
 Route::get('/nha-dat-ban-bien-hoa-city', 'NhadatbanController@bien_hoa_city')->name('bien_hoa_city');
-Route::get('/{id}', 'NhadatbanController@single_post')->name('single_post');
+Route::get('/nhadattban{id}', 'NhadatbanController@single_post')->name('single_post');
 
 
-//Filter diện tích
-Route::get('/<=20', 'NhadatbanController@index1')->name('<=20');
+
 
 //NhadatchothueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index')->name('nha_dat_cho_thue');
@@ -75,8 +75,8 @@ Route::get('/cho-thue-loai-bat-dong-san-khac', 'NhadatchothueController@cho_thue
 
 
 
-//singlepost (chưa sửa được redirect)
-Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController@singlepost1');
+
+Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 
 //Doanh nghiep
 Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');
@@ -86,7 +86,7 @@ Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 
 //Canmuacanthue route
 
-Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
+Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
 

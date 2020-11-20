@@ -22,4 +22,9 @@ class Ward extends Model
     {
         return $this->belongsToMany('App\Products', 'wards_id');
     }
+
+    public function district()
+    {
+        return $this->belongsTo('App\District', 'code');
+    }
 }

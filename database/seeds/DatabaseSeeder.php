@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PostSeeder::class);
         //hieu
         $this->call(ImageSeeder::class);
-
+        $this->call(BrokerSeeder::class);
     }
 }

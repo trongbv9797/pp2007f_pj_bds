@@ -19,16 +19,16 @@ class Products extends Model
 
     public function province()
     {
-        return $this->belongsToMany('App\Province', 'products_id');
+        return $this->belongsTo('App\Province', 'id');
     }
 
     public function district()
     {
-        return $this->belongsToMany('App\District', 'products_id');
+        return $this->belongsTo('App\District', 'id');
     }
 
     public function ward()
     {
-        return $this->belongsToMany('App\Ward', 'products_id');
+        return $this->belongsTo('App\Ward', 'id');
     }
 }

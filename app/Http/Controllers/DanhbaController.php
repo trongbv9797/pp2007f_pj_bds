@@ -15,7 +15,7 @@ class DanhbaController extends Controller
     }
 
     public function index1() {
-        $business = Business::limit(10)->get();
+        $business = Business::limit(3)->get();
         return view ('pages.danhba.doanhnghiep', compact('business'));
     }
 

@@ -201,24 +201,27 @@
                     Các doanh nghiệp, công ty bất động sản hàng đầu tại Việt Nam
                 </h1>
                     <div class="list-company">
-                    @foreach ($business as $business)
                             <h2><a title="Ch&#x1EE7; &#x111;&#x1EA7;u t&#x1B0;" href="ct-dau-tu-du-an">Ch&#x1EE7; &#x111;&#x1EA7;u t&#x1B0;</a></h2>
-                            <ul>
+                            <ul>                          
+                            @foreach ($business as $business)
                                     <li>
                                         <div class="parentitem">
                                             <a class="verticalbox" href="{!! route ('singlepost2',$business->id) !!}">
                                                 <img class="img childbox" src="https://file4.batdongsan.com.vn/2020/04/22/PGsxuI1y/20200422111005-0350.jpg" alt="C&#xD4;NG TY CP&#x110;T PH&#xDA; C&#x1AF;&#x1EDC;NG KI&#xCA;N GIANG">
                                             </a>
                                         </div>
+                                        
                                         <h3 class="ver"><strong><a title="C&#xD4;NG TY CP&#x110;T PH&#xDA; C&#x1AF;&#x1EDC;NG KI&#xCA;N GIANG" href="{!! route ('singlepost2',$business->id) !!}">C&#xD4;NG TY CP&#x110;T PH&#xDA; C&#x1AF;&#x1EDC;NG KI&#xCA;N GIANG</a></strong></h3>
                                     </li>
+                                    @endforeach
+
                                     <li>
                                         <div class="parentitem">
-                                            <a class="verticalbox" href="/dau-tu-du-an-hai-an-hp/cong-ty-cp-tap-doan-dau-tu-sao-do-ep2810">
+                                            <a class="verticalbox" href="{!! route ('singlepost2',$business->id) !!}">
                                                 <img class="img childbox" src="https://file4.batdongsan.com.vn/2020/09/17/hmcVYWuR/20200917171901-d1c5.jpg" alt="C&#xF4;ng ty CP T&#x1EAD;p &#x111;o&#xE0;n &#x110;&#x1EA7;u t&#x1B0; Sao &#x110;&#x1ECF;">
                                             </a>
                                         </div>
-                                        <h3 class="ver"><strong><a title="C&#xF4;ng ty CP T&#x1EAD;p &#x111;o&#xE0;n &#x110;&#x1EA7;u t&#x1B0; Sao &#x110;&#x1ECF;" href="/dau-tu-du-an-hai-an-hp/cong-ty-cp-tap-doan-dau-tu-sao-do-ep2810">C&#xF4;ng ty CP T&#x1EAD;p &#x111;o&#xE0;n &#x110;&#x1EA7;u t&#x1B0; Sao &#x110;&#x1ECF;</a></strong></h3>
+                                        <h3 class="ver"><strong><a title="C&#xF4;ng ty CP T&#x1EAD;p &#x111;o&#xE0;n &#x110;&#x1EA7;u t&#x1B0; Sao &#x110;&#x1ECF;" href="{!! route ('singlepost2',$business->id) !!}">C&#xF4;ng ty CP T&#x1EAD;p &#x111;o&#xE0;n &#x110;&#x1EA7;u t&#x1B0; Sao &#x110;&#x1ECF;</a></strong></h3>
                                     </li>
                                     <li>
                                         <div class="parentitem">
@@ -236,8 +239,9 @@
                                         </div>
                                         <h3 class="ver"><strong><a title="C&#xF4;ng ty CP B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n An Ph&#xE1;t" href="/dau-tu-du-an-thu-duc/cong-ty-cp-bat-dong-san-an-phat-ep2786">C&#xF4;ng ty CP B&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n An Ph&#xE1;t</a></strong></h3>
                                     </li>
+                                   
                             </ul>
-                            @endforeach
+                           
                             <div class="clear separable"></div>
                             <h2><a title="Thi c&#xF4;ng x&#xE2;y d&#x1EF1;ng" href="ct-thi-cong-xay-dung">Thi c&#xF4;ng x&#xE2;y d&#x1EF1;ng</a></h2>
                             <ul>

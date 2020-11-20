@@ -31,6 +31,7 @@ route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTan
 
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
+Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost2');
 
 
 //TintucController

@@ -13,14 +13,14 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UserSeeder::class);
 
-        $this->call(DistrictSeeder::class);
+        
         // trong
         $this->call(DistrictSeeder::class);
         $this->call(ProvinceSeeder::class);
         $this->call(WardSeeder::class);
         //tai anh
         $this->call(ProductSeeder::class);
-        // //viet
+        //viet
         $this->call(CategorySeeder::class);
         $this->call(PostSeeder::class);
         $this->call(BuyerSellerAreaSeeder::class);
@@ -29,15 +29,12 @@ class DatabaseSeeder extends Seeder
         $this->call(ImageDemoSeeder::class);
         $this->call(BuyerSellerSeeder::class);
         
-        
-
-        // //hieu
+        //hieu
         $this->call(ImageSeeder::class);
         $this->call(BrokerSeeder::class);
 
         //Huy
         $this->call(MenuCategorySeeder::class);
-        //huy
         $this->call(ArticleSeeder::class);
 
 

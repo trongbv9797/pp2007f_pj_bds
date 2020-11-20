@@ -13,10 +13,8 @@ class BuyerSellerController extends Controller
         // $buyerSellers = BuyerSeller::all()->buyersellerarea();
         // dd($buyerSellers);
         // $buyerSellers=ImageDemo::all();
-
         
         $buyerSellers=BuyerSeller::with(['imagedemo','districts','BuyerSellerArea'])->get();
-
 
         return view ('pages.canmuacanthue.index',compact('buyerSellers'));
     }

@@ -21,14 +21,4 @@ class District extends Model
     {
         return $this->hasMany('App\Ward', 'parent_code');
     }
-
-    public function province()
-    { 
-        return $this->belongsTo('App\Province', 'code');
-    }
-
-    public function wards()
-    {
-        return $this->hasMany('App\Ward', 'parent_code');
-    }
 }

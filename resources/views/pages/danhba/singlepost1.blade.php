@@ -1,48 +1,31 @@
+@foreach ($brokers as $brokers)
 @extends('layouts.master')
 
-@section('title','CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL | Công ty môi giới')
-
+@section('title', )
+{!! $brokers->name !!}
+@endsection
 @section('styles')
 <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011110519.msvbds.FrontEnd.min.css" />
 <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/Broker/broker.min.css" media="all">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
-
+<style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+<style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style>
+<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011121057.msvbds.FrontEnd.min.css" />
+<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/lib/microtip/microtip.min.css" />
+<link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/Product/filestatic.ver202011121057.msvbds.BrokerDetailsPage.min.css">
+<link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
+@endsection
 @section('content')
-  
-<!DOCTYPE html>
-
     <script>
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({'event': 'pageInfo','cat': '0','dtk': 'eb','ite': '2825','pag': '232','cit': 'null','dis':'null','war':'null','str':'null','pro':'null','pri':'null','mip':'null','map':'null','are':'null','mia':'null','maa':'null','dir':'null','rom':'null'});
     </script>
 
-    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="audience" content="general" />
-    <meta name="resource-type" content="document" />
-    <meta name="abstract" content="Thông tin nhà đất Việt Nam" />
-    <meta name="classification" content="Bất động sản Việt Nam" />
-    <meta name="area" content="Nhà đất và bất động sản" />
-    <meta name="placename" content="Việt Nam" />
-    <meta name="author" content="Batdongsan.com.vn" />
-    <meta name="copyright" content="©2007 Batdongsan.com.vn" />
-    <meta name="owner" content="Batdongsan.com.vn" />
-    <meta name="generator" content="Công ty Cổ phần PropertyGuru Việt Nam" />
-    <meta name="distribution" content="Global" />
-    <meta name='revisit-after' content='1 days' />
-            <meta name="robots" content="index,follow" />
-
-    <meta name="custom-apple-itunes-app" content="app-id=866492094" />
-    <meta name ='keywords' content = 'Công, ty, chúng, tôi, hoạt, động, trong, lĩnh, vực' />
-<meta name ='description' content = 'Công ty chúng tôi hoạt động trong lĩnh vực dịch vụ môi giới Bất động sản cho thuê được điều hành bởi đội ngũ dày dặn kinh nghiệm trong nhiề' />
-<title>CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL | Công ty môi giới</title>
-<meta name ='googlebot-news' content = 'noindex' />
-
+    
+    
         
     
-        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011121057.msvbds.FrontEnd.min.css" />
-        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/lib/microtip/microtip.min.css" />
-        <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/Product/filestatic.ver202011121057.msvbds.BrokerDetailsPage.min.css">
+        
     
 
     <div class="form-content">
@@ -66,51 +49,6 @@
                 </div>
             </div>
         </div>
-        <header class="full-menu">
-            <div class="homemain">
-                <div class="naga" id="naga">
-                    <a href="javascript:void(0)" id="nav_back" rel="nofollow" title="Danh mục" class="div-panel st-panel fleft">
-                        <span class="img-naga-l">
-                            <img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_caret_left_1.svg" alt="back">
-                        </span>
-                    </a>
-                    <div class="text-center header-logo">
-                        <a href="/" title="Nhà đất" rel="nofollow">
-                            <img src="https://staticfile.batdongsan.com.vn/images/newhome/logo_wap1.svg" onerror="this.src='https://staticfile.batdongsan.com.vn/images/newhome/logo-wap.png'" class="logo-wap" alt="logo batdongsan.com.vn" title="Batdongsan.com.vn">
-                        </a>
-                    </div>
-                    <a href="/tin-da-luu" id="saveList" rel="nofollow" title="Danh mục" class="div-panel st-panel fright">
-                        <span class="img-naga-r">
-                            <img class=" lazyloaded" ignore-lazy-loading data-src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_savelist.svg" src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_savelist.svg">
-                            <span class="img-naga-notification hide">
-                                0
-                            </span>
-                        </span>
-                    </a>
-                    <a href="javascript:void(0)" id="nav_list" rel="nofollow" title="Danh mục" class="div-panel st-panel fright in">
-                        <span class="img-naga-r">
-                            <img src="https://staticfile.batdongsan.com.vn/images/mobile/ic_hamburger_menu_1.svg" alt="menu">                            
-                        </span>
-                    </a>
-                </div>
-            </div>            
-            <div class="top-search">
-                <div class="homemain home-search">
-                    <div class="search-input-wrap">
-                    </div>
-                </div>
-            </div>
-            <div class="menu-bar pushmenu pushmenu-right">
-                
-<div class="control-menu">
-    
-
-                
-                    <div class="clear">&nbsp;</div>
-                </div>
-            </div>
-            <div class="bg-pushmenu"></div>
-        </header>
         
         <div class="popupMarking  save" style="display: none">
             <img src="https://staticfile.batdongsan.com.vn/images/mobile/icons/24x24/filled/ic_unsave.svg">
@@ -1805,3 +1743,4 @@
 
     
 @endsection
+@endforeach

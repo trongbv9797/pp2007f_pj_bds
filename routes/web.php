@@ -30,6 +30,7 @@ route::get('/vi-tri-ha-tang', 'ProjectController@viTriHaTang')->name('viTriHaTan
 // DanhbaController index. 
 
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
+Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
 
 
 //TintucController
@@ -74,8 +75,8 @@ Route::get('/cho-thue-loai-bat-dong-san-khac', 'NhadatchothueController@cho_thue
 
 
 
-//singlepost (chưa sửa được redirect)
-Route::get('/nha-moi-gioi cong-ty-tnhh-dich-vu-bds-giga-real', 'DanhbaController@singlepost1');
+
+Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 
 //Doanh nghiep
 Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');
@@ -85,7 +86,7 @@ Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
 
 //Canmuacanthue route
 
-Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
+Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
 

@@ -224,13 +224,13 @@
                         <a data-value="1" class="selected" style="">Công ty môi giới</a>
                         <a data-value="0" class="" style="">Cá nhân môi giới</a>
                     </div>
-
                     <div id="contentPage">
+                    @foreach ($brokers as $brokers)
                             <div class="borderpad10 mar-bot broker-list">
                                 <div class="ttmgl">
                                     <div class="avamg">
                                         <div>
-                                            <a href="/cho-thue-nha-mat-pho/cong-ty-tnhh-dich-vu-bds-giga-real-eb2825">
+                                            <a href="{!! route ('singlepost1',$brokers->id) !!}">
                                                 <img src="https://file4.batdongsan.com.vn/resize/200x200/2020/11/03/PGsxuI1y/20201103162145-4ff8.jpg" alt="C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL">
                                             </a>
                                         </div>
@@ -238,9 +238,9 @@
                                     <div class="ttmg">
                                         <div class="tenmg">
                                             <h3>
-                                                <a title="C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL" href="/cho-thue-nha-mat-pho/cong-ty-tnhh-dich-vu-bds-giga-real-eb2825">C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL</a>
+                                                <a title="{!! $brokers->name !!}" href="{!! route ('singlepost1',$brokers->id) !!}">{!! $brokers->name !!}</a>
                                             </h3>
-                                                <div class="broker-address">1/12 &#x110;&#x1B0;&#x1EDD;ng S&#x1ED1; 6, Ph&#x1B0;&#x1EDD;ng 5, G&#xF2; V&#x1EA5;p, H&#x1ED3; Ch&#xED; Minh, Vi&#x1EC7;t Nam</div>
+                                                <div class="broker-address">{!! $brokers->name !!}</div>
                                             <div>
                                                     <span class="broker-mobile">0769969928</span>
                                                                                             </div>
@@ -262,6 +262,7 @@
                                 <div class="clear10">
                                 </div>
                             </div>
+                            @endforeach
                             <div class="borderpad10 mar-bot broker-list">
                                 <div class="ttmgl">
                                     <div class="avamg">

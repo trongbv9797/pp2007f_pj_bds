@@ -322,17 +322,17 @@
         <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
             <ul class="swiper-wrapper list-unstyled row" style="transform: translate3d(0px, 0px, 0px);">
                                                                         <li class="swiper-slide swiper-slide-active" data-filter="image" data-index="0" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image: url('{!! $products->link !!}'); cursor: pointer;">
+                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image: url(''); cursor: pointer;">
                             </a>
                             <div class="ioverlay" style="display: none;">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="{!! $products->link !!}" is-lazy-image="true" lazy-id="0">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="" is-lazy-image="true" lazy-id="0">
                             </div>
                         </li>
                         <li class="swiper-slide swiper-slide-next" data-filter="image" data-index="1" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url('{!! $products->link !!}')">
+                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url('')">
                             </a>
                             <div class="ioverlay">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="{!! $products->link !!}" src="{!! $products->link !!}" src-lazy="{!! $products->link !!}" is-lazy-image="true" lazy-id="1">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="" src="" src-lazy="" is-lazy-image="true" lazy-id="1">
                             </div>
                         </li>
                         <li class="swiper-slide" data-filter="image" data-index="2" style="width: 840px; margin-right: 10px;">

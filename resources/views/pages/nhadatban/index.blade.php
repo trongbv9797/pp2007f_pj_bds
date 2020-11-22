@@ -376,7 +376,7 @@
                             <span class="dot">·</span>
                             <span class="area">{!! $products->area !!} m²</span>
                                                     <span class="dot">·</span>
-                        <span class="location">{!! $products->address !!}</span>
+                        <span class="location">{!! $products->path_with_type !!}</span>
                     </div>
                     <div class="product-content">
                         {!! $products->content !!}

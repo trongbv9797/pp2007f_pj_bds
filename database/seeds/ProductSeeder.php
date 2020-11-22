@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
         'type' => rand(0,2),
         'price' => rand(1, 10),
         'area' => rand(20, 200),
-        'image_id' => rand(1, 1000),
+        'image_id' => rand(1, 50),
         'slug' => rand(1, 100000),
         'number_of_bedroom' => rand(1, 5),
         'number_of_restroom' => rand(1, 3),

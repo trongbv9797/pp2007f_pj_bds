@@ -359,7 +359,7 @@
             <div class="vip0 product-item clearfix" uid="649852">
                 <div class="product-image ">
                      <a class="product-avatar" href="{!! Route('nhadatban_single_post', $products->id) !!}" title="{!! $products->title !!}" onclick="">
-                        <img class="product-avatar-img" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="" is-lazy-image="true" lazy-id="0">
+                        <img class="product-avatar-img" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="{!! $products->link !!}" is-lazy-image="true" lazy-id="0">
                     </a>
                     <span class="product-feature">
                                                                     </span>
@@ -376,7 +376,7 @@
                             <span class="dot">·</span>
                             <span class="area">{!! $products->area !!} m²</span>
                                                     <span class="dot">·</span>
-                        <span class="location">{!! $products->address !!}</span>
+                        <span class="location">{!! $products->path_with_type !!}</span>
                     </div>
                     <div class="product-content">
                         {!! $products->content !!}

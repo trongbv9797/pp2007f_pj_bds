@@ -322,24 +322,24 @@
         <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
             <ul class="swiper-wrapper list-unstyled row" style="transform: translate3d(0px, 0px, 0px);">
                                                                         <li class="swiper-slide swiper-slide-active" data-filter="image" data-index="0" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image: url(''); cursor: pointer;">
+                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image: url('{!! $products->link !!}'); cursor: pointer;">
                             </a>
                             <div class="ioverlay" style="display: none;">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="" is-lazy-image="true" lazy-id="0">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="{!! $products->link !!}" is-lazy-image="true" lazy-id="0">
                             </div>
                         </li>
                         <li class="swiper-slide swiper-slide-next" data-filter="image" data-index="1" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url('')">
+                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url('{!! $products->link !!}')">
                             </a>
                             <div class="ioverlay">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="" src="" src-lazy="" is-lazy-image="true" lazy-id="1">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="" src="{!! $products->link !!}" src-lazy="" is-lazy-image="true" lazy-id="1">
                             </div>
                         </li>
                         <li class="swiper-slide" data-filter="image" data-index="2" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url(&#39;https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg&#39;)">
+                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" style="background-image:url('{!! $products->link !!}')">
                             </a>
                             <div class="ioverlay">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="2">
+                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="{!! $products->link !!}" src-lazy="https://file4.batdongsan.com.vn/resize/745x510/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="2">
                             </div>
                         </li>
             </ul>
@@ -500,7 +500,7 @@
 <div class="description" id="product-detail-web" uid="649852">
     <h1 class="tile-product"> {!! $products->title !!}</h1>
     <div class="short-detail">
-        Dự án Biên Hòa New City, Phố Nam Cao, Phường Phước Tân, Biên Hòa, Đồng Nai
+        {!! $products->path_with_type !!}
     </div>
     <div class="divide">&nbsp;</div>
     <div class="short-detail-wrap">
@@ -538,15 +538,12 @@
                 <div class="gradient">&nbsp;</div>
                 <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
             </div>
-            <div class="box-view-less hidden" style="display: block;">
-                <div class="view-less">Thu gọn<img src="./assets/image/ic_caret_up.svg"></div>
-            </div>
         </div>
         <div class="detail-2 pad-16">
             <span class="title-detail">Đặc điểm bất động sản</span>
             <div class="box-round-grey3">
                 <div class="row-1"><span class="r1">Loại tin đăng:</span><span class="r2">{!! $products->name !!}</span></div>
-                <div class="row-1"><span class="r1">Địa chỉ:</span><span class="r2">{!! $products->address !!}</span></div>
+                <div class="row-1"><span class="r1">Địa chỉ:</span><span class="r2">{!! $products->address !!} {!! $products->path_with_type !!}</span></div>
                                     <div class="row-1"><span class="r1">Số phòng ngủ:</span><span class="r2">{!! $products->number_of_bedroom !!}</span></div>
                                    <div class="row-1"><span class="r1">Số nhà vệ sinh:</span><span class="r2">{!! $products->number_of_restroom !!}</span></div>
                                    <div class="row-1"><span class="r1">Tầng số:</span><span class="r2">{!! $products->number_of_floor !!}</span></div>

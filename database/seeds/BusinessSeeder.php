@@ -17,7 +17,7 @@ class BusinessSeeder extends Seeder
             'name' => $faker->company,
             'address' => $faker->address,
             'mobile' => 'Đang cập nhật',
-            'mail' => 'info@pckg.com.vn',
+            'mail' => $faker->companyEmail,
             'website' => 'http://www.pckg.com.vn',
             'content' => $faker->paragraph($nbSentences = 40, $variableNbSentences = true),
             'created_at'=>date('Y-m-d H:i:s'),

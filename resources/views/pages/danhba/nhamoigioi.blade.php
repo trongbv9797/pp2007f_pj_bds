@@ -242,7 +242,7 @@
                                             </h3>
                                                 <div class="broker-address">{!! $brokers->name !!}</div>
                                             <div>
-                                                    <span class="broker-mobile">0769969928</span>
+                                                    <span class="broker-mobile">{!! $brokers->mobile !!}</span>
                                                                                             </div>
                                         </div>
                                         <div class="broker-link">
@@ -263,7 +263,7 @@
                                 </div>
                             </div>
                             @endforeach
-                           
+                                
                            
                     </div>
                     <div class="pager-block" style="float: right; margin-right: 5px; margin-top: 5px;">

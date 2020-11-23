@@ -12,7 +12,7 @@ class BrokerSeeder extends Seeder
     public function run()
     {   $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS NGUYỄN LƯƠNG TÀI ANH',
+            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS LÊ DUY HIẾU',
             'address' => '1/12 Đường Số 6, Phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam',
             'mobile' => '0769969928',
             'mail' => 'cskh.gigareal@gmail.com',
@@ -34,7 +34,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS LÊ DUY HIẾU',
+            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS NGUYỄN LƯƠNG TÀI ANH',
             'address' => '1/12 Đường Số 6, Phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam',
             'mobile' => '0769969928',
             'mail' => 'cskh.gigareal@gmail.com',
@@ -45,7 +45,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH ĐẦU TƯ BẤT ĐỘNG SẢN NAM HOÀNG',
+            'name' => 'CÔNG TY TNHH ĐẦU TƯ BẤT ĐỘNG SẢN BÙI VĂN TRỌNG',
             'address' => '125 Bà Triệu, Hà Cầu, Hà Đông, Hà Nội, Việt Nam',
             'mobile' => '0963343833',
             'mail' => 'namnt.nhl@gmail.com',
@@ -56,7 +56,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH BĐS MỸ KIM LAND',
+            'name' => 'CÔNG TY TNHH BĐS NGUYỄN QUANG HUY',
             'address' => '15 đường R Khu đô thị Lakeview city, 697 Đỗ Xuân Hợp, An Phú, Quận 2, Hồ Chí Minh, Việt Nam',
             'mobile' => '0906656667',
             'mail' => ' myk http://mykimland.vn/',
@@ -67,7 +67,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY CỔ PHẦN LEVIN',
+            'name' => 'CÔNG TY CỔ PHẦN NGUYỄN NGỌC SƠN',
             'address' => '47 đường Trần Lựu, An Phú, Quận 2, Hồ Chí Minh, Việt Nam',
             'mobile' => '0905747886',
             'mail' => 'info@levin.vn',
@@ -78,7 +78,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN PAGELAND',
+            'name' => 'CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN PP2007F',
             'address' => '15 đường R Khu đô thị Lakeview city, 697 Đỗ Xuân Hợp, An Phú, Quận 2, Hồ Chí Minh, Việt Nam',
             'mobile' => '0916592969',
             'mail' => 'phamlanhbds@gmail.com',
@@ -89,7 +89,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN VICTORY REAL',
+            'name' => 'CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN AWESOME ACADEMY',
             'address' => '8-10, Nguyễn Bá Tuyển, 12, Tân Bình, Hồ Chí Minh, Việt Nam',
             'mobile' => '0989199898',
             'mail' => 'victoryreal.vn@gmail.com',

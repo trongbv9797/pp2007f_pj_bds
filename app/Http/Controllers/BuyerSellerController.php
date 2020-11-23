@@ -13,10 +13,23 @@ class BuyerSellerController extends Controller
         // $buyerSellers = BuyerSeller::all()->buyersellerarea();
         // dd($buyerSellers);
         // $buyerSellers=ImageDemo::all();
+        $buyersellercost=BuyerSeller::all();
+        $buyerSellers=BuyerSeller::with(['imagedemo','districts','BuyerSellerArea'])->paginate(10);
         
-        $buyerSellers=BuyerSeller::with(['imagedemo','districts','BuyerSellerArea'])->get();
+        // $buyerSellers->imagedemo()->get();
+        // foreach($buyerSellers as $buyerSeller) {
+            
+        //     foreach($buyerSeller->imagedemo as $value) {
 
-        return view ('pages.canmuacanthue.index',compact('buyerSellers'));
+            
+        //     var_dump($value->id).'\n';
+        //     }
+
+
+        // }
+    
+
+        return view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers'));
     }
     public function seller() {
         return view ('pages.canmuacanthue.seller');

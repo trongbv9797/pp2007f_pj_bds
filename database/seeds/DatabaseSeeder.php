@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(BuyerSellerContactSeeder::class);
         $this->call(ImageDemoSeeder::class);
         $this->call(BuyerSellerSeeder::class);
+        $this->call(MenuSeeder::class);
+        
         
         //hieu
         $this->call(ImageSeeder::class);

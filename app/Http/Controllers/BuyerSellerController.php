@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\BuyerSeller;
-use App\BuyerSellerArea;
-use App\ImageDemo;
+use App\Models\BuyerSeller;
+use App\Models\BuyerSellerArea;
+use App\Models\ImageDemo;
 
 class BuyerSellerController extends Controller
 {

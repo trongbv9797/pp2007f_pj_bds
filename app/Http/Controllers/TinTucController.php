@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Article;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class TintucController extends Controller
+class TinTucController extends Controller
 {
     //
     // public function index(){

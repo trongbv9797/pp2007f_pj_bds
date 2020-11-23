@@ -12,7 +12,7 @@ class BrokerSeeder extends Seeder
     public function run()
     {   $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL',
+            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS NGUYỄN LƯƠNG TÀI ANH',
             'address' => '1/12 Đường Số 6, Phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam',
             'mobile' => '0769969928',
             'mail' => 'cskh.gigareal@gmail.com',
@@ -23,7 +23,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY CP - TM ĐẦU TƯ BĐS VESTA',
+            'name' => 'CÔNG TY CP - TM ĐẦU TƯ BĐS KHUẤT ĐẠI VIỆT',
             'address' => '485 Lê Văn Quới, Bình Trị Đông A, Bình Tân, Hồ Chí Minh, Việt Nam',
             'mobile' => '0911916191',
             'mail' => 'vestalands@gmail.com',
@@ -34,7 +34,7 @@ class BrokerSeeder extends Seeder
         ]);
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
-            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL',
+            'name' => 'CÔNG TY TNHH DỊCH VỤ BĐS LÊ DUY HIẾU',
             'address' => '1/12 Đường Số 6, Phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam',
             'mobile' => '0769969928',
             'mail' => 'cskh.gigareal@gmail.com',

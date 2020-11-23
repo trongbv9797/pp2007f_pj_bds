@@ -13,9 +13,9 @@ class BusinessSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 20; $i++){   
-        DB::table('business')->insert([
-            'name' => 'CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG',
-            'address' => 'Tòa nhà số 1, đường Hà Huy Tập, khu đô thị Phú Cường, An Hòa, Rạch Giá, Kiên Giang, Việt Nam',
+        DB::table('businesses')->insert([
+            'name' => $faker->company,
+            'address' => $faker->address,
             'mobile' => 'Đang cập nhật',
             'mail' => 'info@pckg.com.vn',
             'website' => 'http://www.pckg.com.vn',

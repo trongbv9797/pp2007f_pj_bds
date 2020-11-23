@@ -19,7 +19,7 @@ class ImageDemoSeeder extends Seeder
                 [
                 'name'=>$faker->sha1,
                 'buyer_seller_id'=>rand(1,1000),
-                'link'=>$faker->imageUrl($width = 640, $height = 480),
+                'link'=>$faker->imageUrl($width = 640, $height = 480, 'cats'),
                 
                 ]
             );

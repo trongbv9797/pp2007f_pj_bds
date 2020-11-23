@@ -2,6 +2,12 @@
 @section('title', 'Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam')
 @section('style-libraries')
     <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
+    <style>
+        ul li{
+            display: inline;
+            margin-right: 20px;
+        }
+    </style>
 @endsection
 @section('content')
     <div class="site-center">
@@ -56,7 +62,7 @@
                                     Nhà đất Cần mua - Cần thuê tại Việt Nam
                                 </h1>
                                 <div class="Footer">
-                                    Có <span class="greencolor"><strong>1,375</strong></span> bất động sản.
+                                    Có <span class="greencolor"><strong>{{ $buyersellercost->count() }}</strong></span> bất động sản.
                                 </div>
                             </div>
                             <div class="Main">
@@ -78,21 +84,27 @@
                                             title="Cần mua đất khu vực Mỹ Phước 1 - 2 - 3 - 4, TPM Bình Dương, Vsip 1 - 2, tdm, mua nhanh, giá cao">{{ $buyerSeller->title }}</a>
                                     </div>
                                     <div class="p-main">
+                                        @foreach ($buyerSeller->imagedemo as $item)
                                         <div class="p-main-image-crop">
                                             <a
                                                 href="https://batdongsan.com.vn/mua-dat-nen-du-an-ben-cat-bd/can-mua-dat-khu-vuc-my-phuoc-1-2-3-4-tpm-binh-duong-vsip-1-2-tdm-mua-nhanh-gia-cao-ad104597">
+                                                
+                                                    
+                                                
                                                 <img class="product-avatar-img"
-                                                    src="./assets/image/20201021134221-29c0_wm.jpg"
+                                                    src="{{ $item->link }}"
                                                     alt="Cần mua đất khu vực Mỹ Phước 1 - 2 - 3 - 4, TPM Bình Dương, Vsip 1 - 2, tdm, mua nhanh, giá cao">
                                             </a>
+                                            
                                         </div>
+                                        @endforeach
                                         <div class="p-content pos-relative">
                                             <div class="p-main-tex mar-bot-8">{{ $buyerSeller->content }}</div>
                                             <div>
                                                 <div class="floatleft">
                                                     Giá: <span class="product-price">{{ $buyerSeller->price }} tỷ</span>&nbsp;
                                                     Diện tích: <span class="product-area">{{ $buyerSeller->buyersellerarea->name }}</span><br>
-                                                    Quận/Huyện: <span class="product-city-dist"></span>
+                                                    Quận/Huyện: <span class="product-city-dist">{{ $buyerSeller->districts->name }}</span>
                                                     <span class="inline-blk">
                                                         Tỉnh/TP: <span class="product-city-dist">{{ $buyerSeller->districts->path }}</span>
                                                     </span>
@@ -114,7 +126,9 @@
 
 
                             <div class="clear"></div>
-                            <div class="separable"></div>
+                            <div class="separable">
+                                {{ $buyerSellers->links() }}
+                            </div>
                             <div>
                                 <h3></h3>
                             </div>
@@ -128,32 +142,7 @@
                                 <br>
                             </div>
                             <div class="margit5">
-                                <div class="tc-tit-bottom">
-                                    <div class="ks-pagination-links" align="center" stype="float: right">
-                                        <a pid="1" href="https://batdongsan.com.vn/can-mua-can-thue">
-                                            <div class="style-pager-row-selected">1</div>
-                                        </a>
-                                        <a pid="2" href="https://batdongsan.com.vn/can-mua-can-thue/p2">
-                                            <div class="">2</div>
-                                        </a>
-                                        <a pid="3" href="https://batdongsan.com.vn/can-mua-can-thue/p3">
-                                            <div class="">3</div>
-                                        </a>
-                                        <a pid="4" href="https://batdongsan.com.vn/can-mua-can-thue/p4">
-                                            <div class="">4</div>
-                                        </a>
-                                        <a pid="5" href="https://batdongsan.com.vn/can-mua-can-thue/p5">
-                                            <div class="">5</div>
-                                        </a>
-                                        <a pid="2" href="https://batdongsan.com.vn/can-mua-can-thue/p2">
-                                            <div>...</div>
-                                        </a>
-                                        <a pid="69" href="https://batdongsan.com.vn/can-mua-can-thue/p69">
-                                            <div>&gt;</div>
-                                        </a>
-                                    </div>
-
-                                </div>
+                                        
                             </div>
 
                         </div>

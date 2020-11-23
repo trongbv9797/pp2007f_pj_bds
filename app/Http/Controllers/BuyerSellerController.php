@@ -9,7 +9,7 @@ use App\ImageDemo;
 
 class BuyerSellerController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         // $buyerSellers = BuyerSeller::all()->buyersellerarea();
         // dd($buyerSellers);
         // $buyerSellers=ImageDemo::all();
@@ -28,7 +28,9 @@ class BuyerSellerController extends Controller
 
         // }
     
-
+        if ($request->ajax()) {
+            return view('pages.canmuacanthue.presult', compact('buyersellercost','buyerSellers'));
+        }
         return view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers'));
     }
     public function seller() {

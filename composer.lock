@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "949777168604ee2f5e931f02ca19c15c",
@@ -10,7 +10,7 @@
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
             "source": {
-                "type": "git",  
+                "type": "git",
                 "url": "https://github.com/asm89/stack-cors.git",
                 "reference": "8d8f88b3b3830916be94292c1fbce84433efb1aa"
             },
@@ -2544,16 +2544,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v5.2.0-RC1",
+            "version": "v5.2.0-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "ce4bdd7a46d10298c23b2af8997b242de2a6dc55"
+                "reference": "78aaf94ba596c7f6988f284371fdbcd954dc9c12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/ce4bdd7a46d10298c23b2af8997b242de2a6dc55",
-                "reference": "ce4bdd7a46d10298c23b2af8997b242de2a6dc55",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/78aaf94ba596c7f6988f284371fdbcd954dc9c12",
+                "reference": "78aaf94ba596c7f6988f284371fdbcd954dc9c12",
                 "shasum": ""
             },
             "require": {
@@ -2585,6 +2585,7 @@
                 "symfony/config": "^4.4|^5.0",
                 "symfony/dependency-injection": "^4.4|^5.0",
                 "symfony/filesystem": "^4.4|^5.0",
+                "symfony/http-kernel": "^4.4|^5.0",
                 "symfony/messenger": "^4.4|^5.0",
                 "symfony/var-dumper": "^4.4|^5.0"
             },
@@ -2617,7 +2618,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2020-11-02T08:16:52+00:00"
+            "time": "2020-11-18T09:58:20+00:00"
         },
         {
             "name": "symfony/cache-contracts",

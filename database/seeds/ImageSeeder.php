@@ -19,7 +19,7 @@ class ImageSeeder extends Seeder
             [
             'link'=>$faker->imageUrl($width = 640, $height = 480),
             'name'=>Str::random(10),
-            'products_id' => rand(1, 50),
+            'products_id' => $faker->unique()->numberBetween($min = 1, $max = 50),
             'created_at'=>date('Y-m-d H:i:s'),
             'updated_at'=>date('Y-m-d H:i:s'),
             ]

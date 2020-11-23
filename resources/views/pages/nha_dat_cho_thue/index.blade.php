@@ -372,7 +372,7 @@
                         </a>
                     </h3>
                     <div class="product-info">
-                        <span class="price">{!! $products->price !!} tỷ</span>
+                        <span class="price">{!! $products->price !!} triệu/tháng</span>
                             <span class="dot">·</span>
                             <span class="area">{!! $products->area !!} m²</span>
                                                     <span class="dot">·</span>

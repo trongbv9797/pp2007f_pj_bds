@@ -10,12 +10,12 @@ class DanhbaController extends Controller
 {
     //
     public function index() {
-        $brokers = Broker::limit(10)->get();
+        $brokers = Broker::limit(15)->get();
         return view("pages.danhba.nhamoigioi", compact('brokers'));
     }
 
     public function index1() {
-        $business = Business::limit(10)->get();
+        $business = Business::limit(18)->get();
         return view ('pages.danhba.doanhnghiep', compact('business'));
     }
 

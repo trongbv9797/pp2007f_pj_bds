@@ -41,9 +41,13 @@ class TintucController extends Controller
     }
 
     //Singlepost
+
+    
+
     public function articles($id) {
         $articles = Article::where('id', '=', $id)->get();
-        return view("pages.tintucbds.singlepost", compact('articles'));
+        $newarticles = Article::orderBy('id', 'desc')->limit(5)->get();
+        return view("pages.tintucbds.singlepost", compact('articles','newarticles'));
     }
 
     public function index() {

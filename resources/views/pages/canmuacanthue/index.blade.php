@@ -2,6 +2,13 @@
 @section('title', 'Nhà đất cho thuê, cho thuê nhà Việt Nam | Nhà đất cho thuê, cho thuê nhà tại Việt Nam')
 @section('style-libraries')
     <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
+    <style>
+        ul.pagination li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+    </style>
 @endsection
 @section('content')
     <div class="site-center">
@@ -10,7 +17,7 @@
         <input type="hidden" value="1" id="activeTxtSelect">
         <div id="MiddleSubMenu">
             <div class="home-top-search" style="padding-bottom: 10px !important;">
-                <div class="home-top-search-keyword" >
+                <div class="home-top-search-keyword">
                     <input type="text" placeholder="Nhập từ khóa để tìm theo cụm từ" id="txt1" class="txtKeyword">
                 </div>
                 <div class="advance-select-box" id="home-top-search">
@@ -56,7 +63,8 @@
                                     Nhà đất Cần mua - Cần thuê tại Việt Nam
                                 </h1>
                                 <div class="Footer">
-                                    Có <span class="greencolor"><strong>1,375</strong></span> bất động sản.
+                                    Có <span class="greencolor"><strong>{{ $buyersellercost->count() }}</strong></span> bất
+                                    động sản.
                                 </div>
                             </div>
                             <div class="Main">
@@ -69,52 +77,11 @@
                                     </div>
                                     <div class="Right"></div>
                                 </div>
-                                @foreach ( $buyerSellers as $buyerSeller)
-                                    
-                                
-                                <div class="vip1" uid="217282">
-                                    <div class="p-title">
-                                        <a href="https://batdongsan.com.vn/mua-dat-nen-du-an-ben-cat-bd/can-mua-dat-khu-vuc-my-phuoc-1-2-3-4-tpm-binh-duong-vsip-1-2-tdm-mua-nhanh-gia-cao-ad104597"
-                                            title="Cần mua đất khu vực Mỹ Phước 1 - 2 - 3 - 4, TPM Bình Dương, Vsip 1 - 2, tdm, mua nhanh, giá cao">{{ $buyerSeller->title }}</a>
-                                    </div>
-                                    <div class="p-main">
-                                        <div class="p-main-image-crop">
-                                            <a
-                                                href="https://batdongsan.com.vn/mua-dat-nen-du-an-ben-cat-bd/can-mua-dat-khu-vuc-my-phuoc-1-2-3-4-tpm-binh-duong-vsip-1-2-tdm-mua-nhanh-gia-cao-ad104597">
-                                                <img class="product-avatar-img"
-                                                    src="./assets/image/20201021134221-29c0_wm.jpg"
-                                                    alt="Cần mua đất khu vực Mỹ Phước 1 - 2 - 3 - 4, TPM Bình Dương, Vsip 1 - 2, tdm, mua nhanh, giá cao">
-                                            </a>
-                                        </div>
-                                        <div class="p-content pos-relative">
-                                            <div class="p-main-tex mar-bot-8">{{ $buyerSeller->content }}</div>
-                                            <div>
-                                                <div class="floatleft">
-                                                    Giá: <span class="product-price">{{ $buyerSeller->price }} tỷ</span>&nbsp;
-                                                    Diện tích: <span class="product-area">{{ $buyerSeller->buyersellerarea->name }}</span><br>
-                                                    Quận/Huyện: <span class="product-city-dist"></span>
-                                                    <span class="inline-blk">
-                                                        Tỉnh/TP: <span class="product-city-dist">{{ $buyerSeller->districts->path }}</span>
-                                                    </span>
-                                                </div>
-                                                <div class="floatright mar-right-10 bot-right-abs">
-                                                    {{ $buyerSeller->start }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clear10"></div>
-                                    </div>
+                                <div class="tag_container">
+                                    @include('pages.canmuacanthue.presult')
                                 </div>
-                                @endforeach
-
-
-                                <div class="clear"></div>
                             </div>
-                            
 
-
-                            <div class="clear"></div>
-                            <div class="separable"></div>
                             <div>
                                 <h3></h3>
                             </div>
@@ -128,32 +95,7 @@
                                 <br>
                             </div>
                             <div class="margit5">
-                                <div class="tc-tit-bottom">
-                                    <div class="ks-pagination-links" align="center" stype="float: right">
-                                        <a pid="1" href="https://batdongsan.com.vn/can-mua-can-thue">
-                                            <div class="style-pager-row-selected">1</div>
-                                        </a>
-                                        <a pid="2" href="https://batdongsan.com.vn/can-mua-can-thue/p2">
-                                            <div class="">2</div>
-                                        </a>
-                                        <a pid="3" href="https://batdongsan.com.vn/can-mua-can-thue/p3">
-                                            <div class="">3</div>
-                                        </a>
-                                        <a pid="4" href="https://batdongsan.com.vn/can-mua-can-thue/p4">
-                                            <div class="">4</div>
-                                        </a>
-                                        <a pid="5" href="https://batdongsan.com.vn/can-mua-can-thue/p5">
-                                            <div class="">5</div>
-                                        </a>
-                                        <a pid="2" href="https://batdongsan.com.vn/can-mua-can-thue/p2">
-                                            <div>...</div>
-                                        </a>
-                                        <a pid="69" href="https://batdongsan.com.vn/can-mua-can-thue/p69">
-                                            <div>&gt;</div>
-                                        </a>
-                                    </div>
 
-                                </div>
                             </div>
 
                         </div>
@@ -656,176 +598,252 @@
 @endsection
 
 @section('scripts')
-<div class="modal fade" id="dialogPopup" role="dialog">
-    <div class="nomodal"></div>
-    <div class="modal-dialog">
-        <div class="modal-content ">
+
+    <div class="modal fade" id="dialogPopup" role="dialog">
+        <div class="nomodal"></div>
+        <div class="modal-dialog">
+            <div class="modal-content ">
+            </div>
         </div>
     </div>
-</div>
 
-<div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
-<script type='text/javascript'> var bannerContext={"CateId":null,"PageId":575,"CityCode":null,"DistrictId":null,"CurrentPage":575};</script>
+    <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
+    <script type='text/javascript'>
+        var bannerContext = {
+            "CateId": null,
+            "PageId": 575,
+            "CityCode": null,
+            "DistrictId": null,
+            "CurrentPage": 575
+        };
 
-<div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
-<div class="hide" id="domainWeb" data-value="https://batdongsan.com.vn"></div>
-<div class="hide" id="getBannerUrl" data-value="/microservice-architecture-router/Systems/Banner/GetBanners"></div>
-<div class="hide" id="domainStatistic" data-value="https://statistic.batdongsan.com.vn"></div>
-<div class="popup-content ">
-</div>
-<div class="lg-backdrop in" id="dialog-backdrop" style="transition-duration: 150ms;display: none;" onclick="account.CloseAccountPopup()"></div>
-<div id="gototop" title="Go to top"></div>
-</div>
-<div style="display: none"
- class="searching-histories-configs"
- max-searching-histories-length="20"
- sync-time-searching-histories="5"
- sync-searching-histories-url="/Product/ProductSearch/SyncSearchingHistories"
- remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
-</div>
+    </script>
+
+    <div class="hide" id="domainUserInfo" data-value="https://batdongsan.com.vn"></div>
+    <div class="hide" id="domainWeb" data-value="https://batdongsan.com.vn"></div>
+    <div class="hide" id="getBannerUrl" data-value="/microservice-architecture-router/Systems/Banner/GetBanners"></div>
+    <div class="hide" id="domainStatistic" data-value="https://statistic.batdongsan.com.vn"></div>
+    <div class="popup-content ">
+    </div>
+    <div class="lg-backdrop in" id="dialog-backdrop" style="transition-duration: 150ms;display: none;"
+        onclick="account.CloseAccountPopup()"></div>
+    <div id="gototop" title="Go to top"></div>
+    </div>
+    <div style="display: none" class="searching-histories-configs" max-searching-histories-length="20"
+        sync-time-searching-histories="5" sync-searching-histories-url="/Product/ProductSearch/SyncSearchingHistories"
+        remove-searching-histories-url="/Product/ProductSearch/RemoveSearchingHistory">
+    </div>
 
 
-    <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121057.msvbds.FrontEnd.Common.min.js"></script>
+    <script src="https://staticfile.batdongsan.com.vn/js/Common/filestatic.ver202011121057.msvbds.FrontEnd.Common.min.js">
+    </script>
 
-<!--start BannerContext-->
-<script type='text/javascript'> var __bannerContext={"PageId":575,"CateId":null,"CityCode":null,"DistrictId":null,"CurrentPage":1};</script>
-<!--end BannerContext-->
-<!--Start of Zendesk Chat Script-->
-<script type="text/javascript">
-window.$zopim || (function (d, s) {
-    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
-        d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
-            z.set.
+    <!--start BannerContext-->
+    <script type='text/javascript'>
+        var __bannerContext = {
+            "PageId": 575,
+            "CateId": null,
+            "CityCode": null,
+            "DistrictId": null,
+            "CurrentPage": 1
+        };
+
+    </script>
+    <!--end BannerContext-->
+    <!--Start of Zendesk Chat Script-->
+    <script type="text/javascript">
+        window.$zopim || (function(d, s) {
+            var z = $zopim = function(c) {
+                    z._.push(c)
+                },
+                $ = z.s =
+                d.createElement(s),
+                e = d.getElementsByTagName(s)[0];
+            z.set = function(o) {
+                z.set.
                 _.push(o)
-        }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
-    $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte"; z.t = +new Date; $.
-        type = "text/javascript"; e.parentNode.insertBefore($, e)
-})(document, "script");
-</script>
-<!--End of Zendesk Chat Script-->
-<script type="text/javascript">
-    var newsLetterRegister = new newsLetterRegister.NewsLetterRegister();
-    newsLetterRegister.InitializeLoad();
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
+            $.src = "https://v2.zopim.com/?6fJlcOXWwJofJZOzmeDIifb7bHGvvSte";
+            z.t = +new Date;
+            $.
+            type = "text/javascript";
+            e.parentNode.insertBefore($, e)
+        })(document, "script");
 
-    var commentUser = new commentUser.CommentUser();
-    commentUser.InitializeLoad();
+    </script>
+    <!--End of Zendesk Chat Script-->
+    <script type="text/javascript">
+        var newsLetterRegister = new newsLetterRegister.NewsLetterRegister();
+        newsLetterRegister.InitializeLoad();
 
-    var paramAccount = {
-        urlListLogin: '/Systems/Account/Login',
-        urlListRegister: '/Systems/Account/Register',
-        urlListForgetPass: '/Systems/Account/ForgetPassword',
-        urlListCity: '/Contacts/CommonData/GetCityList',
-        urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
-        urlListWard: '/Contacts/CommonData/GetWardList',
-    };
+        var commentUser = new commentUser.CommentUser();
+        commentUser.InitializeLoad();
 
-    var account = new account.Content();
-    account.Initialize(paramAccount);
+        var paramAccount = {
+            urlListLogin: '/Systems/Account/Login',
+            urlListRegister: '/Systems/Account/Register',
+            urlListForgetPass: '/Systems/Account/ForgetPassword',
+            urlListCity: '/Contacts/CommonData/GetCityList',
+            urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
+            urlListWard: '/Contacts/CommonData/GetWardList',
+        };
 
-    var footer = new footer.Footer();
-    footer.Initialize();
+        var account = new account.Content();
+        account.Initialize(paramAccount);
 
-    var menu = new menu.Menu();
-    menu.Initialize();
-</script>
+        var footer = new footer.Footer();
+        footer.Initialize();
 
-<div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
- unmarked-product-url="/Product/MarkedProducts/UnmarkProduct"
- marked-product-ids-sync-time="0.5"></div>
+        var menu = new menu.Menu();
+        menu.Initialize();
+
+    </script>
+
+    <div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
+        unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
 
 
 
-<script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.FrontEnd.Product.Search.min.js"></script>
-<script src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.FrontEnd.Product.ProductHome.min.js"></script>
+    <script
+        src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.FrontEnd.Product.Search.min.js">
+    </script>
+    <script
+        src="https://staticfile.batdongsan.com.vn/js/Product/filestatic.ver202011121057.msvbds.FrontEnd.Product.ProductHome.min.js">
+    </script>
 
-<script type="text/javascript">
-var params = {
-    formSubmit: "#formSubmit",
-    loadContent: "#contentPage",
-    ddlSortBy: "#ddlSortBy",
-    tabActive: ".tabactive",
-    tabIndexValue: "#tabIndexValue",
-    sortValue: "#sortValue",
-    urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
-    urlListStreet: '/Contacts/CommonData/GetStreetList',
-    urlListWard: '/Contacts/CommonData/GetWardList',
-    urlListRoom: '/Contacts/CommonData/GetRoomList',
-    urlListDirection: '/Contacts/CommonData/GetDirectionList',
-    urlListProject: '/Contacts/CommonData/GetListProjectByDistrict',
-    urlListSubCate: '/Contacts/CommonData/GetCategoryByParentId',
-    urlListPrice: '/Contacts/CommonData/GetPriceList',
-    suggestionApi: {
-        apiForSell: 'https://suggestion1.batdongsan.com.vn/',
-        apiForRent: 'https://suggestion2.batdongsan.com.vn/'
-    }
-};
 
-var productHome = new product.ProductHome();
-productHome.InitializeLoad(params);
+    <script type="text/javascript">
+        var params = {
+            formSubmit: "#formSubmit",
+            loadContent: "#contentPage",
+            ddlSortBy: "#ddlSortBy",
+            tabActive: ".tabactive",
+            tabIndexValue: "#tabIndexValue",
+            sortValue: "#sortValue",
+            urlListDistrict: '/Contacts/CommonData/GetListDistrictByCity',
+            urlListStreet: '/Contacts/CommonData/GetStreetList',
+            urlListWard: '/Contacts/CommonData/GetWardList',
+            urlListRoom: '/Contacts/CommonData/GetRoomList',
+            urlListDirection: '/Contacts/CommonData/GetDirectionList',
+            urlListProject: '/Contacts/CommonData/GetListProjectByDistrict',
+            urlListSubCate: '/Contacts/CommonData/GetCategoryByParentId',
+            urlListPrice: '/Contacts/CommonData/GetPriceList',
+            suggestionApi: {
+                apiForSell: 'https://suggestion1.batdongsan.com.vn/',
+                apiForRent: 'https://suggestion2.batdongsan.com.vn/'
+            }
+        };
 
-var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
-    id: 'divCatagoryOptions',
-    hddValue: 'hdCboCatagory'
-});
-</script>
+        var productHome = new product.ProductHome();
+        productHome.InitializeLoad(params);
 
-<script type="text/javascript">
-try {
-    var script_imported = document.createElement('script');
-    script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&amp;dv=' + (new Date().toJSON().slice(0, 10));
-    if (document.body != null && document.body != undefined) {
-        document.body.appendChild(script_imported);
-    } else {
-        document.head.appendChild(script_imported);
-    }
-} catch (e) { }
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-    var lazyImages = [].slice.call(document.querySelectorAll('[src-lazy]'));
-    window.countOfLazyImages = lazyImages.length;
-    if ('IntersectionObserver' in window) {
-        let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    let lazyImage = entry.target;
-                    if (lazyImage.attributes['src-lazy']) {
-                        lazyImage.src = lazyImage.attributes['src-lazy'].value;
-                        lazyImage.removeAttribute('src-lazy');
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                };
-            });
+        var hdbCategory = $('#divCategory').AdvanceHiddenDropbox({
+            id: 'divCatagoryOptions',
+            hddValue: 'hdCboCatagory'
         });
-        lazyImages.forEach(function (lazyImage, i) {
-            lazyImage.setAttribute('lazy-id', i);
-            lazyImageObserver.observe(lazyImage);
-        });
-        (function checkDuplicate() {
-            var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
-            if (countOfLazyElements.length > window.countOfLazyImages) {
-                var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
-                elements.forEach(element => {
-                    var lazyId = element.attributes['lazy-id'].value;
-                    var lazyElements = [].slice.call(document.querySelectorAll(`[lazy-id="${lazyId}"]`));
-                    if (lazyElements.length > 1) {
-                        for (var i = 1; i < lazyElements.length; i++) {
-                            var lazyElement = lazyElements[i];
-                            lazyImageObserver.observe(lazyElement);
-                            lazyElement.setAttribute('lazy-id', window.countOfLazyImages);
-                            window.countOfLazyImages++;
-                        }
+
+    </script>
+
+    <script type="text/javascript">
+        try {
+            var script_imported = document.createElement('script');
+            script_imported.src = 'https://log.batdongsan.com.vn/js/bds/bds-msv-log.min.js?hv=2&amp;dv=' + (new Date()
+                .toJSON().slice(0, 10));
+            if (document.body != null && document.body != undefined) {
+                document.body.appendChild(script_imported);
+            } else {
+                document.head.appendChild(script_imported);
+            }
+        } catch (e) {}
+
+    </script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var lazyImages = [].slice.call(document.querySelectorAll('[src-lazy]'));
+            window.countOfLazyImages = lazyImages.length;
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            if (lazyImage.attributes['src-lazy']) {
+                                lazyImage.src = lazyImage.attributes['src-lazy'].value;
+                                lazyImage.removeAttribute('src-lazy');
+                                lazyImageObserver.unobserve(lazyImage);
+                            }
+                        };
+                    });
+                });
+                lazyImages.forEach(function(lazyImage, i) {
+                    lazyImage.setAttribute('lazy-id', i);
+                    lazyImageObserver.observe(lazyImage);
+                });
+                (function checkDuplicate() {
+                    var countOfLazyElements = [].slice.call(document.querySelectorAll('[lazy-id]'));
+                    if (countOfLazyElements.length > window.countOfLazyImages) {
+                        var elements = [].slice.call(document.querySelectorAll('[src-lazy]'));
+                        elements.forEach(element => {
+                            var lazyId = element.attributes['lazy-id'].value;
+                            var lazyElements = [].slice.call(document.querySelectorAll(
+                                `[lazy-id="${lazyId}"]`));
+                            if (lazyElements.length > 1) {
+                                for (var i = 1; i < lazyElements.length; i++) {
+                                    var lazyElement = lazyElements[i];
+                                    lazyImageObserver.observe(lazyElement);
+                                    lazyElement.setAttribute('lazy-id', window.countOfLazyImages);
+                                    window.countOfLazyImages++;
+                                }
+                            }
+                        });
                     }
+                    setTimeout(checkDuplicate, 1000)
+                })();
+            } else {
+                $('[src-lazy]').each(function() {
+                    this.src = this.attributes['src-lazy'].value;
+                    this.removeAttribute('src-lazy');
                 });
             }
-            setTimeout(checkDuplicate, 1000)
-        })();
-    } else {
-        $('[src-lazy]').each(function () {
-            this.src = this.attributes['src-lazy'].value;
-            this.removeAttribute('src-lazy');
         });
-    }
-});
-</script>
+
+    </script>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            
+            $(document).on('click', '.pagination a', function(event) {
+                
+                event.preventDefault();
+                $('li').removeClass('active');
+                $(this).parent('li').addClass('active');
+                var myurl = $(this).attr('href');
+                var page = $(this).attr('href').split('page=')[1];
+                getData(page);
+            });
+        });
+
+        function getData(page) {
+            $.ajax({
+                url: '?page=' + page,
+                type: "get",
+                datatype: "html"
+            }).done(function(data) {
+                $(".tag_container").empty().html(data);
+                location.hash = page;
+            }).fail(function(jqXHR, ajaxOptions, thrownError) {
+                alert('No response from server');
+            });
+        }
+
+    </script>
 @endsection

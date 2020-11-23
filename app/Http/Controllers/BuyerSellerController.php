@@ -9,14 +9,29 @@ use App\ImageDemo;
 
 class BuyerSellerController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         // $buyerSellers = BuyerSeller::all()->buyersellerarea();
         // dd($buyerSellers);
         // $buyerSellers=ImageDemo::all();
+        $buyersellercost=BuyerSeller::all();
+        $buyerSellers=BuyerSeller::with(['imagedemo','districts','BuyerSellerArea'])->paginate(10);
         
-        $buyerSellers=BuyerSeller::with(['imagedemo','districts','BuyerSellerArea'])->get();
+        // $buyerSellers->imagedemo()->get();
+        // foreach($buyerSellers as $buyerSeller) {
+            
+        //     foreach($buyerSeller->imagedemo as $value) {
 
-        return view ('pages.canmuacanthue.index',compact('buyerSellers'));
+            
+        //     var_dump($value->id).'\n';
+        //     }
+
+
+        // }
+    
+        if ($request->ajax()) {
+            return view('pages.canmuacanthue.presult', compact('buyersellercost','buyerSellers'));
+        }
+        return view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers'));
     }
     public function seller() {
         return view ('pages.canmuacanthue.seller');

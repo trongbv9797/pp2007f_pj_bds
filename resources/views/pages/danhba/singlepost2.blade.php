@@ -32,7 +32,7 @@
     <meta name="custom-apple-itunes-app" content="app-id=866492094" />
     <meta name ='keywords' content = '' />
 <meta name ='description' content = '' />
-<title>CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG</title>
+<title>{!! $business->name !!}</title>
 
  <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011131003.msvbds.FrontEnd.min.css" />
     
@@ -233,18 +233,18 @@
                     </div>
                     <div class="ttmg">
                         <h1 class="broker-name">
-                            C&#xD4;NG TY CP&#x110;T PH&#xDA; C&#x1AF;&#x1EDC;NG KI&#xCA;N GIANG
+                        {!! $business->name !!}
                         </h1>
                         <div class="mb5">
                             <span class="br-icon br-address"></span>
-                            <span style="float: left; width: 500px;">T&#xF2;a nh&#xE0; s&#x1ED1; 1, &#x111;&#x1B0;&#x1EDD;ng H&#xE0; Huy T&#x1EAD;p, khu &#x111;&#xF4; th&#x1ECB; Ph&#xFA; C&#x1B0;&#x1EDD;ng, An H&#xF2;a, R&#x1EA1;ch Gi&#xE1;, Ki&#xEA;n Giang, Vi&#x1EC7;t Nam</span>
+                            <span style="float: left; width: 500px;">{!! $business->address !!}</span>
                             <div class="clear"></div>
                         </div>
                         <div class="mb5">
                             <span class="br-icon br-mobile"></span>&#x110;ang c&#x1EAD;p nh&#x1EAD;t
                             <span class="br-icon br-phone"></span>02973739739
                         </div>
-                        <div class="mb5"><span class="br-icon br-email"></span>info@pckg.com.vn</div>
+                        <div class="mb5"><span class="br-icon br-email"></span>{!! $business->mail !!}</div>
                         <div class="mb5">
                             <span class="br-icon br-web"></span><a href="http://www.pckg.com.vn" target="_blank" class="colorblue" rel="nofollow">http://www.pckg.com.vn</a>
                         </div>
@@ -258,7 +258,7 @@
                     </div>
                     <div id="broker_intro">
                         <p>
-	<strong>Th&agrave;nh lập</strong> v&agrave;o ng&agrave;y 04/02/2008, l&agrave; một th&agrave;nh vi&ecirc;n của Tập đo&agrave;n Ph&uacute; Cường, hoạt động trong lĩnh vực đầu tư v&agrave; ph&aacute;t triển bất động sản.</p>
+	<strong>Th&agrave;nh lập</strong> v&agrave;o ng&agrave;y 04/02/2008, l&agrave; một th&agrave;nh vi&ecirc;n của {!! $business->name !!}, hoạt động trong lĩnh vực đầu tư v&agrave; ph&aacute;t triển bất động sản.</p>
 <p>
 	Sau hơn 10 năm ph&aacute;t triển, Khu đ&ocirc; thị Ph&uacute; Cường mang sứ mệnh trở th&agrave;nh khu đ&ocirc; thị ho&agrave;n chỉnh c&aacute;c chức năng để sống v&agrave; l&agrave;m việc, c&ocirc;ng ty CPĐT Ph&uacute; Cường Ki&ecirc;n Giang hiện l&agrave; một trong những c&ocirc;ng ty ti&ecirc;n phong ph&aacute;t triển kh&ocirc;ng gian kiến tr&uacute;c đ&ocirc; thị hiện đại, gi&uacute;p kiến tạo v&agrave; n&acirc;ng tầm m&ocirc;i trường sống l&yacute; tưởng, đẳng cấp tại tỉnh Ki&ecirc;n Giang v&agrave; khu vực Đồng bằng s&ocirc;ng Cửu Long.</p>
 <p>

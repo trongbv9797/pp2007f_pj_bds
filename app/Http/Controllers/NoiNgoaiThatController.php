@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class NoingoaithatController extends Controller
+class NoiNgoaiThatController extends Controller
 {
     //
     public function index()

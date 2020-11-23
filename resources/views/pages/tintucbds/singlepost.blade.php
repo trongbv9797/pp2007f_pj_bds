@@ -126,7 +126,7 @@
         </div>
 
         <div id="divContents" class="detailsView-contents-style detail-article-content">
-            <p>Phân khúc BĐS cho thuê liên tục gặp khó khăn trong năm 2020. Nếu giá thuê&nbsp;căn hộ không không thể tăng thêm là do sự cạnh tranh gắt&nbsp;gao từ nguồn cung dồi dào thì phân khúc nhà mặt phố dù&nbsp;cầu nhiều-&nbsp;cung ít cũng&nbsp;ế ẩm kéo dài dưới tác động của Covid-19.</p>
+            
 
 <p>{!!$articles->content!!}</p>
 <p style="text-align: center;"><img alt="{!!$articles->title!!}" src="https://file4.batdongsan.com.vn/2020/11/18/FTnaKngu/20201118135701-0137.jpg" style="width: 100%;" title="{!!$articles->title!!}"><br>
@@ -247,46 +247,20 @@
                 </h3>
 
             <div class="clear"></div>
-            <h2 class="normalblue" style="white-space: nowrap;">Tin mới nhất chưa fillter cũng</h2>
+            <h2 class="normalblue" style="white-space: nowrap;">Tin mới nhất đã fillter theo id</h2>
             <div class="otherline" style="width: calc(100% - 101px)">
                 &nbsp;
             </div>
+                @foreach ($newarticles as $newarticles)
+                
                 <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/tap-doan-an-gia-ra-mat-toa-thap-dep-nhat-du-an-westgate-ar105545" title="T&#x1EAD;p &#x111;o&#xE0;n An Gia ra m&#x1EAF;t t&#xF2;a th&#xE1;p &#x111;&#x1EB9;p nh&#x1EA5;t d&#x1EF1; &#xE1;n Westgate">
-                        Tập đoàn An Gia ra mắt tòa tháp đẹp nhất dự án Westgate
-                        <i>(08:00 20/11/2020)</i>
+                    <a class="font-link-box-item iconlist" href="{!! Route('tintuc_single_post', $newarticles->id) !!}" title="T&#x1EAD;p &#x111;o&#xE0;n An Gia ra m&#x1EAF;t t&#xF2;a th&#xE1;p &#x111;&#x1EB9;p nh&#x1EA5;t d&#x1EF1; &#xE1;n Westgate">
+                        {!!$newarticles->title!!}
+                        <i>{!!$newarticles->updated_at!!}</i>
                     </a>
                 </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/vuot-di-an-va-thu-dau-mot-thuan-an-tro-thanh-thien-duong-can-ho-cho-thue-tai-binh-duong-ar105552" title="V&#x1B0;&#x1EE3;t D&#x129; An v&#xE0; Th&#x1EE7; D&#x1EA7;u M&#x1ED9;t, Thu&#x1EAD;n An tr&#x1EDF; th&#xE0;nh thi&#xEA;n &#x111;&#x1B0;&#x1EDD;ng c&#x103;n h&#x1ED9; cho thu&#xEA; t&#x1EA1;i B&#xEC;nh D&#x1B0;&#x1A1;ng">
-                        Vượt Dĩ An và Thủ Dầu Một, Thuận An trở thành thiên đường căn hộ cho thuê tại Bình Dương
-                        <i>(08:00 20/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/lam-3-cay-cau-ket-noi-truc-tp-hcm-long-an-tien-giang-ar105549" title="L&#xE0;m 3 c&#xE2;y c&#x1EA7;u k&#x1EBF;t n&#x1ED1;i tr&#x1EE5;c TP.HCM - Long An - Ti&#x1EC1;n Giang">
-                        Làm 3 cây cầu kết nối trục TP.HCM - Long An - Tiền Giang
-                        <i>(13:15 19/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/the-he-millennials-mua-nha-de-khang-dinh-ban-than-ar105546" title="Th&#x1EBF; h&#x1EC7; Millennials: Mua nh&#xE0; &#x111;&#x1EC3; kh&#x1EB3;ng &#x111;&#x1ECB;nh b&#x1EA3;n th&#xE2;n">
-                        Thế hệ Millennials: Mua nhà để khẳng định bản thân
-                        <i>(11:00 19/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/-don-bay-ha-tang-va-do-thi-hoa-tang-suc-hut-cho-bds-vung-ven-ar105540" title="&quot;&#x110;&#xF2;n b&#x1EA9;y&quot; h&#x1EA1; t&#x1EA7;ng v&#xE0; &#x111;&#xF4; th&#x1ECB; h&#xF3;a t&#x103;ng s&#x1EE9;c h&#xFA;t cho B&#x110;S v&#xF9;ng ven">
-                        "Đòn bẩy" hạ tầng và đô thị hóa tăng sức hút cho BĐS vùng ven
-                        <i>(08:00 19/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/long-an-dau-tu-13-000-ty-dong-lam-8-cong-trinh-giao-thong-lon-ar105542" title="Long An &#x111;&#x1EA7;u t&#x1B0; 13.000 t&#x1EF7; &#x111;&#x1ED3;ng l&#xE0;m 8 c&#xF4;ng tr&#xEC;nh giao th&#xF4;ng l&#x1EDB;n">
-                        Long An đầu tư 13.000 tỷ đồng làm 8 công trình giao thông lớn
-                        <i>(15:48 18/11/2020)</i>
-                    </a>
-                </h3>
+
+                @endforeach
 
     </div>
     <div class="othernews">

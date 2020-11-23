@@ -34,37 +34,35 @@ Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1
 Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost2');
 
 
-//TintucController
-Route::get('/tin-tuc', 'TintucController@index')->name('tintucbds');
-Route::get('/tin-thi-truong', 'TintucController@tinthitruong')->name('tinthitruong');
-Route::get('/phan-tich','TintucController@phantich')->name('phan_tich');
-Route::get('/chinh-sach','TintucController@chinhsach')->name('chinh_sach');
-Route::get('/quy-hoach','TintucController@quyhoach')->name('quy_hoach');
-Route::get('/bds-the-gioi','TintucController@bdsthegioi')->name('tintucbds_tg');
-Route::get('/tai-chinh-chung-khoan-bds','TintucController@taichinhbds')->name('tai_chinh');
+//TinTucController
+Route::get('/tin-tuc', 'TinTucController@index')->name('tintucbds');
+Route::get('/tin-thi-truong', 'TinTucController@tinthitruong')->name('tinthitruong');
+Route::get('/phan-tich','TinTucController@phantich')->name('phan_tich');
+Route::get('/chinh-sach','TinTucController@chinhsach')->name('chinh_sach');
+Route::get('/quy-hoach','TinTucController@quyhoach')->name('quy_hoach');
+Route::get('/bds-the-gioi','TinTucController@bdsthegioi')->name('tintucbds_tg');
+Route::get('/tai-chinh-chung-khoan-bds','TinTucController@taichinhbds')->name('tai_chinh');
 //Tintucsinglepost
-Route::get('/articles{id}', 'TintucController@articles')->name('tintuc_single_post');
+Route::get('/articles{id}', 'TinTucController@articles')->name('tintuc_single_post');
 
 
 
 
 
-//NhadatbanController -----TAI ANH
-Route::get('/nha-dat-ban', 'NhadatbanController@index')->name('nha_dat_ban');
+//NhaDatBanController -----TAI ANH
+Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
+Route::get('/ban-can-ho-chung-cu', 'NhaDatBanController@banCanHoChungCu')->name('ban_can_ho_chung_cu');
+Route::get('/ban-nha-rieng', 'NhaDatBanController@banNhaRieng')->name('ban_nha_rieng');
+Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nha_mat_pho');
+Route::get('/nha-dat-ban{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
 
-Route::get('/ban-can-ho-chung-cu', 'NhadatbanController@ban_can_ho_chung_cu')->name('ban_can_ho_chung_cu');
-Route::get('/ban-nha-rieng', 'NhadatbanController@ban_nha_rieng')->name('ban_nha_rieng');
-Route::get('/ban-nha-mat-pho', 'NhadatbanController@ban_nha_mat_pho')->name('ban_nha_mat_pho');
-Route::get('/nha-dat-ban{id}', 'NhadatbanController@nhadatban_single_post')->name('nhadatban_single_post');
-
-
-//NhadatchothueController ----TAI ANH
-Route::get('/nha-dat-cho-thue', 'NhadatchothueController@index')->name('nha_dat_cho_thue');
-Route::get('/cho-thue-can-ho-chung-cu', 'NhadatchothueController@cho_thue_can_ho')->name('cho_thue_can_ho');
-Route::get('/cho-thue-nha-rieng', 'NhadatchothueController@cho_thue_nha_rieng')->name('cho_thue_nha_rieng');
-Route::get('/cho-thue-nha-mat-pho', 'NhadatchothueController@cho_thue_nha_mat_pho')->name('cho_thue_nha_mat_pho');
-Route::get('/nha-dat-cho-thue{id}', 'NhadatchothueController@nhadatchothue_single_post')->name('nhadatchothue_single_post');
+//NhaDatChoThueController ----TAI ANH
+Route::get('/nha-dat-cho-thue', 'NhaDatChoThueController@index')->name('nha_dat_cho_thue');
+Route::get('/cho-thue-can-ho-chung-cu', 'NhaDatChoThueController@choThueCanHo')->name('cho_thue_can_ho');
+Route::get('/cho-thue-nha-rieng', 'NhaDatChoThueController@choThueNhaRieng')->name('cho_thue_nha_rieng');
+Route::get('/cho-thue-nha-mat-pho', 'NhaDatChoThueController@choThueNhaMatPho')->name('cho_thue_nha_mat_pho');
+Route::get('/nha-dat-cho-thue{id}', 'NhaDatChoThueController@nhaDatChoThueSinglePost')->name('nhadatchothue_single_post');
 
 
 
@@ -75,7 +73,7 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');
 
 //Noi-ngoaithat
-Route::get('/noi-ngoai-that', 'NoingoaithatController@index');
+Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 
 //Canmuacanthue route
 

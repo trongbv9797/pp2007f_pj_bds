@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Broker;
-use App\Business;
+use App\Models\Broker;
+use App\Models\Business;
 
 class DanhbaController extends Controller
 {

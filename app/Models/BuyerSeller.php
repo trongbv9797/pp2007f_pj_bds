@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class BuyerSeller extends Model
 {
-    public function buyersellerarea()
+    public function buyerSellerArea()
     {
         return $this->belongsTo( BuyerSellerArea::class, 'buyer_seller_area_id');
     }
-    public function imagedemo()
+    public function imageDemo()
     {
         return $this->hasMany( ImageDemo::class, 'buyer_seller_id' );
     }
-    public function districts()
+    public function disTrict()
     {
         return $this->belongsTo( District::class, 'district_id');
     }

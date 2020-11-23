@@ -28,7 +28,22 @@ class NhadatchothueController extends Controller
         ->join('wards', 'wards.id', '=', 'products.wards_id')
         ->select('products.*', 'image.link', 'menu_category.name', 'wards.path_with_type')
         ->where('products.id', '=', $id)->get();
-        return view("pages.nha_dat_cho_thue.single_post", compact('products'));
+
+        $product = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('wards', 'wards.id', '=', 'products.wards_id')
+        ->select('products.*', 'image.link', 'wards.path_with_type')
+        ->limit(5)
+        ->get();
+
+        $product1 = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('wards', 'wards.id', '=', 'products.wards_id')
+        ->select('products.*', 'image.link', 'wards.path_with_type')
+        ->limit(5)
+        ->get();
+
+        return view("pages.nha_dat_cho_thue.single_post", compact('products', 'product', 'product1'));
     }
 
     public function cho_thue_can_ho() {

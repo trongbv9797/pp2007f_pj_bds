@@ -33,7 +33,22 @@ class NhadatbanController extends Controller
         ->join('wards', 'wards.id', '=', 'products.wards_id')
         ->select('products.*', 'image.link', 'menu_category.name', 'wards.path_with_type')
         ->get();
-        return view("pages.nhadatban.single_post", compact('products'));
+
+        $product = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('wards', 'wards.id', '=', 'products.wards_id')
+        ->select('products.*', 'image.link', 'wards.path_with_type')
+        ->limit(5)
+        ->get();
+
+        $product1 = DB::table('products')
+        ->join('image', 'image.products_id', '=' , 'products.id')
+        ->join('wards', 'wards.id', '=', 'products.wards_id')
+        ->select('products.*', 'image.link', 'wards.path_with_type')
+        ->limit(5)
+        ->get();
+
+        return view("pages.nhadatban.single_post", compact('products', 'product', 'product1'));
 
     }
 

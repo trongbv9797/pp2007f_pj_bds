@@ -737,309 +737,36 @@
         <div class="list-product-slide">
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
                 <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+                    @foreach ($product as $product)
+
                         <li class="vip5 swiper-slide swiper-slide-visible swiper-slide-active" uid="783243">
                             <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-toi-can-ban-gap-100m2-gia-1-4-ty-cho-vay-70-gia-tri-0931113767-pr27605272">
-                                    <img alt="Chính chủ tôi cần bán gấp lô Biên Hoà New City, 100m2, giá 1,4 tỷ, cho vay 70% giá trị, 0931113767" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/10/30/20201030115255-63bf_wm.jpg" is-lazy-image="true" lazy-id="12">
+                                <a href="{!! Route('nhadatban_single_post', $product->id) !!}">
+                                    <img alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="{!! $product->link !!}" src-lazy="{!! $product->link !!}" is-lazy-image="true" lazy-id="12">
                                 </a>
                                 <span class="product-feature">
                                                                                                         </span>
                             </div>
                             <div class="info-product">
                                 <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-toi-can-ban-gap-100m2-gia-1-4-ty-cho-vay-70-gia-tri-0931113767-pr27605272" title="Chính chủ tôi cần bán gấp lô Biên Hoà New City, 100m2, giá 1,4 tỷ, cho vay 70% giá trị, 0931113***" style="overflow: visible;">Chính chủ tôi cần bán gấp lô Biên Hoà New City, 100m2, giá 1,4 tỷ, cho vay 70% giá trị, <span class="hidden-mobile m-on-title" raw="0931113767">0931113***</span></a>
+                                    <a href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" style="overflow: visible;">{!! $product->title !!} <span class="hidden-mobile m-on-title" raw="0931113767"></span></a>
                                 </h3>
-                                <div class="pro-price">1.4 tỷ</div>
+                                <div class="pro-price">{!! $product->price !!} tỷ</div>
                                     <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
+                                    <div class="pro-m2">{!! $product->area !!} m²</div>
+                                <div class="pro-adress">{!! $product->path_with_type !!}</div>
                                 <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
+                                    {{-- Hôm nay --}}
+                                    <span class="tooltip-time">{!! $product->created_at !!}</span>
                                 </div>
                                 <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
                                     <i class="iconSave" data-productid="27605272" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ t&amp;#244;i cần b&amp;#225;n gấp l&amp;#244; Bi&amp;#234;n Ho&amp;#224; New City, 100m2, gi&amp;#225; 1,4 tỷ, cho vay 70% gi&amp;#225; trị, 0931113767&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/10/30/20201030115255-63bf_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/30/20201030115255-63bf_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="1.4 tỷ" data-area="100 m²" data-pricesort="1400000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Tôi chính chủ cần tiền làm ăn cần bán 2 nền 100m2 dự án Biên Hòa New City, liền kề sân golf đã có sổ đỏ riêng từng nền.Giá bán chỉ 1,4 tỷ/nền.Hạ tầng hoàn thiện 100%.Ngân hàng hỗ trợ vay - thủ tục nh" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 13:54:33" data-contactname="Trần Thụy Như Hoàng" data-contactmobile="0931113767" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-toi-can-ban-gap-100m2-gia-1-4-ty-cho-vay-70-gia-tri-0931113767-pr27605272" data-totalmedia="8" data-createbyuser="783243"></i>
                                 </span>
                             </div>
-                        </li>
-                        <li class="vip5 swiper-slide swiper-slide-visible swiper-slide-next" uid="364325">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19-5x20-6x20-7x20-8x20-9x20-10x20-12x20-15x20-lh-0908207092-pr24098861">
-                                    <img alt="Cần bán Biên Hòa New City, 5x19, 5x20, 6x20, 7x20, 8x20, 9x20, 10x20, 12x20, 15x20 (m), 0908207092" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/01/03/20200103171148-e8e2_wm.jpg" is-lazy-image="true" lazy-id="13">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19-5x20-6x20-7x20-8x20-9x20-10x20-12x20-15x20-lh-0908207092-pr24098861" title="Cần bán Biên Hòa New City, 5x19, 5x20, 6x20, 7x20, 8x20, 9x20, 10x20, 12x20, 15x20 (m), 0908207***" style="overflow: visible;">Cần bán Biên Hòa New City, 5x19, 5x20, 6x20, 7x20, 8x20, 9x20, 10x20, 12x20, 15x20 (m), <span class="hidden-mobile m-on-title" raw="0908207092">0908207***</span></a>
-                                </h3>
-                                <div class="pro-price">1.3 tỷ</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="24098861" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Cần b&amp;#225;n Bi&amp;#234;n H&amp;#242;a New City, 5x19, 5x20, 6x20, 7x20, 8x20, 9x20, 10x20, 12x20, 15x20 (m), 0908207092&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/01/03/20200103171148-e8e2_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/01/03/20200103171148-e8e2_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="1.3 tỷ" data-area="100 m²" data-pricesort="1300000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Chuyên đất Biên Hòa New City, sang nhượng nhiều nền giá cực kỳ hấp dẫn từ 12tr/m2. LH: 0908207092 (Ms. Lài alo, viber, Call, SMS,.. ). Email: Lai. Thaithi@propertyx.com.vn.Hạ tầng hoàn thiện, đang bà" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 12:13:33" data-contactname="Thái Lài" data-contactmobile="0908207092" data-url="/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19-5x20-6x20-7x20-8x20-9x20-10x20-12x20-15x20-lh-0908207092-pr24098861" data-totalmedia="8" data-createbyuser="364325"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide swiper-slide-visible" uid="364325">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27318799">
-                                    <img alt="Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay giá 8tr/m2 hạ tầng hoàn thiện, LH: 0908207092" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/10/07/20201007104021-3940_wm.jpg" is-lazy-image="true" lazy-id="14">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27318799" title="Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay giá 8tr/m2 hạ tầng hoàn thiện, LH: 0908207***" style="overflow: visible;">Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay giá 8tr/m2 hạ tầng hoàn thiện, LH: <span class="hidden-mobile m-on-title" raw="0908207092">0908207***</span></a>
-                                </h3>
-                                <div class="pro-price">8 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">680 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27318799" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Chuy&amp;#234;n b&amp;#225;n đất nền Bi&amp;#234;n H&amp;#242;a New City, sổ đỏ trao tay gi&amp;#225; 8tr/m2 hạ tầng ho&amp;#224;n thiện, LH: 0908207092&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/10/07/20201007104021-3940_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/07/20201007104021-3940_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="8 triệu/m²" data-area="680 m²" data-pricesort="5440000000" data-areasort="680" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay, giá 8tr/m2 hạ tầng hoàn thiện, LH: 0908207092. Em chuyên bán đất nền sổ đỏ Biên Hòa New City năm nhiều lô giá tốt nhất và vị trí đẹp anh/chị nhé!" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 10:55:39" data-contactname="Thái Lài" data-contactmobile="0908207092" data-url="/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27318799" data-totalmedia="8" data-createbyuser="364325"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide swiper-slide-visible" uid="1322974">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-b-nha-pho-100m2-gia-tot-nhat-so-do-trao-tay-lh-0906757522-pr27776406">
-                                    <img alt="Chính chủ bán nền nhà phố 100m2 dự án Biên Hòa New City, giá tốt nhất sổ đỏ trao tay, LH 0906757522" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/11/13/20201113093830-5fb5_wm.jpg" is-lazy-image="true" lazy-id="15">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-b-nha-pho-100m2-gia-tot-nhat-so-do-trao-tay-lh-0906757522-pr27776406" title="Chính chủ bán nền nhà phố 100m2 dự án Biên Hòa New City, giá tốt nhất sổ đỏ trao tay, LH 0906757***" style="overflow: visible;">Chính chủ bán nền nhà phố 100m2 dự án Biên Hòa New City, giá tốt nhất sổ đỏ trao tay, LH <span class="hidden-mobile m-on-title" raw="0906757522">0906757***</span></a>
-                                </h3>
-                                <div class="pro-price">13 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27776406" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ b&amp;#225;n nền nh&amp;#224; phố 100m2 dự &amp;#225;n Bi&amp;#234;n H&amp;#242;a New City, gi&amp;#225; tốt nhất sổ đỏ trao tay, LH 0906757522&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/13/20201113093830-5fb5_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/13/20201113093830-5fb5_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="13 triệu/m²" data-area="100 m²" data-pricesort="1300000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Liên hệ ngay hotline phòng CĐT để được hỗ trợ đưa đón tận nhà để quý khách thoải mái và chủ động tham quan dự án: 
- 
- Đất nền biệt thự trung tâm Biên Hòa, giá 15tr/m2. 
- - Đất nền sổ đỏ trao tay, ful" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 09:39:40" data-contactname="Nguyễn Tùng" data-contactmobile="0906757522" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-b-nha-pho-100m2-gia-tot-nhat-so-do-trao-tay-lh-0906757522-pr27776406" data-totalmedia="8" data-createbyuser="1322974"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="471310">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-can-sang-tay-mua-dich-hd-re-1-2-ty-cl-it-newcity-lh-chinh-chu-0903042938-pr25190644">
-                                    <img alt="Chính chủ cần sang tay mùa dịch nền HD rẻ 1,2 tỷ + CL ít Biên Hoà New City, LH chính chủ 0903042938" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/04/19/20200419105412-f3fd_wm.jpg" is-lazy-image="true" lazy-id="16">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-can-sang-tay-mua-dich-hd-re-1-2-ty-cl-it-newcity-lh-chinh-chu-0903042938-pr25190644" title="Chính chủ cần sang tay mùa dịch nền HD rẻ 1,2 tỷ + CL ít Biên Hoà New City, LH chính chủ 0903042***" style="overflow: visible;">Chính chủ cần sang tay mùa dịch nền HD rẻ 1,2 tỷ + CL ít Biên Hoà New City, LH chính chủ <span class="hidden-mobile m-on-title" raw="0903042938">0903042***</span></a>
-                                </h3>
-                                <div class="pro-price">1.2 tỷ</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="25190644" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ cần sang tay m&amp;#249;a dịch nền HD rẻ 1,2 tỷ + CL &amp;#237;t Bi&amp;#234;n Ho&amp;#224; New City, LH ch&amp;#237;nh chủ 0903042938&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/04/19/20200419105412-f3fd_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/04/19/20200419105412-f3fd_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="1.2 tỷ" data-area="100 m²" data-pricesort="1200000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Cần tiền bán gấp mùa dịch Tôi cần bán 1 nền đất DT 5x20m, hướng Đông Nam, sát sông thoáng mát, thuận tiện đầu tư có sổ đỏ giá rẻ Biên Hòa New City ngay sân gôn Long Thành 3 mặt sông Đồng Nai của CĐT " data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 08:45:04" data-contactname="Vũ Thị Thơm" data-contactmobile="0966733629" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-can-sang-tay-mua-dich-hd-re-1-2-ty-cl-it-newcity-lh-chinh-chu-0903042938-pr25190644" data-totalmedia="8" data-createbyuser="471310"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="1407352">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/ban-pg3-12-09-newcity-da-co-so-cdt-090913xxxx-pr27194518">
-                                    <img alt="Bán nền PG3-12-09, Biên hòa New City, đã có sổ, CĐT 0909138896" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/09/28/20200928125344-e386.jpg" is-lazy-image="true" lazy-id="17">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/ban-pg3-12-09-newcity-da-co-so-cdt-090913xxxx-pr27194518" title="Bán nền PG3-12-09, Biên hòa New City, đã có sổ, CĐT 0909138***" style="overflow: visible;">Bán nền PG3-12-09, Biên hòa New City, đã có sổ, CĐT <span class="hidden-mobile m-on-title" raw="0909138896">0909138***</span></a>
-                                </h3>
-                                <div class="pro-price">1.9 tỷ</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm nay
-                                    <span class="tooltip-time">13/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27194518" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;B&amp;#225;n nền PG3-12-09, Bi&amp;#234;n h&amp;#242;a New City, đ&amp;#227; c&amp;#243; sổ, CĐT 0909138896&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/09/28/20200928125344-e386.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/09/28/20200928125344-e386.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="1.9 tỷ" data-area="100 m²" data-pricesort="1900000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Cần bán nền PG3-12-09 (đã có sổ), giá 1,9 tỷ(bao thuế phí), xây tự do, hạ tầng hoàn thiện 100%. PKD: 0909138896 Mr. Tuyên. Thông tin cơ bản Biên Hòa New City: + Chủ đầu tư: Golf Long Thành. + Phát tr" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 08:20:10" data-contactname="Giáp Tuyên" data-contactmobile="0909138896" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/ban-pg3-12-09-newcity-da-co-so-cdt-090913xxxx-pr27194518" data-totalmedia="5" data-createbyuser="1407352"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="725724">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-c-b-gap-lo-100m2-khu-khg-thinh-city-pr27430193">
-                                    <img alt="Chính chủ cần bán gấp lô đất 100m2 khu Khang Thịnh - dự án Biên Hòa New City" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/10/15/20201015190331-f1e5_wm.jpg" is-lazy-image="true" lazy-id="18">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-c-b-gap-lo-100m2-khu-khg-thinh-city-pr27430193" title="Chính chủ cần bán gấp lô đất 100m2 khu Khang Thịnh - dự án Biên Hòa New City">Chính chủ cần bán gấp lô đất 100m2 khu Khang Thịnh - dự án Biên Hòa New City</a>
-                                </h3>
-                                <div class="pro-price">16 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27430193" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ cần b&amp;#225;n gấp l&amp;#244; đất 100m2 khu Khang Thịnh - dự &amp;#225;n Bi&amp;#234;n H&amp;#242;a New City&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/10/15/20201015190331-f1e5_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/15/20201015190331-f1e5_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="16 triệu/m²" data-area="100 m²" data-pricesort="1600000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="* Tôi chính chủ cần bán nền đất nhà phố đã có sổ - khu Khang Thịnh, dự án Biên Hòa New City. * DT: 100m2. * Ngay bến du thuyền và nền đối diện khu club house. * Khách thiện chí mua nhanh bớt nhẹ lấy " data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 19:50:45" data-contactname="Lê An Nhiên" data-contactmobile="0933223146" data-url="/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-c-b-gap-lo-100m2-khu-khg-thinh-city-pr27430193" data-totalmedia="8" data-createbyuser="725724"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="747423">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-12tr-m2-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr27625490">
-                                    <img alt="Đất nền sổ đỏ TP Biên Hòa, giá chỉ 12tr/m2 thanh toán linh hoạt hạ tầng đầy đủ, LH: 0939339337" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/11/02/20201102081917-8899_wm.jpg" is-lazy-image="true" lazy-id="19">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-12tr-m2-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr27625490" title="Đất nền sổ đỏ TP Biên Hòa, giá chỉ 12tr/m2 thanh toán linh hoạt hạ tầng đầy đủ, LH: 0939339***" style="overflow: visible;">Đất nền sổ đỏ TP Biên Hòa, giá chỉ 12tr/m2 thanh toán linh hoạt hạ tầng đầy đủ, LH: <span class="hidden-mobile m-on-title" raw="0939339337">0939339***</span></a>
-                                </h3>
-                                <div class="pro-price">12 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27625490" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Đất nền sổ đỏ TP Bi&amp;#234;n H&amp;#242;a, gi&amp;#225; chỉ 12tr/m2 thanh to&amp;#225;n linh hoạt hạ tầng đầy đủ, LH: 0939339337&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/02/20201102081917-8899_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/02/20201102081917-8899_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="12 triệu/m²" data-area="100 m²" data-pricesort="1200000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Pháp lý: Sở hữu lâu dài. ngân hàng cho vay 80% - Đã có sổ hồng riêng. - Diện tích: 100m2. - Đặt cọc công chứng chuyển nhượng. - Cơ sở hạ tầng hoàn chỉnh 100% (điện, đương, cây xanh, nươc... ). - Cắm " data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 18:19:01" data-contactname="Đoàn Ngọc Sơn" data-contactmobile="0939339337" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-12tr-m2-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr27625490" data-totalmedia="4" data-createbyuser="747423"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="747423">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-1-7-ty-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr26000833">
-                                    <img alt="Đất nền sổ đỏ TP Biên Hòa, giá chỉ 1,7 tỷ/nền, thanh toán linh hoạt hạ tầng đầy đủ, LH: 0939339337" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/06/25/20200625105323-2a57_wm.jpg" is-lazy-image="true" lazy-id="20">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-1-7-ty-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr26000833" title="Đất nền sổ đỏ TP Biên Hòa, giá chỉ 1,7 tỷ/nền, thanh toán linh hoạt hạ tầng đầy đủ, LH: 0939339***" style="overflow: visible;">Đất nền sổ đỏ TP Biên Hòa, giá chỉ 1,7 tỷ/nền, thanh toán linh hoạt hạ tầng đầy đủ, LH: <span class="hidden-mobile m-on-title" raw="0939339337">0939339***</span></a>
-                                </h3>
-                                <div class="pro-price">17 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="26000833" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Đất nền sổ đỏ TP Bi&amp;#234;n H&amp;#242;a, gi&amp;#225; chỉ 1,7 tỷ/nền, thanh to&amp;#225;n linh hoạt hạ tầng đầy đủ, LH: 0939339337&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/06/25/20200625105323-2a57_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/06/25/20200625105323-2a57_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="17 triệu/m²" data-area="100 m²" data-pricesort="1700000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Thông tin dự án. Diện tích dự án: 118,95 ha. Nằm trong tổng thể dự án khu đô thị, sân golf, thể thao và du lịch sinh thái Long Thành với quy mô 334 ha. Địa chỉ: Phước Tân - Tam Phước, TP. Biên Hòa, t" data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 18:18:37" data-contactname="Đoàn Ngọc Sơn" data-contactmobile="0939339337" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/-so-do-tp-gia-chi-1-7-ty-thanh-toan-linh-t-ha-tang-day-lh-0939339337-pr26000833" data-totalmedia="8" data-createbyuser="747423"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="604881">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/c-sg-nhuong-so-do-mot-so-gia-tot-cho-chu-moi-dau-tu-0908833902-pr22860024">
-                                    <img alt="Cần sang nhượng đất sổ đỏ dự án Biên Hòa New City, một số nền giá tốt cho chủ mới đầu tư 0908833902" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2019/10/07/20191007093206-29a3_wm.jpg" is-lazy-image="true" lazy-id="21">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/c-sg-nhuong-so-do-mot-so-gia-tot-cho-chu-moi-dau-tu-0908833902-pr22860024" title="Cần sang nhượng đất sổ đỏ dự án Biên Hòa New City, một số nền giá tốt cho chủ mới đầu tư 0908833***" style="overflow: visible;">Cần sang nhượng đất sổ đỏ dự án Biên Hòa New City, một số nền giá tốt cho chủ mới đầu tư <span class="hidden-mobile m-on-title" raw="0908833902">0908833***</span></a>
-                                </h3>
-                                <div class="pro-price">14 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="22860024" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Cần sang nhượng đất sổ đỏ dự &amp;#225;n Bi&amp;#234;n H&amp;#242;a New City, một số nền gi&amp;#225; tốt cho chủ mới đầu tư 0908833902&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2019/10/07/20191007093206-29a3_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2019/10/07/20191007093206-29a3_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="14 triệu/m²" data-area="100 m²" data-pricesort="1400000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Tôi cần sang nhượng gấp một số lô đất nhà phố liên kế, diện tích 100m2.MA1 - 02 - 32, KT - 08 - 06, MA2 - 01 - 26. HV1 - 03 - 09, HV1 - 03 - 20, HV2 - 02 - 14. VQ2 - 05 - 28, VQ2 - 05 - 20, VQ1 - 03 " data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 18:05:20" data-contactname="Ho Van Duoc" data-contactmobile="0908833902" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/c-sg-nhuong-so-do-mot-so-gia-tot-cho-chu-moi-dau-tu-0908833902-pr22860024" data-totalmedia="2" data-createbyuser="604881"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="364325">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27355733">
-                                    <img alt="Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay, giá 8tr/m2 hạ tầng hoàn thiện, LH: 0908207092" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/10/09/20201009161933-0fe7_wm.jpg" is-lazy-image="true" lazy-id="22">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27355733" title="Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay, giá 8tr/m2 hạ tầng hoàn thiện, LH: 0908207***" style="overflow: visible;">Chuyên bán đất nền Biên Hòa New City, sổ đỏ trao tay, giá 8tr/m2 hạ tầng hoàn thiện, LH: <span class="hidden-mobile m-on-title" raw="0908207092">0908207***</span></a>
-                                </h3>
-                                <div class="pro-price">8 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="27355733" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Chuy&amp;#234;n b&amp;#225;n đất nền Bi&amp;#234;n H&amp;#242;a New City, sổ đỏ trao tay, gi&amp;#225; 8tr/m2 hạ tầng ho&amp;#224;n thiện, LH: 0908207092&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/10/09/20201009161933-0fe7_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/09/20201009161933-0fe7_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="8 triệu/m²" data-area="100 m²" data-pricesort="800000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Tranh thủ đợt này giá còn tốt gom đất sổ đỏ Biên Hoà New City a/c nha! Về giao thông:   Đường thủy cách VinCity Quận 9 1con sông (tương lai sẽ xây cầu bắt qua ạ).  Hiện tại anh/chị đi bằng xe máy có " data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 17:52:15" data-contactname="Thái Lài" data-contactmobile="0908207092" data-url="/ban-dat-nen-du-an-phuong-phuoc-tan-prj-bien-hoa-new-city/chuyen-ban-so-do-trao-tay-gia-8tr-m2-ha-tang-n-thien-lh-0908207092-pr27355733" data-totalmedia="5" data-createbyuser="364325"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="vip5 swiper-slide" uid="364325">
-                            <div class="img-product">
-                                <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19m-5x20m-6x20m-7x20m-8x20-9x20-10x20-12x20-15x20m-0908207092-pr26958479">
-                                    <img alt="Cần bán Biên Hòa New City, 5x19m, 5x20m, 6x20m, 7x20m, 8x20, 9x20, 10x20, 12x20, 15x20m, 0908207092" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="./assets/image/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/257x147/2020/09/08/20200908184541-807d_wm.jpg" is-lazy-image="true" lazy-id="23">
-                                </a>
-                                <span class="product-feature">
-                                                                                                        </span>
-                            </div>
-                            <div class="info-product">
-                                <h3 class="p-title">
-                                    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19m-5x20m-6x20m-7x20m-8x20-9x20-10x20-12x20-15x20m-0908207092-pr26958479" title="Cần bán Biên Hòa New City, 5x19m, 5x20m, 6x20m, 7x20m, 8x20, 9x20, 10x20, 12x20, 15x20m, 0908207***" style="overflow: visible;">Cần bán Biên Hòa New City, 5x19m, 5x20m, 6x20m, 7x20m, 8x20, 9x20, 10x20, 12x20, 15x20m, <span class="hidden-mobile m-on-title" raw="0908207092">0908207***</span></a>
-                                </h3>
-                                <div class="pro-price">8 triệu/m²</div>
-                                    <span class="ic_dot">·</span>
-                                    <div class="pro-m2">100 m²</div>
-                                <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                <div class="date">
-                                    Hôm qua
-                                    <span class="tooltip-time">12/11/2020</span>
-                                </div>
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                    <i class="iconSave" data-productid="26958479" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Cần b&amp;#225;n Bi&amp;#234;n H&amp;#242;a New City, 5x19m, 5x20m, 6x20m, 7x20m, 8x20, 9x20, 10x20, 12x20, 15x20m, 0908207092&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/09/08/20200908184541-807d_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/09/08/20200908184541-807d_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="8 triệu/m²" data-area="100 m²" data-pricesort="800000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Chuyên đất Biên Hòa New City, sang nhượng nhiều nền giá cực kỳ hấp dẫn từ 12tr/m2. LH: 0908207092 (Ms. Lài alo, viber, call, sms,.. ). Email: lai.thaithi@propertyx.com.vnHạ tầng hoàn thiện, đang bàn " data-duration="Hôm qua" data-updatedtime="12/11/2020" data-datesort="11/12/2020 17:31:18" data-contactname="Thái Lài" data-contactmobile="0908207092" data-url="/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/can-ban-5x19m-5x20m-6x20m-7x20m-8x20-9x20-10x20-12x20-15x20m-0908207092-pr26958479" data-totalmedia="8" data-createbyuser="364325"></i>
-                                </span>
-                            </div>
-                        </li>
+                        </li>                       
+                        @endforeach
+
                 </ul>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
             <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/slide-next.png"></div>
@@ -1061,9 +788,12 @@
     <div class="title-list">Tin đăng đã xem</div>
     <div class="list-product-slide">
         <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
-            <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"><li class="vip0 swiper-slide swiper-slide-visible swiper-slide-active">
+            <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+                @foreach ($product1 as $product1)
+                <li class="vip0 swiper-slide swiper-slide-visible swiper-slide-active">
                                         <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072"><img src="./assets/image/20201111095750-3277_wm(2).jpg" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
+                                            <a href="{!! Route('nhadatban_single_post', $product1->id) !!}"><img src="{!! $product1->link !!}" alt="{!! $product1->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
                                             <span class="product-feature">
                                                 
                                                 
@@ -1071,225 +801,18 @@
                                             </span>
                                         </div>
                                         <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" title="{!! $products->title !!}">{!! $products->title !!}</a></h3>
-                                            <div class="pro-price">1.45 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">100 m²</div>
-                                            <div class="pro-adress">Biên Hòa, Đồng Nai</div>
-                                            <div class="date">2 ngày trước<span class="tooltip-time">11/11/2020</span></div>
+                                            <h3 class="p-title"><a href="{!! Route('nhadatban_single_post', $product1->id) !!}" title="{!! $product1->title !!}">{!! $product1->title !!}</a></h3>
+                                            <div class="pro-price">{!! $product1->price !!} tỷ</div>
+                                            <span class="ic_dot">·</span><div class="pro-m2">{!! $product1->area !!} m²</div>
+                                            <div class="pro-adress">{!! $product1->path_with_type !!}</div>
+                                            <div class="date">{!! $product1->created_at !!}<span class="tooltip-time">{!! $product1->created_at !!}</span></div>
                                             <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
                                                 <i class="iconSave" data-productid="27748072" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Kh%26%23225%3Bch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%26%23225%3Bn%20nhanh%20l%26%23244%3B%20%C4%91%E1%BA%A5t%20Bi%26%23234%3Bn%20H%26%23242%3Ba%20New%20City%2C%20DT%205%20x%2020m%2C%206%20x%2020m%2C%2012%20x%2020m%2C%20%C4%91%26%23227%3B%20nh%E1%BA%ADn%20s%E1%BB%95%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="{!! $products->title !!}" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành.&lt;br/&gt;DT:&lt;br/&gt;5 x 20m.&lt;br/&gt;6 x 18m.&lt;br/&gt;9 x 20 m.&lt;br/&gt;12 x 20 m.&lt;br/&gt;Giá: 1.450 tỷ bao sang tên và ra sổ hồng.&lt;br/&gt;Tất cả đã có sổ hồng từng nền, mặt tiền đường 24m, 18m, 15m, 13m.&lt;br/&gt;Làm việc trực tiếp chính chủ thương lượng giá tốt nhất cho anh chị mua đầu tư hoặc để dành ở sau này.&lt;br/&gt;LH: 0903224939 (Bá Lợi).&lt;br/&gt;&lt;br/&gt;Một số thông tin cơ bản Biên Hòa New City.&lt;br/&gt;- Hỗ trợ vay ngân hàng.&lt;br/&gt;- Cơ sở hạ tầng hoàn chỉnh 100% (điện, đường, cây xanh, nước... ).&lt;br/&gt;- Cắm mốc phân lô từng nền.&lt;br/&gt;- Dự án đất nền Biên Hoà New City năm trong khu kinh tế trọng điểm, khu sân golf Long Thành kết nối Quốc Lộ 51, cao tốc Long Thành - Vũng Tàu, Hương Lộ 2 - Cầu Đồng Nai 2, bên cạnh khu đô thị Aqua City, Cách dự án Vincity - Quận 9 chỉ một cây cầu.&lt;br/&gt;- Cầu Vàm Cái Sứt đã khởi công đi ngang dự án đến cao tốc Long Thành, rút ngắn đoạn đường về Quận 2, TP. HCM chỉ còn 20 phút.&lt;br/&gt;- Tiện ích đẳng cấp tiêu chuẩn Quốc tế:&lt;br/&gt;+ Quần thể sân golf, nhà hàng.&lt;br/&gt;+ Khuôn viên lớn, công viên xanh tươi mát.&lt;br/&gt;+ Khu thương mại, hồ bơi, phòng gym, spa, trường học, khu y tế.&lt;br/&gt;+ An ninh 24/24." data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-totalmedia="3" data-createbyuser="649852"></i>
                                                 </span>
                                         </div>
-                                    </li><li class="vip0 swiper-slide swiper-slide-visible swiper-slide-next">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/cho-thue-nha-rieng-duong-nguyen-hoang-ton-phuong-xuan-la/cho-tai-tay-ho-dt-150m2-mt-6m-lh-0376561855-pr27617698"><img src="./assets/image/20201031152534-92ea_wm.jpg" alt="CHO THUÊ NHÀ RIÊNG TẠI NGUYỄN HOÀNG TÔN, XUÂN LA TÂY HỒ. DT 150M2, MT 6M. LH 0376561855" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/cho-thue-nha-rieng-duong-nguyen-hoang-ton-phuong-xuan-la/cho-tai-tay-ho-dt-150m2-mt-6m-lh-0376561855-pr27617698" title="CHO THUÊ NHÀ RIÊNG TẠI NGUYỄN HOÀNG TÔN, XUÂN LA TÂY HỒ. DT 150M2, MT 6M. LH 0376561***">CHO THUÊ NHÀ RIÊNG TẠI NGUYỄN HOÀNG TÔN, XUÂN LA TÂY HỒ. DT 150M2, MT 6M. LH <span class="hidden-mobile box" raw="0376561855">0376561***</span></a></h3>
-                                            <div class="pro-price">100 triệu/tháng</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">150 m²</div>
-                                            <div class="pro-adress">Tây Hồ, Hà Nội</div>
-                                            <div class="date">3 ngày trước<span class="tooltip-time">10/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27617698" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Cho%20thu%26%23234%3B%20nh%26%23224%3B%20ri%26%23234%3Bng%20t%E1%BA%A1i%20Nguy%E1%BB%85n%20Ho%26%23224%3Bng%20T%26%23244%3Bn%2C%20Xu%26%23226%3Bn%20La%20T%26%23226%3By%20H%E1%BB%93.%20DT%20150m2%2C%20MT%206m.%20LH%200376561855%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F10%2F31%2FF5s5yBIs%2F20201031152534-92ea_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F10%2F31%2FF5s5yBIs%2F20201031152534-92ea_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="CHO THUÊ NHÀ RIÊNG TẠI NGUYỄN HOÀNG TÔN, XUÂN LA TÂY HỒ. DT 150M2, MT 6M. LH 0376561855" data-price="100 triệu/tháng" data-area="150 m²" data-pricesort="100000000" data-areasort="150" data-room="" data-toilets="" data-address="Tây Hồ, Hà Nội" data-description="Cho thuê nhà riêng tại Nguyễn Hoàng Tôn, Xuân La Tây Hồ đối diện Tân Hoàng Minh, mặt tiền 6m. Diện tích đất 150m2.&lt;br/&gt;Nhà 6 tầng 1 hầm. Tầng 1 83m2 còn lại là sân, lên Tầng 2,3,4,5 là 106m2. Tầng tum 106m đã có mái kín. Có thang máy điện 3 pha đầy đủ. Nhà 2 mặt tiền trước sau, đi ra 8 sở ban ngành chỉ 100m.&lt;br/&gt;Giá thuê 100triệu/tháng, thanh toán 6 tháng/lần hợp đồng dài hạn. &lt;br/&gt;Liên hệ chính chủ: 0376561855" data-duration="3 ngày trước" data-updatedtime="10/11/2020" data-datesort="11/10/2020 15:47:43" data-contactname="Anh Khoa" data-contactmobile="0376561855" data-url="https://batdongsan.com.vn/cho-thue-nha-rieng-duong-nguyen-hoang-ton-phuong-xuan-la/cho-tai-tay-ho-dt-150m2-mt-6m-lh-0376561855-pr27617698" data-totalmedia="5" data-createbyuser="1500303"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip3 swiper-slide swiper-slide-visible">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-pho-thai-ha-phuong-trung-liet/-yen-lang-studio-1pn-3pn-550tr-full-noi-tt-pr27761871"><img src="./assets/image/20201112090734-bd84_wm.jpg" alt="Chung cư Thái Hà - Yên Lãng, studio, 1PN - 3PN, 550tr/căn, full nội thất" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-pho-thai-ha-phuong-trung-liet/-yen-lang-studio-1pn-3pn-550tr-full-noi-tt-pr27761871" title="Chung cư Thái Hà - Yên Lãng, studio, 1PN - 3PN, 550tr/căn, full nội thất">Chung cư Thái Hà - Yên Lãng, studio, 1PN - 3PN, 550tr/căn, full nội thất</a></h3>
-                                            <div class="pro-price">550 triệu</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">35 m²</div>
-                                            <div class="pro-adress">Đống Đa, Hà Nội</div>
-                                            <div class="date">Hôm nay<span class="tooltip-time">12/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27761871" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Chung%20c%C6%B0%20Th%26%23225%3Bi%20H%26%23224%3B%20-%20Y%26%23234%3Bn%20L%26%23227%3Bng%2C%20studio%2C%201PN%20-%203PN%2C%20550tr%2Fc%C4%83n%2C%20full%20n%E1%BB%99i%20th%E1%BA%A5t%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F12%2F20201112090734-bd84_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F12%2F20201112090734-bd84_wm.jpg" data-vipclass="vip3" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Chung cư Thái Hà - Yên Lãng, studio, 1PN - 3PN, 550tr/căn, full nội thất" data-price="550 triệu" data-area="35 m²" data-pricesort="550000000" data-areasort="35" data-room="" data-toilets="" data-address="Đống Đa, Hà Nội" data-description="Chung cư Thái Hà - Yên Lãng, studio, 1PN - 3PN, 550tr/căn, full nội thất, ở ngay.&lt;br/&gt;&lt;br/&gt;Liên hệ CĐT: 0785658886.&lt;br/&gt;&lt;br/&gt;Tòa nhà mới xây 100% dân trí cao, hệ thống thang máy, phòng cháy chữa cháy an toàn 100%.&lt;br/&gt;&lt;br/&gt;Chiết khấu cao và nhiều ưu đãi cho các khách hàng tham quan và mua căn hộ tại dự án này.&lt;br/&gt;&lt;br/&gt;Giá gốc chủ đầu tư - cam kết chuẩn - không chênh - không phí môi giới.&lt;br/&gt;&lt;br/&gt;Quy mô: Chung cư mini Thái Hà, Yên Lãng với diện tích rộng hơn 300m2.&lt;br/&gt;&lt;br/&gt;+ Với 1 thang máy tốc độ cao, 1 thang bộ. Hệ thống phòng cháy chữa cháy đảm bảo.&lt;br/&gt;&lt;br/&gt;Vị trí đắc địa này, chắc chắn sẽ mang lại cho quý vị nhiều lợi ích khi mua tại dự án:&lt;br/&gt;&lt;br/&gt;+ Cách trường ĐH Thủy Lợi chỉ 300m.&lt;br/&gt;&lt;br/&gt;+ Cách các tuyến phố Hoàng Cầu, Chùa Bộc, Đặng Tiến Đông chi 500m.&lt;br/&gt;&lt;br/&gt;+ Cách Ngã Tư Sở chỉ 350m.&lt;br/&gt;&lt;br/&gt;+ Cách hồ Hoàng Cầu 200m.&lt;br/&gt;&lt;br/&gt;+ Cách trung tâm rạp chiếu phim Quốc Gia chỉ 800m.&lt;br/&gt;&lt;br/&gt;* Diện tích và giá bán: 25m2, 33m2, 45m2, 47m2, 49m2, 61m2 (bao gồm từ 1PN - 3PN).&lt;br/&gt;+ Có giá từ 550tr, 650tr, 850tr, 920tr, 970tr, 1,23 tỷ.&lt;br/&gt;&lt;br/&gt;* Pháp lý mua chung cư Thái Hà - Yên Lãng khách hàng ký HĐ trực tiếp với chủ đầu tư, tách sổ hồng sở hữu từng căn theo quy định của nhà nước đã ban hành." data-duration="Hôm nay" data-updatedtime="12/11/2020" data-datesort="11/12/2020 09:16:51" data-contactname="Chủ Đầu Tư" data-contactmobile="0785658886" data-url="https://batdongsan.com.vn/ban-can-ho-chung-cu-pho-thai-ha-phuong-trung-liet/-yen-lang-studio-1pn-3pn-550tr-full-noi-tt-pr27761871" data-totalmedia="5" data-createbyuser="977228"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip1 swiper-slide swiper-slide-visible">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-khuong-dinh/ban-mini-168-chinh-chu-2pn-2wc-pr27521585"><img src="./assets/image/20201023143815-829d_wm.jpg" alt="BÁN CĂN HỘ CHUNG CƯ MINI 168 KHƯƠNG ĐÌNH CHÍNH CHỦ 2PN 2WC" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-khuong-dinh/ban-mini-168-chinh-chu-2pn-2wc-pr27521585" title="BÁN CĂN HỘ CHUNG CƯ MINI 168 KHƯƠNG ĐÌNH CHÍNH CHỦ 2PN 2WC">BÁN CĂN HỘ CHUNG CƯ MINI 168 KHƯƠNG ĐÌNH CHÍNH CHỦ 2PN 2WC</a></h3>
-                                            <div class="pro-price">1.19 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">53 m²</div>
-                                            <div class="pro-adress">Thanh Xuân, Hà Nội</div>
-                                            <div class="date">6 ngày trước<span class="tooltip-time">06/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27521585" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20c%C4%83n%20h%E1%BB%99%20chung%20c%C6%B0%20mini%20168%20Kh%C6%B0%C6%A1ng%20%C4%90%26%23236%3Bnh%20ch%26%23237%3Bnh%20ch%E1%BB%A7%202PN%202WC%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F10%2F23%2FrMP3VdP9%2F20201023143815-829d_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F10%2F23%2FrMP3VdP9%2F20201023143815-829d_wm.jpg" data-vipclass="vip1" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="BÁN CĂN HỘ CHUNG CƯ MINI 168 KHƯƠNG ĐÌNH CHÍNH CHỦ 2PN 2WC" data-price="1.19 tỷ" data-area="53 m²" data-pricesort="1190000000" data-areasort="53" data-room="2" data-toilets="2" data-address="Thanh Xuân, Hà Nội" data-description="Do chưa có nhu cầu sử dụng nên gia đình mình bán căn căn hộ tầng 4, căn 402, DT 53m vuông, Giá 1.19 tỷ tại 166 Khương Đình (gần Ngã tư Sở, Royal City). Đây là khu căn hộ mini mới nên rất sạch sẽ, thoáng mát, có 2 thang máy. Mặt ngoài quay ra đường lớn Khương Đình nên ô tô ra vào thoải mái, bên dưới có hầm gửi xe và bảo vệ riêng của tòa nhà nên đảm bảo về an ninh. Nhà mình gồm 1 PK và phòng bếp, 2 PN, 2 vệ sinh, 1 ban công (mặt đường Khương Đình) hướng ĐN nên mùa hè rất mát và thoáng. Hiện tại nhà có trần thạch cao, tủ bếp cao cấp, điều hòa, bình nóng lạnh, vòi sen đầy đủ, đường truyền hình cáp, internet,... Điện nước theo công tơ giá nhà nước.&lt;br/&gt;Nếu ai có nhu cầu thuê vui lòng LH Ms. Thúy 0989 315 565 hoặc 0946 966 288.&lt;br/&gt;Giá: 1.19 tỷ (có thể thương lượng) - Không qua môi giới." data-duration="6 ngày trước" data-updatedtime="06/11/2020" data-datesort="11/06/2020 17:14:01" data-contactname="Ms. Thúy" data-contactmobile="0989 315 565 ho?c 0946 966 288." data-url="https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-khuong-dinh/ban-mini-168-chinh-chu-2pn-2wc-pr27521585" data-totalmedia="10" data-createbyuser="166526"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip1 vipaddon swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-pho-phuong-liet-phuong-phuong-liet/ban-lo-goc-thanh-xuan-56m2-gia-4-ty-pr27621571"><img src="./assets/image/20201101095158-7226_wm.jpg" alt="BÁN NHÀ PHỐ PHƯƠNG LIỆT LÔ GÓC, THANH XUÂN, 56M2 GIÁ 4 TỶ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-pho-phuong-liet-phuong-phuong-liet/ban-lo-goc-thanh-xuan-56m2-gia-4-ty-pr27621571" title="BÁN NHÀ PHỐ PHƯƠNG LIỆT LÔ GÓC, THANH XUÂN, 56M2 GIÁ 4 TỶ">BÁN NHÀ PHỐ PHƯƠNG LIỆT LÔ GÓC, THANH XUÂN, 56M2 GIÁ 4 TỶ</a></h3>
-                                            <div class="pro-price">4 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">56 m²</div>
-                                            <div class="pro-adress">Thanh Xuân, Hà Nội</div>
-                                            <div class="date">Hôm nay<span class="tooltip-time">12/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27621571" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20nh%26%23224%3B%20ph%E1%BB%91%20Ph%C6%B0%C6%A1ng%20Li%E1%BB%87t%20l%26%23244%3B%20g%26%23243%3Bc%2C%20Thanh%20Xu%26%23226%3Bn%2C%2056m2%20gi%26%23225%3B%204%20t%E1%BB%B7%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F01%2F20201101095158-7226_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E%3Cimg%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fmobile%2FNoImage.svg%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F01%2F20201101095158-7ecb_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E%3Cimg%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fmobile%2FNoImage.svg%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F01%2F20201101095158-32b4_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F640x430%2F2020%2F11%2F01%2F20201101095158-7226_wm.jpg" data-vipclass="vip1 vipaddon" data-isaddon="true" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="BÁN NHÀ PHỐ PHƯƠNG LIỆT LÔ GÓC, THANH XUÂN, 56M2 GIÁ 4 TỶ" data-price="4 tỷ" data-area="56 m²" data-pricesort="4000000000" data-areasort="56" data-room="3" data-toilets="2" data-address="Thanh Xuân, Hà Nội" data-description="+ Nhà con cái đi nước ngoài nên không xây sửa mà đang cho thuê 10 triệu/tháng.&lt;br/&gt;+ Nhà cách ngõ ô tô 15m, cách đường to ô tô tránh 30m, khu dân trí cao, giao thông thuận lợi, tiện ích không thiếu thứ gì.&lt;br/&gt;+ Mảnh đất lô góc vuông vắn 2 mặt tiền đón lộc, thoáng sáng và tràn ngập sinh khí, hiện có 2 nhà 2 tầng và 3 tầng.&lt;br/&gt;+ Nhà nằm ở vị trí sầm uất, trong tuyến phố Phương Liệt giao Trường Chinh, Giải Phóng, gần các phố Đại La, Tôn Thất Tùng, Lê Trọng Tấn, Nguyễn Lân... Xung quanh là các trường Đại học Bách Khoa, ĐH Xây dựng, ĐH Kinh tế Quốc dân, Trường cấp 1, 2 Phương Liệt... Gần bệnh viện Bạch Mai, Việt Pháp, Tai Mũi Họng TW, ga Giáp Bát, cách hồ sinh thái Phương Liệt vài chục mét, gần trạm y tế, nhà văn hoá, UBND phường vô cùng tiện lợi...&lt;br/&gt;+ Thửa đất vuông vắn, lô góc, 2 mặt thoáng đón lộc, từ tầng 2 xây đua ra thành 80m2. Khách mua về xây toà chung cư mini 7 tầng thang máy cho thuê thì hái ra tiền.&lt;br/&gt;+ Sổ đỏ vuông vắn chính chủ." data-duration="Hôm nay" data-updatedtime="12/11/2020" data-datesort="11/12/2020 08:28:10" data-contactname="Đinh Xuân Lượng" data-contactmobile="0987818089" data-url="https://batdongsan.com.vn/ban-nha-rieng-pho-phuong-liet-phuong-phuong-liet/ban-lo-goc-thanh-xuan-56m2-gia-4-ty-pr27621571" data-totalmedia="3" data-createbyuser="1496408"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip0 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-hong-ha-prj-botanica-premier/cho-nnh-8-gia-nt-mua-dich-1-2-3pn-officetel-tu-9tr-th-pr27738698"><img src="./assets/image/20201110144803-5576_wm.jpg" alt="Cho thuê nhanh 8 căn Botanica Premier Hồng Hà - giá nhất mùa dịch - 1 - 2 - 3PN - officetel từ 9tr" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-hong-ha-prj-botanica-premier/cho-nnh-8-gia-nt-mua-dich-1-2-3pn-officetel-tu-9tr-th-pr27738698" title="Cho thuê nhanh 8 căn Botanica Premier Hồng Hà - giá nhất mùa dịch - 1 - 2 - 3PN - officetel từ 9tr">Cho thuê nhanh 8 căn Botanica Premier Hồng Hà - giá nhất mùa dịch - 1 - 2 - 3PN - officetel từ 9tr</a></h3>
-                                            <div class="pro-price">9 triệu/tháng</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">75 m²</div>
-                                            <div class="pro-adress">Hồ Chí Minh, Tân Bình</div>
-                                            <div class="date">2 ngày trước<span class="tooltip-time">10/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27738698" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Cho%20thu%26%23234%3B%20nhanh%208%20c%C4%83n%20Botanica%20Premier%20H%E1%BB%93ng%20H%26%23224%3B%20-%20gi%26%23225%3B%20nh%E1%BA%A5t%20m%26%23249%3Ba%20d%E1%BB%8Bch%20-%201%20-%202%20-%203PN%20-%20officetel%20t%E1%BB%AB%209tr%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F10%2F20201110144803-5576_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F10%2F20201110144803-5576_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Cho thuê nhanh 8 căn Botanica Premier Hồng Hà - giá nhất mùa dịch - 1 - 2 - 3PN - officetel từ 9tr" data-price="9 triệu/tháng" data-area="75 m²" data-pricesort="9000000" data-areasort="75" data-room="" data-toilets="0" data-address="Hồ Chí Minh, Tân Bình" data-description="Hotline: 0933.46.3434 chuyên hỗ trợ khách hàng tìm thuê căn hộ Botanica Novaland 24/07, cam kết rổ hàng tốt nhất khu vực, chính chủ giá tốt, tìm căn nhanh và phù hợp cho khách hàng nhanh nhất, chuyên" data-duration="2 ngày trước" data-updatedtime="10/11/2020" data-datesort="2020-11-10T14:52:39+07:00" data-contactname="Nguyenvanquang" data-contactmobile="0933463434" data-url="https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-hong-ha-prj-botanica-premier/cho-nnh-8-gia-nt-mua-dich-1-2-3pn-officetel-tu-9tr-th-pr27738698" data-totalmedia="0" data-createbyuser="356511"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip0 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-mat-pho-phuong-8-12/ban-duong-127-le-van-tho-trung-tam-quan-go-vap-gan-cho-hanh-thong-tay-pr27742648"><img src="./assets/image/20201110185937-3217_wm.jpg" alt="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-mat-pho-phuong-8-12/ban-duong-127-le-van-tho-trung-tam-quan-go-vap-gan-cho-hanh-thong-tay-pr27742648" title="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây">Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây</a></h3>
-                                            <div class="pro-price">22 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">104 m²</div>
-                                            <div class="pro-adress">Hồ Chí Minh, Gò Vấp</div>
-                                            <div class="date">2 ngày trước<span class="tooltip-time">10/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27742648" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20nh%26%23224%3B%20m%E1%BA%B7t%20127%20L%26%23234%3B%20V%C4%83n%20Th%E1%BB%8D%2C%20trung%20t%26%23226%3Bm%20qu%E1%BA%ADn%20G%26%23242%3B%20V%E1%BA%A5p%2C%20g%E1%BA%A7n%20ch%E1%BB%A3%20H%E1%BA%A1nh%20Th%26%23244%3Bng%20T%26%23226%3By%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F10%2F20201110185937-3217_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F10%2F20201110185937-3217_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán nhà mặt 127 Lê Văn Thọ, trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây" data-price="22 tỷ" data-area="104 m²" data-pricesort="22000000000" data-areasort="104" data-room="" data-toilets="0" data-address="Hồ Chí Minh, Gò Vấp" data-description="Bán nhà mặt 127 Lê Văn Thọ, Gò Vấp. Trung tâm quận Gò Vấp, gần chợ Hạnh Thông Tây, đang cho thuê làm khách sạn. Diện tích 4x26m, SHR. Khu dân cư rất đông, hiện hữu, tiện ích xung quanh. Vị trí đẹp, n" data-duration="2 ngày trước" data-updatedtime="10/11/2020" data-datesort="2020-11-10T19:02:46+07:00" data-contactname="Bé Hường" data-contactmobile="0794686866" data-url="https://batdongsan.com.vn/ban-nha-mat-pho-phuong-8-12/ban-duong-127-le-van-tho-trung-tam-quan-go-vap-gan-cho-hanh-thong-tay-pr27742648" data-totalmedia="0" data-createbyuser="1101976"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip5 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/can-ban-ngo-90-pho-o-to-do-cua-kinh-doanh-70m2x4t-gia-chi-6-75-ty-pr27722031"><img src="./assets/image/20201109140612-2d75_wm.jpg" alt="Cần bán nhà ngõ 90 phố Hoa Bằng, Yên Hòa. Ô tô đỗ cửa, kinh doanh, 70m2 x 4T, giá chỉ 6,75 tỷ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/can-ban-ngo-90-pho-o-to-do-cua-kinh-doanh-70m2x4t-gia-chi-6-75-ty-pr27722031" title="Cần bán nhà ngõ 90 phố Hoa Bằng, Yên Hòa. Ô tô đỗ cửa, kinh doanh, 70m2 x 4T, giá chỉ 6,75 tỷ">Cần bán nhà ngõ 90 phố Hoa Bằng, Yên Hòa. Ô tô đỗ cửa, kinh doanh, 70m2 x 4T, giá chỉ 6,75 tỷ</a></h3>
-                                            <div class="pro-price">6.75 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">70 m²</div>
-                                            <div class="pro-adress">Hà Nội, Cầu Giấy</div>
-                                            <div class="date">3 ngày trước<span class="tooltip-time">09/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27722031" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22C%E1%BA%A7n%20b%26%23225%3Bn%20nh%26%23224%3B%20ng%26%23245%3B%2090%20ph%E1%BB%91%20Hoa%20B%E1%BA%B1ng%2C%20Y%26%23234%3Bn%20H%26%23242%3Ba.%20%26%23212%3B%20t%26%23244%3B%20%C4%91%E1%BB%97%20c%E1%BB%ADa%2C%20kinh%20doanh%2C%2070m2%20x%204T%2C%20gi%26%23225%3B%20ch%E1%BB%89%206%2C75%20t%E1%BB%B7%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F09%2F20201109140612-2d75_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F09%2F20201109140612-2d75_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Cần bán nhà ngõ 90 phố Hoa Bằng, Yên Hòa. Ô tô đỗ cửa, kinh doanh, 70m2 x 4T, giá chỉ 6,75 tỷ" data-price="6.75 tỷ" data-area="70 m²" data-pricesort="6750000000" data-areasort="70" data-room="4" data-toilets="4" data-address="Hà Nội, Cầu Giấy" data-description="Cần bán nhà ngõ 90 phố Hoa Bằng, Yên Hòa. Ô tô đỗ cửa, kinh doanh, 70m2 x 4T, giá chỉ 6,75 tỷ. Thiết kế 4 tầng bao gồm: + Tầng 1: Phòng khách, bếp, nhà vệ sinh. + Tầng 2 + 3: Tầng 2 phòng + 1 nhà vệ " data-duration="3 ngày trước" data-updatedtime="09/11/2020" data-datesort="2020-11-09T14:07:29+07:00" data-contactname="Anh Tuyến" data-contactmobile="0862820127" data-url="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/can-ban-ngo-90-pho-o-to-do-cua-kinh-doanh-70m2x4t-gia-chi-6-75-ty-pr27722031" data-totalmedia="0" data-createbyuser="1493788"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip5 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/chinh-chu-ban-gap-ngo-184-gia-1-5-ty-dt-35mx3t-o-luon-pr24298624"><img src="./assets/image/20200210153555-cd11_wm.jpg" alt="Chính chủ bán gấp nhà ngõ 184 Hoa Bằng. Giá 1.5 tỷ, DT 35m2 x 3T, ở luôn" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/chinh-chu-ban-gap-ngo-184-gia-1-5-ty-dt-35mx3t-o-luon-pr24298624" title="Chính chủ bán gấp nhà ngõ 184 Hoa Bằng. Giá 1.5 tỷ, DT 35m2 x 3T, ở luôn">Chính chủ bán gấp nhà ngõ 184 Hoa Bằng. Giá 1.5 tỷ, DT 35m2 x 3T, ở luôn</a></h3>
-                                            <div class="pro-price">1.5 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">35 m²</div>
-                                            <div class="pro-adress">Hà Nội, Cầu Giấy</div>
-                                            <div class="date">3 tháng trước<span class="tooltip-time">04/08/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="24298624" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Ch%26%23237%3Bnh%20ch%E1%BB%A7%20b%26%23225%3Bn%20g%E1%BA%A5p%20nh%26%23224%3B%20ng%26%23245%3B%20184%20Hoa%20B%E1%BA%B1ng.%20Gi%26%23225%3B%201.5%20t%E1%BB%B7%2C%20DT%2035m2%20x%203T%2C%20%E1%BB%9F%20lu%26%23244%3Bn%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F02%2F10%2F20200210153555-cd11_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F02%2F10%2F20200210153555-cd11_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Chính chủ bán gấp nhà ngõ 184 Hoa Bằng. Giá 1.5 tỷ, DT 35m2 x 3T, ở luôn" data-price="1.5 tỷ" data-area="35 m²" data-pricesort="1500000000" data-areasort="35" data-room="3" data-toilets="2" data-address="Hà Nội, Cầu Giấy" data-description="Chính chủ bán gấp nhà ngõ 184 Hoa Bằng, giá 1.5 tỷ, DT 35m2 x 3T, ở luôn. Mô tả: Diện tích xây dựng 35m2 x 2,5 tầng. Mặt tiền rộng 3,3m. Hướng Bắc mát mẻ. Ngõ nông, gần phố chính, xe máy tránh nhau t" data-duration="3 tháng trước" data-updatedtime="04/08/2020" data-datesort="2020-08-04T12:17:03.427+07:00" data-contactname="Chính Chủ" data-contactmobile="0943699922" data-url="https://batdongsan.com.vn/ban-nha-rieng-duong-hoa-bang-phuong-yen-hoa-2/chinh-chu-ban-gap-ngo-184-gia-1-5-ty-dt-35mx3t-o-luon-pr24298624" data-totalmedia="0" data-createbyuser="377624"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip5 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-tran-thai-tong-phuong-dich-vong-hau/ban-30m2-4tang-1-95-ty-cau-giay-pr27234497"><img src="./assets/image/20200930133829-6bf0_wm.jpg" alt="Bán nhà Trần Thái Tông 30m2 - 4 tầng - 1.95 tỷ Cầu Giấy" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-duong-tran-thai-tong-phuong-dich-vong-hau/ban-30m2-4tang-1-95-ty-cau-giay-pr27234497" title="Bán nhà Trần Thái Tông 30m2 - 4 tầng - 1.95 tỷ Cầu Giấy">Bán nhà Trần Thái Tông 30m2 - 4 tầng - 1.95 tỷ Cầu Giấy</a></h3>
-                                            <div class="pro-price">1.95 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">30 m²</div>
-                                            <div class="pro-adress">Hà Nội, Cầu Giấy</div>
-                                            <div class="date">1 tháng trước<span class="tooltip-time">30/09/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27234497" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20nh%26%23224%3B%20Tr%E1%BA%A7n%20Th%26%23225%3Bi%20T%26%23244%3Bng%2030m2%20-%204%20t%E1%BA%A7ng%20-%201.95%20t%E1%BB%B7%20C%E1%BA%A7u%20Gi%E1%BA%A5y%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F09%2F30%2F20200930133829-6bf0_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F09%2F30%2F20200930133829-6bf0_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán nhà Trần Thái Tông 30m2 - 4 tầng - 1.95 tỷ Cầu Giấy" data-price="1.95 tỷ" data-area="30 m²" data-pricesort="1950000000" data-areasort="30" data-room="4" data-toilets="3" data-address="Hà Nội, Cầu Giấy" data-description="- Phố Trần Thái Tông nằm ở trung tâm quận Cầu Giấy. - Nhà đẹp ở luôn, giá siêu dễ thương. - Vị trí ngay gần ngã tư phố Xuân Thuỷ và Nguyễn Phong Sắc Trần Thái Tông. - Nhà chủ tự xây chắc chắn, hàng x" data-duration="1 tháng trước" data-updatedtime="30/09/2020" data-datesort="2020-10-08T09:52:51.733+07:00" data-contactname="Nguyễn Xuân Mạnh" data-contactmobile="0971188995" data-url="https://batdongsan.com.vn/ban-nha-rieng-duong-tran-thai-tong-phuong-dich-vong-hau/ban-30m2-4tang-1-95-ty-cau-giay-pr27234497" data-totalmedia="0" data-createbyuser="1318585"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip5 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong/ban-gap-mat-ngo-gia-1-45-ty-26m2-oto-chay-qua-pr27544966"><img src="./assets/image/no-image.png" alt="Bán gấp nhà mặt ngõ Xuân Thủy giá 1,45 tỷ - 26m2, ô tô chạy qua" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong/ban-gap-mat-ngo-gia-1-45-ty-26m2-oto-chay-qua-pr27544966" title="Bán gấp nhà mặt ngõ Xuân Thủy giá 1,45 tỷ - 26m2, ô tô chạy qua">Bán gấp nhà mặt ngõ Xuân Thủy giá 1,45 tỷ - 26m2, ô tô chạy qua</a></h3>
-                                            <div class="pro-price">1.45 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">26 m²</div>
-                                            <div class="pro-adress">Hà Nội, Cầu Giấy</div>
-                                            <div class="date">2 tuần trước<span class="tooltip-time">26/10/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27544966" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20g%E1%BA%A5p%20nh%26%23224%3B%20m%E1%BA%B7t%20ng%26%23245%3B%20Xu%26%23226%3Bn%20Th%E1%BB%A7y%20gi%26%23225%3B%201%2C45%20t%E1%BB%B7%20-%2026m2%2C%20%26%23244%3B%20t%26%23244%3B%20ch%E1%BA%A1y%20qua%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%2F%3E" data-avatarwap="https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fmobile%2FNoImage.svg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán gấp nhà mặt ngõ Xuân Thủy giá 1,45 tỷ - 26m2, ô tô chạy qua" data-price="1.45 tỷ" data-area="26 m²" data-pricesort="1450000000" data-areasort="26" data-room="1" data-toilets="1" data-address="Hà Nội, Cầu Giấy" data-description="Bán gấp nhà mặt ngõ Xuân Thủy giá 1,45 tỷ - 26m2, ô tô chạy qua. Thông tin: Diện tích xây dựng 26m2 x 2 tầng. Mặt tiền 4m. Hướng Đông. - Nhà gần đường lớn, ngõ rộng, tối oto có thể vào được, di chuyể" data-duration="2 tuần trước" data-updatedtime="26/10/2020" data-datesort="2020-10-26T09:36:10+07:00" data-contactname="Chính Chủ" data-contactmobile="0943699922" data-url="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong/ban-gap-mat-ngo-gia-1-45-ty-26m2-oto-chay-qua-pr27544966" data-totalmedia="0" data-createbyuser="377624"></i>
-                                                </span>
-                                        </div>
-                                    </li><li class="vip5 swiper-slide">
-                                        <div class="img-product">
-                                            <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong-hau/ban-gap-mat-ngo-gia-1-35-ty-dt-26m2-oto-chay-qua-pr27635395"><img src="./assets/image/20201102172750-466d_wm.jpg" alt="Bán gấp nhà mặt ngõ Xuân Thủy, giá 1,35 tỷ. DT 26m2, ô tô chạy qua" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
-                                            <span class="product-feature">
-                                                
-                                                
-                                                
-                                            </span>
-                                        </div>
-                                        <div class="info-product">
-                                            <h3 class="p-title"><a href="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong-hau/ban-gap-mat-ngo-gia-1-35-ty-dt-26m2-oto-chay-qua-pr27635395" title="Bán gấp nhà mặt ngõ Xuân Thủy, giá 1,35 tỷ. DT 26m2, ô tô chạy qua">Bán gấp nhà mặt ngõ Xuân Thủy, giá 1,35 tỷ. DT 26m2, ô tô chạy qua</a></h3>
-                                            <div class="pro-price">1.35 tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">26 m²</div>
-                                            <div class="pro-adress">Hà Nội, Cầu Giấy</div>
-                                            <div class="date">1 tuần trước<span class="tooltip-time">02/11/2020</span></div>
-                                            <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
-                                                <i class="iconSave" data-productid="27635395" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22B%26%23225%3Bn%20g%E1%BA%A5p%20nh%26%23224%3B%20m%E1%BA%B7t%20ng%26%23245%3B%20Xu%26%23226%3Bn%20Th%E1%BB%A7y%2C%20gi%26%23225%3B%201%2C35%20t%E1%BB%B7.%20DT%2026m2%2C%20%26%23244%3B%20t%26%23244%3B%20ch%E1%BA%A1y%20qua%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F02%2F20201102172750-466d_wm.jpg%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F02%2F20201102172750-466d_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán gấp nhà mặt ngõ Xuân Thủy, giá 1,35 tỷ. DT 26m2, ô tô chạy qua" data-price="1.35 tỷ" data-area="26 m²" data-pricesort="1350000000" data-areasort="26" data-room="" data-toilets="0" data-address="Hà Nội, Cầu Giấy" data-description="Bán gấp nhà mặt ngõ Xuân Thủy giá 1,35 tỷ. DT 26m2, ô tô chạy qua. Thông tin: Diện tích xây dựng 26m2 x 2 tầng. Mặt tiền 4m. Hướng Đông. - Nhà gần đường lớn, ngõ rộng, tối oto có thể vào được, di chu" data-duration="1 tuần trước" data-updatedtime="02/11/2020" data-datesort="2020-11-02T17:28:15+07:00" data-contactname="Chính Chủ" data-contactmobile="0988796665" data-url="https://batdongsan.com.vn/ban-nha-rieng-duong-xuan-thuy-phuong-dich-vong-hau/ban-gap-mat-ngo-gia-1-35-ty-dt-26m2-oto-chay-qua-pr27635395" data-totalmedia="0" data-createbyuser="377624"></i>
-                                                </span>
-                                        </div>
-                                    </li></ul>
+                                    </li>
+                @endforeach                    
+                </ul>
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         <div class="swiper-button-next slide-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/slide-next.png"></div>
         <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="./assets/image/slide-prev.png"></div>

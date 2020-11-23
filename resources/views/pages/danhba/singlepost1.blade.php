@@ -32,7 +32,7 @@
     <meta name="custom-apple-itunes-app" content="app-id=866492094" />
     <meta name ='keywords' content = 'Công, ty, chúng, tôi, hoạt, động, trong, lĩnh, vực' />
 <meta name ='description' content = 'Công ty chúng tôi hoạt động trong lĩnh vực dịch vụ môi giới Bất động sản cho thuê được điều hành bởi đội ngũ dày dặn kinh nghiệm trong nhiề' />
-<title>CÔNG TY TNHH DỊCH VỤ BĐS GIGA REAL | Công ty môi giới</title>
+<title> {!! $brokers->name !!} | Công ty môi giới</title>
 <meta name ='googlebot-news' content = 'noindex' />
 
         
@@ -268,7 +268,7 @@
                 </div>
                 <div class="ttmg">
                     <h1 class="broker-name">
-                        C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL
+                    {!! $brokers->name !!}
                     </h1>
                     <div class="mb5">
                         <span class="br-icon br-address"></span>
@@ -304,7 +304,7 @@
                     </div>
                     <div class="ltrAreaIntro">
                         <div>
-                            C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL môi giới ở những khu vực sau:
+                        {!! $brokers->name !!} môi giới ở những khu vực sau:
                         </div>
                         <ul>
                                         <li><span>Cho thu&#xEA; nh&#xE0; m&#x1EB7;t ph&#x1ED1; &#x1EDF; Qu&#x1EAD;n 1, H&#x1ED3; Ch&#xED; Minh</span></li>

@@ -1,6 +1,6 @@
 <?php
 
-use App\District;
+use App\Models\District;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // HomeController index
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 // check post
 Route::get('/post', 'PostController@post');

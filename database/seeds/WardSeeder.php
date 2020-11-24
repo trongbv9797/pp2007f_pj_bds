@@ -1,6 +1,6 @@
 <?php
 
-use App\Ward;
+use App\Models\Ward;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

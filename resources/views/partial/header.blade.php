@@ -139,7 +139,7 @@
             <div class="drop-menu">
                 <div class="left-menu">
                     <h1>
-                        <a href="https://batdongsan.com.vn/" rel="nofollow"><img src="./assets/image/ic_logo_2.svg"
+                        <a href="{{ route('home') }}" rel="nofollow"><img src="./assets/image/ic_logo_2.svg"
                                 ignore-lazy-loading="" noloaderror="true"
                                 onerror="this.src='https://staticfile.batdongsan.com.vn/image/icons/ic_logo_2.png'"
                                 alt="Kênh thông tin mua bán, cho thuê nhà đất số 1" title="Batdongsan.com.vn"></a>
@@ -158,29 +158,29 @@
                                         class="icon"><img src="./assets/image/ic_house.png"></span><span
                                         class="text">Trang chủ</span></a></li>
                             <li class="lv0">
-                                <a href="{!! Route('nha_dat_ban') !!}" class="haslink "><span class="icon"><img
+                                <a href="{!!  Route('nha_dat_ban') !!}" class="haslink "><span class="icon"><img
                                             src="./assets/image/ic_for_sale.svg"></span><span class="text">Nhà đất
                                         bán</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{!! Route('ban_can_ho_chung_cu') !!}"
-                                            class="haslink ">Bán căn hộ chung cư</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_nha_rieng') !!}"
-                                            class="haslink ">Bán nhà riêng</a></li>
-                                    <li class="lv1"><a href="{!! Route('ban_nha_mat_pho') !!}"
-                                            class="haslink ">Bán nhà mặt phố</a></li>
+                                    <li class="lv1"><a href="{!!  Route('ban_can_ho_chung_cu') !!}" class="haslink ">Bán
+                                            căn hộ chung cư</a></li>
+                                    <li class="lv1"><a href="{!!  Route('ban_nha_rieng') !!}" class="haslink ">Bán nhà
+                                            riêng</a></li>
+                                    <li class="lv1"><a href="{!!  Route('ban_nha_mat_pho') !!}" class="haslink ">Bán nhà
+                                            mặt phố</a></li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="{!! Route('nha_dat_cho_thue') !!}" class="haslink "><span
+                            <li class="lv0"><a href="{!!  Route('nha_dat_cho_thue') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_for_rent.svg"></span><span
                                         class="text">Nhà đất cho thuê</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_can_ho') !!}"
-                                            class="haslink ">Cho thuê căn hộ chung cư</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_rieng') !!}"
-                                            class="haslink ">Cho thuê nhà riêng</a></li>
-                                    <li class="lv1"><a href="{!! Route('cho_thue_nha_mat_pho') !!}"
+                                    <li class="lv1"><a href="{!!  Route('cho_thue_can_ho') !!}" class="haslink ">Cho
+                                            thuê căn hộ chung cư</a></li>
+                                    <li class="lv1"><a href="{!!  Route('cho_thue_nha_rieng') !!}" class="haslink ">Cho
+                                            thuê nhà riêng</a></li>
+                                    <li class="lv1"><a href="{!!  Route('cho_thue_nha_mat_pho') !!}"
                                             class="haslink ">Cho thuê nhà mặt phố</a></li>
                                 </ul>
                             </li>
@@ -217,8 +217,8 @@
                                         class="text">Cần mua - Cần thuê</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{{ route('buyer') }}"
-                                            class="haslink indent">Nhà đất cần mua</a>
+                                    <li class="lv1"><a href="{{ route('buyer') }}" class="haslink indent">Nhà đất cần
+                                            mua</a>
                                         <div class="arrrow"></div>
                                         <ul>
                                             <li class="lv2"><a href="https://batdongsan.com.vn/mua-can-ho-chung-cu"
@@ -243,8 +243,8 @@
                                                     class="haslink ">Mua loại bất động sản khác</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lv1"><a href="{{ route('seller') }}"
-                                            class="haslink indent">Nhà đất cần thuê</a>
+                                    <li class="lv1"><a href="{{ route('seller') }}" class="haslink indent">Nhà đất cần
+                                            thuê</a>
                                         <div class="arrrow"></div>
                                         <ul>
                                             <li class="lv2"><a href="https://batdongsan.com.vn/can-thue-can-ho-chung-cu"
@@ -270,30 +270,29 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="{!! Route('tintucbds') !!}" class="haslink "><span
+                            <li class="lv0"><a href="{!!  Route('tintucbds') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_news.svg"></span><span class="text">Tin
                                         tức</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{!! Route('tintucbds') !!}" class="haslink ">BĐS
+                                    <li class="lv1"><a href="{!!  Route('tintucbds') !!}" class="haslink ">BĐS
                                             &amp; Covid-19</a></li>
-                                    <li class="lv1"><a href="{!! Route('tinthitruong') !!}"
-                                            class="haslink ">Tin thị trường</a></li>
-                                    <li class="lv1"><a href="{!! Route('tintucbds') !!}"
-                                            class="haslink ">Interaktive Story</a></li>
-                                    <li class="lv1"><a href="{!! Route('phan_tich') !!}"
-                                            class="haslink ">Phân tích - nhận định</a></li>
-                                    <li class="lv1"><a href="{!! Route('chinh_sach') !!}"
-                                            class="haslink ">Chính sách - Quản lý</a></li>
-                                    <li class="lv1"><a href="{!! Route('chinh_sach') !!}"
-                                            class="haslink ">Thông tin quy hoạch</a></li>
-                                    <li class="lv1"><a href="{!! Route('tintucbds_tg') !!}"
-                                            class="haslink ">Bất động sản thế giới</a></li>
-                                    <li class="lv1"><a
-                                            href="{!! Route('phan_tich') !!}"
-                                            class="haslink ">Tài chính - Chứng khoán - BĐS</a></li>
-                                    <li class="lv1"><a href="{!! Route('phan_tich') !!}"
-                                            class="haslink indent">Tư vấn luật</a>
+                                    <li class="lv1"><a href="{!!  Route('tinthitruong') !!}" class="haslink ">Tin thị
+                                            trường</a></li>
+                                    <li class="lv1"><a href="{!!  Route('tintucbds') !!}" class="haslink ">Interaktive
+                                            Story</a></li>
+                                    <li class="lv1"><a href="{!!  Route('phan_tich') !!}" class="haslink ">Phân tích -
+                                            nhận định</a></li>
+                                    <li class="lv1"><a href="{!!  Route('chinh_sach') !!}" class="haslink ">Chính sách -
+                                            Quản lý</a></li>
+                                    <li class="lv1"><a href="{!!  Route('chinh_sach') !!}" class="haslink ">Thông tin
+                                            quy hoạch</a></li>
+                                    <li class="lv1"><a href="{!!  Route('tintucbds_tg') !!}" class="haslink ">Bất động
+                                            sản thế giới</a></li>
+                                    <li class="lv1"><a href="{!!  Route('phan_tich') !!}" class="haslink ">Tài chính -
+                                            Chứng khoán - BĐS</a></li>
+                                    <li class="lv1"><a href="{!!  Route('phan_tich') !!}" class="haslink indent">Tư vấn
+                                            luật</a>
                                         <div class="arrrow"></div>
                                         <ul>
                                             <li class="lv2"><a href="https://batdongsan.com.vn/trinh-tu-thu-tuc"
@@ -412,16 +411,16 @@
                                             sắm</a></li>
                                 </ul>
                             </li>
-                            <li class="lv0"><a href="{!! route('phongthuy') !!}" class="haslink "><span
+                            <li class="lv0"><a href="{!!  route('phongthuy') !!}" class="haslink "><span
                                         class="icon"><img src="./assets/image/ic_feng_shui.svg"></span><span
                                         class="text">Phong thủy</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{!! route('phongthuytoancanh') !!}"
-                                            class="haslink ">Phong thủy toàn cảnh</a></li>
-                                    <li class="lv1"><a href="{!! route('tuvanphongthuy') !!}"
-                                            class="haslink ">Tư vấn phong thủy</a></li>
-                                    <li class="lv1"><a href="{!! route('phongthuynhao') !!}"
+                                    <li class="lv1"><a href="{!!  route('phongthuytoancanh') !!}" class="haslink ">Phong
+                                            thủy toàn cảnh</a></li>
+                                    <li class="lv1"><a href="{!!  route('tuvanphongthuy') !!}" class="haslink ">Tư vấn
+                                            phong thủy</a></li>
+                                    <li class="lv1"><a href="{!!  route('phongthuynhao') !!}"
                                             class="haslink indent">Phong thủy nhà ở</a>
                                         <div class="arrrow"></div>
                                         <ul>
@@ -438,10 +437,10 @@
                                                     class="haslink ">Phong thủy cửa chính, sân vườn</a></li>
                                         </ul>
                                     </li>
-                                    <li class="lv1"><a href="{!! route('phongthuyvanphong') !!}"
-                                            class="haslink ">Phong thủy văn phòng</a></li>
-                                    <li class="lv1"><a href="{!! route('phongthuytheotuoi') !!}"
-                                            class="haslink ">Phong thủy theo tuổi</a></li>
+                                    <li class="lv1"><a href="{!!  route('phongthuyvanphong') !!}" class="haslink ">Phong
+                                            thủy văn phòng</a></li>
+                                    <li class="lv1"><a href="{!!  route('phongthuytheotuoi') !!}" class="haslink ">Phong
+                                            thủy theo tuổi</a></li>
                                 </ul>
                             </li>
                             <li class="lv0"><a href="javascript:;" class="nolink "><span class="icon"><img
@@ -449,16 +448,16 @@
                                         bạ</span></a>
                                 <div class="arrrow"></div>
                                 <ul>
-                                    <li class="lv1"><a href="{!! route('nhamoigioi') !!}"
-                                            class="haslink ">Nhà môi giới</a></li>
-                                    <li class="lv1"><a href="{!! route('doanhnghiep') !!}"
-                                            class="haslink ">Doanh nghiệp</a>
+                                    <li class="lv1"><a href="{!!  route('nhamoigioi') !!}" class="haslink ">Nhà môi
+                                            giới</a></li>
+                                    <li class="lv1"><a href="{!!  route('doanhnghiep') !!}" class="haslink ">Doanh
+                                            nghiệp</a>
                                         <div class="arrrow"></div>
                                     </li>
                                 </ul>
                             </li>
                             <li class="lv0 bg_menu zompchat"><a href="javascript:void(0);" rel="nofollow"
-                                title="Trò chuyện với chúng tôi">Trò chuyện với chúng tôi</a>
+                                    title="Trò chuyện với chúng tôi">Trò chuyện với chúng tôi</a>
                             </li>
                         </ul>
 

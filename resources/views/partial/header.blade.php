@@ -157,33 +157,21 @@
                             <li class="lv0 tablet active hover"><a href="https://batdongsan.com.vn/"><span
                                         class="icon"><img src="./assets/image/ic_house.png"></span><span
                                         class="text">Trang chủ</span></a></li>
-                            @foreach ($menus0 as $menu0)
+                            @foreach ($arr_menu[0] as $mp)
 
                                 <li class="lv0">
-                                    <a href="{{ $menu0->slug }}" class="haslink "><span class="icon"><img
+                                    <a href="{{ $mp['slug'] }}" class="haslink "><span class="icon"><img
                                                 src="./assets/image/ic_for_sale.svg"></span><span
-                                            class="text">{{ $menu0->name }}</span></a>
+                                            class="text">{{ $mp['name'] }}</span></a>
                                     <div class="arrrow"></div>
                                     <ul>
-                                        @if ($loop->first) 
-                                        @foreach ($menus1 as $menu1)
-                                                <li class="lv1"><a href="{{ $menu1->slug }}"
-                                                        class="haslink ">{{ $menu1->name }}</a>
-                                                </li>
-                                            
-                                        @endforeach
+                                        @if(isset($arr_menu[$mp['id']]))
+                                            @foreach ($arr_menu[$mp['id']] as $mp_c1)
+                                                    <li class="lv1"><a href="{{ $mp_c1['slug'] }}"
+                                                            class="haslink ">{{ $mp_c1['name'] }}</a>
+                                                    </li>
+                                            @endforeach
                                         @endif
-                                        @if ($loop->last) 
-                                        @foreach ($menus2 as $menu2)
-                                                <li class="lv1"><a href="{{ $menu2->slug }}"
-                                                        class="haslink ">{{ $menu2->name }}</a>
-                                                </li>
-                                        @endforeach
-                                        @endif
-                                        
-
-                                        
-
                                     </ul>
                                 </li>
 

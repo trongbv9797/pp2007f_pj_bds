@@ -36,6 +36,7 @@
     },
     "autoload": {
         "files": [
+            "app/Helpers/rightMenu.php",
             "app/Helpers/ContactFunction.php"
         ],
         "psr-4": {

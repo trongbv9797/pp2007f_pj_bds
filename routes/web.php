@@ -80,6 +80,8 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
+Route::get('/can-mua-can-thue-post', 'BuyerSellerController@post')->name('buyersellerpost');
+
 
 
 //Phong Thuy

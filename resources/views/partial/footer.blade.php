@@ -145,6 +145,7 @@
         </div>
     </div>
 </footer>
+{{ getContact() }}
 
 <div class="modal fade" id="dialogPopup" role="dialog">
     <div class="nomodal"></div>

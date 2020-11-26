@@ -9,22 +9,22 @@
     <title>@yield('title')</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="assets/image/logo/apple-touch-icon.html">
-    <link rel="shortcut icon" href="assets/image/logo/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/image/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="/assets/image/logo/favicon.png">
 
     <!-- core dependcies css -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
-    <link rel="stylesheet" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
     <!-- page css -->
 
     <!-- core css -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="assets/css/animate.min.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,8 +35,8 @@
                 <div class="header-container">
                     <div class="nav-logo">
                         <a href="index.html">
-                            <div class="logo logo-dark" style="background-image: url('assets/image/logo/logo.png')"></div>
-                            <div class="logo logo-white" style="background-image: url('assets/image/logo/logo-white.png')"></div>
+                            <div class="logo logo-dark" style="background-image: url('/assets/image/logo/logo.png')"></div>
+                            <div class="logo logo-white" style="background-image: url('/assets/image/logo/logo-white.png')"></div>
                         </a>
                     </div>
                     <ul class="nav-left">
@@ -112,7 +112,7 @@
                                             <li class="list-item">
                                                 <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="assets/image/avatars/thumb-3.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-3.jpg" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Debra Stewart</span>
@@ -122,7 +122,7 @@
                                             <li class="list-item">
                                                 <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="assets/image/avatars/thumb-5.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-5.jpg" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Jane Hunt</span>
@@ -279,14 +279,14 @@
                         </li>
                         <li class="user-profile dropdown dropdown-animated scale-left">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="assets/image/avatars/thumb-13.jpg" alt="">
+                                <img class="profile-img img-fluid" src="/assets/image/avatars/thumb-13.jpg" alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-md p-v-0">
                                 <li>
                                     <ul class="list-media">
                                         <li class="list-item p-15">
                                             <div class="media-img">
-                                                <img src="assets/image/avatars/thumb-13.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-13.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title text-semibold">Marshall Nichols</span>
@@ -665,14 +665,14 @@
         </div>
     </div>
 
-    <script src="assets/js/vendor.js"></script>
+    <script src="/assets/js/vendor.js"></script>
 
-    <script src="assets/js/app.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
 
     <!-- page js -->
-    <script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="assets/vendor/jquery.sparkline/jquery.sparkline.min.js"></script>
-    <script src="assets/js/dashboard/default.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="/assets/js/dashboard/default.js"></script>
 
 </body>
 

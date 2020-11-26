@@ -35,6 +35,8 @@
         }
     },
     "autoload": {
+        "files": ["App/Helpers/fn_menu_support.php"]
+        ,
         "psr-4": {
             "App\\": "app/"
         },

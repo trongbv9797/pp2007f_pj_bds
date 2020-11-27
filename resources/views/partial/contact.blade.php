@@ -93,6 +93,8 @@
                 <div class="clear"></div>
         </div>
         {{ getEndFooter()}}
+        <div class="clear"></div>
+
         
     </div>
 </footer>

@@ -78,7 +78,7 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 
 //Canmuacanthue route
 
-Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
+Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
 
@@ -96,9 +96,12 @@ Route::prefix('/admin')->group(function () {
     Route::get('/master',function () {
         return view('admin.master');
     });
-});
 
 // admin
+    Route::get('/user/index','UserController@index');
+
+});
+// admin/menu
 Route::prefix('/admin')->group(function () {
     // admin/category
     Route::get('/category', 'CategoryController@index')->name('categoryIndex');

@@ -90,3 +90,12 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
   
+//   ADMIN
+Route::prefix('/admin')->group(function () {
+    Route::get('/master',function () {
+        return view('admin.master');
+    });
+
+    Route::get('/slide', 'SlideController@index')->name('Slide');
+    
+    });

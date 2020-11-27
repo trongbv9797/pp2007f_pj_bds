@@ -15,35 +15,49 @@
     <div class="card-header border bottom">
         <h4 class="card-title">Create New Category</h4>
     </div>
+    @if(isset($mess))
+    <div class="alert alert-success">
+        {!! $mess !!}
+    </div>
+    @endif
+
+    @if(isset($errors))
+    @foreach($errors->all() as $error)
+    <div class="alert alert-danger">
+        {!! $error !!}
+    </div>
+    @endforeach
+    @endif
     <div class="card-body">
         <div class="row">
             <div class="col-sm-8">
-                <form role="form" id="form-validation">
+                <form role="form" id="form-validation" action="{!! route('storeCategory') !!}" method="POST">
+                    @csrf
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Name *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="inputRequired" placeholder="Required *">
+                            <input type="text" class="form-control" placeholder="Required *" name="name">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Price *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="inputRequired" placeholder="Required *">
+                            <input type="number" class="form-control" placeholder="Required *" name="price">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Unit *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="inputRequired" placeholder="Required *">
+                            <input type="text" class="form-control" placeholder="Required *" name="unit">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Days *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="inputRequired" placeholder="Required *">
+                            <input type="number" class="form-control" placeholder="Required *" name="days">
                         </div>
                     </div>
-                    <button class="btn btn-gradient-success">Submit</button>
+                    <button class="btn btn-gradient-success" name="btnSubmit">Submit</button>
                 </form>
             </div>
         </div>

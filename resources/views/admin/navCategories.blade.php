@@ -110,7 +110,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li  class="active">
-                                    <a href="data-table.html">All Categories</a>
+                                    <a href="category">All Categories</a>
                                 </li>
                                 <li>
                                     <a href="data-table.html">Create New Categories</a>

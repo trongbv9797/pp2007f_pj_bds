@@ -98,7 +98,9 @@ Route::prefix('/admin')->group(function () {
     });
 });
 
-// admin/menu
+// admin
 Route::prefix('/admin')->group(function () {
+    // admin/category
     Route::get('/category', 'CategoryController@index')->name('categoryIndex');
+    Route::get('/category/create', 'CategoryController@create')->name('createCategory');
 });

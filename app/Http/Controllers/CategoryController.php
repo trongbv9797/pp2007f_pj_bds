@@ -13,4 +13,10 @@ class CategoryController extends Controller
         $categories = Category::get();
         return view('pages.admin.categoriesIndex', compact('categories'));
     }
+
+    public function create()
+    {
+        
+        return view('pages.admin.createCategories');
+    }
 }

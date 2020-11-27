@@ -46,10 +46,6 @@ Route::get('/tai-chinh-chung-khoan-bds','TinTucController@taichinhbds')->name('t
 //Tintucsinglepost
 Route::get('/articles{id}', 'TinTucController@articles')->name('tintuc_single_post');
 
-
-
-
-
 //NhaDatBanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
 Route::get('/ban-can-ho-chung-cu', 'NhaDatBanController@banCanHoChungCu')->name('ban_can_ho_chung_cu');
@@ -78,7 +74,7 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 
 //Canmuacanthue route
 
-Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
+Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
 
@@ -91,20 +87,6 @@ Route::get('/phong-thuy-nha-o', 'PhongThuyController@index3')->name('phongthuynh
 Route::get('/phong-thuy-van-phong', 'PhongThuyController@index4')->name('phongthuyvanphong');
 Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongthuytheotuoi');
 
-//   ADMIN
-Route::prefix('/admin')->group(function () {
-    Route::get('/master',function () {
-        return view('admin.master');
-    });
 
-// admin
-    Route::get('/user/index','UserController@index');
 
-});
-// admin/menu
-Route::prefix('/admin')->group(function () {
-    // admin/category
-    Route::get('/category', 'CategoryController@index')->name('categoryIndex');
-    Route::get('/category/create', 'CategoryController@create')->name('createCategory');
-    Route::post('/category/create', 'CategoryController@store')->name('storeCategory');
-});
+  

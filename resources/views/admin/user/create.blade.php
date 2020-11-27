@@ -26,7 +26,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-8">
-                    <form role="form" id="form-validation">
+                    <form role="form" id="form-validation" method="post" action="{{  route('create') }}">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label control-label">User Name *</label>
                             <div class="col-sm-10">
@@ -42,7 +42,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label control-label">Password</label>
                             <div class="col-sm-10">
-                                <input id="password" type="password" class="form-control" name="password"
+                                <input id="password" type="password" class="form-control" name="inputPassword"
                                     placeholder="Enter your password">
                             </div>
                         </div>
@@ -110,3 +110,4 @@
     <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
     <script src="/assets/js/forms/form-elements.js"></script>
 @endsection
+ 

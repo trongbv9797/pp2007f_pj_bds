@@ -405,7 +405,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
+                            <a class="dropdown-toggle" href="javascript:void(0);{{route(  'userindex' )}} ">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
@@ -416,7 +416,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="data-table.html">Edit Users</a>
+                                    <a href="{{route(  'createuser' )}}">Create Users</a>
                                 </li>
                             </ul>
                         </li>

@@ -98,7 +98,9 @@ Route::prefix('/admin')->group(function () {
     });
 
 // admin
-    Route::get('/user/index','UserController@index');
+    Route::get('/user/index','UserController@index')->name('userindex');
+    Route::get('/user/create','UserController@create')->name('createuser');
+    Route::post('/user/create','UserController@create')->name('createuser');
 
 });
 // admin/menu

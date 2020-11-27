@@ -6,8 +6,8 @@
                             <div class="header-sub-title">
                                 <nav class="breadcrumb breadcrumb-dash">
                                     <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-                                    <a class="breadcrumb-item" href="#">Tables</a>
-                                    <span class="breadcrumb-item active">Post Category Table</span>
+                                    <a class="breadcrumb-item" href="{{ route('categoryIndex') }}">Categories</a>
+                                    <span class="breadcrumb-item active">All Categories</span>
                                 </nav>
                             </div>
                         </div>  
@@ -26,6 +26,7 @@
                                                 <th>Category</th>
                                                 <th>Price</th>
                                                 <th>Unit</th>
+                                                <th>Days</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -38,15 +39,10 @@
                                                         <label for="selectable2"></label>
                                                     </div> 
                                                 </td>
-                                                <td>
-                                                    <div class="list-media">
-                                                        <div class="list-item">
-                                                                <span class="title">{!! $category->category_name !!}</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                <td>{!! $category->category_name !!}</td>
                                                 <td>{!! $category->category_price !!}</td>
                                                 <td>{!! $category->category_unit !!}</td>
+                                                <td>{!! $category->category_days !!}</td>
                                                 <td class="text-center font-size-18">
                                                     <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                                                     <a href="#" class="text-gray"><i class="ti-trash"></i></a>

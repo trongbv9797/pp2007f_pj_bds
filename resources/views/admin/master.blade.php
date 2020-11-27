@@ -336,7 +336,11 @@
 
             <!-- Side Nav START -->
             <div class="side-nav expand-lg">
+<<<<<<< HEAD
                 <div class="side-nav-inner">
+=======
+            <div class="side-nav-inner">
+>>>>>>> add_column_days_into_categories_table
                     <ul class="side-nav-menu scrollable">
                         <li class="side-nav-header">
                             <span>Navigation</span>

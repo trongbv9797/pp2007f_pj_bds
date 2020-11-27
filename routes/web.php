@@ -103,4 +103,5 @@ Route::prefix('/admin')->group(function () {
     // admin/category
     Route::get('/category', 'CategoryController@index')->name('categoryIndex');
     Route::get('/category/create', 'CategoryController@create')->name('createCategory');
+    Route::post('/category/create', 'CategoryController@store')->name('storeCategory');
 });

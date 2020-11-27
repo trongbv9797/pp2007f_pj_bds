@@ -110,10 +110,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li  class="active">
-                                    <a href="category">All Categories</a>
+                                    <a href="{{ route('categoryIndex') }}">All Categories</a>
                                 </li>
                                 <li>
-                                    <a href="data-table.html">Create New Categories</a>
+                                    <a href="{{ route('createCategory') }}">Create New Categories</a>
                                 </li>
                             </ul>
                         </li>

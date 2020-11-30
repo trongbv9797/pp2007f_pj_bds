@@ -97,5 +97,13 @@ Route::prefix('/admin')->group(function () {
     });
 
     Route::get('/slide', 'SlideController@index')->name('Slide');
+    Route::get('/slide/create', 'SlideController@create')->name('createSlide');
+    Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
+    
+
+    
+    Route::get('/category', 'CategoryController@index')->name('categoryIndex');
+    Route::get('/category/create', 'CategoryController@create')->name('createCategory');
+    Route::post('/category/create', 'CategoryController@store')->name('storeCategory');
     
     });

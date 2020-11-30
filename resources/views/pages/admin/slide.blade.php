@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title', 'slide')
+@section('title', 'Slides')
 
 @section ('styles')
 <link rel="stylesheet" href="/assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css" />
@@ -8,12 +8,12 @@
 @section('content')
 
 <div class="page-header">
-                            <h2 class="header-title">Data Table</h2>
+                            <h2 class="header-title">Slides Table</h2>
                             <div class="header-sub-title">
                                 <nav class="breadcrumb breadcrumb-dash">
                                     <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
                                     <a class="breadcrumb-item" href="#">Tables</a>
-                                    <span class="breadcrumb-item active">Data Table</span>
+                                    <span class="breadcrumb-item active">Slides Table</span>
                                 </nav>
                             </div>
                         </div>  
@@ -32,9 +32,10 @@
                                                 <th>Name</th>
                                                 <th>Link</th>
                                                 <th>Slug</th>
-                                                <th>Type</th>
-                                                <th>Width</th>
-                                                <th>Height</th>
+                                                <th>Type </th>
+                                                <th>Width (pixel)</th>
+                                                <th>Height (pixel)</th>
+                                                <th>Order</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -63,7 +64,7 @@
                                                 <td>{!! $slide->type!!}</td>
                                                 <td>{!! $slide->width!!}</td>
                                                 <td>{!! $slide->height!!}</td>
-
+                                                <td>{!! $slide->order!!}</td>
                                                 <td class="text-center font-size-18">
                                                     <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                                                     <a href="#" class="text-gray"><i class="ti-trash"></i></a>

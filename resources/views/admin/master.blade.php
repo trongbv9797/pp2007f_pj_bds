@@ -467,7 +467,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="data-table.html">Edit Slides</a>
+                                <a href="{!!route ('Slide')!!}">All Slides</a>
+                                    <a href="{{ route('createSlide') }}">Create New Slides</a>
                                 </li>
                             </ul>
                         </li>

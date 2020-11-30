@@ -96,7 +96,7 @@ class SlideSeeder extends Seeder
         ]);
 
         DB::table('slides')->insert([
-            'link'=>'https://file4.batdongsan.com.vn/Banners/PhuongNTM/PhuongNTM/250x250/20201106-1148/index.html?link=https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11084',
+            'link'=>'https://ml7oj4fzi8ge.i.optimole.com/0cch1rI-K5I8D-in/w:auto/h:auto/q:auto/https://bconsplaza.bcons.com.vn/wp-content/uploads/2020/11/1_compressed.jpg',
             'name'=>'Bcons Plaza',
             'slug'=>'https://bconsplaza.bcons.com.vn/?utm_source=batdongsan&utm_medium=cpc&utm_campaign=bds',
             'type'=>'content',

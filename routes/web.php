@@ -102,6 +102,7 @@ Route::prefix('/admin')->group(function () {
 
 });
 // admin/menu
+// admin/cate
 Route::prefix('/admin')->group(function () {
     // admin/category
     Route::get('/category', 'CategoryController@index')->name('categoryIndex');

@@ -417,6 +417,13 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="data-table.html">Edit Users</a>
+                                    <a href=" {{route(  'userIndex' ) }}  ">All User</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('createUser') }}">Create New User</a>
+                                </li>
+                                <li>
+                                    <a href="#">Edit User</a>
                                 </li>
                             </ul>
                         </li>

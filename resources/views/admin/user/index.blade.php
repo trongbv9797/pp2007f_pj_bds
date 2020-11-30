@@ -71,8 +71,8 @@
                             <td> Female </td>
                             @endif
                             <td class="text-center font-size-18">
-                                <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                                <a href="#" class="text-gray"><i class="ti-trash"></i></a>
+                                <a href="{{  route('editUser',$user->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                                <a href="{{  route('deleteUser',$user->id) }}" class="text-gray"><i class="ti-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach

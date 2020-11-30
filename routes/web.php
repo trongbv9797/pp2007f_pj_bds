@@ -77,6 +77,8 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
+Route::get('/can-mua-can-thue-post', 'BuyerSellerController@post')->name('buyersellerpost');
+
 
 
 //Phong Thuy
@@ -89,21 +91,35 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 
-  
+
 //   ADMIN
 Route::prefix('/admin')->group(function () {
     Route::get('/master',function () {
         return view('admin.master');
     });
 
+// admin
+    Route::get('/user/index','UserController@index');
+    Route::get('/user/index','UserController@index')->name('userIndex');
+    Route::get('/user/create','UserController@create')->name('createUser');
+    Route::post('/user/create','UserController@store')->name('storeUser');
+
+    Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
+    Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
+
+    Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
+
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');
     Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
-    
 
-    
+});
+// admin/menu
+// admin/cate
+Route::prefix('/admin')->group(function () {
+    // admin/category
     Route::get('/category', 'CategoryController@index')->name('categoryIndex');
     Route::get('/category/create', 'CategoryController@create')->name('createCategory');
     Route::post('/category/create', 'CategoryController@store')->name('storeCategory');
-    
+
 });

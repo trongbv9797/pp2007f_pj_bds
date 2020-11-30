@@ -124,4 +124,10 @@ Route::prefix('/admin')->group(function () {
     Route::get('/category/edit/{id}', 'CategoryController@edit')->name('editCategory');
     Route::post('/category/edit/{id}', 'CategoryController@update')->name('updateCategory');
     Route::post('/category/delete/{id}', 'CategoryController@delete')->name('deleteCategory');
+    //  POSTS - TAI ANH
+Route::get('/posts', 'PostController@viewPost')->name('viewPost');
+Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
+Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
+
+
 });

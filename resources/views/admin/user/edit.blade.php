@@ -10,12 +10,12 @@
 
 @section('content')
     <div class="page-header">
-        <h2 class="header-title">Create User</h2>
+        <h2 class="header-title">Edit User</h2>
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
                 <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Admin</a>
                 <a class="breadcrumb-item" href="#">Create</a>
-                <span class="breadcrumb-item active">Create User</span>
+                <span class="breadcrumb-item active">Edit User</span>
             </nav>
         </div>
     </div>

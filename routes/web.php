@@ -81,6 +81,8 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 Route::get('/can-mua-can-thue', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
+Route::get('/can-mua-can-thue-post', 'BuyerSellerController@post')->name('buyersellerpost');
+
 
 
 //Phong Thuy
@@ -98,7 +100,11 @@ Route::prefix('/admin')->group(function () {
     });
 
 // admin
-    Route::get('/user/index','UserController@index');
+    Route::get('/user/index','UserController@index')->name('userIndex');
+    Route::get('/user/create','UserController@create')->name('createUser');
+    Route::post('/user/create','UserController@store')->name('storeUser');
+
+    Route::get('/user/edit','UserController@edit')->name('editUser');
 
 });
 // admin/menu

@@ -41,4 +41,10 @@ class BuyerSellerController extends Controller
         }
         return view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers'));
     }
+
+public function post() {
+    return view ('pages.canmuacanthue.post');
+}
+
+
 }

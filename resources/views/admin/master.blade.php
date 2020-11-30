@@ -401,7 +401,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="data-table.html">Edit Posts</a>
+                                    <a href="{!! Route('viewPost') !!}">Edit Posts</a>
                                 </li>
                             </ul>
                         </li>

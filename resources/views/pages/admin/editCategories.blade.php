@@ -1,5 +1,8 @@
 @extends('admin.master')
 @section('title', 'Edit Categories')
+@section('styles')
+
+@endsection
 @section('content')
 <div class="page-header">
     <h2 class="header-title">Edit Category</h2>
@@ -31,30 +34,30 @@
     <div class="card-body">
         <div class="row">
             <div class="col-sm-8">
-                <form role="form" id="form-validation" action="{!! route('updateCategory'), $category->id !!}" method="POST">
+                <form role="form" id="form-validation" action="{!! route('updateCategory', $categories->id)!!}" method="POST">
                     @csrf
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Name *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="name">
+                            <input type="text" class="form-control" placeholder="Required *" name="name" value="{!! $categories->category_name !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Price *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Required *" name="price">
+                            <input type="number" class="form-control" placeholder="Required *" name="price" value="{!! $categories->category_price !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Unit *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="unit">
+                            <input type="text" class="form-control" placeholder="Required *" name="unit" value="{!! $categories->category_unit !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Days *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Required *" name="days">
+                            <input type="number" class="form-control" placeholder="Required *" name="days" value="{!! $categories->category_days !!}">
                         </div>
                     </div>
                     <button class="btn btn-gradient-success" name="btnSubmit">Submit</button>

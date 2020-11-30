@@ -129,7 +129,7 @@
             
 
 <p>{!!$articles->content!!}</p>
-<p style="text-align: center;"><img alt="{!!$articles->title!!}" src="https://file4.batdongsan.com.vn/2020/11/18/FTnaKngu/20201118135701-0137.jpg" style="width: 100%;" title="{!!$articles->title!!}"><br>
+<p style="text-align: center;"><img alt="{!!$articles->title!!}" src="{!!$articles->image_link!!}" style="width: 100%;" title="{!!$articles->title!!}"><br>
 <em style="text-align: center;">{!!$articles->title!!}</em></p>
 
 

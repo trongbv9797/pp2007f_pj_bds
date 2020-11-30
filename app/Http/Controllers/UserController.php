@@ -23,21 +23,13 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = $request->inputPassword;
         $user->fullname = $request->fullname;
-<<<<<<< bc66557b26f139d594431141c8e8fe256da0c913
-        $user->dateofbirth = $request->dateofbirth;
-=======
         $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
->>>>>>> delete_user_not_ajax
         $user->address = $request->address;
         $user->sex = $request->sex;
         $user->save();
         return view ('admin.user.create',compact('user'));
     }
 
-<<<<<<< bc66557b26f139d594431141c8e8fe256da0c913
-    public function edit() {
-        return view ('admin.user.edit');
-=======
     public function edit($id) {
         $user = User::find($id);
         return view ('admin.user.edit',compact('user'));
@@ -61,7 +53,6 @@ class UserController extends Controller
         $user->delete();
         $users = User::all();
         return view ('admin.user.index',compact('users'));
->>>>>>> delete_user_not_ajax
     }
 
 }

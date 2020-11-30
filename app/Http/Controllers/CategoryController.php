@@ -11,7 +11,7 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        $categories = Category::get();
+        $categories = Category::all();
         return view('pages.admin.categoriesIndex', compact('categories'));
     }
 
@@ -54,5 +54,12 @@ class CategoryController extends Controller
             $mess = "Successful update!";
         };
         return view('pages.admin.editCategories', compact('categories'))->with('mess', $mess);
+    }
+
+    public function delete(Request $request, $id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->route('categoryIndex')->with('mess', 'Deleted successfully!');
     }
 }

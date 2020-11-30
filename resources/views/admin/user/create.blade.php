@@ -27,7 +27,11 @@
             <div class="row">
                 <div class="col-sm-8">
 
+<<<<<<< HEAD
                     <form role="form" id="form-validation" method="post" action="{!!  Route('storeUser') !!}">
+=======
+                    <form role="form" id="form-validation" method="post" action="{!!  Route('storeUser') !!}" enctype="multipart/form-data">
+>>>>>>> 0a1dd9266f9ec337de33ef5fcec61b76265d5775
                         @csrf
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label control-label">User Name *</label>
@@ -90,7 +94,11 @@
                             </div>
                         </div>
                         <div class="form-group row">
+<<<<<<< HEAD
                             <label class="col-sm-2 col-form-label control-label">Content</label>
+=======
+                            <label class="col-sm-2 col-form-label control-label">Avatar</label>
+>>>>>>> 0a1dd9266f9ec337de33ef5fcec61b76265d5775
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" name="avatar" placeholder="Enter your address">
                             </div>

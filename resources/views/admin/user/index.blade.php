@@ -52,7 +52,7 @@
                                 <div class="list-media">
                                     <div class="list-item">
                                         <div class="media-img">
-                                            <img src="{{ $user->avatar }}" alt="">
+                                            <img src="{{ asset("storage/img/users/$user->avatar") }}" alt="">
                                         </div>
                                         <div class="info">
                                             <span class="title">{{ $user->fullname }}</span>

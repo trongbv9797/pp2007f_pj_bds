@@ -44,7 +44,7 @@
                                                 <td>{!! $category->category_unit !!}</td>
                                                 <td>{!! $category->category_days !!}</td>
                                                 <td class="text-center font-size-18">
-                                                    <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                                                    <a href="{!! route('editCategory' , $category->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                                                     <a href="#" class="text-gray"><i class="ti-trash"></i></a>
                                                 </td>
                                             </tr>

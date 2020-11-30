@@ -34,4 +34,25 @@ class CategoryController extends Controller
 
         return view('pages.admin.createCategories', compact('category'))->with('mess', $mess);
     }
+
+    public function edit($id)
+    {
+        $categories = Category::find($id);
+        return view('pages.admin.editCategories', compact('categories'));
+    }
+
+    public function update(CategoryFromRequest $request , $id)
+    {
+        $categories = Category::find($id);
+        $categories->category_name = $request->get('name');
+        $categories->category_price = $request->get('price');
+        $categories->category_unit = $request->get('unit');
+        $categories->category_days = $request->get('days');
+
+        $mess = '';
+        if($categories->save()){
+            $mess = "Successful update!";
+        };
+        return view('pages.admin.editCategories', compact('categories'))->with('mess', $mess);
+    }
 }

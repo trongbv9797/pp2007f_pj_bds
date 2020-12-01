@@ -12,7 +12,7 @@
                             <div class="header-sub-title">
                                 <nav class="breadcrumb breadcrumb-dash">
                                     <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-                                    <a class="breadcrumb-item" href="{{ route('Slide') }}">Slides</a>
+                                    <a class="breadcrumb-item" href="#">Slides</a>
                                     <span class="breadcrumb-item active">Slides Table</span>
                                 </nav>
                             </div>

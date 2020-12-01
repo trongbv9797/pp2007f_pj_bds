@@ -77,7 +77,7 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
-Route::get('/can-mua-can-thue-post{id}', 'BuyerSellerController@post')->name('buyersellerpost');
+Route::get('/can-mua-can-thue-post', 'BuyerSellerController@post')->name('buyersellerpost');
 
 
 
@@ -109,13 +109,9 @@ Route::prefix('/admin')->group(function () {
 
     Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
 
-// Slide
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');
     Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
-    Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
-    Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
-    Route::post('slide/delete/{id}', 'SlideController@delete')->name('deleteSlide');
 
 });
 // admin/menu
@@ -133,11 +129,17 @@ Route::get('/posts', 'PostController@viewPost')->name('viewPost');
 Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
 Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
 
+
+
+<<<<<<< HEAD
+
+Route::get('/nha-moi-gioi', 'DanhbaController@index');
+=======
     // admin/menu
     Route::get('/menu', 'MenuController@index')->name('menuIndex');
     Route::get('/menu/create', 'MenuController@create')->name('createMenu');
     Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
     Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
-    Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
 });
+>>>>>>> f0dd13add46c8143e900d3131c850e8dd9f045cf

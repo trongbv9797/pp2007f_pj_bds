@@ -12,19 +12,19 @@
                             <div class="header-sub-title">
                                 <nav class="breadcrumb breadcrumb-dash">
                                     <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-                                    <a class="breadcrumb-item" href="{{ route('Slide') }}">Slides</a>
+                                    <a class="breadcrumb-item" href="#">Tables</a>
                                     <span class="breadcrumb-item active">Slides Table</span>
                                 </nav>
                             </div>
                         </div>  
                         <div class="card">
-                            @if(session('slide_del'))
-                                <div class="alert alert-success">
-                                    {{ session('slide_del') }}
-                                </div>
-                                @endif
                             <div class="card-body">
                                 <div class="table-overflow">
+
+                        @if(session('mess'))
+                            <p class="alert alert-success">{{ session('mess') }}</p>
+                        @endif
+
                                     <table id="dt-opt" class="table table-hover table-xl">
                                         <thead>
                                             <tr>

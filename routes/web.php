@@ -109,13 +109,9 @@ Route::prefix('/admin')->group(function () {
 
     Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
 
-// Slide
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');
     Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
-    Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
-    Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
-    Route::post('slide/delete/{id}', 'SlideController@delete')->name('deleteSlide');
 
 });
 // admin/menu
@@ -132,6 +128,8 @@ Route::prefix('/admin')->group(function () {
 Route::get('/posts', 'PostController@viewPost')->name('viewPost');
 Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
 Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
+
+
 
     // admin/menu
     Route::get('/menu', 'MenuController@index')->name('menuIndex');

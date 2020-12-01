@@ -72,7 +72,7 @@ class MenuController extends Controller
         $menu = Menu::find($id);
         $mess = '';
         if($menu->delete()){
-            $mess = 'Delete menu successfully!';
+            $mess = 'Delete menu successfull!';
         }
         return redirect()->route('menuIndex')->with('mess', $mess);
     }

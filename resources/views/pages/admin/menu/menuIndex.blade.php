@@ -14,9 +14,9 @@
 <div class="card">
     <div class="card-body">
         <div class="table-overflow">
-        @if(session('mess'))
-                    <p class="alert alert-success">{{ session('mess') }}</p>
-                @endif
+            @if(session('mess'))
+            <p class="alert alert-success">{{ session('mess') }}</p>
+            @endif
             <table id="dt-opt" class="table table-hover table-xl">
                 <thead>
                     <tr>

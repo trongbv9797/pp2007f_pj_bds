@@ -133,4 +133,6 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
 
     // admin/menu
     Route::get('/menu', 'MenuController@index')->name('menuIndex');
+    Route::get('/menu/create', 'MenuController@create')->name('createMenu');
+    Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
 });

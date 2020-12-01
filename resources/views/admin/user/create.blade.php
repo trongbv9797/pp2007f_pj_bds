@@ -27,7 +27,15 @@
             <div class="row">
                 <div class="col-sm-8">
 
+<<<<<<< 91e427d7b52bdb94a69f9cacb4b61b004f5975a2
+<<<<<<< HEAD
                     <form role="form" id="form-validation" method="post" action="{!!  Route('storeUser') !!}">
+=======
+                    <form role="form" id="form-validation" method="post" action="{!!  Route('storeUser') !!}" enctype="multipart/form-data">
+>>>>>>> 0a1dd9266f9ec337de33ef5fcec61b76265d5775
+=======
+                    <form role="form" id="form-validation" method="post" action="{!!  Route('storeUser') !!}" enctype="multipart/form-data">
+>>>>>>> upload_avatar_user
                         @csrf
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label control-label">User Name *</label>
@@ -90,7 +98,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
+<<<<<<< 91e427d7b52bdb94a69f9cacb4b61b004f5975a2
+<<<<<<< HEAD
                             <label class="col-sm-2 col-form-label control-label">Content</label>
+=======
+                            <label class="col-sm-2 col-form-label control-label">Avatar</label>
+>>>>>>> 0a1dd9266f9ec337de33ef5fcec61b76265d5775
+=======
+                            <label class="col-sm-2 col-form-label control-label">Avatar</label>
+>>>>>>> upload_avatar_user
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" name="avatar" placeholder="Enter your address">
                             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 
 class UserController extends Controller
 {
@@ -20,8 +21,6 @@ class UserController extends Controller
     public function store(Request $request) {
         $user = new User();
         // $disk = Storage::disk('local');
-        Storage::disk('local')->put($request->avatar);
-        $path = Storage::disk('local')->path($request->avatar);
         // dd($path);
         $user->username = $request->username;
         $user->email = $request->email;
@@ -31,9 +30,22 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
-        $user->avatar = $path;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $name = $file->getClientOriginalName();
+            
+            $nameAva = time()."_".$name;
+
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
+        
         $user->save();
-        return view ('admin.user.create',compact('user'));
+        return view ('admin.user.create');
     }
 
     public function edit($id) {

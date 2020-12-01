@@ -42,7 +42,7 @@ class PostController extends Controller
 
         $post = Products::where('products.id', '=', $id)->first();
         $wards = Products::select('wards_id')->orderBy('wards_id', 'asc')->distinct()->get();
-        $districts = Products::select('districts_id')->orderBy('districts_id', 'asc')->distinct()->get();
+        $districts = District::all();
         $provinces = Products::select('provinces_id')->orderBy('provinces_id', 'asc')->distinct()->get();
         $products = Products::select('post_type_id')->orderBy('post_type_id', 'asc')->distinct()->get();
 

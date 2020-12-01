@@ -77,7 +77,7 @@ Route::get('/noi-ngoai-that', 'NoiNgoaiThatController@index');
 Route::get('/can-mua-can-thue/', 'BuyerSellerController@index')->name('buyerseller');
 Route::get('/nha-dat-can-thue', 'BuyerSellerController@seller')->name('seller');
 Route::get('/nha-dat-can-mua', 'BuyerSellerController@buyer')->name('buyer');
-Route::get('/can-mua-can-thue-post', 'BuyerSellerController@post')->name('buyersellerpost');
+Route::get('/can-mua-can-thue-post{id}', 'BuyerSellerController@post')->name('buyersellerpost');
 
 
 
@@ -139,4 +139,5 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
     Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
+    Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
 });

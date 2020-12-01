@@ -14,6 +14,9 @@
 <div class="card">
     <div class="card-body">
         <div class="table-overflow">
+            @if(session('mess'))
+            <p class="alert alert-success">{{ session('mess') }}</p>
+            @endif
             <table id="dt-opt" class="table table-hover table-xl">
                 <thead>
                     <tr>
@@ -49,7 +52,11 @@
                         <td>{{ $menu->type }}</td>
                         <td class="text-center font-size-18">
                             <a href="{{ route('editMenu', $menu->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                            <a href="#" class="text-gray"><i class="ti-trash"></i></a>
+                            <form action="{{ route('deleteMenu', $menu->id) }}" method="POST">
+                                <input type="hidden" name="id" value="{!! $menu->id !!}">
+                                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                                <button><i class="ti-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

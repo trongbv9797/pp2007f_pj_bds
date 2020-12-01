@@ -14,9 +14,9 @@
 <div class="card">
     <div class="card-body">
         <div class="table-overflow">
-        @if(session('mess'))
-                    <p class="alert alert-success">{{ session('mess') }}</p>
-                @endif
+            @if(session('mess'))
+            <p class="alert alert-success">{{ session('mess') }}</p>
+            @endif
             <table id="dt-opt" class="table table-hover table-xl">
                 <thead>
                     <tr>
@@ -61,4 +61,9 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script src="/assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
+<script src="/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+<script src="/assets/js/tables/data-table.js"></script>
 @endsection

@@ -15,7 +15,7 @@ class ImageSeeder extends Seeder
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 50; $i++){      
 
-        DB::table('image')->insert(
+        DB::table('images')->insert(
             [
             'link'=>$faker->imageUrl($width = 640, $height = 480),
             'name'=>Str::random(10),

@@ -17,7 +17,7 @@ class ArticleSeeder extends Seeder
         DB::table('articles')->insert ([
         'title' => $faker->sentence,
         'type' => rand(0,6),    
-        'image_id' => rand(1, 1000),
+        'image_link' => $faker->imageUrl($width = 640, $height = 480),
         'slug' => rand(1, 1000),       
         'content' => $faker->paragraph($nbSentences = 40, $variableNbSentences = true),
         'created_at' => date('Y-m-d H:i:s'),

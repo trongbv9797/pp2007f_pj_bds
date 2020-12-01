@@ -495,7 +495,7 @@
                                     <a href="{{ route('menuIndex') }}">All Menus</a>
                                 </li>
                                 <li>
-                                    <a href="data-table.html">Create New Menus</a>
+                                    <a href="{{ route('createMenu') }}">Create New Menus</a>
                                 </li>
                             </ul>
                         </li>

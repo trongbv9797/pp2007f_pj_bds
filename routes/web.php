@@ -135,4 +135,6 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::get('/menu', 'MenuController@index')->name('menuIndex');
     Route::get('/menu/create', 'MenuController@create')->name('createMenu');
     Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
+    Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
+    Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
 });

@@ -137,4 +137,5 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
     Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
+    Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
 });

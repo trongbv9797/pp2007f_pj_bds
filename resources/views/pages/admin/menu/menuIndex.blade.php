@@ -43,12 +43,12 @@
                         <td>
                             {{$menu->name}}
                         </td>
-                        <td>{{ $menu->parent_id}}</td>
-                        <td>{{$menu->slug}}</td>
-                        <td>{{$menu->order}}</td>
-                        <td>{{$menu->type}}</td>
+                        <td>{{ $menu->parent_id }}</td>
+                        <td>{{ $menu->slug }}</td>
+                        <td>{{ $menu->order }}</td>
+                        <td>{{ $menu->type }}</td>
                         <td class="text-center font-size-18">
-                            <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                            <a href="{{ route('editMenu', $menu->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                             <a href="#" class="text-gray"><i class="ti-trash"></i></a>
                         </td>
                     </tr>

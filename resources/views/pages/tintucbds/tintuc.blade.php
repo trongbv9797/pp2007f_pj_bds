@@ -100,7 +100,7 @@
             <div class="tintuc-row1 tintuc-list tc-tit">
                 <div class="tc-img list-news-image-title">
                     <a href="{!! Route('tintuc_single_post', $articles->id) !!}" title="{!! $articles->title !!}">
-                        <img class="bor_img" style="width: 132px; height: 100px;" alt="{!! $articles->title !!}" src="https://file4.batdongsan.com.vn/crop/132x100/2020/11/18/FTnaKngu/20201118135701-0137.jpg">
+                        <img class="bor_img" style="width: 132px; height: 100px;" alt="{!! $articles->title !!}" src="{!! $articles->image_link !!}">
                     </a>&nbsp;&nbsp;
                 </div>
                 <h3>

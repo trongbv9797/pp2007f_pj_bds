@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 
 class UserController extends Controller
 {
@@ -18,26 +20,34 @@ class UserController extends Controller
 
     public function store(Request $request) {
         $user = new User();
-        // dd($request->toArray());
+        // $disk = Storage::disk('local');
+        // dd($path);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = $request->inputPassword;
         $user->fullname = $request->fullname;
-<<<<<<< bc66557b26f139d594431141c8e8fe256da0c913
-        $user->dateofbirth = $request->dateofbirth;
-=======
         $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
->>>>>>> delete_user_not_ajax
         $user->address = $request->address;
+        $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $name = $file->getClientOriginalName();
+            
+            $nameAva = time()."_".$name;
+
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
+        
         $user->save();
-        return view ('admin.user.create',compact('user'));
+        return view ('admin.user.create');
     }
 
-<<<<<<< bc66557b26f139d594431141c8e8fe256da0c913
-    public function edit() {
-        return view ('admin.user.edit');
-=======
     public function edit($id) {
         $user = User::find($id);
         return view ('admin.user.edit',compact('user'));
@@ -51,6 +61,7 @@ class UserController extends Controller
         $user->fullname = $request->fullname;
         $user->dateofbirth = $request->dateofbirth;
         $user->address = $request->address;
+        $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
         $user->save();
         return view ('admin.user.edit',compact('user'));
@@ -61,7 +72,6 @@ class UserController extends Controller
         $user->delete();
         $users = User::all();
         return view ('admin.user.index',compact('users'));
->>>>>>> delete_user_not_ajax
     }
 
 }

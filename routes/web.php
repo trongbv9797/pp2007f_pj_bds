@@ -130,4 +130,7 @@ Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
 Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
 
 
+
+    // admin/menu
+    Route::get('/menu', 'MenuController@index')->name('menuIndex');
 });

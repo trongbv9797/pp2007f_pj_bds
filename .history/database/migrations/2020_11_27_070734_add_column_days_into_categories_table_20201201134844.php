@@ -15,7 +15,7 @@ class AddColumnDaysIntoCategoriesTable extends Migration
     {
         //
         Schema::table('categories', function(Blueprint $table){
-            $table->integer('days')->after('unit');
+            $table->integer('category_days')->after('category_unit');
         });
     }
 

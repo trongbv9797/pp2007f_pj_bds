@@ -207,9 +207,23 @@ class MenuSeeder extends Seeder
     
             ]);
 
-            
+            DB::table('menus')->insert([
+                'name'=> 'english.html',
+                'parent_id'=>'4',
+                'slug' => '',
+                'order'=> '3',
+                'type' => 'Support',
+    
+            ]);
 
-         ;
+            DB::table('menus')->insert([
+                'name'=> 'Tải ứng dụng Batdongsan.com.vn',
+                'parent_id'=>'0',
+                'slug' => '',
+                'order'=> '5',
+                'type' => 'Support',
+    
+            ]);
 
             DB::table('menus')->insert([
                 'name'=> 'https://file4.batdongsan.com.vn/images/newhome/google-play.png',
@@ -229,7 +243,14 @@ class MenuSeeder extends Seeder
     
             ]);
 
-            
+            DB::table('menus')->insert([
+                'name'=> 'Đăng kí ngay để nhận thông tin từ Batdongsan.com.vn',
+                'parent_id'=>'0',
+                'slug' => '',
+                'order'=> '6',
+                'type' => 'Support',
+    
+            ]);
 
             DB::table('menus')->insert([
                 'name'=> 'Nhập email của bạn',

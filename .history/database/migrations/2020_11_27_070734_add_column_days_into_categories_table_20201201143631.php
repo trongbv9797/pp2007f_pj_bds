@@ -14,7 +14,7 @@ class AddColumnDaysIntoCategoriesTable extends Migration
     public function up()
     {
         //
-        Schema::table('categories', function(Blueprint $table){
+        Schema::table('post_type', function(Blueprint $table){
             $table->integer('days')->after('unit');
         });
     }

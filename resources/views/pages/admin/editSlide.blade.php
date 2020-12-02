@@ -36,44 +36,49 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Name *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="name">
+                            <input type="text" class="form-control" placeholder="Required *" name="name" value="{!! $slide->name !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Link *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="link">
+                            <input type="text" class="form-control" placeholder="Required *" name="link" value="{!! $slide->link !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Slug *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="slug">
+                            <input type="text" class="form-control" placeholder="Required *" name="slug" value="{!! $slide->slug !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Type *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="type">
+                            <select type="text" class="custom-select" id="inputGroupSelect01" name="type">
+                                <option type="text" selected value="{{ $slide->type }}">{!! $slide->type !!}</option>
+                                @foreach($types as $type)
+                                <option type="text" value="{!! $type->type !!}">{!! $type->type !!}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                    
+
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Width *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Required *" name="width">
+                            <input type="number" class="form-control" placeholder="Required *" name="width" value="{!! $slide->width !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Height *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Required *" name="height">
+                            <input type="number" class="form-control" placeholder="Required *" name="height" value="{!! $slide->height !!}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Order *</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Required *" name="order">
+                            <input type="number" class="form-control" placeholder="Required *" name="order" value="{!! $slide->order !!}">
                         </div>
                     </div>
                     <button class="btn btn-gradient-success" name="btnSubmit">Submit</button>
@@ -82,4 +87,4 @@
         </div>
     </div>
 </div>
-@endsection 
+@endsection

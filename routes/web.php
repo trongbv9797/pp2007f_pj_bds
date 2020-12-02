@@ -153,5 +153,6 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
 
 
 
-
+    // admin/login
+    Route::get('/login', 'Auth\LoginController@login')->name('login');
 });

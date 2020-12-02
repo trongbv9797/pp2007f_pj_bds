@@ -318,7 +318,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('login') }}">
                                         <i class="ti-power-off p-r-10"></i>
                                         <span>Logout</span>
                                     </a>

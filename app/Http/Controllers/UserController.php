@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Province;
+use App\Models\District;
+use App\Models\Ward;
+
+
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
 
@@ -15,9 +20,30 @@ class UserController extends Controller
     }
 
     public function create() {
-        return view ('admin.user.create');
+
+        $provinces = Province::all();
+        $districts = District::all();
+        return view ('admin.user.create',compact('provinces','districts'));
     }
 
+    public function ajaxDistrict(Request $request) {
+        if($request->get('parent_code') == 0) {
+            echo view ('admin.user.districtajax');
+        }
+        $districts = District::where('parent_code',$request->get('parent_code'))->get();
+
+        echo view ('admin.user.districtajax',compact('districts'));
+        exit;
+    }
+
+    public function ajaxWard(Request $request) {
+        $wards = Ward::where('parent_code',$request->get('parent_code'))->get();
+
+        echo view ('admin.user.wardajax',compact('wards'));
+        exit;
+    }
+
+    
     public function store(Request $request) {
         $user = new User();
         // $disk = Storage::disk('local');
@@ -49,8 +75,10 @@ class UserController extends Controller
     }
 
     public function edit($id) {
+        $provinces = Province::all();
+        $districts = District::all();
         $user = User::find($id);
-        return view ('admin.user.edit',compact('user'));
+        return view ('admin.user.edit',compact('user','provinces','districts'));
     }
 
     public function update(Request $request,$id) {

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     //
-    public function comments()
+    public function product()
     {
         return $this->belongsTo(Products::class, 'products_id');
     }

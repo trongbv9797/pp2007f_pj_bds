@@ -36,9 +36,9 @@
         <div class="form-group col-md-3">
             <label for="type">Type</label>
             <select name="type"  id="type" class="form-control category">
-              @foreach($products as $product)
-            <option value="{{ $product['post_type_id'] }}"
-            @if($product['post_type_id'] == $post['post_type_id']) selected @endif>{{ $product->post_type['name'] }}
+              @foreach($types as $type)
+            <option value="{{ $type['id'] }}"
+            @if($type['id'] == $post['post_type_id']) selected @endif>{{ $type['name'] }}
             </option>
               @endforeach
           </select>
@@ -71,9 +71,9 @@
           <label for="city">City</label>
           <select name="province" id="city" class="form-control">
             @foreach($provinces as $province)
-          <option value="{{ $province['provinces_id'] }}" 
-          @if ($province['provinces_id'] == $post['provinces_id'])  selected @endif>
-          {{-- {{ $province->province['name'] }} --}}
+          <option value="{{ $province['id'] }}" 
+          @if ($province['id'] == $post['provinces_id'])  selected @endif>
+          {{ $province['name'] }}
         </option>
             @endforeach
           </select>
@@ -84,8 +84,8 @@
           <label for="district">District</label>
           <select name="district" id="district" class="form-control">
             @foreach($districts as $district)
-            <option value="{{ $district['districts_id'] }}" 
-            @if ($district['districts_id'] == $post['districts_id'])  selected @endif>{{ $district->district['name_with_type'] }}
+            <option value="{{ $district['id'] }}" 
+            @if ($district['id'] == $post['districts_id'])  selected @endif>{{ $district['name_with_type'] }}
             </option>
             @endforeach
           </select>
@@ -95,8 +95,8 @@
           <label for="ward">Ward</label>
           <select name="ward" id="ward" class="form-control">
             @foreach($wards as $ward)
-            <option value="{{ $ward['wards_id'] }}" 
-            @if ($ward['wards_id'] == $post['wards_id']) selected @endif>{{ $ward->ward['name_with_type'] }}
+            <option value="{{ $ward['id'] }}" 
+            @if ($ward['id'] == $post['wards_id']) selected @endif>{{ $ward['name_with_type'] }}
           </option>
             @endforeach
           </select>
@@ -127,7 +127,7 @@
 
 
     <button type="submit" class="btn btn-primary">Save</button>
-    <button type="submit" class="btn btn-light">Cancel</button>
+    <a href="{{ URL::previous() }}" class="btn btn-light">Cancel</a>
 
   </form>
 

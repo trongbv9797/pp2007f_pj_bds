@@ -146,6 +146,12 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::get('/news', 'NewsController@listNews')->name('listNews');
     Route::get('/news/create', 'NewsController@create')->name('createNews');
     Route::post('/news/create', 'NewsController@store')->name('storeNews');
+    Route::get('news/edit/{id}', 'NewsController@edit')->name('editNews');
+    Route::post('news/edit/{id}', 'NewsController@update')->name('updateNews');
+    Route::get('news/delete/{id}', 'NewsController@delete')->name('deleteNews');
+
+
+
 
 
 });

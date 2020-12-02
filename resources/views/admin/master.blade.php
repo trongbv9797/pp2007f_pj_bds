@@ -438,7 +438,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="{{route(  'listNews' ) }}">All News</a>
-                                    <a href="{{route(  'createNews' ) }}">Edit News</a>
+                                    <a href="{{route(  'createNews' ) }}">Create News</a>
 
                                 </li>
                             </ul>

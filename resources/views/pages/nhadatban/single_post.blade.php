@@ -738,27 +738,27 @@
             <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
                 <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
-                    @foreach ($product as $product)
+                    @foreach ($product2 as $product3)
 
                         <li class="vip5 swiper-slide swiper-slide-visible swiper-slide-active" uid="783243">
                             <div class="img-product">
-                                <a href="{!! Route('nhadatban_single_post', $product->id) !!}">
-                                    <img alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="{!! $product->link !!}" src-lazy="{!! $product->link !!}" is-lazy-image="true" lazy-id="12">
+                                <a href="{!! Route('nhadatban_single_post', $product3->id) !!}">
+                                    <img alt="{!! $product3->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" imgerr="3" src="{!! $product3->link !!}" src-lazy="{!! $product3->link !!}" is-lazy-image="true" lazy-id="12">
                                 </a>
                                 <span class="product-feature">
                                                                                                         </span>
                             </div>
                             <div class="info-product">
                                 <h3 class="p-title">
-                                    <a href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" style="overflow: visible;">{!! $product->title !!} <span class="hidden-mobile m-on-title" raw="0931113767"></span></a>
+                                    <a href="{!! Route('nhadatban_single_post', $product3->id) !!}" title="{!! $product3->title !!}" style="overflow: visible;">{!! $product3->title !!} <span class="hidden-mobile m-on-title" raw="0931113767"></span></a>
                                 </h3>
-                                <div class="pro-price">{!! $product->price !!} tỷ</div>
+                                <div class="pro-price">{!! $product3->price !!} tỷ</div>
                                     <span class="ic_dot">·</span>
-                                    <div class="pro-m2">{!! $product->area !!} m²</div>
-                                <div class="pro-adress">{!! $product->path_with_type !!}</div>
+                                    <div class="pro-m2">{!! $product3->area !!} m²</div>
+                                <div class="pro-adress">{!! $product3->path_with_type !!}</div>
                                 <div class="date">
                                     {{-- Hôm nay --}}
-                                    <span class="tooltip-time">{!! $product->created_at !!}</span>
+                                    <span class="tooltip-time">{!! $product3->created_at !!}</span>
                                 </div>
                                 <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
                                     <i class="iconSave" data-productid="27605272" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Ch&amp;#237;nh chủ t&amp;#244;i cần b&amp;#225;n gấp l&amp;#244; Bi&amp;#234;n Ho&amp;#224; New City, 100m2, gi&amp;#225; 1,4 tỷ, cho vay 70% gi&amp;#225; trị, 0931113767&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/10/30/20201030115255-63bf_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/10/30/20201030115255-63bf_wm.jpg" data-vipclass="vip5" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="Bán đất nền dự án dự án Biên Hòa New City" data-price="1.4 tỷ" data-area="100 m²" data-pricesort="1400000000" data-areasort="100" data-room="Undefined" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Tôi chính chủ cần tiền làm ăn cần bán 2 nền 100m2 dự án Biên Hòa New City, liền kề sân golf đã có sổ đỏ riêng từng nền.Giá bán chỉ 1,4 tỷ/nền.Hạ tầng hoàn thiện 100%.Ngân hàng hỗ trợ vay - thủ tục nh" data-duration="Hôm nay" data-updatedtime="13/11/2020" data-datesort="11/13/2020 13:54:33" data-contactname="Trần Thụy Như Hoàng" data-contactmobile="0931113767" data-url="/ban-dat-nen-du-an-duong-quoc-lo-51-phuong-phuoc-tan-prj-bien-hoa-new-city/chinh-chu-toi-can-ban-gap-100m2-gia-1-4-ty-cho-vay-70-gia-tri-0931113767-pr27605272" data-totalmedia="8" data-createbyuser="783243"></i>
@@ -790,10 +790,10 @@
         <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode">
             <ul class="ul-list-product swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
 
-                @foreach ($product1 as $product1)
+                @foreach ($product1 as $product4)
                 <li class="vip0 swiper-slide swiper-slide-visible swiper-slide-active">
                                         <div class="img-product">
-                                            <a href="{!! Route('nhadatban_single_post', $product1->id) !!}"><img src="{!! $product1->link !!}" alt="{!! $product1->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
+                                            <a href="{!! Route('nhadatban_single_post', $product4->id) !!}"><img src="{!! $product4->link !!}" alt="{!! $product4->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png"></a>
                                             <span class="product-feature">
                                                 
                                                 
@@ -801,11 +801,11 @@
                                             </span>
                                         </div>
                                         <div class="info-product">
-                                            <h3 class="p-title"><a href="{!! Route('nhadatban_single_post', $product1->id) !!}" title="{!! $product1->title !!}">{!! $product1->title !!}</a></h3>
-                                            <div class="pro-price">{!! $product1->price !!} tỷ</div>
-                                            <span class="ic_dot">·</span><div class="pro-m2">{!! $product1->area !!} m²</div>
-                                            <div class="pro-adress">{!! $product1->path_with_type !!}</div>
-                                            <div class="date">{!! $product1->created_at !!}<span class="tooltip-time">{!! $product1->created_at !!}</span></div>
+                                            <h3 class="p-title"><a href="{!! Route('nhadatban_single_post', $product4->id) !!}" title="{!! $product4->title !!}">{!! $product4->title !!}</a></h3>
+                                            <div class="pro-price">{!! $product4->price !!} tỷ</div>
+                                            <span class="ic_dot">·</span><div class="pro-m2">{!! $product4->area !!} m²</div>
+                                            <div class="pro-adress">{!! $product4->path_with_type !!}</div>
+                                            <div class="date">{!! $product4->created_at !!}<span class="tooltip-time">{!! $product4->created_at !!}</span></div>
                                             <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="top" role="tooltip">
                                                 <i class="iconSave" data-productid="27748072" data-avatar="%3Cimg%20class%3D%22product-avatar-img%22%20alt%3D%22Kh%26%23225%3Bch%20k%E1%BA%B9t%20ti%E1%BB%81n%20c%E1%BA%A7n%20b%26%23225%3Bn%20nhanh%20l%26%23244%3B%20%C4%91%E1%BA%A5t%20Bi%26%23234%3Bn%20H%26%23242%3Ba%20New%20City%2C%20DT%205%20x%2020m%2C%206%20x%2020m%2C%2012%20x%2020m%2C%20%C4%91%26%23227%3B%20nh%E1%BA%ADn%20s%E1%BB%95%22%20error-image-src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Fno-image.png%22%20src%3D%22https%3A%2F%2Fstaticfile.batdongsan.com.vn%2Fimages%2Ficons%2Flazy-preview-image-DFE3E8.png%22%20src-lazy%3D%22https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F350x232%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg%22%20is-lazy-image%3D%22true%22%2F%3E" data-avatarwap="https%3A%2F%2Ffile4.batdongsan.com.vn%2Fcrop%2F200x140%2F2020%2F11%2F11%2F20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="{!! $products->title !!}" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000000" data-areasort="100" data-room="" data-toilets="" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành.&lt;br/&gt;DT:&lt;br/&gt;5 x 20m.&lt;br/&gt;6 x 18m.&lt;br/&gt;9 x 20 m.&lt;br/&gt;12 x 20 m.&lt;br/&gt;Giá: 1.450 tỷ bao sang tên và ra sổ hồng.&lt;br/&gt;Tất cả đã có sổ hồng từng nền, mặt tiền đường 24m, 18m, 15m, 13m.&lt;br/&gt;Làm việc trực tiếp chính chủ thương lượng giá tốt nhất cho anh chị mua đầu tư hoặc để dành ở sau này.&lt;br/&gt;LH: 0903224939 (Bá Lợi).&lt;br/&gt;&lt;br/&gt;Một số thông tin cơ bản Biên Hòa New City.&lt;br/&gt;- Hỗ trợ vay ngân hàng.&lt;br/&gt;- Cơ sở hạ tầng hoàn chỉnh 100% (điện, đường, cây xanh, nước... ).&lt;br/&gt;- Cắm mốc phân lô từng nền.&lt;br/&gt;- Dự án đất nền Biên Hoà New City năm trong khu kinh tế trọng điểm, khu sân golf Long Thành kết nối Quốc Lộ 51, cao tốc Long Thành - Vũng Tàu, Hương Lộ 2 - Cầu Đồng Nai 2, bên cạnh khu đô thị Aqua City, Cách dự án Vincity - Quận 9 chỉ một cây cầu.&lt;br/&gt;- Cầu Vàm Cái Sứt đã khởi công đi ngang dự án đến cao tốc Long Thành, rút ngắn đoạn đường về Quận 2, TP. HCM chỉ còn 20 phút.&lt;br/&gt;- Tiện ích đẳng cấp tiêu chuẩn Quốc tế:&lt;br/&gt;+ Quần thể sân golf, nhà hàng.&lt;br/&gt;+ Khuôn viên lớn, công viên xanh tươi mát.&lt;br/&gt;+ Khu thương mại, hồ bơi, phòng gym, spa, trường học, khu y tế.&lt;br/&gt;+ An ninh 24/24." data-duration="2 ngày trước" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-url="https://batdongsan.com.vn/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-totalmedia="3" data-createbyuser="649852"></i>
                                                 </span>

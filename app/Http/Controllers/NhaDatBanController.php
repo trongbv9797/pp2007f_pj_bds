@@ -33,7 +33,7 @@ class NhaDatBanController extends Controller
         ->select('products.*', 'images.link', 'menu_categories.name', 'wards.path_with_type')
         ->get();
 
-        $product = DB::table('products')
+        $product2 = DB::table('products')
         ->join('images', 'images.products_id', '=' , 'products.id')
         ->join('wards', 'wards.id', '=', 'products.wards_id')
         ->select('products.*', 'images.link', 'wards.path_with_type')
@@ -47,7 +47,7 @@ class NhaDatBanController extends Controller
         ->limit(5)
         ->get();
 
-        return view("pages.nhadatban.single_post", compact('products', 'product', 'product1'));
+        return view("pages.nhadatban.single_post", compact('products', 'product2', 'product1'));
 
     }
 

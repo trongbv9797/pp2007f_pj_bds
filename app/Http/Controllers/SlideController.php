@@ -15,7 +15,7 @@ class SlideController extends Controller
     }
 
     public function create()
-    {
+    {   
         return view('pages.admin.createSlide');
     }
 
@@ -40,12 +40,14 @@ class SlideController extends Controller
     public function edit($id)
     {
         $slide = Slide::find($id);
-        return view("pages.admin.editSlide", compact('slide'));
+        $types = Slide::distinct()->get('type');
+        return view("pages.admin.editSlide", compact('slide', 'types'));
     }
 
     public function update(SlideFromRequest $request, $id)
     {
         $slide = Slide::find($id);
+        $types = Slide::distinct()->get('type');
         $slide->name = $request->get('name');
         $slide->link = $request->get('link');
         $slide->slug = $request->get('slug');
@@ -54,7 +56,7 @@ class SlideController extends Controller
         $slide->height = $request->get('height');
         $slide->order = $request->get('order');
         $slide->save();
-        return view("pages.admin.editSlide", compact('slide'))->with("mess", "Edit Slide success!");
+        return view("pages.admin.editSlide", compact('slide', 'types'))->with("mess", "Edit Slide success!");
     }
 
     public function delete(Request $request, $id)

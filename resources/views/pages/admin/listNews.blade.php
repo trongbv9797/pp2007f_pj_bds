@@ -59,7 +59,7 @@
                                 </td>
                                 <td><span class="badge badge-pill badge-gradient-success">Actived</span></td>
                                 <td>{!! $news->content !!}</td>
-                                <td><img src="{!! $news->image_link!!}" alt="" style="width:300px; heigth:250px"></td>
+                                <td><img src="{!! $news->image_link!!}" alt="" style="width:300px; height:250px"></td>
                                 <td> {!! $news->created_at !!}</td>
                                 <td class="text-center font-size-18">
                                     <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>

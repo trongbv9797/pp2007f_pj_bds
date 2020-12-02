@@ -207,23 +207,9 @@ class MenuSeeder extends Seeder
 
         ]);
 
-        DB::table('menus')->insert([
-            'name'=> 'english.html',
-            'parent_id'=>'4',
-            'slug' => '',
-            'order'=> '3',
-            'type' => 'Support',
+        
 
-        ]);
-
-        DB::table('menus')->insert([
-            'name'=> 'Tải ứng dụng Batdongsan.com.vn',
-            'parent_id'=>'0',
-            'slug' => '',
-            'order'=> '5',
-            'type' => 'Support',
-
-        ]);
+        
 
         DB::table('menus')->insert([
             'name'=> 'https://file4.batdongsan.com.vn/images/newhome/google-play.png',
@@ -243,14 +229,7 @@ class MenuSeeder extends Seeder
 
         ]);
 
-        DB::table('menus')->insert([
-            'name'=> 'Đăng kí ngay để nhận thông tin từ Batdongsan.com.vn',
-            'parent_id'=>'0',
-            'slug' => '',
-            'order'=> '6',
-            'type' => 'Support',
-
-        ]);
+        
 
         DB::table('menus')->insert([
             'name'=> 'Nhập email của bạn',
@@ -371,7 +350,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => '500 - 800 triệu',
-            'parent_id' => '1',
+            'parent_id' => '33',
             'slug' => '500-800-trieu',
             'order' => '1',
             'type' => 'right',
@@ -382,7 +361,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => '800 triệu - 1 tỷ',
-            'parent_id' => '1',
+            'parent_id' => '33',
             'slug' => '800-trieu-1-ty',
             'order' => '2',
             'type' => 'right',
@@ -393,7 +372,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => '<= 30 m2',
-            'parent_id' => '2',
+            'parent_id' => '34',
             'slug' => '<=30m2',
             'order' => '1',
             'type' => 'right',
@@ -404,7 +383,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => '30 - 50 m2',
-            'parent_id' => '2',
+            'parent_id' => '34',
             'slug' => '30 - 50 m2',
             'order' => '2',
             'type' => 'right',
@@ -415,7 +394,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => 'Dự tính chi phí làm nhà ',
-            'parent_id' => '4',
+            'parent_id' => '36',
             'slug' => 'du-tinh-chi-phi-lam-nha',
             'order' => '1',
             'type' => 'right',
@@ -426,7 +405,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => 'Tính lãi suất ',
-            'parent_id' => '4',
+            'parent_id' => '36',
             'slug' => 'tinh-lai-suat',
             'order' => '2',
             'type' => 'right',
@@ -437,7 +416,7 @@ class MenuSeeder extends Seeder
 
         DB::table('menus')->insert([
             'name' => 'Quy trình xây nhà',
-            'parent_id' => '4',
+            'parent_id' => '36',
             'slug' => 'quy-trinh-xay-nha',
             'order' => '3',
             'type' => 'right',
@@ -548,6 +527,84 @@ class MenuSeeder extends Seeder
             'order'=> '16',
             'type' => 'contact'],
         ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'Giấy ĐKKD số 0104630479 do Sở KHĐT TP Hà Nội cấp lần đầu ngày 02/06/2010',
+            'parent_id'=> '65',
+            'slug' =>'' ,
+            'order'=> '1',
+            'type' => 'end-footer',
+
+            ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'Giấy phép GH ICP số 3832/GP-TTĐT do Sở TTTT Hà Nội cấp ngày 08/08/2019',
+            'parent_id'=> '65',
+            'slug' =>'' ,
+            'order'=> '2',
+            'type' => 'end-footer',
+
+            ]);
+
+
+        DB::table('menus')->insert([
+            'name'=> 'Chịu trách nhiệm nội dung GP ICP: Bà Đặng Thị Hường',
+            'parent_id'=> '66',
+            'slug' =>'' ,
+            'order'=> '3',
+            'type' => 'end-footer',
+
+            ]);
+        DB::table('menus')->insert([
+            'name'=> 'Quy chế, quy định giao dịch có hiệu lực từ 23/02/2020',           
+            'parent_id'=> '66',
+            'slug' =>'' ,
+            'order'=> '4',
+            'type' => 'end-footer',
+
+            ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'Copyright © 2007 - 2020 Batdongsan.com.vn',
+            'parent_id'=> '67',
+            'slug' =>'' ,
+            'order'=> '5',
+            'type' => 'end-footer',
+
+            ]);
+        DB::table('menus')->insert([
+            'name'=> 'Ghi rõ nguồn "Batdongsan.com.vn" khi phát hành lại thông tin từ website này.',           
+            'parent_id'=> '67',
+            'slug' =>'' ,
+            'order'=> '6',
+            'type' => 'end-footer',
+
+        ]);
+        DB::table('menus')->insert([
+            'name'=> 'cot1',           
+            'parent_id'=> '0',
+            'slug' =>'' ,
+            'order'=> '1',
+            'type' => 'end-footer',
+
+                ]);
+        DB::table('menus')->insert([
+            'name'=> 'cot2.',           
+            'parent_id'=> '0',
+            'slug' =>'' ,
+            'order'=> '2',
+            'type' => 'end-footer',
+
+            ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'cot3',           
+            'parent_id'=> '0',
+            'slug' =>'' ,
+            'order'=> '2',
+            'type' => 'end-footer',
+
+            ]);
 
 
         DB::table('menus')->insert([

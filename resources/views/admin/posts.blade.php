@@ -68,8 +68,12 @@
                         <td>{{ $post->created_at }}</td>
                         <td> {{ $post->views }}</td>
                         <td class="text-center font-size-18">
-                        <a href="{!! Route('editPost', $post->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                            <a href="#" class="text-gray"><i class="ti-trash"></i></a>
+                        <a href="{!! Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
+                        <form action="{!! Route('deletePost') !!}" method="post">
+                            <input type="hidden" name="post_id" value="{!! $post->id !!}">
+                            <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                            <button type="submit" value="Delete" class="btn btn-danger">Delete</button>
+                        </form>
                         </td>
                     </tr>
                     @endforeach

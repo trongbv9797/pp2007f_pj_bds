@@ -437,7 +437,9 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="data-table.html">Edit News</a>
+                                    <a href="{{route(  'listNews' ) }}">All News</a>
+                                    <a href="{{route(  'createNews' ) }}">Edit News</a>
+
                                 </li>
                             </ul>
                         </li>

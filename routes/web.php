@@ -112,6 +112,9 @@ Route::prefix('/admin')->group(function () {
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');
     Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
+    Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
+    Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
+    Route::post('slide/delete/{id}', 'SlideController@delete')->name('deleteSlide');
 
 });
 // admin/menu
@@ -138,4 +141,11 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
     Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
     Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
+
+     //News-H
+    Route::get('/news', 'NewsController@listNews')->name('listNews');
+    Route::get('/news/create', 'NewsController@create')->name('createNews');
+    Route::post('/news/create', 'NewsController@store')->name('storeNews');
+
+
 });

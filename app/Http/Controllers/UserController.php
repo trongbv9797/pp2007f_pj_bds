@@ -54,17 +54,29 @@ class UserController extends Controller
     }
 
     public function update(Request $request,$id) {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
+
+        if ($request->hasFile('avatar1')) {
+            $file = $request->file('avatar1');
+            $name = $file->getClientOriginalName();
+            $nameAva = time()."_".$name;
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = $request->inputPassword;
         $user->fullname = $request->fullname;
-        $user->dateofbirth = $request->dateofbirth;
+        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
         $user->address = $request->address;
         $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
         $user->save();
-        return view ('admin.user.edit',compact('user'));
+        $users = User::all();
+        return view ('admin.user.index',compact('users'));
     }
 
     public function delete($id) {

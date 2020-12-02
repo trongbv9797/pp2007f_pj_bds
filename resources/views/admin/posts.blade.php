@@ -39,7 +39,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($post as $posts)
+                    @foreach ($posts as $post)
                     <tr>
                         <td>
                             <div class="checkbox">
@@ -51,21 +51,24 @@
                             <div class="list-media">
                                 <div class="list-item">
                                     <div class="media-img">
-                                        <img src="{{ $posts->link }}" alt="">
+                                        @foreach($post->image as $image)
+                                        <img src="{{ $image->link }}" alt="">
+                                        @break
+                                        @endforeach
                                     </div>
                                     <div class="info">
-                                        <span class="title">{{ $posts->title }}</span>
-                                        <span class="sub-title">{{ $posts->name }}</span>
+                                        <span class="title">{{ $post->title }}</span>
+                                        <span class="sub-title">{{ $post->name }}</span>
                                     </div>
                                 </div>
                             </div>
                         </td>
-                        <td><span class="badge badge-pill badge-gradient-success">Actived</span></td>
-                        <td>{{ $posts->id }}</td>
-                        <td>{{ $posts->created_at }}</td>
-                        <td> {{ $posts->views }}</td>
+                        <td><span class="badge badge-pill badge-gradient-success">{{ $post->post_type['name'] }}</span></td>
+                        <td>{{ $post->id }}</td>
+                        <td>{{ $post->created_at }}</td>
+                        <td> {{ $post->views }}</td>
                         <td class="text-center font-size-18">
-                        <a href="{!! Route('editPost', $posts->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                        <a href="{!! Route('editPost', $post->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
                             <a href="#" class="text-gray"><i class="ti-trash"></i></a>
                         </td>
                     </tr>

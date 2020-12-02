@@ -16,12 +16,6 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    public $menu_cate;
-    
-    public function __construct()
-    {
-        $this->menu_cate = Menu_category::all();
-    }
 
     public function post() {
         $categories = Post_type::all();
@@ -29,28 +23,22 @@ class PostController extends Controller
     }
 
     public function viewPost() {
-        // $post = Products::with('image')->get();
-        $post = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('menu_categories', 'menu_categories.id', '=', 'products.menu_category_id')
-        ->select('products.*', 'images.link', 'menu_categories.name')
-        ->get();
-        return view('admin.posts', compact('post'));
+        $posts = Products::all();
+        return view('admin.posts', compact('posts'));
     }
 
     public function editPost($id) {
 
         $post = Products::where('products.id', '=', $id)->first();
-        $wards = Products::select('wards_id')->orderBy('wards_id', 'asc')->distinct()->get();
+        $wards = Ward::all();
         $districts = District::all();
-        $provinces = Products::select('provinces_id')->orderBy('provinces_id', 'asc')->distinct()->get();
-        $products = Products::select('post_type_id')->orderBy('post_type_id', 'asc')->distinct()->get();
+        $provinces = Province::all();
+        $types = Post_type::all();
 
-        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'products'));
+        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types'));
     }
 
     public function updatePost(Request $request, $id) {
-        $menu_cate = $this->menu_cate;
         $post = Products::where('products.id', '=', $id)->first();
         $post->title = $request->get('title');
         $post->price = $request->get('price');
@@ -61,9 +49,9 @@ class PostController extends Controller
         $post->number_of_floor = $request->get('floor');
         $post->content = $request->get('content');
         $post->post_type_id = $request->get('type');
-        $post->province->name = $request->get('province');
-        $post->district->name = $request->get('district');
-        $post->ward->name = $request->get('ward');
+        $post->provinces_id = $request->get('province');
+        $post->districts_id = $request->get('district');
+        $post->wards_id = $request->get('ward');
         $post->save();
         return back();
     }

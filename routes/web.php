@@ -120,13 +120,13 @@ Route::prefix('/admin')->group(function () {
 // admin/menu
 // admin/cate
 Route::prefix('/admin')->group(function () {
-    // admin/category
-    Route::get('/category', 'CategoryController@index')->name('categoryIndex');
-    Route::get('/category/create', 'CategoryController@create')->name('createCategory');
-    Route::post('/category/create', 'CategoryController@store')->name('storeCategory');
-    Route::get('/category/edit/{id}', 'CategoryController@edit')->name('editCategory');
-    Route::post('/category/edit/{id}', 'CategoryController@update')->name('updateCategory');
-    Route::post('/category/delete/{id}', 'CategoryController@delete')->name('deleteCategory');
+    // admin/post-type
+    Route::get('/post-type', 'PostTypeController@index')->name('postTypeIndex');
+    Route::get('/post-type/create', 'PostTypeController@create')->name('createPostType');
+    Route::post('/post-type/create', 'PostTypeController@store')->name('storePostType');
+    Route::get('/post-type/edit/{id}', 'PostTypeController@edit')->name('editPostType');
+    Route::post('/post-type/edit/{id}', 'PostTypeController@update')->name('updatePostType');
+    Route::post('/post-type/delete/{id}', 'PostTypeController@delete')->name('deletePostType');
     //  POSTS - TAI ANH
 Route::get('/posts', 'PostController@viewPost')->name('viewPost');
 Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');

@@ -448,17 +448,17 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-gauge"></i>
                                 </span>
-                                <span class="title">Categories</span>
+                                <span class="title">Post Types</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="active">
-                                    <a href="{{ route('categoryIndex') }}">All Categories</a>
+                                    <a href="{{ route('postTypeIndex') }}">All Post Types</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('createCategory') }}">Create New Categories</a>
+                                    <a href="{{ route('createPostType') }}">Create New Post Types</a>
                                 </li>
                             </ul>
                         </li>

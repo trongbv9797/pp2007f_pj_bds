@@ -29,7 +29,7 @@ class NhaDatChoThueController extends Controller
         ->select('products.*', 'images.link', 'menu_categories.name', 'wards.path_with_type')
         ->where('products.id', '=', $id)->get();
 
-        $product = DB::table('products')
+        $product2 = DB::table('products')
         ->join('images', 'images.products_id', '=' , 'products.id')
         ->join('wards', 'wards.id', '=', 'products.wards_id')
         ->select('products.*', 'images.link', 'wards.path_with_type')
@@ -43,7 +43,7 @@ class NhaDatChoThueController extends Controller
         ->limit(5)
         ->get();
 
-        return view("pages.nha_dat_cho_thue.single_post", compact('products', 'product', 'product1'));
+        return view("pages.nha_dat_cho_thue.single_post", compact('products', 'product2', 'product1'));
     }
 
     public function choThueCanHo() {

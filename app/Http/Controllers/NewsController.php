@@ -36,4 +36,30 @@ class NewsController extends Controller
 
         return view('pages.admin.createNews', compact('news'))->with('mess', $mess);
     }
+
+    public function edit($id)
+    {
+        $news = Article::find($id);
+        return view("pages.admin.editNews", compact('news'));
+    }
+
+    public function update(NewsFromRequest $request, $id)
+    {
+        $news = Article::find($id);
+        $news->title = $request->get('title');
+        $news->content = $request->get('content');
+        $news->slug = $request->get('slug');
+        $news->type = $request->get('type');
+        $news->image_link = $request->get('image_link');
+        $news->save();
+        return redirect('/admin/news')->with("mess", "Edit News success!");
+
+    }
+    public function delete (Request $request, $id) {
+        $news = Article::find($id);
+        $news->delete();
+        return redirect()->route('listNews')->with('mess','Deleted successfully!');
+    }
+
+
 }

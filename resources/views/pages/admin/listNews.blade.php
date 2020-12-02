@@ -62,8 +62,8 @@
                                 <td><img src="{!! $news->image_link!!}" alt="" style="width:300px; height:250px"></td>
                                 <td> {!! $news->created_at !!}</td>
                                 <td class="text-center font-size-18">
-                                    <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                                    <a href="#" class="text-gray"><i class="ti-trash"></i></a>
+                                    <a href="{!! Route('editNews', $news->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                                    <a href="{!! Route('deleteNews', $news->id) !!}" class="text-gray"><i class="ti-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

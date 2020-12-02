@@ -90,6 +90,28 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label control-label">City</label>
+                            <select class="form-control col-sm-3 d-inline m-l-15 " id='provices'>
+                                <option class="provice" value="0"> Provience </option>
+                                @foreach ($provinces as $provice)
+                                    <option class="provice" value="{{ $provice->code }}"> {{ $provice->name }} </option>
+                                @endforeach
+                            </select>
+                            <div class="col-sm-1"></div>
+
+                            <select class="form-control col-sm-2 d-inline m-l-35" id='districts'>
+                                <option class="district" value="0">District</option>
+
+                            </select>
+
+                            <div class="col-sm-1"></div>
+
+                            <select class="form-control col-sm-2 d-inline m-l-35" id='wards'>
+                                <option class="ward">Ward</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label control-label">Avatar</label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" name="avatar1">
@@ -126,5 +148,48 @@
     <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
     <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
     <script src="/assets/js/forms/form-elements.js"></script>
+        {{-- jquery-ajax --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".provice").click(function() {
+                    var id = $(this).val();
+                    $.ajax({
+                        type: "get",
+                        url: "/admin/user/ajaxDistrict",
+                        data: {
+                            parent_code: id
+                        },
+                        dataType: "html",
+                        success: function(data) {
+    
+                        }
+                    }).done(function(data) {
+                        $('#districts').html(data);
+    
+                    });
+                });
+    
+            });
+    
+            function selectDistrict(id) {
+                $.ajax({
+                    type: "get",
+                    url: "/admin/user/ajaxWard",
+                    data: {
+                        parent_code: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+    
+                    }
+                }).done(function(data) {
+                    $('#wards').html(data);
+    
+                });
+            }
+    
+        </script>
+
 @endsection
  

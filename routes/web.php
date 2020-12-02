@@ -101,6 +101,9 @@ Route::prefix('/admin')->group(function () {
 // admin
     Route::get('/user/index','UserController@index');
     Route::get('/user/index','UserController@index')->name('userIndex');
+    Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
+    Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
+    
     Route::get('/user/create','UserController@create')->name('createUser');
     Route::post('/user/create','UserController@store')->name('storeUser');
 

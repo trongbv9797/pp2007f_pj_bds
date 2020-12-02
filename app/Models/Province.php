@@ -23,6 +23,6 @@ class Province extends Model
 
     public function districts()
     {
-        return $this->hasMany(District::class, 'parent_code');
+        return $this->hasMany('App\Model\District','parent_code', 'code');
     }
 }

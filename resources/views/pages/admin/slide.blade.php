@@ -12,7 +12,7 @@
                             <div class="header-sub-title">
                                 <nav class="breadcrumb breadcrumb-dash">
                                     <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Home</a>
-                                    <a class="breadcrumb-item" href="#">Tables</a>
+                                    <a class="breadcrumb-item" href="{{ route('Slide') }}">Slides</a>
                                     <span class="breadcrumb-item active">Slides Table</span>
                                 </nav>
                             </div>
@@ -20,6 +20,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-overflow">
+
+                                @if(session('slide_del'))
+                                <div class="alert alert-success">
+                                    {{ session('slide_del') }}
+                                </div>
+                                @endif
+
                                     <table id="dt-opt" class="table table-hover table-xl">
                                         <thead>
                                             <tr>
@@ -66,8 +73,12 @@
                                                 <td>{!! $slide->height!!}</td>
                                                 <td>{!! $slide->order!!}</td>
                                                 <td class="text-center font-size-18">
-                                                    <a href="#" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                                                    <a href="#" class="text-gray"><i class="ti-trash"></i></a>
+                                                    <a href="{!! Route('editSlide', $slide->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
+                                                    <form action="{{ route('deleteSlide', $slide->id) }}" method="POST">
+                                                        <input type="hidden" name="id" value="{!! $slide->id !!}">
+                                                        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                                                        <button><i class="ti-trash"></i></button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             @endforeach

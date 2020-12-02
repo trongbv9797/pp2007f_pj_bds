@@ -112,6 +112,9 @@ Route::prefix('/admin')->group(function () {
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');
     Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
+    Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
+    Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
+    Route::post('slide/delete/{id}', 'SlideController@delete')->name('deleteSlide');
 
 });
 // admin/menu

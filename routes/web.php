@@ -147,5 +147,6 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::get('/news/create', 'NewsController@create')->name('createNews');
     Route::post('/news/create', 'NewsController@store')->name('storeNews');
 
-
+    // admin/login
+    Route::get('/login', 'Auth\LoginController@login')->name('login');
 });

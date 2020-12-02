@@ -141,4 +141,11 @@ Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
     Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
     Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
     Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
+
+     //News-H
+    Route::get('/news', 'NewsController@listNews')->name('listNews');
+    Route::get('/news/create', 'NewsController@create')->name('createNews');
+    Route::post('/news/create', 'NewsController@store')->name('storeNews');
+
+
 });

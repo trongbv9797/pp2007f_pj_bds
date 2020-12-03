@@ -21,6 +21,13 @@
         </nav>
     </div>
 </div>
+{{Session::get('edit_mess')}}
+@if(isset($edit_mess))
+<div class="alert alert-success alert-dismissible fade in">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{!! $edit_mess !!}</strong>
+</div>
+@endif
 
 <form method="POST" action="{{ route('updatePost', $post['id']) }}">
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">

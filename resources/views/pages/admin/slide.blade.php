@@ -35,7 +35,7 @@
                             </div>
                         </th>
                         <th>Name</th>
-                        <th>Link</th>
+                        <th>Image</th>
                         <th>Slug</th>
                         <th>Type </th>
                         <th>Width (pixel)</th>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td><img src="{!! $slide->link!!}" alt="" style="width:300px; height:200px"></td>
+                        <td><img src="/storage/img/slides/{!! $slide->link!!}" alt="" style="width:300px; height:200px"></td>
                         <td><textarea name="info" rows="5" cols="30">{!! $slide->slug!!}</textarea>
 
                         <td>{!! $slide->type!!}</td>

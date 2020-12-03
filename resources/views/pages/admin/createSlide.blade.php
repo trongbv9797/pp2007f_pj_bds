@@ -27,7 +27,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-sm-8">
-                <form role="form" id="form-validation" action="{!! route('storeSlide') !!}" method="post">
+                <form role="form" id="form-validation" action="{!! route('storeSlide') !!}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Name *</label>
@@ -36,9 +36,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label control-label">Link *</label>
+                        <label class="col-sm-2 col-form-label control-label">Image *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control"  name="link">
+                        <input type="file" class="form-control" name="link">
                         </div>
                     </div>
                     <div class="form-group row">

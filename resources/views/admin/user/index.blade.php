@@ -1,7 +1,7 @@
 @extends('admin.master')
 
-@section('title','User Table')
-    
+@section('title', 'User Table')
+
 @section('styles')
     <link rel="stylesheet" href="/assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css">
 @endsection
@@ -40,41 +40,44 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                        <tr>
-                            <td>
-                                <div class="checkbox">
-                                    <input id="selectable2" type="checkbox">
-                                    <label for="selectable2"></label>
-                                </div>
-                            </td>
-                            
-                            <td>
-                                <div class="list-media">
-                                    <div class="list-item">
-                                        <div class="media-img">
-                                            <img src="{{ asset("storage/img/users/$user->avatar") }}" alt="">
-                                        </div>
-                                        <div class="info">
-                                            <span class="title">{{ $user->fullname }}</span>
-                                            <span class="sub-title">ID {{ $user->id }}</span>
+                            <tr>
+                                <td>
+                                    <div class="checkbox">
+                                        <input id="selectable2" type="checkbox">
+                                        <label for="selectable2"></label>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="list-media">
+                                        <div class="list-item">
+                                            <div class="media-img">
+                                                <img src="{{ asset("storage/img/users/$user->avatar") }}" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">{{ $user->fullname }}</span>
+                                                <span class="sub-title">ID {{ $user->id }}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td>{{ $user->username }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>{{ $user->phonenumber }}</td>
-                            <td> {{ $user->address }}</td>
-                            @if($user->sex == 1)
-                            <td> Male </td>
-                            @else
-                            <td> Female </td>
-                            @endif
-                            <td class="text-center font-size-18">
-                                <a href="{{  route('editUser',$user->id) }}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                                <a href="{{  route('deleteUser',$user->id) }}" class="text-gray"><i class="ti-trash"></i></a>
-                            </td>
-                        </tr>
+                                </td>
+                                <td>{{ $user->username }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->phonenumber }}</td>
+                                <td> {{ $user->address }}</td>
+                                @if ($user->sex == 1)
+                                    <td> Male </td>
+                                @else
+                                    <td> Female </td>
+                                @endif
+                                <td class="text-center font-size-18">
+                                    <a href="{{ route('editUser', $user->id) }}" class="text-gray m-r-15"><i
+                                            class="ti-pencil"></i></a>
+
+                                    <a href="#" class="text-gray delete"
+                                        did="{{ $user->id }}"><i class="ti-trash"></i></a>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
@@ -88,4 +91,25 @@
     <script src="/assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
     <script src="/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
     <script src="/assets/js/tables/data-table.js"></script>
+    {{-- jquery-ajax --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var id = $('a.delete').attr('did');
+            $('.delete').click(function() {
+                $(this).closest("tr").remove();
+            });
+            $.ajax({
+                type: "get",
+                url: '/admin/user/delete',
+                data: {did : id},
+                dataType: "html",
+                success: function (response) {
+                    html(data);
+                }
+            });
+        });
+
+    </script>
+
 @endsection

@@ -107,11 +107,10 @@ class UserController extends Controller
         return view ('admin.user.index',compact('users'));
     }
 
-    public function delete($id) {
-        $user = User::find($id);
+    public function delete(Request $request) {
+        $did = $request->get('did');
+        $user = User::find($did);
         $user->delete();
-        $users = User::all();
-        return view ('admin.user.index',compact('users'));
     }
 
 }

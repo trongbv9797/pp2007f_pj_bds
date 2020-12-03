@@ -110,7 +110,7 @@ Route::prefix('/admin')->group(function () {
     Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
     Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
 
-    Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
+    Route::get('/user/delete','UserController@delete')->name('deleteUser');
 
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');

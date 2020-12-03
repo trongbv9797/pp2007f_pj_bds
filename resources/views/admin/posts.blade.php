@@ -40,7 +40,7 @@
                 </thead>
                 <tbody>
                     @foreach ($posts as $post)
-                    <tr>
+                    <tr id="post">
                         <td>
                             <div class="checkbox">
                                 <input id="selectable2" type="checkbox">
@@ -69,11 +69,7 @@
                         <td> {{ $post->views }}</td>
                         <td class="text-center font-size-18">
                         <a href="{!! Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
-                        <form action="{!! Route('deletePost') !!}" method="post">
-                            <input type="hidden" name="post_id" value="{!! $post->id !!}">
-                            <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                            <button type="submit" value="Delete" class="btn btn-danger">Delete</button>
-                        </form>
+                        <a href="javascript:;" class="btn btn-danger delete" post_id="{!! $post->id !!}">Delete</a>
                         </td>
                     </tr>
                     @endforeach
@@ -88,4 +84,21 @@
 <script src="/assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
 <script src="/assets/js/tables/data-table.js"></script>
+<script>
+$(document).on('click', '.delete', function () {
+            var id_post = $(this).attr('post_id');
+            $(this).closest('tr').remove();
+            $.ajax({
+                type: "get",
+                url: "/admin/delete-post",
+                data: {post_id: id_post},
+                dataType:"html",
+
+                success: function (data) {
+                }
+            }).done(function () {
+                html(data);
+            });
+        });
+</script>
 @endsection

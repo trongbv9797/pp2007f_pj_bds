@@ -134,7 +134,7 @@ Route::prefix('/admin')->group(function () {
 Route::get('/posts', 'PostController@viewPost')->name('viewPost');
 Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
 Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
-Route::post('/delete-post', 'PostController@deletePost')->name('deletePost');
+Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
 
 
 

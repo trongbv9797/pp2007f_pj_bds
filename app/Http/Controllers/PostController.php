@@ -29,7 +29,7 @@ class PostController extends Controller
 
     public function editPost($id) {
 
-        $post = Products::where('products.id', '=', $id)->first();
+        $post = Products::where('id', '=', $id)->first();
         $wards = Ward::all();
         $districts = District::all();
         $provinces = Province::all();
@@ -39,7 +39,7 @@ class PostController extends Controller
     }
 
     public function updatePost(Request $request, $id) {
-        $post = Products::where('products.id', '=', $id)->first();
+        $post = Products::where('id', '=', $id)->first();
         $post->title = $request->get('title');
         $post->price = $request->get('price');
         $post->area = $request->get('area');
@@ -53,6 +53,13 @@ class PostController extends Controller
         $post->districts_id = $request->get('district');
         $post->wards_id = $request->get('ward');
         $post->save();
+        return back();
+    }
+    
+    public function deletePost(Request $request)
+    {
+        $post = Products::find($request->get('post_id'));
+        $post->delete();
         return back();
     }
 }

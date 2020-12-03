@@ -3,6 +3,7 @@
 return [
 
     'link_users' => 'storage/img/users/',
+    'link_slides' => 'storage/img/slides/',
     'img_name_length' => '4',
     'paginate' => '6',
     'pagination' => '8',

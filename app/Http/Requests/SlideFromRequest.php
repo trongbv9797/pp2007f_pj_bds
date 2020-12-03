@@ -26,7 +26,6 @@ class SlideFromRequest extends FormRequest
         return [
             //
             "name" => 'required',
-            "link" => 'required',
             "slug" => 'required',
             "type" => 'required',
             "width" => 'required',

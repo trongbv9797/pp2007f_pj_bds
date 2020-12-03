@@ -19,11 +19,26 @@ class SlideController extends Controller
         return view('pages.admin.createSlide');
     }
 
-    public function store(SlideFromRequest $request)
+    public function store(Request $request)
     {
+
         $slide = new Slide();
         $slide->name = $request->get('name');
-        $slide->link = $request->get('link');
+
+        if ($request->hasFile('link')) {
+            $file = $request->file('link');
+            $name = $file->getClientOriginalName();
+            
+            $nameImg = time()."_".$name;
+            $file->move(config('app.link_slides'), $nameImg);
+            $slide->link = $nameImg;
+            
+        }
+        else {
+            $slide->link = "";
+        }
+
+
         $slide->slug = $request->get('slug');
         $slide->type = $request->get('type');
         $slide->width = $request->get('width');
@@ -48,8 +63,22 @@ class SlideController extends Controller
     {
         $slide = Slide::find($id);
         $types = Slide::distinct()->get('type');
+
+        $slide = Slide::findOrFail($id);
+
+        if ($request->hasFile('link1')) {
+            $file = $request->file('link1');
+            $name = $file->getClientOriginalName();
+            $nameImg = time()."_".$name;
+            
+            $file->move(config('app.link_slides'), $nameImg);
+            $slide->link = $nameImg;
+        }
+        else {
+            $slide->link = "";
+        }
+
         $slide->name = $request->get('name');
-        $slide->link = $request->get('link');
         $slide->slug = $request->get('slug');
         $slide->type = $request->get('type');
         $slide->width = $request->get('width');

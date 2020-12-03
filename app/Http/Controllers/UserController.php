@@ -62,7 +62,7 @@ class UserController extends Controller
             $name = $file->getClientOriginalName();
             
             $nameAva = time()."_".$name;
-
+            
             $file->move(config('app.link_users'), $nameAva);
             $user->avatar = $nameAva;
         }

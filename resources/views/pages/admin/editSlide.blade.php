@@ -31,7 +31,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-sm-8">
-                <form role="form" id="form-validation" action="{!! Route('updateslide', $slide->id) !!}" method="POST">
+                <form role="form" id="form-validation" action="{!! Route('updateslide', $slide->id) !!}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label control-label">Name *</label>
@@ -40,9 +40,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label control-label">Link *</label>
+                        <label class="col-sm-2 col-form-label control-label">Image *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Required *" name="link" value="{!! $slide->link !!}">
+                            <input type="file" class="form-control" placeholder="Required *" name="link1" >
                         </div>
                     </div>
                     <div class="form-group row">

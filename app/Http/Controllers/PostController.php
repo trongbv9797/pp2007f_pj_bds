@@ -52,15 +52,19 @@ class PostController extends Controller
         $post->provinces_id = $request->get('province');
         $post->districts_id = $request->get('district');
         $post->wards_id = $request->get('ward');
-        $post->save();
-        return back();
+        $edit_mess = "";
+        if ($post->save()) {
+            $edit_mess = "Successfully Edited!";
+        }
+        return redirect()->route('editPost', [$id])->with('flash_success', 'Success');
     }
     
     public function deletePost(Request $request)
     {
-        $post = Products::find($request->get('post_id'));
-        $post->delete();
-        return back();
+        $posts = Products::find($request->get('post_id'));
+        $posts->delete();
+        echo view('admin.posts', compact('posts'));
+        exit;
     }
 }
 

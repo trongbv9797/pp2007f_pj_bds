@@ -27,21 +27,21 @@
                         enctype="multipart/form-data">
 
                         @csrf
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Basic information</h4>
                         </div>
                         <div class="card-body border border-secondary shadow-sm p-3 mb-2">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label control-label">Subject *</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="username" placeholder="" required>
+                                    <input type="text" class="form-control" name="title" placeholder="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label control-label">Appearance *</label>
                                 <div class="col-sm-4">
-                                    <select class="form-control" id='type'>
-                                        <option class="district" value="0">--Form--</option>
+                                    <select class="form-control" id='appearance'>
+                                        <option class="district" value="0" name="appearance" required>--Form--</option>
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label control-label m-l-2">Type *</label>
@@ -73,7 +73,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label control-label">Wards </label>
+                                <label class="col-sm-2 col-form-label control-label"> Wards </label>
                                 <div class="col-sm-4">
                                     <select class="form-control" id='wards'>
                                         <option class="ward">--Wards--</option>
@@ -94,29 +94,34 @@
 
                                 <label class="col-sm-2 col-form-label control-label">Price</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="price" placeholder="Enter your price">
+                                    <input type="text" class="form-control price" name="price" placeholder="Enter your price">
                                 </div>
 
                             </div>
 
 
-                            <div class="form-group row">
+                            <div class="form-group row ">
 
-                                <label class="col-sm-2 col-form-label control-label">Unit</label>
-                                <div class="col-sm-4">
-                                    <select class="form-control" id='type'>
+                                <label class="col-sm-2 col-form-label control-label my-2">Unit</label>
+                                <div class="col-sm-4 my-2">
+                                    <select class="form-control" id='type' style="font-size: 20px">
                                         <option class="district" value="0">--Unit--</option>
                                     </select>
                                 </div>
 
-                                <label class="col-sm-2 col-form-label control-label">
+                                <label class="col-sm-2 col-form-label control-label my-2">
                                     Total price: </label>
-                                <div class="col-sm-4" id="total"> </div>
+                                <div class="col-sm-4 col-form-label control-label mr-0 my-2 text-dark"style="font-size: 20px">
+                                    <span>$</span>
+                                    <span >3 </span>
+                                    <span >trieu/VND</span>
+                                </div>
+
 
                             </div>
                         </div>
 
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Description information</h4>
                         </div>
 
@@ -125,9 +130,11 @@
                                 <label class="control-label col-sm-12">( * ) Maximum only 3000 characters </label>
 
                                 <div class="form-group control-label row">
-                                    <textarea class="form-control col-sm-7 ml-5" id="exampleFormControlTextarea1"
-                                        rows="3"></textarea>
-                                    <p class="ml-4 col-sm-4">
+                                    <div class="col-sm-8 ml-5">
+                                        <textarea class="form-control " id="exampleFormControlTextarea1" rows="3"
+                                            name="content"></textarea>
+                                    </div>
+                                    <p class="ml-4 col-sm-3">
                                         A general introduction to your property. For example: The house has a convenient
                                         location: Near the park, near a school ... Total area 52m2, driveway to the door.
                                         Note: the listing is for denominations of Vietnamese Dong only.
@@ -136,7 +143,7 @@
                             </div>
                         </div>
 
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Other information</h4>
                         </div>
 
@@ -165,14 +172,14 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label control-label">Number of floors </label>
                                     <div class="col-sm-4">
-                                        <input type="text" class="form-control" name="acreage"
+                                        <input type="text" class="form-control" name="floors"
                                             placeholder="Enter your floors">
                                     </div>
 
                                     <label class="col-sm-2 col-form-label control-label">
                                         Number of bedrooms </label>
                                     <div class="col-sm-4">
-                                        <input type="text" class="form-control" name="price"
+                                        <input type="text" class="form-control" name="bedrooms"
                                             placeholder="Enter your bedrooms">
                                     </div>
 
@@ -182,7 +189,8 @@
                                     <label class="col-sm-2 col-form-label control-label">
                                         Furniture </label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" name="furniture"
+                                            rows="4"></textarea>
                                     </div>
 
                                 </div>
@@ -192,13 +200,14 @@
                                         Legal information </label>
                                     <div class="col-sm-10">
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                            placeholder="Example: Red book is available.  Has pink book.  Approved investment decision ..."></textarea>
+                                            placeholder="Example: Red book is available.  Has pink book.  Approved investment decision ..."
+                                            name="legalInformation"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Photos</h4>
                         </div>
 
@@ -220,7 +229,7 @@
                             </div>
                         </div>
 
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Posting schedule</h4>
                         </div>
 
@@ -274,7 +283,7 @@
                             </div>
                         </div>
 
-                        <div class="card-header border border-secondary  bg-info ">
+                        <div class="card-header border border-secondary  bg-vimeo ">
                             <h4 class="card-title ">Into money</h4>
                         </div>
 
@@ -287,17 +296,17 @@
                                 <div class="col-sm-3 border border-secondary bg-success mx-5">
                                     <label class="col-sm-12 col-form-label control-label ">VAT ( 10% )</label>
                                 </div>
-                                <div class="col-sm-3 border border-secondary bg-success mx-5" >
+                                <div class="col-sm-3 border border-secondary bg-success mx-5">
                                     <label class="col-sm-12 col-form-label control-label">Into money</label>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label " ></label>
+                                    <label class="col-sm-12 col-form-label control-label "></label>
 
                                 </div>
-                                <div class="col-sm-3 border border-secondary mx-5"style="height:200px">
+                                <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
                                     <label class="col-sm-12 col-form-label control-label "></label>
                                 </div>
-                                <div class="col-sm-3 border border-secondary mx-5"style="height:200px">
+                                <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
                                     <label class="col-sm-12 col-form-label control-label"></label>
                                 </div>
                             </div>
@@ -324,6 +333,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            // province
             $(".provice").click(function() {
                 var id = $(this).val();
                 $.ajax({
@@ -340,6 +350,11 @@
                     $('#districts').html(data);
 
                 });
+            });
+            // total basic
+
+            $('.price').click(function(){
+                alert($(this).val());
             });
 
         });

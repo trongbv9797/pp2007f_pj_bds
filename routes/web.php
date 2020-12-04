@@ -93,12 +93,12 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 //   ADMIN
-Route::prefix('/admin')->group(function () {
+Route::prefix('/admin',)->group(function () {
     Route::get('/master',function () {
         return view('admin.master');
     });
 
-// admin
+    // admin
     // User - CRUD
     Route::get('/user','UserController@index');
     Route::get('/user','UserController@index')->name('userIndex');
@@ -132,10 +132,10 @@ Route::prefix('/admin')->group(function () {
     Route::post('/post-type/edit/{id}', 'PostTypeController@update')->name('updatePostType');
     Route::post('/post-type/delete/{id}', 'PostTypeController@delete')->name('deletePostType');
     //  POSTS - TAI ANH
-Route::get('/posts', 'PostController@viewPost')->name('viewPost');
-Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
-Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
-Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
+    Route::get('/posts', 'PostController@viewPost')->name('viewPost');
+    Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
+    Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
+    Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
 
 
 

@@ -36,9 +36,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label control-label">Image *</label>
+                        <label class="col-sm-2 col-form-label control-label">Image (link) *</label>
                         <div class="col-sm-10">
-                        <input type="file" class="form-control" name="link">
+                        <input type="file" class="form-control" name="link[]" multiple>
                         </div>
                     </div>
                     <div class="form-group row">

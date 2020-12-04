@@ -20,30 +20,32 @@ class SlideController extends Controller
     }
 
     public function store(Request $request)
-    {
-
-        $slide = new Slide();
-        $slide->name = $request->get('name');
-
-        if ($request->hasFile('link')) {
-            $file = $request->file('link');
-            $name = $file->getClientOriginalName();
+    {   
+        if ($request->hasFile('link')) 
+        {
             
-            $nameImg = time()."_".$name;
-            $file->move(config('app.link_slides'), $nameImg);
-            $slide->link = $nameImg;
+            $files = $request->file('link');
+
+            foreach ($files as $file) {
+                $slide = new Slide();
+                $name = $file->getClientOriginalName();
+                $nameImg = time()."_".$name;
+                $file->move(config('app.link_slides'), $nameImg);
+                $slide->link = $nameImg;
+                $slide->name = $request->get('name');
+                $slide->slug = $request->get('slug');
+                $slide->type = $request->get('type');
+                $slide->width = $request->get('width');
+                $slide->height = $request->get('height');
+                $slide->order = $request->get('order');
+                $slide->save();
+            }
             
         }
-        else {
-            $slide->link = "";
-        }
+    
 
 
-        $slide->slug = $request->get('slug');
-        $slide->type = $request->get('type');
-        $slide->width = $request->get('width');
-        $slide->height = $request->get('height');
-        $slide->order = $request->get('order');
+
 
         $mess = "";
         if ($slide->save()) {

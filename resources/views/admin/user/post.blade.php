@@ -226,55 +226,89 @@
 
                         <div class="card-body border border-secondary shadow-sm p-3 mb-2">
                             <div class="form-group row">
-                                
                                 <div class="col-sm-4">
                                     <label class="col-sm-12 col-form-label control-label">Ad type</label>
-                                    <select class="form-control" id='type'>
-                                        <option class="district" value="0">--Ad type--</option>
+                                    <select class="form-control" id='type' style="height:45px">
+                                        <option class="district form-control" value="0">--Ad type--</option>
                                     </select>
                                 </div>
 
                                 <div class="col-sm-4">
                                     <label class="col-sm-4 col-form-label control-label">Start day</label>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-10">
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
-                                            <input id="datepicker-1" data-provide="datepicker" type="text" class="form-control"
-                                                name="dateofbirth" placeholder="Pick your date of birth">
+                                            <input id="datepicker-1" data-provide="datepicker" type="text"
+                                                class="form-control" name="dateofbirth" placeholder="Pick date start">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-4">
                                     <label class="col-sm-4 col-form-label control-label">End day</label>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-10">
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
-                                            <input id="datepicker-1" data-provide="datepicker" type="text" class="form-control"
-                                                name="dateofbirth" placeholder="Pick your date of birth">
+                                            <input id="datepicker-1" data-provide="datepicker" type="text"
+                                                class="form-control" name="dateofbirth" placeholder="Pick date end">
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="col-sm-4">
+                                    <label class="col-sm-6 col-form-label control-label">Final unit price:</label>
+                                </div>
+                                <span class="col-sm-2"></span>
+                                <div class="col-sm-4">
+                                    <label class="col-sm-6 col-form-label control-label">Number of days: </label>
+                                </div>
+                                <span class="col-sm-2"></span>
+                                <label class="col-sm-1 col-form-label control-label">
+                                    <img class="ml-3" alt="biểu tượng vip"
+                                        src="https://file4.batdongsan.com.vn/images/Home/images/vip-icon.jpg"
+                                        style="width:25px;height:15px;">
+                                </label>
+                                <label class="col-sm-11 col-form-label control-label">( * ) You should choose to post VIP
+                                    news to have higher efficiency, for example: message Vip1 has an average view of 20
+                                    times higher than normal news. </label>
+                                </>
                             </div>
                         </div>
 
+                        <div class="card-header border border-secondary  bg-info ">
+                            <h4 class="card-title ">Into money</h4>
+                        </div>
 
+                        <div class="card-body border border-secondary shadow-sm p-3 mb-2">
+                            <div class="form-group row text-center my-3 mx-3">
+                                <div class="col-sm-3 border border-secondary bg-success mx-5">
+                                    <label class="col-sm-12 col-form-label control-label ">Posting fee</label>
 
+                                </div>
+                                <div class="col-sm-3 border border-secondary bg-success mx-5">
+                                    <label class="col-sm-12 col-form-label control-label ">VAT ( 10% )</label>
+                                </div>
+                                <div class="col-sm-3 border border-secondary bg-success mx-5" >
+                                    <label class="col-sm-12 col-form-label control-label">Into money</label>
+                                </div>
+                                <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
+                                    <label class="col-sm-12 col-form-label control-label " ></label>
 
-
-
-
-
-
-
-
-
+                                </div>
+                                <div class="col-sm-3 border border-secondary mx-5"style="height:200px">
+                                    <label class="col-sm-12 col-form-label control-label "></label>
+                                </div>
+                                <div class="col-sm-3 border border-secondary mx-5"style="height:200px">
+                                    <label class="col-sm-12 col-form-label control-label"></label>
+                                </div>
+                            </div>
+                        </div>
                         <input type="submit" class="btn btn-gradient-success" value="Submit">
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 @endsection
 

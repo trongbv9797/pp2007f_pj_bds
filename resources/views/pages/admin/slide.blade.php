@@ -35,7 +35,7 @@
                             </div>
                         </th>
                         <th>Name</th>
-                        <th>Image</th>
+                        <th>Image (Link)</th>
                         <th>Slug</th>
                         <th>Type </th>
                         <th>Width (pixel)</th>

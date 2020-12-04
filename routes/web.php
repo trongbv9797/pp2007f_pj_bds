@@ -99,18 +99,19 @@ Route::prefix('/admin')->group(function () {
     });
 
 // admin
-    Route::get('/user/index','UserController@index');
-    Route::get('/user/index','UserController@index')->name('userIndex');
+    // User - CRUD
+    Route::get('/user','UserController@index');
+    Route::get('/user','UserController@index')->name('userIndex');
     Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
     Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
-    
     Route::get('/user/create','UserController@create')->name('createUser');
     Route::post('/user/create','UserController@store')->name('storeUser');
-
     Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
     Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
-
     Route::get('/user/delete','UserController@delete')->name('deleteUser');
+
+    // user -post
+    Route::get('/user/post/','UserController@post')->name('postUser');
 
     Route::get('/slide', 'SlideController@index')->name('Slide');
     Route::get('/slide/create', 'SlideController@create')->name('createSlide');

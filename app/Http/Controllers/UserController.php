@@ -113,4 +113,11 @@ class UserController extends Controller
         $user->delete();
     }
 
+    public function post() {
+
+        $provinces = Province::all();
+        $districts = District::all();
+        return view ('admin.user.post',compact('provinces','districts'));
+    }
+
 }

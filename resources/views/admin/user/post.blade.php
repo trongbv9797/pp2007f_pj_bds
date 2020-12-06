@@ -19,7 +19,7 @@
             </nav>
         </div>
     </div>
-    <div class="card col-sm-8">
+    <div class="card col-sm-12">
         <div class="">
             <div class="row">
                 <div class="col-sm-12">
@@ -94,13 +94,15 @@
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label control-label">Acreage </label>
                                 <div class="col-sm-3">
-                                    <input type="text" class="form-control" name="acreage" placeholder="Enter your acreage">
+                                    <input type="text" class="form-control acreage" name="acreage"
+                                        placeholder="Enter your acreage">
                                 </div>
                                 <label class="col-sm-1 col-form-label">m2 </label>
 
                                 <label class="col-sm-2 col-form-label control-label">Price</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control price" name="price" placeholder="Enter your price">
+                                    <input type="text" class="form-control price" name="price"
+                                        placeholder="Enter your price">
                                 </div>
 
                             </div>
@@ -122,10 +124,11 @@
 
                                 <label class="col-sm-2 col-form-label control-label my-2">
                                     Total price: </label>
-                                <div class="col-sm-4 col-form-label control-label mr-0 my-2 text-dark"style="font-size: 20px">
+                                <div class="col-sm-4 col-form-label control-label mr-0 my-2 text-dark"
+                                    style="font-size: 20px">
                                     <span>$</span>
-                                    <span >3 </span>
-                                    <span >trieu/VND</span>
+                                    <span id="total"></span>
+                                    <span id="unit"></span>
                                 </div>
 
 
@@ -261,7 +264,8 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control" name="dateofbirth" placeholder="Pick date start">
+                                                class="form-control date date1" name="dateofbirth"
+                                                placeholder="Pick date start">
                                         </div>
                                     </div>
                                 </div>
@@ -272,18 +276,26 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control" name="dateofbirth" placeholder="Pick date end">
+                                                class="form-control date date2" name="dateofbirth"
+                                                placeholder="Pick date end">
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-4">
                                     <label class="col-sm-6 col-form-label control-label">Final unit price:</label>
                                 </div>
                                 <span class="col-sm-2"></span>
-                                <div class="col-sm-4">
-                                    <label class="col-sm-6 col-form-label control-label">Number of days: </label>
+                                <div class="col-sm-2">
+                                    <label class="col-sm-12 col-form-label control-label text-right">Number of days:
+                                    </label>
                                 </div>
-                                <span class="col-sm-2"></span>
+                                <label class="col-sm-4 col-form-label control-label" id="days">32</label>
+                            </div>
+
+                            <div class="row">
+
                                 <label class="col-sm-1 col-form-label control-label">
                                     <img class="ml-3" alt="biểu tượng vip"
                                         src="https://file4.batdongsan.com.vn/images/Home/images/vip-icon.jpg"
@@ -292,7 +304,6 @@
                                 <label class="col-sm-11 col-form-label control-label">( * ) You should choose to post VIP
                                     news to have higher efficiency, for example: message Vip1 has an average view of 20
                                     times higher than normal news. </label>
-                                </>
                             </div>
                         </div>
 
@@ -366,9 +377,36 @@
             });
             // total basic
 
-            $('.price').click(function(){
-                alert($(this).val());
+            $('input').blur(function() {
+                let p = parseInt($('.price').val());
+                let a = parseInt($('.acreage').val());
+                let t = p * a;
+                $('#total').html(t);
+                // var acreage = $('.acreage').val());
+                // var total = price*acreage;
+                // alert(total);
             });
+
+            $('.unit').change(function() {
+                let u = $(this).val();
+                $("#unit").html(u);
+            });
+
+            $('.date').blur(function() {
+                let ds = $('.date1').val();
+                let dsf = Date.parse(ds);
+                let de = $('.date2').val();
+                let def = Date.parse(de);
+                let d = (def - dsf) / 86400 / 1000;
+                $('#days').html(d);
+                // var acreage = $('.acreage').val());
+                // var total = price*acreage;
+                // alert(total);
+            });
+
+
+
+
 
         });
 

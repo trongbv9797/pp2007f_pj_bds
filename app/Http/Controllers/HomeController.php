@@ -25,12 +25,12 @@ class HomeController extends Controller
         $l = 0;
         $districs = District::all();
         $provinces = Province::all();
+        $slides = Slide::where("type","banner");
 
         $products = Products::with('image')->limit(8)->orderBy('id','DESC')->get();
-        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces'));
+        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','slides'));
         
-        $slides = Slide::where("type","banner");
-        return view('pages.index', compact('slides'));
+        
         
     }
 

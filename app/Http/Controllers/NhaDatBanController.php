@@ -84,4 +84,10 @@ class NhaDatBanController extends Controller
         return view("pages.nhadatban.index", compact('products'));
     }
 
+    public function district($slug) {
+        return view("pages.nhadatban.index");
+    }
+
+
+
 }

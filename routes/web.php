@@ -53,6 +53,8 @@ Route::get('/ban-nha-rieng', 'NhaDatBanController@banNhaRieng')->name('ban_nha_r
 Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nha_mat_pho');
 Route::get('/nha-dat-ban{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
+Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_district');
+
 
 //NhaDatChoThueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhaDatChoThueController@index')->name('nha_dat_cho_thue');
@@ -163,3 +165,6 @@ Route::prefix('/admin')->group(function () {
     // admin/login
     Route::get('/login', 'Auth\LoginController@login')->name('login');
 });
+
+Auth::routes();
+

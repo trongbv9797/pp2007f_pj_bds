@@ -73,11 +73,7 @@
                         <td>{!! $slide->order!!}</td>
                         <td class="text-center font-size-18">
                             <a href="{!! Route('editSlide', $slide->id) !!}" class="text-gray m-r-15"><i class="ti-pencil"></i></a>
-                            <form action="{{ route('deleteSlide', $slide->id) }}" method="POST">
-                                <input type="hidden" name="id" value="{!! $slide->id !!}">
-                                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                                <button><i class="ti-trash"></i></button>
-                            </form>
+                            <a href="{!! Route('deleteSlide', $slide->id) !!}" class="text-gray"><i class="ti-trash"></i></a>
                         </td>
                     </tr>
                     @endforeach

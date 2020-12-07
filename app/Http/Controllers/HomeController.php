@@ -12,6 +12,7 @@ use App\Models\Province;
 
 
 
+use App\Models\Slide;
 
 class HomeController extends Controller
 {
@@ -28,5 +29,10 @@ class HomeController extends Controller
         $products = Products::with('image')->limit(8)->orderBy('id','DESC')->get();
         return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces'));
         
+        $slides = Slide::where("type","banner");
+        return view('pages.index', compact('slides'));
+        
     }
+
+   
 }

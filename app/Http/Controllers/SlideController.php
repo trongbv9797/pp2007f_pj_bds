@@ -44,9 +44,6 @@ class SlideController extends Controller
         }
     
 
-
-
-
         $mess = "";
         if ($slide->save()) {
             $mess = "Successful add new slide!";
@@ -96,4 +93,6 @@ class SlideController extends Controller
         $slide->delete();
         return redirect()->route('Slide')->with('slide_del', "Delete Slide Success");
     }
+
+   
 }

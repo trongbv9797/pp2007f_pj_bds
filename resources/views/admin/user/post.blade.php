@@ -236,7 +236,7 @@
                                     people call than ads without pictures. Post a picture to get a quick transaction!
                                 </label>
                                 <div class="custom-file col-sm-3">
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" name="filename[]" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="customFile">Choose images</label>
                                 </div>
 
@@ -251,9 +251,9 @@
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label class="col-sm-12 col-form-label control-label">Ad type</label>
-                                    <select name="post_type" class="form-control" id='type' style="height:45px">
+                                    <select name="post_type" class="form-control post_type" id='type' style="height:45px">
                                         @foreach ($post_types as $post_type)
-                                        <option class="district form-control" value="{{ $post_type->id }}">{{ $post_type->name }}</option>
+                                        <option class="district form-control posttype" value="{{ $post_type->price }}">{{ $post_type->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -284,14 +284,16 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <label class="col-sm-6 col-form-label control-label">Final unit price:</label>
+                                    <label class="col-sm-6 col-form-label control-label">Price:</label>
+                                    <label class="col-sm-4 col-form-label control-label" id="type_price">2000</label>
+                                    VND
                                 </div>
                                 <span class="col-sm-2"></span>
                                 <div class="col-sm-2">
                                     <label class="col-sm-12 col-form-label control-label text-right">Number of days:
                                     </label>
                                 </div>
-                                <label class="col-sm-4 col-form-label control-label" id="days">32</label>
+                                <label class="col-sm-4 col-form-label control-label" id="days"></label>
                             </div>
 
                             <div class="row">
@@ -324,14 +326,17 @@
                                     <label class="col-sm-12 col-form-label control-label">Into money</label>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label "></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="total_type" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <span style="font-size: 40px;">VND</span>
 
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label "></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="vat" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <span style="font-size: 40px;">VND</span>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label"></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="total_price" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <span style="font-size: 40px;">VND</span>
                                 </div>
                             </div>
                         </div>
@@ -391,6 +396,11 @@
                 let u = $(this).val();
                 $("#unit").html(u);
             });
+            
+            $('.post_type').change(function() {
+                let t = $(this).val();
+                $("#type_price").html(t);
+            });
 
             $('.date').blur(function() {
                 let ds = $('.date1').val();
@@ -404,8 +414,21 @@
                 // alert(total);
             });
 
-
-
+            
+            $('.date, .post_type').on('change blur', function() {
+                let t = $('.post_type').val();
+                let ds = $('.date1').val();
+                let dsf = Date.parse(ds);
+                let de = $('.date2').val();
+                let def = Date.parse(de);
+                let d = (def - dsf) / 86400 / 1000;
+                let f = (d*t);
+                let i = f*0.1;
+                let g = f+i;
+                $("#total_type").html(f);
+                $('#vat').html(i);
+                $('#total_price').html(g);
+            });
 
 
         });

@@ -88,68 +88,7 @@
                                 <ul class="advance-options">
                                     <li vl="CN" class="advance-options adv-arrow active">Toàn quốc</li>
                                     <li vl="SG" class="advance-options adv-arrow">Hồ Chí Minh</li>
-                                    <li vl="HN" class="advance-options adv-arrow">Hà Nội</li>
-                                    <li vl="DDN" class="advance-options adv-arrow">Đà Nẵng</li>
-                                    <li vl="BD" class="advance-options adv-arrow">Bình Dương</li>
-                                    <li vl="DNA" class="advance-options adv-arrow">Đồng Nai</li>
-                                    <li vl="KH" class="advance-options adv-arrow">Khánh Hòa</li>
-                                    <li vl="HP" class="advance-options adv-arrow">Hải Phòng</li>
-                                    <li vl="LA" class="advance-options adv-arrow">Long An</li>
-                                    <li vl="QNA" class="advance-options adv-arrow">Quảng Nam</li>
-                                    <li vl="VT" class="advance-options adv-arrow">Bà Rịa Vũng Tàu</li>
-                                    <li vl="DDL" class="advance-options adv-arrow">Đắk Lắk</li>
-                                    <li vl="CT" class="advance-options adv-arrow">Cần Thơ</li>
-                                    <li vl="BTH" class="advance-options adv-arrow">Bình Thuận </li>
-                                    <li vl="LDD" class="advance-options adv-arrow">Lâm Đồng</li>
-                                    <li vl="TTH" class="advance-options adv-arrow">Thừa Thiên Huế</li>
-                                    <li vl="KG" class="advance-options adv-arrow">Kiên Giang</li>
-                                    <li vl="BN" class="advance-options adv-arrow">Bắc Ninh</li>
-                                    <li vl="QNI" class="advance-options adv-arrow">Quảng Ninh</li>
-                                    <li vl="TH" class="advance-options adv-arrow">Thanh Hóa</li>
-                                    <li vl="NA" class="advance-options adv-arrow">Nghệ An</li>
-                                    <li vl="HD" class="advance-options adv-arrow">Hải Dương</li>
-                                    <li vl="GL" class="advance-options adv-arrow">Gia Lai</li>
-                                    <li vl="BP" class="advance-options adv-arrow">Bình Phước</li>
-                                    <li vl="HY" class="advance-options adv-arrow">Hưng Yên</li>
-                                    <li vl="BDD" class="advance-options adv-arrow">Bình Định</li>
-                                    <li vl="TG" class="advance-options adv-arrow">Tiền Giang</li>
-                                    <li vl="TB" class="advance-options adv-arrow">Thái Bình</li>
-                                    <li vl="BG" class="advance-options adv-arrow">Bắc Giang</li>
-                                    <li vl="HB" class="advance-options adv-arrow">Hòa Bình</li>
-                                    <li vl="AG" class="advance-options adv-arrow">An Giang</li>
-                                    <li vl="VP" class="advance-options adv-arrow">Vĩnh Phúc</li>
-                                    <li vl="TNI" class="advance-options adv-arrow">Tây Ninh</li>
-                                    <li vl="TN" class="advance-options adv-arrow">Thái Nguyên</li>
-                                    <li vl="LCA" class="advance-options adv-arrow">Lào Cai</li>
-                                    <li vl="NDD" class="advance-options adv-arrow">Nam Định</li>
-                                    <li vl="QNG" class="advance-options adv-arrow">Quảng Ngãi</li>
-                                    <li vl="BTR" class="advance-options adv-arrow">Bến Tre</li>
-                                    <li vl="DNO" class="advance-options adv-arrow">Đắk Nông</li>
-                                    <li vl="CM" class="advance-options adv-arrow">Cà Mau</li>
-                                    <li vl="VL" class="advance-options adv-arrow">Vĩnh Long</li>
-                                    <li vl="NB" class="advance-options adv-arrow">Ninh Bình</li>
-                                    <li vl="PT" class="advance-options adv-arrow">Phú Thọ</li>
-                                    <li vl="NT" class="advance-options adv-arrow">Ninh Thuận</li>
-                                    <li vl="PY" class="advance-options adv-arrow">Phú Yên</li>
-                                    <li vl="HNA" class="advance-options adv-arrow">Hà Nam</li>
-                                    <li vl="HT" class="advance-options adv-arrow">Hà Tĩnh</li>
-                                    <li vl="DDT" class="advance-options adv-arrow">Đồng Tháp</li>
-                                    <li vl="ST" class="advance-options adv-arrow">Sóc Trăng</li>
-                                    <li vl="KT" class="advance-options adv-arrow">Kon Tum</li>
-                                    <li vl="QB" class="advance-options adv-arrow">Quảng Bình</li>
-                                    <li vl="QT" class="advance-options adv-arrow">Quảng Trị</li>
-                                    <li vl="TV" class="advance-options adv-arrow">Trà Vinh</li>
-                                    <li vl="HGI" class="advance-options adv-arrow">Hậu Giang</li>
-                                    <li vl="SL" class="advance-options adv-arrow">Sơn La</li>
-                                    <li vl="BL" class="advance-options adv-arrow">Bạc Liêu</li>
-                                    <li vl="YB" class="advance-options adv-arrow">Yên Bái</li>
-                                    <li vl="TQ" class="advance-options adv-arrow">Tuyên Quang</li>
-                                    <li vl="DDB" class="advance-options adv-arrow">Điện Biên</li>
-                                    <li vl="LCH" class="advance-options adv-arrow">Lai Châu</li>
-                                    <li vl="LS" class="advance-options adv-arrow">Lạng Sơn</li>
-                                    <li vl="HG" class="advance-options adv-arrow">Hà Giang</li>
-                                    <li vl="BK" class="advance-options adv-arrow">Bắc Kạn</li>
-                                    <li vl="CB" class="advance-options adv-arrow">Cao Bằng</li>
+
                                 </ul>
                             </div>
                             <div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">

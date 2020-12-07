@@ -10,64 +10,6 @@
 
 
 @section('content')
-<<<<<<< HEAD
-    <!-- Banner & search tool-->
-    <div class="new-home-2020">
-        <div class="home-center">
-            <div class="banner-home-slide">
-                <form action="/microservice-architecture-router/Product/ProductSearch/Index" method="post"
-                    novalidate="novalidate">
-                    <div class="home-search">
-                        <div class="home-search-tool">
-                            <ul class="home-search-tab">
-                                <li class="actived" ptype="38">Nhà đất bán</li>
-                                <li ptype="49">Nhà đất cho thuê</li>
-                            </ul>
-                            <div class="home-search-content">
-                                <div class="home-search-control">
-                                    <div class="search-cate">
-                                        <div class="select-custom">
-                                            <o id="lblCurrCate">Loại nhà đất</o>
-                                        </div>
-                                        <div id="divCatagoryReOptions" class="advance-select-options">
-                                            <ul>
-                                                <li vl="0"><span>Tất cả nhà đất</span></li>
-                                                <li vl="324"><span><img src="./assets/image/chungcu.png">Căn hộ chung
-                                                        cư</span>
-                                                </li>
-                                                <li vl="362"><span><img src="./assets/image/nhaban.png">Các loại nhà
-                                                        bán</span>
-                                                    <ul style="min-width: 210px !important;">
-                                                        <li vl="41"><span>Nhà riêng</span></li>
-                                                        <li vl="325"><span>Nhà biệt thự, liền kề</span></li>
-                                                        <li vl="163"><span>Nhà mặt phố</span></li>
-                                                    </ul>
-                                                </li>
-                                                <li vl="361"><span><img src="./assets/image/datban.png">Các loại đất
-                                                        bán</span>
-                                                    <ul style="min-width: 210px !important;">
-                                                        <li vl="40"><span>Đất nền dự án</span></li>
-                                                        <li vl="283"><span>Bán đất</span></li>
-                                                    </ul>
-                                                </li>
-                                                <li vl="44"><span><img src="./assets/image/trangtrai.png">Trang trại, khu
-                                                        nghỉ
-                                                        dưỡng</span></li>
-                                                <li vl="45"><span><img src="./assets/image/khonhaxuong.png">Kho, nhà
-                                                        xưởng</span>
-                                                </li>
-                                                <li vl="48"><span><img src="./assets/image/bdskhac.png">Bất động sản
-                                                        khác</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="search-input">
-                                        <input type="text" id="txtSearch" placeholder="Tìm kiếm địa điểm, khu vực"
-                                            autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
-                                            name="txtSearch" class="ui-autocomplete-input">
-                                        <input type="hidden" id="keyWord" name="KeyWord">
-=======
 <!-- Banner & search tool-->
 <div class="new-home-2020">
     <div class="home-center">
@@ -84,7 +26,6 @@
                                 <div class="search-cate">
                                     <div class="select-custom">
                                         <o id="lblCurrCate">Loại nhà đất</o>
->>>>>>> make_slide
                                     </div>
                                     <div id="divCatagoryReOptions" class="advance-select-options">
                                         <ul>
@@ -563,7 +504,6 @@
 
 
 
-<<<<<<< HEAD
             <div class="home-product product-4-you">
                 <h2 class="fl">Bất động sản dành cho bạn</h2>
                 <div class="home-more-link">
@@ -583,10 +523,9 @@
                                     <a title="Chính chủ bán mảnh đất đấu giá Tê Quả, Xã Tam Hưng, mặt Tỉnh Lộ 427, cách ngã ba Bình Đà 500m"
                                         href="https://batdongsan.com.vn/ban-dat-duong-tinh-lo-427-xa-tam-hung-1/chinh-chu-ban-manh-dau-gia-te-qua-mat-427-cach-nga-ba-binh-da-500m-pr26878040">
                                         @foreach ($product->image as $image)
-                                        @if ($loop->first)
-                                            <img src="{{ $image->link }}"
-                                                alt="{{ $image->name }}">
-                                        @endif
+                                            @if ($loop->first)
+                                                <img src="{{ $image->link }}" alt="{{ $image->name }}">
+                                            @endif
                                         @endforeach
 
                                     </a>
@@ -599,7 +538,7 @@
 
                                     <div class="p-title textTitle">
                                         <a href=""
-                                            title="Chính chủ bán mảnh đất đấu giá Tê Quả, Xã Tam Hưng, mặt Tỉnh Lộ 427, cách ngã ba Bình Đà 500m">{{ $product->title}}</a>
+                                            title="Chính chủ bán mảnh đất đấu giá Tê Quả, Xã Tam Hưng, mặt Tỉnh Lộ 427, cách ngã ba Bình Đà 500m">{{ $product->title }}</a>
                                     </div>
 
 
@@ -607,8 +546,10 @@
                                     <span class="ic_dot">·</span>
                                     <div class="pro-m2">68.8 m²</div>
                                     <div class="product-address">
-                                        <a href="https://batdongsan.com.vn/ban-dat-thanh-oai-hn" title="Thanh Oai">{{ $districs->find($product->districts_id)->name }}</a>,
-                                        <a href="https://batdongsan.com.vn/ban-dat-ha-noi" title="Hà Nội">{{ $provinces->find($product->provinces_id)->name }}</a>
+                                        <a href="https://batdongsan.com.vn/ban-dat-thanh-oai-hn"
+                                            title="{{ $districs->find($product->districts_id)->name }}">{{ $districs->find($product->districts_id)->name }}</a>,
+                                        <a href="https://batdongsan.com.vn/ban-dat-ha-noi"
+                                            title="Hà Nội">{{ $provinces->find($product->provinces_id)->name }}</a>
                                     </div>
                                     <div class="product-date">
                                         Hôm nay
@@ -684,110 +625,6 @@
                                         class="slick-slide" data-slick-index="2" aria-hidden="true"
                                         style="width: 560px; position: relative; left: -1120px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                         tabindex="-1" role="option" aria-describedby="slick-slide02"></div>
-=======
-            <script type="text/javascript">
-                var bannerContext = {
-                    "CateId": 0,
-                    "PageId": 189,
-                    "CityCode": null,
-                    "DistrictId": null,
-                    "CurrentPage": 189
-                };
-                var clickBannerUrl = '/Systems/Banner/Click'
-            </script>
-
-            <div class="banner-cover" style="display: none;"></div>
-        </div>
-    </div>
-    <!-- Cac control o giua-->
-    <div class="home-small">
-        <div class="home-small-main">
-
-            <div class="home-small-heading" id="hometabs">
-                <ul>
-                    <li>
-                        <h2><a style="cursor: pointer" data-tab="hometab1" class="actived">Tin nổi bật</a></h2>
-                    </li>
-                    <li>
-                        <h2><a style="cursor: pointer" href="javascript:void(0)" data-tab="hometab2">Tin tức</a></h2>
-                    </li>
-                    <li>
-                        <h2><a style="cursor: pointer" href="javascript:void(0)" data-tab="hometab3">Tư vấn </a></h2>
-                    </li>
-                    <li>
-                        <h2><a style="cursor: pointer" href="javascript:void(0)" data-tab="hometab4">Phong thủy</a></h2>
-                    </li>
-                </ul>
-                <a href="https://batdongsan.com.vn/tin-tuc" id="tabview" class="home-small-more">Xem thêm tin tức<img src="./assets/image/icon-arrow-right.png"></a>
-                <div class="clear"></div>
-            </div>
-            <div id="news-slide">
-                <div id="hometab1" class="newscontain">
-                    <div class="home-small-main-1 news-show">
-                        <div id="hottab-0" class="" style="display: none;">
-                            <h3>
-                                <a title="[Infographic] Những quy định pháp lý không thể bỏ qua khi mua bán bất động sản" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
-                                    <span>
-                                        <img noloaderror="true" imgerr="1" src="./assets/image/20200113102359-589c.jpg" is-lazy-image="true" lazy-id="0">
-                                    </span>
-                                    [Infographic] Những quy định pháp lý không thể bỏ qua khi mua bán bất động sản
-                                </a>
-                            </h3>
-                            <div class="news-time">
-                                <img src="./assets/image/clock.png">4 giờ trước
-                            </div>
-                        </div>
-                        <div id="hottab-1" class="hidden" style="display: none;">
-                            <h3>
-                                <a title="5 khác biệt giữa đất nền dự án và đất thổ cư" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/5-khac-biet-giua-dat-nen-du-an-va-dat-tho-cu-ar103568">
-                                    <span>
-                                        <img noloaderror="true" imgerr="1" src="./assets/image/20200324083929-c461.jpg" is-lazy-image="true" lazy-id="1">
-                                    </span>
-                                    5 khác biệt giữa đất nền dự án và đất thổ cư
-                                </a>
-                            </h3>
-                            <div class="news-time">
-                                <img src="./assets/image/clock.png">7 giờ trước
-                            </div>
-                        </div>
-                        <div id="hottab-2" class="hidden" style="display: none;">
-                            <h3>
-                                <a title="Tin tức bất động sản nổi bật nhất tuần qua (2/11-7/11/2020)" href="https://batdongsan.com.vn/tin-thi-truong/tin-tuc-bat-dong-san-noi-bat-nhat-tuan-2-thang-11-2020-ar105461">
-                                    <span>
-                                        <img noloaderror="true" imgerr="1" src="./assets/image/20180606091156-fe6d.jpg" is-lazy-image="true" lazy-id="2">
-                                    </span>
-                                    Tin tức bất động sản nổi bật nhất tuần qua (2/11-7/11/2020)
-                                </a>
-                            </h3>
-                            <div class="news-time">
-                                <img src="./assets/image/clock.png">11 giờ trước
-                            </div>
-                        </div>
-                        <div id="hottab-3" class="hidden" style="display: none;">
-                            <h3>
-                                <a title="Những yếu tố “đập tan” kỳ vọng giá bất động sản sẽ giảm" href="https://batdongsan.com.vn/phan-tich-nhan-dinh/nhung-yeu-to-dap-tan-ky-vong-gia-bat-dong-san-se-giam-ar105453">
-                                    <span>
-                                        <img noloaderror="true" imgerr="1" src="./assets/image/20201104114102-ddbe.jpg" is-lazy-image="true" lazy-id="3">
-                                    </span>
-                                    Những yếu tố “đập tan” kỳ vọng giá bất động sản sẽ giảm
-                                </a>
-                            </h3>
-                            <div class="news-time">
-                                <img src="./assets/image/clock.png">12 giờ trước
-                            </div>
-                        </div>
-                        <div id="hottab-4" class="hidden" style="display: none;">
-                            <h3>
-                                <a title="Ôm mộng làm giàu từ đất, cặp vợ chồng &quot;ngã đau&quot; vì mù mờ pháp lý" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/om-mong-lam-giau-tu-dat-cap-vo-chong-nga-dau-vi-mu-mo-phap-ly-ar103408">
-                                    <span>
-                                        <img noloaderror="true" imgerr="1" src="./assets/image/20200304155629-1c53.jpg" is-lazy-image="true" lazy-id="4">
-                                    </span>
-                                    Ôm mộng làm giàu từ đất, cặp vợ chồng "ngã đau" vì mù mờ pháp lý
-                                </a>
-                            </h3>
-                            <div class="news-time">
-                                <img src="./assets/image/clock.png">13 giờ trước
->>>>>>> make_slide
                             </div>
                         </div>
                         <div id="hottab-5" class="hidden" style="display: block;">
@@ -804,7 +641,6 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
                     <div class="place-small">
                         <div class="place-item">
                             <div class="place-img slick-initialized slick-slider">
@@ -836,55 +672,6 @@
                                 </h3>
                             </div>
 
-=======
-                    <div class="home-small-main-2">
-                        <div class="list-news">
-                            <ul>
-                                <li class="">
-                                    <h3>
-                                        <a title="[Infographic] Những quy định pháp lý không thể bỏ qua khi mua bán bất động sản" data-index="#hottab-0" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
-                                            [Infographic] Những quy định pháp lý không thể bỏ qua khi mua bán bất động
-                                            sản
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="">
-                                    <h3>
-                                        <a title="5 khác biệt giữa đất nền dự án và đất thổ cư" data-index="#hottab-1" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/5-khac-biet-giua-dat-nen-du-an-va-dat-tho-cu-ar103568">
-                                            5 khác biệt giữa đất nền dự án và đất thổ cư
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="">
-                                    <h3>
-                                        <a title="Tin tức bất động sản nổi bật nhất tuần qua (2/11-7/11/2020)" data-index="#hottab-2" href="https://batdongsan.com.vn/tin-thi-truong/tin-tuc-bat-dong-san-noi-bat-nhat-tuan-2-thang-11-2020-ar105461">
-                                            Tin tức bất động sản nổi bật nhất tuần qua (2/11-7/11/2020)
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="">
-                                    <h3>
-                                        <a title="Những yếu tố “đập tan” kỳ vọng giá bất động sản sẽ giảm" data-index="#hottab-3" href="https://batdongsan.com.vn/phan-tich-nhan-dinh/nhung-yeu-to-dap-tan-ky-vong-gia-bat-dong-san-se-giam-ar105453">
-                                            Những yếu tố “đập tan” kỳ vọng giá bất động sản sẽ giảm
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="">
-                                    <h3>
-                                        <a title="Ôm mộng làm giàu từ đất, cặp vợ chồng &quot;ngã đau&quot; vì mù mờ pháp lý" data-index="#hottab-4" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/om-mong-lam-giau-tu-dat-cap-vo-chong-nga-dau-vi-mu-mo-phap-ly-ar103408">
-                                            Ôm mộng làm giàu từ đất, cặp vợ chồng "ngã đau" vì mù mờ pháp lý
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="active">
-                                    <h3>
-                                        <a title="Phớt lờ cảnh báo, hàng loạt doanh nghiệp vẫn ngang nhiên bán dự án ma" data-index="#hottab-5" href="https://batdongsan.com.vn/tin-thi-truong/phot-lo-canh-bao-hang-loat-doanh-nghiep-van-ngang-nhien-ban-du-an-ma-ar105448">
-                                            Phớt lờ cảnh báo, hàng loạt doanh nghiệp vẫn ngang nhiên bán dự án ma
-                                        </a>
-                                    </h3>
-                                </li>
-                            </ul>
->>>>>>> make_slide
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -949,6 +736,7 @@
 
     <div class="home-center bg-grey" id="interestedProductsBinnovaContent">
 
+<<<<<<< 525bedb04eef7fce44edda7cedac7d966ec51898
         <div class="home-product product-4-you">
             <h2 class="fl">Bất động sản dành cho bạn</h2>
             <div class="home-more-link">
@@ -1538,6 +1326,9 @@
 
 <<<<<<< HEAD
             
+=======
+
+>>>>>>> fix home page
             <!-- Banner giua -->
             <div class="home-enterprise m-b-30">
                 <h2 class="fl">Doanh nghiệp tiêu biểu</h2>

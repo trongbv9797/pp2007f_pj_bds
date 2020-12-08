@@ -11,4 +11,6 @@ class Image extends Model
     {
         return $this->belongsTo(Products::class, 'products_id');
     }
+
+    protected $fillable = ['products_id'];
 }

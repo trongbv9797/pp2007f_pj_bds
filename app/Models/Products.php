@@ -20,6 +20,11 @@ class Products extends Model
         return $this->belongsTo(Post_type::class, 'post_type_id');
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
     public function menu_category()
     {
         return $this->belongsTo(Menu_category::class,'menu_category_id');

@@ -13,7 +13,7 @@ use App\Models\Province;
 use App\Models\Post_type;
 use App\Models\Menu_category;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Carbon;
 class PostController extends Controller
 {
 
@@ -98,7 +98,27 @@ class PostController extends Controller
         $post->number_of_floor = $request->get('floors');
         $post->number_of_bedroom = $request->get('bedrooms');
         $post->post_type_id = $request->get('post_type');
+        $post->started_at = Carbon::parse($request->get('start_date'));
+        $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->save();
+
+        $image = new Image();
+        if($request->hasfile('filename'))
+        {
+
+           foreach($request->file('filename') as $images)
+           {
+               $name="image for id:".$post->id; 
+            //    $images->getClientOriginalName()."-id:".
+               $images->move(public_path().'/assets/image/', $name);  
+               Image::create([
+                   'products_id' => $post->id,
+                   'name' => $post->title,
+               ]);
+               $data[] = $name;  
+           }
+        }
+        $image->save();
         return back();
     }
 }

@@ -9,6 +9,7 @@ use App\Models\Article;
 use App\Models\Products;
 use App\Models\District;
 use App\Models\Province;
+use App\Models\User;
 
 
 
@@ -17,7 +18,6 @@ use App\Models\Slide;
 class HomeController extends Controller
 {
     public function index() {
-
         $articles = Article::limit(6)->orderBy('id','DESC')->get();
         $i = 0;
         $j = 0;

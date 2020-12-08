@@ -497,36 +497,40 @@
             </div>
             <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
 
-                @foreach ($products as $products)
+                @foreach ($products as $product)
                 <div class="vip0 product-item clearfix" uid="649852">
                     <div class="product-image ">
-                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $products->id) !!}" title="{!! $products->title !!}" onclick="">
-                            <img class="product-avatar-img" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="{!! $products->link !!}" is-lazy-image="true" lazy-id="0">
+                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" onclick="">
+                            @foreach ($product->image as $image)
+                            <img class="product-avatar-img" alt="{!! $product['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" 
+                            src=" {!! $image['link'] !!}" is-lazy-image="true" lazy-id="0">
+                            @break
+                            @endforeach
                         </a>
                         <span class="product-feature">
                         </span>
                     </div>
                     <div class="product-main">
                         <h3 class="product-title">
-                            <a href="{!! Route('nhadatban_single_post', $products->id) !!}" title="{!! $products->title !!}" class="vipZero product-link">
-                                {!! $products->title !!}
+                            <a href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" class="vipZero product-link">
+                                {!! $product['title'] !!}
                             </a>
                         </h3>
                         <div class="product-info">
-                            <span class="price">{!! $products->price !!} tỷ</span>
+                            <span class="price">{!! $product['price'] !!} tỷ</span>
                             <span class="dot">·</span>
-                            <span class="area">{!! $products->area !!} m²</span>
+                            <span class="area">{!! $product['area'] !!} m²</span>
                             <span class="dot">·</span>
-                            <span class="location">{!! $products->path_with_type !!}</span>
+                            <span class="location">{!! $product['path_with_type'] !!}</span>
                         </div>
                         <div class="product-content">
-                            {!! $products->content !!}
+                            {!! $product['content'] !!}
                         </div>
                         <div class="product-wrap clearfix">
                             <div class="product-uptime">
                                 <span class="product-labeltime">
-                                    {!! $products->created_at !!}
-                                    <span class="tooltip-time">{!! $products->created_at !!}</span>
+                                    {!! $product['created_at'] !!}
+                                    <span class="tooltip-time">{!! $product['created_at'] !!}</span>
                                 </span>
                             </div>
                             <div class="product-contact">

@@ -102,23 +102,23 @@ class PostController extends Controller
         $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->save();
 
-        $image = new Image();
-        if($request->hasfile('filename'))
-        {
+        // $image = new Image();
+        // if($request->hasfile('filename'))
+        // {
 
-           foreach($request->file('filename') as $images)
-           {
-               $name="image for id:".$post->id; 
-            //    $images->getClientOriginalName()."-id:".
-               $images->move(public_path().'/assets/image/', $name);  
-               Image::create([
-                   'products_id' => $post->id,
-                   'name' => $post->title,
-               ]);
-               $data[] = $name;  
-           }
-        }
-        $image->save();
+        //    foreach($request->file('filename') as $images)
+        //    {
+        //        $name="image for id:".$post->id; 
+        //     //    $images->getClientOriginalName()."-id:".
+        //        $images->move(public_path().'/assets/image/', $name);  
+        //        Image::create([
+        //            'products_id' => $post->id,
+        //            'name' => $post->title,
+        //        ]);
+        //        $data[] = $name;  
+        //    }
+        // }
+        // $image->save();
         return back();
     }
 }

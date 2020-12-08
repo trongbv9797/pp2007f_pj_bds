@@ -13,20 +13,11 @@ class NhaDatBanController extends Controller
     //
 
     public function index() {
-        $products = DB::table('products')
-        ->join('menu_categories', 'menu_categories.id', '=', 'products.menu_category_id')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'menu_categories.name', 'images.link', 'wards.path_with_type')
-        ->where('menu_categories.name', '=', "Bán căn hộ chung cư")
-        ->orWhere('menu_categories.name', '=', "Bán nhà riêng")
-        ->orWhere('menu_categories.name', '=', "Bán nhà mặt phố")
-        ->orderBy('products.id', 'asc')->paginate(10);
-
+        $products = Products::paginate(15)
+        ->whereIn('menu_category_id', array(1, 2, 3));
         $provinces = Province::all()->sortByDesc('count_posts');
         $count_products = Products::all()->count();
         return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-
     }
 
     public function nhaDatBanSinglePost($id) {

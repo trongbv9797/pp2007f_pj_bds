@@ -80,7 +80,8 @@ class UserController extends Controller
     public function edit($id) {
         $provinces = Province::all();
         $districts = District::all();
-        $user = User::find($id);
+        $user = User::findOrFail($id);
+        // dd($user);
         return view ('admin.user.edit',compact('user','provinces','districts'));
     }
 

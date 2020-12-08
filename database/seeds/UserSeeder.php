@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Role;
 class UserSeeder extends Seeder
 {
     /**
@@ -10,21 +11,44 @@ class UserSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        
+
+
+        $role1 = Role::where('slug','admin')->first();
+        $role2 = Role::where('slug','user')->first();
+        $role3 = Role::where('slug','customers')->first();
+
+
         $faker = Faker\Factory::create();
-        $faker->addProvider(new Ottaviano\Faker\Gravatar($faker));
-        for ($i = 0; $i < 50; $i++){  
-            User::insert([
-                'username' => $faker->userName,
-                'email' => $faker->email,
-                'password' => $faker->password,
-                'fullname' => $faker->name ,
-                'sex' => rand(0,1),
-                'dateofbirth' => $faker->date($format = 'Y-m-d', $max = 'now'),
-                'phonenumber' => $faker->phoneNumber,
-                'avatar' => $faker->gravatarUrl(),
-                'address' => $faker->address,
-            ]);
-        }
+        $faker->addProvider(new Ottaviano\Faker\Gravatar($faker)); 
+        $user0 = User::create([
+            'username' => 'admin',
+            'email' => 'kviet@gmail.com',
+            'password' => bcrypt('123456'),
+            'fullname' => 'kviet91' ,
+            'account' => rand(100,1000)*1000,
+            'sex' => rand(0,1),
+            'dateofbirth' => $faker->date($format = 'Y-m-d', $max = 'now'),
+            'phonenumber' => $faker->phoneNumber,
+            'avatar' => $faker->gravatarUrl(),
+            'address' => $faker->address,
+        ]);
+        $user0->roles()->attach($role1);
+
+        $user1 = User::create([
+            'username' => 'user1',
+            'email' => 'kviet1@gmail.com',
+            'password' => bcrypt('123456'),
+            'fullname' => 'kviet91' ,
+            'account' => rand(100,1000)*1000,
+            'sex' => rand(0,1),
+            'dateofbirth' => $faker->date($format = 'Y-m-d', $max = 'now'),
+            'phonenumber' => $faker->phoneNumber,
+            'avatar' => $faker->gravatarUrl(),
+            'address' => $faker->address,
+        ]);
+        $user1->roles()->attach($role2);
+    
     }
 }

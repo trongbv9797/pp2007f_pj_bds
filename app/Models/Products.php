@@ -39,4 +39,18 @@ class Products extends Model
     {
         return $this->belongsTo(Ward::class, 'wards_id');
     }
+
+
+
+
+    protected $fillable = [
+        'title', 'slug'
+    ];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

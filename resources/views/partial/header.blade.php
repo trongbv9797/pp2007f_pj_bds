@@ -122,11 +122,11 @@
                 <div id="divUserStt" class="clearfix">
                     <div class="join-group">
                         <span>
-                            <a href="#" rel="nofollow" id="kct_login">Đăng nhập</a>
+                            <a href="{{ route('login') }}" rel="nofollow" id="kct_login">Đăng nhập</a>
                         </span>
                         <span class="line">|</span>
                         <span>
-                            <a href="#" rel="nofollow" id="kct_username">Đăng ký</a>
+                            <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
                         </span>
                     </div>
                 </div>

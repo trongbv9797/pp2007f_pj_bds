@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -162,9 +163,9 @@ Route::prefix('/admin')->group(function () {
 
 
 
-    // admin/login
-    Route::get('/login', 'Auth\LoginController@login')->name('login');
+    
 });
 
+// admin/login
 Auth::routes();
-
+Route::get('/home', 'HomeController@welcome')->name('welcome');

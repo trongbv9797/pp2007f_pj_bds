@@ -34,7 +34,6 @@
     {{--Styles css common--}}
     <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.FrontEnd.min.css">
 
-
     @yield('style-libraries')
     {{--Styles custom--}}
     @yield('styles')
@@ -48,7 +47,7 @@
     {{--Scripts js common--}}
 
     {{--Scripts link to file or js custom--}}
-    
+
     @yield('scripts')
 </body>
 </html>

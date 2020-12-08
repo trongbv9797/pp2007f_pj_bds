@@ -119,21 +119,49 @@
                         </span>
                     </div>
                 </div>
-                <div id="divUserStt" class="clearfix">
-                    <div class="join-group">
-                        <span>
-                            <a href="{{ route('login') }}" rel="nofollow" id="kct_login">Đăng nhập</a>
-                        </span>
-                        <span class="line">|</span>
-                        <span>
-                            <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
-                        </span>
+                @guest
+                    <div id="divUserStt" class="clearfix">
+                        <div class="join-group">
+                            <span>
+                                <a href="{{ route('login') }}" rel="nofollow" id="kct_login">Đăng nhập</a>
+                            </span>
+                            <span class="line">|</span>
+                            <span>
+                                <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div id="Header_UserControl_divPostProduct">
-                    <a href="https://batdongsan.com.vn/dang-tin-rao-vat-ban-nha-dat" id="linkPostProduct"
-                        class="btn-border-grey">Đăng tin</a>
-                </div>
+                    <div id="Header_UserControl_divPostProduct">
+                        <a href="https://batdongsan.com.vn/dang-tin-rao-vat-ban-nha-dat" id="linkPostProduct"
+                            class="btn-border-grey">Đăng tin</a>
+                    </div>
+
+                @else
+                    <div class="right-menu">
+                        <div class="home-header-menu">
+                            <div class="home-header-menu">
+                                <ul class="dropdown-navigative-menu">
+                                    <li class="lv0"><span class="text" style="color: blue">{{ Auth::user()->username }}</span>
+                                        <ul>
+                                            <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();"><span
+                                                        class="text">Đăng xuất</span></a>
+                                            </li>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                            </form>
+                                        </ul>
+                                    </li>
+
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                @endguest
             </div>
 
             <div class="drop-menu">
@@ -165,21 +193,21 @@
                                             class="text">{{ $mp['name'] }}</span></a>
                                     <div class="arrrow"></div>
                                     <ul>
-                                        @if(isset($arr_menu[$mp['id']]))
+                                        @if (isset($arr_menu[$mp['id']]))
                                             @foreach ($arr_menu[$mp['id']] as $mp_c1)
-                                                    <li class="lv1"><a href="{{ $mp_c1['slug'] }}"
-                                                            class="haslink ">{{ $mp_c1['name'] }}</a>
-                                                            <ul>
-                                                            @if(isset($arr_menu[$mp_c1['id']]))
-                                                                @foreach ($arr_menu[$mp_c1['id']] as $mp_c2)
-                                                                    <li class="lv1"><a href="{{ $mp_c2['slug'] }}"
-                                                                            class="haslink ">{{ $mp_c2['name'] }}</a>
-                    
-                                                                    </li>
-                                                                @endforeach
-                                                            @endif
-                                                            </ul>
-                                                    </li>
+                                                <li class="lv1"><a href="{{ $mp_c1['slug'] }}"
+                                                        class="haslink ">{{ $mp_c1['name'] }}</a>
+                                                    <ul>
+                                                        @if (isset($arr_menu[$mp_c1['id']]))
+                                                            @foreach ($arr_menu[$mp_c1['id']] as $mp_c2)
+                                                                <li class="lv1"><a href="{{ $mp_c2['slug'] }}"
+                                                                        class="haslink ">{{ $mp_c2['name'] }}</a>
+
+                                                                </li>
+                                                            @endforeach
+                                                        @endif
+                                                    </ul>
+                                                </li>
                                             @endforeach
                                         @endif
                                     </ul>

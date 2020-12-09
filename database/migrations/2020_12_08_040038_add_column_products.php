@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class AddColumnProducts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->jsonb('permissions')->default('{}');
-            $table->timestamps();
+        //
+        Schema::table('products', function(Blueprint $table){
+            $table->integer('user_id')->after('post_type_id')->nullable(true);
+            $table->date('started_at')->after('menu_category_id')->nullable(false);
+            $table->date('expired_at')->after('started_at')->nullable(false);
         });
     }
 
@@ -29,6 +28,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        //
     }
 }

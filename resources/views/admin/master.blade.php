@@ -37,7 +37,7 @@
                 <div class="header-container">
                     <div class="nav-logo">
                         <a href="index.html">
-                            <div class="logo logo-dark" style="background-image: url('/assets/image/logo/logo.png')"></div>
+                            <div class="logo logo-dark" style="background-image: url('https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg')"></div>
                             <div class="logo logo-white" style="background-image: url('/assets/image/logo/logo-white.png')"></div>
                         </a>
                     </div>
@@ -281,18 +281,18 @@
                         </li>
                         <li class="user-profile dropdown dropdown-animated scale-left">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="profile-img img-fluid" src="/assets/image/avatars/thumb-13.jpg" alt="">
+                                <img class="profile-img img-fluid" src="/storage/img/users/{{ $admin->avatar }}" alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-md p-v-0">
                                 <li>
                                     <ul class="list-media">
                                         <li class="list-item p-15">
                                             <div class="media-img">
-                                                <img src="/assets/image/avatars/thumb-13.jpg" alt="">
+                                                <img src="/storage/img/users/{{ $admin->avatar }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title text-semibold">Marshall Nichols</span>
-                                                <span class="sub-title">UI/UX Desinger</span>
+                                                <span class="title text-semibold">{{ $admin->username }}</span>
+                                                <span class="sub-title">{{ $admin->fullname }}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -367,28 +367,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-file-outline"></i>
-                                </span>
-                                <span class="title">Forms</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li>
-                                    <a href="form-layouts.html">Form Layouts</a>
-                                </li>
-                                <li>
-                                    <a href="form-validation.html">Form Validation</a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -417,10 +396,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href=" {{route(  'userIndex' ) }}  ">All User</a>
+                                    <a href="{{ Route('userIndex') }}">All User</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('createUser') }}">Create New User</a>
+                                    <a href="{{ Route('createUser') }}">Create New User</a>
                                 </li>
 
                             </ul>
@@ -437,13 +416,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{route(  'listNews' ) }}">All News</a>
-                                    <a href="{{route(  'createNews' ) }}">Create News</a>
+                                    <a href="{{route('listNews' ) }}">All News</a>
+                                    <a href="{{route('createNews') }}">Create News</a>
 
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown open">
+                        <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-gauge"></i>

@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
 
 
         $role1 = Role::where('slug','admin')->first();
-        $role2 = Role::where('slug','user')->first();
+        $role2 = Role::where('slug','member')->first();
         $role3 = Role::where('slug','customers')->first();
 
 

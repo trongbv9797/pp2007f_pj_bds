@@ -10,7 +10,7 @@ use App\Models\Menu_category;
 use App\Models\Post_type;
 use App\Models\Ward;
 use App\Models\Products;
-
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
@@ -18,8 +18,9 @@ use Illuminate\Http\UploadedFile;
 class UserController extends Controller
 {
     public function index() {
+        $admin = Auth::user();
         $users = User::all();
-        return view ('admin.user.index',compact('users'));
+        return view ('admin.user.index',compact('users','admin'));
     }
 
     public function create() {
@@ -74,7 +75,7 @@ class UserController extends Controller
         }
         
         $user->save();
-        return view ('admin.user.create');
+        return redirect()->route('userIndex');
     }
 
     public function edit($id) {
@@ -162,6 +163,10 @@ class UserController extends Controller
         
         $user->save();
         return redirect('/login');
+    }
+    public function indexMember() {
+        $user = Auth::user();
+        return view ('admin.user.index',compact('user'));
     }
 
 }

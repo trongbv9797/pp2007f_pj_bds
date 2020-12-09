@@ -662,6 +662,62 @@ class MenuSeeder extends Seeder
             'order'=> 2,
             'type' => 'header_main'
         ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Hồ Chí Minh',
+            'parent_id'=> '35',
+            'slug' => 'ho-chi-minh',
+            'order'=> 1,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Quảng Ninh',
+            'parent_id'=> '35',
+            'slug' => 'quang-ninh',
+            'order'=> 2,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Khánh Hòa',
+            'parent_id'=> '35',
+            'slug' => 'khanh-hoa',
+            'order'=> 3,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Hải Phòng',
+            'parent_id'=> '35',
+            'slug' => 'hai-phong',
+            'order'=> 4,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Đà Nẵng',
+            'parent_id'=> '35',
+            'slug' => 'da-nang',
+            'order'=> 5,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Hà Nội',
+            'parent_id'=> '35',
+            'slug' => 'ha-noi',
+            'order'=> 6,
+            'type' => 'right'
+        ]);
+
+        DB::table('menus')->insert([
+            'name' => 'Cần Thơ',
+            'parent_id'=> '35',
+            'slug' => 'can-tho',
+            'order'=> 7,
+            'type' => 'right'
+        ]);
     }
 }
            

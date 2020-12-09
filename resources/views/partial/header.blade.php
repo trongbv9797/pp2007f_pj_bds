@@ -1,16 +1,6 @@
 <div class="form-content">
     <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND" style=""></div>
-    <script type="text/javascript">
-        var bannerContext = {
-            "CateId": 0,
-            "PageId": 189,
-            "CityCode": null,
-            "DistrictId": null,
-            "CurrentPage": 189
-        };
-
-    </script>
-
+    
     <div id="staticDomain" statsdomain="https://statistic.batdongsan.com.vn"
         data-fileimg="https://file4.batdongsan.com.vn" data-web="https://batdongsan.com.vn"
         data-msvrouter="/microservice-architecture-router"
@@ -26,31 +16,13 @@
                 <div id="ban_wide_left" class="ban_wide_scroll"
                     style="display: block; position: absolute; top: 145.883px; bottom: inherit; left: 46px;">
                     <div class="adPosition" positioncode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px"></div>
-                    <script type="text/javascript">
-                        var bannerContext = {
-                            "CateId": 0,
-                            "PageId": 189,
-                            "CityCode": null,
-                            "DistrictId": null,
-                            "CurrentPage": 189
-                        };
-
-                    </script>
+                    
                 </div>
 
                 <div id="ban_left" class="ban_scroll"
                     style="display: block; top: 145.883px; position: absolute; left: 86px; bottom: inherit;">
                     <div class="adPosition" positioncode="BANNER_POSITION_LEFT" style="margin-bottom: 0px"></div>
-                    <script type="text/javascript">
-                        var bannerContext = {
-                            "CateId": 0,
-                            "PageId": 189,
-                            "CityCode": null,
-                            "DistrictId": null,
-                            "CurrentPage": 189
-                        };
-
-                    </script>
+                   
                 </div>
             </div>
         </div>
@@ -127,7 +99,11 @@
                             </span>
                             <span class="line">|</span>
                             <span>
+<<<<<<< HEAD
                                 <a href="{{ route('createUser') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+=======
+                                <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+>>>>>>> 943c3b88582cc77a6bf33a35a96972107d2a336b
                             </span>
                         </div>
                     </div>
@@ -141,11 +117,22 @@
                         <div class="home-header-menu">
                             <div class="home-header-menu">
                                 <ul class="dropdown-navigative-menu">
-                                    <li class="lv0"><span class="text" style="color: blue">{{ Auth::user()->username }}</span>
+                                    <li class="lv0"><span class="text"
+                                            style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
+                                            <li class="lv1"><a href="{{ route('adminIndex') }}" class="haslink "><span
+                                                        class="text">Dashboard</span></a>
+                                            </li>
+                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                                        class="text">Profile</span></a>
+                                            </li>
+
+                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                                        class="text">Post</span></a>
+                                            </li>
                                             <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();"><span
-                                                        class="text">Đăng xuất</span></a>
+                                                            document.getElementById('logout-form').submit();"><span
+                                                        class="text">Logout</span></a>
                                             </li>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                 class="d-none">

@@ -4,6 +4,7 @@
 
 @section('styles')
 <link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 @endsection
 
 @section('content')
@@ -377,57 +378,6 @@
             <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
         </div>
     </form>
-    <script type="text/javascript">
-        ///<reference path='../../../../../../../DVG.BDS.WebApp.FrontEnd.StaticFiles/wwwroot/js/Common/FrontEnd.BoxSearch.js' />
-        (function getData() {
-            if (window.FrontEnd && window.FrontEnd.BoxSearch) {
-                var boxSearchServices = new FrontEnd.BoxSearch({
-                    boxSearchDataCacheKey: 'BoxSearchData',
-                    boxSearchDataCacheTime: 120,
-                    getDataForBoxSearchUrl: '/Systems/Home/GetDataForBoxSearch'
-                })
-
-                boxSearchServices.GetData().then(function(data) {
-                    (function callJQuery() {
-                        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.BoxProductSearchBinnova) {
-                            new FrontEnd.Product.BoxProductSearchBinnova({
-                                cities: data.cities,
-                                prices: data.priceLevels,
-                                url: '/Product/ProductSearch',
-                                serverCss: 'https://staticfile.batdongsan.com.vn',
-                                model: {
-                                    type: 38,
-                                    categoryId: 0,
-                                    cityCode: 'CN',
-                                    districtId: 0,
-                                    projectId: 0,
-                                    priceId: -1,
-                                    maxPrice: !!'' ? +'' : undefined,
-                                    minPrice: !!'' ? +'' : undefined,
-                                    areaId: -1,
-                                    maxArea: !!'' ? +'' : undefined,
-                                    minArea: !!'' ? +'' : undefined,
-                                    roomId: -1,
-                                    wardId: -1 < 0 ? 0 : -1,
-                                    streetId: (-1 < 0 ? 0 : -1),
-                                    directionId: -1,
-                                    tabIndex: 0
-                                },
-                                maxSearchingHistoriesLength: 20,
-                                syncTimeSearchingHistories: 5,
-                                syncSearchingHistoriesUrl: '/Product/ProductSearch/SyncSearchingHistories',
-                                removeSearchingHistoryUrl: '/Product/ProductSearch/RemoveSearchingHistory'
-                            });
-                        } else {
-                            setTimeout(callJQuery, 100);
-                        }
-                    })();
-                })
-            } else {
-                setTimeout(getData, 100);
-            }
-        })();
-    </script>
 
     <div class="popupMarking  save" style="display: none">
         <img src="./assets/image/ic_unsave.svg">
@@ -452,19 +402,10 @@
             <div class="breadcrumb all-grey-7 link-hover-blue">
                 <a href="https://batdongsan.com.vn/nha-dat-ban" level="1" title="Nhà đất bán tại Việt Nam">Bán</a><span>/</span><a href="https://batdongsan.com.vn/nha-dat-ban" level="2" title="Nhà đất bán tại Việt Nam">Tất cả BĐS trên toàn quốc</a>
             </div>
-            <script type="text/javascript">
-                (function callJQuery() {
-                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Breadcrumbs) {
-                        new FrontEnd.Product.Breadcrumbs({});
-                    } else {
-                        setTimeout(callJQuery, 100);
-                    }
-                })();
-            </script>
 
             <div class="product-list-header pad-top-8">
-                <h1>Mua bán nhà đất toàn quốc</h1>
-                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">183,364</span> bất động sản.</div>
+                    <h1>Mua bán nhà đất toàn quốc</h1>
+                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">{!! $count_products !!}</span> bất động sản.</div>
 
 
             </div>
@@ -497,48 +438,44 @@
             </div>
             <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
 
-                @foreach ($products as $products)
+                @foreach ($products as $product)
                 <div class="vip0 product-item clearfix" uid="649852">
                     <div class="product-image ">
-                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $products->id) !!}" title="{!! $products->title !!}" onclick="">
-                            <img class="product-avatar-img" alt="{!! $products->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="{!! $products->link !!}" is-lazy-image="true" lazy-id="0">
+                        <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" onclick="">
+                            @foreach ($product->image as $image)
+                            <img class="product-avatar-img" alt="{!! $product['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" 
+                            src=" {!! $image['link'] !!}" is-lazy-image="true" lazy-id="0">
+                            @break
+                            @endforeach
                         </a>
                         <span class="product-feature">
                         </span>
-                        <span class="product-media">3</span>
                     </div>
                     <div class="product-main">
                         <h3 class="product-title">
-                            <a href="{!! Route('nhadatban_single_post', $products->id) !!}" title="{!! $products->title !!}" class="vipZero product-link">
-                                {!! $products->title !!}
+                            @if ($product['post_type_id'] == 4)
+                            <i class="fa fa-star" style="font-size:20px;color:orange;">
+                            </i>
+                            @endif
+                            <a href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" class="vipZero product-link">
+                                {!! $product['title'] !!}
                             </a>
                         </h3>
                         <div class="product-info">
-                            <span class="price">{!! $products->price !!} tỷ</span>
+                            <span class="price">{!! $product['price'] !!} {!! $product['unit'] !!}</span>
                             <span class="dot">·</span>
-                            <span class="area">{!! $products->area !!} m²</span>
+                            <span class="area">{!! $product['area'] !!} m²</span>
                             <span class="dot">·</span>
-                            <span class="location">{!! $products->path_with_type !!}</span>
+                            <span class="location">{!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}</span>
                         </div>
                         <div class="product-content">
-                            {!! $products->content !!}
+                            {!! $product['content'] !!}
                         </div>
                         <div class="product-wrap clearfix">
                             <div class="product-uptime">
                                 <span class="product-labeltime">
-                                    {!! $products->created_at !!}
-                                    <span class="tooltip-time">{!! $products->created_at !!}</span>
-                                </span>
-                            </div>
-                            <div class="product-contact">
-                                <span class="tooltipMarking" aria-label="Bấm để lưu tin" data-microtip-position="bottom" role="tooltip">
-                                    <i class="iconSave" data-productid="27748072" data-avatar="&lt;img class=&quot;product-avatar-img&quot; alt=&quot;KH&amp;#193;CH KẸT TIỀN CẦN B&amp;#193;N NHANH L&amp;#212; ĐẤT BI&amp;#202;N H&amp;#210;A NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . Đ&amp;#195; NHẬN SỔ&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111095750-3277_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;" data-avatarwap="https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111095750-3277_wm.jpg" data-vipclass="vip0" data-isaddon="false" data-has3d="false" data-has360="false" data-hasvideo="false" data-title="KHÁCH KẸT TIỀN CẦN BÁN NHANH LÔ ĐẤT BIÊN HÒA NEW CITY , DT 5 X 20 , 6 X 20 , 12 X 20 . ĐÃ NHẬN SỔ" data-price="1.45 tỷ" data-area="100 m²" data-pricesort="1450000048" data-areasort="100" data-room="0" data-toilets="0" data-address="Biên Hòa, Đồng Nai" data-description="Khách kẹt tiền muốn đẩy nhanh một số Lô Biên Hòa New City ở sân golf Long Thành
- DT : 5 x 20 m 
-        6  x 18m 
-        9  x 20 m 
-       12 x 20 m
- Giá : 1.450 tỷ bao sang tên và ra sổ hồng.
- Tất " data-duration="Hôm nay" data-updatedtime="11/11/2020" data-datesort="11/11/2020 09:58:51" data-contactname="Thái Bá Lợi" data-contactmobile="0946722227" data-url="/ban-dat-nen-du-an-pho-nam-cao-phuong-phuoc-tan-prj-bien-hoa-new-city/khach-ket-tien-can-ban-nhanh-lo-dt-5-x-20-6-x-20-12-x-20-da-nhan-so-pr27748072" data-totalmedia="3" data-createbyuser="649852"></i>
+                                    {{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}
+                                    <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>
                                 </span>
                             </div>
                         </div>
@@ -600,30 +537,101 @@
             <form id="productListBinnova" method="post">
                 <input id="hashAlias" type="hidden" value="48f0d40b1731d909212598242194556c2306f2dde9c6827fab303276aa8fec92">
             </form>
-            <script type="text/javascript">
-                (function callJQuery() {
-                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.ProductListBinnova) {
-                        var ctrl = new window.FrontEnd.Product.ProductListBinnova({
-                            getTabProjectUrl: '/Product/ProductListing/GetTabProject?projectId=0',
-                            model: {
-                                typeOfProduct: 38,
-                                categoryId: 0,
-                                cityCode: 'CN',
-                                districtId: 0,
-                                projectId: 0,
-                                wardId: 0,
-                                streetId: 0
-                            }
-                        });
-                    } else {
-                        setTimeout(callJQuery, 100);
-                    }
-                })();
-            </script>
-
         </div>
         <div class="main-right">
-            {{ getRightMenu() }}
+
+            <div class="box-common box-common-border box-price fixgradient">
+                <h4 class="box-title">Lọc theo khoảng giá</h4>
+                <div class="box-content">
+                    <ul class="link-hover-blue">
+                        <li><a href="/nha-dat-ban/-1/1/-1/-1" title="Mua bán nhà đất toàn quốc giá < 500 triệu">&lt; 500 triệu</a></li>
+                        <li><a href="/nha-dat-ban/-1/2/-1/-1" title="Mua bán nhà đất toàn quốc giá 500 - 800 triệu">500 - 800 triệu</a></li>
+                        <li><a href="/nha-dat-ban/-1/3/-1/-1" title="Mua bán nhà đất toàn quốc giá 800 triệu - 1 tỷ">800 triệu - 1 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/4/-1/-1" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/5/-1/-1" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/6/-1/-1" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/7/-1/-1" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/8/-1/-1" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/9/-1/-1" title="Mua bán nhà đất toàn quốc giá 10 - 20 tỷ">10 - 20 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/10/-1/-1" title="Mua bán nhà đất toàn quốc giá 20 - 30 tỷ">20 - 30 tỷ</a></li>
+                        <li><a href="/nha-dat-ban/-1/11/-1/-1" title="Mua bán nhà đất toàn quốc giá > 30 tỷ">&gt; 30 tỷ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="box-common box-common-border box-price fixgradient">
+                <h4 class="box-title">Lọc theo diện tích</h4>
+                <div class="box-content">
+                    <ul class="link-hover-blue">
+                        <li><a href="/nha-dat-ban/1/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="/nha-dat-ban/2/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="/nha-dat-ban/3/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="/nha-dat-ban/4/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="/nha-dat-ban/5/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="/nha-dat-ban/6/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="/nha-dat-ban/7/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 200 - 250 m2">200 - 250 m2</a></li>
+                        <li><a href="/nha-dat-ban/8/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 250 - 300 m2">250 - 300 m2</a></li>
+                        <li><a href="/nha-dat-ban/9/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 300 - 500 m2">300 - 500 m2</a></li>
+                        <li><a href="/nha-dat-ban/10/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích >= 500 m2">&gt;= 500 m2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="divide-full"></div>
+            <div class="box-common box-common-filled box-max-item-cate">
+                <h2 class="box-title">Mua bán nhà đất</h2>
+
+                <div class="box-content link-hover-blue">
+                    <ul>
+                        @foreach($provinces as $province)
+                        <li>
+                            <h3>
+                                <a href="mua-ban-nha-dat-{{ $province->slug }}" title="{{$province->name}}" id="{{ $province->id }}">
+                                    {!! $province->name !!} ({!! $province->count_posts !!})
+                                </a>
+                            </h3>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="box-common box-common-filled box-utility link-hover-blue">
+                <h4 class="box-title">Hỗ trợ tiện ích</h4>
+                <div class="box-content">
+                    <ul>
+                        <li>
+                            <a href="/ho-tro-tien-ich/ht-xem-huong-nha" title="Tư vấn phong thủy" rel="nofollow">
+                                Tư vấn phong thủy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ho-tro-tien-ich/ht-du-toan-chi-tiet" title="Dự tính chi phí làm nhà" rel="nofollow">
+                                Dự tính chi phí làm nhà
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ho-tro-tien-ich/ht-tinh-lai-suat" title="Tính lãi suất" rel="nofollow">
+                                Tính lãi suất
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a>
+                        </li>
+                        <li>
+                            <a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="banner-bottom">
@@ -649,6 +657,6 @@
 
     </div>
     @endsection
-    @section('script')
+    @section('scripts')
 
     @endsection

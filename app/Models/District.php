@@ -9,7 +9,7 @@ class District extends Model
     //
     public function product()
     {
-        return $this->hasMany(Products::class, 'districts_id');
+        return $this->hasMany(Products::class, 'district_code', 'code');
     }
 
     public function province()

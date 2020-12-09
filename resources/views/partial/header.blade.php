@@ -127,7 +127,7 @@
                             </span>
                             <span class="line">|</span>
                             <span>
-                                <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+                                <a href="{{ route('createUser') }}" rel="nofollow" id="kct_username">Đăng ký</a>
                             </span>
                         </div>
                     </div>

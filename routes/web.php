@@ -107,8 +107,8 @@ Route::prefix('/admin',)->group(function () {
     Route::get('/user','UserController@index')->name('userIndex');
     Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
     Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
-    Route::get('/user/create','UserController@create')->name('createUser');
-    Route::post('/user/create','UserController@store')->name('storeUser');
+    Route::get('/user/create','UserController@create')->name('adminCreateUser');
+    Route::post('/user/create','UserController@store')->name('adminstoreUser');
     Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
     Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
     Route::get('/user/delete','UserController@delete')->name('deleteUser');
@@ -169,3 +169,7 @@ Route::prefix('/admin')->group(function () {
 // admin/login
 Auth::routes();
 Route::get('/home', 'HomeController@welcome')->name('welcome');
+
+Route::get('/user/create','UserController@createUser')->name('createUser');
+Route::post('/user/create','UserController@storeUser')->name('storeUser');
+

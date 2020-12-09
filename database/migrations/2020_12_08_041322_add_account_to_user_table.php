@@ -14,7 +14,7 @@ class AddAccountToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('account')->after('fullname');
+            $table->integer('account')->nullable()->after('fullname');
         });
     }
 

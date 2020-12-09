@@ -128,4 +128,40 @@ class UserController extends Controller
         return view ('admin.user.post',compact('provinces','districts', 'wards', 'post','categories', 'post_types'));
     }
 
+    public function createUser() {
+
+        return view ('auth.regis2');
+    }
+
+    public function storeUser(Request $request) {
+        $user = new User();
+        // dd($request);
+        // $disk = Storage::disk('local');
+        // dd($path);
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = $request->inputPassword;
+        $user->fullname = $request->fullname;
+        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
+        $user->address = $request->address;
+        $user->phonenumber = $request->phonenumber;
+        $user->sex = $request->sex;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $name = $file->getClientOriginalName();
+            
+            $nameAva = time()."_".$name;
+            
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
+        
+        $user->save();
+        return redirect('/login');
+    }
+
 }

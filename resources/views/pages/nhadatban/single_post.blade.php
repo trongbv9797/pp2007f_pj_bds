@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+@foreach ($products as $products)
 @section('title')
 {!! $products['title'] !!}
 @endsection
@@ -25,7 +26,6 @@
 @endsection
 
 @section('content')
-
 <body class="bg-site">
 <form id="boxSearchForm" action="https://batdongsan.com.vn/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
     <div class="search-bar shadow-lv-1 clearfix">
@@ -1061,4 +1061,6 @@
         <div id="SiteRight" class="banner-right clearfix">
 
         </div>
-@endsection
+        
+@endforeach
+        @endsection

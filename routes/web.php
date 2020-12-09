@@ -55,6 +55,7 @@ Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nh
 Route::get('/nha-dat-ban{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
 Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_district');
+Route::get('/mua-ban-nha-dat-{slug}', 'NhaDatBanController@filterMuaBanNhaDat')->name('filterMuaBanNhaDat');
 
 
 //NhaDatChoThueController ----TAI ANH

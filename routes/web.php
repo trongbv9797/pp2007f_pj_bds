@@ -113,7 +113,7 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         });
     // admin
     // User - CRUD
-        Route::get('/user','UserController@index')->name('userIndex');
+        Route::get('/user','UserController@index')->name('adminIndex');
         Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
         Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
         Route::get('/user/create','UserController@create')->name('createUser');
@@ -167,4 +167,10 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     
 });
 
+Route::group(['middleware' => 'auth'], function(){
+    Route::prefix('/member')->group(function () {
+        Route::get('/index','UserController@indexMember')->name('userIndex');
+
+    });
+});
 

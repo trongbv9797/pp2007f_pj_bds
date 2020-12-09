@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $user0->roles()->attach($role1);
 
         $user1 = User::create([
-            'username' => 'member1',
+            'username' => 'member',
             'email' => 'kviet1@gmail.com',
             'password' => bcrypt('123456'),
             'fullname' => 'kviet91' ,

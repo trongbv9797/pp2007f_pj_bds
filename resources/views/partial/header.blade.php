@@ -113,14 +113,22 @@
                         <div class="home-header-menu">
                             <div class="home-header-menu">
                                 <ul class="dropdown-navigative-menu">
-                                    <li class="lv0"><span class="text" style="color: blue">{{ Auth::user()->username }}</span>
+                                    <li class="lv0"><span class="text"
+                                            style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
-                                            <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
-                                                    class="text">Dashboard</span></a>
+                                            <li class="lv1"><a href="{{ route('adminIndex') }}" class="haslink "><span
+                                                        class="text">Dashboard</span></a>
+                                            </li>
+                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                                        class="text">Profile</span></a>
+                                            </li>
+
+                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                                        class="text">Post</span></a>
                                             </li>
                                             <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();"><span
-                                                        class="text">Đăng xuất</span></a>
+                                                            document.getElementById('logout-form').submit();"><span
+                                                        class="text">Logout</span></a>
                                             </li>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                 class="d-none">

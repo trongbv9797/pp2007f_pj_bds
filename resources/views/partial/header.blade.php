@@ -1,16 +1,6 @@
 <div class="form-content">
     <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND" style=""></div>
-    <script type="text/javascript">
-        var bannerContext = {
-            "CateId": 0,
-            "PageId": 189,
-            "CityCode": null,
-            "DistrictId": null,
-            "CurrentPage": 189
-        };
-
-    </script>
-
+    
     <div id="staticDomain" statsdomain="https://statistic.batdongsan.com.vn"
         data-fileimg="https://file4.batdongsan.com.vn" data-web="https://batdongsan.com.vn"
         data-msvrouter="/microservice-architecture-router"
@@ -26,31 +16,13 @@
                 <div id="ban_wide_left" class="ban_wide_scroll"
                     style="display: block; position: absolute; top: 145.883px; bottom: inherit; left: 46px;">
                     <div class="adPosition" positioncode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px"></div>
-                    <script type="text/javascript">
-                        var bannerContext = {
-                            "CateId": 0,
-                            "PageId": 189,
-                            "CityCode": null,
-                            "DistrictId": null,
-                            "CurrentPage": 189
-                        };
-
-                    </script>
+                    
                 </div>
 
                 <div id="ban_left" class="ban_scroll"
                     style="display: block; top: 145.883px; position: absolute; left: 86px; bottom: inherit;">
                     <div class="adPosition" positioncode="BANNER_POSITION_LEFT" style="margin-bottom: 0px"></div>
-                    <script type="text/javascript">
-                        var bannerContext = {
-                            "CateId": 0,
-                            "PageId": 189,
-                            "CityCode": null,
-                            "DistrictId": null,
-                            "CurrentPage": 189
-                        };
-
-                    </script>
+                   
                 </div>
             </div>
         </div>

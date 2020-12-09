@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class NhaDatBanController extends Controller
 {
     //
+    
 
     public function index() {
         $products = Products::paginate(15)

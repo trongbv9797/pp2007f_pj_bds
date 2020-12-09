@@ -12,7 +12,8 @@ class NhaDatChoThueController extends Controller
 {
     //
     public function index() {
-        $products = Products::whereIn('menu_category_id', array(4, 5, 6))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
+        $products = Products::whereIn('menu_category_id', array(4, 5, 6))
+        ->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->paginate(10);
         $provinces = Province::all()->sortByDesc('count_posts');
         $count_products = Products::all()->count();
         return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
@@ -21,7 +22,8 @@ class NhaDatChoThueController extends Controller
     public function nhaDatBanSinglePost($id) {
         
         $products = Products::where('id', '=', $id)->first();
-        $products_area = Products::whereIn('menu_category_id', array(3, 4, 5))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
+        $products_area = Products::whereIn('menu_category_id', array(3, 4, 5))
+        ->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
         $images = Image::all();
         $images_area = Image::all();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));

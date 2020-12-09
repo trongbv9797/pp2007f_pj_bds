@@ -485,13 +485,8 @@
                 @endforeach
 
                 <div class="text-center">
-                    <div class="pagination">
-                        <a pid="1" class="actived" href="https://batdongsan.com.vn/nha-dat-ban">1</a>
-                        <a pid="2" class="" href="https://batdongsan.com.vn/nha-dat-ban/p2">2</a>
-                        <a pid="3" class="" href="https://batdongsan.com.vn/nha-dat-ban/p3">3</a>
-                        <a pid="4" class="" href="https://batdongsan.com.vn/nha-dat-ban/p4">4</a>
-                        <a pid="5" class="" href="https://batdongsan.com.vn/nha-dat-ban/p5">5</a>
-                        <a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/image/ic_double_caret_right.png"></a>
+                    <div class="paginate">
+                        {{ $products->links() }}
                     </div>
 
                 </div>

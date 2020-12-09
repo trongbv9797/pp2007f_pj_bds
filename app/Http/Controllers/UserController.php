@@ -74,7 +74,7 @@ class UserController extends Controller
         }
         
         $user->save();
-        return view ('admin.user.create');
+        return redirect()->route('userIndex');
     }
 
     public function edit($id) {

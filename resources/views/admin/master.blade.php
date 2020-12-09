@@ -417,10 +417,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href=" {{route(  'userIndex' ) }}  ">All User</a>
+                                    <a href="{{ Route('userIndex') }}">All User</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('createUser') }}">Create New User</a>
+                                    <a href="{{ Route('createUser') }}">Create New User</a>
                                 </li>
 
                             </ul>

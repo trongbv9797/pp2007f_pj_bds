@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 // HomeController index
 Route::get('/', 'HomeController@index')->name('home');
+Auth::routes();
+
+
+
+
+
+
+
+
 
 
 // check post
@@ -97,76 +106,65 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 //   ADMIN
-Route::prefix('/admin',)->group(function () {
-    Route::get('/master',function () {
-        return view('admin.master');
-    });
-
+Route::group(['middleware' => ['auth', 'admin']], function(){
+    Route::prefix('/admin',)->group(function () {
+        Route::get('/master',function () {
+            return view('admin.master');
+        });
     // admin
     // User - CRUD
-    Route::get('/user','UserController@index');
-    Route::get('/user','UserController@index')->name('userIndex');
-    Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
-    Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
-    Route::get('/user/create','UserController@create')->name('createUser');
-    Route::post('/user/create','UserController@store')->name('storeUser');
-    Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
-    Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
-    Route::get('/user/delete','UserController@delete')->name('deleteUser');
+        Route::get('/user','UserController@index')->name('userIndex');
+        Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
+        Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
+        Route::get('/user/create','UserController@create')->name('createUser');
+        Route::post('/user/create','UserController@store')->name('storeUser');
+        Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
+        Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
+        Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
 
-    // user -post
-    Route::get('/user/post/','UserController@post')->name('postUser');
-    Route::post('/user/post/','PostController@store')->name('storePost');
+        // user -post
+        Route::get('/user/post/','UserController@post')->name('postUser');
+        Route::post('/user/post/','PostController@store')->name('storePost');
 
-    Route::get('/slide', 'SlideController@index')->name('Slide');
-    Route::get('/slide/create', 'SlideController@create')->name('createSlide');
-    Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
-    Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
-    Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
-    Route::get('slide/delete/{id}', 'SlideController@delete')->name('deleteSlide');
+        Route::get('/slide', 'SlideController@index')->name('Slide');
+        Route::get('/slide/create', 'SlideController@create')->name('createSlide');
+        Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
+        Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
+        Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
+        Route::get('slide/delete/', 'SlideController@delete')->name('deleteSlide');
 
-});
-// admin/menu
-// admin/cate
-Route::prefix('/admin')->group(function () {
-    // admin/post-type
-    Route::get('/post-type', 'PostTypeController@index')->name('postTypeIndex');
-    Route::get('/post-type/create', 'PostTypeController@create')->name('createPostType');
-    Route::post('/post-type/create', 'PostTypeController@store')->name('storePostType');
-    Route::get('/post-type/edit/{id}', 'PostTypeController@edit')->name('editPostType');
-    Route::post('/post-type/edit/{id}', 'PostTypeController@update')->name('updatePostType');
-    Route::post('/post-type/delete/{id}', 'PostTypeController@delete')->name('deletePostType');
-    //  POSTS - TAI ANH
-    Route::get('/posts', 'PostController@viewPost')->name('viewPost');
-    Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
-    Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
-    Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
+        // admin/post-type
+        Route::get('/post-type', 'PostTypeController@index')->name('postTypeIndex');
+        Route::get('/post-type/create', 'PostTypeController@create')->name('createPostType');
+        Route::post('/post-type/create', 'PostTypeController@store')->name('storePostType');
+        Route::get('/post-type/edit/{id}', 'PostTypeController@edit')->name('editPostType');
+        Route::post('/post-type/edit/{id}', 'PostTypeController@update')->name('updatePostType');
+        Route::post('/post-type/delete/{id}', 'PostTypeController@delete')->name('deletePostType');
 
+        //  POSTS - TAI ANH
+        Route::get('/posts', 'PostController@viewPost')->name('viewPost');
+        Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
+        Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
+        Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
 
+        // admin/menu
+        Route::get('/menu', 'MenuController@index')->name('menuIndex');
+        Route::get('/menu/create', 'MenuController@create')->name('createMenu');
+        Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
+        Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
+        Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
+        Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
 
+        //News-H
+        Route::get('/news', 'NewsController@listNews')->name('listNews');
+        Route::get('/news/create', 'NewsController@create')->name('createNews');
+        Route::post('/news/create', 'NewsController@store')->name('storeNews');
+        Route::get('news/edit/{id}', 'NewsController@edit')->name('editNews');
+        Route::post('news/edit/{id}', 'NewsController@update')->name('updateNews');
+        Route::get('news/delete/{id}', 'NewsController@delete')->name('deleteNews');
 
-    // admin/menu
-    Route::get('/menu', 'MenuController@index')->name('menuIndex');
-    Route::get('/menu/create', 'MenuController@create')->name('createMenu');
-    Route::post('/menu/create', 'MenuController@store')->name('storeMenu');
-    Route::get('/menu/edit/{id}', 'MenuController@edit')->name('editMenu');
-    Route::post('/menu/edit/{id}', 'MenuController@update')->name('updateMenu');
-    Route::post('/menu/delete/{id}', 'MenuController@delete')->name('deleteMenu');
-
-     //News-H
-    Route::get('/news', 'NewsController@listNews')->name('listNews');
-    Route::get('/news/create', 'NewsController@create')->name('createNews');
-    Route::post('/news/create', 'NewsController@store')->name('storeNews');
-    Route::get('news/edit/{id}', 'NewsController@edit')->name('editNews');
-    Route::post('news/edit/{id}', 'NewsController@update')->name('updateNews');
-    Route::get('news/delete/{id}', 'NewsController@delete')->name('deleteNews');
-
-
-
-
+    });
     
 });
 
-// admin/login
-Auth::routes();
-Route::get('/home', 'HomeController@welcome')->name('welcome');
+

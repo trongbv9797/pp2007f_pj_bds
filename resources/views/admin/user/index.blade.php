@@ -74,7 +74,7 @@
                                     <a href="{{ route('editUser', $user->id) }}" class="text-gray m-r-15"><i
                                             class="ti-pencil"></i></a>
 
-                                    <a href="#" class="text-gray delete"
+                                    <a href="javascript:;" class="text-gray delete"
                                         did="{{ $user->id }}"><i class="ti-trash"></i></a>
                                 </td>
                             </tr>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Products;
 use App\Models\Province;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +17,9 @@ class ProvinceSeeder extends Seeder
         //
         
         DB::table('provinces')->delete();
+
+        
+
         $string = file_get_contents(__DIR__ .'/dist/tinh_tp.json');
         $json_a = json_decode($string, true);
         foreach($json_a as $item){
@@ -25,6 +29,7 @@ class ProvinceSeeder extends Seeder
                 'type' => $item['type'],
                 'name_with_type' => $item['name_with_type'],
                 'code' => $item['code'],
+                'count_posts' => random_int(0, 135)
             ));
 
         }

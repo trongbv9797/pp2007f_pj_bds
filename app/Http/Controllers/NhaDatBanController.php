@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use App\Models\Province;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,10 @@ class NhaDatBanController extends Controller
         ->orWhere('menu_categories.name', '=', "Bán nhà riêng")
         ->orWhere('menu_categories.name', '=', "Bán nhà mặt phố")
         ->orderBy('products.id', 'asc')->paginate(10);
-        return view("pages.nhadatban.index", compact('products',));
+
+        $provinces = Province::all()->sortByDesc('count_posts');
+        $count_products = Products::all()->count();
+        return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
 
     }
 
@@ -88,6 +92,14 @@ class NhaDatBanController extends Controller
         return view("pages.nhadatban.index");
     }
 
-
+    public function filterMuaBanNhaDat($id)
+    {
+        $provinces_id = Province::where('slug', $id)->get('id')->toArray();
+        $provinces_name = Province::where('slug', $id)->get('name')->toArray();
+        $provinces = Province::all()->sortByDesc('count_posts');
+        $products = Products::where('provinces_id', $provinces_id)->get();
+        $count_products = Products::where('provinces_id', $provinces_id)->count();
+        return view('pages.nhadatban.index', compact('products', 'provinces', 'provinces_name', 'count_products'));
+    }
 
 }

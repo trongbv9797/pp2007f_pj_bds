@@ -38,6 +38,7 @@ class PostTypeController extends Controller
     public function edit($id)
     {
         $post_types = Post_type::find($id);
+        dd($id);
         return view('pages.admin.editPost_Types', compact('post_types'));
     }
 

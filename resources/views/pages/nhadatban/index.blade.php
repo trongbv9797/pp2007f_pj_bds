@@ -377,57 +377,6 @@
             <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
         </div>
     </form>
-    <script type="text/javascript">
-        ///<reference path='../../../../../../../DVG.BDS.WebApp.FrontEnd.StaticFiles/wwwroot/js/Common/FrontEnd.BoxSearch.js' />
-        (function getData() {
-            if (window.FrontEnd && window.FrontEnd.BoxSearch) {
-                var boxSearchServices = new FrontEnd.BoxSearch({
-                    boxSearchDataCacheKey: 'BoxSearchData',
-                    boxSearchDataCacheTime: 120,
-                    getDataForBoxSearchUrl: '/Systems/Home/GetDataForBoxSearch'
-                })
-
-                boxSearchServices.GetData().then(function(data) {
-                    (function callJQuery() {
-                        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.BoxProductSearchBinnova) {
-                            new FrontEnd.Product.BoxProductSearchBinnova({
-                                cities: data.cities,
-                                prices: data.priceLevels,
-                                url: '/Product/ProductSearch',
-                                serverCss: 'https://staticfile.batdongsan.com.vn',
-                                model: {
-                                    type: 38,
-                                    categoryId: 0,
-                                    cityCode: 'CN',
-                                    districtId: 0,
-                                    projectId: 0,
-                                    priceId: -1,
-                                    maxPrice: !!'' ? +'' : undefined,
-                                    minPrice: !!'' ? +'' : undefined,
-                                    areaId: -1,
-                                    maxArea: !!'' ? +'' : undefined,
-                                    minArea: !!'' ? +'' : undefined,
-                                    roomId: -1,
-                                    wardId: -1 < 0 ? 0 : -1,
-                                    streetId: (-1 < 0 ? 0 : -1),
-                                    directionId: -1,
-                                    tabIndex: 0
-                                },
-                                maxSearchingHistoriesLength: 20,
-                                syncTimeSearchingHistories: 5,
-                                syncSearchingHistoriesUrl: '/Product/ProductSearch/SyncSearchingHistories',
-                                removeSearchingHistoryUrl: '/Product/ProductSearch/RemoveSearchingHistory'
-                            });
-                        } else {
-                            setTimeout(callJQuery, 100);
-                        }
-                    })();
-                })
-            } else {
-                setTimeout(getData, 100);
-            }
-        })();
-    </script>
 
     <div class="popupMarking  save" style="display: none">
         <img src="./assets/image/ic_unsave.svg">
@@ -452,15 +401,6 @@
             <div class="breadcrumb all-grey-7 link-hover-blue">
                 <a href="https://batdongsan.com.vn/nha-dat-ban" level="1" title="Nhà đất bán tại Việt Nam">Bán</a><span>/</span><a href="https://batdongsan.com.vn/nha-dat-ban" level="2" title="Nhà đất bán tại Việt Nam">Tất cả BĐS trên toàn quốc</a>
             </div>
-            <script type="text/javascript">
-                (function callJQuery() {
-                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Breadcrumbs) {
-                        new FrontEnd.Product.Breadcrumbs({});
-                    } else {
-                        setTimeout(callJQuery, 100);
-                    }
-                })();
-            </script>
 
             <div class="product-list-header pad-top-8">
                     <h1>Mua bán nhà đất toàn quốc</h1>
@@ -529,8 +469,7 @@
                         <div class="product-wrap clearfix">
                             <div class="product-uptime">
                                 <span class="product-labeltime">
-                                    {!! $product['created_at'] !!}
-                                    <span class="tooltip-time">{!! $product['created_at'] !!}</span>
+                                    {!! substr($product['created_at'], 0, 10) !!}
                                 </span>
                             </div>
                             <div class="product-contact">
@@ -603,34 +542,13 @@
             <form id="productListBinnova" method="post">
                 <input id="hashAlias" type="hidden" value="48f0d40b1731d909212598242194556c2306f2dde9c6827fab303276aa8fec92">
             </form>
-            <script type="text/javascript">
-                (function callJQuery() {
-                    if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.ProductListBinnova) {
-                        var ctrl = new window.FrontEnd.Product.ProductListBinnova({
-                            getTabProjectUrl: '/Product/ProductListing/GetTabProject?projectId=0',
-                            model: {
-                                typeOfProduct: 38,
-                                categoryId: 0,
-                                cityCode: 'CN',
-                                districtId: 0,
-                                projectId: 0,
-                                wardId: 0,
-                                streetId: 0
-                            }
-                        });
-                    } else {
-                        setTimeout(callJQuery, 100);
-                    }
-                })();
-            </script>
-
         </div>
         <div class="main-right">
 
             <div class="box-common box-common-border box-price fixgradient">
                 <h4 class="box-title">Lọc theo khoảng giá</h4>
                 <div class="box-content">
-                    <ul class="link-hover-blue height">
+                    <ul class="link-hover-blue">
                         <li><a href="/nha-dat-ban/-1/1/-1/-1" title="Mua bán nhà đất toàn quốc giá < 500 triệu">&lt; 500 triệu</a></li>
                         <li><a href="/nha-dat-ban/-1/2/-1/-1" title="Mua bán nhà đất toàn quốc giá 500 - 800 triệu">500 - 800 triệu</a></li>
                         <li><a href="/nha-dat-ban/-1/3/-1/-1" title="Mua bán nhà đất toàn quốc giá 800 triệu - 1 tỷ">800 triệu - 1 tỷ</a></li>
@@ -651,7 +569,7 @@
             <div class="box-common box-common-border box-price fixgradient">
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
-                    <ul class="link-hover-blue height">
+                    <ul class="link-hover-blue">
                         <li><a href="/nha-dat-ban/1/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
                         <li><a href="/nha-dat-ban/2/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
                         <li><a href="/nha-dat-ban/3/-1/-1/-1" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>

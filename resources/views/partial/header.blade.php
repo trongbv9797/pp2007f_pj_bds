@@ -143,6 +143,9 @@
                                 <ul class="dropdown-navigative-menu">
                                     <li class="lv0"><span class="text" style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
+                                            <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
+                                                    class="text">Dashboard</span></a>
+                                            </li>
                                             <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();"><span
                                                         class="text">Đăng xuất</span></a>

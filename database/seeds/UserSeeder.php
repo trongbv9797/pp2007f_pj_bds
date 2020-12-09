@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
 
 
         $role1 = Role::where('slug','admin')->first();
-        $role2 = Role::where('slug','user')->first();
+        $role2 = Role::where('slug','member')->first();
         $role3 = Role::where('slug','customers')->first();
 
 
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $user0->roles()->attach($role1);
 
         $user1 = User::create([
-            'username' => 'user1',
+            'username' => 'member1',
             'email' => 'kviet1@gmail.com',
             'password' => bcrypt('123456'),
             'fullname' => 'kviet91' ,

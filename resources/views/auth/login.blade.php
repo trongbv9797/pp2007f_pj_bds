@@ -1,73 +1,118 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<!-- Mirrored from themenate.com/applicator/dist/login-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:06:16 GMT -->
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dang nhap</title>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/assets/images/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.png">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+    <!-- core dependcies css -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+    <!-- page css -->
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+    <!-- core css -->
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
+</head>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+<body>
+    <div class="app">
+        <div class="layout" style="background-image: url('\assets\image\HCM-image.jpg')">
+            <div class="container">
+                <div class="row full-height align-items-center">
+                    <div class="col-md-5 mx-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="p-15">
+                                    <div class="m-b-30">
+                                        <img class="img-responsive inline-block"
+                                            src="https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg" alt="">
+                                        <h2 class="inline-block pull-right m-v-0 p-t-15">Login</h2>
+                                    </div>
+                                    <p class="m-t-15 font-size-15">Please enter your email and password to login</p>
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input id="email" type="email"
+                                                class="form-control @error('email') is-invalid @enderror" name="email"
+                                                value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="password" type="password"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                name="password" required autocomplete="current-password">
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                            @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-8">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember"
+                                                        id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                                                    <label class="form-check-label" for="remember">
+                                                        {{ __('Remember Me') }}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row mb-0">
+                                            <div class="col-md-6">
+                                                <button type="submit" class="btn btn-primary">
+                                                    {{ __('Login') }}
+                                                </button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                @if (Route::has('password.request'))
+                                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                        {{ __('Forgot Your Password?') }}
+                                                    </a>
+                                                @endif
+                                            </div>
+                                        </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+    </div>
+
+    <script src="/assets/js/vendor.js"></script>
+
+    <script src="/assets/js/app.min.js"></script>
+
+    <!-- page js -->
+
+</body>
+
+
+<!-- Mirrored from themenate.com/applicator/dist/login-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jul 2018 12:06:16 GMT -->
+
+</html>

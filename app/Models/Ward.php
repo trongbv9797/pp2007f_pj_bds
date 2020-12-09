@@ -20,7 +20,7 @@ class Ward extends Model
 
     public function product()
     {
-        return $this->hasMany(Products::class, 'wards_id');
+        return $this->hasMany(Products::class, 'ward_code', 'code');
     }
 
     public function district()

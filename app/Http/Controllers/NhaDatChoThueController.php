@@ -5,39 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Products;
+use App\Models\Province;
+use App\Models\Image;
 
 class NhaDatChoThueController extends Controller
 {
     //
     public function index() {
-        $products = Products::paginate(15)
-        ->whereIn('menu_category_id', array(4, 5, 6));
-        return view("pages.nhadatban.index", compact('products',));
+        $products = Products::whereIn('menu_category_id', array(4, 5, 6))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
+        $provinces = Province::all()->sortByDesc('count_posts');
+        $count_products = Products::all()->count();
+        return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
     }
 
-    public function nhaDatChoThueSinglePost($id) {
-        $products = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('menu_categories', 'menu_categories.id', '=', 'products.menu_category_id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'menu_categories.name', 'wards.path_with_type')
-        ->where('products.id', '=', $id)->get();
+    public function nhaDatBanSinglePost($id) {
+        
+        $products = Products::where('id', '=', $id)->first();
+        $products_area = Products::whereIn('menu_category_id', array(3, 4, 5))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
+        $images = Image::all();
+        $images_area = Image::all();
+        return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
 
-        $product2 = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'wards.path_with_type')
-        ->limit(5)
-        ->get();
-
-        $product1 = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'wards.path_with_type')
-        ->limit(5)
-        ->get();
-
-        return view("pages.nha_dat_cho_thue.single_post", compact('products', 'product2', 'product1'));
     }
 
     public function choThueCanHo() {

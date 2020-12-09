@@ -32,17 +32,17 @@ class Products extends Model
 
     public function province()
     {
-        return $this->belongsTo(Province::class, 'provinces_id');
+        return $this->belongsTo(Province::class, 'province_code');
     }
 
     public function district()
     {
-        return $this->belongsTo(District::class, 'districts_id');
+        return $this->belongsTo(District::class, 'district_code');
     }
 
     public function ward()
     {
-        return $this->belongsTo(Ward::class, 'wards_id');
+        return $this->belongsTo(Ward::class, 'ward_code');
     }
 
 

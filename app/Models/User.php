@@ -64,4 +64,9 @@ class User extends Authenticatable
         return $this->roles()->where('slug', $roleSlug)->count() == 1;
     }
 
+
+    public function product()
+    {
+        return $this->hasMany(Products::class, 'user_id');
+    }
 }

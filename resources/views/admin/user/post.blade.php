@@ -236,7 +236,7 @@
                                     people call than ads without pictures. Post a picture to get a quick transaction!
                                 </label>
                                 <div class="custom-file col-sm-3">
-                                    <input type="file" name="filename[]" class="custom-file-input" id="customFile">
+                                    <input type="file" name="filename[]" class="custom-file-input" id="customFile" multiple>
                                     <label class="custom-file-label" for="customFile">Choose images</label>
                                 </div>
 
@@ -264,7 +264,7 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control date date1" name="dateofbirth"
+                                                class="form-control date date1" name="start_date"
                                                 placeholder="Pick date start">
                                         </div>
                                     </div>
@@ -276,7 +276,7 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control date date2" name="dateofbirth"
+                                                class="form-control date date2" name="end_date"
                                                 placeholder="Pick date end">
                                         </div>
                                     </div>

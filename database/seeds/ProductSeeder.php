@@ -34,6 +34,9 @@ class ProductSeeder extends Seeder
         'districts_id' => rand(1, 707),
         'wards_id' => rand(1, 200),
         'menu_category_id' => rand(1,6),
+        'user_id' => rand(1,50),
+        'started_at' => date('Y-m-d H:i:s'),
+        'expired_at' => date('Y-m-d H:i:s'),
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
         ]);

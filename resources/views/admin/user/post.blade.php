@@ -253,7 +253,7 @@
                                     <label class="col-sm-12 col-form-label control-label">Ad type</label>
                                     <select name="post_type" class="form-control post_type" id='type' style="height:45px">
                                         @foreach ($post_types as $post_type)
-                                        <option class="district form-control posttype" value="{{ $post_type->price }}">{{ $post_type->name }}</option>
+                                        <option class="district form-control posttype" id="posttype" price="{{ $post_type->price }}" value="{{ $post_type->id }}">{{ $post_type->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -398,7 +398,7 @@
             });
             
             $('.post_type').change(function() {
-                let t = $(this).val();
+                let t = $('option:selected', this).attr('price');
                 $("#type_price").html(t);
             });
 
@@ -416,7 +416,7 @@
 
             
             $('.date, .post_type').on('change blur', function() {
-                let t = $('.post_type').val();
+                let t = $('option:selected', '.post_type').attr('price');
                 let ds = $('.date1').val();
                 let dsf = Date.parse(ds);
                 let de = $('.date2').val();

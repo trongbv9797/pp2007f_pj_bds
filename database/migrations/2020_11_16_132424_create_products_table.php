@@ -21,9 +21,9 @@ class CreateProductsTable extends Migration
             $table->integer('price')->nullable(true);
             $table->string('unit')->nullable(true);
             $table->integer('area')->nullable(true);
-            $table->integer('provinces_id')->nullable(false);
-            $table->integer('districts_id')->nullable(false);
-            $table->integer('wards_id')->nullable(false);
+            $table->integer('province_code')->nullable(false);
+            $table->integer('district_code')->nullable(false);
+            $table->integer('ward_code')->nullable(false);
             $table->smallInteger('number_of_bedroom')->nullable(true);;
             $table->smallInteger('number_of_restroom')->nullable(true);
             $table->smallInteger('number_of_floor')->nullable(true);

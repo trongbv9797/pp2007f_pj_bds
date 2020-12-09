@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Products;
 use App\Models\Province;
+use App\Models\Ward;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -14,36 +16,19 @@ class NhaDatBanController extends Controller
     
 
     public function index() {
-        $products = Products::paginate(15)
-        ->whereIn('menu_category_id', array(1, 2, 3));
+        $products = Products::whereIn('menu_category_id', array(1, 2, 3))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
         $provinces = Province::all()->sortByDesc('count_posts');
         $count_products = Products::all()->count();
         return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
     }
 
     public function nhaDatBanSinglePost($id) {
-        $products = DB::table('products')->where('products.id', '=', $id)
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('menu_categories', 'menu_categories.id', '=', 'products.menu_category_id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'menu_categories.name', 'wards.path_with_type')
-        ->get();
-
-        $product2 = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'wards.path_with_type')
-        ->limit(5)
-        ->get();
-
-        $product1 = DB::table('products')
-        ->join('images', 'images.products_id', '=' , 'products.id')
-        ->join('wards', 'wards.id', '=', 'products.wards_id')
-        ->select('products.*', 'images.link', 'wards.path_with_type')
-        ->limit(5)
-        ->get();
-
-        return view("pages.nhadatban.single_post", compact('products', 'product2', 'product1'));
+        
+        $products = Products::where('id', '=', $id)->first();
+        $products_area = Products::whereIn('menu_category_id', array(1, 2, 3))->orderBy('post_type_id', 'desc')->orderBy('created_at', 'desc')->get();
+        $images = Image::all();
+        $images_area = Image::all();
+        return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
 
     }
 

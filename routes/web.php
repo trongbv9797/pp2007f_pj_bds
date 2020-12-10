@@ -26,7 +26,7 @@ Route::get('/user/create','UserController@createUser')->name('createUser');
 
 Route::post('/user/create','UserController@storeUser')->name('storeUser');
 
-Route::group(['middleware' => 'auth'], function(){
+// Route::group(['middleware' => 'auth'], function(){
     Route::prefix('/member')->group(function () {
         Route::get('/index','UserController@indexMember')->name('memberIndex');
         Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::post('/post','PostController@store')->name('memberStore');
 
     });
-});
+// });
 
 // check post
 Route::get('/post', 'PostController@post');
@@ -115,7 +115,7 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 //   ADMIN
-Route::group(['middleware' => ['auth', 'admin']], function(){
+// Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::prefix('/admin',)->group(function () {
         Route::get('/master',function () {
             return view('admin.master');
@@ -174,7 +174,7 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 
     });
     
-});
+// });
 
 
 

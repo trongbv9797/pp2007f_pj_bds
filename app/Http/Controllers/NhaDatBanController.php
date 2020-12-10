@@ -28,10 +28,10 @@ class NhaDatBanController extends Controller
     public function nhaDatBanSinglePost($id) {
         
         $products = Products::where('id', '=', $id)->first();
-        $products_area = Products::whereIn('menu_category_id', array(1, 2, 3))
+        $products_area = Products::where('district_code', $products->district_code)
         ->orderBy('post_type_id', 'desc')
         ->orderBy('created_at', 'desc')->get();
-        $images = Image::all();
+        $images = Products::find($id)->image;
         $images_area = Image::all();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
 

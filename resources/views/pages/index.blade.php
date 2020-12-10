@@ -373,6 +373,38 @@
                     <input data-val="true" data-val-required="The CateId field is required." id="hdCboCatagory"
                         name="CateId" type="hidden" value="38">
                 </form>
+                <script type="text/javascript">
+                    ///<reference path='../../../../../../../../DVG.BDS.WebApp.FrontEnd.StaticFiles/wwwroot/js/Common/FrontEnd.BoxSearch.js' />
+                    (function getData() {
+                        if (window.FrontEnd && window.FrontEnd.BoxSearch) {
+                            var boxSearchServices = new FrontEnd.BoxSearch({
+                                boxSearchDataCacheKey: 'BoxSearchData',
+                                boxSearchDataCacheTime: 120,
+                                getDataForBoxSearchUrl: '/Systems/Home/GetDataForBoxSearch'
+                            })
+                            boxSearchServices.GetData().then(function(data) {
+                                (function callJQuery() {
+                                    if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home
+                                        .BoxSearchBinnova) {
+                                        new window.FrontEnd.Home.BoxSearchBinnova({
+                                            cities: data.cities,
+                                            cateList: data.cateList,
+                                            priceLevels: data.priceLevels
+                                        });
+                                    } else {
+                                        setTimeout(callJQuery, 100)
+                                    }
+                                })();
+                            })
+                        } else {
+                            setTimeout(getData, 100);
+                        }
+                    })();
+                </script>
+
+
+
+                
 
                 <div class="loveMoney102" positioncode="BANNER_POSITION_MASTER_HEAD_WEB" style="margin-bottom: 0px">
                     <div
@@ -387,9 +419,32 @@
 
                     </div>
                 </div>
+                <script type="text/javascript">
+                    var bannerContext = {
+                        "CateId": 0,
+                        "PageId": 189,
+                        "CityCode": null,
+                        "DistrictId": null,
+                        "CurrentPage": 189
+                    };
+                    var clickBannerUrl = '/Systems/Banner/Click'
+                </script>
 
                 <div class="banner-cover" style="display: none;"></div>
             </div>
+            <script type="text/javascript">
+                    (function callJQuery() {
+                        if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.HotNewsGroupBinnova) {
+                            new window.FrontEnd.Home.HotNewsGroupBinnova({
+                                getNewNewsAsHtmlUrl: '/Systems/Home/GetNewNewsAsHtml',
+                                getAdviceNewsAsHtmlUrl: '/Systems/Home/GetAdviceNewsAsHtml',
+                                getFengshuiNewsAsHtmlUrl: '/Systems/Home/GetFengshuiNewsAsHtml'
+                            });
+                        } else {
+                            setTimeout(callJQuery, 100)
+                        }
+                    })();
+                </script>
         </div>
         <!-- Cac control o giua-->
         <div class="home-small">
@@ -534,7 +589,16 @@
                         </div>
                     </div>
                 </div>
-
+                <script type="text/javascript">
+                    var bannerContext = {
+                        "CateId": 0,
+                        "PageId": 189,
+                        "CityCode": null,
+                        "DistrictId": null,
+                        "CurrentPage": 189
+                    };
+                    var clickBannerUrl = '/Systems/Banner/Click'
+                </script>
             </div>
             <div class="clear"></div>
         </div>
@@ -628,6 +692,17 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            (function callJQuery() {
+                if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.InterestedProductsBinnova) {
+                    new window.FrontEnd.Home.InterestedProductsBinnova({
+                        getInterestedProductsBinnovaUrl: '/Systems/Home/GetInterestedProductsBinnova'
+                    });
+                } else {
+                    setTimeout(callJQuery, 100)
+                }
+            })();
+        </script>
 
         <div class="home-small">
             <div class="home-product-place">
@@ -805,6 +880,15 @@
 
                 </style>
 
+<script type="text/javascript">
+                    (function callJQuery() {
+                        if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.ProductCountBinnova) {
+                            new window.FrontEnd.Home.ProductCountBinnova({});
+                        } else {
+                            setTimeout(callJQuery, 100)
+                        }
+                    })();
+                </script>
 
 
             </div>
@@ -1033,6 +1117,16 @@
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
                 <div class="clear"></div>
             </div>
+            <script type="text/javascript">
+                (function callJQuery() {
+                    if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.TypicalEnterpriseBinnova) {
+                        new window.FrontEnd.Home.TypicalEnterpriseBinnova({});
+                    } else {
+                        setTimeout(callJQuery, 100)
+                    }
+                })();
+            </script>
+
 
             <div class="homemain home-social">
                 <h2>Báo chí nói về Batdongsan.com.vn</h2>
@@ -1352,7 +1446,15 @@
                 <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
                 <div class="clear"></div>
             </div>
-
+            <script type="text/javascript">
+                (function callJQuery() {
+                    if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.NewsSocialBinnova) {
+                        new window.FrontEnd.Home.NewsSocialBinnova({});
+                    } else {
+                        setTimeout(callJQuery, 100)
+                    }
+                })();
+            </script>
         </div>
     </div>
 

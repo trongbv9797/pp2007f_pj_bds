@@ -95,9 +95,9 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->type = $request->get('appearance');
         $post->menu_category_id = $request->get('category');
-        $post->provinces_id = $request->get('province');
-        $post->districts_id = $request->get('district');
-        $post->wards_id = $request->get('ward');
+        $post->province_code = $request->get('province');
+        $post->district_code = $request->get('district');
+        $post->ward_code = $request->get('ward');
         $post->address = $request->get('email');
         $post->area = $request->get('acreage');
         $post->price = $request->get('price');
@@ -110,23 +110,23 @@ class PostController extends Controller
         $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->save();
 
-        // $image = new Image();
-        // if($request->hasfile('filename'))
-        // {
+        $image = new Image();
+        if($request->hasfile('filename'))
+        {
 
-        //    foreach($request->file('filename') as $images)
-        //    {
-        //        $name="image for id:".$post->id; 
-        //     //    $images->getClientOriginalName()."-id:".
-        //        $images->move(public_path().'/assets/image/', $name);  
-        //        Image::create([
-        //            'products_id' => $post->id,
-        //            'name' => $post->title,
-        //        ]);
-        //        $data[] = $name;  
-        //    }
-        // }
-        // $image->save();
+           foreach($request->file('filename') as $images)
+           {
+               $name="image for id:".$post->id; 
+            //    $images->getClientOriginalName()."-id:".
+               $images->move(public_path().'/assets/image/', $name);  
+               Image::create([
+                   'products_id' => $post->id,
+                   'name' => $post->title,
+               ]);
+               $data[] = $name;  
+           }
+        }
+        $image->save();
         return back();
     }
 }

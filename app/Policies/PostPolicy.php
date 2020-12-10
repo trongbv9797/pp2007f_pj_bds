@@ -25,7 +25,7 @@ class PostPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Products  $products
+     * @param  \App\Models\Products  $products
      * @return mixed
      */
     public function view(User $user, Products $products)
@@ -53,7 +53,7 @@ class PostPolicy
      */
     public function update(User $user, Products $products)
     {
-        return $user->hasAccess(['products.update']) or $user->id == $products->user_id;
+        return $user->id == $products->user_id;
     }
 
     /**

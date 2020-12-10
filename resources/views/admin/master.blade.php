@@ -329,7 +329,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                <a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
+                                    <a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();"><span
                                             class="text">Logout</span></a>
                                 </li>
@@ -396,12 +396,12 @@
                                     <a href="{!!  Route('memberViewPost') !!}">All Posts</a>
                                 </li>
                                 <li>
-                                    <a href="{!!  Route('shelfPost',auth::user()->id) !!}">My Posts</a>
+                                    <a href="{!!  Route('shelfPost', auth::user()->id) !!}">My Posts</a>
                                 </li>
                                 <li>
                                     <a href="{!!  Route('memberPost') !!}">Posts</a>
                                 </li>
-                               
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -415,17 +415,17 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                @if(Auth::user()->inRole('admin'))
-                                <li>
-                                    <a href="{{ Route('userIndex') }}">All User</a>
-                                </li>
-                                <li>
-                                    <a href="{{ Route('createUser') }}">Create New User</a>
-                                </li>
+                                @if (Auth::user()->inRole('admin'))
+                                    <li>
+                                        <a href="{{ Route('userIndex') }}">All User</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ Route('adminCreateUser') }}">Create New User</a>
+                                    </li>
                                 @else
-                                <li>
-                                    <a href="{{ Route('memberIndex') }}">All User</a>
-                                </li>
+                                    <li>
+                                        <a href="{{ Route('memberIndex') }}">All User</a>
+                                    </li>
                                 @endif
 
 
@@ -448,62 +448,6 @@
 
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-gauge"></i>
-                                </span>
-                                <span class="title">Post Types</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="active">
-                                    <a href="{{ route('postTypeIndex') }}">All Post Types</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('createPostType') }}">Create New Post Types</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-tune-vertical"></i>
-                                </span>
-                                <span class="title">Slides</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{!!  route('Slide') !!}">All Slides</a>
-                                    <a href="{{ route('createSlide') }}">Create New Slides</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="mdi mdi-tune-vertical"></i>
-                                </span>
-                                <span class="title">Menus</span>
-                                <span class="arrow">
-                                    <i class="mdi mdi-chevron-right"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ route('menuIndex') }}">All Menus</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('createMenu') }}">Create New Menus</a>
-                                </li>
-                            </ul>
-                        </li>
                         </li>
                     </ul>
                 </div>

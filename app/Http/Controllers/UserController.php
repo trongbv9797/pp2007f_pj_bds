@@ -19,14 +19,14 @@ class UserController extends Controller
 {
     public function index() {
         $users = User::all();
-        return view ('admin.user.index');
+        $user = Auth::user();
+        return view ('admin.user.index', compact('users', 'user'));
     }
 
     public function create() {
 
         $provinces = Province::all();
-        $districts = District::all();
-        return view ('admin.user.create',compact('provinces','districts'));
+        return view ('admin.user.create',compact('provinces'));
     }
 
     public function ajaxDistrict(Request $request) {

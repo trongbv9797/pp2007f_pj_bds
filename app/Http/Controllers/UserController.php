@@ -11,6 +11,7 @@ use App\Models\Post_type;
 use App\Models\Ward;
 use App\Models\Products;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
@@ -19,14 +20,14 @@ class UserController extends Controller
 {
     public function index() {
         $users = User::all();
-        return view ('admin.user.index');
+        $user = Auth::user();
+        return view ('admin.user.index', compact('users', 'user'));
     }
 
     public function create() {
 
         $provinces = Province::all();
-        $districts = District::all();
-        return view ('admin.user.create',compact('provinces','districts'));
+        return view ('admin.user.create',compact('provinces'));
     }
 
     public function ajaxDistrict(Request $request) {
@@ -161,6 +162,13 @@ class UserController extends Controller
         }
         
         $user->save();
+        $user1 = User::where('email',$request->email)->first();
+
+        $userRole = DB::table('role_user')->insert([
+            'user_id' => $user1->id,
+            'role_id' => 2,
+        ]);
+
         return redirect('/login');
     }
     public function indexMember() {

@@ -9,9 +9,19 @@
 <link rel="stylesheet" href="./assets/css/bien_hoa2.css">
 <link rel="stylesheet" href="./assets/css/filestatic.ver202011121105.msvbds.FrontEnd.Product.ProductDetails.min.css">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon">
-<link rel="next" href="https://batdongsan.com.vn/ban-can-ho-chung-cu/p2">
 <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 <style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 @endsection
 
 @section('content')
@@ -257,163 +267,45 @@
 <!-- Product-detail-->
 <div class="main-container clearfix">
     <div class="main-left">
-
-
-
         <section class="product-detail">
             <!--start slide-product-->
             <!--end slide-product-->
             <!--start description-->
             
-
     <div class="slide-product" tabindex="0">
-        <div class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal">
-            <ul class="swiper-wrapper list-unstyled row" style="transform: translate3d(0px, 0px, 0px);">
-                @foreach ($images as $image)
-               <li class="swiper-slide swiper-slide-active" data-filter="image" data-index="0" style="width: 840px; margin-right: 10px;">
-                            <a onmouseover="this.style.cursor=&#39;pointer&#39;" @if ($image['products_id'] == $products['id']) style="background-image: url('{!! $image['link'] !!}'); @endif cursor: pointer; ">
-                            </a>
-                            <div class="ioverlay" style="display: none;">
-                                <img class="img-responsive" onmouseover="this.style.cursor=&#39;pointer&#39;" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" @if ($image['products_id'] == $products['id']) src="{!! $image['link'] !!}" @endif is-lazy-image="true" lazy-id="0">
-                            </div>
-                        </li>
-                    @endforeach
-                        
-            </ul>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">3</span></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next slide-next1" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><img src="./assets/image/ic_carousel_caret_right.png"> </div>
-                <div class="swiper-button-prev slide-prev1 swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="./assets/image/ic_carousel_caret_left.png"></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        <div class="swiper-container gallery-thumbs swiper-container-initialized swiper-container-horizontal swiper-container-free-mode swiper-container-thumbs">
-            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                                                                        <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products['title'] !!}" title="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095750-3277_wm(1).jpg" is-lazy-image="true" lazy-id="3">
-                        </div>
-                        <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="4">
-                        </div>
-                        <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                            <img onmouseover="this.style.cursor=&#39;pointer&#39;" alt="{!! $products['title'] !!}" title="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/mobile/NoImage.svg" src="./assets/image/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="5">
-                        </div>
-            </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        <!-- Initialize Swiper -->
-    </div>
-    <!--slide-product-->
-    <div id="popup">
-        <div class="icon-close"></div>
-        <div class="popup-choice pad-16">
-            <ul>
-                                                    <li data-filter="image">Ảnh</li>
-                <li data-filter="map">Bản đồ</li>
-            </ul>
+
+            <!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        @foreach ($images as $key=>$image)
+      <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+        <div class="view">
+          <img class="d-block w-100" src="{!! $image['link'] !!}">
+          <div class="mask rgba-black-light"></div>
         </div>
-            <div class="popup-pagination">
-                <div class="swiper-pagination-full swiper-pagination-fraction"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">3</span></div>
-                <div class="swiper-pagination-full-360 swiper-pagination-fraction hidden">
-                    <span class="swiper-pagination-current">0</span> / <span class="swiper-pagination-total">0</span>
-                </div>
-            </div>
-        <div class="content">
-            <div class="slide-content slide-3d">
-                <iframe frameborder="0" width="840" height="473" scrolling="no" src="./assets/image/saved_resource(6).html" allowfullscreen=""></iframe>
-            </div>
-            <div class="slide-content slide-360 group-img360" id="photo360">
-                <div class="view-full">
-                    <div class="view-img360">
-                        <div id="divPhoto360Active" class="show-img">
-                            <div class="top-controls">
-                                <span id="btnCloseFullscreen" class="close-popup360"></span>
-                                <ul class="nav-img360">
-                                    <li>
-                                        <span class="nav" id="zoom-in">
-                                            <i class="icon360-zoomin"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="zoom-out">
-                                            <i class="icon360-zoomout"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="pan-left">
-                                            <i class="icon360-prev"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="pan-right">
-                                            <i class="icon360-next"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="pan-up">
-                                            <i class="icon360-up"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="pan-down">
-                                            <i class="icon360-down"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="auto-rotate">
-                                            <i class="icon360-reload"></i>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="nav" id="fullscreen">
-                                            <i class="icon360-viewfull"></i>
-                                        </span>
-                                    </li>
-                                </ul>
-                            <div class="control-popup360"><span class="prev-thumb360"></span><div class="thumb-img360 swiper-container"><ul class="list-thumb360 swiper-wrapper">null</ul></div><span class="next-thumb360"></span></div></div>
-                        </div>
-                        <div id="titImg360" class="tit-img"></div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="slide-content slide-image">
-
-                <div class="swiper-container gallery-top-full swiper-container-initialized swiper-container-horizontal">
-                    <ul class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                                                        <li class="swiper-slide swiper-slide-active" style="width: 1576px;">
-                                    <img alt="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="6">
-                                </li>
-                                <li class="swiper-slide swiper-slide-next" style="width: 1576px;">
-                                    <img alt="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="7">
-                                </li>
-                                <li class="swiper-slide" style="width: 1576px;">
-                                    <img alt="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="8">
-                                </li>
-                    </ul>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></div>
-                    <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
-                <div class="swiper-container gallery-thumbs-full swiper-container-initialized swiper-container-horizontal swiper-container-thumbs" style="max-width: 360px;">
-                    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                                                        <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="margin-right: 8px;">
-                                    <img alt="{!! $products['title'] !!}" title="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true" lazy-id="9">
-                                </div>
-                                <div class="swiper-slide swiper-slide-visible swiper-slide-next" style="margin-right: 8px;">
-                                    <img alt="{!! $products['title'] !!}" title="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095757-9bf4_wm.jpg" is-lazy-image="true" lazy-id="10">
-                                </div>
-                                <div class="swiper-slide swiper-slide-visible" style="margin-right: 8px;">
-                                    <img alt="{!! $products['title'] !!}" title="{!! $products['title'] !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src-preloading="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image.png" src="./assets/image/lazy-preview-image.png" src-lazy="https://file4.batdongsan.com.vn/2020/11/11/20201111095817-45e1_wm.jpg" is-lazy-image="true" lazy-id="11">
-                                </div>
-                    </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-            </div>
-            <div class="slide-content slide-map"></div>
-        </div>
+      </div>
+      @endforeach
     </div>
-
-<div class="breadcrumb all-grey-7 link-hover-blue">
-    <a href="https://batdongsan.com.vn/ban-dat-nen-du-an" level="1" title="Bán đất nền dự án tại Việt Nam">Bán</a><span>/</span><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-dong-nai" level="2" title="Bán đất nền dự án tại Đồng Nai">Đồng Nai</a><span>/</span><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-dna" level="3" title="Bán đất nền dự án tại Thành phố Biên Hòa">Biên Hòa</a><span>/</span><a href="https://batdongsan.com.vn/ban-dat-nen-du-an-bien-hoa-new-city" level="4" title="Bán đất nền dự án tại Biên Hòa New City">Đất nền dự án tại Biên Hòa New City</a>
-</div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
+    </div>
 
 <div class="description" id="product-detail-web" uid="649852">
     <h1 class="tile-product"> {!! $products['title'] !!}</h1>
@@ -630,7 +522,7 @@
                                 <div class="pro-price">{!! $product['price'] !!} {!! $product['unit'] !!} </div>
                                     <span class="ic_dot">·</span>
                                     <div class="pro-m2">{!! $product['area'] !!} m²</div>
-                                <div class="pro-adress">{!! $product->ward['path_with_type'] !!}</div>
+                                <div class="pro-adress">{!! $product->district['path_with_type'] !!}</div>
                                 <div class="date">
                                     {{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}
                                     <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>

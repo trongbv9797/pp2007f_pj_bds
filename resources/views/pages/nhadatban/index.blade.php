@@ -466,7 +466,7 @@
                             <span class="dot">·</span>
                             <span class="area">{!! $product['area'] !!} m²</span>
                             <span class="dot">·</span>
-                            <span class="location">{!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}</span>
+                            <span class="location">{!! $product->district['path_with_type'] !!}</span>
                         </div>
                         <div class="product-content">
                             {!! $product['content'] !!}

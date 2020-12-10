@@ -18,16 +18,6 @@ use Illuminate\Support\Facades\Route;
 // HomeController index
 Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
-
-
-
-
-
-
-
-
-
-
 // check post
 Route::get('/post', 'PostController@post');
 

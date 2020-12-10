@@ -174,3 +174,10 @@ Route::group(['middleware' => 'auth'], function(){
     });
 });
 
+// admin/login
+Auth::routes();
+Route::get('/home', 'HomeController@welcome')->name('welcome');
+
+Route::get('/user/create','UserController@createUser')->name('createUser');
+Route::post('/user/create','UserController@storeUser')->name('storeUser');
+

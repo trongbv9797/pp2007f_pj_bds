@@ -99,7 +99,11 @@
                             </span>
                             <span class="line">|</span>
                             <span>
+<<<<<<< HEAD
+                                <a href="{{ route('createUser') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+=======
                                 <a href="{{ route('register') }}" rel="nofollow" id="kct_username">Đăng ký</a>
+>>>>>>> 943c3b88582cc77a6bf33a35a96972107d2a336b
                             </span>
                         </div>
                     </div>

@@ -17,7 +17,26 @@ use Illuminate\Support\Facades\Route;
 
 // HomeController index
 Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes();
+
+Route::get('/home', 'HomeController@welcome')->name('welcome');
+
+Route::get('/user/create','UserController@createUser')->name('createUser');
+
+Route::post('/user/create','UserController@storeUser')->name('storeUser');
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::prefix('/member')->group(function () {
+        Route::get('/index','UserController@indexMember')->name('memberIndex');
+        Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
+        Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
+        Route::get('/post','UserController@post')->name('memberPost');
+        Route::post('/post','PostController@store')->name('memberStore');
+
+    });
+});
+
 // check post
 Route::get('/post', 'PostController@post');
 
@@ -157,17 +176,5 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     
 });
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::prefix('/member')->group(function () {
-        Route::get('/index','UserController@indexMember')->name('userIndex');
 
-    });
-});
-
-// admin/login
-Auth::routes();
-Route::get('/home', 'HomeController@welcome')->name('welcome');
-
-Route::get('/user/create','UserController@createUser')->name('createUser');
-Route::post('/user/create','UserController@storeUser')->name('storeUser');
 

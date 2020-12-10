@@ -12,6 +12,7 @@ use App\Models\District;
 use App\Models\Province;
 use App\Models\Post_type;
 use App\Models\Menu_category;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 class PostController extends Controller
@@ -23,7 +24,14 @@ class PostController extends Controller
     }
 
     public function viewPost() {
-        $posts = Products::all();
+        $posts = Products::orderBy('id','DESC')->get();
+        return view('admin.posts', compact('posts'));
+    }
+
+    public function shelfPost($user) {
+        
+        $posts = User::find($user)->Products;
+        // dd($posts);
         return view('admin.posts', compact('posts'));
     }
 

@@ -18,9 +18,8 @@ use Illuminate\Http\UploadedFile;
 class UserController extends Controller
 {
     public function index() {
-        $admin = Auth::user();
         $users = User::all();
-        return view ('admin.user.index',compact('users','admin'));
+        return view ('admin.user.index');
     }
 
     public function create() {
@@ -166,7 +165,7 @@ class UserController extends Controller
     }
     public function indexMember() {
         $user = Auth::user();
-        return view ('admin.user.index',compact('user'));
+        return view ('member.index',compact('user'));
     }
 
 }

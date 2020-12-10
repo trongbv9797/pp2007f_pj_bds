@@ -586,9 +586,9 @@
                                     <div class="pro-m2">68.8 m²</div>
                                     <div class="product-address">
                                         <a href="https://batdongsan.com.vn/ban-dat-thanh-oai-hn"
-                                            title="{{ $districs->find($product->districts_id)->name }}">{{ $districs->find($product->districts_id)->name }}</a>,
+                                            title="{{ $districs->find($product->district_code)->name }}">{{ $districs->find($product->district_code)->name }}</a>,
                                         <a href="https://batdongsan.com.vn/ban-dat-ha-noi"
-                                            title="Hà Nội">{{ $provinces->find($product->provinces_id)->name }}</a>
+                                            title="Hà Nội">{{ $provinces->find($product->province_code)->name }}</a>
                                     </div>
                                     <div class="product-date">
                                         Hôm nay

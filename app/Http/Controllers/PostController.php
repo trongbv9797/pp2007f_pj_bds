@@ -15,6 +15,8 @@ use App\Models\Menu_category;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
+
 class PostController extends Controller
 {
 
@@ -83,14 +85,28 @@ class PostController extends Controller
             $name = $photo->store('photos');
             Image::create([
                 'products_id' => $product->id,
-                'name' => $name
+                'name' => $name,
+                'link' => $name,
             ]);
         }
         return 'Upload successful!';
     }
 
     public function store(Request $request)
-    {
+    {   
+        $dates = strtotime($request->get('end_date'))/86400 - strtotime($request->get('start_date'))/86400;
+        $typePost = $request->get('post_type');
+        $moneyDay = Post_type::find($typePost)->price;
+        $moneys = $dates*$moneyDay*1.1;
+        $userAcount = intval(Auth::user()->account);
+
+        if($userAcount>$moneys) {
+
+        $userAcountUpdated = $userAcount - $moneys;
+        Auth::user()->account = $userAcountUpdated;
+        Auth::user()->updated_at = date('Y-m-d h:i:s');
+        Auth::user()->save();
+
         $post = new Products();
         $post->title = $request->get('title');
         $post->type = $request->get('appearance');
@@ -108,26 +124,44 @@ class PostController extends Controller
         $post->post_type_id = $request->get('post_type');
         $post->started_at = Carbon::parse($request->get('start_date'));
         $post->expired_at = Carbon::parse($request->get('end_date'));
+        $post->user_id = Auth::user()->id;
         $post->save();
 
-        $image = new Image();
-        if($request->hasfile('filename'))
-        {
+        // $image = new Image();
+        // if($request->hasfile('filename'))
+        // {
 
-           foreach($request->file('filename') as $images)
-           {
-               $name="image for id:".$post->id; 
-            //    $images->getClientOriginalName()."-id:".
-               $images->move(public_path().'/assets/image/', $name);  
-               Image::create([
-                   'products_id' => $post->id,
-                   'name' => $post->title,
-               ]);
-               $data[] = $name;  
-           }
+        //    foreach($request->file('filename') as $images)
+        //    {
+        //        $name="image for id:".$post->id; 
+        //     //    $images->getClientOriginalName()."-id:".
+        //        $images->move(public_path().'/assets/image/', $name);  
+        //        Image::create([
+        //            'products_id' => $post->id,
+        //            'name' => $post->title,
+        //            'link' => $post->title,
+        //        ]);
+        //        $data[] = $name;  
+        //    }
+        // }
+        // $image->save();
+
+        $dates = strtotime($request->get('end_date'))/86400 - strtotime($request->get('start_date'))/86400;
+        $typePost = $request->get('post_type');
+        $moneyDay = Post_type::find($typePost)->price;
+        $moneys = $dates*$moneyDay;
+        $userAcount = Auth::user()->account;
+        $userAcountUpdated = $userAcount - $moneys;
+        Auth::user()->account = $userAcountUpdated;
+        Auth::user()->updated_at = date('Y-m-d h:i:s');
+        Auth::user()->save();
+        return redirect('/member/post')->with('message','You post success');
+        } else {
+
+            return redirect('/member/post')->with('message','You need to add more money to your account');
+            
         }
-        $image->save();
-        return back();
+
     }
 }
 

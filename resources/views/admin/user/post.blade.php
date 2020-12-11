@@ -23,6 +23,13 @@
         <div class="">
             <div class="row">
                 <div class="col-sm-12">
+                    @if(session('message'))
+                        <div class="col-sm-12 bg-danger">
+                            <p class="">
+                                <strong>{{ session('message') }}</strong>
+                            </p>
+                        </div>
+                    @endif
                     <form role="form" id="form-validation" method="post" action="{!!  Route('postUser') !!}"
                         enctype="multipart/form-data">
 
@@ -42,14 +49,16 @@
                                 <div class="col-sm-4">
                                     <select name="appearance" class="form-control" id='appearance'>
                                         <option class="district" value="0" name="appearance" required>Nhà đất bán</option>
-                                        <option class="district" value="1" name="appearance" required>Nhà đất cho thuê</option>
+                                        <option class="district" value="1" name="appearance" required>Nhà đất cho thuê
+                                        </option>
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label control-label m-l-2">Type *</label>
                                 <div class="col-sm-4">
                                     <select name="category" class="form-control" id='type'>
                                         @foreach ($categories as $category)
-                                        <option class="district" value="{{ $category->id }}">{{ $category->name }}</option>
+                                            <option class="district" value="{{ $category->id }}">{{ $category->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -70,7 +79,8 @@
                                 <div class="col-sm-4">
                                     <select name="district" class="form-control" id='districts'>
                                         @foreach ($districts as $district)
-                                        <option class="district" value="{{ $district->code }}">{{ $district->name }}</option>
+                                            <option class="district" value="{{ $district->code }}">{{ $district->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -81,7 +91,7 @@
                                 <div class="col-sm-4">
                                     <select name="ward" class="form-control" id='wards'>
                                         @foreach ($wards as $ward)
-                                        <option value="{{ $ward->code }}" class="ward">{{ $ward->name }}</option>
+                                            <option value="{{ $ward->code }}" class="ward">{{ $ward->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -118,7 +128,7 @@
                                         <option class="district" value="triệu/m2">triệu/m2</option>
                                         <option class="district" value="triệu/m2">tỷ/m2</option>
                                         <option class="district" value="triệu/m2">triệu/tháng</option>
-                                        
+
                                     </select>
                                 </div>
 
@@ -253,7 +263,9 @@
                                     <label class="col-sm-12 col-form-label control-label">Ad type</label>
                                     <select name="post_type" class="form-control post_type" id='type' style="height:45px">
                                         @foreach ($post_types as $post_type)
-                                        <option class="district form-control posttype" id="posttype" price="{{ $post_type->price }}" value="{{ $post_type->id }}">{{ $post_type->name }}</option>
+                                            <option class="district form-control posttype" id="posttype"
+                                                price="{{ $post_type->price }}" value="{{ $post_type->id }}">
+                                                {{ $post_type->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -276,8 +288,7 @@
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
-                                                class="form-control date date2" name="end_date"
-                                                placeholder="Pick date end">
+                                                class="form-control date date2" name="end_date" placeholder="Pick date end">
                                         </div>
                                     </div>
                                 </div>
@@ -326,16 +337,19 @@
                                     <label class="col-sm-12 col-form-label control-label">Into money</label>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_type" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="total_type"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
                                     <span style="font-size: 40px;">VND</span>
 
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="vat" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="vat"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
                                     <span style="font-size: 40px;">VND</span>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_price" style="font-size: 55px; color: black; padding-top: 50px;"></label>
+                                    <label class="col-sm-12 col-form-label control-label" id="total_price"
+                                        style="font-size: 55px; color: black; padding-top: 50px;"></label>
                                     <span style="font-size: 40px;">VND</span>
                                 </div>
                             </div>
@@ -396,7 +410,7 @@
                 let u = $(this).val();
                 $("#unit").html(u);
             });
-            
+
             $('.post_type').change(function() {
                 let t = $('option:selected', this).attr('price');
                 $("#type_price").html(t);
@@ -414,7 +428,7 @@
                 // alert(total);
             });
 
-            
+
             $('.date, .post_type').on('change blur', function() {
                 let t = $('option:selected', '.post_type').attr('price');
                 let ds = $('.date1').val();
@@ -422,9 +436,9 @@
                 let de = $('.date2').val();
                 let def = Date.parse(de);
                 let d = (def - dsf) / 86400 / 1000;
-                let f = (d*t);
-                let i = f*0.1;
-                let g = f+i;
+                let f = (d * t);
+                let i = f * 0.1;
+                let g = f + i;
                 $("#total_type").html(f);
                 $('#vat').html(i);
                 $('#total_price').html(g);

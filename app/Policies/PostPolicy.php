@@ -53,7 +53,7 @@ class PostPolicy
      */
     public function update(User $user, Products $products)
     {
-        return $user->id == $products->user_id;
+        return $user->hasAccess(['products.update']) or  $user->id == $products->user_id;
     }
 
     /**

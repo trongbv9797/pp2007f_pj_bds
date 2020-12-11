@@ -157,6 +157,8 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
         //  POSTS - TAI ANH
         Route::get('/posts', 'PostController@viewPost')->name('viewPost');
+        Route::get('/post','UserController@post')->name('userPost');
+        Route::post('/post','PostController@store')->name('userStore');
         Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
         Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
         Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');

@@ -316,7 +316,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/member/index">
                                         <i class="ti-user p-r-10"></i>
                                         <span>Profile</span>
                                     </a>
@@ -386,7 +386,7 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">Posts</span>
+                                <span class="title">Users</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
@@ -404,12 +404,13 @@
                                
                             </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">Users</span>
+                                <span class="title">Posts</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
@@ -427,10 +428,66 @@
                                     <a href="{{ Route('memberIndex') }}">All User</a>
                                 </li>
                                 @endif
-
-
                             </ul>
                         </li>
+
+                        @if (Auth::user()->inRole('admin'))
+                            <li class="nav-item dropdown open">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-gauge"></i>
+                                    </span>
+                                    <span class="title">Post Types</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="{{ route('postTypeIndex') }}">All Post Types</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('createPostType') }}">Create New Post Types</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-tune-vertical"></i>
+                                    </span>
+                                    <span class="title">Slides</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{!!  route('Slide') !!}">All Slides</a>
+                                        <a href="{{ route('createSlide') }}">Create New Slides</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-tune-vertical"></i>
+                                    </span>
+                                    <span class="title">Menus</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('menuIndex') }}">All Menus</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('createMenu') }}">Create New Menus</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">

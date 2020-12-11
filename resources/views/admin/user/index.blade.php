@@ -31,6 +31,7 @@
                             </th>
                             <th>User Name</th>
                             <th>Account</th>
+                            <th>Role</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Adress</th>
@@ -66,6 +67,7 @@
                                 @else
                                 <td>{{ $user->account }}</td>
                                 @endif
+                                <td>{{ $user->roles->first()->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->phonenumber }}</td>
                                 <td> {{ $user->address }}</td>

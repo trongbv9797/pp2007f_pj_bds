@@ -155,10 +155,10 @@ class PostController extends Controller
         Auth::user()->account = $userAcountUpdated;
         Auth::user()->updated_at = date('Y-m-d h:i:s');
         Auth::user()->save();
-        return redirect('/member/post')->with('message','You post success');
+        return redirect('/member/post')->with('post_success','You post success');
         } else {
 
-            return redirect('/member/post')->with('message','You need to add more money to your account');
+            return redirect('/member/post')->with('post_error','You need to add more money to your account');
             
         }
 

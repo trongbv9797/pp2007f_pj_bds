@@ -286,7 +286,7 @@
         @foreach ($images as $key=>$image)
       <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
         <div class="view">
-          <img class="d-block w-100" src="{!! $image['link'] !!}">
+          <img class="d-block w-100" src="{!! $image->link !!}">
           <div class="mask rgba-black-light"></div>
         </div>
       </div>
@@ -307,7 +307,7 @@
   <!--/.Carousel Wrapper-->
     </div>
 
-<div class="description" id="product-detail-web" uid="649852">
+<div class="description" id="product-detail-web">
     <h1 class="tile-product"> {!! $products['title'] !!}</h1>
     <div class="short-detail">
         {!! $products->ward['path_with_type'] !!}
@@ -522,7 +522,7 @@
                                 <div class="pro-price">{!! $product['price'] !!} {!! $product['unit'] !!} </div>
                                     <span class="ic_dot">·</span>
                                     <div class="pro-m2">{!! $product['area'] !!} m²</div>
-                                <div class="pro-adress">{!! $product->district['path_with_type'] !!}</div>
+                                <div class="pro-adress"> {!! $product->district['path_with_type'] !!}</div>
                                 <div class="date">
                                     {{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}
                                     <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>
@@ -540,87 +540,8 @@
             <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="/assets/image/slide-prev.png"></div>
         </div>
     </div>
-<script type="text/javascript">
-(function callJQuery() {
-        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Details && window.FrontEnd.Product.Details.SimilarListing) {
-            new FrontEnd.Product.Details.SimilarListing()
-        }
-        else {
-            setTimeout(callJQuery, 100);
-        }
-    })();
-</script>
-<script type="text/javascript">
-    (function callJQuery() {
-        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Details && window.FrontEnd.Product.Details.ListingHistory) {
-            new FrontEnd.Product.Details.ListingHistory({
-                product: {
-                    productId: 27748072,
-                    avatar: 'https://file4.batdongsan.com.vn/crop/257x147/2020/11/11/20201111095750-3277_wm.jpg',
-                    avatarinfo: '<img class="product-avatar-img" alt="Kh&#225;ch kẹt tiền cần b&#225;n nhanh l&#244; đất Bi&#234;n H&#242;a New City, DT 5 x 20m, 6 x 20m, 12 x 20m, đ&#227; nhận sổ" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src="https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png" src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111095750-3277_wm.jpg" is-lazy-image="true"/>',
-                    avatarinfowap: 'https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111095750-3277_wm.jpg',
-                    vipClass: 'vip0',
-                    isAddon: 'false' === 'true',
-                    has3D: 'false' === 'true',
-                    has360: 'false' === 'true',
-                    hasVideo: 'false' === 'true',
-                    title: 'KH&#xC1;CH K&#x1EB8;T TI&#x1EC0;N C&#x1EA6;N B&#xC1;N NHANH L&#xD4; &#x110;&#x1EA4;T BI&#xCA;N H&#xD2;A NEW CITY, DT 5 X 20M, 6 X 20M, 12 X 20M, &#x110;&#xC3; NH&#x1EAC;N S&#x1ED4;',
-                    price: '1.45 t&#x1EF7;',
-                    area: '100 m&#xB2;',
-                    address: 'Bi&#xEA;n H&#xF2;a, &#x110;&#x1ED3;ng Nai',
-                    duration: '2 ng&#xE0;y tr&#x1B0;&#x1EDB;c',
-                    updatedTime: '11/11/2020',
-                    avatarSave: '&lt;img class=&quot;product-avatar-img&quot; alt=&quot;Kh&amp;#225;ch k&#x1EB9;t ti&#x1EC1;n c&#x1EA7;n b&amp;#225;n nhanh l&amp;#244; &#x111;&#x1EA5;t Bi&amp;#234;n H&amp;#242;a New City, DT 5 x 20m, 6 x 20m, 12 x 20m, &#x111;&amp;#227; nh&#x1EAD;n s&#x1ED5;&quot; error-image-src=&quot;https://staticfile.batdongsan.com.vn/images/no-image.png&quot; src=&quot;https://staticfile.batdongsan.com.vn/images/icons/lazy-preview-image-DFE3E8.png&quot; src-lazy=&quot;https://file4.batdongsan.com.vn/crop/350x232/2020/11/11/20201111095750-3277_wm.jpg&quot; is-lazy-image=&quot;true&quot;/&gt;',
-                    avatarWapSave: 'https://file4.batdongsan.com.vn/crop/200x140/2020/11/11/20201111095750-3277_wm.jpg',
-                    priceSort: '1450000000',
-                    areaSort: '100',
-                    room: '',
-                    toilets: '',
-                    description: 'Kh&#xE1;ch k&#x1EB9;t ti&#x1EC1;n mu&#x1ED1;n &#x111;&#x1EA9;y nhanh m&#x1ED9;t s&#x1ED1; L&#xF4; Bi&#xEA;n H&#xF2;a New City &#x1EDF; s&#xE2;n golf Long Th&#xE0;nh.&lt;br/&gt;DT:&lt;br/&gt;5 x 20m.&lt;br/&gt;6 x 18m.&lt;br/&gt;9 x 20 m.&lt;br/&gt;12 x 20 m.&lt;br/&gt;Gi&#xE1;: 1.450 t&#x1EF7; bao sang t&#xEA;n v&#xE0; ra s&#x1ED5; h&#x1ED3;ng.&lt;br/&gt;T&#x1EA5;t c&#x1EA3; &#x111;&#xE3; c&#xF3; s&#x1ED5; h&#x1ED3;ng t&#x1EEB;ng n&#x1EC1;n, m&#x1EB7;t ti&#x1EC1;n &#x111;&#x1B0;&#x1EDD;ng 24m, 18m, 15m, 13m.&lt;br/&gt;L&#xE0;m vi&#x1EC7;c tr&#x1EF1;c ti&#x1EBF;p ch&#xED;nh ch&#x1EE7; th&#x1B0;&#x1A1;ng l&#x1B0;&#x1EE3;ng gi&#xE1; t&#x1ED1;t nh&#x1EA5;t cho anh ch&#x1ECB; mua &#x111;&#x1EA7;u t&#x1B0; ho&#x1EB7;c &#x111;&#x1EC3; d&#xE0;nh &#x1EDF; sau n&#xE0;y.&lt;br/&gt;LH: 0903224939 (B&#xE1; L&#x1EE3;i).&lt;br/&gt;&lt;br/&gt;M&#x1ED9;t s&#x1ED1; th&#xF4;ng tin c&#x1A1; b&#x1EA3;n Bi&#xEA;n H&#xF2;a New City.&lt;br/&gt;- H&#x1ED7; tr&#x1EE3; vay ng&#xE2;n h&#xE0;ng.&lt;br/&gt;- C&#x1A1; s&#x1EDF; h&#x1EA1; t&#x1EA7;ng ho&#xE0;n ch&#x1EC9;nh 100% (&#x111;i&#x1EC7;n, &#x111;&#x1B0;&#x1EDD;ng, c&#xE2;y xanh, n&#x1B0;&#x1EDB;c... ).&lt;br/&gt;- C&#x1EAF;m m&#x1ED1;c ph&#xE2;n l&#xF4; t&#x1EEB;ng n&#x1EC1;n.&lt;br/&gt;- D&#x1EF1; &#xE1;n &#x111;&#x1EA5;t n&#x1EC1;n Bi&#xEA;n Ho&#xE0; New City n&#x103;m trong khu kinh t&#x1EBF; tr&#x1ECD;ng &#x111;i&#x1EC3;m, khu s&#xE2;n golf Long Th&#xE0;nh k&#x1EBF;t n&#x1ED1;i Qu&#x1ED1;c L&#x1ED9; 51, cao t&#x1ED1;c Long Th&#xE0;nh - V&#x169;ng T&#xE0;u, H&#x1B0;&#x1A1;ng L&#x1ED9; 2 - C&#x1EA7;u &#x110;&#x1ED3;ng Nai 2, b&#xEA;n c&#x1EA1;nh khu &#x111;&#xF4; th&#x1ECB; Aqua City, C&#xE1;ch d&#x1EF1; &#xE1;n Vincity - Qu&#x1EAD;n 9 ch&#x1EC9; m&#x1ED9;t c&#xE2;y c&#x1EA7;u.&lt;br/&gt;- C&#x1EA7;u V&#xE0;m C&#xE1;i S&#x1EE9;t &#x111;&#xE3; kh&#x1EDF;i c&#xF4;ng &#x111;i ngang d&#x1EF1; &#xE1;n &#x111;&#x1EBF;n cao t&#x1ED1;c Long Th&#xE0;nh, r&#xFA;t ng&#x1EAF;n &#x111;o&#x1EA1;n &#x111;&#x1B0;&#x1EDD;ng v&#x1EC1; Qu&#x1EAD;n 2, TP. HCM ch&#x1EC9; c&#xF2;n 20 ph&#xFA;t.&lt;br/&gt;- Ti&#x1EC7;n &#xED;ch &#x111;&#x1EB3;ng c&#x1EA5;p ti&#xEA;u chu&#x1EA9;n Qu&#x1ED1;c t&#x1EBF;:&lt;br/&gt;&#x2B; Qu&#x1EA7;n th&#x1EC3; s&#xE2;n golf, nh&#xE0; h&#xE0;ng.&lt;br/&gt;&#x2B; Khu&#xF4;n vi&#xEA;n l&#x1EDB;n, c&#xF4;ng vi&#xEA;n xanh t&#x1B0;&#x1A1;i m&#xE1;t.&lt;br/&gt;&#x2B; Khu th&#x1B0;&#x1A1;ng m&#x1EA1;i, h&#x1ED3; b&#x1A1;i, ph&#xF2;ng gym, spa, tr&#x1B0;&#x1EDD;ng h&#x1ECD;c, khu y t&#x1EBF;.&lt;br/&gt;&#x2B; An ninh 24/24.',
-                    dateSort: '11/11/2020 09:58:51',
-                    contactName: 'Th&#xE1;i B&#xE1; L&#x1EE3;i',
-                    contactMobile: '0946722227',
-                    totalMedia: '3',
-                    createByUser: '649852'
-                },
-                getListingHistory: '/Product/ProductDetail/GetListingHistory',
-                listingLimit: 20,
-                displayedItemCount: 12,
-                asyncTime: 24,
-                errorImageSrc: 'https://staticfile.batdongsan.com.vn/images/no-image.png'
-            });
-        }
-        else {
-            setTimeout(callJQuery, 100);
-        }
-    })();
-</script>
-<script type="text/javascript">
-    (function callJQuery() {
-        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Details && window.FrontEnd.Product.Details.Details) {
-            window.FrontEnd_Product_Details_DetailsBinnova = new FrontEnd.Product.Details.Details({
-                urlSubmitFeedback: '/Product/ProductDetail/SendFeedback'
-            });
-        }
-        else {
-            setTimeout(callJQuery, 100);
-        }
-    })();
-    (function callJQueryChart() {
-        if (window.FrontEnd && window.FrontEnd.Product && window.FrontEnd.Product.Details && window.FrontEnd.Product.Details.Chart) {
-            window.FrontEnd_Product_Details_ChartBinnova = new FrontEnd.Product.Details.Chart({
-                urlGetData: '/Product/ProductDetail/GetProductChart',
-                cateId: '40',
-                projectId: '3684',
-                districtId: '245',
-                chartlabel: 'Qu&#xFD; 1/2019, Qu&#xFD; 2/2019, Qu&#xFD; 3/2019, Qu&#xFD; 4/2019, Qu&#xFD; 1/2020, Qu&#xFD; 2/2020'
-            });
-        }
-        else {
-            setTimeout(callJQueryChart, 100);
-        }
-    })();
-</script>
+
+
 
             <!--end description-->
             <!--start product-area-->

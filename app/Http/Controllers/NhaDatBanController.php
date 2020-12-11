@@ -31,7 +31,7 @@ class NhaDatBanController extends Controller
         $products_area = Products::where('district_code', $products->district_code)
         ->orderBy('post_type_id', 'desc')
         ->orderBy('created_at', 'desc')->get();
-        $images = Products::find($id)->image;
+        $images = Image::where('products_id', $id)->get();
         $images_area = Image::all();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
 

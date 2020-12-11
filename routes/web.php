@@ -121,7 +121,7 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 //   ADMIN
-// Route::group(['middleware' => ['auth', 'admin']], function(){
+Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::prefix('/admin',)->group(function () {
         Route::get('/master',function () {
             return view('admin.master');
@@ -181,7 +181,7 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
     });
     
-// });
+});
 
 
 

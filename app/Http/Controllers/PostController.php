@@ -126,27 +126,26 @@ class PostController extends Controller
         $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->user_id = Auth::user()->id;
         $post->save();
-        $image = new Image();
         if($request->hasfile('filename'))
         {
-
-           foreach($request->file('filename') as $images)
+        
+           foreach($request->file('filename') as $picture)
            {
-
-            $images->getClientOriginalName();
-               $name=$images.$post->id; 
-               $images->move(public_path().'/assets/image/products/tmp/', $name); 
-               $post_id = $post->id;
-               $path="/assets/image/products".$name;
-               Image::insert([
-                   'products_id' => $post_id,
-                   'name' => $name,
-                   'link'=>$path,
-               ]);
-               $data[] = $name;  
+                $image = new Image();
+                $picture->getClientOriginalName();
+                $name=$picture.$post->id; 
+                $picture->move(public_path().'/assets/image/products/tmp/', $name); 
+                $post_id = $post->id;
+                $path="/assets/image/products".$name;
+                Image::insert([
+                    'products_id' => $post_id,
+                    'name' => $name,
+                    'link'=>$path,
+                ]);
+                $image->save();
            }
         }
-        $image->save();
+        
 
         $dates = strtotime($request->get('end_date'))/86400 - strtotime($request->get('start_date'))/86400;
         $typePost = $request->get('post_type');

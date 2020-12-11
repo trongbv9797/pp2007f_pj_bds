@@ -86,10 +86,7 @@
                                 <label class="col-sm-2 col-form-label control-label m-l-2">County / District *</label>
                                 <div class="col-sm-4">
                                     <select name="district" class="form-control" id='districts'>
-                                        @foreach ($districts as $district)
-                                            <option class="district" value="{{ $district->code }}">{{ $district->name }}
-                                            </option>
-                                        @endforeach
+
                                     </select>
                                 </div>
                             </div>
@@ -98,9 +95,7 @@
                                 <label class="col-sm-2 col-form-label control-label"> Wards </label>
                                 <div class="col-sm-4">
                                     <select name="ward" class="form-control" id='wards'>
-                                        @foreach ($wards as $ward)
-                                            <option value="{{ $ward->code }}" class="ward">{{ $ward->name }}</option>
-                                        @endforeach
+
                                     </select>
                                 </div>
                                 <label class="col-sm-2 col-form-label control-label m-l-2">Street </label>
@@ -390,7 +385,7 @@
                 var id = $(this).val();
                 $.ajax({
                     type: "get",
-                    url: "/admin/user/ajaxDistrict",
+                    url: "/user/ajaxDistrict",
                     data: {
                         parent_code: id
                     },
@@ -459,7 +454,7 @@
         function selectDistrict(id) {
             $.ajax({
                 type: "get",
-                url: "/admin/user/ajaxWard",
+                url: "/user/ajaxWard",
                 data: {
                     parent_code: id
                 },

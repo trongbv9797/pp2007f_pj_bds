@@ -11,22 +11,22 @@
     <title>@yield('title')</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="http://127.0.0.1:8000/assets/image/logo/apple-touch-icon.html">
-    <link rel="shortcut icon" href="http://127.0.0.1:8000/assets/image/logo/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/image/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="/assets/image/logo/favicon.png">
 
     <!-- core dependcies css -->
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
     <!-- page css -->
     @yield('styles')
     <!-- core css -->
-    <link href="http://127.0.0.1:8000/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/themify-icons.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/animate.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -118,7 +118,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-3.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-3.jpg" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Debra Stewart</span>
@@ -129,7 +129,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-5.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-5.jpg" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <span class="title p-t-10">Jane Hunt</span>
@@ -633,7 +633,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-1.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-1.jpg" alt="">
                                                         <span class="status success"></span>
                                                     </div>
                                                     <div class="info">
@@ -649,7 +649,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                         <span class="status success"></span>
                                                     </div>
                                                     <div class="info">
@@ -665,7 +665,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-3.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-3.jpg" alt="">
                                                         <span class="status success"></span>
                                                     </div>
                                                     <div class="info">
@@ -683,7 +683,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-4.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-4.jpg" alt="">
                                                         <span class="status away"></span>
                                                     </div>
                                                     <div class="info">
@@ -695,7 +695,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-5.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-5.jpg" alt="">
                                                         <span class="status away"></span>
                                                     </div>
                                                     <div class="info">
@@ -707,7 +707,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-6.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-6.jpg" alt="">
                                                         <span class="status away"></span>
                                                     </div>
                                                     <div class="info">
@@ -719,7 +719,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-7.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-7.jpg" alt="">
                                                         <span class="status away"></span>
                                                     </div>
                                                     <div class="info">
@@ -736,7 +736,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-8.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-8.jpg" alt="">
                                                         <span class="status busy"></span>
                                                     </div>
                                                     <div class="info">
@@ -748,7 +748,7 @@
                                                 <a href="javascript:void(0);"
                                                     class="conversation-toggler media-hover p-h-20">
                                                     <div class="media-img">
-                                                        <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-9.jpg" alt="">
+                                                        <img src="/assets/image/avatars/thumb-9.jpg" alt="">
                                                         <span class="status busy"></span>
                                                     </div>
                                                     <div class="info">
@@ -782,7 +782,7 @@
                                             </div>
                                             <div class="msg msg-recipient">
                                                 <div class="user-img">
-                                                    <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                    <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                 </div>
                                                 <div class="bubble">
                                                     <div class="bubble-wrapper">
@@ -799,7 +799,7 @@
                                             </div>
                                             <div class="msg msg-recipient">
                                                 <div class="user-img">
-                                                    <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                    <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                 </div>
                                                 <div class="bubble">
                                                     <div class="bubble-wrapper">
@@ -816,7 +816,7 @@
                                             </div>
                                             <div class="msg msg-recipient">
                                                 <div class="user-img">
-                                                    <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                    <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                 </div>
                                                 <div class="bubble">
                                                     <div class="bubble-wrapper">
@@ -829,7 +829,7 @@
                                             </div>
                                             <div class="msg msg-recipient">
                                                 <div class="user-img">
-                                                    <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                    <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                                 </div>
                                                 <div class="bubble">
                                                     <div class="bubble-wrapper">
@@ -880,7 +880,7 @@
                                     <li class="list-item border bottom">
                                         <a href="javascript:void(0);" class="media-hover p-20">
                                             <div class="media-img">
-                                                <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-1.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-1.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title">Marshall Nichols</span>
@@ -892,7 +892,7 @@
                                     <li class="list-item border bottom">
                                         <a href="javascript:void(0);" class="media-hover p-20">
                                             <div class="media-img">
-                                                <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-2.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-2.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title">Susie Willis</span>
@@ -918,7 +918,7 @@
                                     <li class="list-item border bottom">
                                         <a href="javascript:void(0);" class="media-hover p-20">
                                             <div class="media-img">
-                                                <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-8.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-8.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title">Erin Gonzales</span>
@@ -958,7 +958,7 @@
                                     <li class="list-item border bottom">
                                         <a href="javascript:void(0);" class="media-hover p-20">
                                             <div class="media-img">
-                                                <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-12.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-12.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title">Riley Newman</span>
@@ -984,7 +984,7 @@
                                     <li class="list-item border bottom">
                                         <a href="javascript:void(0);" class="media-hover p-20">
                                             <div class="media-img">
-                                                <img src="http://127.0.0.1:8000/assets/image/avatars/thumb-11.jpg" alt="">
+                                                <img src="/assets/image/avatars/thumb-11.jpg" alt="">
                                             </div>
                                             <div class="info">
                                                 <span class="title">Darryl Day</span>
@@ -1030,9 +1030,9 @@
         </div>
     </div>
 
-    <script src="http://127.0.0.1:8000/assets/js/vendor.js"></script>
+    <script src="/assets/js/vendor.js"></script>
 
-    <script src="http://127.0.0.1:8000/assets/js/app.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
 
     <!-- page js -->
     @yield('scripts')

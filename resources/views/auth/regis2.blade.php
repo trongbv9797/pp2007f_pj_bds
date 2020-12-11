@@ -10,22 +10,22 @@
     <title>Applicator - Admin Dashboard Template</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" href="http://127.0.0.1:8000/assets/image/logo/apple-touch-icon.html">
-    <link rel="shortcut icon" href="http://127.0.0.1:8000/assets/image/logo/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/image/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="/assets/image/logo/favicon.png">
 
     <!-- core dependcies css -->
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
-    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
     <!-- page css -->
 
     <!-- core css -->
-    <link href="http://127.0.0.1:8000/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/themify-icons.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/animate.min.css" rel="stylesheet">
-    <link href="http://127.0.0.1:8000/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -150,9 +150,9 @@
         </div>
     </div>
 
-    <script src="http://127.0.0.1:8000/assets/js/vendor.js"></script>
+    <script src="/assets/js/vendor.js"></script>
 
-    <script src="http://127.0.0.1:8000/assets/js/app.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
 
     <!-- page js -->
 

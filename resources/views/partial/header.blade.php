@@ -33,12 +33,12 @@
                 <a href="javascript:void(0)" id="nav_back" rel="nofollow" title="Danh mục"
                     class="div-panel st-panel fleft">
                     <span class="img-naga-l">
-                        <img src="http://127.0.0.1:8000/assets/image/ic_caret_left_1.svg" alt="back">
+                        <img src="/assets/image/ic_caret_left_1.svg" alt="back">
                     </span>
                 </a>
                 <div class="text-center header-logo">
                     <a href="https://batdongsan.com.vn/" title="Nhà đất" rel="nofollow">
-                        <img src="http://127.0.0.1:8000/assets/image/logo_wap1.svg"
+                        <img src="/assets/image/logo_wap1.svg"
                             class="logo-wap" alt="logo batdongsan.com.vn" title="Batdongsan.com.vn">
                     </a>
                 </div>
@@ -47,7 +47,7 @@
                     <span class="img-naga-r">
                         <img class=" lazyloaded" ignore-lazy-loading=""
                             data-src="https://staticfile.batdongsan.com.vn/image/mobile/icons/24x24/filled/ic_savelist.svg"
-                            src="http://127.0.0.1:8000/assets/image/ic_savelist.svg">
+                            src="/assets/image/ic_savelist.svg">
                         <span class="img-naga-notification hide">
                             0
                         </span>
@@ -56,7 +56,7 @@
                 <a href="javascript:void(0)" id="nav_list" rel="nofollow" title="Danh mục"
                     class="div-panel st-panel fright in">
                     <span class="img-naga-r">
-                        <img src="http://127.0.0.1:8000/assets/image/ic_hamburger_menu_1.svg" alt="menu">
+                        <img src="/assets/image/ic_hamburger_menu_1.svg" alt="menu">
                     </span>
                 </a>
             </div>
@@ -74,13 +74,13 @@
                     <div class="login-group" style="" aria-label="Danh sách tin đã lưu" data-microtip-position="bottom"
                         role="tooltip">
                         <span class="notification" id="notiSave">
-                            <img class="iconNotiSave" src="http://127.0.0.1:8000/assets/image/ic_shortlist_002.svg">
+                            <img class="iconNotiSave" src="/assets/image/ic_shortlist_002.svg">
                             <i class="mnu-notify-icon-unread nqv" style="display: none"></i>
                             <div class="listSave" style="display: none;">
                                 <div class="header">Tin đăng đã lưu</div>
                                 <div class="content">
                                     <p class="center" style="padding: 80px 0 80px;"><img
-                                            src="http://127.0.0.1:8000/assets/image/EmptyState.svg" alt="no data"></p>
+                                            src="/assets/image/EmptyState.svg" alt="no data"></p>
                                 </div>
                                 <div class="footer" style="display: none !important;">
                                     <a class="marked-products-view-more" href="https://batdongsan.com.vn/tin-da-luu"
@@ -199,7 +199,7 @@
             <div class="drop-menu">
                 <div class="left-menu">
                     <h1>
-                        <a href="{{ route('home') }}" rel="nofollow"><img src="http://127.0.0.1:8000/assets/image/ic_logo_2.svg"
+                        <a href="{{ route('home') }}" rel="nofollow"><img src="/assets/image/ic_logo_2.svg"
                                 ignore-lazy-loading="" noloaderror="true"
                                 alt="Kênh thông tin mua bán, cho thuê nhà đất số 1" title="Batdongsan.com.vn"></a>
                         <span class="visual-hidden">Batdongsan.com.vn</span>
@@ -211,16 +211,16 @@
 
                         <ul class="dropdown-navigative-menu">
                             <li class="lv0 tablet"><a href="https://batdongsan.com.vn/tin-da-luu"><span
-                                        class="icon"><img src="http://127.0.0.1:8000/assets/image/ic_shortlist.svg"></span><span
+                                        class="icon"><img src="/assets/image/ic_shortlist.svg"></span><span
                                         class="text">Tin đăng đã lưu</span></a></li>
                             <li class="lv0 tablet active hover"><a href="https://batdongsan.com.vn/"><span
-                                        class="icon"><img src="http://127.0.0.1:8000/assets/image/ic_house.png"></span><span
+                                        class="icon"><img src="/assets/image/ic_house.png"></span><span
                                         class="text">Trang chủ</span></a></li>
                             @foreach ($arr_menu[0] as $mp)
 
                                 <li class="lv0">
                                     <a href="{{ $mp['slug'] }}" class="haslink "><span class="icon"><img
-                                                src="http://127.0.0.1:8000/assets/image/ic_for_sale.svg"></span><span
+                                                src="/assets/image/ic_for_sale.svg"></span><span
                                             class="text">{{ $mp['name'] }}</span></a>
                                     <div class="arrrow"></div>
                                     <ul>
@@ -264,11 +264,11 @@
     </header>
 
     <div class="popupMarking homePage save" style="display: none">
-        <img src="http://127.0.0.1:8000/assets/image/ic_unsave.svg">
+        <img src="/assets/image/ic_unsave.svg">
         <span> Lưu tin thành công</span>
     </div>
     <div class="popupMarking homePage unsave" style="display: none">
-        <img src="http://127.0.0.1:8000/assets/image/ic_save.svg">
+        <img src="/assets/image/ic_save.svg">
         <span> Đã bỏ lưu tin</span>
     </div>
 </div>

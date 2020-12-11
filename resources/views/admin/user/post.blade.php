@@ -3,9 +3,9 @@
 @section('title', 'Post')
 
 @section('styles')
-    <link href="/assets/vendor/selectize/dist/css/selectize.default.css" rel="stylesheet">
-    <link href="/assets/vendor/summernote/dist/summernote-bs4.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/assets/vendor/selectize/dist/css/selectize.default.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/assets/vendor/summernote/dist/summernote-bs4.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -365,13 +365,13 @@
 @endsection
 
 @section('scripts')
-    <script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="/assets/js/forms/form-validation.js"></script>
-    <script src="/assets/vendor/moment/min/moment.min.js"></script>
-    <script src="/assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
-    <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
-    <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
-    <script src="/assets/js/forms/form-elements.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="http://127.0.0.1:8000/assets/js/forms/form-validation.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/moment/min/moment.min.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script src="http://127.0.0.1:8000/assets/js/forms/form-elements.js"></script>
     {{-- jquery-ajax --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>

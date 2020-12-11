@@ -3,7 +3,7 @@
 @section('title','User Table')
     
 @section('styles')
-    <link rel="stylesheet" href="/assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css">
 @endsection
 
 @section('content')
@@ -85,7 +85,7 @@
 @endsection
 
 @section('scripts')
-    <script src="/assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-    <script src="/assets/js/tables/data-table.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="http://127.0.0.1:8000/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://127.0.0.1:8000/assets/js/tables/data-table.js"></script>
 @endsection

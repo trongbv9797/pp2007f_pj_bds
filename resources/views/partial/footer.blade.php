@@ -34,7 +34,7 @@
 </div>
 
 <script
-    src="./assets/js/filestatic.msvbds.FrontEnd.Common.Home.min.js">
+    src="http://127.0.0.1:8000/assets/js/filestatic.msvbds.FrontEnd.Common.Home.min.js">
 </script>
 
 <!--start BannerContext-->
@@ -97,11 +97,11 @@
 <div sync-marked-products-url="/Product/MarkedProducts/SyncMarkedProducts"
     unmarked-product-url="/Product/MarkedProducts/UnmarkProduct" marked-product-ids-sync-time="0.5"></div>
     <script
-    src="./assets/js/filestatic.msvbds.jquery.tabslet.jscompress.js">
+    src="http://127.0.0.1:8000/assets/js/filestatic.msvbds.jquery.tabslet.jscompress.js">
 </script>
 <script
     marking-product-service-params={&quot;unmarkProductUrl&quot;:&quot;/Product/MarkedProducts/UnmarkProduct&quot;,&quot;getMarkedProductsByIdsUrl&quot;:&quot;/Product/ProductDetail/GetMarkedListing&quot;,&quot;markedProductsSyncTime&quot;:24,&quot;listingLimit&quot;:50}
-    src="./assets/js/filestatic.msvbds.FrontEnd.Home.min.js">
+    src="http://127.0.0.1:8000/assets/js/filestatic.msvbds.FrontEnd.Home.min.js">
 </script>
 
 <script type="text/javascript">

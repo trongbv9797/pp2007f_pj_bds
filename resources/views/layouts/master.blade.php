@@ -32,7 +32,7 @@
     <title>@yield('title')</title>
 
     {{--Styles css common--}}
-    <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.FrontEnd.min.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/filestatic.msvbds.FrontEnd.min.css">
 
     @yield('style-libraries')
     {{--Styles custom--}}

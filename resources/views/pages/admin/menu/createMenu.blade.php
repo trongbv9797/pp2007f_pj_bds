@@ -71,6 +71,6 @@
 </div>
 @endsection
 @section('scripts')
-<script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/assets/js/forms/form-validation.js"></script>
+<script src="http://127.0.0.1:8000/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="http://127.0.0.1:8000/assets/js/forms/form-validation.js"></script>
 @endsection

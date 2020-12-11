@@ -76,7 +76,7 @@ Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
 Route::get('/ban-can-ho-chung-cu', 'NhaDatBanController@banCanHoChungCu')->name('ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhaDatBanController@banNhaRieng')->name('ban_nha_rieng');
 Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nha_mat_pho');
-Route::get('/nha-dat-ban{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
+Route::get('/nha-dat-ban/{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
 Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_district');
 Route::get('/mua-ban-nha-dat-{slug}', 'NhaDatBanController@filterMuaBanNhaDat')->name('filterMuaBanNhaDat');

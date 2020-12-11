@@ -3,7 +3,7 @@
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')
-<link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
+<link rel="stylesheet" href="http://127.0.0.1:8000/assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 @endsection
 
@@ -14,7 +14,7 @@
     <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
         <div class="search-bar shadow-lv-1 clearfix">
             <div class="search-guide" style="left: 985.083px; top: 64px; display: block;">
-                <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
+                <div class="icon-guide"><img src="http://127.0.0.1:8000/assets/image/ic_triangle.svg"></div>
             </div>
             <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
                 <li class="actived" ptype="38">Bán</li>
@@ -27,7 +27,7 @@
                 <input id="Keyword" name="Keyword" type="hidden" value="">
                 <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
                 <span class="icon-close hiding">
-                    <img src="./assets/image/ic_close.png">
+                    <img src="http://127.0.0.1:8000/assets/image/ic_close.png">
                 </span>
             </div>
             <div id="divCategoryRe" class="select-control select-cate">
@@ -115,7 +115,7 @@
                     <div class="pad-bot-40 pad-top-8">
                         <div class="price-slider-range slider-range">
                             <input id="txtPriceMinValue" name="MinPrice" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
-                            <span><img src="./assets/image/ic_arrow_left.png"></span>
+                            <span><img src="http://127.0.0.1:8000/assets/image/ic_arrow_left.png"></span>
                             <input id="txtPriceMaxValue" name="MaxPrice" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
                             <div class="clearfix pad-bot-16"></div>
                             <div id="price-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
@@ -166,7 +166,7 @@
                     <div class="pad-bot-40 pad-top-8">
                         <div class="area-slider-range slider-range">
                             <input id="txtAreaMinValue" name="MinArea" placeholder="Từ" class="min-value" maxlength="6" numbersonly="true" decimal="true" type="text">
-                            <span><img src="./assets/image/ic_arrow_left.png"></span>
+                            <span><img src="http://127.0.0.1:8000/assets/image/ic_arrow_left.png"></span>
                             <input id="txtAreaMaxValue" name="MaxArea" placeholder="Đến" class="max-value" maxlength="6" numbersonly="true" decimal="true" type="text">
                             <div class="clearfix pad-bot-16"></div>
                             <div id="area-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
@@ -234,7 +234,7 @@
             </div>
             <div class="select-control filter-control">
                 <div class="select-control-label" aria-label="Tìm kiếm nâng cao" data-microtip-position="top" role="tooltip">
-                    Lọc thêm<span class="filter-info"><img src="./assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
+                    Lọc thêm<span class="filter-info"><img src="http://127.0.0.1:8000/assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
                 </div>
                 <input type="hidden" id="hdbFilter" value="0">
                 <div class="select-filter-dropbox custom-dropbox advance-select-options hiding" style="display: none; height: 516px;">
@@ -375,7 +375,7 @@
 
 
             <input type="button" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-            <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
+            <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="http://127.0.0.1:8000/assets/image/ic_reset.svg"></div>
         </div>
     </form>
     <script type="text/javascript">
@@ -430,11 +430,11 @@
     </script>
 
     <div class="popupMarking  save" style="display: none">
-        <img src="./assets/image/ic_unsave.svg">
+        <img src="http://127.0.0.1:8000/assets/image/ic_unsave.svg">
         <span> Lưu tin thành công</span>
     </div>
     <div class="popupMarking  unsave" style="display: none">
-        <img src="./assets/image/ic_save.svg">
+        <img src="http://127.0.0.1:8000/assets/image/ic_save.svg">
         <span> Đã bỏ lưu tin</span>
     </div>
 

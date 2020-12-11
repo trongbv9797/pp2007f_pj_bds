@@ -82,6 +82,9 @@ Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->nam
 Route::get('/mua-ban-nha-dat-{slug}', 'NhaDatBanController@filterMuaBanNhaDat')->name('filterMuaBanNhaDat');
 
 
+
+
+
 //NhaDatChoThueController ----TAI ANH
 Route::get('/nha-dat-cho-thue', 'NhaDatChoThueController@index')->name('nha_dat_cho_thue');
 Route::get('/cho-thue-can-ho-chung-cu', 'NhaDatChoThueController@choThueCanHo')->name('cho_thue_can_ho');

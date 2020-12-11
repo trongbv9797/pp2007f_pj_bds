@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('title')
 {!! $products['title'] !!}
 @endsection
@@ -25,7 +26,6 @@
 @endsection
 
 @section('content')
-
 <body class="bg-site">
 <form id="boxSearchForm" action="https://batdongsan.com.vn/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
     <div class="search-bar shadow-lv-1 clearfix">
@@ -540,7 +540,6 @@
             <div class="swiper-button-prev slide-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><img src="/assets/image/slide-prev.png"></div>
         </div>
     </div>
-
 
 
             <!--end description-->
@@ -1061,4 +1060,5 @@
         <div id="SiteRight" class="banner-right clearfix">
 
         </div>
-@endsection
+    
+        @endsection

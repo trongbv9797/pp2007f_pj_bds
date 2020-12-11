@@ -29,8 +29,9 @@
                                     <label for="selectable1"></label>
                                 </div>
                             </th>
-                            <th>Name</th>
                             <th>User Name</th>
+                            <th>Account</th>
+                            <th>Role</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Adress</th>
@@ -54,13 +55,22 @@
                                                 <img src="/storage/img/users/{{ Auth::user()->avatar }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title">{{ Auth::user()->fullname }}</span>
-                                                <span class="sub-title">ID {{ Auth::user()->id }}</span>
+                                                <span class="title">{{ $user->username }}</span>
+                                                <span class="sub-title">ID {{ $user->id }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td>{{ $user->username }}</td>
+                                @if($user->account==null)
+                                <td> 0 </td>
+                                @else
+                                <td>{{ $user->account }}</td>
+                                @endif
+                                @if(Auth::user()->inRole('admin'))
+                                <td>Admin</td>
+                                @else
+                                <td>Member</td>
+                                @endif
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->phonenumber }}</td>
                                 <td> {{ $user->address }}</td>

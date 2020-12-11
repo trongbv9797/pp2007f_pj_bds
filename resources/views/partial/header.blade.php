@@ -115,7 +115,7 @@
                                     <li class="lv0"><span class="text"
                                             style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
-                                            <li class="lv1"><a href="{{ route('adminIndex') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
                                                         class="text">Dashboard</span></a>
                                             </li>
                                             <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span

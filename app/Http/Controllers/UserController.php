@@ -19,7 +19,7 @@ use Illuminate\Http\UploadedFile;
 class UserController extends Controller
 {
     public function index() {
-        $users = User::all();
+        $users = User::with('roles')->get();
         $user = Auth::user();
         return view ('admin.user.index', compact('users', 'user'));
     }

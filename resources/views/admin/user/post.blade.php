@@ -23,10 +23,18 @@
         <div class="">
             <div class="row">
                 <div class="col-sm-12">
-                    @if(session('message'))
+                    @if (session('post_success'))
+                        <div class="col-sm-12 bg-success">
+                            <p class="">
+                                <strong>{{ session('post_success') }}</strong>
+                            </p>
+                        </div>
+                    @endif
+
+                    @if (session('post_error'))
                         <div class="col-sm-12 bg-danger">
                             <p class="">
-                                <strong>{{ session('message') }}</strong>
+                                <strong>{{ session('post_error') }}</strong>
                             </p>
                         </div>
                     @endif
@@ -122,7 +130,7 @@
 
                                 <label class="col-sm-2 col-form-label control-label my-2">Unit</label>
                                 <div class="col-sm-4 my-2">
-                                    <select name="unit" class="form-control" id='type' style="font-size: 20px">
+                                    <select name="unit" class="form-control unit" id='type' style="font-size: 20px">
                                         <option class="district" value="tỷ">tỷ</option>
                                         <option class="district" value="triệu">triệu</option>
                                         <option class="district" value="triệu/m2">triệu/m2</option>
@@ -265,7 +273,8 @@
                                         @foreach ($post_types as $post_type)
                                             <option class="district form-control posttype" id="posttype"
                                                 price="{{ $post_type->price }}" value="{{ $post_type->id }}">
-                                                {{ $post_type->name }}</option>
+                                                {{ $post_type->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -293,18 +302,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <label class="col-sm-6 col-form-label control-label">Price:</label>
-                                    <label class="col-sm-4 col-form-label control-label" id="type_price">2000</label>
+                            <div class="row fs-4">
+                                <div class="col-sm-4 text-info">
+                                    <label class="col-sm-6 col-form-label control-label text-info">Price:</label>
+                                    <label class="col-sm-2 col-form-label control-label text-info" id="type_price">2000</label>
                                     VND
                                 </div>
-                                <span class="col-sm-2"></span>
+                                <span class="col-sm-2  text-info"></span>
                                 <div class="col-sm-2">
-                                    <label class="col-sm-12 col-form-label control-label text-right">Number of days:
+                                    <label class="col-sm-12 col-form-label control-label text-right  text-info">Number of days:
                                     </label>
                                 </div>
-                                <label class="col-sm-4 col-form-label control-label" id="days"></label>
+                                <label class="col-sm-4 col-form-label control-label text-info" id="days"></label>
                             </div>
 
                             <div class="row">
@@ -325,7 +334,7 @@
                         </div>
 
                         <div class="card-body border border-secondary shadow-sm p-3 mb-2">
-                            <div class="form-group row text-center my-3 mx-3">
+                            <div class="form-group row text-center my-3 mx-3 text-info">
                                 <div class="col-sm-3 border border-secondary bg-success mx-5">
                                     <label class="col-sm-12 col-form-label control-label ">Posting fee</label>
 
@@ -337,24 +346,24 @@
                                     <label class="col-sm-12 col-form-label control-label">Into money</label>
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_type"
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="total_type"
                                         style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                    <span class="my-10 text-info" style="font-size: 40px;">VND</span>
 
                                 </div>
                                 <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="vat"
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="vat"
                                         style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                        <span class="my-10 text-info" style="font-size: 40px;">VND</span>
                                 </div>
-                                <div class="col-sm-3 border border-secondary mx-5" style="height:200px">
-                                    <label class="col-sm-12 col-form-label control-label" id="total_price"
+                                <div class="col-sm-3 border border-secondary mx-5 text-info" style="height:200px">
+                                    <label class="col-sm-12 col-form-label control-label text-info" id="total_price"
                                         style="font-size: 55px; color: black; padding-top: 50px;"></label>
-                                    <span style="font-size: 40px;">VND</span>
+                                        <span class="my-10 text-info" style="font-size: 40px;">VND</span>
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-gradient-success" value="Submit">
+                        <input type="submit" class="btn btn-gradient-success" value="Post">
                     </form>
                 </div>
             </div>

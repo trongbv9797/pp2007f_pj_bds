@@ -26,7 +26,7 @@ class HomeController extends Controller
         $sidebars = Slide::where('type','sidebar')->get();
 
         $products = Products::with('image')->limit(8)->orderBy('id','DESC')->get();
-        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners','sidebars'));
+        return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars'));
         
         
         

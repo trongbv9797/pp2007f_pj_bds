@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@foreach ($products as $products)
+
 @section('title')
 {!! $products['title'] !!}
 @endsection
@@ -542,7 +542,6 @@
     </div>
 
 
-
             <!--end description-->
             <!--start product-area-->
             <!--end product area-->
@@ -1061,6 +1060,5 @@
         <div id="SiteRight" class="banner-right clearfix">
 
         </div>
-        
-@endforeach
+    
         @endsection

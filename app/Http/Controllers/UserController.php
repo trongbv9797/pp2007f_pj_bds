@@ -31,9 +31,7 @@ class UserController extends Controller
     }
 
     public function ajaxDistrict(Request $request) {
-        if($request->get('parent_code') == 0) {
-            echo view ('admin.user.districtajax');
-        }
+
         $districts = District::where('parent_code',$request->get('parent_code'))->get();
 
         echo view ('admin.user.districtajax',compact('districts'));

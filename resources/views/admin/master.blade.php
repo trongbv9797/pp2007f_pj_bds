@@ -432,7 +432,7 @@
                         </li>
 
                         @if (Auth::user()->inRole('admin'))
-                            <li class="nav-item dropdown open">
+                            <li class="nav-item dropdown ">
                                 <a class="dropdown-toggle" href="javascript:void(0);">
                                     <span class="icon-holder">
                                         <i class="mdi mdi-gauge"></i>

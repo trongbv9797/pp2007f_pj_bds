@@ -26,16 +26,22 @@ Route::get('/user/create','UserController@createUser')->name('createUser');
 
 Route::post('/user/create','UserController@storeUser')->name('storeUser');
 
-// Route::group(['middleware' => 'auth'], function(){
-    Route::prefix('/member')->group(function () {
-        Route::get('/index','UserController@indexMember')->name('memberIndex');
-        Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
-        Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
-        Route::get('/post','UserController@post')->name('memberPost');
-        Route::post('/post','PostController@store')->name('memberStore');
+Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
+Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 
-    });
-// });
+
+Route::prefix('/member')->group(function () {
+    Route::get('/index','UserController@indexMember')->name('memberIndex');
+    Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
+    Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
+    Route::get('/post','UserController@post')->name('memberPost')->middleware('can:products.create');
+    Route::post('/post','PostController@store')->name('memberStore')->middleware('can:products.create');
+
+    Route::get('/edit-post{id}', 'PostController@editPost')->name('memberEditPost')->middleware('can:products.update, products');
+    Route::post('/edit-post{id}', 'PostController@updatePost')->name('memberUpdatePost')->middleware('can:products.update');
+
+});
+
 
 // check post
 Route::get('/post', 'PostController@post');
@@ -122,11 +128,10 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
         });
     // admin
     // User - CRUD
-        Route::get('/user','UserController@index')->name('adminIndex');
-        Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
-        Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
-        Route::get('/user/create','UserController@create')->name('createUser');
-        Route::post('/user/create','UserController@store')->name('storeUser');
+        Route::get('/user','UserController@index')->name('userIndex');
+
+        Route::get('/user/create','UserController@create')->name('adminCreateUser');
+        Route::post('/user/create','UserController@store')->name('adminStoreUser');
         Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
         Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
         Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');

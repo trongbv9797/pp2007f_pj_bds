@@ -68,8 +68,14 @@
                         <td>{{ $post->created_at }}</td>
                         <td> {{ $post->views }}</td>
                         <td class="text-center font-size-18">
+                        @if (Auth::user()->inRole('admin'))
                         <a href="{!! Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
                         <a href="javascript:;" class="btn btn-danger delete" post_id="{!! $post->id !!}">Delete</a>
+                        @else
+                        <a href="{!! Route('memberEditPost', $post->id) !!}" class="btn btn-info">Edit</a>
+                        <a href="javascript:;" class="btn btn-danger delete" post_id="{!! $post->id !!}">Delete</a>
+                        @endif
+                        
                         </td>
                     </tr>
                     @endforeach

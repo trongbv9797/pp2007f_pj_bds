@@ -3,8 +3,8 @@
 @section('title', 'Kênh thông tin bất động sản - Mua bán nhà đất số 1 Việt Nam')
 
 @section('style-libraries')
-    <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.home.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/filestatic.msvbds.home.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/box.css">
 @endsection
 
 
@@ -30,10 +30,10 @@
                                         <div id="divCatagoryReOptions" class="advance-select-options">
                                             <ul>
                                                 <li vl="0"><span>Tất cả nhà đất</span></li>
-                                                <li vl="324"><span><img src="./assets/image/chungcu.png">Căn hộ chung
+                                                <li vl="324"><span><img src="/assets/image/chungcu.png">Căn hộ chung
                                                         cư</span>
                                                 </li>
-                                                <li vl="362"><span><img src="./assets/image/nhaban.png">Các loại nhà
+                                                <li vl="362"><span><img src="/assets/image/nhaban.png">Các loại nhà
                                                         bán</span>
                                                     <ul style="min-width: 210px !important;">
                                                         <li vl="41"><span>Nhà riêng</span></li>
@@ -41,20 +41,20 @@
                                                         <li vl="163"><span>Nhà mặt phố</span></li>
                                                     </ul>
                                                 </li>
-                                                <li vl="361"><span><img src="./assets/image/datban.png">Các loại đất
+                                                <li vl="361"><span><img src="/assets/image/datban.png">Các loại đất
                                                         bán</span>
                                                     <ul style="min-width: 210px !important;">
                                                         <li vl="40"><span>Đất nền dự án</span></li>
                                                         <li vl="283"><span>Bán đất</span></li>
                                                     </ul>
                                                 </li>
-                                                <li vl="44"><span><img src="./assets/image/trangtrai.png">Trang trại, khu
+                                                <li vl="44"><span><img src="/assets/image/trangtrai.png">Trang trại, khu
                                                         nghỉ
                                                         dưỡng</span></li>
-                                                <li vl="45"><span><img src="./assets/image/khonhaxuong.png">Kho, nhà
+                                                <li vl="45"><span><img src="/assets/image/khonhaxuong.png">Kho, nhà
                                                         xưởng</span>
                                                 </li>
-                                                <li vl="48"><span><img src="./assets/image/bdskhac.png">Bất động sản
+                                                <li vl="48"><span><img src="/assets/image/bdskhac.png">Bất động sản
                                                         khác</span>
                                                 </li>
                                             </ul>
@@ -273,11 +273,11 @@
                                     </div>
                                     <div class="search-action search-action1">
                                         <a href="javascript:void(0)" class="m-r-10 filter-more">
-                                            <img src="./assets/image/icon-down-arrow.png">
+                                            <img src="/assets/image/icon-down-arrow.png">
                                             Thêm
                                         </a>
                                         <a href="javascript:void(0)" class="action-reset-search-form">
-                                            <img src="./assets/image/search-reset.png">
+                                            <img src="/assets/image/search-reset.png">
                                             Xóa
                                         </a>
                                     </div>
@@ -357,10 +357,10 @@
                                     </div>
                                     <div class="search-action search-action2">
                                         <a href="javascript:void(0)" class="filter-less">
-                                            <img src="./assets/image/up-arrow.png"> Thu gọn
+                                            <img src="/assets/image/up-arrow.png"> Thu gọn
                                         </a>
                                         <a href="javascript:void(0)" class="action-reset-search-form">
-                                            <img src="./assets/image/search-reset.png"> Xóa
+                                            <img src="/assets/image/search-reset.png"> Xóa
                                         </a>
                                     </div>
                                     <div class="clear"></div>
@@ -460,7 +460,7 @@
                         </li>
                     </ul>
                     <a href="{{ Route('tintucbds') }}" id="tabview" class="home-small-more">Xem thêm tin tức<img
-                            src="./assets/image/icon-arrow-right.png"></a>
+                            src="/assets/image/icon-arrow-right.png"></a>
                     <div class="clear"></div>
                 </div>
                 <div id="news-slide">
@@ -479,7 +479,7 @@
                                         </a>
                                     </h3>
                                     <div class="news-time">
-                                        <img src="./assets/image/clock.png">4 giờ trước
+                                        <img src="/assets/image/clock.png">4 giờ trước
                                     </div>
                                 </div>
                             @endforeach
@@ -519,7 +519,7 @@
                                         </a>
                                     </h3>
                                     <div class="news-time">
-                                        <img src="./assets/image/clock.png">4 giờ trước
+                                        <img src="/assets/image/clock.png">4 giờ trước
                                     </div>
                                 </div>
                             @endforeach
@@ -561,7 +561,7 @@
                             src="https://file4.batdongsan.com.vn/Banners/PhuongNTM/Vres2020/250x250/20191217-1535/index.html"
                             altsrc="https://file4.batdongsan.com.vn/2020/01/03/yl6ZFYiO/20200103094219-bb66.jpg"
                             link="https://vres.batdongsan.com.vn/" bid="9921" tip="" tp="8" w="250" h="250" isbg="false"
-                            clr="false" k=""><iframe src="./assets/image/index_006.html" id="fr9921" scrolling="no"
+                            clr="false" k=""><iframe src="/assets/image/index_006.html" id="fr9921" scrolling="no"
                                 style="overflow:hidden" width="100%" height="250px" frameborder="0"></iframe></div>
                         <div class="adshareditem aditem" time="15" style="display: block;"
                             src="https://file4.batdongsan.com.vn/2020/11/02/UVSXfqBy/20201102141649-f304.jpg"
@@ -569,7 +569,7 @@
                             link="http://experttalk.batdongsan.com.vn/khac/adapt-2-change-3-giu-lua-kinh-doanh-vuot-qua-covid-ev134?utm_source=BDS&amp;utm_medium=banner&amp;utm_campaign=A2C%233"
                             bid="11035" tip="" tp="7" w="250" h="250" isbg="false" clr="false" k=""><a
                                 href="https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11035"
-                                target="_blank" title="" rel="nofollow"><img src="./assets/image/20201102141649-f304.jpg"
+                                target="_blank" title="" rel="nofollow"><img src="/assets/image/20201102141649-f304.jpg"
                                     style="max-width: 100%; height:250px;" class="banner-img"></a></div>
                     </div>
                     <div class="adshared" rt="">
@@ -578,13 +578,13 @@
                             altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="" bid="11056" tip="" tp="7"
                             w="250" h="250" isbg="false" clr="false" k=""><a
                                 href="https://batdongsan.com.vn/microservice-architecture-router/Systems/Banner/Click?bannerid=11056"
-                                target="_blank" title="" rel="nofollow"><img src="./assets/image/20201104083546-b8ec.jpg"
+                                target="_blank" title="" rel="nofollow"><img src="/assets/image/20201104083546-b8ec.jpg"
                                     style="max-width: 100%; height:250px;" class="banner-img"></a></div>
                         <div class="adshareditem aditem" time="15" style="display: block;"
                             src="https://file4.batdongsan.com.vn/Banners/PhuongNTM/PhuongNTM/250x250/20201106-1148/index.html"
                             altsrc="https://file4.batdongsan.com.vn/2020/11/09/UVSXfqBy/20201109082857-3c0c.jpg"
                             link="https://batdongsan.com.vn/brc/trieu-lua-chon-nha" bid="11084" tip="" tp="8" w="250"
-                            h="250" isbg="false" clr="false" k=""><iframe src="./assets/image/index_007.html" id="fr11084"
+                            h="250" isbg="false" clr="false" k=""><iframe src="/assets/image/index_007.html" id="fr11084"
                                 scrolling="no" style="overflow:hidden" width="100%" height="250px" frameborder="0"></iframe>
                         </div>
                     </div>
@@ -615,7 +615,7 @@
                     <a href="{{ Route('nha_dat_cho_thue') }}">Tin nhà đất cho thuê mới nhất</a>
                 </div>
                 <div class="clear"></div>
-                <link rel="stylesheet" href="./assets/image/microtip.css">
+                <link rel="stylesheet" href="/assets/image/microtip.css">
                 <ul>
                     @foreach ($products as $product)
 
@@ -682,7 +682,7 @@
                 <div id="ucHomeProductInterest_pnlViewMore">
                     <div class="home-viewmore">
                         <a href="javascript:void(0)" id="prd-viewmore">
-                            Mở rộng&nbsp;&nbsp;<img src="./assets/image/icon-down-blue.png">
+                            Mở rộng&nbsp;&nbsp;<img src="/assets/image/icon-down-blue.png">
                         </a>
                         <a href="https://batdongsan.com.vn/ban-nha-rieng-duong-quang-trung-phuong-11-8" id="prd-viewless"
                             class="hidden">
@@ -714,16 +714,16 @@
                         <div class="place-img slick-initialized slick-slider">
                             <div aria-live="polite" class="slick-list draggable">
                                 <div class="slick-track" style="opacity: 1; width: 1680px;" role="listbox"><img
-                                        src="./assets/image/HCM-web-1.jpg" is-lazy-image="true" lazy-id="6"
+                                        src="/assets/image/HCM-web-1.jpg" is-lazy-image="true" lazy-id="6"
                                         class="slick-slide slick-current slick-active" data-slick-index="0"
                                         aria-hidden="false"
                                         style="width: 560px; position: relative; left: 0px; top: 0px; z-index: 1000; opacity: 1; transition: opacity 500ms ease 0s;"
                                         tabindex="-1" role="option" aria-describedby="slick-slide00"><img
-                                        src="./assets/image/HCM-web-2.jpg" is-lazy-image="true" lazy-id="7"
+                                        src="/assets/image/HCM-web-2.jpg" is-lazy-image="true" lazy-id="7"
                                         class="slick-slide" data-slick-index="1" aria-hidden="true"
                                         style="width: 560px; position: relative; left: -560px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                         tabindex="-1" role="option" aria-describedby="slick-slide01"><img
-                                        src="./assets/image/HCM-web-3.jpg" is-lazy-image="true" lazy-id="8"
+                                        src="/assets/image/HCM-web-3.jpg" is-lazy-image="true" lazy-id="8"
                                         class="slick-slide" data-slick-index="2" aria-hidden="true"
                                         style="width: 560px; position: relative; left: -1120px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                         tabindex="-1" role="option" aria-describedby="slick-slide02"></div>
@@ -746,15 +746,15 @@
                             <div class="place-img slick-initialized slick-slider">
                                 <div aria-live="polite" class="slick-list draggable">
                                     <div class="slick-track" style="opacity: 1; width: 810px;" role="listbox"><img
-                                            src="./assets/image/HN-web-1.jpg" is-lazy-image="true" lazy-id="9"
+                                            src="/assets/image/HN-web-1.jpg" is-lazy-image="true" lazy-id="9"
                                             class="slick-slide" data-slick-index="0" aria-hidden="true"
                                             style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide10"><img
-                                            src="./assets/image/HN-web-2.jpg" is-lazy-image="true" lazy-id="10"
+                                            src="/assets/image/HN-web-2.jpg" is-lazy-image="true" lazy-id="10"
                                             class="slick-slide" data-slick-index="1" aria-hidden="true"
                                             style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide11"><img
-                                            src="./assets/image/HN-web-3.jpg" is-lazy-image="true" lazy-id="11"
+                                            src="/assets/image/HN-web-3.jpg" is-lazy-image="true" lazy-id="11"
                                             class="slick-slide slick-current slick-active" data-slick-index="2"
                                             aria-hidden="false"
                                             style="width: 270px; position: relative; left: -540px; top: 0px; z-index: 999; opacity: 1;"
@@ -777,15 +777,15 @@
                             <div class="place-img slick-initialized slick-slider">
                                 <div aria-live="polite" class="slick-list draggable">
                                     <div class="slick-track" style="opacity: 1; width: 810px;" role="listbox"><img
-                                            src="./assets/image/DDN-web-1.jpg" is-lazy-image="true" lazy-id="12"
+                                            src="/assets/image/DDN-web-1.jpg" is-lazy-image="true" lazy-id="12"
                                             class="slick-slide" data-slick-index="0" aria-hidden="true"
                                             style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide20"><img
-                                            src="./assets/image/DDN-web-2.jpg" is-lazy-image="true" lazy-id="13"
+                                            src="/assets/image/DDN-web-2.jpg" is-lazy-image="true" lazy-id="13"
                                             class="slick-slide" data-slick-index="1" aria-hidden="true"
                                             style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide21"><img
-                                            src="./assets/image/DDN-web-3.jpg" is-lazy-image="true" lazy-id="14"
+                                            src="/assets/image/DDN-web-3.jpg" is-lazy-image="true" lazy-id="14"
                                             class="slick-slide slick-current slick-active" data-slick-index="2"
                                             aria-hidden="false"
                                             style="width: 270px; position: relative; left: -540px; top: 0px; z-index: 999; opacity: 1;"
@@ -808,13 +808,13 @@
                             <div class="place-img slick-initialized slick-slider">
                                 <div aria-live="polite" class="slick-list draggable">
                                     <div class="slick-track" style="opacity: 1; width: 540px;" role="listbox"><img
-                                            src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                            src="/assets/image/lazy-preview-image-DFE3E8.png"
                                             src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-1.jpg"
                                             is-lazy-image="true" lazy-id="15" class="slick-slide slick-current slick-active"
                                             data-slick-index="0" aria-hidden="false"
                                             style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide30"><img
-                                            src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                            src="/assets/image/lazy-preview-image-DFE3E8.png"
                                             src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/BD-web-2.jpg"
                                             is-lazy-image="true" lazy-id="16" class="slick-slide" data-slick-index="1"
                                             aria-hidden="true"
@@ -837,19 +837,19 @@
                             <div class="place-img slick-initialized slick-slider">
                                 <div aria-live="polite" class="slick-list draggable">
                                     <div class="slick-track" style="opacity: 1; width: 810px;" role="listbox"><img
-                                            src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                            src="/assets/image/lazy-preview-image-DFE3E8.png"
                                             src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-1.jpg"
                                             is-lazy-image="true" lazy-id="17" class="slick-slide" data-slick-index="0"
                                             aria-hidden="true"
                                             style="width: 270px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide40"><img
-                                            src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                            src="/assets/image/lazy-preview-image-DFE3E8.png"
                                             src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-2.jpg"
                                             is-lazy-image="true" lazy-id="18" class="slick-slide" data-slick-index="1"
                                             aria-hidden="true"
                                             style="width: 270px; position: relative; left: -270px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
                                             tabindex="-1" role="option" aria-describedby="slick-slide41"><img
-                                            src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                            src="/assets/image/lazy-preview-image-DFE3E8.png"
                                             src-lazy="https://file4.batdongsan.com.vn/images/newhome/cities1/DNA-web-3.jpg"
                                             is-lazy-image="true" lazy-id="19" class="slick-slide slick-current slick-active"
                                             data-slick-index="2" aria-hidden="false"
@@ -900,7 +900,7 @@
                 <h2 class="fl">Doanh nghiệp tiêu biểu</h2>
                 <div class="home-more-link">
                     <a href="https://batdongsan.com.vn/doanh-nghiep">Xem thêm&nbsp;&nbsp;<img
-                            src="./assets/image/icon-arrow-right.png"></a>
+                            src="/assets/image/icon-arrow-right.png"></a>
                 </div>
                 <div class="clear"></div>
                 <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
@@ -910,7 +910,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-12/cong-ty-co-phan-tap-doan-dia-oc-va-ep2773"
                                 title="CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỊA ỐC VẠN XUÂN">
                                 <img class="color_flip" alt="CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỊA ỐC VẠN XUÂN"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/04/06/PGsxuI1y/20200406083257-058a.jpg"
                                     is-lazy-image="true" lazy-id="36"> </a>
                         </li>
@@ -919,7 +919,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-2/cong-ty-tnhh-dau-tu-va-quan-ly-bat-dong-sa-ep2772"
                                 title="CÔNG TY TNHH ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN DTN">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN DTN"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/01/03/3ZsSL6gy/20200103145745-1450.jpg"
                                     is-lazy-image="true" lazy-id="37"> </a>
                         </li>
@@ -928,7 +928,7 @@
                             <a href="https://batdongsan.com.vn/thi-cong-xay-dung-thu-dau-mot-bd/cong-ty-cp-xay-dung-tu-van-dau-tu-binh-duon-ep75"
                                 title="Công ty CP Xây dựng Tư vấn Đầu tư Bình Dương (BICONSI)">
                                 <img class="color_flip" alt="Công ty CP Xây dựng Tư vấn Đầu tư Bình Dương (BICONSI)"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/05/27/hmcVYWuR/20200527142414-6a13.jpg"
                                     is-lazy-image="true" lazy-id="38"> </a>
                         </li>
@@ -936,7 +936,7 @@
                             data-swiper-slide-index="9" style="width: 165px; margin-right: 26px;">
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-7/novalan-ep480" title="Novaland Group">
                                 <img class="color_flip" alt="Novaland Group"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/07/21/n1AwoD7S/20200721151328-207e.jpg"
                                     is-lazy-image="true" lazy-id="39"> </a>
                         </li>
@@ -945,7 +945,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-rach-gia-kg/cong-ty-cpdt-phu-cuong-kie-ep2787"
                                 title="CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG">
                                 <img class="color_flip" alt="CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/04/22/PGsxuI1y/20200422111005-0350.jpg"
                                     is-lazy-image="true" lazy-id="40"> </a>
                         </li>
@@ -953,7 +953,7 @@
                             data-swiper-slide-index="11" style="width: 165px; margin-right: 26px;">
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-5/cong-ty-tnhh-tm-dv-nha-ta-ep2777"
                                 title="CÔNG TY TNHH TM &amp; DV NHÀ TÂN PHÁT">
-                                <img class="color_flip" src="./assets/image/20200110153537-ce21.jpg"
+                                <img class="color_flip" src="/assets/image/20200110153537-ce21.jpg"
                                     alt="CÔNG TY TNHH TM &amp; DV NHÀ TÂN PHÁT">
                             </a>
                         </li>
@@ -961,7 +961,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-1/cong-ty-tnhh-dau-tu-dia-oc-thanh-ph-ep1898"
                                 title="Công ty TNHH Đầu tư Địa ốc Thành phố (CityLand)">
                                 <img class="color_flip" alt="Công ty TNHH Đầu tư Địa ốc Thành phố (CityLand)"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/10/16/hmcVYWuR/20201016153855-fa63.jpg"
                                     is-lazy-image="true" lazy-id="30"> </a>
                         </li>
@@ -969,7 +969,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-1/cong-ty-cp-tap-doan-dau-tu-chau-a-thai-bin-ep2818"
                                 title="Công ty CP Tập Đoàn Đầu Tư Châu Á Thái Bình Dương">
                                 <img class="color_flip" alt="Công ty CP Tập Đoàn Đầu Tư Châu Á Thái Bình Dương"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/10/05/hmcVYWuR/20201005135528-83f1.jpg"
                                     is-lazy-image="true" lazy-id="31"> </a>
                         </li>
@@ -977,7 +977,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-ben-cat-bd/cong-ty-tnhh-dau-tu-xay-dung-dich-vu-hoang-th-ep2813"
                                 title="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG DỊCH VỤ HOÀNG THỔ GROUP">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG DỊCH VỤ HOÀNG THỔ GROUP"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/09/28/PGsxuI1y/20200928152939-aa13.jpg"
                                     is-lazy-image="true" lazy-id="32"> </a>
                         </li>
@@ -985,7 +985,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-2/cong-ty-tnhh-dau-tu-dich-vu-bat-dong-san-16-ep2807"
                                 title="CÔNG TY TNHH ĐẦU TƯ DỊCH VỤ BẤT ĐỘNG SẢN 168 PROPERTY">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ DỊCH VỤ BẤT ĐỘNG SẢN 168 PROPERTY"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/09/15/PGsxuI1y/20200915154813-0430.jpg"
                                     is-lazy-image="true" lazy-id="33"> </a>
                         </li>
@@ -994,7 +994,7 @@
                                 title="CÔNG TY CP TƯ VẤN ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN SAIGON CENTER REAL">
                                 <img class="color_flip"
                                     alt="CÔNG TY CP TƯ VẤN ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN SAIGON CENTER REAL"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/01/09/PGsxuI1y/20200109093229-ce7d.jpg"
                                     is-lazy-image="true" lazy-id="34"> </a>
                         </li>
@@ -1002,7 +1002,7 @@
                             <a href="https://batdongsan.com.vn/thi-cong-xay-dung-ba-dinh/hd-mo-ep2132"
                                 title="HD Mon Holdings">
                                 <img class="color_flip" alt="HD Mon Holdings"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2016/12/17/Nl3mS01v/20161217085942-2e1c.jpg"
                                     is-lazy-image="true" lazy-id="35"> </a>
                         </li>
@@ -1010,7 +1010,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-12/cong-ty-co-phan-tap-doan-dia-oc-va-ep2773"
                                 title="CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỊA ỐC VẠN XUÂN">
                                 <img class="color_flip" alt="CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỊA ỐC VẠN XUÂN"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/04/06/PGsxuI1y/20200406083257-058a.jpg"
                                     is-lazy-image="true" lazy-id="63"> </a>
                         </li>
@@ -1018,7 +1018,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-2/cong-ty-tnhh-dau-tu-va-quan-ly-bat-dong-sa-ep2772"
                                 title="CÔNG TY TNHH ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN DTN">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN DTN"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/01/03/3ZsSL6gy/20200103145745-1450.jpg"
                                     is-lazy-image="true" lazy-id="64"> </a>
                         </li>
@@ -1026,7 +1026,7 @@
                             <a href="https://batdongsan.com.vn/thi-cong-xay-dung-thu-dau-mot-bd/cong-ty-cp-xay-dung-tu-van-dau-tu-binh-duon-ep75"
                                 title="Công ty CP Xây dựng Tư vấn Đầu tư Bình Dương (BICONSI)">
                                 <img class="color_flip" alt="Công ty CP Xây dựng Tư vấn Đầu tư Bình Dương (BICONSI)"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/05/27/hmcVYWuR/20200527142414-6a13.jpg"
                                     is-lazy-image="true" lazy-id="65"> </a>
                         </li>
@@ -1034,7 +1034,7 @@
                             style="width: 165px; margin-right: 26px;">
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-7/novalan-ep480" title="Novaland Group">
                                 <img class="color_flip" alt="Novaland Group"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/07/21/n1AwoD7S/20200721151328-207e.jpg"
                                     is-lazy-image="true" lazy-id="66"> </a>
                         </li>
@@ -1043,7 +1043,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-rach-gia-kg/cong-ty-cpdt-phu-cuong-kie-ep2787"
                                 title="CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG">
                                 <img class="color_flip" alt="CÔNG TY CPĐT PHÚ CƯỜNG KIÊN GIANG"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/04/22/PGsxuI1y/20200422111005-0350.jpg"
                                     is-lazy-image="true" lazy-id="67"> </a>
                         </li>
@@ -1051,7 +1051,7 @@
                             style="width: 165px; margin-right: 26px;">
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-5/cong-ty-tnhh-tm-dv-nha-ta-ep2777"
                                 title="CÔNG TY TNHH TM &amp; DV NHÀ TÂN PHÁT">
-                                <img class="color_flip" src="./assets/image/20200110153537-ce21.jpg"
+                                <img class="color_flip" src="/assets/image/20200110153537-ce21.jpg"
                                     alt="CÔNG TY TNHH TM &amp; DV NHÀ TÂN PHÁT">
                             </a>
                         </li>
@@ -1060,7 +1060,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-1/cong-ty-tnhh-dau-tu-dia-oc-thanh-ph-ep1898"
                                 title="Công ty TNHH Đầu tư Địa ốc Thành phố (CityLand)">
                                 <img class="color_flip" alt="Công ty TNHH Đầu tư Địa ốc Thành phố (CityLand)"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/10/16/hmcVYWuR/20201016153855-fa63.jpg"
                                     is-lazy-image="true" lazy-id="68"> </a>
                         </li>
@@ -1069,7 +1069,7 @@
                             <a href="https://batdongsan.com.vn/dau-tu-du-an-quan-1/cong-ty-cp-tap-doan-dau-tu-chau-a-thai-bin-ep2818"
                                 title="Công ty CP Tập Đoàn Đầu Tư Châu Á Thái Bình Dương">
                                 <img class="color_flip" alt="Công ty CP Tập Đoàn Đầu Tư Châu Á Thái Bình Dương"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/10/05/hmcVYWuR/20201005135528-83f1.jpg"
                                     is-lazy-image="true" lazy-id="69"> </a>
                         </li>
@@ -1078,7 +1078,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-ben-cat-bd/cong-ty-tnhh-dau-tu-xay-dung-dich-vu-hoang-th-ep2813"
                                 title="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG DỊCH VỤ HOÀNG THỔ GROUP">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG DỊCH VỤ HOÀNG THỔ GROUP"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/09/28/PGsxuI1y/20200928152939-aa13.jpg"
                                     is-lazy-image="true" lazy-id="70"> </a>
                         </li>
@@ -1087,7 +1087,7 @@
                             <a href="https://batdongsan.com.vn/tu-van-moi-gioi-bat-dong-san-quan-2/cong-ty-tnhh-dau-tu-dich-vu-bat-dong-san-16-ep2807"
                                 title="CÔNG TY TNHH ĐẦU TƯ DỊCH VỤ BẤT ĐỘNG SẢN 168 PROPERTY">
                                 <img class="color_flip" alt="CÔNG TY TNHH ĐẦU TƯ DỊCH VỤ BẤT ĐỘNG SẢN 168 PROPERTY"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/09/15/PGsxuI1y/20200915154813-0430.jpg"
                                     is-lazy-image="true" lazy-id="71"> </a>
                         </li>
@@ -1097,7 +1097,7 @@
                                 title="CÔNG TY CP TƯ VẤN ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN SAIGON CENTER REAL">
                                 <img class="color_flip"
                                     alt="CÔNG TY CP TƯ VẤN ĐẦU TƯ VÀ QUẢN LÝ BẤT ĐỘNG SẢN SAIGON CENTER REAL"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2020/01/09/PGsxuI1y/20200109093229-ce7d.jpg"
                                     is-lazy-image="true" lazy-id="72"> </a>
                         </li>
@@ -1106,7 +1106,7 @@
                             <a href="https://batdongsan.com.vn/thi-cong-xay-dung-ba-dinh/hd-mo-ep2132"
                                 title="HD Mon Holdings">
                                 <img class="color_flip" alt="HD Mon Holdings"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/2016/12/17/Nl3mS01v/20161217085942-2e1c.jpg"
                                     is-lazy-image="true" lazy-id="73"> </a>
                         </li>
@@ -1137,13 +1137,13 @@
                             <div class="home-social-img">
                                 <a href="https://dantri.com.vn/bat-dong-san/gia-condotel-lao-doc-20191212143023187.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-03_DanTri_CondotelLaoDoc.jpg"
                                         is-lazy-image="true" lazy-id="49"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_DanTri.png"
                                     is-lazy-image="true" lazy-id="50"> <a
                                     href="https://dantri.com.vn/bat-dong-san/gia-condotel-lao-doc-20191212143023187.htm"
@@ -1157,13 +1157,13 @@
                             <div class="home-social-img">
                                 <a href="https://vietnammoi.vn/ha-noi-gia-nha-tai-quan-dong-da-co-luc-len-toi-290-trieu-dong-moi-m2-20191015093243315.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-08_VietnamMoi.jpg"
                                         is-lazy-image="true" lazy-id="51"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_VietnamMoi.png"
                                     is-lazy-image="true" lazy-id="52"> <a
                                     href="https://vietnammoi.vn/ha-noi-gia-nha-tai-quan-dong-da-co-luc-len-toi-290-trieu-dong-moi-m2-20191015093243315.htm"
@@ -1177,13 +1177,13 @@
                             <div class="home-social-img">
                                 <a href="https://dantri.com.vn/bat-dong-san/batdongsancomvn-cong-bo-giao-dien-trang-chu-moi-20200110003608422.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/01/10/yl6ZFYiO/20200110174136-6f7e.jpg"
                                         is-lazy-image="true" lazy-id="53"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_DanTri.png"
                                     is-lazy-image="true" lazy-id="54"> <a
                                     href="https://dantri.com.vn/bat-dong-san/batdongsancomvn-cong-bo-giao-dien-trang-chu-moi-20200110003608422.htm"
@@ -1197,11 +1197,11 @@
                             <div class="home-social-img">
                                 <a href="https://baoxaydung.com.vn/dat-nen-van-la-kenh-dau-tu-hap-dan-trong-tuong-lai-269183.html"
                                     target="_blank'" rel="nofollow">
-                                    <img style="max-height: 173px" src="./assets/image/B-02_BaoXayDung.jpg">
+                                    <img style="max-height: 173px" src="/assets/image/B-02_BaoXayDung.jpg">
                                 </a>
                             </div>
                             <div class="home-social-link">
-                                <img style="max-height: 40px; max-width: 40px" src="./assets/image/icon_BaoXayDung.png">
+                                <img style="max-height: 40px; max-width: 40px" src="/assets/image/icon_BaoXayDung.png">
                                 <a href="https://baoxaydung.com.vn/dat-nen-van-la-kenh-dau-tu-hap-dan-trong-tuong-lai-269183.html"
                                     target="_blank'" rel="nofollow">
                                     Batdongsan.com.vn tổ chức Hội nghị bất động sản Việt nam 2019
@@ -1213,13 +1213,13 @@
                             <div class="home-social-img">
                                 <a href="http://cafef.vn/batdongsancomvn-chinh-thuc-thay-giao-dien-trang-chu-moi-20200110115000392.chn"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/01/10/yl6ZFYiO/20200110174140-b87a.jpg"
                                         is-lazy-image="true" lazy-id="41"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_CafeF.png"
                                     is-lazy-image="true" lazy-id="42"> <a
                                     href="http://cafef.vn/batdongsancomvn-chinh-thuc-thay-giao-dien-trang-chu-moi-20200110115000392.chn"
@@ -1233,13 +1233,13 @@
                             <div class="home-social-img">
                                 <a href="https://nhadat.tuoitre.vn/quy-mo-thi-truong-bat-dong-san-viet-nam-van-con-nho-so-voi-tiem-nang-20190702160134482.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-06_TuoiTre.jpg"
                                         is-lazy-image="true" lazy-id="43"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_TuoiTre.png"
                                     is-lazy-image="true" lazy-id="44"> <a
                                     href="https://nhadat.tuoitre.vn/quy-mo-thi-truong-bat-dong-san-viet-nam-van-con-nho-so-voi-tiem-nang-20190702160134482.htm"
@@ -1252,13 +1252,13 @@
                             <div class="home-social-img">
                                 <a href="http://cafef.vn/3-diem-nghen-cua-nen-kinh-te-va-tac-dong-den-thi-truong-bds-nam-2020-20191126173124409.chn"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-04_CafeF.jpg"
                                         is-lazy-image="true" lazy-id="45"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_CafeF.png"
                                     is-lazy-image="true" lazy-id="46"> <a
                                     href="http://cafef.vn/3-diem-nghen-cua-nen-kinh-te-va-tac-dong-den-thi-truong-bds-nam-2020-20191126173124409.chn"
@@ -1271,13 +1271,13 @@
                             <div class="home-social-img">
                                 <a href="https://thoibaonganhang.vn/vres-2019-noi-hoi-tu-cua-chuyen-gia-va-doanh-nghiep-bat-dong-san-hang-dau-95645.html"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-01_ThoiBaoNganHang.jpg"
                                         is-lazy-image="true" lazy-id="47"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_ThoiBaoNganHang.png"
                                     is-lazy-image="true" lazy-id="48"> <a
                                     href="https://thoibaonganhang.vn/vres-2019-noi-hoi-tu-cua-chuyen-gia-va-doanh-nghiep-bat-dong-san-hang-dau-95645.html"
@@ -1290,13 +1290,13 @@
                             <div class="home-social-img">
                                 <a href="https://dantri.com.vn/bat-dong-san/gia-condotel-lao-doc-20191212143023187.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-03_DanTri_CondotelLaoDoc.jpg"
                                         is-lazy-image="true" lazy-id="74"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_DanTri.png"
                                     is-lazy-image="true" lazy-id="75"> <a
                                     href="https://dantri.com.vn/bat-dong-san/gia-condotel-lao-doc-20191212143023187.htm"
@@ -1309,13 +1309,13 @@
                             <div class="home-social-img">
                                 <a href="https://vietnammoi.vn/ha-noi-gia-nha-tai-quan-dong-da-co-luc-len-toi-290-trieu-dong-moi-m2-20191015093243315.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-08_VietnamMoi.jpg"
                                         is-lazy-image="true" lazy-id="76"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_VietnamMoi.png"
                                     is-lazy-image="true" lazy-id="77"> <a
                                     href="https://vietnammoi.vn/ha-noi-gia-nha-tai-quan-dong-da-co-luc-len-toi-290-trieu-dong-moi-m2-20191015093243315.htm"
@@ -1328,13 +1328,13 @@
                             <div class="home-social-img">
                                 <a href="https://dantri.com.vn/bat-dong-san/batdongsancomvn-cong-bo-giao-dien-trang-chu-moi-20200110003608422.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/01/10/yl6ZFYiO/20200110174136-6f7e.jpg"
                                         is-lazy-image="true" lazy-id="78"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_DanTri.png"
                                     is-lazy-image="true" lazy-id="79"> <a
                                     href="https://dantri.com.vn/bat-dong-san/batdongsancomvn-cong-bo-giao-dien-trang-chu-moi-20200110003608422.htm"
@@ -1348,11 +1348,11 @@
                             <div class="home-social-img">
                                 <a href="https://baoxaydung.com.vn/dat-nen-van-la-kenh-dau-tu-hap-dan-trong-tuong-lai-269183.html"
                                     target="_blank'" rel="nofollow">
-                                    <img style="max-height: 173px" src="./assets/image/B-02_BaoXayDung.jpg">
+                                    <img style="max-height: 173px" src="/assets/image/B-02_BaoXayDung.jpg">
                                 </a>
                             </div>
                             <div class="home-social-link">
-                                <img style="max-height: 40px; max-width: 40px" src="./assets/image/icon_BaoXayDung.png">
+                                <img style="max-height: 40px; max-width: 40px" src="/assets/image/icon_BaoXayDung.png">
                                 <a href="https://baoxaydung.com.vn/dat-nen-van-la-kenh-dau-tu-hap-dan-trong-tuong-lai-269183.html"
                                     target="_blank'" rel="nofollow">
                                     Batdongsan.com.vn tổ chức Hội nghị bất động sản Việt nam 2019
@@ -1364,13 +1364,13 @@
                             <div class="home-social-img">
                                 <a href="http://cafef.vn/batdongsancomvn-chinh-thuc-thay-giao-dien-trang-chu-moi-20200110115000392.chn"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/crop/350x232/2020/01/10/yl6ZFYiO/20200110174140-b87a.jpg"
                                         is-lazy-image="true" lazy-id="80"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_CafeF.png"
                                     is-lazy-image="true" lazy-id="81"> <a
                                     href="http://cafef.vn/batdongsancomvn-chinh-thuc-thay-giao-dien-trang-chu-moi-20200110115000392.chn"
@@ -1384,13 +1384,13 @@
                             <div class="home-social-img">
                                 <a href="https://nhadat.tuoitre.vn/quy-mo-thi-truong-bat-dong-san-viet-nam-van-con-nho-so-voi-tiem-nang-20190702160134482.htm"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-06_TuoiTre.jpg"
                                         is-lazy-image="true" lazy-id="82"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/Icon_TuoiTre.png"
                                     is-lazy-image="true" lazy-id="83"> <a
                                     href="https://nhadat.tuoitre.vn/quy-mo-thi-truong-bat-dong-san-viet-nam-van-con-nho-so-voi-tiem-nang-20190702160134482.htm"
@@ -1404,13 +1404,13 @@
                             <div class="home-social-img">
                                 <a href="http://cafef.vn/3-diem-nghen-cua-nen-kinh-te-va-tac-dong-den-thi-truong-bds-nam-2020-20191126173124409.chn"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-04_CafeF.jpg"
                                         is-lazy-image="true" lazy-id="84"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_CafeF.png"
                                     is-lazy-image="true" lazy-id="85"> <a
                                     href="http://cafef.vn/3-diem-nghen-cua-nen-kinh-te-va-tac-dong-den-thi-truong-bds-nam-2020-20191126173124409.chn"
@@ -1424,13 +1424,13 @@
                             <div class="home-social-img">
                                 <a href="https://thoibaonganhang.vn/vres-2019-noi-hoi-tu-cua-chuyen-gia-va-doanh-nghiep-bat-dong-san-hang-dau-95645.html"
                                     target="_blank'" rel="nofollow">
-                                    <img src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    <img src="/assets/image/lazy-preview-image-DFE3E8.png"
                                         src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/B-01_ThoiBaoNganHang.jpg"
                                         is-lazy-image="true" lazy-id="86"> </a>
                             </div>
                             <div class="home-social-link">
                                 <img style="max-height: 40px; max-width: 40px"
-                                    src="./assets/image/lazy-preview-image-DFE3E8.png"
+                                    src="/assets/image/lazy-preview-image-DFE3E8.png"
                                     src-lazy="https://file4.batdongsan.com.vn/images/newhome/bao3/icon_ThoiBaoNganHang.png"
                                     is-lazy-image="true" lazy-id="87"> <a
                                     href="https://thoibaonganhang.vn/vres-2019-noi-hoi-tu-cua-chuyen-gia-va-doanh-nghiep-bat-dong-san-hang-dau-95645.html"

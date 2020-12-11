@@ -3,7 +3,7 @@
 @section('title', 'Mua Bán Nhà Đất Việt Nam Giá Rẻ, Mới Nhất 2020')
 
 @section('styles')
-<link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
+<link rel="stylesheet" href="/assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 <body class="bg-site">
     
 <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
-    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
+    <div class="search-bar shadow-lv-1 clearfix"><div class="search-guide" style="left: 985.083px; top: 64px; display: block;"><div class="icon-guide"><img src="/assets/image/ic_triangle.svg"></div>
 	    </div>
         <ul class="search-bar-tab mar-left-16 pad-top-8 mar-right-16">
             <li class="actived" ptype="38">Bán</li>
@@ -24,7 +24,7 @@
             <input id="Keyword" name="Keyword" type="hidden" value="">
             <input type="text" placeholder="Tìm kiếm địa điểm, khu vực" class="search-bar-input ui-autocomplete-input" id="search-suggestion" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
             <span class="icon-close hiding">
-                <img src="./assets/image/ic_close.png">
+                <img src="/assets/image/ic_close.png">
             </span>
         </div>
         <div id="divCategoryRe" class="select-control select-cate">
@@ -80,7 +80,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="price-slider-range slider-range">
                         <input id="txtPriceMinValue" name="MinPrice" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtPriceMaxValue" name="MaxPrice" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="price-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -103,7 +103,7 @@
                 <div class="pad-bot-40 pad-top-8">
                     <div class="area-slider-range slider-range">
                         <input id="txtAreaMinValue" name="MinArea" placeholder="Từ" class="min-value" maxlength="6" numbersonly="true" decimal="true" type="text">
-                        <span><img src="./assets/image/ic_arrow_left.png"></span>
+                        <span><img src="/assets/image/ic_arrow_left.png"></span>
                         <input id="txtAreaMaxValue" name="MaxArea" placeholder="Đến" class="max-value" maxlength="6" numbersonly="true" decimal="true" type="text">
                         <div class="clearfix pad-bot-16"></div>
                         <div id="area-slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
@@ -143,7 +143,7 @@
         </div>
         <div class="select-control filter-control">
             <div class="select-control-label" aria-label="Tìm kiếm nâng cao" data-microtip-position="top" role="tooltip">
-                Lọc thêm<span class="filter-info"><img src="./assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
+                Lọc thêm<span class="filter-info"><img src="/assets/image/ic_filter.svg" class="icon-filter"><span class="icon-number" style="display: none;"></span></span>
             </div>
             <input type="hidden" id="hdbFilter" value="0">
             <div class="select-filter-dropbox custom-dropbox advance-select-options hiding" style="display: none; height: 516px;">
@@ -232,7 +232,7 @@
 
 
         <input type="button" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
-        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
+        <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="/assets/image/ic_reset.svg"></div>
     </div>
 </form>
 <script type="text/javascript">
@@ -288,11 +288,11 @@
 </script>
 
         <div class="popupMarking  save" style="display: none">
-            <img src="./assets/image/ic_unsave.svg">
+            <img src="/assets/image/ic_unsave.svg">
             <span> Lưu tin thành công</span>
         </div>
         <div class="popupMarking  unsave" style="display: none">
-            <img src="./assets/image/ic_save.svg">
+            <img src="/assets/image/ic_save.svg">
             <span> Đã bỏ lưu tin</span>
         </div>
 
@@ -412,7 +412,7 @@
 <a pid="3" class="" href="https://batdongsan.com.vn/nha-dat-ban/p3">3</a>
 <a pid="4" class="" href="https://batdongsan.com.vn/nha-dat-ban/p4">4</a>
 <a pid="5" class="" href="https://batdongsan.com.vn/nha-dat-ban/p5">5</a>
-<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="./assets/image/ic_double_caret_right.png"></a>
+<a pid="9169" href="https://batdongsan.com.vn/nha-dat-ban/p9169"><img src="/assets/image/ic_double_caret_right.png"></a>
 </div>
 
         </div>
@@ -489,7 +489,7 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>
@@ -515,7 +515,7 @@ dịch vụ của <strong>Batdongsan.com.vn</strong>!</div>
             <div class="box-view-more ">
                 <a href="javascript:void(0);" class="box-product-right-viewmore">
                     <div class="gradient">&nbsp;</div>
-                    <div class="view-more">Xem thêm<img src="./assets/image/ic_caret_down.svg"></div>
+                    <div class="view-more">Xem thêm<img src="/assets/image/ic_caret_down.svg"></div>
                 </a>
             </div>
         </div>

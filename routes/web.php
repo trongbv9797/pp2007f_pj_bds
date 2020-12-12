@@ -33,12 +33,13 @@ Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 Route::prefix('/member')->group(function () {
     Route::get('/index','UserController@indexMember')->name('memberIndex');
     Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
+    Route::get('/post/schedule', 'PostController@schedulePost')->name('schedulePost');
+    Route::get('/post/scheduleAjax', 'PostController@scheduleAjax')->name('scheduleAjaxPost');
+
     Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
     Route::get('/post','UserController@post')->name('memberPost')->middleware('can:products.create');
     Route::post('/post','PostController@store')->name('memberStore')->middleware('can:products.create');
 
-    Route::get('/edit-post{id}', 'PostController@editPost')->name('memberEditPost')->middleware('can:products.update, products');
-    Route::post('/edit-post{id}', 'PostController@updatePost')->name('memberUpdatePost')->middleware('can:products.update');
 
 });
 

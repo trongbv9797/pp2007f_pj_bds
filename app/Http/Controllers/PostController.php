@@ -124,6 +124,7 @@ class PostController extends Controller
         $post->started_at = Carbon::parse($request->get('start_date'));
         $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->user_id = Auth::user()->id;
+        $post->post_price = $moneys;
         $post->save();
         if($request->hasfile('filename'))
         {

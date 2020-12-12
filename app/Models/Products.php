@@ -36,7 +36,7 @@ class Products extends Model
 
     public function province()
     {
-        return $this->belongsTo(Province::class, 'province_code');
+        return $this->belongsTo(Province::class, 'province_code', 'code');
     }
 
     public function district()

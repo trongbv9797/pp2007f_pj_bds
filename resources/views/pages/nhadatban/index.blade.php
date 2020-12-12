@@ -524,7 +524,15 @@
                             <span class="dot">·</span>
                             <span class="area">{!! $product['area'] !!} m²</span>
                             <span class="dot">·</span>
-                            <span class="location">{!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}</span>
+                            <span class="location">
+                            @if(isset($product->district['name_with_type']) && isset($product->province['name_with_type']))
+                             {!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}
+                            
+                            @else
+                                 ko co quan, tp
+                            
+                            @endif
+                        </span>
                         </div>
                         <div class="product-content">
                             {!! $product['content'] !!}
@@ -619,9 +627,9 @@
                     <ul class="link-hover-blue">
                         <li><a href="?giamin=1&giamax=2" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
                         <li><a href="?giamin=2&giamax=3" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                        <li><a href="?giamin3=&giamax=5" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                        <li><a href="?giamin5=&giamax=7" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="?giamin7=&giamax=10" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="?giamin=3&giamax=5" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="?giamin=5&giamax=7" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="?giamin=7&giamax=10" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
                         </ul>
                 </div>
             </div>

@@ -7,15 +7,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Applicator - Admin Dashboard Template</title>
+    <title>Register</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/assets/image/logo/apple-touch-icon.html">
-    <link rel="shortcut icon" href="/assets/image/logo/favicon.png">
+    <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- core dependcies css -->
     <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/assets/vendor/PACE/themes/blue/pace-theme-minimal.cte:ss" />
     <link rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
 
     <!-- page css -->
@@ -155,7 +155,13 @@
     <script src="/assets/js/app.min.js"></script>
 
     <!-- page js -->
-
+    <script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/assets/js/forms/form-validation.js"></script>
+    <script src="/assets/vendor/moment/min/moment.min.js"></script>
+    <script src="/assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+    <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
+    <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script src="/assets/js/forms/form-elements.js"></script>
 </body>
 
 

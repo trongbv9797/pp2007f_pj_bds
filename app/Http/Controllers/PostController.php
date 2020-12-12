@@ -131,18 +131,17 @@ class PostController extends Controller
         
            foreach($request->file('filename') as $picture)
            {
-                $image = new Image();
                 $picture->getClientOriginalName();
                 $name=$picture.$post->id; 
                 $picture->move(public_path().'/assets/image/products/tmp/', $name); 
                 $post_id = $post->id;
                 $path="/assets/image/products".$name;
-                Image::insert([
-                    'products_id' => $post_id,
-                    'name' => $name,
-                    'link'=>$path,
-                ]);
-                $image->save();
+                    $image = new Image();
+
+                    $image->products_id = $post_id;
+                    $image->name = $name;
+                    $image->link = $path;
+                    $image->save();
            }
         }
         

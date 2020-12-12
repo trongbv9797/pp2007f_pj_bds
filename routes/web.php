@@ -140,8 +140,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
 
         // user -post
-        Route::get('/user/post/','UserController@post')->name('postUser');
-        Route::post('/user/post/','PostController@store')->name('storePost');
 
         Route::get('/slide', 'SlideController@index')->name('Slide');
         Route::get('/slide/create', 'SlideController@create')->name('createSlide');

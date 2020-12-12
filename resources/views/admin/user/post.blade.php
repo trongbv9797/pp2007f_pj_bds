@@ -38,7 +38,7 @@
                             </p>
                         </div>
                     @endif
-                    <form role="form" id="form-validation" method="post" action="{!!  Route('postUser') !!}"
+                    <form role="form" id="form-validation" method="post" action="{!!  Route('memberStore') !!}"
                         enctype="multipart/form-data">
 
                         @csrf
@@ -86,7 +86,7 @@
                                 <label class="col-sm-2 col-form-label control-label m-l-2">County / District *</label>
                                 <div class="col-sm-4">
                                     <select name="district" class="form-control" id='districts'>
-
+                                        <option class="district" value="0">District</option>
                                     </select>
                                 </div>
                             </div>

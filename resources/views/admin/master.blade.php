@@ -428,6 +428,9 @@
                                 <li>
                                     <a href="{!!  Route('memberPost') !!}">Posts</a>
                                 </li>
+                                <li>
+                                    <a href="{!!  Route('trashPost') !!}">Trash Posts</a>
+                                </li>
 
                             </ul>
 

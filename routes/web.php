@@ -161,6 +161,9 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         Route::get('/edit-post{id}', 'PostController@editPost')->name('editPost');
         Route::post('/edit-post{id}', 'PostController@updatePost')->name('updatePost');
         Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
+        Route::get('/trash-post', 'PostController@trash')->name('trashPost');
+        Route::get('/restore-post', 'PostController@restorePost')->name('restorePost');
+
 
         // admin/menu
         Route::get('/menu', 'MenuController@index')->name('menuIndex');

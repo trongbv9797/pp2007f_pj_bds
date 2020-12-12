@@ -625,11 +625,11 @@
                 <h4 class="box-title">Lọc theo khoảng giá</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?giamin=1&giamax=2" title="Mua bán nhà đất toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
-                        <li><a href="?giamin=2&giamax=3" title="Mua bán nhà đất toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                        <li><a href="?giamin=3&giamax=5" title="Mua bán nhà đất toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                        <li><a href="?giamin=5&giamax=7" title="Mua bán nhà đất toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="?giamin=7&giamax=10" title="Mua bán nhà đất toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="?giamin=1&giamax=2" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                        <li><a href="?giamin=2&giamax=3" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                        <li><a href="?giamin=3&giamax=5" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="?giamin=5&giamax=7" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="?giamin=7&giamax=10" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
                         </ul>
                 </div>
             </div>
@@ -640,12 +640,12 @@
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?dtmin=0&dtmax=30" title="Mua bán nhà đất toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
-                        <li><a href="?dtmin=30&dtmax=50" title="Mua bán nhà đất toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                        <li><a href="?dtmin=50&dtmax=80" title="Mua bán nhà đất toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="?dtmin=80&dtmax=100" title="Mua bán nhà đất toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="?dtmin=100&dtmax=150" title="Mua bán nhà đất toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="?dtmin=150&dtmax=200" title="Mua bán nhà đất toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="?dtmin=0&dtmax=30" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="?dtmin=30&dtmax=50" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="?dtmin=50&dtmax=80" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="?dtmin=80&dtmax=100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="?dtmin=100&dtmax=150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="?dtmin=150&dtmax=200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -670,8 +670,6 @@
                     </ul>
                 </div>
             </div>
-
-
 
 
 
@@ -705,162 +703,8 @@
             </div>
         </div>
     </div>
-
-
         
     <div class="divide-full"></div>
-    <div class="box-common box-common-filled box-max-item-cate">
-        <h2 class="box-title">Mua bán nhà đất</h2>
-
-        <div class="box-content link-hover-blue">
-            <ul>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-tp-hcm" title="Mua bán nhà đất tại Hồ Chí Minh">
-                                Hồ Chí Minh (76181)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-ha-noi" title="Mua bán nhà đất tại Hà Nội">
-                                Hà Nội (60706)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-binh-duong" title="Mua bán nhà đất tại Bình Dương">
-                                Bình Dương (10996)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-dong-nai" title="Mua bán nhà đất tại Đồng Nai">
-                                Đồng Nai (8088)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-ba-ria-vung-tau" title="Mua bán nhà đất tại Bà Rịa Vũng Tàu">
-                                Bà Rịa Vũng Tàu (4144)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-tien-giang" title="Mua bán nhà đất tại Tiền Giang">
-                                Tiền Giang (157)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-ninh-thuan" title="Mua bán nhà đất tại Ninh Thuận">
-                                Ninh Thuận (78)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-tuyen-quang" title="Mua bán nhà đất tại Tuyên Quang">
-                                Tuyên Quang (3)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-son-la" title="Mua bán nhà đất tại Sơn La">
-                                Sơn La (7)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-phu-yen" title="Mua bán nhà đất tại Phú Yên">
-                                Phú Yên (101)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-bac-giang" title="Mua bán nhà đất tại Bắc Giang">
-                                Bắc Giang (184)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-thua-thien-hue" title="Mua bán nhà đất tại Thừa Thiên Huế">
-                                Thừa Thiên Huế (269)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-ben-tre" title="Mua bán nhà đất tại Bến Tre">
-                                Bến Tre (89)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-dien-bien" title="Mua bán nhà đất tại Điện Biên">
-                                Điện Biên (1)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-long-an" title="Mua bán nhà đất tại Long An">
-                                Long An (3484)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-khanh-hoa" title="Mua bán nhà đất tại Khánh Hòa">
-                                Khánh Hòa (3910)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-dong-thap" title="Mua bán nhà đất tại Đồng Tháp">
-                                Đồng Tháp (48)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-hung-yen" title="Mua bán nhà đất tại Hưng Yên">
-                                Hưng Yên (924)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-quang-nam" title="Mua bán nhà đất tại Quảng Nam">
-                                Quảng Nam (1288)
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/nha-dat-ban-thanh-hoa" title="Mua bán nhà đất tại Thanh Hóa">
-                                Thanh Hóa (227)
-                            </a>
-                        </h3>
-                    </li>
-            </ul>
-        </div>
-    </div>
-
-
-        
-
 
         <div class="box-common box-common-filled box-utility link-hover-blue">
     <h4 class="box-title">Hỗ trợ tiện ích</h4>

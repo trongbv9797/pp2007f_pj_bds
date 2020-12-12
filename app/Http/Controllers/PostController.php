@@ -31,9 +31,8 @@ class PostController extends Controller
     }
 
     public function shelfPost($user) {
-        
-        $posts = User::find($user)->Products;
-        // dd($posts);
+
+        $posts = User::find($user)->Products()->orderBy('id','DESC')->get();
         return view('admin.posts', compact('posts'));
     }
 

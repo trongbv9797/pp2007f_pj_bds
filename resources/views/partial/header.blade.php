@@ -118,11 +118,11 @@
                                             <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
                                                         class="text">Dashboard</span></a>
                                             </li>
-                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberPost') }}" class="haslink "><span
                                                         class="text">Profile</span></a>
                                             </li>
 
-                                            <li class="lv1"><a href="{{ route('postUser') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberPost') }}" class="haslink "><span
                                                         class="text">Post</span></a>
                                             </li>
                                             <li class="lv1"><a href="{{ route('logout') }}" class="haslink " onclick="event.preventDefault();

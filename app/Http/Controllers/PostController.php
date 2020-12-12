@@ -163,5 +163,19 @@ class PostController extends Controller
         }
 
     }
+
+    public function trash()
+    {
+        $posts = Products::onlyTrashed()->orderBy('id','DESC')->get();
+        return view('admin.trashPost', compact('posts'));
+    }
+
+    public function restorePost(Request $request)
+    {
+        $posts = Products::withTrashed()->find($request->get('post_id'))
+        ->restore();
+        echo view('admin.trashPost', compact('posts'));
+        exit;
+    }
 }
 

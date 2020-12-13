@@ -11,7 +11,7 @@
 
 <body class="bg-site">
 
-    <form id="boxSearchForm" action="/microservice-architecture-router/Product/ProductSearch/Index" method="post" novalidate="novalidate">
+    <form id="boxSearchForm" action="{{ route('search') }}" method="post" novalidate="novalidate">
         <div class="search-bar shadow-lv-1 clearfix">
             <div class="search-guide" style="left: 985.083px; top: 64px; display: block;">
                 <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>

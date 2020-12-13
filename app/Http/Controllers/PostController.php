@@ -30,6 +30,12 @@ class PostController extends Controller
         return view('admin.posts', compact('posts'));
     }
 
+    public function schedulePost() {
+        $today = date('Y-m-d');
+        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
+        return view('admin.posts', compact('posts'));
+    }
+
     public function shelfPost($user) {
 
         $posts = User::find($user)->Products()->orderBy('id','DESC')->get();
@@ -70,11 +76,18 @@ class PostController extends Controller
     }
     
     public function deletePost(Request $request)
-    {
-        $posts = Products::find($request->get('post_id'));
+    {   
+        if(is_string($request->get('post_id')))
+        {
+            $posts = Products::find($request->get('post_id'));
+            $posts->delete();
+        }
+        if($request->get('post_id'))
+        foreach ($request->get('post_id') as $reg) {
+        $posts = Products::find($reg);
         $posts->delete();
-        echo view('admin.posts', compact('posts'));
-        exit;
+        }
+
     }
 
     public function uploadImage(Request $request)
@@ -176,6 +189,13 @@ class PostController extends Controller
         ->restore();
         echo view('admin.trashPost', compact('posts'));
         exit;
+    }
+
+    public function scheduleAjax(Request $request) {
+        $today = Carbon::parse($request->get('date'));
+        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
+        echo view('admin.ajaxposts', compact('posts'));
+
     }
 }
 

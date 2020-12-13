@@ -423,6 +423,9 @@
                                     <a href="{!!  Route('memberViewPost') !!}">All Posts</a>
                                 </li>
                                 <li>
+                                    <a href="{{ Route('schedulePost') }}">Schedule New Posts</a>
+                                </li>
+                                <li>
                                     <a href="{!!  Route('shelfPost', auth::user()->id) !!}">My Posts</a>
                                 </li>
                                 <li>

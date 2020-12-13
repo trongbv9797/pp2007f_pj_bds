@@ -52,19 +52,6 @@
 
                                 </th>
                             </tr>
-                            <tr>
-                                <td>
-                                    
-                                </td>
-                                <td></td>
-                                <td>
-                                </td>
-                                <td></td>
-                                <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
-                                <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
-                                <td class="text-center font-size-18">
-                                </td>
-                            </tr>
                         </thead>
                         <tbody id="postsc">
                             @foreach ($posts as $post)
@@ -110,8 +97,21 @@
                                     </td>
                                 </tr>
                             @endforeach
-                        
                     </tbody>
+
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td></td>
+                        <td>
+                        </td>
+                        <td></td>
+                        <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
+                        <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
+                        <td class="text-center font-size-18">
+                        </td>
+                    </tr>
                         <th>
                             <div class="checkbox p-0">
                                 <input id="selectable1" type="checkbox" class="checkAll"

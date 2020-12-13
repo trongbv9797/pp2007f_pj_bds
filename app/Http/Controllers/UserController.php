@@ -21,7 +21,7 @@ class UserController extends Controller
     public function index() {
         $users = User::with('roles')->get();
         $user = Auth::user();
-        return view ('admin.user.index', compact('users', 'user'));
+        return view ('admin.user.index', compact('users','user'));
     }
 
     public function create() {
@@ -99,18 +99,18 @@ class UserController extends Controller
         }
         $user->username = $request->username;
         $user->email = $request->email;
-        $user->password = $request->inputPassword;
         $user->fullname = $request->fullname;
         $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
-        $user->address = $request->address;
+        if($request->ward != 0) {
+            $user->address = Ward::where('code',$request->ward)->first()->path_with_type;
+        }
         $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
         $account = $user->account;
         $user->account = $account + $request->account;
         $user->roles()->sync($request->role);
         $user->save();
-        $users = User::all();
-        return view ('admin.user.index',compact('users'));
+        return redirect()->route('userIndex')->with('mess','You are updated success');
     }
 
     public function delete(Request $request) {
@@ -187,6 +187,50 @@ class UserController extends Controller
         $users = User::all();
         
         return view ('admin.dashboard.index',compact('user','products','users','sales','reve','month','year'));
+    }
+
+    public function memberEditUser($id) {
+        $provinces = Province::all();
+        $districts = District::all();
+        $user = User::findOrFail($id);
+        if($user->id != Auth::id()) {
+            return redirect()->back()->with('mess','You cant edit user');
+        }
+        // dd($user);
+        return view ('member.edit',compact('user','provinces','districts'));
+    }
+
+    public function memberUpdateUser(Request $request,$id) {
+        $user = User::findOrFail($id);
+
+        if ($request->hasFile('avatar1')) {
+            $file = $request->file('avatar1');
+            $name = $file->getClientOriginalName();
+            $nameAva = time()."_".$name;
+            $file->move(config('app.link_users'), $nameAva);
+            $user->avatar = $nameAva;
+        }
+        else {
+            $user->avatar = "";
+        }
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->fullname = $request->fullname;
+        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
+        if($request->ward != 0) {
+            $user->address = Ward::where('code',$request->ward)->first()->path_with_type;
+        }
+        $user->phonenumber = $request->phonenumber;
+        $user->sex = $request->sex;
+        $user->save();
+        $users = User::all();
+        return redirect()->route('memberIndex')->with('mess','You are updated success');
+    }
+
+    public function memberDelete(Request $request) {
+        $did = $request->get('did');
+        $user = User::find($did);
+        $user->delete();
     }
     
 

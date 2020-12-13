@@ -115,10 +115,10 @@
                                     <li class="lv0"><span class="text"
                                             style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
-                                            <li class="lv1"><a href="{{ route('userIndex') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('dash') }}" class="haslink "><span
                                                         class="text">Dashboard</span></a>
                                             </li>
-                                            <li class="lv1"><a href="{{ route('memberPost') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberIndex') }}" class="haslink "><span
                                                         class="text">Profile</span></a>
                                             </li>
 
@@ -158,10 +158,10 @@
                                     <li class="lv0"><span class="text"
                                             style="color: blue">{{ Auth::user()->username }}</span>
                                         <ul>
-                                            <li class="lv1"><a href="{{ route('memberIndex') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('dash') }}" class="haslink "><span
                                                         class="text">Dashboard</span></a>
                                             </li>
-                                            <li class="lv1"><a href="{{ route('memberViewPost') }}" class="haslink "><span
+                                            <li class="lv1"><a href="{{ route('memberIndex') }}" class="haslink "><span
                                                         class="text">Profile</span></a>
                                             </li>
 

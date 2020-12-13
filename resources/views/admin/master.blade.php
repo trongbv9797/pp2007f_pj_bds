@@ -353,7 +353,7 @@
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
                         <li class="side-nav-header">
-                            <span>Navigation</span>
+                            <span>Menu</span>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">

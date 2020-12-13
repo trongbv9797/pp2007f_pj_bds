@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-sm-10">
 
-                    <form role="form" id="form-validation" method="post" action="{{ route('updateUser', $user->id) }}"
+                    <form role="form" id="form-validation" method="post" action="{{ route('memberUpdateUser', $user->id) }}"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
@@ -92,8 +92,8 @@
 
                             <div class="col-sm-1"></div>
 
-                            <select class="form-control col-sm-2 d-inline m-l-35" id='wards' name ="ward">
-                                <option class="ward" value = "0">Ward</option>
+                            <select class="form-control col-sm-2 d-inline m-l-35" id='wards' name = 'ward'>
+                                <option class="ward" value ="0">Ward</option>
                             </select>
                         </div>
 
@@ -123,34 +123,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-4 d-inline">
-                                <label class="col-sm-5 col-form-label control-label d-inline">Recharge account</label>
-                                <div class="col-sm-4 d-inline form-group">
-                                    <select class="form-control col-sm-6 d-inline" name="account">
-                                        <option class="account" value="0">+ 0 VND</option>
-                                        <option class="account" value="10000">+ 10.000 VND</option>
-                                        <option class="account" value="20000">+ 20.000 VND</option>
-                                        <option class="account" value="50000">+ 50.000 VND</option>
-                                        <option class="account" value="100000">+ 100.000 VND</option>
-                                        <option class="account" value="200000">+ 200.000 VND</option>
-                                        <option class="account" value="500000">+ 500.000 VND</option>
-                                    </select>
-                                </div>
-                            </div>
 
-                            <div class="col-sm-4 d-inline">
-                                <label class="col-sm-3 col-form-label control-label d-inline">Role</label>
-                                <div class="col-sm-5 d-inline">
-                                    <select class="form-control col-sm-8 d-inline m-l-35" name="role">
-                                        <option class="ward" value="1" @if ($user->roles->first()->id == 1)
-                                            selected
-                                            @endif>Admin</option>
-                                        <option class="ward" value="2" @if ($user->roles->first()->id == 2)
-                                            selected
-                                            @endif>Member</option>
-                                    </select>
-                                </div>
-                            </div>
+
+
                         </div>
 
 

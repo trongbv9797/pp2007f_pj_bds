@@ -33,14 +33,22 @@ Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 Route::get('/search', 'HomeController@search')->name('search');
 
 Route::prefix('/member')->group(function () {
-    Route::get('/index','UserController@indexMember')->name('memberIndex');
-    Route::get('/posts', 'PostController@viewPost')->name('memberViewPost');
-    Route::get('/post/schedule', 'PostController@schedulePost')->name('schedulePost');
-    Route::get('/post/scheduleAjax', 'PostController@scheduleAjax')->name('scheduleAjaxPost');
+    Route::get('/index','UserController@indexMember')->name('memberIndex')->middleware('auth');
+    Route::get('/posts', 'PostController@viewPost')->name('memberViewPost')->middleware('auth');
+    Route::get('/post/schedule', 'PostController@schedulePost')->name('schedulePost')->middleware('auth');
+    Route::get('/post/scheduleAjax', 'PostController@scheduleAjax')->name('scheduleAjaxPost')->middleware('auth');
 
-    Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost');
+    Route::get('/post/{user}','PostController@shelfPost')->name('shelfPost')->middleware('auth');
     Route::get('/post','UserController@post')->name('memberPost')->middleware('can:products.create');
     Route::post('/post','PostController@store')->name('memberStore')->middleware('can:products.create');
+    Route::get('/editpost/{id}','PostController@memberEditPost')->name('memberEditPost')->middleware('auth');
+    Route::post('/editpost/{id}','PostController@memberUpdatePost')->name('memberUpdatePost')->middleware('auth');
+
+    Route::get('/edituser/{id}','UserController@memberEditUser')->name('memberEditUser')->middleware('auth');
+    Route::post('/edituser/{id}','UserController@memberUpdateUser')->name('memberUpdateUser')->middleware('auth');
+
+    Route::get('/news', 'NewsController@listNews')->name('memberlistNews')->middleware('auth');
+
 
 
 });

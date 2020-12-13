@@ -105,6 +105,9 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->phonenumber = $request->phonenumber;
         $user->sex = $request->sex;
+        $account = $user->account;
+        $user->account = $account + $request->account;
+        $user->roles()->sync($request->role);
         $user->save();
         $users = User::all();
         return view ('admin.user.index',compact('users'));

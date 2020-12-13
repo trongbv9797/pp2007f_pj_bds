@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -129,6 +130,11 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
             return view('admin.master');
         });
     // admin
+        // Dashboard
+        Route::get('/index','UserController@dashIndex')->name('dash');
+
+
+
     // User - CRUD
         Route::get('/user','UserController@index')->name('userIndex');
 

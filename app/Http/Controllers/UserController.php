@@ -177,4 +177,17 @@ class UserController extends Controller
         return view ('member.index',compact('user'));
     }
 
+    public function dashIndex() {
+        $user = Auth::user();
+        $products = DB::table('products')->orderBy('id','DESC')->limit(5)->get();
+        $year = Date('Y');
+        $month = Date('m');
+        $sales = DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->get()->count();
+        $reve = DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->sum('post_price');
+        $users = User::all();
+        
+        return view ('admin.dashboard.index',compact('user','products','users','sales','reve','month','year'));
+    }
+    
+
 }

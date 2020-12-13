@@ -193,7 +193,11 @@ class PostController extends Controller
 
     public function scheduleAjax(Request $request) {
         $today = Carbon::parse($request->get('date'));
-        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
+        $posts = Products::where('started_at', '<=', $today)
+        ->where('expired_at', '>=', $today)
+        ->orderBy('post_type_id','DESC')
+        ->orderBy('created_at','DESC')
+        ->get();
         echo view('admin.ajaxposts', compact('posts'));
 
     }

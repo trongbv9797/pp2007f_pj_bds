@@ -1,3 +1,17 @@
+
+<tr>
+    <td>
+        
+    </td>
+    <td></td>
+    <td>
+    </td>
+    <td></td>
+    <td style="font-size: 30px; font-weight: bold;">Total Date Price: </td>
+    <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
+    <td class="text-center font-size-18">
+    </td>
+</tr>
 @foreach ($posts as $post)
     <tr id="post" value={{ $post->id }}>
         <td>
@@ -14,7 +28,7 @@
         </td>
         <td>{{ $post->id }}</td>
         <td>{{ $post->created_at }}</td>
-        <td> {{ $post->views }}</td>
+        <td> {{ $post->post_price }}</td>
         <td class="text-center font-size-18">
             @if ($post->type == 1)
                 <a href="{!!  Route('nhadatban_single_post', $post->id) !!}" class="btn btn-info">View</a>
@@ -35,3 +49,4 @@
         </td>
     </tr>
 @endforeach
+

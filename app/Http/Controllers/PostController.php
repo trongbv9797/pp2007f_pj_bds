@@ -26,8 +26,11 @@ class PostController extends Controller
     }
 
     public function viewPost() {
-        $posts = Products::orderBy('id','DESC')->get();
-        return view('admin.posts', compact('posts'));
+        $posts = Products::orderBy('post_type_id','DESC')
+        ->orderBy('started_at', 'DESC')
+        ->get();
+        $total_price = Products::sum('post_price');
+        return view('admin.posts', compact('posts', 'total_price'));
     }
 
     public function schedulePost() {
@@ -198,7 +201,8 @@ class PostController extends Controller
         ->orderBy('post_type_id','DESC')
         ->orderBy('created_at','DESC')
         ->get();
-        echo view('admin.ajaxposts', compact('posts'));
+        $total_price = $posts->sum('post_price');
+        echo view('admin.ajaxposts', compact('posts', 'total_price'));
 
     }
 }

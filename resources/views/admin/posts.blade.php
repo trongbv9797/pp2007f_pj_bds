@@ -45,12 +45,25 @@
                                         </div>
                                     </div>
                                 </th>
-                                <th>Views</th>
+                                <th>Price</th>
                                 <th>
 
 
 
                                 </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td></td>
+                                <td>
+                                </td>
+                                <td></td>
+                                <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
+                                <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
+                                <td class="text-center font-size-18">
+                                </td>
                             </tr>
                         </thead>
                         <tbody id="postsc">
@@ -72,7 +85,7 @@
                                     </td>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->started_at }}</td>
-                                    <td> {{ $post->views }}</td>
+                                    <td> {{ $post->post_price }}</td>
                                     <td class="text-center font-size-18">
                                         @if ($post->type == 1)
                                             <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"
@@ -97,7 +110,8 @@
                                     </td>
                                 </tr>
                             @endforeach
-                        </tbody>
+                        
+                    </tbody>
                         <th>
                             <div class="checkbox p-0">
                                 <input id="selectable1" type="checkbox" class="checkAll"

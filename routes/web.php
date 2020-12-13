@@ -29,6 +29,7 @@ Route::post('/user/create','UserController@storeUser')->name('storeUser');
 Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
 Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 
+Route::get('/search', 'HomeController@search')->name('search');
 
 Route::prefix('/member')->group(function () {
     Route::get('/index','UserController@indexMember')->name('memberIndex');
@@ -118,7 +119,6 @@ Route::get('/tu-van-phong-thuy', 'PhongThuyController@index2')->name('tuvanphong
 Route::get('/phong-thuy-nha-o', 'PhongThuyController@index3')->name('phongthuynhao');
 Route::get('/phong-thuy-van-phong', 'PhongThuyController@index4')->name('phongthuyvanphong');
 Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongthuytheotuoi');
-
 
 
 

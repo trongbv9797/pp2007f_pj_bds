@@ -352,15 +352,20 @@
             <div class="side-nav expand-lg">
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
+                    <li class="side-nav-header">
+                    <span class="title">{{ __('LANGUAGES') }}: </span>
+                            <a href="{!! route('change-language',['en']) !!}">English</a>
+                            <a href="{!! route('change-language',['vi']) !!}">Vietnamese</a>                       
+                    </li>
                         <li class="side-nav-header">
-                            <span>Menu</span>
+                            <span>{{ __('NAVIGATION') }}</span>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">Dashboard</span>
+                                <span class="title">{{ __('Dashboard') }}</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
@@ -368,6 +373,16 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="{{ Route('dash') }}">View</a>
+                                    <a href="index.html">{{ __('Default') }}</a>
+                                </li>
+                                <li>
+                                    <a href="index-analytical.html">{{ __('Analytical') }}</a>
+                                </li>
+                                <li>
+                                    <a href="index-bank.html">{{ __('Bank') }}</a>
+                                </li>
+                                <li>
+                                    <a href="index-saas.html">{{ __('Saas') }}</a>
                                 </li>
 
 
@@ -379,7 +394,7 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">Users</span>
+                                <span class="title">{{ __('Users') }}</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
@@ -387,14 +402,14 @@
                             <ul class="dropdown-menu">
                                 @if (Auth::user()->inRole('admin'))
                                     <li>
-                                        <a href="{{ Route('userIndex') }}">All User</a>
+                                        <a href="{{ Route('userIndex') }}">{{ __('All User') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ Route('createUser') }}">Create New User</a>
+                                        <a href="{{ Route('createUser') }}">{{ __('Create New User') }}</a>
                                     </li>
                                 @else
                                     <li>
-                                        <a href="{{ Route('memberIndex') }}">My User</a>
+                                        <a href="{{ Route('memberIndex') }}">{{ __('My User') }}</a>
                                     </li>
                                 @endif
                             </ul>
@@ -406,26 +421,26 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">Posts</span>
+                                <span class="title">{{ __('Posts') }}</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{!!  Route('memberViewPost') !!}">All Posts</a>
+                                    <a href="{!!  Route('memberViewPost') !!}">{{ __('All Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ Route('schedulePost') }}">Schedule New Posts</a>
+                                    <a href="{{ Route('schedulePost') }}">{{ __('Schedule New Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!!  Route('shelfPost', auth::user()->id) !!}">My Posts</a>
+                                    <a href="{!!  Route('shelfPost', auth::user()->id) !!}">{{ __('My Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!!  Route('memberPost') !!}">Posts</a>
+                                    <a href="{!!  Route('memberPost') !!}">{{ __('Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!!  Route('trashPost') !!}">Trash Posts</a>
+                                    <a href="{!!  Route('trashPost') !!}">{{ __('Trash Posts') }}</a>
                                 </li>
 
                             </ul>
@@ -438,34 +453,17 @@
                                     <span class="icon-holder">
                                         <i class="mdi mdi-gauge"></i>
                                     </span>
-                                    <span class="title">Post Types</span>
+                                    <span class="title">{{ __('Post Types') }}</span>
                                     <span class="arrow">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="active">
-                                        <a href="{{ route('postTypeIndex') }}">All Post Types</a>
+                                        <a href="{{ route('postTypeIndex') }}">{{ __('All Post Types') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('createPostType') }}">Create New Post Types</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle" href="javascript:void(0);">
-                                    <span class="icon-holder">
-                                        <i class="mdi mdi-tune-vertical"></i>
-                                    </span>
-                                    <span class="title">Slides</span>
-                                    <span class="arrow">
-                                        <i class="mdi mdi-chevron-right"></i>
-                                    </span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{!!  route('Slide') !!}">All Slides</a>
-                                        <a href="{{ route('createSlide') }}">Create New Slides</a>
+                                        <a href="{{ route('createPostType') }}">{{ __('Create New Post Types') }}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -474,17 +472,34 @@
                                     <span class="icon-holder">
                                         <i class="mdi mdi-tune-vertical"></i>
                                     </span>
-                                    <span class="title">Menus</span>
+                                    <span class="title">{{ __('Slides') }}</span>
                                     <span class="arrow">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="{{ route('menuIndex') }}">All Menus</a>
+                                        <a href="{!!  route('Slide') !!}">{{ __('All Slides') }}</a>
+                                        <a href="{{ route('createSlide') }}">{{ __('Create New Slides') }}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="javascript:void(0);">
+                                    <span class="icon-holder">
+                                        <i class="mdi mdi-tune-vertical"></i>
+                                    </span>
+                                    <span class="title">{{ __('Menus') }}</span>
+                                    <span class="arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('menuIndex') }}">{{ __('All Menus') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('createMenu') }}">Create New Menus</a>
+                                        <a href="{{ route('createMenu') }}">{{ __('Create New Menus') }}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -494,15 +509,15 @@
                                 <span class="icon-holder">
                                     <i class="mdi mdi-tune-vertical"></i>
                                 </span>
-                                <span class="title">News</span>
+                                <span class="title">{{ __('News') }}</span>
                                 <span class="arrow">
                                     <i class="mdi mdi-chevron-right"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{ route('listNews') }}">All News</a>
-                                    <a href="{{ route('createNews') }}">Create News</a>
+                                    <a href="{{ route('listNews') }}">{{ __('All News') }}</a>
+                                    <a href="{{ route('createNews') }}">{{ __('Create News') }}</a>
 
                                 </li>
                             </ul>

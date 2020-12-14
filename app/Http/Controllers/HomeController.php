@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Article;
@@ -44,5 +45,12 @@ class HomeController extends Controller
     {
         
         return view('pages.index',compact('articles','i','j','k','l','products','districs','provinces','banners', 'sidebars', 'province1', 'province2', 'province3'));
+    }
+
+    public function changeLanguage($language)
+    {   
+        // dd($language);
+        Session::put('website_language', $language);
+        return redirect()->back();
     }
 }

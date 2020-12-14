@@ -78,7 +78,7 @@
                                             <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"
                                                 class="btn btn-info">View</a>
                                         @else
-                                            <a href="{!!  Route('nhadatchothue_single_post', $post->id) !!}"
+                                            <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"
                                                 class="btn btn-info">View</a>
                                         @endif
                                         @if (Auth::user()->inRole('admin'))

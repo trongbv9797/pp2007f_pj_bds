@@ -8,12 +8,12 @@
 
 @section('content')
     <div class="page-header">
-        <h2 class="header-title">User Table</h2>
+        <h2 class="header-title">{{ __('User Table') }}</h2>
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
                 <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Admin</a>
-                <a class="breadcrumb-item" href="#">User</a>
-                <span class="breadcrumb-item active">User Table</span>
+                <a class="breadcrumb-item" href="#">{{ __('Users') }}</a>
+                <span class="breadcrumb-item active">{{ __('User Table') }}</span>
             </nav>
         </div>
     </div>
@@ -36,13 +36,13 @@
                                     <label for="selectable1"></label>
                                 </div>
                             </th>
-                            <th>User Name</th>
-                            <th>Account</th>
-                            <th>Role</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Adress</th>
-                            <th>Sex</th>
+                            <th>{{ __('User Name') }}</th>
+                            <th>{{ __('Account') }}</th>
+                            <th>{{ __('Role') }}</th>
+                            <th>{{ __('Email') }}</th>
+                            <th>{{ __('Phone Number') }}</th>
+                            <th>{{ __('Adress') }}</th>
+                            <th>{{ __('Sex') }}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -79,9 +79,9 @@
                                 <td>{{ $us->phonenumber }}</td>
                                 <td> {{ $us->address }}</td>
                                 @if ($us->sex == 1)
-                                    <td> Male </td>
+                                    <td> {{ __('Male') }}</td>
                                 @else
-                                    <td> Female </td>
+                                    <td> {{ __('Female') }}</td>
                                 @endif
                                 @if (Auth::user()->inRole('admin'))
                                     <td class="text-center font-size-18">

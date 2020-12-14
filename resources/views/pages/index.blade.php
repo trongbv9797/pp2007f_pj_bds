@@ -157,7 +157,7 @@
                     @foreach($banners as $banner)
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="...">
+                            <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="..." style="width: 100%;height: 510px;">
                         </div>
 
                     </div>
@@ -202,7 +202,7 @@
         </script>
     </div>
     <!-- Cac control o giua-->
-    <div class="home-small">
+    <div class="home-small" style="margin-top: 85px;">
         <div class="home-small-main">
 
             <div class="home-small-heading" id="hometabs">

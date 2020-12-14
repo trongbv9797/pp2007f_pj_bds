@@ -19,6 +19,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 // HomeController index
 Route::get('/', 'HomeController@index')->name('home');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@welcome')->name('welcome');
@@ -132,7 +133,7 @@ Route::get('/phong-thuy-theo-tuoi', 'PhongThuyController@index5')->name('phongth
 
 
 //   ADMIN
-Route::group(['middleware' => ['auth', 'admin']], function(){
+Route::group(['middleware' => ['auth', 'admin','locale']], function(){
     Route::prefix('/admin',)->group(function () {
         Route::get('/master',function () {
             return view('admin.master');
@@ -201,4 +202,4 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
 });
 
 
-
+Route::get('change-language/{language}', 'HomeController@changeLanguage')->name('change-language');

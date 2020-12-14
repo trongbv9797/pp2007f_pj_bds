@@ -36,13 +36,14 @@ class PostController extends Controller
     public function schedulePost() {
         $today = date('Y-m-d');
         $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
-        return view('admin.posts', compact('posts'));
+        $total_price = Products::where('started_at', $today)->sum('post_price');
+        return view('admin.posts', compact('posts', 'total_price'));
     }
 
     public function shelfPost($user) {
-
         $posts = User::find($user)->Products()->orderBy('id','DESC')->get();
-        return view('admin.posts', compact('posts'));
+        $total_price = Products::where('user_id', $user)->sum('post_price');
+        return view('admin.posts', compact('posts', 'total_price'));
     }
 
     public function editPost($id) {
@@ -209,6 +210,7 @@ class PostController extends Controller
     public function memberEditPost($id) {
         $user = Auth::user()->id;
         $post = DB::table('products')->find($id);
+        // dd($post);
         if($post->user_id != $user) {
             return redirect()->back()->with('mess','You are not admin');
         }
@@ -218,7 +220,7 @@ class PostController extends Controller
         $types = Post_type::all();
         $images = Image::where('products_id', '=', $id)->get();
 
-        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
+        return view('admin.memberEditPost', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
     }
 
     public function memberUpdatePost(Request $request, $id) {
@@ -239,7 +241,7 @@ class PostController extends Controller
         if ($post->save()) {
             $edit_mess = "Successfully Edited!";
         }
-        return redirect()->route('editPost', [$id])->with('flash_success', 'Success');
+        return redirect()->route('memberEditPost', [$id])->with('flash_success', 'Success');
     }
 }
 

@@ -407,6 +407,11 @@
                                     <li>
                                         <a href="{{ Route('createUser') }}">{{ __('Create New User') }}</a>
                                     </li>
+
+                                    <li>
+                                        <a href="{{ Route('viewTrashed') }}">{{ __('Trashed') }}</a>
+                                    </li>
+
                                 @else
                                     <li>
                                         <a href="{{ Route('memberIndex') }}">{{ __('My User') }}</a>

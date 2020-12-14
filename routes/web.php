@@ -152,8 +152,10 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         Route::post('/user/create','UserController@store')->name('adminStoreUser');
         Route::get('/user/edit/{id}','UserController@edit')->name('editUser');
         Route::post('/user/edit/{id}','UserController@update')->name('updateUser');
-        Route::get('/user/delete/{id}','UserController@delete')->name('deleteUser');
-
+        Route::get('/user/deletetrashed/','UserController@delete')->name('deleteTrashedUser');
+        Route::get('/user/viewtrashed','UserController@viewTrashed')->name('viewTrashed');
+        Route::get('/user/restoretrashed/{id}','UserController@restoreTrashed')->name('restoreTrashed');
+        Route::get('/user/forcetrashed/{id}','UserController@forceTrashed')->name('forceTrashed');
         // user -post
 
         Route::get('/slide', 'SlideController@index')->name('Slide');

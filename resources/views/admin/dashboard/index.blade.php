@@ -93,7 +93,7 @@
                                 </td>
                                 <td>{{ $pr->id }}</td>
                                 <td>{{ $pr->created_at }}</td>
-                                <td> ${{ $pr->post_price }}</td>
+                                <td> ${{ number_format($pr->post_price) }} VND</td>
                             </tr>
                             @endforeach
                         </tbody>

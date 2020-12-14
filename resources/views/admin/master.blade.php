@@ -169,7 +169,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ Route('dash') }}">
                                         <div class="text-center">
                                             <i class="mdi mdi mdi-gauge font-size-30 icon-gradient-success"></i>
                                             <p class="m-b-0">Dashboard</p>
@@ -353,7 +353,7 @@
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
                         <li class="side-nav-header">
-                            <span>Navigation</span>
+                            <span>Menu</span>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
@@ -367,17 +367,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.html">Default</a>
+                                    <a href="{{ Route('dash') }}">View</a>
                                 </li>
-                                <li>
-                                    <a href="index-analytical.html">Analytical</a>
-                                </li>
-                                <li>
-                                    <a href="index-bank.html">Bank</a>
-                                </li>
-                                <li>
-                                    <a href="index-saas.html">Saas</a>
-                                </li>
+
+
                             </ul>
                         </li>
 

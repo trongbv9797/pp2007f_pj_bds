@@ -81,41 +81,39 @@
                                             <a href="{!!  Route('nhadatchothue_single_post', $post->id) !!}"
                                                 class="btn btn-info">View</a>
                                         @endif
-                                        {{-- @if (Auth::user()->inRole('admin')) --}}
+                                        @if (Auth::user()->inRole('admin'))
                                             <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
 
                                             <a href="javascript:;" class="btn btn-danger delete"
                                                 post_id="{!!  $post->id !!}">Delete</a>
-                                            {{-- @else --}}
-                                            {{-- <a
-                                                href="{!!  Route('memberEditPost', $post->id) !!}"
+                                        @else
+                                            <a href="{!!  Route('memberEditPost', $post->id) !!}"
                                                 class="btn btn-info">Edit</a>
                                             <a href="javascript:;" class="btn btn-danger delete"
                                                 post_id="{!!  $post->id !!}">Delete</a>
-                                        @endif --}}
+                                        @endif
 
                                     </td>
                                 </tr>
                             @endforeach
-                    </tbody>
+                        </tbody>
 
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td></td>
-                        <td>
-                        </td>
-                        <td></td>
-                        <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
-                        <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
-                        <td class="text-center font-size-18">
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td>
+                            </td>
+                            <td></td>
+                            <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
+                            <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }}</td>
+                            <td class="text-center font-size-18">
+                            </td>
+                        </tr>
                         <th>
                             <div class="checkbox p-0">
-                                <input id="selectable1" type="checkbox" class="checkAll"
-                                    name="checkDeleteAll" value="0">
+                                <input id="selectable1" type="checkbox" class="checkAll" name="checkDeleteAll" value="0">
                                 <label for="selectable1"></label>
                             </div>
                         </th>

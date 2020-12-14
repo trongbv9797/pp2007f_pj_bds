@@ -205,5 +205,41 @@ class PostController extends Controller
         echo view('admin.ajaxposts', compact('posts', 'total_price'));
 
     }
+
+    public function memberEditPost($id) {
+        $user = Auth::user()->id;
+        $post = DB::table('products')->find($id);
+        if($post->user_id != $user) {
+            return redirect()->back()->with('mess','You are not admin');
+        }
+        $wards = Ward::all();
+        $districts = District::all();
+        $provinces = Province::all();
+        $types = Post_type::all();
+        $images = Image::where('products_id', '=', $id)->get();
+
+        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
+    }
+
+    public function memberUpdatePost(Request $request, $id) {
+        $post = Products::where('id', '=', $id)->first();
+        $post->title = $request->get('title');
+        $post->price = $request->get('price');
+        $post->area = $request->get('area');
+        $post->address = $request->get('address');
+        $post->number_of_bedroom = $request->get('bedroom');
+        $post->number_of_restroom = $request->get('restroom');
+        $post->number_of_floor = $request->get('floor');
+        $post->content = $request->get('content');
+        $post->post_type_id = $request->get('type');
+        $post->province_code = $request->get('province');
+        $post->district_code = $request->get('district');
+        $post->ward_code = $request->get('ward');
+        $edit_mess = "";
+        if ($post->save()) {
+            $edit_mess = "Successfully Edited!";
+        }
+        return redirect()->route('editPost', [$id])->with('flash_success', 'Success');
+    }
 }
 

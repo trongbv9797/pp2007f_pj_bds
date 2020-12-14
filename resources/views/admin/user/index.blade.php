@@ -20,6 +20,13 @@
     <div class="card">
         <div class="card-body">
             <div class="table-overflow">
+                @if (session('mess'))
+                    <div class="col-sm-12 bg-success">
+                        <p class="">
+                            <strong>{{ session('mess') }}</strong>
+                        </p>
+                    </div>
+                @endif
                 <table id="dt-opt" class="table table-hover table-xl">
                     <thead>
                         <tr>
@@ -40,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($users as $user)
+                        @foreach ($users as $us)
                             <tr>
                                 <td>
                                     <div class="checkbox">
@@ -53,36 +60,47 @@
                                     <div class="list-media">
                                         <div class="list-item">
                                             <div class="media-img">
-                                                <img src="{{ asset("storage/img/users/$user->avatar") }}" alt="">
+                                                <img src="{{ asset("storage/img/users/$us->avatar") }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title">{{ $user->username }}</span>
-                                                <span class="sub-title">ID {{ $user->id }}</span>
+                                                <span class="title">{{ $us->username }}</span>
+                                                <span class="sub-title">ID {{ $us->id }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                @if($user->account==null)
-                                <td> 0 </td>
+                                @if ($us->account == null)
+                                    <td> 0 </td>
                                 @else
-                                <td>{{ $user->account }}</td>
+                                    <td>{{ $us->account }}</td>
                                 @endif
-                                <td>{{ $user->roles->first()->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phonenumber }}</td>
-                                <td> {{ $user->address }}</td>
-                                @if ($user->sex == 1)
+                                <td>{{ $us->roles->first()->name }}</td>
+                                <td>{{ $us->email }}</td>
+                                <td>{{ $us->phonenumber }}</td>
+                                <td> {{ $us->address }}</td>
+                                @if ($us->sex == 1)
                                     <td> Male </td>
                                 @else
                                     <td> Female </td>
                                 @endif
-                                <td class="text-center font-size-18">
-                                    <a href="{{ route('editUser', $user->id) }}" class="text-gray m-r-15"><i
-                                            class="ti-pencil"></i></a>
+                                @if (Auth::user()->inRole('admin'))
+                                    <td class="text-center font-size-18">
+                                        <a href="{{ route('editUser', $us->id) }}" class="text-gray m-r-15"><i
+                                                class="ti-pencil"></i></a>
 
-                                    <a href="javascript:;" class="text-gray delete"
-                                        did="{{ $user->id }}"><i class="ti-trash"></i></a>
-                                </td>
+                                        <a href="javascript:;" class="text-gray delete" did="{{ $us->id }}"><i
+                                                class="ti-trash"></i></a>
+                                    </td>
+                                @else
+
+                                    <td class="text-center font-size-18">
+                                        <a href="{{ route('memberEditUser', $us->id) }}" class="text-gray m-r-15"><i
+                                                class="ti-pencil"></i></a>
+
+                                        <a href="javascript:;" class="text-gray delete" did="{{ $us->id }}"><i
+                                                class="ti-trash"></i></a>
+                                    </td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>
@@ -108,9 +126,11 @@
             $.ajax({
                 type: "get",
                 url: '/admin/user/delete',
-                data: {did : id},
+                data: {
+                    did: id
+                },
                 dataType: "html",
-                success: function (response) {
+                success: function(response) {
                     html(data);
                 }
             });

@@ -20,6 +20,13 @@
     <div class="card">
         <div class="card-body">
             <div class="table-overflow">
+                @if (session('mess'))
+                    <div class="col-sm-12 bg-success">
+                        <p class="">
+                            <strong>{{ session('mess') }}</strong>
+                        </p>
+                    </div>
+                @endif
                 <table id="dt-opt" class="table table-hover table-xl">
                     <thead>
                         <tr>
@@ -40,53 +47,53 @@
                         </tr>
                     </thead>
                     <tbody>
-                            <tr>
-                                <td>
-                                    <div class="checkbox">
-                                        <input id="selectable2" type="checkbox">
-                                        <label for="selectable2"></label>
-                                    </div>
-                                </td>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <input id="selectable2" type="checkbox">
+                                    <label for="selectable2"></label>
+                                </div>
+                            </td>
 
-                                <td>
-                                    <div class="list-media">
-                                        <div class="list-item">
-                                            <div class="media-img">
-                                                <img src="/storage/img/users/{{ Auth::user()->avatar }}" alt="">
-                                            </div>
-                                            <div class="info">
-                                                <span class="title">{{ $user->username }}</span>
-                                                <span class="sub-title">ID {{ $user->id }}</span>
-                                            </div>
+                            <td>
+                                <div class="list-media">
+                                    <div class="list-item">
+                                        <div class="media-img">
+                                            <img src="/storage/img/users/{{ Auth::user()->avatar }}" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <span class="title">{{ $user->username }}</span>
+                                            <span class="sub-title">ID {{ $user->id }}</span>
                                         </div>
                                     </div>
-                                </td>
-                                @if($user->account==null)
+                                </div>
+                            </td>
+                            @if ($user->account == null)
                                 <td> 0 </td>
-                                @else
+                            @else
                                 <td>{{ $user->account }}</td>
-                                @endif
-                                @if(Auth::user()->inRole('admin'))
+                            @endif
+                            @if (Auth::user()->inRole('admin'))
                                 <td>Admin</td>
-                                @else
+                            @else
                                 <td>Member</td>
-                                @endif
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phonenumber }}</td>
-                                <td> {{ $user->address }}</td>
-                                @if ($user->sex == 1)
-                                    <td> Male </td>
-                                @else
-                                    <td> Female </td>
-                                @endif
-                                <td class="text-center font-size-18">
-                                    <a href="{{ route('editUser', $user->id) }}" class="text-gray m-r-15"><i
-                                            class="ti-pencil"></i></a>
+                            @endif
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->phonenumber }}</td>
+                            <td> {{ $user->address }}</td>
+                            @if ($user->sex == 1)
+                                <td> Male </td>
+                            @else
+                                <td> Female </td>
+                            @endif
+                            <td class="text-center font-size-18">
+                                <a href="{{ route('memberEditUser', $user->id) }}" class="text-gray m-r-15"><i
+                                        class="ti-pencil"></i></a>
 
-                                    <a href="javascript:;" class="text-gray delete"
-                                        did="{{ $user->id }}"><i class="ti-trash"></i></a>
-                                </td>
-                            </tr>
+                                <a href="javascript:;" class="text-gray delete" did="{{ $user->id }}"><i
+                                        class="ti-trash"></i></a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -110,9 +117,11 @@
             $.ajax({
                 type: "get",
                 url: '/admin/user/delete',
-                data: {did : id},
+                data: {
+                    did: id
+                },
                 dataType: "html",
-                success: function (response) {
+                success: function(response) {
                     html(data);
                 }
             });

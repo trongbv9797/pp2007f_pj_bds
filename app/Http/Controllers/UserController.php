@@ -182,8 +182,8 @@ class UserController extends Controller
         $products = DB::table('products')->orderBy('id','DESC')->limit(5)->get();
         $year = Date('Y');
         $month = Date('m');
-        $sales = DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->get()->count();
-        $reve = DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->sum('post_price');
+        $sales = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->get()->count());
+        $reve = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->sum('post_price'));
         $users = User::all();
         
         return view ('admin.dashboard.index',compact('user','products','users','sales','reve','month','year'));

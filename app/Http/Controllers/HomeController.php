@@ -12,6 +12,8 @@ use App\Models\District;
 use App\Models\Province;
 use App\Models\Slide;
 
+
+
 class HomeController extends Controller
 {
     public function index() {
@@ -21,7 +23,7 @@ class HomeController extends Controller
         $k = 0;
         $l = 0;
         $districs = District::all();
-        $provinces = Province::all();
+        $provinces = Province::orderBy('name')->get();
 
         $banners = Slide::where('type','banner')->get();
         $sidebars = Slide::where('type','sidebar')->get();

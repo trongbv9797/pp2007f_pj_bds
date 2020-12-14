@@ -16,23 +16,34 @@ class NhaDatBanController extends Controller
     public function index()
     {
         // filter theo thanh pho
-        if (isset($_GET['tp'])) {
+        if (isset($_GET['province'])) {
 
             $provinces = Province::all()->sortByDesc('count_posts');
-            $provinces_code = Province::where('slug', $_GET['tp'])->get('code')->toArray();
-            $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                ->where('province_code', '=', $provinces_code)
-                ->orderBy('post_type_id', 'desc')
-                ->orderBy('created_at', 'desc')
-                ->paginate(10);
+            if ($_GET['province'] == 'toan-quoc') {
+                $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
+                $products = Products::whereIn('menu_category_id', array(1, 2, 3))
+                    ->orderBy('post_type_id', 'desc')
+                    ->orderBy('created_at', 'desc')
+                    ->paginate(10);
 
-            $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->count();
-            return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
+                $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->count();
+                return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
+            } else {
+                $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
+                $products = Products::whereIn('menu_category_id', array(1, 2, 3))
+                    ->where('province_code', '=', $provinces_code)
+                    ->orderBy('post_type_id', 'desc')
+                    ->orderBy('created_at', 'desc')
+                    ->paginate(10);
+
+                $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->count();
+                return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
+            }
         }
         //filter theo thanh pho + dien tich
-        // elseif (isset($_GET['tp']) && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
+        // elseif (isset($_GET['province']) && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
         //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('slug', $_GET['tp'])->get('code')->toArray();
+        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
         //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
         //         ->where('province_code', '=', $provinces_code)
         //         ->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])
@@ -44,9 +55,9 @@ class NhaDatBanController extends Controller
         //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
         // }
         // filter theo thanh pho + gia
-        // elseif (isset($_GET['tp']) && isset($_GET['giamin']) && isset($_GET['giamax'])) {
+        // elseif (isset($_GET['province']) && isset($_GET['giamin']) && isset($_GET['giamax'])) {
         //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('slug', $_GET['tp'])->get('code')->toArray();
+        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
         //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
         //         ->where('province_code', '=', $provinces_code)
         //         ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
@@ -58,9 +69,9 @@ class NhaDatBanController extends Controller
         //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
         // }
         // filter theo thanh pho + dien tich + gia
-        // elseif (isset($_GET['tp']) && isset($_GET['giamin']) && isset($_GET['giamax'])  && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
+        // elseif (isset($_GET['province']) && isset($_GET['giamin']) && isset($_GET['giamax'])  && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
         //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('slug', $_GET['tp'])->get('code')->toArray();
+        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
         //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
         //         ->where('province_code', '=', $provinces_code)
         //         ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
@@ -83,8 +94,7 @@ class NhaDatBanController extends Controller
 
             $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])->count();
             return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-            
-        } 
+        }
         // filter theo dien tich + gia
         // elseif (isset($_GET['giamin']) && isset($_GET['giamax'])  && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
         //     $provinces = Province::all()->sortByDesc('count_posts');
@@ -128,8 +138,8 @@ class NhaDatBanController extends Controller
 
         $products = Products::where('id', '=', $id)->first();
         $products_area = Products::where('district_code', $products->district_code)
-        ->orderBy('post_type_id', 'desc')
-        ->orderBy('created_at', 'desc')->get();
+            ->orderBy('post_type_id', 'desc')
+            ->orderBy('created_at', 'desc')->get();
         $images = Image::where('products_id', $id)->get();
         $images_area = Image::all();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
@@ -175,5 +185,4 @@ class NhaDatBanController extends Controller
     {
         return view("pages.nhadatban.index");
     }
-
 }

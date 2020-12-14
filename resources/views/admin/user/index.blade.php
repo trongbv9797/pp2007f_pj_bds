@@ -119,20 +119,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            var id = $('a.delete').attr('did');
+
             $('.delete').click(function() {
+                var id = $(this).attr('did');
                 $(this).closest("tr").remove();
-            });
-            $.ajax({
-                type: "get",
-                url: '/admin/user/delete',
-                data: {
-                    did: id
-                },
-                dataType: "html",
-                success: function(response) {
-                    html(data);
-                }
+                $.ajax({
+                    type: "get",
+                    url: '/admin/user/deletetrashed/',
+                    data: {
+                        did: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+                        html(data);
+                    }
+                });
             });
         });
 

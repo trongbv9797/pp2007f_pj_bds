@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('title', 'User Trash')
+@section('title', 'User Table')
 
 @section('styles')
     <link rel="stylesheet" href="/assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css">
@@ -8,18 +8,25 @@
 
 @section('content')
     <div class="page-header">
-        <h2 class="header-title">User Trash</h2>
+        <h2 class="header-title">{{ __('User Table') }}</h2>
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
                 <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Admin</a>
-                <a class="breadcrumb-item" href="#">User</a>
-                <span class="breadcrumb-item active">User Trash</span>
+                <a class="breadcrumb-item" href="#">{{ __('Users') }}</a>
+                <span class="breadcrumb-item active">{{ __('User Table') }}</span>
             </nav>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
             <div class="table-overflow">
+                @if (session('mess'))
+                    <div class="col-sm-12 bg-success">
+                        <p class="">
+                            <strong>{{ session('mess') }}</strong>
+                        </p>
+                    </div>
+                @endif
                 <table id="dt-opt" class="table table-hover table-xl">
                     <thead>
                         <tr>
@@ -29,18 +36,18 @@
                                     <label for="selectable1"></label>
                                 </div>
                             </th>
-                            <th>User Name</th>
-                            <th>Account</th>
-                            <th>Role</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Adress</th>
-                            <th>Sex</th>
+                            <th>{{ __('User Name') }}</th>
+                            <th>{{ __('Account') }}</th>
+                            <th>{{ __('Role') }}</th>
+                            <th>{{ __('Email') }}</th>
+                            <th>{{ __('Phone Number') }}</th>
+                            <th>{{ __('Adress') }}</th>
+                            <th>{{ __('Sex') }}</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($users as $user)
+                        @foreach ($users as $us)
                             <tr>
                                 <td>
                                     <div class="checkbox">
@@ -53,36 +60,34 @@
                                     <div class="list-media">
                                         <div class="list-item">
                                             <div class="media-img">
-                                                <img src="{{ asset("storage/img/users/$user->avatar") }}" alt="">
+                                                <img src="{{ asset("storage/img/users/$us->avatar") }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title">{{ $user->username }}</span>
-                                                <span class="sub-title">ID {{ $user->id }}</span>
+                                                <span class="title">{{ $us->username }}</span>
+                                                <span class="sub-title">ID {{ $us->id }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                @if($user->account==null)
-                                <td> 0 </td>
+                                @if ($us->account == null)
+                                    <td> 0 </td>
                                 @else
-                                <td>{{ $user->account }}</td>
+                                    <td>{{ $us->account }}</td>
                                 @endif
-                                <td>{{ $user->roles->first()->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phonenumber }}</td>
-                                <td> {{ $user->address }}</td>
-                                @if ($user->sex == 1)
-                                    <td> Male </td>
+                                <td>{{ $us->roles->first()->name }}</td>
+                                <td>{{ $us->email }}</td>
+                                <td>{{ $us->phonenumber }}</td>
+                                <td> {{ $us->address }}</td>
+                                @if ($us->sex == 1)
+                                    <td> {{ __('Male') }}</td>
                                 @else
-                                    <td> Female </td>
+                                    <td> {{ __('Female') }}</td>
                                 @endif
-                                <td class="text-center font-size-18">
-                                    <a href="{{ route('editUser', $user->id) }}" class="text-gray m-r-15"><i
-                                            class="ti-pencil"></i></a>
-
-                                    <a href="javascript:;" class="text-gray delete"
-                                        did="{{ $user->id }}"><i class="ti-trash"></i></a>
-                                </td>
+                                @if (Auth::user()->inRole('admin'))
+                                    <td class="text-center font-size-18">
+                                        <a href="{{ route('restoreTrashed', $us->id) }}" class="text-gray m-r-15"><i class="fa fa-undo" aria-hidden="true"></i></a>
+                                    </td>
+                                @endif
                             </tr>
                         @endforeach
                     </tbody>
@@ -101,18 +106,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            var id = $('a.delete').attr('did');
+
             $('.delete').click(function() {
+                var id = $(this).attr('did');
                 $(this).closest("tr").remove();
-            });
-            $.ajax({
-                type: "get",
-                url: '/admin/user/delete',
-                data: {did : id},
-                dataType: "html",
-                success: function (response) {
-                    html(data);
-                }
+                $.ajax({
+                    type: "get",
+                    url: {{ route('deleteTrashedUser') }},
+                    data: {
+                        did: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+                        html(data);
+                    }
+                });
             });
         });
 

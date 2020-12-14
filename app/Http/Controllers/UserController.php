@@ -19,7 +19,7 @@ use Illuminate\Http\UploadedFile;
 class UserController extends Controller
 {
     public function index() {
-        $users = User::with('roles')->get();
+        $users = User::with('roles')->paginate(100);
         $user = Auth::user();
         return view ('admin.user.index', compact('users','user'));
     }
@@ -114,8 +114,8 @@ class UserController extends Controller
     }
 
     public function delete(Request $request) {
-        $did = $request->get('did');
-        $user = User::find($did);
+
+        $user = User::find($request->did);
         $user->delete();
     }
 
@@ -227,10 +227,16 @@ class UserController extends Controller
         return redirect()->route('memberIndex')->with('mess','You are updated success');
     }
 
-    public function memberDelete(Request $request) {
-        $did = $request->get('did');
-        $user = User::find($did);
-        $user->delete();
+    public function viewTrashed() {
+        $users = User::onlyTrashed()->get();
+
+        $user = Auth::user();
+        return view ('admin.user.trashed', compact('users','user'));
+    }
+
+    public function restoreTrashed($id) {
+        User::withTrashed()->where('id', $id)->restore();
+        return redirect()->back()->with('mess', 'User is restored');
     }
     
 

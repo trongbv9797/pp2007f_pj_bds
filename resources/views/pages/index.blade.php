@@ -40,7 +40,7 @@
 <div class="new-home-2020">
     <div class="home-center">
         <div class="banner-home-slide">
-            <form id="boxSearchForm" action="{{ route('search') }}" method="post" novalidate="novalidate">
+            <form id="boxSearchForm" action="{{ route('nha_dat_ban_post') }}" method="get" novalidate="novalidate">
                 @csrf
                 <div class="search-bar shadow-lv-1 clearfix">
                     <div class="search-guide" style="left: 1274.5px; top: 64px; display: block;">
@@ -63,27 +63,29 @@
                     <div class="select-control city-control">
                         <div class="select-control-label">
                             <div class="dropbox-label">Khu vực</div>
-                            <select name="province" id="filter-province">
-                                <option value="0" name="toan-quoc" selected>Toàn quốc</option>
+                            <select name="province" id="filter-province" class="province" data-type="province">
+                                <option value="toan-quoc" name="toan-quoc" selected>Toàn quốc</option>
                                 @foreach($provinces as $province)
-                                <option value="{!! $province->code !!}" name="$province->slug">{!! $province->name !!}</option>
+                                <option value="{!! $province->slug !!}" name="$province->slug" id="$province->code">{!! $province->name !!}</option>
                                 @endforeach
                             </select>
                         </div>
                         <!-- list tp cu~ -->
                     </div>
-                    <div id="filter-district" class="select-control district-control">
-                        <div class="select-control-label" for="filter-district">
-                            <div class="dropbox-label" for="filter-district">Quận, huyện</div>
+                    <div class="select-control district-control">
+                        <div class="select-control-label">
+                            <div class="dropbox-label">Quận, huyện</div>
                             <select name="district" id="filter-district">
-                                <option value="">
+                                <option value="toan-quoc" selected>
                                     Tất cả
                                 </option>
+                                <option value="1">
+                                    Test 1
+                                </option>
+                                <option value="2">
+                                    Test 2
+                                </option>
                             </select>
-                        </div>
-                        <input data-val="true" data-val-required="The SubCateId field is required." id="hdCboCatagory" name="SubCateId" type="hidden" value="0" />
-                        <div id="select-cate-options" class="custom-dropbox-cate hiding advance-select-options custom-scroll">
-                            <div id="divCate"></div>
                         </div>
                     </div>
                     <div class="select-control price-control">
@@ -91,25 +93,25 @@
                             <div class="dropbox-label">Mức giá</div>
                             <select name="price" id="filter-price">
                                 <option value="" selected>Tất cả</option>
-                                <option value="" >1 - 2 tỷ</option>
-                                <option value="" >2 - 3 tỷ</option>
-                                <option value="" >3 - 5 tỷ</option>
-                                <option value="" >5 - 7 tỷ</option>
-                                <option value="" >7 - 10 tỷ</option>
+                                <option value="1" >1 - 2 tỷ</option>
+                                <option value="2" >2 - 3 tỷ</option>
+                                <option value="3" >3 - 5 tỷ</option>
+                                <option value="4" >5 - 7 tỷ</option>
+                                <option value="5" >7 - 10 tỷ</option>
                             </select>
                         </div>                        
                     </div>
                     <div class="select-control area-control">
                         <div class="select-control-label">
                             <div class="dropbox-label">Diện tích</div>
-                            <select name="price" id="filter-price">
+                            <select name="price" id="filter-area">
                                 <option value="" selected>Tất cả</option>
-                                <option value="" >1 - 2 tỷ</option>
-                                <option value="" >30 - 50 m2</option>
-                                <option value="" >50 - 80 m2</option>
-                                <option value="" >80 - 100 m2</option>
-                                <option value="" >100 - 150 m2</option>
-                                <option value="" >150 - 200 m2</option>
+                                <option value="1" >1 - 2 tỷ</option>
+                                <option value="2" >30 - 50 m2</option>
+                                <option value="3" >50 - 80 m2</option>
+                                <option value="4" >80 - 100 m2</option>
+                                <option value="5" >100 - 150 m2</option>
+                                <option value="6" >150 - 200 m2</option>
                             </select>
                         </div>
                         
@@ -1140,13 +1142,11 @@
             $(this).addClass('actived').siblings().removeClass('actived');
         });
 
-        $('#filter-province').on('change', function(){
-            if(($this).val() == 0){
-                $('#filterdistrict').attr('title', 'Bạn hãy chọn tỉnh thành trước');
-            } else{
-
-            }
-        });
+       
+        // clear filter
+        $('#link-reset').click(function(){
+            $('#boxSearchForm')[0].reset();
+        })
     });
 </script>
 @endsection

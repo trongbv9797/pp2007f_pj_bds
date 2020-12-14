@@ -31,7 +31,8 @@ Route::post('/user/create','UserController@storeUser')->name('storeUser');
 Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistrict');
 Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 
-Route::get('/search', 'HomeController@search')->name('search');
+// getDistrict ajax
+Route::get('/getDistrict', 'HomeController@getDistrict')->name('getDistrict');
 
 Route::prefix('/member')->group(function () {
     Route::get('/index','UserController@indexMember')->name('memberIndex')->middleware('auth');
@@ -85,13 +86,13 @@ Route::get('/articles{id}', 'TinTucController@articles')->name('tintuc_single_po
 
 //NhaDatBanController -----TAI ANH
 Route::get('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban');
+Route::post('/nha-dat-ban', 'NhaDatBanController@index')->name('nha_dat_ban_post');
 Route::get('/ban-can-ho-chung-cu', 'NhaDatBanController@banCanHoChungCu')->name('ban_can_ho_chung_cu');
 Route::get('/ban-nha-rieng', 'NhaDatBanController@banNhaRieng')->name('ban_nha_rieng');
 Route::get('/ban-nha-mat-pho', 'NhaDatBanController@banNhaMatPho')->name('ban_nha_mat_pho');
 Route::get('/nha-dat-ban/{id}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_single_post');
 
 Route::get('/nha-dat-ban{slug}', 'NhaDatBanController@nhaDatBanSinglePost')->name('nhadatban_district');
-
 
 
 

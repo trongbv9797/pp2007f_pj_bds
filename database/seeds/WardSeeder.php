@@ -15,7 +15,7 @@ class WardSeeder extends Seeder
     {
         //
         DB::table('wards')->delete();
-        $string = file_get_contents(__DIR__.'/dist/xa_phuong.json');
+        $string = file_get_contents(public_path('assets/dist/xa_phuong.json'));
         $json_a = json_decode($string, true);
         foreach($json_a as $item){
             Ward::create(array(

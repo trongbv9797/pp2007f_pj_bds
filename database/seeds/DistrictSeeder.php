@@ -15,7 +15,7 @@ class DistrictSeeder extends Seeder
     {
         //
         DB::table('districts')->delete();
-        $string = file_get_contents(__DIR__.'/dist/quan_huyen.json');
+        $string = file_get_contents(public_path('assets/dist/quan_huyen.json'));
         $json_a = json_decode($string, true);
         foreach($json_a as $item){
             DB::table('districts')->insert([

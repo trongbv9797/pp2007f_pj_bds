@@ -164,7 +164,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         Route::post('/slide/create', 'SlideController@store')->name('storeSlide');
         Route::get('slide/edit/{id}', 'SlideController@edit')->name('editSlide');
         Route::post('slide/edit/{id}', 'SlideController@update')->name('updateslide');
-        Route::get('slide/delete/', 'SlideController@delete')->name('deleteSlide');
+        Route::get('slide/delete{id}/', 'SlideController@delete')->name('deleteSlide');
 
         // admin/post-type
         Route::get('/post-type', 'PostTypeController@index')->name('postTypeIndex');

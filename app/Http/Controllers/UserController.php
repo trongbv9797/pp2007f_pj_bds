@@ -15,11 +15,19 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
+use App\Repositories\User\UserRepositoryInterface;
 
 class UserController extends Controller
-{
+{   
+    protected $userRepo;
+
+    public function __construct(UserRepositoryInterface $userRepo) {
+        $this->userRepo = $userRepo;
+    }
+
     public function index() {
-        $users = User::with('roles')->paginate(100);
+        // $users = User::with('roles')->paginate(100);
+        $users = $this->userRepo->getAll();
         $user = Auth::user();
         return view ('admin.user.index', compact('users','user'));
     }

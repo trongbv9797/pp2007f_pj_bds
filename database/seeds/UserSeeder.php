@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 
 class UserSeeder extends Seeder
 
@@ -28,7 +29,7 @@ class UserSeeder extends Seeder
         $user0 = User::create([
             'username' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('123456'),
+            'password' => Crypt::encryptString('123456'),
             'fullname' => 'kviet91' ,
             'account' => rand(100,1000)*1000,
             'sex' => rand(0,1),
@@ -42,7 +43,7 @@ class UserSeeder extends Seeder
         $user1 = User::create([
             'username' => 'member',
             'email' => 'member@gmail.com',
-            'password' => Hash::make('123456'),
+            'password' => Crypt::encryptString('123456'),
             'fullname' => 'kviet91' ,
             'account' => rand(100,1000)*1000,
             'sex' => rand(0,1),

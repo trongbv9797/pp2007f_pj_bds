@@ -207,3 +207,4 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
 
 
 Route::get('change-language/{language}', 'HomeController@changeLanguage')->name('change-language');
+route::Get('/test-repo', 'NhaDatBanController@testRepo');

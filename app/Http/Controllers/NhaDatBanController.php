@@ -8,6 +8,7 @@ use App\Models\Province;
 use App\Models\Ward;
 use App\Repositories\ImageRepository;
 use App\Repositories\ImageRepositoryInterface;
+use App\Repositories\NhaDatBanRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Repositories\ProductRepositoryInterface;
@@ -19,11 +20,18 @@ class NhaDatBanController extends Controller
 
     protected $imageRepository;
 
-    public function __construct(ProductRepositoryInterface $productRepository, ImageRepositoryInterface $imageRepository)
+    public function __construct(ProductRepositoryInterface $productRepository, ImageRepositoryInterface $imageRepository, NhaDatBanRepositoryInterface $productRepository123)
     {
         $this->productRepository = $productRepository;
 
         $this->imageRepository = $imageRepository;
+
+        $this->productRepository = $productRepository123;
+    }
+    public function testRepo()
+    {
+        $products = $this->productRepository->getProducts();
+        return view('RepositoryTest.nhadatban', compact('products'));
     }
 
     public function index()

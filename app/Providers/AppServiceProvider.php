@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -50,6 +51,10 @@ class AppServiceProvider extends ServiceProvider
             
         );
 
+        $this->app->singleton(
+            \App\Repositories\NhaDatBanRepositoryInterface::class,
+            \App\Repositories\NhaDatBanRepository::class,
+        );
     }
 
     // /**

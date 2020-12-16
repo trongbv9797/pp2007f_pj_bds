@@ -152,7 +152,7 @@ class NhaDatBanController extends Controller
         $products = $this->productRepository->singlePost($id);
         $products_area = $this->productRepository->relatedPost($id);
         $images = $this->imageRepository->relatedImage($id);
-        $images_area = $this->imageRepository->allImage();
+        $images_area = $this->imageRepository->getAll();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
     }
 

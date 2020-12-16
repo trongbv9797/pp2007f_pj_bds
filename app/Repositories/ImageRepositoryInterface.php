@@ -1,7 +1,7 @@
 <?php
 namespace App\Repositories;
 
-interface ImageRepositoryInterface
+interface ImageRepositoryInterface extends RepositoryInterface
 {
     public function relatedImage($id);
 

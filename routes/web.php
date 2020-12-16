@@ -183,6 +183,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         Route::get('/delete-post', 'PostController@deletePost')->name('deletePost');
         Route::get('/trash-post', 'PostController@trash')->name('trashPost');
         Route::get('/restore-post', 'PostController@restorePost')->name('restorePost');
+        Route::get('/filter', 'PostController@filterPost')->name('filterPost'); 
 
 
         // admin/menu

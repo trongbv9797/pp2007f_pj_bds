@@ -25,8 +25,6 @@ class NhaDatBanController extends Controller
         $this->productRepository = $productRepository;
 
         $this->imageRepository = $imageRepository;
-
-        $this->productRepository = $productRepository123;
     }
     public function testRepo()
     {

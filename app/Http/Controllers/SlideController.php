@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\SlideFromRequest;
 use App\Models\Slide;
-use App\Repositories\Slide\SlideRepositoryInterface;
+use App\Repositories\Slide\SlideRepository;
 
 class SlideController extends Controller
 {
     public $slideRepository;
 
-    public function __construct(SlideRepositoryInterface $slideRepository)
+    public function __construct(SlideRepository $slideRepository)
     {
         $this->slideRepository = $slideRepository;
     }

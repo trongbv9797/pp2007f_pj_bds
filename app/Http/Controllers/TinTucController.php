@@ -52,7 +52,7 @@ class TinTucController extends Controller
     
 
     public function articles($id) {
-        $articles = Article::where('id', '=', $id)->get();
+        $articles = $this->articleRepo->articles($id);
         $newarticles = Article::orderBy('id', 'desc')->limit(5)->get();
         return view("pages.tintucbds.singlepost", compact('articles','newarticles'));
     }

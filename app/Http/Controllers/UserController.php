@@ -27,7 +27,7 @@ class UserController extends Controller
 
     public function index() {
         // $users = User::with('roles')->paginate(100);
-        $users = $this->userRepo->getAll();
+        $users = $this->userRepo->getUser();
         $user = Auth::user();
         return view ('admin.user.index', compact('users','user'));
     }
@@ -87,44 +87,20 @@ class UserController extends Controller
     public function edit($id) {
         $provinces = Province::all();
         $districts = District::all();
-        $user = User::findOrFail($id);
+
+        $user = $this->userRepo->find($id);
         // dd($user);
         return view ('admin.user.edit',compact('user','provinces','districts'));
     }
 
     public function update(Request $request,$id) {
-        $user = User::findOrFail($id);
-
-        if ($request->hasFile('avatar1')) {
-            $file = $request->file('avatar1');
-            $name = $file->getClientOriginalName();
-            $nameAva = time()."_".$name;
-            $file->move(config('app.link_users'), $nameAva);
-            $user->avatar = $nameAva;
-        }
-        else {
-            $user->avatar = "";
-        }
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->fullname = $request->fullname;
-        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
-        if($request->ward != 0) {
-            $user->address = Ward::where('code',$request->ward)->first()->path_with_type;
-        }
-        $user->phonenumber = $request->phonenumber;
-        $user->sex = $request->sex;
-        $account = $user->account;
-        $user->account = $account + $request->account;
-        $user->roles()->sync($request->role);
-        $user->save();
+        $user = $this->userRepo->update($id, $request);
         return redirect()->route('userIndex')->with('mess','You are updated success');
     }
 
     public function delete(Request $request) {
 
-        $user = User::find($request->did);
-        $user->delete();
+        $user = $this->userRepo->delete($request->did);
     }
 
     public function post() {
@@ -144,39 +120,7 @@ class UserController extends Controller
     }
 
     public function storeUser(Request $request) {
-        $user = new User();
-        // dd($request);
-        // $disk = Storage::disk('local');
-        // dd($path);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->password = $request->inputPassword;
-        $user->fullname = $request->fullname;
-        $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
-        $user->address = $request->address;
-        $user->phonenumber = $request->phonenumber;
-        $user->sex = $request->sex;
-
-        if ($request->hasFile('avatar')) {
-            $file = $request->file('avatar');
-            $name = $file->getClientOriginalName();
-            
-            $nameAva = time()."_".$name;
-            
-            $file->move(config('app.link_users'), $nameAva);
-            $user->avatar = $nameAva;
-        }
-        else {
-            $user->avatar = "";
-        }
-        
-        $user->save();
-        $user1 = User::where('email',$request->email)->first();
-
-        $userRole = DB::table('role_user')->insert([
-            'user_id' => $user1->id,
-            'role_id' => 2,
-        ]);
+        $user = $this->userRepo->create($request);
 
         return redirect('/login');
     }

@@ -56,6 +56,12 @@ class AppServiceProvider extends ServiceProvider
             
         );
 
+        $this->app->singleton(
+            \App\Repositories\NhaDatBanRepositoryInterface::class,
+            \App\Repositories\NhaDatBanRepository::class
+
+        );
+
     }
 
     // /**

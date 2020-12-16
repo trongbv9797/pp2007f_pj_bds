@@ -4,6 +4,7 @@ namespace App\Repositories\User;
 use App\Repositories\BaseRepository;
 use App\Models\User;
 use App\Models\Ward;
+use App\Models\HistoryAccount;
 use Illuminate\Support\Facades\DB;
 
 class UserRepository extends BaseRepository implements UserRepositoryInterface
@@ -42,7 +43,16 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
             $account = $result->account;
             $result->account = $account + $attributes->account;
             $result->roles()->sync($attributes->role);
-            return $result->save();
+            $result->save();
+
+            $historyAccount= new HistoryAccount;
+
+            $historyAccount->change_account = $attributes->account;
+            $historyAccount->user_id = $attributes->id;
+            $historyAccount->explain = "recharge account by Admin";
+            $historyAccount->created_at = date('Y-m-d h:i:s');
+            $historyAccount->save();
+
         }
 
         return false;

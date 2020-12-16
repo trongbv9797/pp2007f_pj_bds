@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="page-header">
-        <h2 class="header-title">{{ __('User Table') }}</h2>
+        <h2 class="header-title">{{ __('Transaction History') }}</h2>
         <div class="header-sub-title">
             <nav class="breadcrumb breadcrumb-dash">
                 <a href="#" class="breadcrumb-item"><i class="ti-home p-r-5"></i>Admin</a>
@@ -37,17 +37,13 @@
                                 </div>
                             </th>
                             <th>{{ __('User Name') }}</th>
-                            <th>{{ __('Account') }}</th>
-                            <th>{{ __('Role') }}</th>
-                            <th>{{ __('Email') }}</th>
-                            <th>{{ __('Phone Number') }}</th>
-                            <th>{{ __('Adress') }}</th>
-                            <th>{{ __('Sex') }}</th>
-                            <th></th>
+                            <th>{{ __('Change Acount') }}</th>
+                            <th>{{ __('Explain') }}</th>
+                            <th>{{ __('Created at') }}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($users as $us)
+                        @foreach ($transactionHistory as $us)
                             <tr>
                                 <td>
                                     <div class="checkbox">
@@ -60,41 +56,26 @@
                                     <div class="list-media">
                                         <div class="list-item">
                                             <div class="media-img">
-                                                <img src="{{ asset("storage/img/users/$us->avatar") }}" alt="">
+                                                <img src="{{ asset("storage/img/users/$us->user->avatar") }}" alt="">
                                             </div>
                                             <div class="info">
-                                                <span class="title">{{ $us->username }}</span>
-                                                <span class="sub-title">ID {{ $us->id }}</span>
+                                                <span class="title">{{ $us->user->username }}</span>
+                                                <span class="sub-title">ID {{ $us->user->id }}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                @if ($us->account == null)
+                                @if ($us->change_account == null)
                                     <td> 0 </td>
                                 @else
-                                    <td>{{ number_format($us->account) }}</td>
+                                    <td>{{ number_format($us->change_account) }} VND</td>
                                 @endif
-                                <td>{{ $us->roles->first()->name }}</td>
-                                <td>{{ $us->email }}</td>
-                                <td>{{ $us->phonenumber }}</td>
-                                <td> {{ $us->address }}</td>
-                                @if ($us->sex == 1)
-                                    <td> {{ __('Male') }}</td>
-                                @else
-                                    <td> {{ __('Female') }}</td>
-                                @endif
+                                <td>{{ $us->explain }}</td>
+                                <td>{{ $us->created_at }}</td>
+                                
                                 @if (Auth::user()->inRole('admin'))
                                     <td class="text-center font-size-18">
                                         <a href="{{ route('editUser', $us->id) }}" class="text-gray m-r-15"><i
-                                                class="ti-pencil"></i></a>
-
-                                        <a href="javascript:;" class="text-gray delete" did="{{ $us->id }}"><i
-                                                class="ti-trash"></i></a>
-                                    </td>
-                                @else
-
-                                    <td class="text-center font-size-18">
-                                        <a href="{{ route('memberEditUser', $us->id) }}" class="text-gray m-r-15"><i
                                                 class="ti-pencil"></i></a>
 
                                         <a href="javascript:;" class="text-gray delete" did="{{ $us->id }}"><i

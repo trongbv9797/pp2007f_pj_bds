@@ -16,13 +16,16 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\UploadedFile;
 use App\Repositories\User\UserRepositoryInterface;
+use App\Repositories\HistoryAccount\HistoryAccountRepositoryInterface;
 
 class UserController extends Controller
 {   
     protected $userRepo;
+    protected $historyAccount;
 
-    public function __construct(UserRepositoryInterface $userRepo) {
+    public function __construct(UserRepositoryInterface $userRepo, HistoryAccountRepositoryInterface $historyAccount) {
         $this->userRepo = $userRepo;
+        $this->historyAccount = $historyAccount;
     }
 
     public function index() {
@@ -136,7 +139,7 @@ class UserController extends Controller
         $month = Date('m');
         $sales = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->get()->count());
         $reve = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->sum('post_price'));
-        $users = User::all();
+        $users = User::onlyTrashed()->get();
         
         return view ('admin.dashboard.index',compact('user','products','users','sales','reve','month','year'));
     }
@@ -189,6 +192,13 @@ class UserController extends Controller
     public function restoreTrashed($id) {
         User::withTrashed()->where('id', $id)->restore();
         return redirect()->back()->with('mess', 'User is restored');
+    }
+
+    public function transactionHistory() {
+        $transactionHistory = $this->historyAccount->getAll();
+
+        return view ( 'admin.user.history',compact('transactionHistory'));
+
     }
     
 

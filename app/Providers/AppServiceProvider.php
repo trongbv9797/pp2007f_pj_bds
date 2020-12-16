@@ -25,6 +25,12 @@ class AppServiceProvider extends ServiceProvider
             
         );
 
+        $this->app->singleton(
+            \App\Repositories\HistoryAccount\HistoryAccountRepositoryInterface::class,
+            \App\Repositories\HistoryAccount\HistoryAccountRepository::class,
+            
+        );
+
 
         $this->app->singleton(
             \App\Repositories\Slide\SlideRepositoryInterface::class,

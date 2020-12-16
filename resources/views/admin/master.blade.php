@@ -372,19 +372,9 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{ Route('dash') }}">View</a>
-                                    <a href="index.html">{{ __('Default') }}</a>
+                                    <a href="{{ Route('dash') }}">Index</a>
                                 </li>
-                                <li>
-                                    <a href="index-analytical.html">{{ __('Analytical') }}</a>
-                                </li>
-                                <li>
-                                    <a href="index-bank.html">{{ __('Bank') }}</a>
-                                </li>
-                                <li>
-                                    <a href="index-saas.html">{{ __('Saas') }}</a>
-                                </li>
-
+     
 
                             </ul>
                         </li>
@@ -406,6 +396,9 @@
                                     </li>
                                     <li>
                                         <a href="{{ Route('createUser') }}">{{ __('Create New User') }}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ Route('transactionHistory') }}">{{ __('Transaction History') }}</a>
                                     </li>
 
                                     <li>

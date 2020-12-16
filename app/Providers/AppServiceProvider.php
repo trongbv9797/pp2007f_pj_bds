@@ -7,6 +7,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -21,13 +22,22 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(
             \App\Repositories\User\UserRepositoryInterface::class,
             \App\Repositories\User\UserRepository::class,
-            \App\Repositories\Slide\SlideRepositoryInterface::class,
-            \App\Repositories\Slide\SlideRepository::class,
-            \App\Repositories\News\NewsRepositoryInterface::class,
-            \App\Repositories\News\NewsRepository::class
+            
         );
 
 
+        $this->app->singleton(
+            \App\Repositories\Slide\SlideRepositoryInterface::class,
+            \App\Repositories\Slide\SlideRepository::class
+            
+        );
+
+        $this->app->singleton(
+            
+            \App\Repositories\News\NewsRepositoryInterface::class,
+            \App\Repositories\News\NewsRepository::class
+            
+        );
 
         $this->app->bind(
             'App\Repositories\ProductRepositoryInterface',
@@ -36,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
         );
         $this->app->bind(
             'App\Repositories\ImageRepositoryInterface',
-            'App\Repositories\ImageRepository'
+            "App\Repositories\ImageRepository"
             
         );
 
@@ -67,6 +77,8 @@ class AppServiceProvider extends ServiceProvider
             $user = Auth::user();
             view::share('user', $user);
         }
+
+        Schema::defaultStringLength(191);
 
     }
 

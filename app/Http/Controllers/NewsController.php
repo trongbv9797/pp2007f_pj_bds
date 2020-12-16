@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\NewsFromRequest;
 use App\Models\Article;
-use App\Repositories\News\NewsRepository;
+use App\Repositories\News\NewsRepositoryInterface;
 
 class NewsController extends Controller
 {
     //
     public $newsRepository;
 
-    public function __construct(NewsRepository $newsRepository)
+    public function __construct(NewsRepositoryInterface $newsRepository)
     {
         $this->newsRepository = $newsRepository;
     }

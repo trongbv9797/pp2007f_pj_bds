@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Repositories\ArticleRepositoryInterface;
 
 class TinTucController extends Controller
 {
@@ -12,6 +13,12 @@ class TinTucController extends Controller
     //     return view('pages.tintucbds.tintuc');
     // }
 
+    public $articleRepo;
+
+    public function __construct(ArticleRepositoryInterface $articleRepo)
+    {
+        $this->articleRepo = $articleRepo;
+    }
 
     public function tinthitruong()
     {
@@ -51,7 +58,7 @@ class TinTucController extends Controller
     }
 
     public function index() {
-        $articles = DB::table('articles')->limit(6)->get();
+        $articles=$this->articleRepo->index();
         return view("pages.tintucbds.tintuc", compact('articles'));
     }
 

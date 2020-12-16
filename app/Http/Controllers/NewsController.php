@@ -5,10 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\NewsFromRequest;
 use App\Models\Article;
+use App\Repositories\News\NewsRepository;
 
 class NewsController extends Controller
 {
     //
+    public $newsRepository;
+
+    public function __construct(NewsRepository $newsRepository)
+    {
+        $this->newsRepository = $newsRepository;
+    }
 
     public function listNews() {
         $news =Article::orderBy('id', 'DESC')->get();

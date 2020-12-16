@@ -21,7 +21,25 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(
             \App\Repositories\User\UserRepositoryInterface::class,
             \App\Repositories\User\UserRepository::class,
+            \App\Repositories\Slide\SlideRepositoryInterface::class,
+            \App\Repositories\Slide\SlideRepository::class,
+            \App\Repositories\News\NewsRepositoryInterface::class,
+            \App\Repositories\News\NewsRepository::class
         );
+
+
+
+        $this->app->bind(
+            'App\Repositories\ProductRepositoryInterface',
+            'App\Repositories\ProductRepository'
+            
+        );
+        $this->app->bind(
+            'App\Repositories\ImageRepositoryInterface',
+            'App\Repositories\ImageRepository'
+            
+        );
+
     }
 
     // /**
@@ -52,23 +70,4 @@ class AppServiceProvider extends ServiceProvider
 
     }
 
-    public function register()
-    {
-        $this->app->singleton (
-            \App\Repositories\Slide\SlideRepositoryInterface::class,
-            \App\Repositories\Slide\SlideRepository::class
-        );
-    
-
-    $this->app->bind(
-        'App\Repositories\ProductRepositoryInterface',
-        'App\Repositories\ProductRepository'
-        
-    );
-    $this->app->bind(
-        'App\Repositories\ImageRepositoryInterface',
-        'App\Repositories\ImageRepository'
-        
-    );
-    }
 }

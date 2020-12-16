@@ -6,12 +6,25 @@ use App\Models\Image;
 use App\Models\Products;
 use App\Models\Province;
 use App\Models\Ward;
+use App\Repositories\ImageRepository;
+use App\Repositories\ImageRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Repositories\ProductRepositoryInterface;
 
 class NhaDatBanController extends Controller
 {
     //
+    protected $productRepository;
+
+    protected $imageRepository;
+
+    public function __construct(ProductRepositoryInterface $productRepository, ImageRepositoryInterface $imageRepository)
+    {
+        $this->productRepository = $productRepository;
+
+        $this->imageRepository = $imageRepository;
+    }
 
     public function index()
     {
@@ -136,12 +149,10 @@ class NhaDatBanController extends Controller
     public function nhaDatBanSinglePost($id)
     {
 
-        $products = Products::where('id', '=', $id)->first();
-        $products_area = Products::where('district_code', $products->district_code)
-            ->orderBy('post_type_id', 'desc')
-            ->orderBy('created_at', 'desc')->get();
-        $images = Image::where('products_id', $id)->get();
-        $images_area = Image::all();
+        $products = $this->productRepository->singlePost($id);
+        $products_area = $this->productRepository->relatedPost($id);
+        $images = $this->imageRepository->relatedImage($id);
+        $images_area = $this->imageRepository->allImage();
         return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
     }
 

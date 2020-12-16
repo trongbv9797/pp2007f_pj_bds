@@ -12,8 +12,6 @@ use App\Models\District;
 use App\Models\Province;
 use App\Models\Slide;
 
-
-
 class HomeController extends Controller
 {
     public function index() {
@@ -23,7 +21,7 @@ class HomeController extends Controller
         $k = 0;
         $l = 0;
         $districs = District::all();
-        $provinces = Province::orderBy('name')->get();
+        $provinces = Province::all();
 
         $banners = Slide::where('type','banner')->get();
         $sidebars = Slide::where('type','sidebar')->get();
@@ -39,7 +37,7 @@ class HomeController extends Controller
     }
 
     public function welcome()
-    {
+    {   
         return view('home');
     }
 

@@ -51,4 +51,24 @@ class AppServiceProvider extends ServiceProvider
         }
 
     }
+
+    public function register()
+    {
+        $this->app->singleton (
+            \App\Repositories\Slide\SlideRepositoryInterface::class,
+            \App\Repositories\Slide\SlideRepository::class
+        );
+    
+
+    $this->app->bind(
+        'App\Repositories\ProductRepositoryInterface',
+        'App\Repositories\ProductRepository'
+        
+    );
+    $this->app->bind(
+        'App\Repositories\ImageRepositoryInterface',
+        'App\Repositories\ImageRepository'
+        
+    );
+    }
 }

@@ -11,20 +11,12 @@ use App\Repositories\ImageRepositoryInterface;
 use App\Repositories\NhaDatBanRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Repositories\ProductRepositoryInterface;
 
 class NhaDatBanController extends Controller
 {
     //
     protected $productRepository;
-=======
-use App\Repositories\NhaDatBan\NhaDatBanRepositoryInterface;
-class NhaDatBanController extends Controller
-{
-    //
-    protected $productsRepo;
->>>>>>> trong_repository
 
     protected $imageRepository;
 
@@ -32,22 +24,13 @@ class NhaDatBanController extends Controller
     {
         $this->productRepository = $productRepository;
 
-<<<<<<< HEAD
         $this->imageRepository = $imageRepository;
-=======
-        $this->productsRepo = $productsRepo;
-    }
->>>>>>> trong_repository
 
         $this->productRepository = $productRepository123;
     }
     public function testRepo()
     {
-<<<<<<< HEAD
         $products = $this->productRepository->getProducts();
-=======
-        $products = $this->productsRepo->getProducts();
->>>>>>> trong_repository
         return view('RepositoryTest.nhadatban', compact('products'));
     }
 

@@ -91,7 +91,7 @@ class BrokerSeeder extends Seeder
         $faker = Faker\Factory::create();
         DB::table('brokers')->insert([
             'name' => 'CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN BẤT ĐỘNG SẢN AWESOME ACADEMY',
-            'address' => '8-10, Nguyễn Bá Tuyển, 12, Tân Bình, Hồ Chí Minh, Việt Nam',
+            'address' => 'Tầng 11 Tòa nhà Handico Tower, đường Phạm Hùng, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội',
             'mobile' => '0989199898',
             'mail' => 'victoryreal.vn@gmail.com',
             'website' => 'Đang cập nhật',

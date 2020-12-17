@@ -106,8 +106,9 @@ Route::get('/nha-dat-cho-thue{id}', 'NhaDatChoThueController@nhaDatChoThueSingle
 
 
 
-
+//Danh ba
 Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
+Route ::get('search', 'DanhbaController@getSearch')->name('search');
 
 //Doanh nghiep
 Route::get('/doanh-nghiep', 'DanhbaController@index1')->name('doanhnghiep');

@@ -82,12 +82,16 @@
                                 <td>
                                     <div class="list-media">
                                         <div class="list-item">
+                                            @if($users->find($pr->user_id) !=null )
                                             <div class="media-img">
+                                                
                                                 <img src="storage/img/users/{{ $users->find($pr->user_id)->avatar }}" alt="">
+                                                
                                             </div>
                                             <div class="info">
                                                 <span class="title p-t-10 text-semibold">{{ $users->find($pr->user_id)->username }}</span>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </td>

@@ -11,11 +11,15 @@
     }
 
     .select-control.city-control {
-        width: 200px !important;
+        width: 14% !important;
     }
 
     .select-control.district-control {
         width: 200px !important;
+    }
+
+    .district{
+        width: 100%;
     }
 
     .select-control.price-control {
@@ -37,7 +41,7 @@
 
 <body class="bg-site">
 
-    <form id="boxSearchForm" action="{{ route('nha_dat_ban_post') }}" method="get" novalidate="novalidate">
+    <form id="boxSearchForm" action="{{ route('nha_dat_ban') }}" method="get" novalidate="novalidate">
         @csrf
         <div class="search-bar shadow-lv-1 clearfix">
             <div class="search-guide" style="left: 1274.5px; top: 64px; display: block;">
@@ -47,7 +51,7 @@
                 <li class="filter-nha-dat actived" ptype="38" style="width: 70px;" name="nha-dat-ban">Bán</li>
                 <li class="filter-nha-dat" ptype="49" style="width: 100px;" name="nha-dat-cho-thue">Cho thuê</li>
             </ul>
-            <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38">
+            <!-- <input data-val="true" data-val-required="The CateId field is required." id="type" name="CateId" type="hidden" value="38"> -->
 
             <div class="search-bar-suggestion pad-top-8 mar-right-16">
                 <input type="hidden" id="suggestionTemp">
@@ -60,10 +64,10 @@
             <div class="select-control city-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Khu vực</div>
-                    <select name="province" id="filter-province" class="province" data-type="province">
-                        <option value="toan-quoc" name="toan-quoc" selected>Toàn quốc</option>
-                        @foreach($provinces as $province)
-                        <option value="{!! $province->slug !!}" name="$province->slug">{!! $province->name !!}</option>
+                    <select name="province" id="filter-province" class="province">
+                        <option value="0"  selected>Toàn quốc</option>
+                        @foreach($result as $province)
+                        <option value="{!! $province->code !!}">{!! $province->name !!}</option>
                         @endforeach
                     </select>
                 </div>
@@ -72,24 +76,16 @@
             <div class="select-control district-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Quận, huyện</div>
-                    <select name="quan" id="filter-district">
-                        <option value="0" selected>
-                            Tất cả
-                        </option>
-                        <option value="1">
-                            Tất cả 2
-                        </option>
-                        <option value="2">
-                            Tất cả 4
-                        </option>
+                    <select name="district" id="filter-district" class="district">
+                        <option value="0" class="district" >Tất cả</option>
                     </select>
                 </div>
             </div>
             <div class="select-control price-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Mức giá</div>
-                    <select name="gia" id="filter-price">
-                        <option value="0" selected>Tất cả</option>
+                    <select name="price">
+                        <option value="0"  selected>Tất cả</option>
                         <option value="1">1 - 2 tỷ</option>
                         <option value="2">2 - 3 tỷ</option>
                         <option value="3">3 - 5 tỷ</option>
@@ -101,10 +97,10 @@
             <div class="select-control area-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Diện tích</div>
-                    <select name="dt" id="filter-area">
+                    <select name="area" id="filter-area">
                         <option value="0" selected>Tất cả</option>
-                        <option value="1">1 - 2 tỷ</option>
-                        <option value="2">30 - 50 m2</option>
+                        <option value="1">< 30 m2</option>
+                        <option value="[30,50]">30 - 50 m2</option>
                         <option value="3">50 - 80 m2</option>
                         <option value="4">80 - 100 m2</option>
                         <option value="5">100 - 150 m2</option>
@@ -197,7 +193,7 @@
                     Mua bán nhà đất toàn quốc
                     @endif
                 </h1>
-                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">{!! $count_products !!}</span> bất động sản.</div>
+                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">count</span> bất động sản.</div>
 
 
             </div>
@@ -230,51 +226,44 @@
             </div>
             <div class="product-lists mar-top-16" id="product-lists-web" style="display:block">
 
-                @foreach ($products as $product)
+                @foreach ($result as $product)
                 <div class="vip0 product-item clearfix" uid="649852">
                     <div class="product-image ">
                         <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" onclick="">
-                            @foreach ($product->image as $image)
-                            <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src=" {!! $image['link'] !!}" is-lazy-image="true" lazy-id="0">
-                            @break
-                            @endforeach
+                            
+                            <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src=" {!! $product->link !!}" is-lazy-image="true" lazy-id="0" >
                         </a>
                         <span class="product-feature">
                         </span>
                     </div>
                     <div class="product-main">
                         <h3 class="product-title">
-                            @if ($product['post_type_id'] == 4)
+                            @if ($product->post_type_id == 4)
                             <i class="fa fa-star" style="font-size:20px;color:orange;">
                             </i>
                             @endif
-                            <a href="{!! Route('nhadatban_single_post', $product['id']) !!}" title="{!! $product['title'] !!}" class="vipZero product-link">
-                                {!! $product['title'] !!}
+                            <a href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" class="vipZero product-link">
+                                {!! $product->title !!}
+                                
                             </a>
                         </h3>
                         <div class="product-info">
-                            <span class="price">{!! $product['price'] !!} {!! $product['unit'] !!}</span>
+                            <span class="price">{!! $product->price !!} {!! $product->unit !!}</span>
                             <span class="dot">·</span>
-                            <span class="area">{!! $product['area'] !!} m²</span>
+                            <span class="area">{!! $product->area !!} m²</span>
                             <span class="dot">·</span>
                             <span class="location">
-                                @if(isset($product->district['name_with_type']) && isset($product->province['name_with_type']))
-                                {!! $product->district['name_with_type'] !!}, {!! $product->province['name_with_type'] !!}
-
-                                @else
-                                ko co quan, tp
-
-                                @endif
+                                chua lay dc quan, tp                                
                             </span>
                         </div>
                         <div class="product-content">
-                            {!! $product['content'] !!}
+                            {!! $product->content !!}
                         </div>
                         <div class="product-wrap clearfix">
                             <div class="product-uptime">
                                 <span class="product-labeltime">
-                                    {{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}
-                                    <span class="tooltip-time">{{ \Carbon\Carbon::parse($product['created_at'])->format('d/m/Y')}}</span>
+                                    {{ \Carbon\Carbon::parse($product->created_at)->format('d/m/Y')}}
+                                    <span class="tooltip-time">{{ \Carbon\Carbon::parse($product->created_at)->format('d/m/Y')}}</span>
                                 </span>
                             </div>
                         </div>
@@ -285,7 +274,7 @@
 
                 <div class="text-center">
                     <div class="paginate">
-                        {{ $products->links() }}
+                        chua lay dc paginate
                     </div>
 
                 </div>
@@ -358,11 +347,11 @@
                 <h4 class="box-title">Lọc theo khoảng giá</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?giamin=1&giamax=2" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
-                        <li><a href="?giamin=2&giamax=3" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                        <li><a href="?giamin=3&giamax=5" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                        <li><a href="?giamin=5&giamax=7" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="?giamin=7&giamax=10" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="?price=1" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                        <li><a href="?price=2" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                        <li><a href="?price=3" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="?price=4" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="?price=5" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
                     </ul>
                 </div>
             </div>
@@ -373,12 +362,12 @@
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?dtmin=0&dtmax=30" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
-                        <li><a href="?dtmin=30&dtmax=50" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                        <li><a href="?dtmin=50&dtmax=80" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="?dtmin=80&dtmax=100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="?dtmin=100&dtmax=150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="?dtmin=150&dtmax=200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="?area=1" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="?area=2" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="?area=3" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="?area=4" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="?area=5" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="?area=6" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -391,10 +380,10 @@
 
                 <div class="box-content link-hover-blue">
                     <ul>
-                        @foreach($provinces as $province)
+                        @foreach($result as $province)
                         <li>
                             <h3>
-                                <a href="?province={!! $province->name!!}" title="{{$province->name}}" id="{{ $province->code }}">
+                                <a href="?province={!! $province->code!!}" title="{{$province->name}}">
                                     {!! $province->name !!} ({!! $province->count_posts !!})
                                 </a>
                             </h3>
@@ -494,6 +483,7 @@
     @endsection
     @section('scripts')
     <script>
+
         $(document).ready(function() {
             $('.filter-nha-dat').click(function() {
                 $(this).addClass('actived').siblings().removeClass('actived');
@@ -503,7 +493,27 @@
             // clear filter
             $('#link-reset').click(function() {
                 $('#boxSearchForm')[0].reset();
-            })
+            });
+
+            $(".province").on('change', function() {
+                
+                var id = $(this).val();
+                $.ajax({
+                    type: "get",
+                    url: "/getDistrict",
+                    data: {
+                        parent_code: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+
+                    }
+                }).done(function(data) {
+                    $('.district').html(data);
+
+                });
+            });
         });
+        
     </script>
     @endsection

@@ -559,7 +559,21 @@
 
     </div>
     <div class="main-right">   
-
+        <div class="box-contact">
+            <div class="user">
+                    <div class="avatar">
+                            <img src="{!! $products->user['avatar'] !!}">
+                    </div>
+                                    <div class="name" title="{!! $products->user['name'] !!}">
+                                        {!! $products->user['name'] !!}
+                    </div>
+                                <div class="phone text-center"><span>{!! $products->user['phonenumber'] !!}</span></div>
+                    <div class="mail btn-border-grey text-center">
+                        <a id="email" class="email-copy">{!! $products->user['email'] !!}</a>
+                    </div>
+                <div class="btn-border-grey text-center div-send-contact"><a href="#divSendContact" id="btnSendContact">Yêu cầu liên hệ lại</a></div>
+            </div>
+        </div> 
         
     <div class="divide-full"></div>
     <div class="box-common box-common-filled box-max-item-cate">

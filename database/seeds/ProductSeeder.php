@@ -34,7 +34,7 @@ class ProductSeeder extends Seeder
         'district_code' => '1',
         'ward_code' => '1',
         'menu_category_id' => rand(1,6),
-        'user_id' => rand(1,50),
+        'user_id' => rand(1,2),
         'unit' => 'tỷ',
         'post_price' => rand(50000, 150000),
         'started_at' => date('Y-m-d H:i:s'),

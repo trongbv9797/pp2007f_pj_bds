@@ -28,9 +28,25 @@ class PostController extends Controller
     public function viewPost() {
         $posts = Products::orderBy('post_type_id','DESC')
         ->orderBy('started_at', 'DESC')
-        ->get();
+        ->paginate(10);
         $total_price = Products::sum('post_price');
-        return view('admin.posts', compact('posts', 'total_price'));
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_price', 'post_type'));
+    }
+
+
+    public function filterPost(Request $request) {
+        $type_value = $request->get('post_type');
+        $date_value = $request->get('post_date');
+        $date = Carbon::now()->subDays($date_value);
+        $posts = Products::where('created_at', '<=', Carbon::now())
+        ->where('created_at', '>=', $date)
+        ->where('post_type_id', '=', $type_value)
+        ->orderBy('started_at', 'DESC')
+        ->paginate(10);
+        $total_price = Products::sum('post_price');
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_price', 'post_type'));
     }
 
     public function schedulePost() {
@@ -243,5 +259,6 @@ class PostController extends Controller
         }
         return redirect()->route('memberEditPost', [$id])->with('flash_success', 'Success');
     }
+
 }
 

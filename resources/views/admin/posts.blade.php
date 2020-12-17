@@ -27,32 +27,57 @@
                             </p>
                         </div>
                     @endif
-                    <table id="dt-opt" class="table table-hover table-xl">
+                    <table class="table table-hover table-xl">
+                        <form method="GET" action="{!!  Route('filterPost') !!}">
                         <thead>
                             <tr>
                                 <th>
 
                                 </th>
                                 <th>Title</th>
-                                <th>Post Type</th>
-                                <th>ID</th>
                                 <th>
-                                    <div class="col-sm-8">
+                                        <select id="post_type" name="post_type" class="form-control">
+                                            <option disabled selected>Post Type</option>
+                                            @foreach ($post_type as $type)
+                                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                            @endforeach
+                                          </select>
+                                </th>
+
+                                <th>
+                                    <select id="post_id" class="form-control">
+                                        <option disabled selected>ID</option>
+                                        {{-- @foreach ($products as $products)
+                                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                        @endforeach --}}
+                                      </select>
+                                </th>
+
+                                <th>
+                                    {{-- <div class="col-sm-8">
                                         <div class="icon-input">
                                             <i class="mdi mdi-timer"></i>
                                             <input id="datepicker-1" data-provide="datepicker" type="text"
                                                 class="form-control date date1" name="end_date" placeholder="Pick date end">
                                         </div>
-                                    </div>
+                                    </div> --}}
+
+                                    <select id="post_date" name="post_date" class="form-control">
+                                        <option disabled selected>Time</option>
+                                        <option value="1">Yesterday</option>
+                                        <option value="7">Last 7 days</option>
+                                        <option value="30">Last 30 days</option>
+                                      </select>
                                 </th>
                                 <th>Price</th>
                                 <th>
-
-
-
+                                    <div>
+                                    <button type="submit" class="btn btn-success">Apply</button>
+                                </div>
                                 </th>
                             </tr>
                         </thead>
+                        </form>
                         <tbody id="postsc">
                             @foreach ($posts as $post)
                                 <tr id="post" value={{ $post->id }}>
@@ -121,6 +146,9 @@
                             <a href="javascript:;" class="btn btn-danger deleteall ml-0">Delete All</a>
                         </th>
                     </table>
+                    <div style="align: right;">
+                    {{ $posts->links() }}
+                    </div>
                 </div>
             </div>
         </div>

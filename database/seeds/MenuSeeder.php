@@ -661,6 +661,22 @@ class MenuSeeder extends Seeder
             'order'=> 7,
             'type' => 'right'
         ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'Tin Tức',
+            'parent_id'=> '0',
+            'slug' => 'tin-tuc',
+            'order'=> 4,
+            'type' => 'header_main'
+        ]);
+
+        DB::table('menus')->insert([
+            'name'=> 'Danh Bạ',
+            'parent_id'=> '0',
+            'slug' => 'nha-moi-gioi',
+            'order'=> 5,
+            'type' => 'header_main'
+        ]);
     }
 }
            

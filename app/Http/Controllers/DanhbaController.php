@@ -11,12 +11,18 @@ class DanhBaController extends Controller
     //
     public function index() {
         $brokers = Broker::limit(15)->get();
+       
         return view("pages.danhba.nhamoigioi", compact('brokers'));
     }
 
     public function index1() {
         $business = Business::limit(18)->get();
         return view ('pages.danhba.doanhnghiep', compact('business'));
+    }
+
+    public function getSearch(Request $req) {
+        $brokers = Broker::where('name', 'like', '%'.$req->key.'%')->get();
+        return view ('pages.danhba.nhamoigioi', compact('brokers'));
     }
 
     public function singlepost1($id) {

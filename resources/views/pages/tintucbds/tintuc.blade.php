@@ -134,7 +134,7 @@
         </div>
     </div>
 </div>
-<div id="RightMainContent" class="body-right">
+<div style= "width: 400px" id="RightMainContent" class="body-right" >
     <div>
             <div class="container-common">
         <div>

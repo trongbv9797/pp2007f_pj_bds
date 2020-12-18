@@ -45,7 +45,7 @@ class NhaDatBanController extends Controller
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
                                 WHERE menu_category_id IN (1,2,3) AND status = 1
-                                ORDER BY post_type_id DESC, products.created_at DESC'. ' '. 'LIMIT 1'));
+                                ORDER BY post_type_id DESC, products.created_at DESC'));
             return view("pages.nhadatban.index", compact('result', 'provinces'));
         }
 

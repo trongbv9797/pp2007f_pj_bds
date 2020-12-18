@@ -428,34 +428,7 @@
 
     <div class="divide-full"></div>
 
-    <div class="box-common box-common-filled box-utility link-hover-blue">
-        <h4 class="box-title">Hỗ trợ tiện ích</h4>
-        <div class="box-content">
-            <ul>
-                <li>
-                    <a href="/ho-tro-tien-ich/ht-xem-huong-nha" title="Tư vấn phong thủy" rel="nofollow">
-                        Tư vấn phong thủy
-                    </a>
-                </li>
-                <li>
-                    <a href="/ho-tro-tien-ich/ht-du-toan-chi-tiet" title="Dự tính chi phí làm nhà" rel="nofollow">
-                        Dự tính chi phí làm nhà
-                    </a>
-                </li>
-                <li>
-                    <a href="/ho-tro-tien-ich/ht-tinh-lai-suat" title="Tính lãi suất" rel="nofollow">
-                        Tính lãi suất
-                    </a>
-                </li>
-                <li>
-                    <a href="/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a>
-                </li>
-                <li>
-                    <a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    
     </div>
     </div>
     <div class="banner-bottom">

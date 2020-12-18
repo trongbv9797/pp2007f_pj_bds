@@ -13,6 +13,7 @@ use App\Repositories\NhaDatBanRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Repositories\ProductRepositoryInterface;
+use Illuminate\Support\Facades\Cache;
 
 class NhaDatBanController extends Controller
 {
@@ -154,7 +155,10 @@ class NhaDatBanController extends Controller
         }
         // khong filter
         else {
-            $result = DB::select('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type, images.link 
+            if(Cache::has('nha_dat_ban_cache')){
+                return Cache::get('nha_dat_ban_cache');
+            } else{
+                $result = DB::select('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type, images.link 
                                 FROM products
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
@@ -162,7 +166,11 @@ class NhaDatBanController extends Controller
                                 INNER JOIN images ON images.products_id = products.id
                                 WHERE menu_category_id IN (1,2,3) AND status = 1
                                 ORDER BY post_type_id DESC, products.created_at DESC');
-            return view("pages.nhadatban.index", compact('result'));
+                $ndb_cache = view("pages.nhadatban.index", compact('result'))->render();
+                Cache::put('nha_dat_ban_cache', $ndb_cache, 10000);
+                return $ndb_cache;
+            }
+            
         }
     }
 

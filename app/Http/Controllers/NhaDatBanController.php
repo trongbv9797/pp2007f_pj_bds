@@ -176,13 +176,18 @@ class NhaDatBanController extends Controller
 
     public function nhaDatBanSinglePost($id)
     {
-
+        if (Cache::has('singlePost')){
+            return (Cache::get('singlePost'));
+        } else {
         $products = $this->productRepository->singlePost($id);
         $products_area = $this->productRepository->relatedPost($id);
         $images = $this->imageRepository->relatedImage($id);
         $images_area = $this->imageRepository->getAll();
-        return view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'));
+        $cache_view = view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'))->render();
+        Cache::put('singlePost', $cache_view, 10000);
+        return $cache_view;
     }
+}
 
     public function banCanHoChungCu()
     {

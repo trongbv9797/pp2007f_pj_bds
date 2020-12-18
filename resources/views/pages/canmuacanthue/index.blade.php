@@ -79,6 +79,7 @@
                                 </div>
                                 <div class="tag_container">
                                     @include('pages.canmuacanthue.presult')
+                                    
                                 </div>
                             </div>
 
@@ -816,34 +817,34 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
-    <script type="text/javascript">
-        $(document).ready(function() {
+    {{-- <script type="text/javascript"> --}}
+        // $(document).ready(function() {
             
-            $(document).on('click', '.pagination a', function(event) {
+        //     $(document).on('click', '.pagination a', function(event) {
                 
-                event.preventDefault();
-                $('li').removeClass('active');
-                $(this).parent('li').addClass('active');
-                var myurl = $(this).attr('href');
-                var page = $(this).attr('href').split('page=')[1];
-                getData(page);
-            });
-        });
+        //         event.preventDefault();
+        //         $('li').removeClass('active');
+        //         $(this).parent('li').addClass('active');
+        //         var myurl = $(this).attr('href');
+        //         var page = $(this).attr('href').split('page=')[1];
+        //         getData(page);
+        //     });
+        // });
 
-        function getData(page) {
-            $.ajax({
-                url: '?page=' + page,
-                type: "get",
-                datatype: "html"
-            }).done(function(data) {
-                $(".tag_container").empty().html(data);
-                location.hash = page;
-            }).fail(function(jqXHR, ajaxOptions, thrownError) {
-                alert('No response from server');
-            });
-        }
+        // function getData(page) {
+        //     $.ajax({
+        //         url: '?page=' + page,
+        //         type: "get",
+        //         datatype: "html"
+        //     }).done(function(data) {
+        //         $(".tag_container").empty().html(data);
+        //         location.hash = page;
+        //     }).fail(function(jqXHR, ajaxOptions, thrownError) {
+        //         alert('No response from server');
+        //     });
+        // }
 
-    </script>
+    {{-- // </script> --}}
 @endsection

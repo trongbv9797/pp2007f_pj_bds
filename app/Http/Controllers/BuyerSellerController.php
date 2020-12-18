@@ -7,19 +7,32 @@ use App\Models\BuyerSeller;
 use App\Models\Province;
 use App\Models\BuyerSellerArea;
 use App\Models\ImageDemo;
+use Illuminate\Support\Facades\Cache;
 
 class BuyerSellerController extends Controller
 {
     public function index(Request $request) {
+        if(Cache::has('buyer_seller_cache'.'page'.($request->get('page')))){
+            // dd(Cache::get('buyer_seller_cache'.($request->get('page'))));
 
-        $buyersellercost=BuyerSeller::all();
-        $provinces = Province::all();
-        $buyerSellers=BuyerSeller::with(['imageDemo','disTrict','buyerSellerArea'])->paginate(10);
-        
-        if ($request->ajax()) {
-            return view('pages.canmuacanthue.presult', compact('buyersellercost','buyerSellers','provinces'));
+            return Cache::get('buyer_seller_cache'.'page'.($request->get('page')));
+
+        } else {
+
+            $buyersellercost = BuyerSeller::all();
+            $provinces = Province::all();
+            $buyerSellers=BuyerSeller::with(['imageDemo','disTrict','buyerSellerArea'])->paginate(10);
+            
+            // if ($request->ajax()) {
+
+            //     return view('pages.canmuacanthue.presult', compact('buyersellercost','buyerSellers','provinces'));
+            // }
+            $buyerSellerCache['page'.$request->get('page')] = view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers','provinces'))->render();
+
+                Cache::put('buyer_seller_cache'.'page'.($request->get('page')), $buyerSellerCache['page'.$request->get('page')], 86400);
+
+                return $buyerSellerCache['page'.$request->get('page')];
         }
-        return view ('pages.canmuacanthue.index',compact('buyersellercost','buyerSellers','provinces'));
     }
 
     public function seller(Request $request) {

@@ -95,7 +95,7 @@
         <div>
             <div>
                     <div class="inasub">
-                        <strong>Cùng chủ đề chưa fillter: </strong>
+                        <strong>Tin liên quan: </strong>
                         <a href="/tin-tuc"> {!!$articles->title!!} </a>
                     </div>
 
@@ -196,49 +196,23 @@
         
 
     <div class="othernews">
-            <h2 class="normalblue" style="white-space: nowrap;">Tin nhiều người đọc chưa fillter</h2>
+            <h2 class="normalblue" style="white-space: nowrap;">Tin cùng chủ đề</h2>
             <div class="otherline" style="width:80%;">
                 &nbsp;
             </div>
+                @foreach ($sametype as $sametype)
+
                 <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/thi-truong-bat-dong-san-binh-duong-2020-cuoc-choi-cua-cac-ong-lon-ar105517" title="Th&#x1ECB; tr&#x1B0;&#x1EDD;ng b&#x1EA5;t &#x111;&#x1ED9;ng s&#x1EA3;n B&#xEC;nh D&#x1B0;&#x1A1;ng 2020: Cu&#x1ED9;c ch&#x1A1;i c&#x1EE7;a c&#xE1;c &#x201C;&#xF4;ng l&#x1EDB;n&#x201D;">
-                        Thị trường bất động sản Bình Dương 2020: Cuộc chơi của các “ông lớn”
-                        <i>(07:55 18/11/2020)</i>
+                    <a class="font-link-box-item iconlist" href="{!! Route('tintuc_single_post', $sametype->id) !!}" title="{!!$sametype->title!!}">
+                        {!!$sametype->title!!}
+                        <i>({!!$sametype->created_at!!})</i>
                     </a>
                 </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/lo-dien-8-toa-thap-40-tang-cao-nhat-binh-duong-ar105520" title="L&#x1ED9; di&#x1EC7;n 8 t&#xF2;a th&#xE1;p 40 t&#x1EA7;ng cao nh&#x1EA5;t B&#xEC;nh D&#x1B0;&#x1A1;ng">
-                        Lộ diện 8 tòa tháp 40 tầng cao nhất Bình Dương
-                        <i>(08:00 17/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/ra-mat-d-aqua-bieu-tuong-song-phon-vinh-tren-ben-hoa-ar105515" title="Ra m&#x1EAF;t D-Aqua - Bi&#x1EC3;u t&#x1B0;&#x1EE3;ng s&#x1ED1;ng ph&#x1ED3;n vinh tr&#xEA;n B&#x1EBF;n Hoa">
-                        Ra mắt D-Aqua - Biểu tượng sống phồn vinh trên Bến Hoa
-                        <i>(08:00 17/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/nhung-diem-sang-bat-dong-san-giua-dai-dich-ar105535" title="&#x201C;Trong nguy c&#xF3; c&#x1A1;&#x201D;, nh&#x1EEF;ng &#x111;i&#x1EC3;m s&#xE1;ng c&#x1EE7;a th&#x1ECB; tr&#x1B0;&#x1EDD;ng B&#x110;S gi&#x1EEF;a &#x111;&#x1EA1;i d&#x1ECB;ch">
-                        “Trong nguy có cơ”, những điểm sáng của thị trường BĐS giữa đại dịch
-                        <i>(09:00 18/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/chinh-sach-quan-ly/ra-soat-cac-doi-tuong-mua-nha-o-xa-hoi-tai-tp-hcm-ar105511" title="R&#xE0; so&#xE1;t c&#xE1;c &#x111;&#x1ED1;i t&#x1B0;&#x1EE3;ng mua nh&#xE0; &#x1EDF; x&#xE3; h&#x1ED9;i t&#x1EA1;i TP.HCM">
-                        Rà soát các đối tượng mua nhà ở xã hội tại TP.HCM
-                        <i>(09:00 16/11/2020)</i>
-                    </a>
-                </h3>
-                <h3 class="normal">
-                    <a class="font-link-box-item iconlist" href="/tin-thi-truong/ly-giai-suc-hut-khu-do-thi-tien-ich-moi-fenix-city-ar105543" title="L&#xFD; gi&#x1EA3;i s&#x1EE9;c h&#xFA;t Khu &#x111;&#xF4; th&#x1ECB; ti&#x1EC7;n &#xED;ch m&#x1EDB;i Fenix City">
-                        Lý giải sức hút Khu đô thị tiện ích mới Fenix City
-                        <i>(08:00 19/11/2020)</i>
-                    </a>
-                </h3>
+                @endforeach
+                
 
             <div class="clear"></div>
-            <h2 class="normalblue" style="white-space: nowrap;">Tin mới nhất đã fillter theo id</h2>
+            <h2 class="normalblue" style="white-space: nowrap;">Tin mới nhất theo id</h2>
             <div class="otherline" style="width: calc(100% - 101px)">
                 &nbsp;
             </div>

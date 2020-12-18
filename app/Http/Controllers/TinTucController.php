@@ -54,7 +54,8 @@ class TinTucController extends Controller
     public function articles($id) {
         $articles = $this->articleRepo->articles($id);
         $newarticles = Article::orderBy('id', 'desc')->limit(5)->get();
-        return view("pages.tintucbds.singlepost", compact('articles','newarticles'));
+        $sametype = Article::where('type', $articles[0]['type'] )->limit(7)->orderBy('id', 'desc')->get();
+        return view("pages.tintucbds.singlepost", compact('articles','newarticles', 'sametype'));
     }
 
     public function index() {

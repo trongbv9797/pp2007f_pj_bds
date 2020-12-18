@@ -221,7 +221,7 @@
                         @foreach ($articles as $article)
                         <div id="hottab-{{ $i++ }}" class="" style="display: none;">
                             <h3>
-                                <a title="{{ $article->title }}" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
+                            <a title="{{ $article->title }}" href="{!! Route('tintuc_single_post', $article->id) !!}">
                                     <span>
                                         <img noloaderror="true" imgerr="1" src="{{ $article->image_link }}" is-lazy-image="true" lazy-id="0">
                                     </span>
@@ -241,7 +241,7 @@
 
                                 <li class="">
                                     <h3>
-                                        <a title="{{ $article->title }}" data-index="#hottab-{{ $j++ }}" href="https://batdongsan.com.vn/loi-khuyen-cho-nguoi-mua/-infographic-nhung-quy-dinh-phap-ly-khong-the-bo-qua-khi-mua-ban-bat-dong-san-ar103077">
+                                        <a title="{{ $article->title }}" data-index="#hottab-{{ $j++ }}" href="{!! Route('tintuc_single_post', $article->id) !!}">
                                             {{ $article->title }}
                                         </a>
                                     </h3>

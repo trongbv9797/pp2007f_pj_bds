@@ -37,7 +37,7 @@
                                 <th>Title</th>
                                 <th>
                                         <select id="post_type" name="post_type" class="form-control">
-                                            <option disabled selected>Post Type</option>
+                                            <option selected value="">Post Type</option>
                                             @foreach ($post_type as $type)
                                             <option value="{{ $type->id }}">{{ $type->name }}</option>
                                             @endforeach
@@ -45,11 +45,10 @@
                                 </th>
 
                                 <th>
-                                    <select id="post_id" class="form-control">
-                                        <option disabled selected>ID</option>
-                                        {{-- @foreach ($products as $products)
-                                        <option value="{{ $type->id }}">{{ $type->name }}</option>
-                                        @endforeach --}}
+                                    <select id="post_id" name="post_id" class="form-control">
+                                        <option selected value="DESC">ID</option>
+                                        <option value="DESC">Thu tu giam dan</option>
+                                        <option value="ASC">Thu tu tang dan</option>
                                       </select>
                                 </th>
 
@@ -63,16 +62,23 @@
                                     </div> --}}
 
                                     <select id="post_date" name="post_date" class="form-control">
-                                        <option disabled selected>Time</option>
+                                        <option value="90000000000000000000000" selected>Time</option>
+                                        <option value="0">Today</option>
                                         <option value="1">Yesterday</option>
                                         <option value="7">Last 7 days</option>
                                         <option value="30">Last 30 days</option>
                                       </select>
                                 </th>
-                                <th>Price</th>
+                                <th>
+                                    <select id="post_price" name="post_price" class="form-control">
+                                        <option selected value="DESC">Price</option>
+                                        <option value="DESC">Thu tu giam dan</option>
+                                        <option value="ASC">Thu tu tang dan</option>
+                                      </select>
+                                </th>
                                 <th>
                                     <div>
-                                    <button type="submit" class="btn btn-success">Apply</button>
+                                    <button type="submit" class="btn btn-secondary">Apply</button>
                                 </div>
                                 </th>
                             </tr>
@@ -147,7 +153,7 @@
                         </th>
                     </table>
                     <div style="align: right;">
-                    {{ $posts->links() }}
+                    {{-- {{ $posts->links() }} --}}
                     </div>
                 </div>
             </div>

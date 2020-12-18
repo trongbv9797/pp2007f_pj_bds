@@ -26,8 +26,7 @@ class PostController extends Controller
     }
 
     public function viewPost() {
-        $posts = Products::orderBy('post_type_id','DESC')
-        ->orderBy('started_at', 'DESC')
+        $posts = Products::orderBy('started_at', 'DESC')
         ->paginate(10);
         $total_price = Products::sum('post_price');
         $post_type = Post_type::all();
@@ -36,15 +35,34 @@ class PostController extends Controller
 
 
     public function filterPost(Request $request) {
-        $type_value = $request->get('post_type');
-        $date_value = $request->get('post_date');
-        $date = Carbon::now()->subDays($date_value);
-        $posts = Products::where('created_at', '<=', Carbon::now())
-        ->where('created_at', '>=', $date)
-        ->where('post_type_id', '=', $type_value)
-        ->orderBy('started_at', 'DESC')
-        ->paginate(10);
-        $total_price = Products::sum('post_price');
+
+        $posts = Products::query();
+
+        if ($request->has('post_type')) {
+            $posts->where('post_type_id', $request->post_type );
+        }
+        if ($request->has('post_date')) {
+            $posts->where('created_at', '>=', Carbon::now()->subDays($request->post_date))->where('created_at', '<=', Carbon::now());
+        }
+        if ($request->has('post_id')) {
+            $posts->orderBy('id', $request->post_id);
+        }
+        if ($request->has('post_price')) {
+            $posts->orderBy('post_price', $request->post_price);
+        }
+        $posts->get();
+        // $type_value = $request->get('post_type');
+        // $date_value = $request->get('post_date');
+        // $id_type = $request->get('post_id');
+        // $price_type = $request->get('post_price');
+        // $date = Carbon::now()->subDays($date_value);
+        // $posts = Products::where('created_at', '>=', $date)
+        // ->where('created_at', '<=', Carbon::now())
+        // ->whereNotNull('post_type_id', '=', $type_value)
+        // ->orderBy('id', $id_type)
+        // ->orderBy('post_price', $price_type)
+        // ->paginate(10)->withQueryString();
+        $total_price = $posts->sum('post_price');
         $post_type = Post_type::all();
         return view('admin.posts', compact('posts', 'total_price', 'post_type'));
     }

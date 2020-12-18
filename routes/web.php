@@ -32,7 +32,7 @@ Route::get('/user/ajaxDistrict','UserController@ajaxDistrict')->name('userDistri
 Route::get('/user/ajaxWard','UserController@ajaxWard')->name('userWard');
 
 // getDistrict ajax
-Route::get('/getDistrict', 'HomeController@getDistrict')->name('getDistrict');
+Route::get('/getDistrict', 'NhaDatBanController@getDistrict')->name('getDistrict');
 
 Route::prefix('/member')->group(function () {
     Route::get('/index','UserController@indexMember')->name('memberIndex')->middleware('auth');

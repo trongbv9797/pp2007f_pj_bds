@@ -66,7 +66,7 @@
                     <div class="dropbox-label">Khu vực</div>
                     <select name="province" id="filter-province" class="province">
                         <option value="0"  selected>Toàn quốc</option>
-                        @foreach($result as $province)
+                        @foreach($provinces as $province)
                         <option value="{!! $province->code !!}">{!! $province->name !!}</option>
                         @endforeach
                     </select>
@@ -86,11 +86,11 @@
                     <div class="dropbox-label">Mức giá</div>
                     <select name="price">
                         <option value="0"  selected>Tất cả</option>
-                        <option value="1">1 - 2 tỷ</option>
-                        <option value="2">2 - 3 tỷ</option>
-                        <option value="3">3 - 5 tỷ</option>
-                        <option value="4">5 - 7 tỷ</option>
-                        <option value="5">7 - 10 tỷ</option>
+                        <option value="12">1 - 2 tỷ</option>
+                        <option value="23">2 - 3 tỷ</option>
+                        <option value="35">3 - 5 tỷ</option>
+                        <option value="57">5 - 7 tỷ</option>
+                        <option value="710">7 - 10 tỷ</option>
                     </select>
                 </div>
             </div>
@@ -231,7 +231,7 @@
                     <div class="product-image ">
                         <a class="product-avatar" href="{!! Route('nhadatban_single_post', $product->id) !!}" title="{!! $product->title !!}" onclick="">
                             
-                            <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src=" {!! $product->link !!}" is-lazy-image="true" lazy-id="0" >
+                            <img class="product-avatar-img" alt="{!! $product->title !!}" error-image-src="https://staticfile.batdongsan.com.vn/images/no-image.png" src=" {!! $product->avatar !!}" is-lazy-image="true" lazy-id="0" >
                         </a>
                         <span class="product-feature">
                         </span>
@@ -253,7 +253,7 @@
                             <span class="area">{!! $product->area !!} m²</span>
                             <span class="dot">·</span>
                             <span class="location">
-                                chua lay dc quan, tp                                
+                                ko co tp                   
                             </span>
                         </div>
                         <div class="product-content">
@@ -274,7 +274,7 @@
 
                 <div class="text-center">
                     <div class="paginate">
-                        chua lay dc paginate
+                        chua co paginate
                     </div>
 
                 </div>
@@ -347,11 +347,11 @@
                 <h4 class="box-title">Lọc theo khoảng giá</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?price=1" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
-                        <li><a href="?price=2" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
-                        <li><a href="?price=3" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
-                        <li><a href="?price=4" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
-                        <li><a href="?price=5" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
+                        <li><a href="?price=12" title="Nhà đất cho thuê toàn quốc giá 1 - 2 tỷ">1 - 2 tỷ</a></li>
+                        <li><a href="?price=23" title="Nhà đất cho thuê toàn quốc giá 2 - 3 tỷ">2 - 3 tỷ</a></li>
+                        <li><a href="?price=35" title="Nhà đất cho thuê toàn quốc giá 3 - 5 tỷ">3 - 5 tỷ</a></li>
+                        <li><a href="?price=57" title="Nhà đất cho thuê toàn quốc giá 5 - 7 tỷ">5 - 7 tỷ</a></li>
+                        <li><a href="?price=710" title="Nhà đất cho thuê toàn quốc giá 7 - 10 tỷ">7 - 10 tỷ</a></li>
                     </ul>
                 </div>
             </div>

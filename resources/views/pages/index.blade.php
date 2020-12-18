@@ -27,10 +27,9 @@
         width: 170px !important;
     }
 
-    #btnSearch{
+    #btnSearch {
         color: white;
     }
-
 </style>
 @endsection
 
@@ -75,6 +74,7 @@
                     <div class="select-control district-control">
                         <div class="select-control-label">
                             <div class="dropbox-label">Quận, huyện</div>
+                            <br>
                             <select name="district" id="filter-district">
                                 <option value="toan-quoc" selected>
                                     Tất cả
@@ -93,28 +93,28 @@
                             <div class="dropbox-label">Mức giá</div>
                             <select name="price" id="filter-price">
                                 <option value="" selected>Tất cả</option>
-                                <option value="1" >1 - 2 tỷ</option>
-                                <option value="2" >2 - 3 tỷ</option>
-                                <option value="3" >3 - 5 tỷ</option>
-                                <option value="4" >5 - 7 tỷ</option>
-                                <option value="5" >7 - 10 tỷ</option>
+                                <option value="1">1 - 2 tỷ</option>
+                                <option value="2">2 - 3 tỷ</option>
+                                <option value="3">3 - 5 tỷ</option>
+                                <option value="4">5 - 7 tỷ</option>
+                                <option value="5">7 - 10 tỷ</option>
                             </select>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="select-control area-control">
                         <div class="select-control-label">
                             <div class="dropbox-label">Diện tích</div>
                             <select name="price" id="filter-area">
                                 <option value="" selected>Tất cả</option>
-                                <option value="1" >1 - 2 tỷ</option>
-                                <option value="2" >30 - 50 m2</option>
-                                <option value="3" >50 - 80 m2</option>
-                                <option value="4" >80 - 100 m2</option>
-                                <option value="5" >100 - 150 m2</option>
-                                <option value="6" >150 - 200 m2</option>
+                                <option value="1">1 - 2 tỷ</option>
+                                <option value="2">30 - 50 m2</option>
+                                <option value="3">50 - 80 m2</option>
+                                <option value="4">80 - 100 m2</option>
+                                <option value="5">100 - 150 m2</option>
+                                <option value="6">150 - 200 m2</option>
                             </select>
                         </div>
-                        
+
                     </div>
 
                     <input type="submit" id="btnSearch" class="btn-blue-7" value="Tìm kiếm">
@@ -159,20 +159,16 @@
                     @foreach($banners as $banner)
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="..." style="width: 100%;height: 510px;">
+                            <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="..." style="width: 100%;height: 560px;">
                         </div>
 
                     </div>
                     @endforeach
-
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+                        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+                    </div>
 
                 </div>
             </div>
@@ -1142,9 +1138,9 @@
             $(this).addClass('actived').siblings().removeClass('actived');
         });
 
-       
+
         // clear filter
-        $('#link-reset').click(function(){
+        $('#link-reset').click(function() {
             $('#boxSearchForm')[0].reset();
         })
     });

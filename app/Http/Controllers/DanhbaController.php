@@ -5,14 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Broker;
 use App\Models\Business;
+use Illuminate\Support\Facades\Cache;
 
 class DanhBaController extends Controller
 {
     //
     public function index() {
+        if(cache::has('danhba_cache')) {
+            return Cache::get('danhba_cache');
+        }
+        else{
         $brokers = Broker::limit(15)->get();
        
-        return view("pages.danhba.nhamoigioi", compact('brokers'));
+        $cache_danhba = view("pages.danhba.nhamoigioi", compact('brokers'))->render();
+        Cache::put('danhba_cache', $cache_danhba, 10000);
+        return $cache_danhba;
+        }
+        
     }
 
     public function index1() {

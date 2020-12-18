@@ -17,7 +17,7 @@ class CreateBrokersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->integer('mobile');
+            $table->string('mobile');
             $table->string('mail');
             $table->string('website');
             $table->text('content')->nullable(false);

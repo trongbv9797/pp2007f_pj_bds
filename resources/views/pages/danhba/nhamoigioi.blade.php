@@ -235,7 +235,7 @@
                                     <div class="avamg">
                                         <div>
                                             <a href="{!! route ('singlepost1',$brokers->id) !!}">
-                                                <img src="https://file4.batdongsan.com.vn/resize/200x200/2020/11/03/PGsxuI1y/20201103162145-4ff8.jpg" alt="{!! $brokers->name !!}">
+                                                <img src="{!! $brokers->broker_images !!}" alt="{!! $brokers->name !!}">
                                             </a>
                                         </div>
                                     </div>
@@ -255,14 +255,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="kvmg">
-                                    <div class="header">
-                                        Khu vực c&#xF4;ng ty môi giới
-                                    </div>
-                                    <div>
-                                            <ul><li>Cho thuê nhà mặt phố ở Quận 1, Hồ Chí Minh</li><li>Cho thuê nhà mặt phố ở Phú Nhuận, Hồ Chí Minh</li><li>Cho thuê nhà mặt phố ở Tân Bình, Hồ Chí Minh</li></ul>
-                                    </div>
-                                </div>
+                               
                                 <div class="clear10">
                                 </div>
                             </div>
@@ -272,14 +265,14 @@
                     </div>
                     <div class="pager-block" style="float: right; margin-right: 5px; margin-top: 5px;">
                         <div class="ks-pagination-links" align="center" stype="float: right">
-<a pId="1" href="/nha-moi-gioi"><div class="style-pager-row-selected">1</div></a>
-<a pId="2" href="/nha-moi-gioi/p2"><div class="">2</div></a>
-<a pId="3" href="/nha-moi-gioi/p3"><div class="">3</div></a>
-<a pId="4" href="/nha-moi-gioi/p4"><div class="">4</div></a>
-<a pId="5" href="/nha-moi-gioi/p5"><div class="">5</div></a>
-<a pId="2" href="/nha-moi-gioi/p2"><div>...</div></a>
-<a pId="50" href="/nha-moi-gioi/p50"><div>&gt;</div></a>
-</div>
+                            <a pId="1" href="/nha-moi-gioi"><div class="style-pager-row-selected">1</div></a>
+                            <a pId="2" href="/nha-moi-gioi/p2"><div class="">2</div></a>
+                            <a pId="3" href="/nha-moi-gioi/p3"><div class="">3</div></a>
+                            <a pId="4" href="/nha-moi-gioi/p4"><div class="">4</div></a>
+                            <a pId="5" href="/nha-moi-gioi/p5"><div class="">5</div></a>
+                            <a pId="2" href="/nha-moi-gioi/p2"><div>...</div></a>
+                            <a pId="50" href="/nha-moi-gioi/p50"><div>&gt;</div></a>
+                        </div>
 
                     </div>
 

@@ -29,7 +29,8 @@ class ProvinceSeeder extends Seeder
                 'type' => $item['type'],
                 'name_with_type' => $item['name_with_type'],
                 'code' => $item['code'],
-                'count_posts' => random_int(0, 135)
+                'count_posts' => random_int(0, 135),
+                'count_companies' =>random_int(0, 265)
             ));
 
         }

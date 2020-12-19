@@ -37,7 +37,7 @@
                                 <th>Title</th>
                                 <th>
                                         <select id="post_type" name="post_type" class="form-control">
-                                            <option selected value="">Post Type</option>
+                                            <option selected value="all">Post Type</option>
                                             @foreach ($post_type as $type)
                                             <option value="{{ $type->id }}">{{ $type->name }}</option>
                                             @endforeach

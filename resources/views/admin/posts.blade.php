@@ -37,7 +37,7 @@
                                 <th>Title</th>
                                 <th>
                                         <select id="post_type" name="post_type" class="form-control">
-                                            <option selected value="all">Post Type</option>
+                                            <option selected value="all">All Post Type</option>
                                             @foreach ($post_type as $type)
                                             <option value="{{ $type->id }}">{{ $type->name }}</option>
                                             @endforeach
@@ -62,23 +62,26 @@
                                     </div> --}}
 
                                     <select id="post_date" name="post_date" class="form-control">
-                                        <option value="90000000000000000000000" selected>Time</option>
+                                        <option value="90000000000000000000000" selected>Submit Time</option>
                                         <option value="0">Today</option>
                                         <option value="1">Yesterday</option>
+                                        <option value="3">Last 3 days</option>
                                         <option value="7">Last 7 days</option>
                                         <option value="30">Last 30 days</option>
                                       </select>
                                 </th>
                                 <th>
-                                    <select id="post_price" name="post_price" class="form-control">
-                                        <option selected value="DESC">Price</option>
-                                        <option value="DESC">Thu tu giam dan</option>
-                                        <option value="ASC">Thu tu tang dan</option>
+                                    <select id="post_status" name="post_status" class="form-control">
+                                        <option selected value="0">Status</option>
+                                        <option value="0">Waiting</option>
+                                        <option value="1">Verified</option>
+                                        <option value="2">Expired</option>
                                       </select>
                                 </th>
                                 <th>
                                     <div>
                                     <button type="submit" class="btn btn-secondary">Apply</button>
+                                    <a type="button" href="{!!  Route('viewPost') !!}" class="btn btn-light">Reset</a>
                                 </div>
                                 </th>
                             </tr>
@@ -103,7 +106,13 @@
                                     </td>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->started_at }}</td>
-                                    <td> {{ $post->post_price }}</td>
+                                    @if ($post->status == 0)
+                                    <td>Waiting</td>
+                                    @elseif ($post->status == 1)
+                                    <td>Verified</td>
+                                    @else
+                                    <td>Expired</td>
+                                    @endif
                                     <td class="text-center font-size-18">
                                         @if ($post->type == 1)
                                             <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"

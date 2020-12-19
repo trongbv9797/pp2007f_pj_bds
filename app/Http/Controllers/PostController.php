@@ -39,15 +39,15 @@ class PostController extends Controller
         if ($request->post_type == 'all') {
                 $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
                 ->where('created_at', '<=', Carbon::now())
+                ->where('status', $request->get('post_status'))
                 ->orderBy('id', $request->get('post_id'))
-                ->orderBy('post_price', $request->get('post_price'))
                 ->paginate(10)->withQueryString();
         } else {
         $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
         ->where('created_at', '<=', Carbon::now())
         ->where('post_type_id', '=', $request->get('post_type'))
+        ->where('status', $request->get('post_status'))
         ->orderBy('id', $request->get('post_id'))
-        ->orderBy('post_price', $request->get('post_price'))
         ->paginate(10)->withQueryString();
     }
     $total_price = $posts->sum('post_price');

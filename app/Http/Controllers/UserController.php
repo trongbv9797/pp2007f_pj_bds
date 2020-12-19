@@ -137,15 +137,17 @@ class UserController extends Controller
         $products = DB::table('products')->orderBy('id','DESC')->limit(5)->get();
         $year = Date('Y');
         $month = Date('m');
-        $item[0] = ['month','Sales', 'Reves'];
+        $item[0] = ['month','Sales', 'Revenues'];
         $all_item = [];
         for ($i=1; $i<= $month; $i++) {
 
-            $sales = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->get()->count());
-            $reve = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->sum('post_price'));
-            $item[$i] = [$month, $sales, $reve];
+            $sales = (int)(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->get()->count());
+            $reve = (int)DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->sum('post_price')/100000;
+            $item[$i] = [$i.'/'.$year, $sales, $reve];
 
         }
+        $item = json_encode($item);
+        // dd($item);
 
         $users = User::onlyTrashed()->get();
         

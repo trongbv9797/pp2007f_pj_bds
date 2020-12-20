@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/filestatic.msvbds.home.min.css">
 <link rel="stylesheet" type="text/css" href="./assets/css/box.css">
 <link rel="stylesheet" href="./assets/css/filestatic.ver202011110505.msvbds.productlisting.min.css" />
+<link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css" />
 <style>
     .select-control {
         width: 200px !important;
@@ -121,83 +122,58 @@
                     <div id="link-reset" aria-label="Xóa tiêu chí lọc" data-microtip-position="bottom-left" role="tooltip"><img src="./assets/image/ic_reset.svg"></div>
                 </div>
             </form>
-            <script type="text/javascript">
-                ///<reference path='../../../../../../../../DVG.BDS.WebApp.FrontEnd.StaticFiles/wwwroot/js/Common/FrontEnd.BoxSearch.js' />
-                (function getData() {
-                    if (window.FrontEnd && window.FrontEnd.BoxSearch) {
-                        var boxSearchServices = new FrontEnd.BoxSearch({
-                            boxSearchDataCacheKey: 'BoxSearchData',
-                            boxSearchDataCacheTime: 120,
-                            getDataForBoxSearchUrl: '/Systems/Home/GetDataForBoxSearch'
-                        })
-                        boxSearchServices.GetData().then(function(data) {
-                            (function callJQuery() {
-                                if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home
-                                    .BoxSearchBinnova) {
-                                    new window.FrontEnd.Home.BoxSearchBinnova({
-                                        cities: data.cities,
-                                        cateList: data.cateList,
-                                        priceLevels: data.priceLevels
-                                    });
-                                } else {
-                                    setTimeout(callJQuery, 100)
-                                }
-                            })();
-                        })
-                    } else {
-                        setTimeout(getData, 100);
-                    }
-                })();
-            </script>
-
-
-
-
 
             <div class="loveMoney102" positioncode="BANNER_POSITION_MASTER_HEAD_WEB" style="margin-bottom: 0px">
                 <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
-                    @foreach($banners as $banner)
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/storage/img/slides/{!! $banner->link!!}" class="d-block w-100" alt="..." style="width: 100%;height: 560px;">
-                        </div>
 
+                    <div class="row m-t-50">
+                        <div class="col-md-12">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    
+                                    <div class="carousel-item active">
+                                        
+                                        @foreach($banners as $banner)
+                                        @if($loop->first)
+                                        <img class="d-block w-100" src="/storage/img/slides/{!! $banner->link!!}" alt="First slide">
+                                        @endif
+                                        @endforeach
+                                        
+                                    </div>
+                                    
+                                    @foreach($banners as $banner)
+                                    @continue($loop->first)
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="/storage/img/slides/{!! $banner->link!!}" alt="First slide">
+                                    </div>
+                                    @endforeach
+                                    
+
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="mdi mdi-chevron-left font-size-35" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="mdi mdi-chevron-right font-size-35" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    @endforeach
-                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-                        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3"></span>
-                    </div>
+
+
+
+
+
+
+
+
+
+
+
 
                 </div>
             </div>
-            <script type="text/javascript">
-                var bannerContext = {
-                    "CateId": 0,
-                    "PageId": 189,
-                    "CityCode": null,
-                    "DistrictId": null,
-                    "CurrentPage": 189
-                };
-                var clickBannerUrl = '/Systems/Banner/Click'
-            </script>
 
-            <div class="banner-cover" style="display: none;"></div>
-        </div>
-        <script type="text/javascript">
-            (function callJQuery() {
-                if (window.FrontEnd && window.FrontEnd.Home && window.FrontEnd.Home.HotNewsGroupBinnova) {
-                    new window.FrontEnd.Home.HotNewsGroupBinnova({
-                        getNewNewsAsHtmlUrl: '/Systems/Home/GetNewNewsAsHtml',
-                        getAdviceNewsAsHtmlUrl: '/Systems/Home/GetAdviceNewsAsHtml',
-                        getFengshuiNewsAsHtmlUrl: '/Systems/Home/GetFengshuiNewsAsHtml'
-                    });
-                } else {
-                    setTimeout(callJQuery, 100)
-                }
-            })();
-        </script>
     </div>
     <!-- Cac control o giua-->
     <div class="home-small" style="margin-top: 85px;">
@@ -1132,6 +1108,9 @@
 @endsection
 
 @section('scripts')
+<script src="/assets/js/vendor.js"></script>
+
+<script src="/assets/js/app.min.js"></script>
 <script>
     $(document).ready(function() {
         $('.filter-nha-dat').click(function() {

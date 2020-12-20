@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index() {
         
         if (Cache::has('home_page')) {
-            
+            Cache::flush('home_page');
             return Cache::get('home_page');
             
 

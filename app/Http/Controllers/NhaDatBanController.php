@@ -13,6 +13,7 @@ use App\Repositories\NhaDatBanRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Repositories\ProductRepositoryInterface;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Cache;
 
 class NhaDatBanController extends Controller
@@ -34,144 +35,58 @@ class NhaDatBanController extends Controller
         return view('RepositoryTest.nhadatban', compact('products'));
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        // filter theo thanh pho
-        if (isset($_GET['province'])) {
-
-            $provinces = Province::all()->sortByDesc('count_posts');
-            if (!$_GET['province']) {
-                $provinces_code = Province::where('code', $_GET['province'])->get('code')->toArray();
-                $provinces_name = Province::where('code', $_GET['province'])->get('name')->toArray();
-                $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                    ->orderBy('post_type_id', 'desc')
-                    ->orderBy('created_at', 'desc')
-                    ->paginate(10);
-
-                $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->count();
-                return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code', 'provinces_name'));
-            } else {
-                $provinces_code = Province::where('code', $_GET['province'])->get('code')->toArray();
-                $provinces_name = Province::where('code', $_GET['province'])->get('name')->toArray();
-                $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                    ->where('province_code', '=', $provinces_code)
-                    ->orderBy('post_type_id', 'desc')
-                    ->orderBy('created_at', 'desc')
-                    ->paginate(10);
-                $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->count();
-                return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code', 'provinces_name'));
-            }
-        }
-        //filter theo thanh pho + dien tich
-        // elseif (isset($_GET['province']) && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
-        //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
-        //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-        //         ->where('province_code', '=', $provinces_code)
-        //         ->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])
-        //         ->orderBy('post_type_id', 'desc')
-        //         ->orderBy('created_at', 'desc')
-        //         ->paginate(10);
-
-        //     $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])->count();
-        //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
-        // }
-        // filter theo thanh pho + gia
-        // elseif (isset($_GET['province']) && isset($_GET['giamin']) && isset($_GET['giamax'])) {
-        //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
-        //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-        //         ->where('province_code', '=', $provinces_code)
-        //         ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
-        //         ->orderBy('post_type_id', 'desc')
-        //         ->orderBy('created_at', 'desc')
-        //         ->paginate(10);
-
-        //     $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])->count();
-        //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
-        // }
-        // filter theo thanh pho + dien tich + gia
-        // elseif (isset($_GET['province']) && isset($_GET['giamin']) && isset($_GET['giamax'])  && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
-        //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $provinces_code = Province::where('name', $_GET['province'])->get('code')->toArray();
-        //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-        //         ->where('province_code', '=', $provinces_code)
-        //         ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
-        //         ->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])
-        //         ->orderBy('post_type_id', 'desc')
-        //         ->orderBy('created_at', 'desc')
-        //         ->paginate(10);
-
-        //     $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->where('province_code', $provinces_code)->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])->count();
-        //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products', 'provinces_code'));
-        // }
-        // filter theo dien tich
-        elseif (isset($_GET['area'])) {
-            $provinces = Province::all()->sortByDesc('count_posts');
-            $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                ->whereBetween('area', $_GET['area'])
-                ->orderBy('post_type_id', 'desc')
-                ->orderBy('created_at', 'desc')
-                ->paginate(10);
-            dd($_GET['area']);
-            $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->whereBetween('area', $_GET['area'])->count();
-            return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-        }
-        elseif (isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
-            $provinces = Province::all()->sortByDesc('count_posts');
-            $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                ->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])
-                ->orderBy('post_type_id', 'desc')
-                ->orderBy('created_at', 'desc')
-                ->paginate(10);
-            
-            $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])->count();
-            return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-        }
-        // filter theo dien tich + gia
-        // elseif (isset($_GET['giamin']) && isset($_GET['giamax'])  && isset($_GET['dtmin']) && isset($_GET['dtmax'])) {
-        //     $provinces = Province::all()->sortByDesc('count_posts');
-        //     $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-        //         ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
-        //         ->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])
-        //         ->orderBy('post_type_id', 'desc')
-        //         ->orderBy('created_at', 'desc')
-        //         ->paginate(10);
-
-        //     $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])->whereBetween('area', [$_GET['dtmin'], $_GET['dtmax']])->count();
-        //     return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-        // }
-        // filter theo gia
-        elseif (isset($_GET['giamin']) && isset($_GET['giamax'])) {
-            $provinces = Province::all()->sortByDesc('count_posts');
-            $products = Products::whereIn('menu_category_id', array(1, 2, 3))
-                ->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])
-                ->orderBy('post_type_id', 'desc')
-                ->orderBy('created_at', 'desc')
-                ->paginate(10);
-
-            $count_products = Products::whereIn('menu_category_id', array(1, 2, 3))->whereBetween('price', [$_GET['giamin'], $_GET['giamax']])->count();
-            return view("pages.nhadatban.index", compact('products', 'provinces', 'count_products'));
-        }
-        // khong filter
-        else {
-            if(Cache::has('nha_dat_ban_cache')){
-                return Cache::get('nha_dat_ban_cache');
-            } else{
-                $result = DB::select('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type, images.link 
+        if(!isset($_GET['province']) && !isset($_GET['district']) && !isset($_GET['price']) && !isset($_GET['area'])){
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type
                                 FROM products
                                 INNER JOIN provinces ON provinces.code = products.province_code
                                 INNER JOIN districts ON districts.code = products.district_code
                                 INNER JOIN wards ON wards.code = products.ward_code
-                                INNER JOIN images ON images.products_id = products.id
                                 WHERE menu_category_id IN (1,2,3) AND status = 1
-                                ORDER BY post_type_id DESC, products.created_at DESC');
-                $ndb_cache = view("pages.nhadatban.index", compact('result'))->render();
-                Cache::put('nha_dat_ban_cache', $ndb_cache, 10000);
-                return $ndb_cache;
-            }
-            
+                                ORDER BY post_type_id DESC, products.created_at DESC'));
+            return view("pages.nhadatban.index", compact('result', 'provinces'));
         }
+
+        elseif($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] == 0){
+            // $perPage = $request->input('per_page', 5);
+            // $page = $request->input('page', 1);
+            // $skip = $page * $perPage;
+            // if($take < 1){ $take = 1; }
+            // if($skip < 0){ $skip = 0; }
+
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type
+                                FROM products
+                                INNER JOIN provinces ON provinces.code = products.province_code
+                                INNER JOIN districts ON districts.code = products.district_code
+                                INNER JOIN wards ON wards.code = products.ward_code
+                                WHERE menu_category_id IN (1,2,3) AND status = 1
+                                ORDER BY post_type_id DESC, products.created_at DESC'));
+            
+            // $count = $result->count();
+            // $results = $result->take($perPage)->skip($skip)->get();
+            // $paginator = new LengthAwarePaginator($tcount, 5, $page);
+            return view("pages.nhadatban.index", compact('result', 'provinces'));
+        } else{
+            // $province_code = $_GET['province'];
+            // $district_code = $_GET['district'];
+            $price_min = substr($_GET['price'], 0, 1);
+            $price_max = substr($_GET['price'], 1);
+            // $area_min = substr($_GET['price'], 0, 1);
+            // $area_max = substr($_GET['price'], 1, 1);
+
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN'. ' '. $price_min .' ' .'AND'. ' ' .$price_max .' '
+                            .'ORDER BY post_type_id DESC, products.created_at DESC'));
+            return view("pages.nhadatban.index", compact('result', 'provinces'));
+        }               
     }
 
     public function nhaDatBanSinglePost($id)

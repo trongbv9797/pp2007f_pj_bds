@@ -137,11 +137,21 @@ class UserController extends Controller
         $products = DB::table('products')->orderBy('id','DESC')->limit(5)->get();
         $year = Date('Y');
         $month = Date('m');
-        $sales = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->get()->count());
-        $reve = number_format(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $month)->sum('post_price'));
+        $item[0] = ['month','Sales', 'Revenues'];
+        $all_item = [];
+        for ($i=1; $i<= $month; $i++) {
+
+            $sales = (int)(DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->get()->count());
+            $reve = (int)DB::table('products')->whereYear('created_at', $year)->whereMonth('created_at', $i)->sum('post_price')/100000;
+            $item[$i] = [$i.'/'.$year, $sales, $reve];
+
+        }
+        $item = json_encode($item);
+        // dd($item);
+
         $users = User::onlyTrashed()->get();
         
-        return view ('admin.dashboard.index',compact('user','products','users','sales','reve','month','year'));
+        return view ('admin.dashboard.index',compact('user','products','users','sales','reve','item'));
     }
 
     public function memberEditUser($id) {

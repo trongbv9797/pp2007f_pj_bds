@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
     public function run()
     {
         //
-        for ($i=0; $i<150; $i++) {
+        for ($i=0; $i<1000; $i++) {
         $faker = Faker\Factory::create();
         DB::table('products')->insert ([
         'title' => $faker->sentence,
@@ -40,7 +40,7 @@ class ProductSeeder extends Seeder
         'post_price' => rand(50000, 150000),
         'started_at' => date('Y-m-d H:i:s'),
         'expired_at' => date('Y-m-d H:i:s'),
-        'created_at' => date('Y-m-d H:i:s'),
+        'created_at' => $faker->dateTimeBetween($startDate = '-2 years', $endDate = 'now', $timezone = null),
         'updated_at' => date('Y-m-d H:i:s'),
         ]);
     }

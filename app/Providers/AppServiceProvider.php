@@ -77,7 +77,7 @@ class AppServiceProvider extends ServiceProvider
     //  */
     public function boot()
     {
-        if(asset(Menu::all())) 
+        if(!empty(Menu::all())) 
         {
             $menus0 = Menu::where('type','header_main')->orderby('order')->get()->toArray();
             $arr_menu = [];

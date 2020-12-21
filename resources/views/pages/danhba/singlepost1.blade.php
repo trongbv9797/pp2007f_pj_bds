@@ -264,7 +264,7 @@
         <div>
             <div class="broker-detail">
                 <div class="avamg verticalbox">
-                        <img class="img_detail childbox" title="C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL" src="https://file4.batdongsan.com.vn/resize/200x200/2020/11/03/PGsxuI1y/20201103162145-4ff8.jpg">
+                        <img class="img_detail childbox" title="C&#xD4;NG TY TNHH D&#x1ECA;CH V&#x1EE4; B&#x110;S GIGA REAL" src="{!! $brokers->broker_images !!}">
                 </div>
                 <div class="ttmg">
                     <h1 class="broker-name">

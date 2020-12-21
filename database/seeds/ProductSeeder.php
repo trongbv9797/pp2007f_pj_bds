@@ -52,7 +52,7 @@ class ProductSeeder extends Seeder
         'title' => $faker->sentence,
         'type' => rand(0,2),
         'post_type_id' => rand(1, 4),
-        'status' => rand(0,1),
+        'status' => rand(0,2),
         'price' => rand(500, 800),
         'area' => rand(20, 200),
         'image_id' => rand(1, 50),

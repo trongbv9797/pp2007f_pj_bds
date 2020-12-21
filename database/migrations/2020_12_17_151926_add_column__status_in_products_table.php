@@ -15,7 +15,7 @@ class AddColumnStatusInProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->boolean('status')->after('post_type_id');
+            $table->integer('status')->after('post_type_id');
         });
     }
 

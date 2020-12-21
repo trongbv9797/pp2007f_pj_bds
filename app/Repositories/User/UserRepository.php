@@ -5,6 +5,7 @@ use App\Repositories\BaseRepository;
 use App\Models\User;
 use App\Models\Ward;
 use App\Models\HistoryAccount;
+use App\Models\Role;
 use Illuminate\Support\Facades\DB;
 
 class UserRepository extends BaseRepository implements UserRepositoryInterface
@@ -16,8 +17,20 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
 
     public function getUser()
     {
-        return $this->model->take(5)->get();
+        return $this->model->all();
     }
+
+    public function getUserAdmin()
+    {
+        return Role::find(1)->users()->get();
+    }
+
+    public function getUserMember()
+    {
+        return Role::find(2)->users()->get();
+    }
+
+    
 
     public function update($id, $attributes = [])
     {

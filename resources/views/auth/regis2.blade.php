@@ -48,8 +48,8 @@
                                 <img class="img-fluid m-b-30"
                                     src="https://staticfile.batdongsan.com.vn/images/Logo/ic_logo_2.svg" alt="">
                                 <h1 class="m-b-30 d-inline m-l-30">Create Your account</h1>
-                                <form role="form" id="form-validation" method="post"
-                                    action="{{ route('createUser') }}" enctype="multipart/form-data">
+                                <form role="form" id="form-validation" method="post" action="{{ route('createUser') }}"
+                                    enctype="multipart/form-data">
 
                                     @csrf
                                     <div class="form-group row">
@@ -142,26 +142,26 @@
                                     <p>Already have an account? <a href="#">Sign In</a></p>
                                     <hr>
                                     <small>By signing up you agree to out <a href="#">Terms &amp; Policy</a></small>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="/assets/js/vendor.js"></script>
+        <script src="/assets/js/vendor.js"></script>
 
-    <script src="/assets/js/app.min.js"></script>
+        <script src="/assets/js/app.min.js"></script>
 
-    <!-- page js -->
-    <script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="/assets/js/forms/form-validation.js"></script>
-    <script src="/assets/vendor/moment/min/moment.min.js"></script>
-    <script src="/assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
-    <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
-    <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
-    <script src="/assets/js/forms/form-elements.js"></script>
+        <!-- page js -->
+        <script src="/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="/assets/js/forms/form-validation.js"></script>
+        <script src="/assets/vendor/moment/min/moment.min.js"></script>
+        <script src="/assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+        <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
+        <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+        <script src="/assets/js/forms/form-elements.js"></script>
 </body>
 
 

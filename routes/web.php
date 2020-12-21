@@ -149,6 +149,8 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
 
     // User - CRUD
         Route::get('/user','UserController@index')->name('userIndex');
+        Route::get('/user/admin','UserController@indexAdmin')->name('userAdminIndex');
+        Route::get('/user/member','UserController@indexMember1')->name('userMemberIndex');
 
         Route::get('/user/create','UserController@create')->name('adminCreateUser');
         Route::post('/user/create','UserController@store')->name('adminStoreUser');

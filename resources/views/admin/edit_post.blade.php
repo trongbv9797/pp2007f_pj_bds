@@ -133,6 +133,24 @@
       </div>
 
 
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Images</h1>
+
+<hr class="mt-2 mb-5">
+
+<div class="row text-center text-lg-left">
+
+<div class="col-lg-3 col-md-4 col-6">
+  <a href="#" class="d-block mb-4 h-100">
+    @foreach ($images as $image)
+        <img class="img-fluid img-thumbnail" src="{{ $image->link }}" alt="">
+        @endforeach
+      </a>
+</div>
+</div>
+
+</div>
+
+
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ URL::previous() }}" class="btn btn-light">Cancel</a>
 

@@ -28,31 +28,50 @@ class PostController extends Controller
     public function viewPost() {
         $posts = Products::orderBy('id', 'DESC')
         ->paginate(10);
-        $total_price = Products::sum('post_price');
+        $total_posts = $posts->total();
         $post_type = Post_type::all();
-        return view('admin.posts', compact('posts', 'total_price', 'post_type'));
+        return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
 
     public function filterPost(Request $request) {
 
-        if ($request->post_type == 'all') {
+        if ($request->post_type == 'all' and $request->post_status == 'all') {
                 $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
                 ->where('created_at', '<=', Carbon::now())
-                ->where('status', $request->get('post_status'))
+                ->where('title', 'LIKE', '%' .$request->get('post_title') . '%')
+                ->orWhere('id', $request->get('post_title'))
                 ->orderBy('id', $request->get('post_id'))
                 ->paginate(10)->withQueryString();
-        } else {
+        } elseif ($request->post_type == 'all') {
+        $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
+        ->where('created_at', '<=', Carbon::now())
+        ->where('status', $request->get('post_status'))
+        ->where('title', 'LIKE', '%' .$request->get('post_title') . '%')
+        ->orWhere('id', $request->get('post_title'))
+        ->orderBy('id', $request->get('post_id'))
+        ->paginate(10)->withQueryString();
+    }   elseif ($request->post_status == 'all') {
         $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
         ->where('created_at', '<=', Carbon::now())
         ->where('post_type_id', '=', $request->get('post_type'))
-        ->where('status', $request->get('post_status'))
+        ->where('title', 'LIKE', '%' .$request->get('post_title') . '%')
+        ->orWhere('id', $request->get('post_title'))
         ->orderBy('id', $request->get('post_id'))
         ->paginate(10)->withQueryString();
+    } else {
+            $posts = Products::where('created_at', '>=', Carbon::now()->subDays($request->get('post_date')))
+            ->where('created_at', '<=', Carbon::now())
+            ->where('post_type_id', '=', $request->get('post_type'))
+            ->where('status', $request->get('post_status'))
+            ->where('title', 'LIKE', '%' .$request->get('post_title') . '%')
+            ->orWhere('id', $request->get('post_title'))
+            ->orderBy('id', $request->get('post_id'))
+            ->paginate(10)->withQueryString();
     }
-    $total_price = $posts->sum('post_price');
+    $total_posts = $posts->total();
     $post_type = Post_type::all();
-    return view('admin.posts', compact('posts', 'total_price', 'post_type'));
+    return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
 
@@ -77,7 +96,6 @@ class PostController extends Controller
         $provinces = Province::all();
         $types = Post_type::all();
         $images = Image::where('products_id', '=', $id)->get();
-
         return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
     }
 

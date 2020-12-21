@@ -65,9 +65,10 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Khu vực</div>
                     <select name="province" id="filter-province" class="province">
-                        <option value="0"  selected>Toàn quốc</option>
+                        
+                        <option value="0">Toàn quốc</option>
                         @foreach($provinces as $province)
-                        <option value="{!! $province->code !!}">{!! $province->name !!}</option>
+                        <option value="{!! $province->code !!}" id="province-item">{!! $province->name !!}</option>
                         @endforeach
                     </select>
                 </div>
@@ -99,12 +100,12 @@
                     <div class="dropbox-label">Diện tích</div>
                     <select name="area" id="filter-area">
                         <option value="0" selected>Tất cả</option>
-                        <option value="1">< 30 m2</option>
-                        <option value="[30,50]">30 - 50 m2</option>
-                        <option value="3">50 - 80 m2</option>
-                        <option value="4">80 - 100 m2</option>
-                        <option value="5">100 - 150 m2</option>
-                        <option value="6">150 - 200 m2</option>
+                        <option value="0030">< 30 m2</option>
+                        <option value="3050">30 - 50 m2</option>
+                        <option value="5080">50 - 80 m2</option>
+                        <option value="80100">80 - 100 m2</option>
+                        <option value="100150">100 - 150 m2</option>
+                        <option value="150200">150 - 200 m2</option>
                     </select>
                 </div>
 
@@ -166,14 +167,23 @@
             <div class="breadcrumb all-grey-7 link-hover-blue">
                 <a href="{{ route('nha_dat_ban') }}" level="1" title="Nhà đất bán tại Việt Nam">Bán</a><span>/</span><a href=
                 "@if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                {{ route('nha_dat_ban') }}
+                @else
                 ?province={{$_GET['province']}}
+                @endif
                 @else
+                {{ route('nha_dat_ban') }}
                 @endif" level="2" title="Nhà đất bán tại Việt Nam">
-                    @if(isset($_GET['province']))
-                {!! $_GET['province'] !!}
+                @if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                Toàn quốc
                 @else
-                    toan-quoc
-                    @endif
+                 {!! $province_name[0]['name'] !!}
+                @endif
+                @else
+                Toàn quốc
+                @endif
                 </a>
             </div>
             <script type="text/javascript">
@@ -187,13 +197,17 @@
             </script>
             <div class="product-list-header pad-top-8">
                 <h1>
-                    @if(isset($_GET['province']))
-                    Mua bán nhà đất {!! $_GET['province'] !!}
-                    @else
-                    Mua bán nhà đất toàn quốc
-                    @endif
+                @if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                toan-quoc
+                @else
+                Mua bán nhà đất {!! $province_name[0]['name'] !!}
+                @endif
+                @else
+                Mua bán nhà đất toàn quốc
+                @endif
                 </h1>
-                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">count</span> bất động sản.</div>
+                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">{!! $count_posts !!}</span> bất động sản.</div>
 
 
             </div>
@@ -253,7 +267,7 @@
                             <span class="area">{!! $product->area !!} m²</span>
                             <span class="dot">·</span>
                             <span class="location">
-                                ko co tp                   
+                                chua co tp      
                             </span>
                         </div>
                         <div class="product-content">
@@ -362,12 +376,12 @@
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?area=1" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
-                        <li><a href="?area=2" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                        <li><a href="?area=3" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="?area=4" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="?area=5" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="?area=6" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="?area=0030" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="?area=3050" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="?area=5080" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="?area=80100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="?area=100150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="?area=150200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -380,7 +394,7 @@
 
                 <div class="box-content link-hover-blue">
                     <ul>
-                        @foreach($result as $province)
+                        @foreach($provinces as $province)
                         <li>
                             <h3>
                                 <a href="?province={!! $province->code!!}" title="{{$province->name}}">
@@ -486,7 +500,11 @@
 
                 });
             });
+
+            $('#filter-province').on('change', function(event){
+                $('#filter-province #province-item').removeClass('selected');
+                $(this).addClass('selected');
+            })
         });
-        
     </script>
     @endsection

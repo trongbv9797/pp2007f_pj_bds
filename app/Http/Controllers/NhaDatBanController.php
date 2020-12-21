@@ -37,73 +37,296 @@ class NhaDatBanController extends Controller
 
     public function index(Request $request)
     {
-        if(!isset($_GET['province']) && !isset($_GET['district']) && !isset($_GET['price']) && !isset($_GET['area'])){
-            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
-            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type
-                                FROM products
-                                INNER JOIN provinces ON provinces.code = products.province_code
-                                INNER JOIN districts ON districts.code = products.district_code
-                                INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1
-                                ORDER BY post_type_id DESC, products.created_at DESC'));
-            return view("pages.nhadatban.index", compact('result', 'provinces'));
-        }
-
-        elseif($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] == 0){
-            // $perPage = $request->input('per_page', 5);
-            // $page = $request->input('page', 1);
-            // $skip = $page * $perPage;
-            // if($take < 1){ $take = 1; }
-            // if($skip < 0){ $skip = 0; }
-
-            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
-            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type
-                                FROM products
-                                INNER JOIN provinces ON provinces.code = products.province_code
-                                INNER JOIN districts ON districts.code = products.district_code
-                                INNER JOIN wards ON wards.code = products.ward_code
-                                WHERE menu_category_id IN (1,2,3) AND status = 1
-                                ORDER BY post_type_id DESC, products.created_at DESC'));
-            
-            // $count = $result->count();
-            // $results = $result->take($perPage)->skip($skip)->get();
-            // $paginator = new LengthAwarePaginator($tcount, 5, $page);
-            return view("pages.nhadatban.index", compact('result', 'provinces'));
-        } else{
-            // $province_code = $_GET['province'];
-            // $district_code = $_GET['district'];
-            $price_min = substr($_GET['price'], 0, 1);
-            $price_max = substr($_GET['price'], 1);
-            // $area_min = substr($_GET['price'], 0, 1);
-            // $area_max = substr($_GET['price'], 1, 1);
-
+        //viet lai 14 TH logic
+        //ko ton tai 4 GET
+        if (!isset($_GET['province']) && !isset($_GET['district']) && !isset($_GET['price']) && !isset($_GET['area'])) {
             $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
             $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
                             FROM products
                             INNER JOIN provinces ON provinces.code = products.province_code
                             INNER JOIN districts ON districts.code = products.district_code
                             INNER JOIN wards ON wards.code = products.ward_code
-                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN'. ' '. $price_min .' ' .'AND'. ' ' .$price_max .' '
-                            .'ORDER BY post_type_id DESC, products.created_at DESC'));
-            return view("pages.nhadatban.index", compact('result', 'provinces'));
-        }               
+                            WHERE menu_category_id IN (1,2,3) AND status = 1
+                            ORDER BY post_type_id DESC, products.created_at DESC'));
+            $count_posts = count($result);
+            return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+        }
+        // ton tai GET[province]
+        elseif (isset($_GET['province'])) {
+            $province_name = Province::where('code', $_GET['province'])->get('name');
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code , provinces.count_posts, districts.name_with_type,wards.name_with_type
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' '
+                . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+            $count_posts = count($result);
+            return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+        }
+        // ton tai GET[price]
+        elseif (isset($_GET['price'])) {
+            $price_min = substr($_GET['price'], 0, 1);
+            $price_max = substr($_GET['price'], 1);
+            $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+            $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+            $count_posts = count($result);
+            return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+        }
+        // ton tai GET[area]
+        elseif (isset($_GET['area'])) {
+            // area < 100 m2
+            if ($_GET['area'] < 99999) {
+                $area_min = substr($_GET['area'], 0, 2);
+                $area_max = substr($_GET['area'], 2);
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+            }
+            // area >= 100 m2
+            else {
+                $area_min = substr($_GET['area'], 0, 3);
+                $area_max = substr($_GET['area'], 3);
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+            }
+        }
+        // ton tai 4 GET
+        elseif (isset($_GET['province']) && isset($_GET['district']) && isset($_GET['price']) && isset($_GET['area'])) {
+            // 4 GET == 0
+            if ($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] == 0) {
+                $province_name = Province::where('code', $_GET['province'])->get('name');
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1
+                            ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+            }
+            // GET[province] != 0
+            elseif ($_GET['province'] != 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] == 0) {
+                $province_name = Province::where('code', $_GET['province'])->get('name');
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+            }
+            // GET[province] != 0 && GET[district] != 0
+            elseif ($_GET['province'] != 0 && $_GET['district'] != 0 && $_GET['price'] == 0 && $_GET['area'] == 0) {
+                $province_name = Province::where('code', $_GET['province'])->get('name');
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district'] . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+            }
+            // GET[province] != 0 && GET[district] != 0 && GET[price] != 0
+            elseif ($_GET['province'] != 0 && $_GET['district'] != 0 && $_GET['price'] != 0 && $_GET['area'] == 0) {
+                $province_name = Province::where('code', $_GET['province'])->get('name');
+                $price_min = substr($_GET['price'], 0, 1);
+                $price_max = substr($_GET['price'], 1);
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' AND products.district_code =' . ' ' . $_GET['district']  . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces' , 'province_name', 'count_posts'));
+            }
+            // GET[province] != 0 && GET[price] != 0
+            elseif ($_GET['province'] != 0 && $_GET['district'] == 0 && $_GET['price'] != 0 && $_GET['area'] == 0) {
+                $province_name = Province::where('code', $_GET['province'])->get('name');
+                $price_min = substr($_GET['price'], 0, 1);
+                $price_max = substr($_GET['price'], 1);
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+            }
+            // // GET[province] != 0 && GET[area] != 0
+            elseif ($_GET['province'] != 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] != 0) {
+                // GET[area] < 100 m2
+                if ($_GET['area'] < 99999) {
+                    $province_name = Province::where('code', $_GET['province'])->get('name');
+                    $area_min = substr($_GET['area'], 0, 2);
+                    $area_max = substr($_GET['area'], 2);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                                FROM products
+                                INNER JOIN provinces ON provinces.code = products.province_code
+                                INNER JOIN districts ON districts.code = products.district_code
+                                INNER JOIN wards ON wards.code = products.ward_code
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+                }
+                // GET[area] >= 100 m2
+                else {
+                    $province_name = Province::where('code', $_GET['province'])->get('name');
+                    $area_min = substr($_GET['area'], 0, 3);
+                    $area_max = substr($_GET['area'], 3);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                                FROM products
+                                INNER JOIN provinces ON provinces.code = products.province_code
+                                INNER JOIN districts ON districts.code = products.district_code
+                                INNER JOIN wards ON wards.code = products.ward_code
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND products.province_code =' . ' ' . $_GET['province'] . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
+                }
+            }
+            // GET[price] != 0
+            elseif ($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] != 0 && $_GET['area'] == 0) {
+                $price_min = substr($_GET['price'], 0, 1);
+                $price_max = substr($_GET['price'], 1);
+                $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
+                    . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                $count_posts = count($result);
+                return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+            }
+            // GET[price] != 0 && GET[area] != 0
+            elseif ($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] != 0 && $_GET['area'] != 0) {
+                // GET[area] < 100 m2
+                if ($_GET['area'] < 99999) {
+                    $area_min = substr($_GET['area'], 0, 2);
+                    $area_max = substr($_GET['area'], 2);
+                    $price_min = substr($_GET['price'], 0, 1);
+                    $price_max = substr($_GET['price'], 1);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                                FROM products
+                                INNER JOIN provinces ON provinces.code = products.province_code
+                                INNER JOIN districts ON districts.code = products.district_code
+                                INNER JOIN wards ON wards.code = products.ward_code
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+                }
+                // GET[area] >= 100 m2
+                else {
+                    $area_min = substr($_GET['area'], 0, 3);
+                    $area_max = substr($_GET['area'], 3);
+                    $price_min = substr($_GET['price'], 0, 1);
+                    $price_max = substr($_GET['price'], 1);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                                FROM products
+                                INNER JOIN provinces ON provinces.code = products.province_code
+                                INNER JOIN districts ON districts.code = products.district_code
+                                INNER JOIN wards ON wards.code = products.ward_code
+                                WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+                }
+            }
+            // GET[area] != 0
+            elseif ($_GET['province'] == 0 && $_GET['district'] == 0 && $_GET['price'] == 0 && $_GET['area'] != 0) {
+                // area < 100 m2
+                if ($_GET['area'] < 99999) {
+                    $area_min = substr($_GET['area'], 0, 2);
+                    $area_max = substr($_GET['area'], 2);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+                }
+                // area >= 100 m2
+                else {
+                    $area_min = substr($_GET['area'], 0, 3);
+                    $area_max = substr($_GET['area'], 3);
+                    $provinces = DB::select(DB::raw('SELECT * FROM `provinces` ORDER BY `count_posts`  DESC'));
+                    $result = DB::select(DB::raw('SELECT products.*, provinces.name, provinces.slug, provinces.name_with_type, provinces.code, provinces.count_posts, districts.name_with_type,wards.name_with_type 
+                            FROM products
+                            INNER JOIN provinces ON provinces.code = products.province_code
+                            INNER JOIN districts ON districts.code = products.district_code
+                            INNER JOIN wards ON wards.code = products.ward_code
+                            WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
+                        . 'ORDER BY post_type_id DESC, products.created_at DESC'));
+                    $count_posts = count($result);
+                    return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
+                }
+            }
+        }
     }
 
     public function nhaDatBanSinglePost($id)
     {
         $key = 'singlePost';
         $key .= $id;
-        if (Cache::has($id)){
+        if (Cache::has($id)) {
             return (Cache::get($id));
         } else {
-        $products = $this->productRepository->singlePost($id);
-        $products_area = $this->productRepository->relatedPost($id);
-        $images = $this->imageRepository->relatedImage($id);
-        $images_area = $this->imageRepository->getAll();
-        $cache_view = view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'))->render();
-        Cache::put($key, $cache_view, 10000);
-        return $cache_view;
-    }
+            $products = $this->productRepository->singlePost($id);
+            $products_area = $this->productRepository->relatedPost($id);
+            $images = $this->imageRepository->relatedImage($id);
+            $images_area = $this->imageRepository->getAll();
+            $cache_view = view("pages.nhadatban.single_post", compact('products', 'images_area', 'images', 'products_area'))->render();
+            Cache::put($key, $cache_view, 10000);
+            return $cache_view;
+        }
     }
 
     public function banCanHoChungCu()
@@ -147,11 +370,12 @@ class NhaDatBanController extends Controller
         return view("pages.nhadatban.index");
     }
 
-    public function getDistrict(Request $request) {
+    public function getDistrict(Request $request)
+    {
 
-        $districts = District::where('parent_code',$request->get('parent_code'))->get();
+        $districts = District::where('parent_code', $request->get('parent_code'))->get();
 
-        echo view ('pages.nhadatban.ajaxDistrict',compact('districts'));
+        echo view('pages.nhadatban.ajaxDistrict', compact('districts'));
         exit;
     }
 }

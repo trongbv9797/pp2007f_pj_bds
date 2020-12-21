@@ -34,7 +34,11 @@
                                 <th>
 
                                 </th>
-                                <th>Title</th>
+                                <th>
+                                    <div class="md-form mt-0">
+                                        <input class="form-control col-md-10 " type="text" placeholder="Title..." name="post_title" aria-label="Search">
+                                      </div>
+                                </th>
                                 <th>
                                         <select id="post_type" name="post_type" class="form-control">
                                             <option selected value="all">All Post Type</option>
@@ -72,7 +76,7 @@
                                 </th>
                                 <th>
                                     <select id="post_status" name="post_status" class="form-control">
-                                        <option selected value="0">Status</option>
+                                        <option selected value="all">Status</option>
                                         <option value="0">Waiting</option>
                                         <option value="1">Verified</option>
                                         <option value="2">Expired</option>
@@ -146,8 +150,8 @@
                             <td>
                             </td>
                             <td></td>
-                            <td style="font-size: 30px; font-weight: bold;">Total Price: </td>
-                            <td style="font-size: 30px; font-weight: bold;"> {{ $total_price }} VND</td>
+                            <td style="font-size: 30px; font-weight: bold;">Total Posts: </td>
+                            <td style="font-size: 30px; font-weight: bold;"> {{ $total_posts }} </td>
                             <td class="text-center font-size-18">
                             </td>
                         </tr>
@@ -162,7 +166,7 @@
                         </th>
                     </table>
                     <div style="align: right;">
-                    {{-- {{ $posts->links() }} --}}
+                    {{ $posts->links() }}
                     </div>
                 </div>
             </div>

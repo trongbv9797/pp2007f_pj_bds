@@ -19,6 +19,7 @@ class NhaDatChoThueController extends Controller
             $provinces_code = Province::where('slug', $_GET['tp'])->get('code')->toArray();
             $products = Products::whereIn('menu_category_id', array(4, 5, 6))
                 ->where('province_code', '=', $provinces_code)
+                ->where('status', '=', '1')
                 ->orderBy('post_type_id', 'desc')
                 ->orderBy('created_at', 'desc')
                 ->paginate(10);

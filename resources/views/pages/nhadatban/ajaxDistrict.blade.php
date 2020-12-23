@@ -1,5 +1,7 @@
 <option class="district" value="0">Tất cả</option>
 @foreach ($districts as $district)
-    <option class="district" value="{{ $district->code }}"> {{ $district->name }} </option>
-    @if ($district->code == $_GET['district']) selected @endif
+<option class="district" value="{{ $district->code }}" @if(!isset($_GET['district']) || $_GET['district']==0) @elseif($_GET['district']==$district->code)
+    selected
+    @endif
+    > {{ $district->name }} </option>
 @endforeach

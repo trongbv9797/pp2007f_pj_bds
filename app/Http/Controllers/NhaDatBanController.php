@@ -49,7 +49,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1
                             ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
-            var_dump('1 ko tt 4 get');
             return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
         }
         // ton tai GET[province]
@@ -65,7 +64,6 @@ class NhaDatBanController extends Controller
                 . 'ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
             $districts = District::where('parent_code', $_GET['province'])->get();
-            var_dump('2 tp');
             return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
         }
         // ton tai GET[price]
@@ -81,7 +79,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                 . 'ORDER BY post_type_id DESC, products.created_at DESC'));
             $count_posts = count($result);
-            var_dump('3 price');
             return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
         }
         // ton tai GET[area]
@@ -99,7 +96,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
-                var_dump('4.1 area <100m2');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
             }
             // area >= 100 m2
@@ -115,7 +111,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
-                var_dump('4.2 area >100m2');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
             }
         }
@@ -132,7 +127,6 @@ class NhaDatBanController extends Controller
                             INNER JOIN wards ON wards.code = products.ward_code
                             WHERE menu_category_id IN (1,2,3) AND status = 1ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
-                var_dump('5 ton tai 4 get');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts'));
             }
             // GET[province] != 0
@@ -148,7 +142,6 @@ class NhaDatBanController extends Controller
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
-                var_dump('6 tp != 0');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
             }
             // GET[province] != 0 && GET[district] != 0
@@ -164,7 +157,6 @@ class NhaDatBanController extends Controller
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
-                var_dump('7 tp, quan != 0');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
             }
             // GET[province] != 0 && GET[district] != 0 && GET[price] != 0
@@ -182,7 +174,6 @@ class NhaDatBanController extends Controller
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
-                var_dump('8 tp, quan, gia != 0');
                 return view("pages.nhadatban.index", compact('result', 'provinces' , 'province_name', 'count_posts', 'districts'));
             }
             // GET[province] != 0 && GET[price] != 0
@@ -200,7 +191,6 @@ class NhaDatBanController extends Controller
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
                 $districts = District::where('parent_code', $_GET['province'])->get();
-                var_dump('9 tp, price != 0');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
             }
             //GET[province] != 0 && GET[price] != 0 && GET[area] != 0
@@ -223,7 +213,6 @@ class NhaDatBanController extends Controller
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('10.1 tp, dt != 0 <100');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
                 }
                 // GET[area] >= 100 m2
@@ -244,7 +233,6 @@ class NhaDatBanController extends Controller
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('10.2 tp, dt != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
                 }
             }
@@ -265,7 +253,6 @@ class NhaDatBanController extends Controller
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('11.1 tp, dt != 0 <100');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
                 }
                 // GET[area] >= 100 m2
@@ -283,7 +270,6 @@ class NhaDatBanController extends Controller
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('11.2 tp, dt != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'province_name', 'count_posts', 'districts'));
                 }
             }
@@ -300,7 +286,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' '
                     . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                 $count_posts = count($result);
-                var_dump('12 price != 0');
                 return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
             }
             // GET[price] != 0 && GET[area] != 0
@@ -320,7 +305,6 @@ class NhaDatBanController extends Controller
                                 WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
-                    var_dump('13.1 gia, dt != 0 <100');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
                 }
                 // GET[area] >= 100 m2
@@ -338,7 +322,6 @@ class NhaDatBanController extends Controller
                                 WHERE menu_category_id IN (1,2,3) AND status = 1 AND price BETWEEN' . ' ' . $price_min . ' ' . 'AND' . ' ' . $price_max . ' AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
-                    var_dump('13.2 gia, dt != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
                 }
             }
@@ -357,7 +340,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
-                    var_dump('14.1 dt != 0  <100');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
                 }
                 // area >= 100 m2
@@ -373,7 +355,6 @@ class NhaDatBanController extends Controller
                             WHERE menu_category_id IN (1,2,3) AND status = 1 AND area BETWEEN' . ' ' . $area_min . ' ' . 'AND' . ' ' . $area_max . ' '
                         . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
-                    var_dump('14.2 dt != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts'));
                 }
             }
@@ -398,7 +379,6 @@ class NhaDatBanController extends Controller
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('15 4 get != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts', 'province_name', 'districts'));
                 }
                 // area >= 100m2
@@ -420,7 +400,6 @@ class NhaDatBanController extends Controller
                             . 'ORDER BY post_type_id DESC, products.created_at DESC'));
                     $count_posts = count($result);
                     $districts = District::where('parent_code', $_GET['province'])->get();
-                    var_dump('15 4 get != 0');
                     return view("pages.nhadatban.index", compact('result', 'provinces', 'count_posts', 'province_name', 'districts'));
                 }
             }

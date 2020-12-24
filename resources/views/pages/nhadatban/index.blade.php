@@ -42,7 +42,6 @@
 <body class="bg-site">
 
     <form id="boxSearchForm" action="{{ route('nha_dat_ban') }}" method="get" novalidate="novalidate">
-        @csrf
         <div class="search-bar shadow-lv-1 clearfix">
             <div class="search-guide" style="left: 1274.5px; top: 64px; display: block;">
                 <div class="icon-guide"><img src="./assets/image/ic_triangle.svg"></div>
@@ -63,34 +62,68 @@
             </div>
             <div class="select-control city-control">
                 <div class="select-control-label">
-                    <div class="dropbox-label">Khu vực</div>
+                    <div class="dropbox-label">Tỉnh, thành phố</div>
                     <select name="province" id="filter-province" class="province">
-                        <option value="0"  selected>Toàn quốc</option>
+                        
+                        <option value="0" class="province">Toàn quốc</option>
                         @foreach($provinces as $province)
-                        <option value="{!! $province->code !!}">{!! $province->name !!}</option>
+                        <option value="{!! $province->code !!}" id="province-item" class="province"
+                        @if(!isset($_GET['province']) || $_GET['province'] == 0)
+                        @elseif($_GET['province'] == $province->code)
+                        selected
+                        @endif
+                        >{!! $province->name !!}</option>
                         @endforeach
                     </select>
                 </div>
                 <!-- list tp cu~ -->
             </div>
+            
             <div class="select-control district-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Quận, huyện</div>
                     <select name="district" id="filter-district" class="district">
                         <option value="0" class="district" >Tất cả</option>
+                        @if(!isset($_GET['province']) || $_GET['province'] == 0)
+                        @else
+                        @foreach($districts as $district)
+                        <option value="{!! $district->code !!}" class="district" 
+                        @if(!isset($_GET['district']) || $_GET['district'] == 0)
+                        @elseif($_GET['district'] == $district->code)
+                        selected
+                        @endif
+                        >{!! $district->name !!}</option>
+                        @endforeach
+                        @endif
                     </select>
                 </div>
             </div>
             <div class="select-control price-control">
                 <div class="select-control-label">
                     <div class="dropbox-label">Mức giá</div>
-                    <select name="price">
-                        <option value="0"  selected>Tất cả</option>
-                        <option value="12">1 - 2 tỷ</option>
-                        <option value="23">2 - 3 tỷ</option>
-                        <option value="35">3 - 5 tỷ</option>
-                        <option value="57">5 - 7 tỷ</option>
-                        <option value="710">7 - 10 tỷ</option>
+                    <select name="price" id="filter-price">
+                        <option value="0"@if(!isset($_GET['price']) || $_GET['price'] == 0) selected @endif>Tất cả</option>
+                        <option value="12" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 12)
+                        selected
+                    @endif >1 - 2 tỷ</option>
+                        <option value="23" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 23)
+                        selected
+                    @endif >2 - 3 tỷ</option>
+                        <option value="35" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 35)
+                        selected
+                    @endif >3 - 5 tỷ</option>
+                        <option value="57" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 57)
+                        selected
+                    @endif >5 - 7 tỷ</option>
+                        <option value="710" @if(!isset($_GET['price']) || $_GET['price'] == 0)
+                    @elseif($_GET['price'] == 710)
+                        selected
+                    @endif >7 - 10 tỷ</option>
+                    
                     </select>
                 </div>
             </div>
@@ -98,13 +131,33 @@
                 <div class="select-control-label">
                     <div class="dropbox-label">Diện tích</div>
                     <select name="area" id="filter-area">
-                        <option value="0" selected>Tất cả</option>
-                        <option value="1">< 30 m2</option>
-                        <option value="[30,50]">30 - 50 m2</option>
-                        <option value="3">50 - 80 m2</option>
-                        <option value="4">80 - 100 m2</option>
-                        <option value="5">100 - 150 m2</option>
-                        <option value="6">150 - 200 m2</option>
+                        <option value="0" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                        selected
+                    @endif  >Tất cả</option>
+                        <option value="0030" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 0030)
+                        selected
+                    @endif  >< 30 m2</option>
+                        <option value="3050" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 3050)
+                        selected
+                    @endif  >30 - 50 m2</option>
+                        <option value="5080" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 5080)
+                        selected
+                    @endif  >50 - 80 m2</option>
+                        <option value="80100" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 80100)
+                        selected
+                    @endif  >80 - 100 m2</option>
+                        <option value="100150" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 100150)
+                        selected
+                    @endif  >100 - 150 m2</option>
+                        <option value="150200" @if(!isset($_GET['area']) || $_GET['area'] == 0)
+                    @elseif($_GET['area'] == 150200)
+                        selected
+                    @endif  >150 - 200 m2</option>
                     </select>
                 </div>
 
@@ -166,14 +219,23 @@
             <div class="breadcrumb all-grey-7 link-hover-blue">
                 <a href="{{ route('nha_dat_ban') }}" level="1" title="Nhà đất bán tại Việt Nam">Bán</a><span>/</span><a href=
                 "@if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                {{ route('nha_dat_ban') }}
+                @else
                 ?province={{$_GET['province']}}
+                @endif
                 @else
+                {{ route('nha_dat_ban') }}
                 @endif" level="2" title="Nhà đất bán tại Việt Nam">
-                    @if(isset($_GET['province']))
-                {!! $_GET['province'] !!}
+                @if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                Toàn quốc
                 @else
-                    toan-quoc
-                    @endif
+                 {!! $province_name[0]['name'] !!}
+                @endif
+                @else
+                Toàn quốc
+                @endif
                 </a>
             </div>
             <script type="text/javascript">
@@ -187,13 +249,17 @@
             </script>
             <div class="product-list-header pad-top-8">
                 <h1>
-                    @if(isset($_GET['province']))
-                    Mua bán nhà đất {!! $_GET['province'] !!}
-                    @else
-                    Mua bán nhà đất toàn quốc
-                    @endif
+                @if(isset($_GET['province']))
+                @if($_GET['province'] == 0)
+                Mua bán nhà đất toàn quốc
+                @else
+                Mua bán nhà đất {!! $province_name[0]['name'] !!}
+                @endif
+                @else
+                Mua bán nhà đất toàn quốc
+                @endif
                 </h1>
-                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">count</span> bất động sản.</div>
+                <div class="product-lists-count all-grey-7 pad-top-8 pad-bot-8">Hiện có <span id="count-number">{!! $count_posts !!}</span> bất động sản.</div>
 
 
             </div>
@@ -253,7 +319,7 @@
                             <span class="area">{!! $product->area !!} m²</span>
                             <span class="dot">·</span>
                             <span class="location">
-                                ko co tp                   
+                                chua co tp      
                             </span>
                         </div>
                         <div class="product-content">
@@ -362,12 +428,12 @@
                 <h4 class="box-title">Lọc theo diện tích</h4>
                 <div class="box-content">
                     <ul class="link-hover-blue">
-                        <li><a href="?area=1" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
-                        <li><a href="?area=2" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
-                        <li><a href="?area=3" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
-                        <li><a href="?area=4" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
-                        <li><a href="?area=5" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
-                        <li><a href="?area=6" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
+                        <li><a href="?area=0030" title="Nhà đất cho thuê toàn quốc diện tích <= 30 m2">&lt;= 30 m2</a></li>
+                        <li><a href="?area=3050" title="Nhà đất cho thuê toàn quốc diện tích 30 - 50 m2">30 - 50 m2</a></li>
+                        <li><a href="?area=5080" title="Nhà đất cho thuê toàn quốc diện tích 50 - 80 m2">50 - 80 m2</a></li>
+                        <li><a href="?area=80100" title="Nhà đất cho thuê toàn quốc diện tích 80 - 100 m2">80 - 100 m2</a></li>
+                        <li><a href="?area=100150" title="Nhà đất cho thuê toàn quốc diện tích 100 - 150 m2">100 - 150 m2</a></li>
+                        <li><a href="?area=150200" title="Nhà đất cho thuê toàn quốc diện tích 150 - 200 m2">150 - 200 m2</a></li>
                     </ul>
                 </div>
             </div>
@@ -380,7 +446,7 @@
 
                 <div class="box-content link-hover-blue">
                     <ul>
-                        @foreach($result as $province)
+                        @foreach($provinces as $province)
                         <li>
                             <h3>
                                 <a href="?province={!! $province->code!!}" title="{{$province->name}}">
@@ -464,12 +530,14 @@
 
 
             // clear filter
-            $('#link-reset').click(function() {
-                $('#boxSearchForm')[0].reset();
+            $('#link-reset').bind('click', function() {
+                $('#filter-province').val('0');
+                $('#filter-district').val('0');
+                $('#filter-price').val('0');
+                $('#filter-area').val('0');
             });
 
             $(".province").on('change', function() {
-                
                 var id = $(this).val();
                 $.ajax({
                     type: "get",
@@ -483,10 +551,16 @@
                     }
                 }).done(function(data) {
                     $('.district').html(data);
-
                 });
             });
+
+            $('.custom-control-label').click(function(){
+                if($('.custom-dropbox').hasClass('hiding')){
+                    $('.custom-dropbox').removeClass('hiding');
+                }else{
+                    $('.custom-dropbox').addClass('hiding');
+                }               
+            })
         });
-        
     </script>
     @endsection

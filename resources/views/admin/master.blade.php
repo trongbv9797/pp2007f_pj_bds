@@ -357,9 +357,6 @@
                             <a href="{!! route('change-language',['en']) !!}">English</a>
                             <a href="{!! route('change-language',['vi']) !!}">Vietnamese</a>                       
                     </li>
-                        <li class="side-nav-header">
-                            <span>{{ __('NAVIGATION') }}</span>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -395,7 +392,7 @@
                                         <a href="{{ Route('userIndex') }}">{{ __('All User') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ Route('createUser') }}">{{ __('Create New User') }}</a>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#side-modal-r" class="">{{ __('Add New') }}</a>
                                     </li>
                                     <li>
                                         <a href="{{ Route('transactionHistory') }}">{{ __('Transaction History') }}</a>

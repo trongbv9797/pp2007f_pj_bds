@@ -30,9 +30,34 @@ class UserController extends Controller
 
     public function index() {
         // $users = User::with('roles')->paginate(100);
+        
+        $userAlls = $this->userRepo->getUser();
         $users = $this->userRepo->getUser();
+        $userAdmins = $this->userRepo->getUserAdmin();
+        $userMembers = $this->userRepo->getUserMember();
+
         $user = Auth::user();
-        return view ('admin.user.index', compact('users','user'));
+        return view ('admin.user.index', compact('users','user','userAdmins','userMembers','userAlls'));
+    }
+
+    public function indexAdmin() {
+        // $users = User::with('roles')->paginate(100);
+        $userAlls = $this->userRepo->getUser();
+        $userAdmins = $this->userRepo->getUserAdmin();
+        $userMembers = $this->userRepo->getUserMember();
+        $users= $this->userRepo->getUserAdmin();
+        $user = Auth::user();
+        return view ('admin.user.index', compact('user','users','userAdmins','userMembers','userAlls'));
+    }
+
+    public function indexMember1() {
+        // $users = User::with('roles')->paginate(100);
+        $userAlls = $this->userRepo->getUser();
+        $userAdmins = $this->userRepo->getUserAdmin();
+        $userMembers = $this->userRepo->getUserMember();
+        $users = $this->userRepo->getUserMember();
+        $user = Auth::user();
+        return view ('admin.user.index', compact('user','users','userAdmins','userMembers','userAlls'));
     }
 
     public function create() {

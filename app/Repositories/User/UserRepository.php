@@ -91,7 +91,7 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
         if ($result) {
             $result->username = $attributes->username;
             $result->email = $attributes->email;
-            $result->password = $attributes->inputPassword;
+            $result->password = bcrypt($attributes->inputPassword);
             $result->fullname = $attributes->fullname;
             $result->dateofbirth = date('Y-m-d',strtotime($attributes->dateofbirth));
             $result->address = $attributes->address;

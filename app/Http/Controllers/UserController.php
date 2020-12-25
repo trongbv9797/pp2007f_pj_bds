@@ -88,7 +88,8 @@ class UserController extends Controller
         // dd($path);
         $user->username = $request->username;
         $user->email = $request->email;
-        $user->password = $request->inputPassword;
+        $user->password = bcrypt($request->inputPassword);
+        // dd(bcrypt($request->inputPassword));
         $user->fullname = $request->fullname;
         $user->dateofbirth = date('Y-m-d',strtotime($request->dateofbirth));
         $user->address = $request->address;

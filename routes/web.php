@@ -20,7 +20,12 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', 'HomeController@index')->name('home');
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
+//Đăng nhập và xử lý đăng nhập
+
+Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
+Route::post('login', ['as' => 'login', 'uses' => 'Auth\LoginController@postLogin']);
 
 Route::get('/home', 'HomeController@welcome')->name('welcome');
 

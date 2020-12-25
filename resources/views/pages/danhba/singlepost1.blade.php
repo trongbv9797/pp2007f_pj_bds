@@ -273,7 +273,7 @@
                     <div class="mb5">
                         <span class="br-icon br-address"></span>
                         <span style="float: left; width: 500px;">
-                            1/12 &#x110;&#x1B0;&#x1EDD;ng S&#x1ED1; 6, Ph&#x1B0;&#x1EDD;ng 5, G&#xF2; V&#x1EA5;p, H&#x1ED3; Ch&#xED; Minh, Vi&#x1EC7;t Nam
+                        {!! $brokers->address !!}
                         </span>
                         <div class="clear"></div>
                     </div>
@@ -284,11 +284,11 @@
                     </div>
                     <div class="mb5">
                         <span class="br-icon br-email"></span>
-                        cskh.gigareal@gmail.com
+                        {!! $brokers->mail !!}
                     </div>
                     <div class="mb5">
                         <span class="br-icon br-web"></span>
-                            <a href='http://gigareal.vn' target='_blank' rel='nofollow' class='colorblue'>http://gigareal.vn</a>
+                            <a href='{!! $brokers->website !!}' target='_blank' rel='nofollow' class='colorblue'>{!! $brokers->website !!}</a>
                     </div>
                     <div class="broker-link">
                             <a id="lnkSendEmail" class="broker-send-email" data-email="cskh.gigareal@gmail.com" data-type="" data-typeemail="0">Gửi Email</a>

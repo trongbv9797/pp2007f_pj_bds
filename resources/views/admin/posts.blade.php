@@ -67,11 +67,11 @@
 
                                     <select id="post_date" name="post_date" class="form-control">
                                         <option value="90000000000000000000000" selected>Submit Time</option>
-                                        <option value="0">Today</option>
-                                        <option value="1">Yesterday</option>
-                                        <option value="3">Last 3 days</option>
-                                        <option value="7">Last 7 days</option>
-                                        <option value="30">Last 30 days</option>
+                                        <option value="1">Today</option>
+                                        <option value="2">Yesterday</option>
+                                        <option value="4">Last 3 days</option>
+                                        <option value="8">Last 7 days</option>
+                                        <option value="31">Last 30 days</option>
                                       </select>
                                 </th>
                                 <th>
@@ -119,11 +119,11 @@
                                     @endif
                                     <td class="text-center font-size-18">
                                         @if ($post->type == 1)
-                                            <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"
-                                                class="btn btn-info">View</a>
+                                            <a href="{!!  Route('verifyPost', $post->id) !!}"
+                                                class="btn btn-info">Verify</a>
                                         @else
-                                            <a href="{!!  Route('nhadatban_single_post', $post->id) !!}"
-                                                class="btn btn-info">View</a>
+                                            <a href="{!!  Route('verifyPost', $post->id) !!}"
+                                                class="btn btn-info">Verify</a>
                                         @endif
                                         @if (Auth::user()->inRole('admin'))
                                             <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>

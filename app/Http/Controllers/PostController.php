@@ -135,6 +135,14 @@ class PostController extends Controller
 
     }
 
+    public function verify($id)
+    {
+        $post = Products::where('id', '=', $id)->first();
+        $post->status = 1;
+        $post->save();
+        return back();
+    }
+
     public function uploadImage(Request $request)
     {
         $product = Products::create($request->all());
@@ -179,6 +187,7 @@ class PostController extends Controller
         $post->number_of_floor = $request->get('floors');
         $post->number_of_bedroom = $request->get('bedrooms');
         $post->post_type_id = $request->get('post_type');
+        $post->status = 0;
         $post->started_at = Carbon::parse($request->get('start_date'));
         $post->expired_at = Carbon::parse($request->get('end_date'));
         $post->user_id = Auth::user()->id;

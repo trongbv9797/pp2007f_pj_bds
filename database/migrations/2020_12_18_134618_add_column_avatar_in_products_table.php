@@ -15,7 +15,7 @@ class AddColumnAvatarInProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->string('avatar')->after('user_id');
+            $table->string('avatar')->after('user_id')->nullable();
         });
     }
 

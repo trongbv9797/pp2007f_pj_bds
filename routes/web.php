@@ -223,3 +223,8 @@ Route::get('change-language/{language}', 'HomeController@changeLanguage')->name(
 route::Get('/test-repo', 'NhaDatBanController@testRepo');
 
 Route::get('send-mail', 'MailController@sendemail')->name('send-email');
+
+
+Route::get('test', function(){
+    return view('test');
+});

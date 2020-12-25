@@ -13,9 +13,12 @@ use App\Models\Province;
 use App\Models\Post_type;
 use App\Models\Menu_category;
 use App\Models\User;
+use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\PostNotification;
+use Pusher\Pusher;
 
 class PostController extends Controller
 {
@@ -193,6 +196,30 @@ class PostController extends Controller
         $post->user_id = Auth::user()->id;
         $post->post_price = $moneys;
         $post->save();
+        
+        // Notification
+        $user = User::find(9); // id user này sẻ nhận được thông báo
+        $data = $request->only([
+            'title',
+            'content',
+        ]);
+        // $user->notify(new PostNotification($data));
+
+        $options = array(
+            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'encrypted' => true
+        );
+
+        $pusher = new Pusher(
+            env('PUSHER_APP_KEY'),
+            env('PUSHER_APP_SECRET'),
+            env('PUSHER_APP_ID'),
+            $options
+        );
+        // dd($pusher);
+
+        $pusher->trigger('Notify', 'send-message', $data);
+        // dd($pusher->trigger('Notify', 'send-message', $data));
         if($request->hasfile('filename'))
         {
         

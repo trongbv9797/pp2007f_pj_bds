@@ -72,6 +72,8 @@ Route::get('/nha-moi-gioi', 'DanhbaController@index')->name('nhamoigioi');
 Route::get('/nhamoigioi{id}', 'DanhbaController@singlepost1')->name('singlepost1');
 Route::get('/doanhnghiep{id}', 'DanhbaController@singlepost2')->name('singlepost2');
 
+Route::get('/nha-moi-gioi1', 'DanhbaController@getBrokerAjax')->name('ajax');
+
 
 //TinTucController
 Route::get('/tin-tuc', 'TinTucController@index')->name('tintucbds');

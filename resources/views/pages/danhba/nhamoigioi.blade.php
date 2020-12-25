@@ -5,13 +5,14 @@
 @section('styles')
 <link rel="stylesheet" href="https://staticfile.batdongsan.com.vn/css/filestatic.ver202011110519.msvbds.FrontEnd.min.css" />
 <link rel="stylesheet" type="text/css" href="https://staticfile.batdongsan.com.vn/css/Broker/broker.min.css" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 
 @section('content')
 <div class="zopim" __jx__id="___$_11 ___$_11" data-test-id="ChatWidgetButton" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000002; height: 30px; right: 10px; bottom: 0px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetButton-iframe" title="Zendesk Chat widget button"></iframe></div>
 <div class="zopim" __jx__id="___$_4 ___$_4" data-test-id="ChatWidgetWindow" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetWindow-iframe" title="Zendesk Chat widget window"></iframe></div>
 <div class="form-content">
-    <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND" style=""></div>
+    <div class="adPosition" positioncode="BANNER_POSITION_BACKGROUND"></div>
     <script type="text/javascript">
         var bannerContext = {
             "CateId": null,
@@ -247,77 +248,25 @@
             <div class="container-default">
                 <div>
                     <div id="broker-page">
+
                         <div class="broker-top-by-cate">
                             <h1><span>Danh b&#x1EA1; nh&#xE0; m&#xF4;i gi&#x1EDB;i</span></h1>
                         </div>
 
                         <div class="broker-top-select">
-                            <a data-value="1" class="selected" style="">Công ty môi giới</a>
-                            <a data-value="0" class="" style="">Cá nhân môi giới</a>
+
+                            <a href="javascripts:;" did="1" class="company">Công ty môi giới</a>
+
+                            <a href="javascripts:;" did="2" class="company">Cá nhân môi giới</a>
                         </div>
+
+
                         <div id="contentPage">
-                            @foreach ($brokers as $brokers)
-                            <div class="borderpad10 mar-bot broker-list">
-                                <div class="ttmgl">
-                                    <div class="avamg">
-                                        <div>
-                                            <a href="{!! route ('singlepost1',$brokers->id) !!}">
-                                                <img src="{!! $brokers->broker_images !!}" alt="{!! $brokers->name !!}">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ttmg">
-                                        <div class="tenmg">
-                                            <h3>
-                                                <a title="{!! $brokers->name !!}" href="{!! route ('singlepost1',$brokers->id) !!}">{!! $brokers->name !!}</a>
-                                            </h3>
-                                            <div class="broker-address">{!! $brokers->address !!}</div>
-                                            <div>
-                                                <span class="broker-mobile">{!! $brokers->mobile !!}</span>
-                                            </div>
-                                        </div>
-                                        <div class="broker-link">
-                                            <a id="lnkSendEmail" class="broker-send-email" data-email="cskh.gigareal@gmail.com" data-type="1" data-typeemail="0">Gửi Email</a>
-                                            <a id="lnkProduct" href="/cho-thue-nha-mat-pho/cong-ty-tnhh-dich-vu-bds-giga-real-eb2825#broker-product-list">Danh sách tin rao</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="clear10">
-                                </div>
-                            </div>
-                            @endforeach
-
-
-                        </div>
-                        <div class="pager-block" style="float: right; margin-right: 5px; margin-top: 5px;">
-                            <div class="ks-pagination-links" align="center" stype="float: right">
-                                <a pId="1" href="/nha-moi-gioi">
-                                    <div class="style-pager-row-selected">1</div>
-                                </a>
-                                <a pId="2" href="/nha-moi-gioi/p2">
-                                    <div class="">2</div>
-                                </a>
-                                <a pId="3" href="/nha-moi-gioi/p3">
-                                    <div class="">3</div>
-                                </a>
-                                <a pId="4" href="/nha-moi-gioi/p4">
-                                    <div class="">4</div>
-                                </a>
-                                <a pId="5" href="/nha-moi-gioi/p5">
-                                    <div class="">5</div>
-                                </a>
-                                <a pId="2" href="/nha-moi-gioi/p2">
-                                    <div>...</div>
-                                </a>
-                                <a pId="50" href="/nha-moi-gioi/p50">
-                                    <div>&gt;</div>
-                                </a>
-                            </div>
-
+                        @include('pages.danhba.resuitl')
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>
@@ -675,7 +624,7 @@
                                 @foreach( $provinces as $province)
                                 <li>
                                     <a href="?province={{ $province->code }}" title="{{ $province->name }}">
-                                    {{ $province->name }} ({{ $province->count_companies }})
+                                        {{ $province->name }} ({{ $province->count_companies }})
                                     </a>
                                 </li>
                                 @endforeach
@@ -786,7 +735,7 @@
                     <li><a href="https://batdongsan.com.vn/ban-dat-phuong-dong-hoa">Bán đất Đông Hòa</a></li>
                     <li><a href="https://batdongsan.com.vn/nha-dat-ban-phuong-duong-noi">Bán nhà Dương Nội</a></li>
                     <li><a href="https://batdongsan.com.vn/nha-dat-ban-thi-tran-trau-quy">Bán nhà Trâu Quỳ</a></li>
-                    
+
                 </ul>
             </div>
 
@@ -1027,4 +976,28 @@
     });
 </script>
 
+
+
+@endsection
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $('.company').click(function() {
+            var type = $(this).attr('did');
+
+            $.ajax({
+                type: "GET",
+                url: "/nha-moi-gioi",
+                data: {
+                    type: type
+                },
+                dataType: 'html',
+                success: function(data) {}
+            }).done(function(data) {
+                $('#contentPage').html(data);
+
+            });
+        });
+    })
+</script>
 @endsection

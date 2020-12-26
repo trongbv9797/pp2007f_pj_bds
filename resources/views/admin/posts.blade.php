@@ -111,19 +111,15 @@
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->started_at }}</td>
                                     @if ($post->status == 0)
-                                    <td>Waiting</td>
+                                    <td id="status">Waiting</td>
                                     @elseif ($post->status == 1)
-                                    <td>Verified</td>
+                                    <td id="status">Verified</td>
                                     @else
-                                    <td>Expired</td>
+                                    <td id="status">Expired</td>
                                     @endif
                                     <td class="text-center font-size-18">
-                                        @if ($post->type == 1)
-                                            <a href="{!!  Route('verifyPost', $post->id) !!}"
-                                                class="btn btn-info">Verify</a>
-                                        @else
-                                            <a href="{!!  Route('verifyPost', $post->id) !!}"
-                                                class="btn btn-info">Verify</a>
+                                        @if ($post->status == 0)
+                                            <a href="{!!  Route('verifyPost', $post->id) !!}" class="btn btn-info verify">Verify</a>
                                         @endif
                                         @if (Auth::user()->inRole('admin'))
                                             <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
@@ -269,6 +265,23 @@
                         });
                     });
                 });
+
+                // $(document).on('click', '.verify', function() {
+
+                // var id_post = $(this).attr('post_id');
+                // $.ajax({
+                //     type: "get",
+                //     url: "/admin/verify",
+                //     data: {
+                //         post_id: id_post
+                //     },
+                //     dataType: "html",
+
+                //     success: function(data) {
+                //     $('#post').remove();
+                //     },
+                // })
+                // });
 
             </script>
         @else

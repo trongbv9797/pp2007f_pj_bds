@@ -103,7 +103,7 @@ class PostController extends Controller
     }
 
     public function updatePost(Request $request, $id) {
-        $post = Products::where('id', '=', $id)->first();
+        $post = Products::find($id);
         $post->title = $request->get('title');
         $post->price = $request->get('price');
         $post->area = $request->get('area');
@@ -112,15 +112,36 @@ class PostController extends Controller
         $post->number_of_restroom = $request->get('restroom');
         $post->number_of_floor = $request->get('floor');
         $post->content = $request->get('content');
-        $post->post_type_id = $request->get('type');
         $post->province_code = $request->get('province');
         $post->district_code = $request->get('district');
         $post->ward_code = $request->get('ward');
-        $edit_mess = "";
-        if ($post->save()) {
-            $edit_mess = "Successfully Edited!";
+        $post->save();
+        if($request->hasfile('filename'))
+        {
+        
+           foreach($request->file('filename') as $picture)
+           {
+                $picture->getClientOriginalName();
+                $name=$picture.$post->id; 
+                $picture->move(public_path().'/assets/image/products/tmp/', $name); 
+                $post_id = $post->id;
+                $path="/assets/image/products".$name;
+                    $image = new Image();
+
+                    $image->products_id = $post_id;
+                    $image->name = $name;
+                    $image->link = $path;
+                    $image->save();
+           }
         }
-        return redirect()->route('editPost', [$id])->with('flash_success', 'Success');
+        return redirect()->route('editPost', [$id]);
+    }
+    
+    public function deleteImage(Request $request)
+    {   
+            $image = Image::find($request->get('image_id'));
+            $image->delete();
+
     }
     
     public function deletePost(Request $request)

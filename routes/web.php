@@ -198,6 +198,7 @@ Route::group(['middleware' => ['auth', 'admin','locale']], function(){
         Route::get('/restore-post', 'PostController@restorePost')->name('restorePost');
         Route::get('/filter', 'PostController@filterPost')->name('filterPost'); 
         Route::get('/verify{id}', 'PostController@verify')->name('verifyPost');
+        Route::get('/delete-image', 'PostController@deleteImage')->name('deleteImage');
 
 
         // admin/menu

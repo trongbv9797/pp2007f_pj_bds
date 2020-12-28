@@ -143,21 +143,6 @@ class PostController extends Controller
             $image->delete();
 
     }
-    
-    public function deletePost(Request $request)
-    {   
-        if(is_string($request->get('post_id')))
-        {
-            $posts = Products::find($request->get('post_id'));
-            $posts->delete();
-        }
-        if($request->get('post_id'))
-        foreach ($request->get('post_id') as $reg) {
-        $posts = Products::find($reg);
-        $posts->delete();
-        }
-
-    }
 
     public function verify($id)
     {
@@ -279,6 +264,29 @@ class PostController extends Controller
 
     }
 
+
+    public function deletePost(Request $request)
+    {   
+        // if(is_string($request->get('post_id')))
+        // {
+            $posts = Products::find($request->get('post_id'));
+            $userId = Products::find($request->get('post_id'))->user()->first()->id;
+            $userAccount = User::where('id', '=', $userId)->first()->account;
+            $user = User::find($userId);
+            $money = Products::find($request->get('post_id'))->post_price;
+            $moneyBack = $userAccount + $money;
+            $user->account = $moneyBack;
+            $user->save();
+            $posts->delete();
+        // }
+        // if($request->get('post_id'))
+        // foreach ($request->get('post_id') as $reg) {
+        // $posts = Products::find($reg);
+        // $posts->delete();
+        // }
+
+    }
+    
     public function trash()
     {
         $posts = Products::onlyTrashed()->orderBy('id','DESC')->get();
@@ -287,10 +295,15 @@ class PostController extends Controller
 
     public function restorePost(Request $request)
     {
-        $posts = Products::withTrashed()->find($request->get('post_id'))
-        ->restore();
-        echo view('admin.trashPost', compact('posts'));
-        exit;
+        $posts = Products::withTrashed()->find($request->get('post_id'));
+        $userId = Products::withTrashed()->find($request->get('post_id'))->user()->first()->id;
+            $userAccount = User::where('id', '=', $userId)->first()->account;
+            $user = User::find($userId);
+            $money = Products::withTrashed()->find($request->get('post_id'))->post_price;
+            $moneyBack = $userAccount - $money;
+            $user->account = $moneyBack;
+            $user->save();
+        $posts->restore();
     }
     public function scheduleAjax(Request $request) {
         $today = Carbon::parse($request->get('date'));

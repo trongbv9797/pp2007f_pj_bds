@@ -21,12 +21,12 @@
         </nav>
     </div>
 </div>
-{{Session::get('edit_mess')}}
-@if(isset($edit_mess))
-<div class="alert alert-success alert-dismissible fade in">
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong>{!! $edit_mess !!}</strong>
-</div>
+@if (session('edit_mess'))
+                        <div class="col-sm-12 bg-success">
+                            <p class="">
+                                <strong>{{ session('edit_mess') }}</strong>
+                            </p>
+                        </div>
 @endif
 
 @if (Auth::user()->inRole('admin'))
@@ -175,6 +175,18 @@
 </div>
 <br>
 
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Price</h1>
+
+<hr class="mt-2 mb-5">
+
+
+  <div class="card">
+    <div class="card-body" style="font-size: 25px;">
+      Price: {{ $post->post_price }} VND, from {{ $post->started_at }} to {{ $post->expired_at }}
+    </div>
+</div>
+<br>
+<br>
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ URL::previous() }}" class="btn btn-light">Cancel</a>
 

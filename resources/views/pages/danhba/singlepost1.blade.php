@@ -317,11 +317,11 @@
                     </div>
                     <p class="introcontent">
 <p>
-	C&ocirc;ng ty ch&uacute;ng t&ocirc;i hoạt động trong lĩnh vực dịch vụ m&ocirc;i giới Bất động sản cho thu&ecirc;, được điều h&agrave;nh bởi đội ngũ d&agrave;y dặn kinh nghiệm trong nhiều năm v&agrave; lu&ocirc;n thấu hiểu được sự trăn trở của kh&aacute;ch h&agrave;ng.</p>
+	 Ch&uacute;ng t&ocirc;i hoạt động trong lĩnh vực dịch vụ m&ocirc;i giới Bất động sản cho thu&ecirc;, được điều h&agrave;nh bởi đội ngũ d&agrave;y dặn kinh nghiệm trong nhiều năm v&agrave; lu&ocirc;n thấu hiểu được sự trăn trở của kh&aacute;ch h&agrave;ng.</p>
 <p>
 	Với hơn 10,000 căn nh&agrave; cho thu&ecirc; khắp khu vực TP. Hồ Ch&iacute; Minh v&agrave; nguồn dữ liệu kh&aacute;ch h&agrave;ng tin cậy v&agrave; h&ugrave;ng hậu. Được sự t&iacute;n nhiệm v&agrave; trao cơ hội ch&uacute;ng t&ocirc;i đang ng&agrave;y c&agrave;ng nắm bắt thị trường v&agrave; cố gắng đem đến ch&uacute; Q&uacute;y Kh&aacute;ch h&agrave;ng một sự chọn lựa dịch vụ hiệu quả nhất.</p>
 <p>
-	V&igrave; vậy GiGa Real lu&ocirc;n n&ecirc;u cao khẩu hiệu &ldquo;ĐỐI T&Aacute;C CHUY&Ecirc;N NGHIỆP&rdquo; với mục ti&ecirc;u l&agrave; một đối t&aacute;c tin cậy mang lại cho kh&aacute;ch h&agrave;ng những dịch vụ m&ocirc;i giới tốt nhất, sản phẩm ph&ugrave; hợp nhất một c&aacute;ch nhanh ch&oacute;ng v&agrave; ch&iacute;nh x&aacute;c, đảm bảo t&iacute;nh ph&aacute;p l&yacute;, r&otilde; r&agrave;ng, minh bạch.</p>
+	V&igrave; vậy {!! $brokers->name !!} lu&ocirc;n n&ecirc;u cao khẩu hiệu &ldquo;ĐỐI T&Aacute;C CHUY&Ecirc;N NGHIỆP&rdquo; với mục ti&ecirc;u l&agrave; một đối t&aacute;c tin cậy mang lại cho kh&aacute;ch h&agrave;ng những dịch vụ m&ocirc;i giới tốt nhất, sản phẩm ph&ugrave; hợp nhất một c&aacute;ch nhanh ch&oacute;ng v&agrave; ch&iacute;nh x&aacute;c, đảm bảo t&iacute;nh ph&aacute;p l&yacute;, r&otilde; r&agrave;ng, minh bạch.</p>
 <p>
 	Tr&acirc;n trọng cảm ơn qu&yacute; kh&aacute;ch v&agrave; hy vọng sự hợp t&aacute;c tốt đẹp!</p>
                     </p>

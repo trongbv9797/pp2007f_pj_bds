@@ -110,19 +110,17 @@
                                     @endif
                                     <td class="text-right font-size-18">
                                         @if ($post->status != 2)
+                                        @if (Auth::user()->inRole('admin'))
                                         @if ($post->status == 0)
                                             <a href="{!!  Route('verifyPost', $post->id) !!}"
                                                 class="btn btn-info">Verify</a>
                                         @endif
-                                        @if (Auth::user()->inRole('admin'))
                                             <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-secondary">Edit</a>
                                             <a href="javascript:;" class="btn btn-danger delete"
                                                 post_id="{!!  $post->id !!}">Delete</a>
                                         @else
                                             <a href="{!!  Route('memberEditPost', $post->id) !!}"
                                                 class="btn btn-secondary">Edit</a>
-                                            <a href="javascript:;" class="btn btn-danger delete"
-                                                post_id="{!!  $post->id !!}">Delete</a>
                                         @endif
                                         @endif
                                     </td>

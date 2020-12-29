@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Http\Middleware;
-
-use Closure;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+use Closure;
 
-class checkAdmin
+class checkUser
 {
     /**
      * Handle an incoming request.
@@ -18,10 +16,10 @@ class checkAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user() && Auth::user()->inRole('admin')) {
+        if(Auth::user()) {
             return $next($request);
         } else {
-        return redirect()->back()->with('mess','You are not admin');
+        return redirect()->back()->with('mess','You do not have permission!');
         }
     }
 }

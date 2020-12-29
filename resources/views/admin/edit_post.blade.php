@@ -29,7 +29,11 @@
 </div>
 @endif
 
+@if (Auth::user()->inRole('admin'))
 <form method="POST" action="{{ route('updatePost', $post['id']) }}" enctype="multipart/form-data">
+  @else 
+  <form method="POST" action="{{ route('memberUpdatePost', $post['id']) }}" enctype="multipart/form-data">
+    @endif
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -161,7 +165,11 @@
   @foreach ($images as $image)
 <div class="col-lg-3 col-md-4 col-6">
         <img class="img-fluid img-thumbnail" src="{{ $image->link }}" style="width: 500px; height: 300px;"><br>
+        @if (Auth::user()->inRole('admin'))
         <a href="javascript:;" class="btn btn-light deleteImage" image_id="{!!  $image->id !!}" style="color: red;" >Delete</a>
+        @else
+        <a href="javascript:;" class="btn btn-light deleteImageMember" image_id="{!!  $image->id !!}" style="color: red;" >Delete</a>
+        @endif
 </div>
 @endforeach
 </div>
@@ -241,5 +249,22 @@
         });
         });
 
+        $(document).on('click', '.deleteImageMember', function() {
+
+          var id_image = $(this).attr('image_id');
+          $(this).closest('div').remove();
+          $.ajax({
+              type: "get",
+              url: "/member/delete-image",
+              data: {
+                  image_id: id_image
+              },
+              dataType: "html",
+
+              success: function(data) {}
+          }).done(function() {
+              html(data);
+          });
+        });
   </script>
 @endsection

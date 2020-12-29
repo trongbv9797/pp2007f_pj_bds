@@ -326,13 +326,13 @@ class PostController extends Controller
         if($post->user_id != $user) {
             return redirect()->back()->with('mess','You are not admin');
         }
+        $post = Products::where('id', '=', $id)->first();
         $wards = Ward::all();
         $districts = District::all();
         $provinces = Province::all();
         $types = Post_type::all();
         $images = Image::where('products_id', '=', $id)->get();
-
-        return view('admin.memberEditPost', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
+        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
     }
 
     public function memberUpdatePost(Request $request, $id) {

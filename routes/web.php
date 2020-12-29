@@ -230,3 +230,6 @@ Route::get('send-mail', 'MailController@sendemail')->name('send-email');
 Route::get('test', function(){
     return view('test');
 });
+// Fb login
+Route::get('/facebook-login/{provider}', 'Auth\SocialController@redirect')->name('redirect');
+Route::get('facebook-callback/{provider}', 'Auth\SocialController@callback')->name('callback');

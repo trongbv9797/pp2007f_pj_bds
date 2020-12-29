@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
-
-use App\User;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Exception;
 
 class LoginController extends Controller
 {
@@ -105,5 +106,4 @@ class LoginController extends Controller
                 }
         }
     }
-    
 }

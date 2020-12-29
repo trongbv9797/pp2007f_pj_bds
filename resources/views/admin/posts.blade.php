@@ -36,7 +36,7 @@
                                 </th>
                                 <th>
                                     <div class="md-form mt-0">
-                                        <input class="form-control col-md-10 " type="text" placeholder="Title..." name="post_title" aria-label="Search">
+                                        <input class="form-control col-md-10 " type="text" placeholder="Search..." name="post_title" aria-label="Search">
                                       </div>
                                 </th>
                                 <th>
@@ -82,11 +82,9 @@
                                         <option value="2">Expired</option>
                                       </select>
                                 </th>
-                                <th>
-                                    <div>
-                                    <button type="submit" class="btn btn-secondary">Apply</button>
+                                <th class="text-right font-size-18">
+                                    <button type="submit" class="btn btn-success">Apply</button>
                                     <a type="button" href="{!!  Route('viewPost') !!}" class="btn btn-light">Reset</a>
-                                </div>
                                 </th>
                             </tr>
                         </thead>
@@ -95,21 +93,14 @@
                             @foreach ($posts as $post)
                                 <tr id="post" value={{ $post->id }}>
                                     <td>
-                                        <div class="checkbox">
-                                            <input id="selectable2" name="category[]" class="checkbox" type="checkbox"
-                                                value={{ $post->id }}>
-                                            <label for="selectable2"></label>
-                                        </div>
-                                        <div class="info">
-                                            <span class="sub-title">{{ $post->name }}</span>
-                                        </div>
+                                        
                                     </td>
                                     <td>{{ $post->title }}</td>
                                     <td><span
                                             class="badge badge-pill badge-gradient-success">{{ $post->post_type['name'] }}</span>
                                     </td>
                                     <td>{{ $post->id }}</td>
-                                    <td>{{ $post->started_at }}</td>
+                                    <td>{{ $post->created_at }}</td>
                                     @if ($post->status == 0)
                                     <td id="status">Waiting</td>
                                     @elseif ($post->status == 1)
@@ -117,22 +108,23 @@
                                     @else
                                     <td id="status">Expired</td>
                                     @endif
-                                    <td class="text-center font-size-18">
+                                    <td class="text-right font-size-18">
+                                        @if ($post->status != 2)
                                         @if ($post->status == 0)
-                                            <a href="{!!  Route('verifyPost', $post->id) !!}" class="btn btn-info verify">Verify</a>
+                                            <a href="{!!  Route('verifyPost', $post->id) !!}"
+                                                class="btn btn-info">Verify</a>
                                         @endif
                                         @if (Auth::user()->inRole('admin'))
-                                            <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-info">Edit</a>
-
+                                            <a href="{!!  Route('editPost', $post->id) !!}" class="btn btn-secondary">Edit</a>
                                             <a href="javascript:;" class="btn btn-danger delete"
                                                 post_id="{!!  $post->id !!}">Delete</a>
                                         @else
                                             <a href="{!!  Route('memberEditPost', $post->id) !!}"
-                                                class="btn btn-info">Edit</a>
+                                                class="btn btn-secondary">Edit</a>
                                             <a href="javascript:;" class="btn btn-danger delete"
                                                 post_id="{!!  $post->id !!}">Delete</a>
                                         @endif
-
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
@@ -151,7 +143,7 @@
                             <td class="text-center font-size-18">
                             </td>
                         </tr>
-                        <th>
+                        {{-- <th>
                             <div class="checkbox p-0">
                                 <input id="selectable1" type="checkbox" class="checkAll" name="checkDeleteAll" value="0">
                                 <label for="selectable1"></label>
@@ -159,9 +151,9 @@
                         </th>
                         <th class="font-size-18">
                             <a href="javascript:;" class="btn btn-danger deleteall ml-0">Delete All</a>
-                        </th>
+                        </th> --}}
                     </table>
-                    <div style="align: right;">
+                    <div style="float: right;">
                     {{ $posts->links() }}
                     </div>
                 </div>

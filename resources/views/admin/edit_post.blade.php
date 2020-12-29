@@ -29,7 +29,7 @@
 </div>
 @endif
 
-<form method="POST" action="{{ route('updatePost', $post['id']) }}">
+<form method="POST" action="{{ route('updatePost', $post['id']) }}" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -39,7 +39,7 @@
     </div>
 
 
-    <div class="form-row">
+    {{-- <div class="form-row">
         <div class="form-group col-md-3">
             <label for="type">Type</label>
             <select name="type"  id="type" class="form-control category">
@@ -50,7 +50,7 @@
               @endforeach
           </select>
           </div>
-    </div>
+    </div> --}}
 
     {{-- @foreach($types as $type) @if($type->id == $post['post_type_id']) selected @endif @endforeach  --}}
   
@@ -78,8 +78,8 @@
           <label for="city">City</label>
           <select name="province" id="city" class="form-control">
             @foreach($provinces as $province)
-          <option value="{{ $province['id'] }}" 
-          @if ($province['id'] == $post['provinces_id'])  selected @endif>
+          <option class="province" value="{{ $province['code'] }}" 
+          @if ($province['code'] == $post['provinces_code'])  selected @endif>
           {{ $province['name'] }}
         </option>
             @endforeach
@@ -89,10 +89,10 @@
 
         <div class="form-group col-md-3">
           <label for="district">District</label>
-          <select name="district" id="district" class="form-control">
+          <select id="district" name="district" id="district" class="form-control">
             @foreach($districts as $district)
-            <option value="{{ $district['id'] }}" 
-            @if ($district['id'] == $post['districts_id'])  selected @endif>{{ $district['name_with_type'] }}
+            <option value="{{ $district['code'] }}" 
+            @if ($district['code'] == $post['districts_code'])  selected @endif>{{ $district['name_with_type'] }}
             </option>
             @endforeach
           </select>
@@ -102,8 +102,8 @@
           <label for="ward">Ward</label>
           <select name="ward" id="ward" class="form-control">
             @foreach($wards as $ward)
-            <option value="{{ $ward['id'] }}" 
-            @if ($ward['id'] == $post['wards_id']) selected @endif>{{ $ward['name_with_type'] }}
+            <option value="{{ $ward['code'] }}" 
+            @if ($ward['code'] == $post['wards_code']) selected @endif>{{ $ward['name_with_type'] }}
           </option>
             @endforeach
           </select>
@@ -137,22 +137,40 @@
 
 <hr class="mt-2 mb-5">
 
+
+<div class="card-body border border-secondary shadow-sm p-3 mb-2">
+  <div class="form-group">
+      <label class="control-label col-sm-12">( * ) Maximum number of photos by types of news:
+          Special VIP - 24
+          photos, VIP1 - 20 photos, VIP2 & VIP 3 - 18 photos, VIP Offer - 16 photos, Rewards - 8
+          photos. Maximum of 2MB each </label>
+      <label class="control-label col-sm-12">( * ) Ads with pictures get 10 times more views and 5
+          times more
+          people call than ads without pictures. Post a picture to get a quick transaction!
+      </label>
+      <div class="custom-file col-sm-3">
+          <input type="file" name="filename[]" class="custom-file-input" id="customFile" multiple>
+          <label class="custom-file-label" for="customFile">Add more photos</label>
+      </div>
+
+  </div>
+</div>
+
 <div class="row text-center text-lg-left">
 
+  @foreach ($images as $image)
 <div class="col-lg-3 col-md-4 col-6">
-  <a href="#" class="d-block mb-4 h-100">
-    @foreach ($images as $image)
-        <img class="img-fluid img-thumbnail" src="{{ $image->link }}" alt="">
-        @endforeach
-      </a>
+        <img class="img-fluid img-thumbnail" src="{{ $image->link }}" style="width: 500px; height: 300px;"><br>
+        <a href="javascript:;" class="btn btn-light deleteImage" image_id="{!!  $image->id !!}" style="color: red;" >Delete</a>
 </div>
+@endforeach
 </div>
-
-</div>
-
+<br>
 
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ URL::previous() }}" class="btn btn-light">Cancel</a>
+
+  </div>
 
   </form>
 
@@ -164,4 +182,64 @@
 <script src="/assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
 <script src="/assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 <script src="/assets/js/forms/form-elements.js"></script>
+
+<script>
+          $(document).ready(function() {
+            // province
+            $(".province").click(function() {
+                var id = $(this).val();
+                $.ajax({
+                    type: "get",
+                    url: "/user/ajaxDistrict",
+                    data: {
+                        parent_code: id
+                    },
+                    dataType: "html",
+                    success: function(data) {
+
+                    }
+                }).done(function(data) {
+                    $('#district').html(data);
+
+                });
+            });
+            
+        });
+
+        function selectDistrict(id) {
+            $.ajax({
+                type: "get",
+                url: "/user/ajaxWard",
+                data: {
+                    parent_code: id
+                },
+                dataType: "html",
+                success: function(data) {
+
+                }
+            }).done(function(data) {
+                $('#ward').html(data);
+
+            });
+        }
+
+        $(document).on('click', '.deleteImage', function() {
+
+        var id_image = $(this).attr('image_id');
+        $(this).closest('div').remove();
+        $.ajax({
+            type: "get",
+            url: "/admin/delete-image",
+            data: {
+                image_id: id_image
+            },
+            dataType: "html",
+
+            success: function(data) {}
+        }).done(function() {
+            html(data);
+        });
+        });
+
+  </script>
 @endsection

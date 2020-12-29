@@ -80,15 +80,17 @@ class PostController extends Controller
 
     public function schedulePost() {
         $today = date('Y-m-d');
-        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
-        $total_price = Products::where('started_at', $today)->sum('post_price');
-        return view('admin.posts', compact('posts', 'total_price'));
+        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->paginate(10);
+        $total_posts = $posts->total();
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
     public function shelfPost($user) {
-        $posts = User::find($user)->Products()->orderBy('id','DESC')->get();
-        $total_price = Products::where('user_id', $user)->sum('post_price');
-        return view('admin.posts', compact('posts', 'total_price'));
+        $posts = User::find($user)->Products()->orderBy('id','DESC')->paginate(10);
+        $total_posts = $posts->total();
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
     public function editPost($id) {
@@ -103,7 +105,7 @@ class PostController extends Controller
     }
 
     public function updatePost(Request $request, $id) {
-        $post = Products::where('id', '=', $id)->first();
+        $post = Products::find($id);
         $post->title = $request->get('title');
         $post->price = $request->get('price');
         $post->area = $request->get('area');
@@ -112,29 +114,35 @@ class PostController extends Controller
         $post->number_of_restroom = $request->get('restroom');
         $post->number_of_floor = $request->get('floor');
         $post->content = $request->get('content');
-        $post->post_type_id = $request->get('type');
         $post->province_code = $request->get('province');
         $post->district_code = $request->get('district');
         $post->ward_code = $request->get('ward');
-        $edit_mess = "";
-        if ($post->save()) {
-            $edit_mess = "Successfully Edited!";
+        $post->save();
+        if($request->hasfile('filename'))
+        {
+        
+           foreach($request->file('filename') as $picture)
+           {
+                $picture->getClientOriginalName();
+                $name=$picture.$post->id; 
+                $picture->move(public_path().'/assets/image/products/tmp/', $name); 
+                $post_id = $post->id;
+                $path="/assets/image/products".$name;
+                    $image = new Image();
+
+                    $image->products_id = $post_id;
+                    $image->name = $name;
+                    $image->link = $path;
+                    $image->save();
+           }
         }
-        return redirect()->route('editPost', [$id])->with('flash_success', 'Success');
+        return redirect()->route('editPost', [$id]);
     }
     
-    public function deletePost(Request $request)
+    public function deleteImage(Request $request)
     {   
-        if(is_string($request->get('post_id')))
-        {
-            $posts = Products::find($request->get('post_id'));
-            $posts->delete();
-        }
-        if($request->get('post_id'))
-        foreach ($request->get('post_id') as $reg) {
-        $posts = Products::find($reg);
-        $posts->delete();
-        }
+            $image = Image::find($request->get('image_id'));
+            $image->delete();
 
     }
 
@@ -258,6 +266,29 @@ class PostController extends Controller
 
     }
 
+
+    public function deletePost(Request $request)
+    {   
+        // if(is_string($request->get('post_id')))
+        // {
+            $posts = Products::find($request->get('post_id'));
+            $userId = Products::find($request->get('post_id'))->user()->first()->id;
+            $userAccount = User::where('id', '=', $userId)->first()->account;
+            $user = User::find($userId);
+            $money = Products::find($request->get('post_id'))->post_price;
+            $moneyBack = $userAccount + $money;
+            $user->account = $moneyBack;
+            $user->save();
+            $posts->delete();
+        // }
+        // if($request->get('post_id'))
+        // foreach ($request->get('post_id') as $reg) {
+        // $posts = Products::find($reg);
+        // $posts->delete();
+        // }
+
+    }
+    
     public function trash()
     {
         $posts = Products::onlyTrashed()->orderBy('id','DESC')->get();
@@ -266,10 +297,15 @@ class PostController extends Controller
 
     public function restorePost(Request $request)
     {
-        $posts = Products::withTrashed()->find($request->get('post_id'))
-        ->restore();
-        echo view('admin.trashPost', compact('posts'));
-        exit;
+        $posts = Products::withTrashed()->find($request->get('post_id'));
+        $userId = Products::withTrashed()->find($request->get('post_id'))->user()->first()->id;
+            $userAccount = User::where('id', '=', $userId)->first()->account;
+            $user = User::find($userId);
+            $money = Products::withTrashed()->find($request->get('post_id'))->post_price;
+            $moneyBack = $userAccount - $money;
+            $user->account = $moneyBack;
+            $user->save();
+        $posts->restore();
     }
     public function scheduleAjax(Request $request) {
         $today = Carbon::parse($request->get('date'));

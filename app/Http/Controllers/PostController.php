@@ -80,15 +80,17 @@ class PostController extends Controller
 
     public function schedulePost() {
         $today = date('Y-m-d');
-        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->get();
-        $total_price = Products::where('started_at', $today)->sum('post_price');
-        return view('admin.posts', compact('posts', 'total_price'));
+        $posts = Products::where('started_at',$today)->orderBy('post_type_id','DESC')->paginate(10);
+        $total_posts = $posts->total();
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
     public function shelfPost($user) {
-        $posts = User::find($user)->Products()->orderBy('id','DESC')->get();
-        $total_price = Products::where('user_id', $user)->sum('post_price');
-        return view('admin.posts', compact('posts', 'total_price'));
+        $posts = User::find($user)->Products()->orderBy('id','DESC')->paginate(10);
+        $total_posts = $posts->total();
+        $post_type = Post_type::all();
+        return view('admin.posts', compact('posts', 'total_posts', 'post_type'));
     }
 
     public function editPost($id) {

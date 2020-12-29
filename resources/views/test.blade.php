@@ -74,7 +74,7 @@
     });
 
     // Subscribe to the channel we specified in our Laravel Event
-    var channel = pusher.subscribe('Notify');
+    var channel = pusher.subscribe('PostEvent');
 
     // Bind a function to a Event (the full Laravel class)
     channel.bind('send-message', function(data) {
@@ -90,7 +90,7 @@
                 </div>
                 <div class="media-body">
                   <strong class="notification-title">`+data.title+`</strong>
-                  <p class="notification-desc">`+data.content+`</p>
+
                   <div class="notification-meta">
                     <small class="timestamp">about a minute ago</small>
                   </div>

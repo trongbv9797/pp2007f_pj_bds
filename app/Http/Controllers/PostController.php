@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Role;
 use App\Models\Products;
 use App\Models\Image;
 use App\Models\Ward;
@@ -207,12 +208,23 @@ class PostController extends Controller
         $post->save();
         
         // Notification
-        $user = User::find(9); // id user này sẻ nhận được thông báo
+        // $users = DB::table('users')->leftJoin('role_user','users.id','=','role_user.user_id')
+        //                            ->leftJoin('roles','roles.id','=','role_user.role_id')
+        //                            ->where('name','Admin')
+        //                            ->select('users.*')
+                                   ; // id user này sẻ nhận được thông báo
+        $users = Role::where('name','Admin')->first()->users;
+        // dd($users);
+        // dd($users);
         $data = $request->only([
             'title',
             'content',
         ]);
-        // $user->notify(new PostNotification($data));
+
+        foreach($users as $user) {
+
+            $user->notify(new PostNotification($data));
+        };
 
         $options = array(
             'cluster' => env('PUSHER_APP_CLUSTER'),
@@ -227,8 +239,9 @@ class PostController extends Controller
         );
         // dd($pusher);
 
-        $pusher->trigger('Notify', 'send-message', $data);
-        // dd($pusher->trigger('Notify', 'send-message', $data));
+        $pusher->trigger('PostEvent', 'send-message', $data);
+        dd($pusher->trigger('PostEvent', 'send-message', $data));
+
         if($request->hasfile('filename'))
         {
         

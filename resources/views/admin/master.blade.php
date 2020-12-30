@@ -205,9 +205,9 @@
                             </ul>
                         </li>
                         <li class="notifications dropdown dropdown-animated scale-left">
-                            <span class="counter">2</span>
+                            <span class="counter notif-count">0</span>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="mdi mdi-bell-ring-outline"></i>
+                                <i data-count="0" class="mdi mdi-bell-ring-outline"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-lg p-v-0">
                                 <li class="p-v-15 p-h-20 border bottom text-dark">
@@ -217,68 +217,10 @@
                                     </h5>
                                 </li>
                                 <li>
-                                    <ul class="list-media overflow-y-auto relative scrollable"
+                                    <ul class="list-media overflow-y-auto relative scrollable dropdown-top"
                                         style="max-height: 300px">
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-15">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-primary">
-                                                        <i class="ti-settings"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">
-                                                        System shutdown
-                                                    </span>
-                                                    <span class="sub-title">8 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-15">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-success">
-                                                        <i class="ti-user"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">
-                                                        New User Registered
-                                                    </span>
-                                                    <span class="sub-title">12 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-15">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-warning">
-                                                        <i class="ti-file"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">
-                                                        New Attacthemnet
-                                                    </span>
-                                                    <span class="sub-title">12 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-item border bottom">
-                                            <a href="javascript:void(0);" class="media-hover p-15">
-                                                <div class="media-img">
-                                                    <div class="icon-avatar bg-info">
-                                                        <i class="ti-shopping-cart"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <span class="title">
-                                                        New Order Received
-                                                    </span>
-                                                    <span class="sub-title">12 min ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
+
+
                                     </ul>
                                 </li>
                                 <li class="p-v-15 p-h-20 text-center">
@@ -289,6 +231,17 @@
                                 </li>
                             </ul>
                         </li>
+
+
+
+
+
+
+
+
+
+
+
                         <li class="user-profile dropdown dropdown-animated scale-left">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img class="profile-img img-fluid" src="/storage/img/users/{{ Auth::user()->avatar }}"
@@ -372,7 +325,7 @@
                                 <li>
                                     <a href="{{ Route('dash') }}">Index</a>
                                 </li>
-     
+
 
                             </ul>
                         </li>
@@ -394,7 +347,8 @@
                                         <a href="{{ Route('userIndex') }}">{{ __('All User') }}</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" data-toggle="modal" data-target="#side-modal-r" class="">{{ __('Add New') }}</a>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#side-modal-r"
+                                            class="">{{ __('Add New') }}</a>
                                     </li>
                                     <li>
                                         <a href="{{ Route('transactionHistory') }}">{{ __('Transaction History') }}</a>
@@ -1048,6 +1002,65 @@
 
     <!-- page js -->
     @yield('scripts')
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+
+<script type="text/javascript">
+    var notificationsWrapper   = $('.dropdown-animated');
+    var notificationsToggle    = notificationsWrapper.find('a[data-toggle]');
+    var notificationsCountElem = notificationsToggle.find('i[data-count]');
+    var notificationsCount     = parseInt(notificationsCountElem.data('count'));
+    var notifications          = notificationsWrapper.find('ul.dropdown-top');
+
+
+    // Enable pusher logging - don't include this in production
+     Pusher.logToConsole = true;
+
+    var pusher = new Pusher('{{env('PUSHER_APP_KEY')}}', {
+        cluster: 'ap1',
+        encrypted: true
+    });
+
+    // Subscribe to the channel we specified in our Laravel Event
+    var channel = pusher.subscribe('PostEvent');
+
+    // Bind a function to a Event (the full Laravel class)
+    channel.bind('send-message', function(data) {
+        var existingNotifications = notifications.html();
+        var avatar = Math.floor(Math.random() * (71 - 20 + 1)) + 20;
+        var newNotificationHtml = `
+        <li class="list-item border bottom">
+                                            <a href="javascript:;" class="media-hover p-15">
+                                                <div class="media-img">
+                                                    <div class="icon-avatar bg-info">
+                                                        <i class="ti-shopping-cart"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="info">
+                                                    <span class="title">
+                                                        `+data.title+`
+                                                    </span>
+                                                    <span class="sub-title">12 min ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+        `;
+        notifications.html(newNotificationHtml + existingNotifications);
+
+        notificationsCount += 1;
+        notificationsCountElem.attr('data-count', notificationsCount);
+        notificationsWrapper.find('.notif-count').text(notificationsCount);
+        notificationsWrapper.show();
+    });
+</script>
+
+
+
+
 </body>
 
 

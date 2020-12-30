@@ -21,15 +21,19 @@
         </nav>
     </div>
 </div>
-{{Session::get('edit_mess')}}
-@if(isset($edit_mess))
-<div class="alert alert-success alert-dismissible fade in">
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong>{!! $edit_mess !!}</strong>
-</div>
+@if (session('edit_mess'))
+                        <div class="col-sm-12 bg-success">
+                            <p class="">
+                                <strong>{{ session('edit_mess') }}</strong>
+                            </p>
+                        </div>
 @endif
 
+@if (Auth::user()->inRole('admin'))
 <form method="POST" action="{{ route('updatePost', $post['id']) }}" enctype="multipart/form-data">
+  @else 
+  <form method="POST" action="{{ route('memberUpdatePost', $post['id']) }}" enctype="multipart/form-data">
+    @endif
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -161,12 +165,28 @@
   @foreach ($images as $image)
 <div class="col-lg-3 col-md-4 col-6">
         <img class="img-fluid img-thumbnail" src="{{ $image->link }}" style="width: 500px; height: 300px;"><br>
+        @if (Auth::user()->inRole('admin'))
         <a href="javascript:;" class="btn btn-light deleteImage" image_id="{!!  $image->id !!}" style="color: red;" >Delete</a>
+        @else
+        <a href="javascript:;" class="btn btn-light deleteImageMember" image_id="{!!  $image->id !!}" style="color: red;" >Delete</a>
+        @endif
 </div>
 @endforeach
 </div>
 <br>
 
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Price</h1>
+
+<hr class="mt-2 mb-5">
+
+
+  <div class="card">
+    <div class="card-body" style="font-size: 25px;">
+      Price: {{ $post->post_price }} VND, from {{ $post->started_at }} to {{ $post->expired_at }}
+    </div>
+</div>
+<br>
+<br>
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ URL::previous() }}" class="btn btn-light">Cancel</a>
 
@@ -241,5 +261,22 @@
         });
         });
 
+        $(document).on('click', '.deleteImageMember', function() {
+
+          var id_image = $(this).attr('image_id');
+          $(this).closest('div').remove();
+          $.ajax({
+              type: "get",
+              url: "/member/delete-image",
+              data: {
+                  image_id: id_image
+              },
+              dataType: "html",
+
+              success: function(data) {}
+          }).done(function() {
+              html(data);
+          });
+        });
   </script>
 @endsection

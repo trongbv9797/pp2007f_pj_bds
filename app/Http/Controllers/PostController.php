@@ -117,6 +117,7 @@ class PostController extends Controller
         $post->province_code = $request->get('province');
         $post->district_code = $request->get('district');
         $post->ward_code = $request->get('ward');
+        $edit_mess = "Success!";
         $post->save();
         if($request->hasfile('filename'))
         {
@@ -136,7 +137,7 @@ class PostController extends Controller
                     $image->save();
            }
         }
-        return redirect()->route('editPost', [$id]);
+        return redirect()->route('editPost', [$id])->with('edit_mess', 'Successfully Edited!!!');
     }
     
     public function deleteImage(Request $request)
@@ -326,13 +327,13 @@ class PostController extends Controller
         if($post->user_id != $user) {
             return redirect()->back()->with('mess','You are not admin');
         }
+        $post = Products::where('id', '=', $id)->first();
         $wards = Ward::all();
         $districts = District::all();
         $provinces = Province::all();
         $types = Post_type::all();
         $images = Image::where('products_id', '=', $id)->get();
-
-        return view('admin.memberEditPost', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
+        return view('admin.edit_post', compact('post', 'wards', 'districts', 'provinces', 'types', 'images'));
     }
 
     public function memberUpdatePost(Request $request, $id) {
@@ -353,7 +354,7 @@ class PostController extends Controller
         if ($post->save()) {
             $edit_mess = "Successfully Edited!";
         }
-        return redirect()->route('memberEditPost', [$id])->with('flash_success', 'Success');
+        return redirect()->route('memberEditPost', [$id])->with('edit_mess', 'Success');
     }
 
 }

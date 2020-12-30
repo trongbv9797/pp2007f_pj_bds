@@ -357,6 +357,7 @@
                             <a href="{!! route('change-language',['en']) !!}">English</a>
                             <a href="{!! route('change-language',['vi']) !!}">Vietnamese</a>                       
                     </li>
+                    @if (Auth::user()->inRole('admin'))
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -375,6 +376,7 @@
 
                             </ul>
                         </li>
+                        @endif
 
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
@@ -422,22 +424,20 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
+                                @if (Auth::user()->inRole('admin'))
                                 <li>
                                     <a href="{!!  Route('memberViewPost') !!}">{{ __('All Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ Route('schedulePost') }}">{{ __('Schedule New Posts') }}</a>
+                                    <a href="{!!  Route('trashPost') !!}">{{ __('Trash Posts') }}</a>
                                 </li>
+                                @endif
                                 <li>
                                     <a href="{!!  Route('shelfPost', auth::user()->id) !!}">{{ __('My Posts') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{!!  Route('memberPost') !!}">{{ __('Posts') }}</a>
+                                    <a href="{!!  Route('memberPost') !!}">{{ __('Create New Post') }}</a>
                                 </li>
-                                <li>
-                                    <a href="{!!  Route('trashPost') !!}">{{ __('Trash Posts') }}</a>
-                                </li>
-
                             </ul>
 
                         </li>
@@ -498,7 +498,6 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endif
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -517,7 +516,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+                        @endif
                     </ul>
                 </div>
             </div>

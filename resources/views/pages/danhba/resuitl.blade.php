@@ -1,21 +1,21 @@
-@foreach ($broker as $brokers)
+@foreach ($brokers as $broker)
 <div class="borderpad10 mar-bot broker-list">
     <div class="ttmgl">
         <div class="avamg">
             <div>
-                <a href="{!! route ('singlepost1',$brokers->id) !!}">
-                    <img src="{!! $brokers->broker_images !!}" alt="{!! $brokers->name !!}">
+                <a href="{!! route ('singlepost1',$broker->id) !!}">
+                    <img src="{!! $broker->broker_images !!}" alt="{!! $broker->name !!}">
                 </a>
             </div>
         </div>
         <div class="ttmg">
             <div class="tenmg">
                 <h3>
-                    <a title="{!! $brokers->name !!}" href="{!! route ('singlepost1',$brokers->id) !!}">{!! $brokers->name !!}</a>
+                    <a title="{!! $broker->name !!}" href="{!! route ('singlepost1',$broker->id) !!}">{!! $broker->name !!}</a>
                 </h3>
-                <div class="broker-address">{!! $brokers->address !!}</div>
+                <div class="broker-address">{!! $broker->address !!}</div>
                 <div>
-                    <span class="broker-mobile">{!! $brokers->mobile !!}</span>
+                    <span class="broker-mobile">{!! $broker->mobile !!}</span>
                 </div>
             </div>
             <div class="broker-link">
@@ -31,7 +31,7 @@
 @endforeach
 <div class="pager-block" style="float: right; margin-right: 5px; margin-top: 5px;">
     <div class="ks-pagination-links" style="text-align: center; display: inline-block;">
-        {{ $broker->links() }}
+        {{ $brokers->links() }}
 
     </div>
 

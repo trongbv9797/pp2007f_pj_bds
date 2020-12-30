@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" />
 
+<!-- Laravel Mix -->
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
+
 @section('content')
 <div class="zopim" __jx__id="___$_11 ___$_11" data-test-id="ChatWidgetButton" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000002; height: 30px; right: 10px; bottom: 0px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetButton-iframe" title="Zendesk Chat widget button"></iframe></div>
 <div class="zopim" __jx__id="___$_4 ___$_4" data-test-id="ChatWidgetWindow" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetWindow-iframe" title="Zendesk Chat widget window"></iframe></div>
@@ -28,12 +31,12 @@
     <div id="SiteLeft" class="banner-left">
         <div class="container-default">
             <div>
-                <div id="ban_wide_left" class="ban_wide_scroll" style="display: block; top: 146px; position: absolute; left: 4.5px; bottom: inherit;">
+                <div id="ban_wide_left" class="ban_wide_scroll" style="display: block; top: 146px; position: absolute; left: 4.5px; bottom: inherit;width:180px">
                     <div class="adPosition" positioncode="BANNER_POSITION_WIDE_LEFT" style="margin-bottom: 0px">
                         <div class="adshared" rt="">
                             <div class="adshareditem aditem" time="15" style="display: none;" src="https://file4.batdongsan.com.vn/2020/11/02/UVSXfqBy/20201102142443-d843.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="http://experttalk.batdongsan.com.vn/khac/adapt-2-change-3-giu-lua-kinh-doanh-vuot-qua-covid-ev134?utm_source=BDS&amp;utm_medium=banner&amp;utm_campaign=A2C%233" bid="11037" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="/microservice-architecture-router/Systems/Banner/Click?bannerid=11037" target="_blank" title="" rel="nofollow"><img src="https://file4.batdongsan.com.vn/2020/11/02/UVSXfqBy/20201102142443-d843.jpg" style="max-width: 100%; height:600px;"></a></div>
                             @foreach($sidebars as $sidebar)
-                            <div class="adshareditem aditem" time="15" style="display: block;" src="https://file4.batdongsan.com.vn/2020/11/11/ZBfLmblA/20201111093910-ba2f.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="https://avpe.propertyguru.com.my/?lang=vn" bid="11057" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="/microservice-architecture-router/Systems/Banner/Click?bannerid=11057" target="_blank" title="" rel="nofollow"><img src="/storage/img/slides/{!! $sidebar->link!!}" style="max-width: 100%; height:500px;"></a></div>
+                            <div class="adshareditem aditem" time="15" style="display: block;" src="https://file4.batdongsan.com.vn/2020/11/11/ZBfLmblA/20201111093910-ba2f.jpg" altsrc="https://file4.batdongsan.com.vn/images/no-photo1.jpg" link="https://avpe.propertyguru.com.my/?lang=vn" bid="11057" tip="" tp="7" w="160" h="600" isbg="false" clr="false" k=""><a href="/microservice-architecture-router/Systems/Banner/Click?bannerid=11057" target="_blank" title="" rel="nofollow"><img src="/storage/img/slides/{!! $sidebar->link!!}" style="max-width:100%; height:500px;"></a></div>
                             @endforeach
                         </div>
                     </div>
@@ -257,7 +260,7 @@
 
                             <a href="javascripts:;" did="1" class="company">Công ty môi giới</a>
 
-                            <a href="javascripts:;" did="2" class="company">Cá nhân môi giới</a>
+                            <a href="javascripts:;" did="2" class="person">Cá nhân môi giới</a>
                         </div>
 
 
@@ -299,7 +302,7 @@
                 </div>
 
             </div>
-            <div class="adPosition" positionCode="BANNER_POSITION_RIGHT_MAIN_CONTENT" style=""></div>
+            <div class="adPosition" positionCode="BANNER_POSITION_RIGHT_MAIN_CONTENT"></div>
             <script type='text/javascript'>
                 var bannerContext = {
                     "CateId": null,
@@ -786,7 +789,7 @@
         </div>
     </div>
 
-    <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM" style=""></div>
+    <div class="adPosition" positionCode="BANNER_POSITION_FLOADING_BOTTOM"></div>
     <script type='text/javascript'>
         var bannerContext = {
             "CateId": null,
@@ -976,13 +979,41 @@
     });
 </script>
 
-
+<!-- Trigger a Button Click on Enter -->
+<script>
+var input = document.getElementById("txtKeyword");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("btnSearch").click();
+  }
+});
+</script>
 
 @endsection
 @section('scripts')
 <script>
     $(document).ready(function() {
         $('.company').click(function() {
+            var type = $(this).attr('did');
+
+            $.ajax({
+                type: "GET",
+                url: "/nha-moi-gioi",
+                data: {
+                    type: type
+                },
+                dataType: 'html',
+                success: function(data) {}
+            }).done(function(data) {
+                $('#contentPage').html(data);
+
+            });
+        });
+    })
+
+    $(document).ready(function() {
+        $('.person').click(function() {
             var type = $(this).attr('did');
 
             $.ajax({
